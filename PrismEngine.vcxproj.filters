@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\view">
+      <UniqueIdentifier>{20c1a72d-f9bb-48cb-8674-433670b8699b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\view">
+      <UniqueIdentifier>{c8ce3589-cc7f-485e-8ffc-70fdbc712858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{a26c7da2-0ec4-4555-8674-023f410e7787}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\fmath.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\matrix.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vector.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
+      <Filter>Исходные файлы\view</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Frame.cpp">
+      <Filter>Исходные файлы\view</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WindowVkManager.cpp">
+      <Filter>Исходные файлы\view</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\fmath.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\matrix.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vector.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Config.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PrismEngine.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Frame.h">
+      <Filter>Файлы заголовков\view</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window.h">
+      <Filter>Файлы заголовков\view</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WindowVkManager.h">
+      <Filter>Файлы заголовков\view</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

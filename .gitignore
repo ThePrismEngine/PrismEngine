@@ -1,0 +1,24 @@
+## Исключаем папки сборки и бинарные файлы
+x64/
+x86/
+bin/
+obj/
+Debug/
+Release/
+PrismEngine/
+.vs/
+*.suo
+*.user
+*.aps
+*.pdb
+*.ilk
+*.log
+*.tlog
+*.cache
+*.dll
+*.exe
+*.lib
+*.exp
+*.obj
+*.sln.docstates
+
