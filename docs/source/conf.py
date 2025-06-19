@@ -17,8 +17,9 @@ extensions = [
 ]
 
 # -- Breathe настройки ----------------------------------------------
+import os
 breathe_projects = {
-    "PrismEngine": "../../docs/build/doxygen/xml"  # Путь к XML от Doxygen
+    "PrismEngine": os.path.abspath('../build/xml/')
 }
 breathe_default_project = "PrismEngine"
 
