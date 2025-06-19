@@ -3,11 +3,11 @@
 
 namespace prism {
 	namespace math {
-		void Matrix_4X4::print()
+		void Matrix4X4::print()
 		{
 			SDL_Log("");
 		}
-		float* Matrix_4X4::operator[](int index)
+		float* Matrix4X4::operator[](int index)
 		{
 			if (index < 0 || index >= 4)
 			{
@@ -16,14 +16,14 @@ namespace prism {
 			return m[index];
 		}
 
-		bool Matrix_4X4::operator==(Matrix_4X4& other)
+		bool Matrix4X4::operator==(Matrix4X4& other)
 		{
 			return m == other.m;
 		}
 
-		Matrix_4X4 Matrix_4X4::makeIdentity()
+		Matrix4X4 Matrix4X4::makeIdentity()
 		{
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = 1.0f;
 			matrix.m[1][1] = 1.0f;
 			matrix.m[2][2] = 1.0f;
@@ -31,9 +31,9 @@ namespace prism {
 			return matrix;
 		}
 
-		Matrix_4X4 Matrix_4X4::makeRotationX(float fAngleRad)
+		Matrix4X4 Matrix4X4::makeRotationX(float fAngleRad)
 		{
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = 1.0f;
 			matrix.m[1][1] = cosf(fAngleRad);
 			matrix.m[1][2] = sinf(fAngleRad);
@@ -44,9 +44,9 @@ namespace prism {
 		}
 
 
-		Matrix_4X4 Matrix_4X4::makeRotationY(float fAngleRad)
+		Matrix4X4 Matrix4X4::makeRotationY(float fAngleRad)
 		{
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = cosf(fAngleRad);
 			matrix.m[0][2] = sinf(fAngleRad);
 			matrix.m[2][0] = -sinf(fAngleRad);
@@ -56,9 +56,9 @@ namespace prism {
 			return matrix;
 		}
 
-		Matrix_4X4 Matrix_4X4::makeRotationZ(float fAngleRad)
+		Matrix4X4 Matrix4X4::makeRotationZ(float fAngleRad)
 		{
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = cosf(fAngleRad);
 			matrix.m[0][1] = sinf(fAngleRad);
 			matrix.m[1][0] = -sinf(fAngleRad);
@@ -68,9 +68,9 @@ namespace prism {
 			return matrix;
 		}
 
-		Matrix_4X4 Matrix_4X4::makeTranslation(float x, float y, float z)
+		Matrix4X4 Matrix4X4::makeTranslation(float x, float y, float z)
 		{
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = 1.0f;
 			matrix.m[1][1] = 1.0f;
 			matrix.m[2][2] = 1.0f;
@@ -81,9 +81,9 @@ namespace prism {
 			return matrix;
 		}
 
-		Matrix_4X4 Matrix_4X4::makeScale(float x, float y, float z)
+		Matrix4X4 Matrix4X4::makeScale(float x, float y, float z)
 		{
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = x;
 			matrix.m[1][1] = y;
 			matrix.m[2][2] = z;
@@ -91,10 +91,10 @@ namespace prism {
 			return matrix;
 		}
 
-		Matrix_4X4 Matrix_4X4::makeProjection(float fFovDegrees, float fAspectRatio, float fNear, float fFar)
+		Matrix4X4 Matrix4X4::makeProjection(float fFovDegrees, float fAspectRatio, float fNear, float fFar)
 		{
 			//	float fFovRad = 1.0f / tanf(fFovDegrees * 0.5f / 180.0f * 3.14159f);
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = fAspectRatio * fFovDegrees;
 			matrix.m[1][1] = fFovDegrees;
 			matrix.m[2][2] = fFar / (fFar - fNear);
@@ -104,7 +104,7 @@ namespace prism {
 			return matrix;
 		}
 		
-		Matrix_4X4 Matrix_4X4::Matrix_PointAt(Vector3d& pos, Vector3d& target, Vector3d& up)
+		Matrix4X4 Matrix4X4::Matrix_PointAt(Vector3d& pos, Vector3d& target, Vector3d& up)
 		{
 			// Calculate new forward direction
 			Vector3d newForward = target - pos;
@@ -119,7 +119,7 @@ namespace prism {
 			Vector3d newRight = Vector_CrossProduct(newUp, newForward);
 
 			// Construct Dimensioning and Translation Matrix	
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = newRight.x;	matrix.m[0][1] = newRight.y;	matrix.m[0][2] = newRight.z;	matrix.m[0][3] = 0.0f;
 			matrix.m[1][0] = newUp.x;		matrix.m[1][1] = newUp.y;		matrix.m[1][2] = newUp.z;		matrix.m[1][3] = 0.0f;
 			matrix.m[2][0] = newForward.x;	matrix.m[2][1] = newForward.y;	matrix.m[2][2] = newForward.z;	matrix.m[2][3] = 0.0f;
@@ -127,17 +127,17 @@ namespace prism {
 			return matrix;
 		}
 
-		Matrix_4X4 Matrix_MultiplyMatrix(Matrix_4X4& m1, Matrix_4X4& m2)
+		Matrix4X4 Matrix_MultiplyMatrix(Matrix4X4& m1, Matrix4X4& m2)
 		{
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			for (int c = 0; c < 4; c++)
 				for (int r = 0; r < 4; r++)
 					matrix.m[r][c] = m1.m[r][0] * m2.m[0][c] + m1.m[r][1] * m2.m[1][c] + m1.m[r][2] * m2.m[2][c] + m1.m[r][3] * m2.m[3][c];
 			return matrix;
 		}
-		Matrix_4X4 Matrix_QuickInverse(Matrix_4X4& m)
+		Matrix4X4 Matrix_QuickInverse(Matrix4X4& m)
 		{
-			Matrix_4X4 matrix;
+			Matrix4X4 matrix;
 			matrix.m[0][0] = m.m[0][0]; matrix.m[0][1] = m.m[1][0]; matrix.m[0][2] = m.m[2][0]; matrix.m[0][3] = 0.0f;
 			matrix.m[1][0] = m.m[0][1]; matrix.m[1][1] = m.m[1][1]; matrix.m[1][2] = m.m[2][1]; matrix.m[1][3] = 0.0f;
 			matrix.m[2][0] = m.m[0][2]; matrix.m[2][1] = m.m[1][2]; matrix.m[2][2] = m.m[2][2]; matrix.m[2][3] = 0.0f;

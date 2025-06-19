@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrismEngine: Структура prism::math::Matrix4X4</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PrismEngine
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('structprism_1_1math_1_1_matrix4_x4.html','','structprism_1_1math_1_1_matrix4_x4-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура prism::math::Matrix4X4</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>4x4 матрица для линейных преобразований  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="matrix_8h_source.html">matrix.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a03e22f599fb64c73f5a2bdc8a6b2ed0b" id="r_a03e22f599fb64c73f5a2bdc8a6b2ed0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03e22f599fb64c73f5a2bdc8a6b2ed0b">print</a> ()</td></tr>
+<tr class="memdesc:a03e22f599fb64c73f5a2bdc8a6b2ed0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит матрицу в консоль  <br /></td></tr>
+<tr class="memitem:a92ac545d71153f230ea7c9cd083e6737" id="r_a92ac545d71153f230ea7c9cd083e6737"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92ac545d71153f230ea7c9cd083e6737">operator[]</a> (int index)</td></tr>
+<tr class="memdesc:a92ac545d71153f230ea7c9cd083e6737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступ к строке матрицы по индексу  <br /></td></tr>
+<tr class="memitem:a48414a1a4973f0a079ad50def4a184b7" id="r_a48414a1a4973f0a079ad50def4a184b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48414a1a4973f0a079ad50def4a184b7">operator==</a> (<a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> &amp;other)</td></tr>
+<tr class="memdesc:a48414a1a4973f0a079ad50def4a184b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнение матриц на равенство  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aa37f4c9f136b9d5f686059bfc3ec09cc" id="r_aa37f4c9f136b9d5f686059bfc3ec09cc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa37f4c9f136b9d5f686059bfc3ec09cc">makeIdentity</a> ()</td></tr>
+<tr class="memdesc:aa37f4c9f136b9d5f686059bfc3ec09cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает единичную матрицу  <br /></td></tr>
+<tr class="memitem:a0c75732edb441e3a49d7b8211dab32d5" id="r_a0c75732edb441e3a49d7b8211dab32d5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c75732edb441e3a49d7b8211dab32d5">makeRotationX</a> (float fAngleRad)</td></tr>
+<tr class="memdesc:a0c75732edb441e3a49d7b8211dab32d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает матрицу поворота вокруг оси X.  <br /></td></tr>
+<tr class="memitem:abcfee1b63bcb6a95ec9e7eb00419d71d" id="r_abcfee1b63bcb6a95ec9e7eb00419d71d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcfee1b63bcb6a95ec9e7eb00419d71d">makeRotationY</a> (float fAngleRad)</td></tr>
+<tr class="memdesc:abcfee1b63bcb6a95ec9e7eb00419d71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает матрицу поворота вокруг оси Y.  <br /></td></tr>
+<tr class="memitem:ab3aa494e109566c1693e39aeb1cc6116" id="r_ab3aa494e109566c1693e39aeb1cc6116"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3aa494e109566c1693e39aeb1cc6116">makeRotationZ</a> (float fAngleRad)</td></tr>
+<tr class="memdesc:ab3aa494e109566c1693e39aeb1cc6116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает матрицу поворота вокруг оси Z.  <br /></td></tr>
+<tr class="memitem:a0df69dd9ba7f1e59788e79ce2dc0c05a" id="r_a0df69dd9ba7f1e59788e79ce2dc0c05a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0df69dd9ba7f1e59788e79ce2dc0c05a">makeTranslation</a> (float x, float y, float z)</td></tr>
+<tr class="memdesc:a0df69dd9ba7f1e59788e79ce2dc0c05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает матрицу переноса  <br /></td></tr>
+<tr class="memitem:a618e4ed9879960963d3dd37bdcb82409" id="r_a618e4ed9879960963d3dd37bdcb82409"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a618e4ed9879960963d3dd37bdcb82409">makeScale</a> (float x, float y, float z)</td></tr>
+<tr class="memdesc:a618e4ed9879960963d3dd37bdcb82409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает матрицу масштабирования  <br /></td></tr>
+<tr class="memitem:a2c908d0c06bf596c8399154a63a6b8c7" id="r_a2c908d0c06bf596c8399154a63a6b8c7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c908d0c06bf596c8399154a63a6b8c7">makeProjection</a> (float fFovDegrees, float fAspectRatio, float fNear, float fFar)</td></tr>
+<tr class="memdesc:a2c908d0c06bf596c8399154a63a6b8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает матрицу проекции  <br /></td></tr>
+<tr class="memitem:a141ac2d3e2abffea8afb383aeec57965" id="r_a141ac2d3e2abffea8afb383aeec57965"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a141ac2d3e2abffea8afb383aeec57965">Matrix_PointAt</a> (<a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;pos, <a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;target, <a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;up)</td></tr>
+<tr class="memdesc:a141ac2d3e2abffea8afb383aeec57965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает матрицу направления "смотрит на".  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a03f6ae69a0fc6e279a81bbdb1de1a4f1" id="r_a03f6ae69a0fc6e279a81bbdb1de1a4f1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03f6ae69a0fc6e279a81bbdb1de1a4f1">m</a> [4][4] = { 0 }</td></tr>
+<tr class="memdesc:a03f6ae69a0fc6e279a81bbdb1de1a4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Элементы матрицы (строка, столбец)  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>4x4 матрица для линейных преобразований </p>
+<p>Поддерживает операции поворота, масштабирования, переноса, проекции </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aa37f4c9f136b9d5f686059bfc3ec09cc" name="aa37f4c9f136b9d5f686059bfc3ec09cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37f4c9f136b9d5f686059bfc3ec09cc">&#9670;&#160;</a></span>makeIdentity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> prism::math::Matrix4X4::makeIdentity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает единичную матрицу </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Единичная матрица 4x4 </dd></dl>
+
+</div>
+</div>
+<a id="a2c908d0c06bf596c8399154a63a6b8c7" name="a2c908d0c06bf596c8399154a63a6b8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c908d0c06bf596c8399154a63a6b8c7">&#9670;&#160;</a></span>makeProjection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> prism::math::Matrix4X4::makeProjection </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fFovDegrees</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fAspectRatio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fNear</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fFar</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает матрицу проекции </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fFovDegrees</td><td>Угол обзора в градусах </td></tr>
+    <tr><td class="paramname">fAspectRatio</td><td>Соотношение сторон </td></tr>
+    <tr><td class="paramname">fNear</td><td>Ближняя плоскость отсечения </td></tr>
+    <tr><td class="paramname">fFar</td><td>Дальняя плоскость отсечения </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Матрица проекции </dd></dl>
+
+</div>
+</div>
+<a id="a0c75732edb441e3a49d7b8211dab32d5" name="a0c75732edb441e3a49d7b8211dab32d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c75732edb441e3a49d7b8211dab32d5">&#9670;&#160;</a></span>makeRotationX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> prism::math::Matrix4X4::makeRotationX </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fAngleRad</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает матрицу поворота вокруг оси X. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fAngleRad</td><td>Угол поворота в радианах </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Матрица поворота вокруг X </dd></dl>
+
+</div>
+</div>
+<a id="abcfee1b63bcb6a95ec9e7eb00419d71d" name="abcfee1b63bcb6a95ec9e7eb00419d71d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfee1b63bcb6a95ec9e7eb00419d71d">&#9670;&#160;</a></span>makeRotationY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> prism::math::Matrix4X4::makeRotationY </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fAngleRad</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает матрицу поворота вокруг оси Y. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fAngleRad</td><td>Угол поворота в радианах </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Матрица поворота вокруг Y </dd></dl>
+
+</div>
+</div>
+<a id="ab3aa494e109566c1693e39aeb1cc6116" name="ab3aa494e109566c1693e39aeb1cc6116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3aa494e109566c1693e39aeb1cc6116">&#9670;&#160;</a></span>makeRotationZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> prism::math::Matrix4X4::makeRotationZ </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fAngleRad</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает матрицу поворота вокруг оси Z. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fAngleRad</td><td>Угол поворота в радианах </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Матрица поворота вокруг Z </dd></dl>
+
+</div>
+</div>
+<a id="a618e4ed9879960963d3dd37bdcb82409" name="a618e4ed9879960963d3dd37bdcb82409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618e4ed9879960963d3dd37bdcb82409">&#9670;&#160;</a></span>makeScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> prism::math::Matrix4X4::makeScale </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает матрицу масштабирования </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Масштаб по X </td></tr>
+    <tr><td class="paramname">y</td><td>Масштаб по Y </td></tr>
+    <tr><td class="paramname">z</td><td>Масштаб по Z </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Матрица масштабирования </dd></dl>
+
+</div>
+</div>
+<a id="a0df69dd9ba7f1e59788e79ce2dc0c05a" name="a0df69dd9ba7f1e59788e79ce2dc0c05a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df69dd9ba7f1e59788e79ce2dc0c05a">&#9670;&#160;</a></span>makeTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> prism::math::Matrix4X4::makeTranslation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает матрицу переноса </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Смещение по X </td></tr>
+    <tr><td class="paramname">y</td><td>Смещение по Y </td></tr>
+    <tr><td class="paramname">z</td><td>Смещение по Z </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Матрица переноса </dd></dl>
+
+</div>
+</div>
+<a id="a141ac2d3e2abffea8afb383aeec57965" name="a141ac2d3e2abffea8afb383aeec57965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141ac2d3e2abffea8afb383aeec57965">&#9670;&#160;</a></span>Matrix_PointAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> prism::math::Matrix4X4::Matrix_PointAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>up</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает матрицу направления "смотрит на". </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Позиция наблюдателя </td></tr>
+    <tr><td class="paramname">target</td><td>Целевая точка </td></tr>
+    <tr><td class="paramname">up</td><td>Вектор "вверх" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Матрица направления </dd></dl>
+
+</div>
+</div>
+<a id="a48414a1a4973f0a079ad50def4a184b7" name="a48414a1a4973f0a079ad50def4a184b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48414a1a4973f0a079ad50def4a184b7">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::math::Matrix4X4::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сравнение матриц на равенство </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Матрица для сравнения </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если матрицы равны </dd></dl>
+
+</div>
+</div>
+<a id="a92ac545d71153f230ea7c9cd083e6737" name="a92ac545d71153f230ea7c9cd083e6737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92ac545d71153f230ea7c9cd083e6737">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * prism::math::Matrix4X4::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Доступ к строке матрицы по индексу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Индекс строки (0-3) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на строку матрицы </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>При неверном индексе </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a03e22f599fb64c73f5a2bdc8a6b2ed0b" name="a03e22f599fb64c73f5a2bdc8a6b2ed0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e22f599fb64c73f5a2bdc8a6b2ed0b">&#9670;&#160;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::math::Matrix4X4::print </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит матрицу в консоль </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a03f6ae69a0fc6e279a81bbdb1de1a4f1" name="a03f6ae69a0fc6e279a81bbdb1de1a4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f6ae69a0fc6e279a81bbdb1de1a4f1">&#9670;&#160;</a></span>m</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float prism::math::Matrix4X4::m[4][4] = { 0 }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Элементы матрицы (строка, столбец) </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>C:/Users/Admin/source/repos/PrismEngine/src/<a class="el" href="matrix_8h_source.html">matrix.h</a></li>
+<li>C:/Users/Admin/source/repos/PrismEngine/src/<a class="el" href="matrix_8cpp.html">matrix.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceprism.html">prism</a></li><li class="navelem"><a href="namespaceprism_1_1math.html">math</a></li><li class="navelem"><a href="structprism_1_1math_1_1_matrix4_x4.html">Matrix4X4</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrismEngine: Исходный файл C:/Users/Admin/source/repos/PrismEngine/src/Window.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PrismEngine
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_window_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Window.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_window_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vulkan/vulkan.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;utility&gt;</span> <span class="comment">// для std::pair</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;SDL_vulkan.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceprism.html">prism</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceprism_1_1view.html">view</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespaceprism_1_1view.html#a5e08683d7e148199c9e82e1382ca3f97">   16</a></span>        <span class="keyword">const</span> std::vector&lt;const char*&gt; <a class="code hl_variable" href="namespaceprism_1_1view.html#a5e08683d7e148199c9e82e1382ca3f97">validationLayers</a> = {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="stringliteral">&quot;VK_LAYER_KHRONOS_validation&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        };</div>
+</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespaceprism_1_1view.html#aad0a33fb229c69df767196676a0bb441">   19</a></span>        <span class="keyword">const</span> std::vector&lt;const char*&gt; <a class="code hl_variable" href="namespaceprism_1_1view.html#aad0a33fb229c69df767196676a0bb441">deviceExtensions</a> = {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                VK_KHR_SWAPCHAIN_EXTENSION_NAME</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        };</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structprism_1_1view_1_1_queue_family_indices.html">   23</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structprism_1_1view_1_1_queue_family_indices.html">QueueFamilyIndices</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structprism_1_1view_1_1_queue_family_indices.html#a9850754d20bfa6fda8ec34d6197630b0">   24</a></span>            std::optional&lt;uint32_t&gt; <a class="code hl_variable" href="structprism_1_1view_1_1_queue_family_indices.html#a9850754d20bfa6fda8ec34d6197630b0">graphicsFamily</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structprism_1_1view_1_1_queue_family_indices.html#aa84d262b22d58e73295a7ad73ab17ca3">   25</a></span>            std::optional&lt;uint32_t&gt; <a class="code hl_variable" href="structprism_1_1view_1_1_queue_family_indices.html#aa84d262b22d58e73295a7ad73ab17ca3">presentFamily</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structprism_1_1view_1_1_queue_family_indices.html#afcb56ae02ff571b22da0cf6a4a59578a">   27</a></span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="structprism_1_1view_1_1_queue_family_indices.html#afcb56ae02ff571b22da0cf6a4a59578a">isComplete</a>() {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="structprism_1_1view_1_1_queue_family_indices.html#a9850754d20bfa6fda8ec34d6197630b0">graphicsFamily</a>.has_value() &amp;&amp; <a class="code hl_variable" href="structprism_1_1view_1_1_queue_family_indices.html#aa84d262b22d58e73295a7ad73ab17ca3">presentFamily</a>.has_value();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            }</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        };</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html">   32</a></span>        <span class="keyword">class </span><a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">Window</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="comment">// === Конструкторы ===</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">Window</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">Window</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, Uint32 sdlFlags);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">Window</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">Window</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keyword">const</span> std::string&amp; iconPath);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="comment">// Специальные конструкторы</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keyword">static</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">Window</a> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a5e4bd28cd96622e8b3b13e57778ebb8b">CreateCentered</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">Window</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordtype">int</span> minWidth, <span class="keywordtype">int</span> minHeight, <span class="keywordtype">int</span> maxWidth, <span class="keywordtype">int</span> maxHeight);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="comment">// === Деструктор ===</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_function" href="classprism_1_1view_1_1_window.html#aa380520df5902e4c2f52dbd7486d65b8">~Window</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="comment">// === Управление окном ===</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a5cf935efd740352ab3ff7ebee06e7254">getTitle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#adfe7fd34bbb853a8ac64ca0b5a68cadd">setTitle</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordtype">int</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab9f80b6a4d67e91bb8454a6e45b00c6a">getWidth</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordtype">int</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a45ff9b145b3fdd721de6ae4a7541f0c2">getHeight</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a80f7ecc7488b3a75da4ac2b45895ae2e">getSize</a>(<span class="keywordtype">int</span>* width, <span class="keywordtype">int</span>* height);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a29d789115d706e4f5bd98448cdae1108">setWidth</a>(<span class="keywordtype">int</span> width);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ac2d1238a607bf29ac672870ebf9f73cb">setHeight</a>(<span class="keywordtype">int</span> height);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a9eddda4bbcacea440786c2ace67f2a16">setSize</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="comment">// === Режимы окна ===</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a000dbd1aaf3338843829891b00de6cef">setFullscreen</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#aef39954d735b1762f1d4179a9f08d6e4">setBorderless</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a064fdb06b7036f1dacaa110e6e0007db">setResizable</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a0e401cb1e3912c8e2394698dfdda2aeb">setGrabMouse</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a4d340a4f8ec13659938a2e53d7c479d0">isFullscreen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a0543c7f97e4d2ef79be90a0daab7976c">isBorderless</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a0fcefa88943a843cc1cb79c8f281c58f">isResizable</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a916d1534c5118991329ac972b841c9b5">isGrabMouse</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="comment">// === Позиция и размер ===</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#af46aa597947fb1e042ae20f744b3a785">setPosition</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            std::pair&lt;int, int&gt; <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a2762ec845f95405e8798107b8de8835b">getPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a6b100e90fbe4904d23bcac79921fd45b">centerWindow</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a63072d9ec3267b92f28bc9559aa68907">setMinSize</a>(<span class="keywordtype">int</span> minWidth, <span class="keywordtype">int</span> minHeight);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a3682515a8b78f38e49bc00ef351d1e91">setMaxSize</a>(<span class="keywordtype">int</span> maxWidth, <span class="keywordtype">int</span> maxHeight);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="comment">// === События и рендеринг ===</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a52a4884a96c2dbb938c23b4bafef341d">shouldClose</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a95715b5d073f7a38592f3a344be48743">setCloseRequested</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab4f40d8f9f44ff9e6f5310ba7cb3500d">handleEvents</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ad904abdf14e9eb6e3f853763c7f06faf">clear</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#aaec31f6c1a24777d4ce31811ef3d2050">update</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="comment">// === Дополнительные методы ===</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a7e7ab6881f1847d75494d4e751c5826e">destroy</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a0ac1c3fd06ab0d3b1582ac9c448a161c">   86</a></span>            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a0ac1c3fd06ab0d3b1582ac9c448a161c">setSDLInitialized</a>(<span class="keywordtype">bool</span> initialized) { <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#ab54c30367a0c4d0630df18dab81e0c21">s_sdlInitialized</a> = initialized; }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="comment">// === Vulkan методы ===</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a5189f4eb8214086bed7037cdae2ffd89">vulkanInut</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a06e21fda269f7b8242de7ec8c5310e8d">createInstance</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a7bb96f10739921534995f7e0e2a0360f">pickPhysicalDevice</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a76dc16248ebd56b8787302654689aa08">isDeviceSuitable</a>(VkPhysicalDevice <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a566b289231e8ab2506bccdd53a9b84f3">device</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#af18daa601490652e0bc0434b13cabb4f">checkDeviceExtensionSupport</a>(VkPhysicalDevice <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a566b289231e8ab2506bccdd53a9b84f3">device</a>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#ifdef NDEBUG</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a24fd09bbf7871e2448af8db4471879fe">enableValidationLayers</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a24fd09bbf7871e2448af8db4471879fe">  101</a></span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a24fd09bbf7871e2448af8db4471879fe">enableValidationLayers</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#ab54c30367a0c4d0630df18dab81e0c21">  103</a></span>            <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#ab54c30367a0c4d0630df18dab81e0c21">s_sdlInitialized</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a376baefea36091e57fa85ea6d4083dba">  104</a></span>            SDL_Window* <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a376baefea36091e57fa85ea6d4083dba">m_sdlWindow</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a4565b56a9f438b6c87c9f262e8848fa0">  105</a></span>            <span class="keywordtype">bool</span> <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a4565b56a9f438b6c87c9f262e8848fa0">m_isDestroyed</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a73b38623bf14708bf5ac9602d1ce684b">  107</a></span>            <span class="keywordtype">bool</span> <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a73b38623bf14708bf5ac9602d1ce684b">m_windowMinimized</a> = <span class="keyword">false</span>; <span class="comment">// Флаг минимизации окна</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="comment">// Внутренний конструктор для делегирования</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_function" href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">Window</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, Uint32 sdlFlags);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a00ee05d32648685bb74fba379937ba0a">  112</a></span>            VkInstance <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a00ee05d32648685bb74fba379937ba0a">instance</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a70e49b67dea0ee45f4d52e4ebb03db7e">  113</a></span>            VkPhysicalDevice <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a70e49b67dea0ee45f4d52e4ebb03db7e">physicalDevice</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a566b289231e8ab2506bccdd53a9b84f3">  114</a></span>            VkDevice <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a566b289231e8ab2506bccdd53a9b84f3">device</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#a9b0044913b1df68617169565b85e5cae">  115</a></span>            VkQueue <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a9b0044913b1df68617169565b85e5cae">graphicsQueue</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#ada7a56e2c924860af9187e3994c88e31">  116</a></span>            VkSurfaceKHR <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#ada7a56e2c924860af9187e3994c88e31">surface</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classprism_1_1view_1_1_window.html#af508535cfe4d6904d01396d15ee0a91b">  117</a></span>            VkQueue <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#af508535cfe4d6904d01396d15ee0a91b">presentQueue</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">int</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a71ddbebd98846cd305ba67fd8f3f3ef5">rateDeviceSuitability</a>(VkPhysicalDevice <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a566b289231e8ab2506bccdd53a9b84f3">device</a>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_struct" href="structprism_1_1view_1_1_queue_family_indices.html">QueueFamilyIndices</a> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#addfe6172e6af7dabf1cb8bdd5f60655e">findQueueFamilies</a>(VkPhysicalDevice <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#a566b289231e8ab2506bccdd53a9b84f3">device</a>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a85ae040c045e6e1d57e79ca5fd2b42c3">createLogicalDevice</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classprism_1_1view_1_1_window.html#a244e6e0144fe90f9604452a1cb515cea">createSurface</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        };</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classprism_1_1view_1_1_window.html#ab54c30367a0c4d0630df18dab81e0c21">Window::s_sdlInitialized</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    } <span class="comment">// namespace view</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>} <span class="comment">// namespace prism</span></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a000dbd1aaf3338843829891b00de6cef"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a000dbd1aaf3338843829891b00de6cef">prism::view::Window::setFullscreen</a></div><div class="ttdeci">void setFullscreen(bool enabled)</div><div class="ttdef"><b>Определения</b> Window.cpp:102</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a00ee05d32648685bb74fba379937ba0a"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a00ee05d32648685bb74fba379937ba0a">prism::view::Window::instance</a></div><div class="ttdeci">VkInstance instance</div><div class="ttdef"><b>Определения</b> Window.h:112</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a0543c7f97e4d2ef79be90a0daab7976c"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a0543c7f97e4d2ef79be90a0daab7976c">prism::view::Window::isBorderless</a></div><div class="ttdeci">bool isBorderless() const</div><div class="ttdef"><b>Определения</b> Window.cpp:122</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a064fdb06b7036f1dacaa110e6e0007db"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a064fdb06b7036f1dacaa110e6e0007db">prism::view::Window::setResizable</a></div><div class="ttdeci">void setResizable(bool enabled)</div><div class="ttdef"><b>Определения</b> Window.cpp:110</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a06e21fda269f7b8242de7ec8c5310e8d"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a06e21fda269f7b8242de7ec8c5310e8d">prism::view::Window::createInstance</a></div><div class="ttdeci">void createInstance()</div><div class="ttdef"><b>Определения</b> Window.cpp:217</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a0ac1c3fd06ab0d3b1582ac9c448a161c"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a0ac1c3fd06ab0d3b1582ac9c448a161c">prism::view::Window::setSDLInitialized</a></div><div class="ttdeci">static void setSDLInitialized(bool initialized)</div><div class="ttdef"><b>Определения</b> Window.h:86</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a0e401cb1e3912c8e2394698dfdda2aeb"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a0e401cb1e3912c8e2394698dfdda2aeb">prism::view::Window::setGrabMouse</a></div><div class="ttdeci">void setGrabMouse(bool enabled)</div><div class="ttdef"><b>Определения</b> Window.cpp:114</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a0fcefa88943a843cc1cb79c8f281c58f"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a0fcefa88943a843cc1cb79c8f281c58f">prism::view::Window::isResizable</a></div><div class="ttdeci">bool isResizable() const</div><div class="ttdef"><b>Определения</b> Window.cpp:126</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a244e6e0144fe90f9604452a1cb515cea"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a244e6e0144fe90f9604452a1cb515cea">prism::view::Window::createSurface</a></div><div class="ttdeci">void createSurface()</div><div class="ttdef"><b>Определения</b> Window.cpp:426</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a24fd09bbf7871e2448af8db4471879fe"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a24fd09bbf7871e2448af8db4471879fe">prism::view::Window::enableValidationLayers</a></div><div class="ttdeci">const bool enableValidationLayers</div><div class="ttdef"><b>Определения</b> Window.h:101</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a2762ec845f95405e8798107b8de8835b"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a2762ec845f95405e8798107b8de8835b">prism::view::Window::getPosition</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getPosition() const</div><div class="ttdef"><b>Определения</b> Window.cpp:138</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a29d789115d706e4f5bd98448cdae1108"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a29d789115d706e4f5bd98448cdae1108">prism::view::Window::setWidth</a></div><div class="ttdeci">void setWidth(int width)</div><div class="ttdef"><b>Определения</b> Window.cpp:86</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a3682515a8b78f38e49bc00ef351d1e91"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a3682515a8b78f38e49bc00ef351d1e91">prism::view::Window::setMaxSize</a></div><div class="ttdeci">void setMaxSize(int maxWidth, int maxHeight)</div><div class="ttdef"><b>Определения</b> Window.cpp:152</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a376baefea36091e57fa85ea6d4083dba"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a376baefea36091e57fa85ea6d4083dba">prism::view::Window::m_sdlWindow</a></div><div class="ttdeci">SDL_Window * m_sdlWindow</div><div class="ttdef"><b>Определения</b> Window.h:104</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a4565b56a9f438b6c87c9f262e8848fa0"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a4565b56a9f438b6c87c9f262e8848fa0">prism::view::Window::m_isDestroyed</a></div><div class="ttdeci">bool m_isDestroyed</div><div class="ttdef"><b>Определения</b> Window.h:105</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a45ff9b145b3fdd721de6ae4a7541f0c2"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a45ff9b145b3fdd721de6ae4a7541f0c2">prism::view::Window::getHeight</a></div><div class="ttdeci">int getHeight()</div><div class="ttdef"><b>Определения</b> Window.cpp:76</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a4d340a4f8ec13659938a2e53d7c479d0"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a4d340a4f8ec13659938a2e53d7c479d0">prism::view::Window::isFullscreen</a></div><div class="ttdeci">bool isFullscreen() const</div><div class="ttdef"><b>Определения</b> Window.cpp:118</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a5189f4eb8214086bed7037cdae2ffd89"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a5189f4eb8214086bed7037cdae2ffd89">prism::view::Window::vulkanInut</a></div><div class="ttdeci">void vulkanInut()</div><div class="ttdef"><b>Определения</b> Window.cpp:209</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a52a4884a96c2dbb938c23b4bafef341d"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a52a4884a96c2dbb938c23b4bafef341d">prism::view::Window::shouldClose</a></div><div class="ttdeci">bool shouldClose() const</div><div class="ttdef"><b>Определения</b> Window.cpp:156</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a566b289231e8ab2506bccdd53a9b84f3"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a566b289231e8ab2506bccdd53a9b84f3">prism::view::Window::device</a></div><div class="ttdeci">VkDevice device</div><div class="ttdef"><b>Определения</b> Window.h:114</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a5cf935efd740352ab3ff7ebee06e7254"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a5cf935efd740352ab3ff7ebee06e7254">prism::view::Window::getTitle</a></div><div class="ttdeci">const char * getTitle() const</div><div class="ttdef"><b>Определения</b> Window.cpp:62</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a5e4bd28cd96622e8b3b13e57778ebb8b"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a5e4bd28cd96622e8b3b13e57778ebb8b">prism::view::Window::CreateCentered</a></div><div class="ttdeci">static Window CreateCentered(const char *title, int width, int height)</div><div class="ttdef"><b>Определения</b> Window.cpp:29</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a63072d9ec3267b92f28bc9559aa68907"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a63072d9ec3267b92f28bc9559aa68907">prism::view::Window::setMinSize</a></div><div class="ttdeci">void setMinSize(int minWidth, int minHeight)</div><div class="ttdef"><b>Определения</b> Window.cpp:148</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a6b100e90fbe4904d23bcac79921fd45b"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a6b100e90fbe4904d23bcac79921fd45b">prism::view::Window::centerWindow</a></div><div class="ttdeci">void centerWindow()</div><div class="ttdef"><b>Определения</b> Window.cpp:144</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a70e49b67dea0ee45f4d52e4ebb03db7e"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a70e49b67dea0ee45f4d52e4ebb03db7e">prism::view::Window::physicalDevice</a></div><div class="ttdeci">VkPhysicalDevice physicalDevice</div><div class="ttdef"><b>Определения</b> Window.h:113</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a71ddbebd98846cd305ba67fd8f3f3ef5"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a71ddbebd98846cd305ba67fd8f3f3ef5">prism::view::Window::rateDeviceSuitability</a></div><div class="ttdeci">int rateDeviceSuitability(VkPhysicalDevice device)</div><div class="ttdef"><b>Определения</b> Window.cpp:305</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a73b38623bf14708bf5ac9602d1ce684b"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a73b38623bf14708bf5ac9602d1ce684b">prism::view::Window::m_windowMinimized</a></div><div class="ttdeci">bool m_windowMinimized</div><div class="ttdef"><b>Определения</b> Window.h:107</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a76dc16248ebd56b8787302654689aa08"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a76dc16248ebd56b8787302654689aa08">prism::view::Window::isDeviceSuitable</a></div><div class="ttdeci">bool isDeviceSuitable(VkPhysicalDevice device)</div><div class="ttdef"><b>Определения</b> Window.cpp:432</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a7bb96f10739921534995f7e0e2a0360f"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a7bb96f10739921534995f7e0e2a0360f">prism::view::Window::pickPhysicalDevice</a></div><div class="ttdeci">void pickPhysicalDevice()</div><div class="ttdef"><b>Определения</b> Window.cpp:244</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a7e7ab6881f1847d75494d4e751c5826e"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a7e7ab6881f1847d75494d4e751c5826e">prism::view::Window::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdef"><b>Определения</b> Window.cpp:189</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a80f7ecc7488b3a75da4ac2b45895ae2e"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a80f7ecc7488b3a75da4ac2b45895ae2e">prism::view::Window::getSize</a></div><div class="ttdeci">void getSize(int *width, int *height)</div><div class="ttdef"><b>Определения</b> Window.cpp:82</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a85ae040c045e6e1d57e79ca5fd2b42c3"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a85ae040c045e6e1d57e79ca5fd2b42c3">prism::view::Window::createLogicalDevice</a></div><div class="ttdeci">void createLogicalDevice()</div><div class="ttdef"><b>Определения</b> Window.cpp:385</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a916d1534c5118991329ac972b841c9b5"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a916d1534c5118991329ac972b841c9b5">prism::view::Window::isGrabMouse</a></div><div class="ttdeci">bool isGrabMouse() const</div><div class="ttdef"><b>Определения</b> Window.cpp:130</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a95715b5d073f7a38592f3a344be48743"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a95715b5d073f7a38592f3a344be48743">prism::view::Window::setCloseRequested</a></div><div class="ttdeci">void setCloseRequested(bool value)</div><div class="ttdef"><b>Определения</b> Window.cpp:160</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a9b0044913b1df68617169565b85e5cae"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a9b0044913b1df68617169565b85e5cae">prism::view::Window::graphicsQueue</a></div><div class="ttdeci">VkQueue graphicsQueue</div><div class="ttdef"><b>Определения</b> Window.h:115</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_a9eddda4bbcacea440786c2ace67f2a16"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#a9eddda4bbcacea440786c2ace67f2a16">prism::view::Window::setSize</a></div><div class="ttdeci">void setSize(int width, int height)</div><div class="ttdef"><b>Определения</b> Window.cpp:98</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_aa380520df5902e4c2f52dbd7486d65b8"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#aa380520df5902e4c2f52dbd7486d65b8">prism::view::Window::~Window</a></div><div class="ttdeci">~Window()</div><div class="ttdef"><b>Определения</b> Window.cpp:58</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_aaec31f6c1a24777d4ce31811ef3d2050"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#aaec31f6c1a24777d4ce31811ef3d2050">prism::view::Window::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Определения</b> Window.cpp:185</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_ab37a7db3c8ac082958cbf1cc76c53232"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232">prism::view::Window::Window</a></div><div class="ttdeci">Window(const char *title, int width, int height)</div><div class="ttdef"><b>Определения</b> Window.cpp:8</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_ab4f40d8f9f44ff9e6f5310ba7cb3500d"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#ab4f40d8f9f44ff9e6f5310ba7cb3500d">prism::view::Window::handleEvents</a></div><div class="ttdeci">void handleEvents()</div><div class="ttdef"><b>Определения</b> Window.cpp:164</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_ab54c30367a0c4d0630df18dab81e0c21"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#ab54c30367a0c4d0630df18dab81e0c21">prism::view::Window::s_sdlInitialized</a></div><div class="ttdeci">static bool s_sdlInitialized</div><div class="ttdef"><b>Определения</b> Window.h:103</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_ab9f80b6a4d67e91bb8454a6e45b00c6a"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#ab9f80b6a4d67e91bb8454a6e45b00c6a">prism::view::Window::getWidth</a></div><div class="ttdeci">int getWidth()</div><div class="ttdef"><b>Определения</b> Window.cpp:70</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_ac2d1238a607bf29ac672870ebf9f73cb"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#ac2d1238a607bf29ac672870ebf9f73cb">prism::view::Window::setHeight</a></div><div class="ttdeci">void setHeight(int height)</div><div class="ttdef"><b>Определения</b> Window.cpp:92</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_ad904abdf14e9eb6e3f853763c7f06faf"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#ad904abdf14e9eb6e3f853763c7f06faf">prism::view::Window::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Определения</b> Window.cpp:181</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_ada7a56e2c924860af9187e3994c88e31"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#ada7a56e2c924860af9187e3994c88e31">prism::view::Window::surface</a></div><div class="ttdeci">VkSurfaceKHR surface</div><div class="ttdef"><b>Определения</b> Window.h:116</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_addfe6172e6af7dabf1cb8bdd5f60655e"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#addfe6172e6af7dabf1cb8bdd5f60655e">prism::view::Window::findQueueFamilies</a></div><div class="ttdeci">QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device)</div><div class="ttdef"><b>Определения</b> Window.cpp:354</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_adfe7fd34bbb853a8ac64ca0b5a68cadd"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#adfe7fd34bbb853a8ac64ca0b5a68cadd">prism::view::Window::setTitle</a></div><div class="ttdeci">void setTitle(const char *title)</div><div class="ttdef"><b>Определения</b> Window.cpp:66</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_aef39954d735b1762f1d4179a9f08d6e4"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#aef39954d735b1762f1d4179a9f08d6e4">prism::view::Window::setBorderless</a></div><div class="ttdeci">void setBorderless(bool enabled)</div><div class="ttdef"><b>Определения</b> Window.cpp:106</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_af18daa601490652e0bc0434b13cabb4f"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#af18daa601490652e0bc0434b13cabb4f">prism::view::Window::checkDeviceExtensionSupport</a></div><div class="ttdeci">bool checkDeviceExtensionSupport(VkPhysicalDevice device)</div><div class="ttdef"><b>Определения</b> Window.cpp:440</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_af46aa597947fb1e042ae20f744b3a785"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#af46aa597947fb1e042ae20f744b3a785">prism::view::Window::setPosition</a></div><div class="ttdeci">void setPosition(int x, int y)</div><div class="ttdef"><b>Определения</b> Window.cpp:134</div></div>
+<div class="ttc" id="aclassprism_1_1view_1_1_window_html_af508535cfe4d6904d01396d15ee0a91b"><div class="ttname"><a href="classprism_1_1view_1_1_window.html#af508535cfe4d6904d01396d15ee0a91b">prism::view::Window::presentQueue</a></div><div class="ttdeci">VkQueue presentQueue</div><div class="ttdef"><b>Определения</b> Window.h:117</div></div>
+<div class="ttc" id="anamespaceprism_1_1view_html"><div class="ttname"><a href="namespaceprism_1_1view.html">prism::view</a></div><div class="ttdef"><b>Определения</b> Window.cpp:6</div></div>
+<div class="ttc" id="anamespaceprism_1_1view_html_a5e08683d7e148199c9e82e1382ca3f97"><div class="ttname"><a href="namespaceprism_1_1view.html#a5e08683d7e148199c9e82e1382ca3f97">prism::view::validationLayers</a></div><div class="ttdeci">const std::vector&lt; const char * &gt; validationLayers</div><div class="ttdef"><b>Определения</b> Window.h:16</div></div>
+<div class="ttc" id="anamespaceprism_1_1view_html_aad0a33fb229c69df767196676a0bb441"><div class="ttname"><a href="namespaceprism_1_1view.html#aad0a33fb229c69df767196676a0bb441">prism::view::deviceExtensions</a></div><div class="ttdeci">const std::vector&lt; const char * &gt; deviceExtensions</div><div class="ttdef"><b>Определения</b> Window.h:19</div></div>
+<div class="ttc" id="anamespaceprism_html"><div class="ttname"><a href="namespaceprism.html">prism</a></div><div class="ttdef"><b>Определения</b> fmath.cpp:3</div></div>
+<div class="ttc" id="astructprism_1_1view_1_1_queue_family_indices_html"><div class="ttname"><a href="structprism_1_1view_1_1_queue_family_indices.html">prism::view::QueueFamilyIndices</a></div><div class="ttdef"><b>Определения</b> Window.h:23</div></div>
+<div class="ttc" id="astructprism_1_1view_1_1_queue_family_indices_html_a9850754d20bfa6fda8ec34d6197630b0"><div class="ttname"><a href="structprism_1_1view_1_1_queue_family_indices.html#a9850754d20bfa6fda8ec34d6197630b0">prism::view::QueueFamilyIndices::graphicsFamily</a></div><div class="ttdeci">std::optional&lt; uint32_t &gt; graphicsFamily</div><div class="ttdef"><b>Определения</b> Window.h:24</div></div>
+<div class="ttc" id="astructprism_1_1view_1_1_queue_family_indices_html_aa84d262b22d58e73295a7ad73ab17ca3"><div class="ttname"><a href="structprism_1_1view_1_1_queue_family_indices.html#aa84d262b22d58e73295a7ad73ab17ca3">prism::view::QueueFamilyIndices::presentFamily</a></div><div class="ttdeci">std::optional&lt; uint32_t &gt; presentFamily</div><div class="ttdef"><b>Определения</b> Window.h:25</div></div>
+<div class="ttc" id="astructprism_1_1view_1_1_queue_family_indices_html_afcb56ae02ff571b22da0cf6a4a59578a"><div class="ttname"><a href="structprism_1_1view_1_1_queue_family_indices.html#afcb56ae02ff571b22da0cf6a4a59578a">prism::view::QueueFamilyIndices::isComplete</a></div><div class="ttdeci">bool isComplete()</div><div class="ttdef"><b>Определения</b> Window.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_window_8h.html">Window.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

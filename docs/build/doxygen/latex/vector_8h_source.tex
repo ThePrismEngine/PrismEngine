@@ -1,0 +1,52 @@
+\doxysection{vector.\+h}
+\hypertarget{vector_8h_source}{}\label{vector_8h_source}\index{C:/Users/Admin/source/repos/PrismEngine/src/vector.h@{C:/Users/Admin/source/repos/PrismEngine/src/vector.h}}
+\mbox{\hyperlink{vector_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1math}{math}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0666bd40f322dcea9a6e01f98717729c}{Vector3d}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736}{x}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710}{y}};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5}{z}};\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba}{w}}\ =\ 1.0f;\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0666bd40f322dcea9a6e01f98717729c}{Vector3d}}()\ :\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736}{x}}(0),\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710}{y}}(0),\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5}{z}}(0),\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba}{w}}(1)\ \{\}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a4971bfe801e3559fbbfc5c806aa6f96d}{Vector3d}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736}{x}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710}{y}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5}{z}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba}{w}}\ =\ 1.0f)\ :\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736}{x}}(\mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736}{x}}),\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710}{y}}(\mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710}{y}}),\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5}{z}}(\mbox{\hyperlink{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5}{z}}),\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba}{w}}(\mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba}{w}})\ \{\}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_ae095b21e5923e3e09f186e423c4385b6}{print}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0c8b693083a8af90d6b62808b57765fe}{operator+}}(\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\&\ other);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_afe3a8371655b6b6a2d1e39c9bcda5665}{operator-\/}}(\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\&\ other);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a96cda750eb855d0b784db5a3a64046ea}{operator*}}(\textcolor{keywordtype}{float}\ k);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_af491978014b487f096ac0ac781365da5}{operator/}}(\textcolor{keywordtype}{float}\ k);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a8db312c4c2d5a5b2c0bc4a91af7dc36a}{operator[]}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_ab5a3dd7e3d1bb0f39557671fb7fe36fe}{operator==}}(\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\&\ other);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a246d4ac8bf3bc3b237c3250a0acdfdb7}{length}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a59dbff9c0f786334970c93d16820fd8b}{normalise}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceprism_1_1math_a66cc48e6731c348a983b096ab80b5b6f}{Vector\_DotProduct}}(Vector3d\&\ v1,\ Vector3d\&\ v2);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ Vector3d\ \mbox{\hyperlink{namespaceprism_1_1math_a656054ef093536949e61ac4a4f1f0ea6}{Vector\_CrossProduct}}(Vector3d\&\ v1,\ Vector3d\&\ v2);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ Vector3d\ \mbox{\hyperlink{namespaceprism_1_1math_a5dabeebe5cc305b68b078008764e2b5d}{Vector\_IntersectPlane}}(Vector3d\&\ plane\_p,\ Vector3d\&\ plane\_n,\ Vector3d\&\ lineStart,\ Vector3d\&\ lineEnd);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ math}}
+\DoxyCodeLine{00126\ \}\ \textcolor{comment}{//\ namespace\ prism}}
+
+\end{DoxyCode}

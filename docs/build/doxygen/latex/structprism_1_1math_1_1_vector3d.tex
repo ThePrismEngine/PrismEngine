@@ -1,0 +1,298 @@
+\doxysection{Структура prism\+::math\+::Vector3d}
+\hypertarget{structprism_1_1math_1_1_vector3d}{}\label{structprism_1_1math_1_1_vector3d}\index{prism::math::Vector3d@{prism::math::Vector3d}}
+
+
+3D вектор с дополнительной компонентой w  
+
+
+
+
+{\ttfamily \#include $<$vector.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0666bd40f322dcea9a6e01f98717729c}{Vector3d}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию (нулевой вектор) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a4971bfe801e3559fbbfc5c806aa6f96d}{Vector3d}} (float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736}{x}}, float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710}{y}}, float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5}{z}}, float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba}{w}}=1.\+0f)
+\begin{DoxyCompactList}\small\item\em Конструктор с параметрами \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_ae095b21e5923e3e09f186e423c4385b6}{print}} ()
+\begin{DoxyCompactList}\small\item\em Вывод вектора в консоль \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0c8b693083a8af90d6b62808b57765fe}{operator+}} (\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&other)
+\begin{DoxyCompactList}\small\item\em Сложение векторов \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_afe3a8371655b6b6a2d1e39c9bcda5665}{operator-\/}} (\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&other)
+\begin{DoxyCompactList}\small\item\em Вычитание векторов \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a96cda750eb855d0b784db5a3a64046ea}{operator\texorpdfstring{$\ast$}{*}}} (float k)
+\begin{DoxyCompactList}\small\item\em Умножение на скаляр \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_af491978014b487f096ac0ac781365da5}{operator/}} (float k)
+\begin{DoxyCompactList}\small\item\em Деление на скаляр \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a8db312c4c2d5a5b2c0bc4a91af7dc36a}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\begin{DoxyCompactList}\small\item\em Доступ к компонентам по индексу \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_ab5a3dd7e3d1bb0f39557671fb7fe36fe}{operator==}} (\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&other)
+\begin{DoxyCompactList}\small\item\em Сравнение векторов \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a246d4ac8bf3bc3b237c3250a0acdfdb7}{length}} ()
+\begin{DoxyCompactList}\small\item\em Вычисление длины вектора \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a59dbff9c0f786334970c93d16820fd8b}{normalise}} ()
+\begin{DoxyCompactList}\small\item\em Нормализация вектора \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736}{x}}
+\begin{DoxyCompactList}\small\item\em Координата X. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710}{y}}
+\begin{DoxyCompactList}\small\item\em Координата Y. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5}{z}}
+\begin{DoxyCompactList}\small\item\em Координата Z. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba}{w}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em Однородная координата (по умолчанию 1.\+0) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+3D вектор с дополнительной компонентой w 
+
+Используется для однородных координат и 3D преобразований 
+
+\label{doc-constructors}
+\Hypertarget{structprism_1_1math_1_1_vector3d_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{structprism_1_1math_1_1_vector3d_a0666bd40f322dcea9a6e01f98717729c}\index{prism::math::Vector3d@{prism::math::Vector3d}!Vector3d@{Vector3d}}
+\index{Vector3d@{Vector3d}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{Vector3d()}{Vector3d()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a0666bd40f322dcea9a6e01f98717729c} 
+prism\+::math\+::\+Vector3d\+::\+Vector3d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор по умолчанию (нулевой вектор) 
+
+\Hypertarget{structprism_1_1math_1_1_vector3d_a4971bfe801e3559fbbfc5c806aa6f96d}\index{prism::math::Vector3d@{prism::math::Vector3d}!Vector3d@{Vector3d}}
+\index{Vector3d@{Vector3d}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{Vector3d()}{Vector3d()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a4971bfe801e3559fbbfc5c806aa6f96d} 
+prism\+::math\+::\+Vector3d\+::\+Vector3d (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{, }\item[{float}]{w}{ = {\ttfamily 1.0f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор с параметрами 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & Координата X \\
+\hline
+{\em y} & Координата Y \\
+\hline
+{\em z} & Координата Z \\
+\hline
+{\em w} & Однородная координата (опционально) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{structprism_1_1math_1_1_vector3d_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{structprism_1_1math_1_1_vector3d_a246d4ac8bf3bc3b237c3250a0acdfdb7}\index{prism::math::Vector3d@{prism::math::Vector3d}!length@{length}}
+\index{length@{length}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a246d4ac8bf3bc3b237c3250a0acdfdb7} 
+float prism\+::math\+::\+Vector3d\+::length (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Вычисление длины вектора 
+
+\begin{DoxyReturn}{Возвращает}
+Длина вектора 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_vector3d_a59dbff9c0f786334970c93d16820fd8b}\index{prism::math::Vector3d@{prism::math::Vector3d}!normalise@{normalise}}
+\index{normalise@{normalise}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{normalise()}{normalise()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a59dbff9c0f786334970c93d16820fd8b} 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} prism\+::math\+::\+Vector3d\+::normalise (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Нормализация вектора 
+
+\begin{DoxyReturn}{Возвращает}
+Нормализованный вектор 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_vector3d_a96cda750eb855d0b784db5a3a64046ea}\index{prism::math::Vector3d@{prism::math::Vector3d}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a96cda750eb855d0b784db5a3a64046ea} 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} prism\+::math\+::\+Vector3d\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{float}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Умножение на скаляр 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em k} & Скаляр \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат умножения 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_vector3d_a0c8b693083a8af90d6b62808b57765fe}\index{prism::math::Vector3d@{prism::math::Vector3d}!operator+@{operator+}}
+\index{operator+@{operator+}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a0c8b693083a8af90d6b62808b57765fe} 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} prism\+::math\+::\+Vector3d\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Сложение векторов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em other} & Второй вектор \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат сложения 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_vector3d_afe3a8371655b6b6a2d1e39c9bcda5665}\index{prism::math::Vector3d@{prism::math::Vector3d}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_afe3a8371655b6b6a2d1e39c9bcda5665} 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} prism\+::math\+::\+Vector3d\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Вычитание векторов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em other} & Второй вектор \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат вычитания 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_vector3d_af491978014b487f096ac0ac781365da5}\index{prism::math::Vector3d@{prism::math::Vector3d}!operator/@{operator/}}
+\index{operator/@{operator/}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_af491978014b487f096ac0ac781365da5} 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} prism\+::math\+::\+Vector3d\+::operator/ (\begin{DoxyParamCaption}\item[{float}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Деление на скаляр 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em k} & Скаляр (не должен быть 0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат деления 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::invalid\+\_\+argument} & Если k = 0 \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{structprism_1_1math_1_1_vector3d_ab5a3dd7e3d1bb0f39557671fb7fe36fe}\index{prism::math::Vector3d@{prism::math::Vector3d}!operator==@{operator==}}
+\index{operator==@{operator==}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_ab5a3dd7e3d1bb0f39557671fb7fe36fe} 
+bool prism\+::math\+::\+Vector3d\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Сравнение векторов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em other} & Второй вектор \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если векторы равны (w не учитывается) 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_vector3d_a8db312c4c2d5a5b2c0bc4a91af7dc36a}\index{prism::math::Vector3d@{prism::math::Vector3d}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a8db312c4c2d5a5b2c0bc4a91af7dc36a} 
+float prism\+::math\+::\+Vector3d\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Доступ к компонентам по индексу 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em index} & 0-\/X, 1-\/Y, 2-\/Z, 3-\/W \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение компоненты 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::out\+\_\+of\+\_\+range} & При неверном индексе \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{structprism_1_1math_1_1_vector3d_ae095b21e5923e3e09f186e423c4385b6}\index{prism::math::Vector3d@{prism::math::Vector3d}!print@{print}}
+\index{print@{print}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_ae095b21e5923e3e09f186e423c4385b6} 
+void prism\+::math\+::math\+::\+Vector3d\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Вывод вектора в консоль 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structprism_1_1math_1_1_vector3d_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba}\index{prism::math::Vector3d@{prism::math::Vector3d}!w@{w}}
+\index{w@{w}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a46e1eb616728dab7095af12303438bba} 
+float prism\+::math\+::\+Vector3d\+::w = 1.\+0f}
+
+
+
+Однородная координата (по умолчанию 1.\+0) 
+
+\Hypertarget{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736}\index{prism::math::Vector3d@{prism::math::Vector3d}!x@{x}}
+\index{x@{x}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a0fdf8e79434ed7bbba3a2ce5e525b736} 
+float prism\+::math\+::\+Vector3d\+::x}
+
+
+
+Координата X. 
+
+\Hypertarget{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710}\index{prism::math::Vector3d@{prism::math::Vector3d}!y@{y}}
+\index{y@{y}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_a754de72e6ab72e92e37dec7e1cdae710} 
+float prism\+::math\+::\+Vector3d\+::y}
+
+
+
+Координата Y. 
+
+\Hypertarget{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5}\index{prism::math::Vector3d@{prism::math::Vector3d}!z@{z}}
+\index{z@{z}!prism::math::Vector3d@{prism::math::Vector3d}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_vector3d_aac7af19efcd4d5e3738e3d2b1313efc5} 
+float prism\+::math\+::\+Vector3d\+::z}
+
+
+
+Координата Z. 
+
+
+
+Объявления и описания членов структур находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/source/repos/\+Prism\+Engine/src/\mbox{\hyperlink{vector_8h}{vector.\+h}}\item 
+C\+:/\+Users/\+Admin/source/repos/\+Prism\+Engine/src/\mbox{\hyperlink{vector_8cpp}{vector.\+cpp}}\end{DoxyCompactItemize}

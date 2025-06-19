@@ -1,0 +1,149 @@
+\doxysection{Пространство имен prism\+::math}
+\hypertarget{namespaceprism_1_1math}{}\label{namespaceprism_1_1math}\index{prism::math@{prism::math}}
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}}
+\begin{DoxyCompactList}\small\item\em 4x4 матрица для линейных преобразований \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}
+\begin{DoxyCompactList}\small\item\em 3D вектор с дополнительной компонентой w \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{namespaceprism_1_1math_a6ac57e1dc64feb10d5df6e1a3d173446}{deg\+To\+Rad}} (float degrees)
+\begin{DoxyCompactList}\small\item\em Преобразует градусы в радианы \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{namespaceprism_1_1math_a1ee2a21c4aa09e48c35adb5e4bf81f96}{Matrix\+\_\+\+Multiply\+Matrix}} (\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \&m1, \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \&m2)
+\begin{DoxyCompactList}\small\item\em Умножение матриц 4x4. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{namespaceprism_1_1math_a95812488fd848a4471b0d983c78a07f7}{Matrix\+\_\+\+Quick\+Inverse}} (\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \&m)
+\begin{DoxyCompactList}\small\item\em Быстрое обращение матрицы (специализированное) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceprism_1_1math_a66cc48e6731c348a983b096ab80b5b6f}{Vector\+\_\+\+Dot\+Product}} (\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&v1, \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&v2)
+\begin{DoxyCompactList}\small\item\em Скалярное произведение векторов \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{namespaceprism_1_1math_a656054ef093536949e61ac4a4f1f0ea6}{Vector\+\_\+\+Cross\+Product}} (\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&v1, \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&v2)
+\begin{DoxyCompactList}\small\item\em Векторное произведение \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{namespaceprism_1_1math_a5dabeebe5cc305b68b078008764e2b5d}{Vector\+\_\+\+Intersect\+Plane}} (\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&plane\+\_\+p, \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&plane\+\_\+n, \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&line\+Start, \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&line\+End)
+\begin{DoxyCompactList}\small\item\em Пересечение плоскости и линии \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceprism_1_1math_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{namespaceprism_1_1math_a6ac57e1dc64feb10d5df6e1a3d173446}\index{prism::math@{prism::math}!degToRad@{degToRad}}
+\index{degToRad@{degToRad}!prism::math@{prism::math}}
+\doxysubsubsection{\texorpdfstring{degToRad()}{degToRad()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1math_a6ac57e1dc64feb10d5df6e1a3d173446} 
+float prism\+::math\+::deg\+To\+Rad (\begin{DoxyParamCaption}\item[{float}]{degrees}{}\end{DoxyParamCaption})}
+
+
+
+Преобразует градусы в радианы 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em degrees} & Угол в градусах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Угол в радианах 
+\end{DoxyReturn}
+\Hypertarget{namespaceprism_1_1math_a1ee2a21c4aa09e48c35adb5e4bf81f96}\index{prism::math@{prism::math}!Matrix\_MultiplyMatrix@{Matrix\_MultiplyMatrix}}
+\index{Matrix\_MultiplyMatrix@{Matrix\_MultiplyMatrix}!prism::math@{prism::math}}
+\doxysubsubsection{\texorpdfstring{Matrix\_MultiplyMatrix()}{Matrix\_MultiplyMatrix()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1math_a1ee2a21c4aa09e48c35adb5e4bf81f96} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix\+\_\+\+Multiply\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \&}]{m1}{, }\item[{\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \&}]{m2}{}\end{DoxyParamCaption})}
+
+
+
+Умножение матриц 4x4. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em m1} & Первая матрица \\
+\hline
+{\em m2} & Вторая матрица \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат умножения 
+\end{DoxyReturn}
+\Hypertarget{namespaceprism_1_1math_a95812488fd848a4471b0d983c78a07f7}\index{prism::math@{prism::math}!Matrix\_QuickInverse@{Matrix\_QuickInverse}}
+\index{Matrix\_QuickInverse@{Matrix\_QuickInverse}!prism::math@{prism::math}}
+\doxysubsubsection{\texorpdfstring{Matrix\_QuickInverse()}{Matrix\_QuickInverse()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1math_a95812488fd848a4471b0d983c78a07f7} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix\+\_\+\+Quick\+Inverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Быстрое обращение матрицы (специализированное) 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em m} & Матрица для обращения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Обращенная матрица 
+\end{DoxyReturn}
+\Hypertarget{namespaceprism_1_1math_a656054ef093536949e61ac4a4f1f0ea6}\index{prism::math@{prism::math}!Vector\_CrossProduct@{Vector\_CrossProduct}}
+\index{Vector\_CrossProduct@{Vector\_CrossProduct}!prism::math@{prism::math}}
+\doxysubsubsection{\texorpdfstring{Vector\_CrossProduct()}{Vector\_CrossProduct()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1math_a656054ef093536949e61ac4a4f1f0ea6} 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} prism\+::math\+::\+Vector\+\_\+\+Cross\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{v1}{, }\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{v2}{}\end{DoxyParamCaption})}
+
+
+
+Векторное произведение 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em v1} & Первый вектор \\
+\hline
+{\em v2} & Второй вектор \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Вектор-\/результат 
+\end{DoxyReturn}
+\Hypertarget{namespaceprism_1_1math_a66cc48e6731c348a983b096ab80b5b6f}\index{prism::math@{prism::math}!Vector\_DotProduct@{Vector\_DotProduct}}
+\index{Vector\_DotProduct@{Vector\_DotProduct}!prism::math@{prism::math}}
+\doxysubsubsection{\texorpdfstring{Vector\_DotProduct()}{Vector\_DotProduct()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1math_a66cc48e6731c348a983b096ab80b5b6f} 
+float prism\+::math\+::\+Vector\+\_\+\+Dot\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{v1}{, }\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{v2}{}\end{DoxyParamCaption})}
+
+
+
+Скалярное произведение векторов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em v1} & Первый вектор \\
+\hline
+{\em v2} & Второй вектор \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат скалярного произведения 
+\end{DoxyReturn}
+\Hypertarget{namespaceprism_1_1math_a5dabeebe5cc305b68b078008764e2b5d}\index{prism::math@{prism::math}!Vector\_IntersectPlane@{Vector\_IntersectPlane}}
+\index{Vector\_IntersectPlane@{Vector\_IntersectPlane}!prism::math@{prism::math}}
+\doxysubsubsection{\texorpdfstring{Vector\_IntersectPlane()}{Vector\_IntersectPlane()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1math_a5dabeebe5cc305b68b078008764e2b5d} 
+\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} prism\+::math\+::\+Vector\+\_\+\+Intersect\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{plane\+\_\+p}{, }\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{plane\+\_\+n}{, }\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{line\+Start}{, }\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{line\+End}{}\end{DoxyParamCaption})}
+
+
+
+Пересечение плоскости и линии 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em plane\+\_\+p} & Точка на плоскости \\
+\hline
+{\em plane\+\_\+n} & Нормаль плоскости \\
+\hline
+{\em line\+Start} & Начало линии \\
+\hline
+{\em line\+End} & Конец линии \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Точка пересечения 
+\end{DoxyReturn}

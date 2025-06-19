@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespaceprism_1_1math" kind="namespace" language="C++">
+    <compoundname>prism::math</compoundname>
+    <innerclass refid="structprism_1_1math_1_1_matrix4_x4" prot="public">prism::math::Matrix4X4</innerclass>
+    <innerclass refid="structprism_1_1math_1_1_vector3d" prot="public">prism::math::Vector3d</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float prism::math::degToRad</definition>
+        <argsstring>(float degrees)</argsstring>
+        <name>degToRad</name>
+        <qualifiedname>prism::math::degToRad</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>degrees</declname>
+        </param>
+        <briefdescription>
+<para>Преобразует градусы в радианы </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>degrees</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Угол в градусах </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Угол в радианах </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/fmath.cpp" line="5" column="7" bodyfile="src/fmath.cpp" bodystart="5" bodyend="7" declfile="src/fmath.h" declline="17" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>static Matrix4X4 prism::math::Matrix_MultiplyMatrix</definition>
+        <argsstring>(Matrix4X4 &amp;m1, Matrix4X4 &amp;m2)</argsstring>
+        <name>Matrix_MultiplyMatrix</name>
+        <qualifiedname>prism::math::Matrix_MultiplyMatrix</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref> &amp;</type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref> &amp;</type>
+          <declname>m2</declname>
+        </param>
+        <briefdescription>
+<para>Умножение матриц 4x4. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Первая матрица </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Вторая матрица </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Результат умножения </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.cpp" line="130" column="11" bodyfile="src/matrix.cpp" bodystart="130" bodyend="137" declfile="src/matrix.h" declline="112" declcolumn="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>static Matrix4X4 prism::math::Matrix_QuickInverse</definition>
+        <argsstring>(Matrix4X4 &amp;m)</argsstring>
+        <name>Matrix_QuickInverse</name>
+        <qualifiedname>prism::math::Matrix_QuickInverse</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Быстрое обращение матрицы (специализированное) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Матрица для обращения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Обращенная матрица </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.cpp" line="138" column="11" bodyfile="src/matrix.cpp" bodystart="138" bodyend="149" declfile="src/matrix.h" declline="119" declcolumn="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float prism::math::Vector_DotProduct</definition>
+        <argsstring>(Vector3d &amp;v1, Vector3d &amp;v2)</argsstring>
+        <name>Vector_DotProduct</name>
+        <qualifiedname>prism::math::Vector_DotProduct</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Скалярное произведение векторов </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Первый вектор </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Второй вектор </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Результат скалярного произведения </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/vector.cpp" line="66" column="7" bodyfile="src/vector.cpp" bodystart="66" bodyend="71" declfile="src/vector.h" declline="105" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
+        <definition>Vector3d prism::math::Vector_CrossProduct</definition>
+        <argsstring>(Vector3d &amp;v1, Vector3d &amp;v2)</argsstring>
+        <name>Vector_CrossProduct</name>
+        <qualifiedname>prism::math::Vector_CrossProduct</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Векторное произведение </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Первый вектор </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Второй вектор </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Вектор-результат </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/vector.cpp" line="73" column="10" bodyfile="src/vector.cpp" bodystart="73" bodyend="80" declfile="src/vector.h" declline="113" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
+        <definition>Vector3d prism::math::Vector_IntersectPlane</definition>
+        <argsstring>(Vector3d &amp;plane_p, Vector3d &amp;plane_n, Vector3d &amp;lineStart, Vector3d &amp;lineEnd)</argsstring>
+        <name>Vector_IntersectPlane</name>
+        <qualifiedname>prism::math::Vector_IntersectPlane</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>plane_p</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>plane_n</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>lineStart</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>lineEnd</declname>
+        </param>
+        <briefdescription>
+<para>Пересечение плоскости и линии </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plane_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Точка на плоскости </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plane_n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Нормаль плоскости </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lineStart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Начало линии </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lineEnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Конец линии </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Точка пересечения </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/vector.cpp" line="82" column="10" bodyfile="src/vector.cpp" bodystart="82" bodyend="91" declfile="src/vector.h" declline="123" declcolumn="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/fmath.cpp" line="4" column="1"/>
+  </compounddef>
+</doxygen>

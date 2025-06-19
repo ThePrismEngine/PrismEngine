@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+  <compound refid="structprism_1_1math_1_1_matrix4_x4" kind="struct"><name>prism::math::Matrix4X4</name>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a03f6ae69a0fc6e279a81bbdb1de1a4f1" kind="variable"><name>m</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a03e22f599fb64c73f5a2bdc8a6b2ed0b" kind="function"><name>print</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a92ac545d71153f230ea7c9cd083e6737" kind="function"><name>operator[]</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a48414a1a4973f0a079ad50def4a184b7" kind="function"><name>operator==</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1aa37f4c9f136b9d5f686059bfc3ec09cc" kind="function"><name>makeIdentity</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a0c75732edb441e3a49d7b8211dab32d5" kind="function"><name>makeRotationX</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1abcfee1b63bcb6a95ec9e7eb00419d71d" kind="function"><name>makeRotationY</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1ab3aa494e109566c1693e39aeb1cc6116" kind="function"><name>makeRotationZ</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a0df69dd9ba7f1e59788e79ce2dc0c05a" kind="function"><name>makeTranslation</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a618e4ed9879960963d3dd37bdcb82409" kind="function"><name>makeScale</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a2c908d0c06bf596c8399154a63a6b8c7" kind="function"><name>makeProjection</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a141ac2d3e2abffea8afb383aeec57965" kind="function"><name>Matrix_PointAt</name></member>
+  </compound>
+  <compound refid="structprism_1_1view_1_1_queue_family_indices" kind="struct"><name>prism::view::QueueFamilyIndices</name>
+    <member refid="structprism_1_1view_1_1_queue_family_indices_1a9850754d20bfa6fda8ec34d6197630b0" kind="variable"><name>graphicsFamily</name></member>
+    <member refid="structprism_1_1view_1_1_queue_family_indices_1aa84d262b22d58e73295a7ad73ab17ca3" kind="variable"><name>presentFamily</name></member>
+    <member refid="structprism_1_1view_1_1_queue_family_indices_1afcb56ae02ff571b22da0cf6a4a59578a" kind="function"><name>isComplete</name></member>
+  </compound>
+  <compound refid="structprism_1_1math_1_1_vector3d" kind="struct"><name>prism::math::Vector3d</name>
+    <member refid="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736" kind="variable"><name>x</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710" kind="variable"><name>y</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5" kind="variable"><name>z</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba" kind="variable"><name>w</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a0666bd40f322dcea9a6e01f98717729c" kind="function"><name>Vector3d</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a4971bfe801e3559fbbfc5c806aa6f96d" kind="function"><name>Vector3d</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1ae095b21e5923e3e09f186e423c4385b6" kind="function"><name>print</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a0c8b693083a8af90d6b62808b57765fe" kind="function"><name>operator+</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1afe3a8371655b6b6a2d1e39c9bcda5665" kind="function"><name>operator-</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a96cda750eb855d0b784db5a3a64046ea" kind="function"><name>operator*</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1af491978014b487f096ac0ac781365da5" kind="function"><name>operator/</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a8db312c4c2d5a5b2c0bc4a91af7dc36a" kind="function"><name>operator[]</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1ab5a3dd7e3d1bb0f39557671fb7fe36fe" kind="function"><name>operator==</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a246d4ac8bf3bc3b237c3250a0acdfdb7" kind="function"><name>length</name></member>
+    <member refid="structprism_1_1math_1_1_vector3d_1a59dbff9c0f786334970c93d16820fd8b" kind="function"><name>normalise</name></member>
+  </compound>
+  <compound refid="classprism_1_1view_1_1_window" kind="class"><name>prism::view::Window</name>
+    <member refid="classprism_1_1view_1_1_window_1a24fd09bbf7871e2448af8db4471879fe" kind="variable"><name>enableValidationLayers</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a376baefea36091e57fa85ea6d4083dba" kind="variable"><name>m_sdlWindow</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a4565b56a9f438b6c87c9f262e8848fa0" kind="variable"><name>m_isDestroyed</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a73b38623bf14708bf5ac9602d1ce684b" kind="variable"><name>m_windowMinimized</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a00ee05d32648685bb74fba379937ba0a" kind="variable"><name>instance</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a70e49b67dea0ee45f4d52e4ebb03db7e" kind="variable"><name>physicalDevice</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" kind="variable"><name>device</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a9b0044913b1df68617169565b85e5cae" kind="variable"><name>graphicsQueue</name></member>
+    <member refid="classprism_1_1view_1_1_window_1ada7a56e2c924860af9187e3994c88e31" kind="variable"><name>surface</name></member>
+    <member refid="classprism_1_1view_1_1_window_1af508535cfe4d6904d01396d15ee0a91b" kind="variable"><name>presentQueue</name></member>
+    <member refid="classprism_1_1view_1_1_window_1ab54c30367a0c4d0630df18dab81e0c21" kind="variable"><name>s_sdlInitialized</name></member>
+    <member refid="classprism_1_1view_1_1_window_1ab37a7db3c8ac082958cbf1cc76c53232" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1view_1_1_window_1ae2cc8b5460d772a2549cbcde23c31d6f" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1view_1_1_window_1abb2622120d5a2c4008453fd5f0e213c2" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a115a76f66c617395fcfe4228188bd717" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a8431a79eba3e50614cc457f7ce0605f0" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1view_1_1_window_1aa380520df5902e4c2f52dbd7486d65b8" kind="function"><name>~Window</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a5cf935efd740352ab3ff7ebee06e7254" kind="function"><name>getTitle</name></member>
+    <member refid="classprism_1_1view_1_1_window_1adfe7fd34bbb853a8ac64ca0b5a68cadd" kind="function"><name>setTitle</name></member>
+    <member refid="classprism_1_1view_1_1_window_1ab9f80b6a4d67e91bb8454a6e45b00c6a" kind="function"><name>getWidth</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a45ff9b145b3fdd721de6ae4a7541f0c2" kind="function"><name>getHeight</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a80f7ecc7488b3a75da4ac2b45895ae2e" kind="function"><name>getSize</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a29d789115d706e4f5bd98448cdae1108" kind="function"><name>setWidth</name></member>
+    <member refid="classprism_1_1view_1_1_window_1ac2d1238a607bf29ac672870ebf9f73cb" kind="function"><name>setHeight</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a9eddda4bbcacea440786c2ace67f2a16" kind="function"><name>setSize</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a000dbd1aaf3338843829891b00de6cef" kind="function"><name>setFullscreen</name></member>
+    <member refid="classprism_1_1view_1_1_window_1aef39954d735b1762f1d4179a9f08d6e4" kind="function"><name>setBorderless</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a064fdb06b7036f1dacaa110e6e0007db" kind="function"><name>setResizable</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a0e401cb1e3912c8e2394698dfdda2aeb" kind="function"><name>setGrabMouse</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a4d340a4f8ec13659938a2e53d7c479d0" kind="function"><name>isFullscreen</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a0543c7f97e4d2ef79be90a0daab7976c" kind="function"><name>isBorderless</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a0fcefa88943a843cc1cb79c8f281c58f" kind="function"><name>isResizable</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a916d1534c5118991329ac972b841c9b5" kind="function"><name>isGrabMouse</name></member>
+    <member refid="classprism_1_1view_1_1_window_1af46aa597947fb1e042ae20f744b3a785" kind="function"><name>setPosition</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a2762ec845f95405e8798107b8de8835b" kind="function"><name>getPosition</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a6b100e90fbe4904d23bcac79921fd45b" kind="function"><name>centerWindow</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a63072d9ec3267b92f28bc9559aa68907" kind="function"><name>setMinSize</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a3682515a8b78f38e49bc00ef351d1e91" kind="function"><name>setMaxSize</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a52a4884a96c2dbb938c23b4bafef341d" kind="function"><name>shouldClose</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a95715b5d073f7a38592f3a344be48743" kind="function"><name>setCloseRequested</name></member>
+    <member refid="classprism_1_1view_1_1_window_1ab4f40d8f9f44ff9e6f5310ba7cb3500d" kind="function"><name>handleEvents</name></member>
+    <member refid="classprism_1_1view_1_1_window_1ad904abdf14e9eb6e3f853763c7f06faf" kind="function"><name>clear</name></member>
+    <member refid="classprism_1_1view_1_1_window_1aaec31f6c1a24777d4ce31811ef3d2050" kind="function"><name>update</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a7e7ab6881f1847d75494d4e751c5826e" kind="function"><name>destroy</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a5189f4eb8214086bed7037cdae2ffd89" kind="function"><name>vulkanInut</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a06e21fda269f7b8242de7ec8c5310e8d" kind="function"><name>createInstance</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a7bb96f10739921534995f7e0e2a0360f" kind="function"><name>pickPhysicalDevice</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a76dc16248ebd56b8787302654689aa08" kind="function"><name>isDeviceSuitable</name></member>
+    <member refid="classprism_1_1view_1_1_window_1af18daa601490652e0bc0434b13cabb4f" kind="function"><name>checkDeviceExtensionSupport</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a5e4bd28cd96622e8b3b13e57778ebb8b" kind="function"><name>CreateCentered</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a0ac1c3fd06ab0d3b1582ac9c448a161c" kind="function"><name>setSDLInitialized</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a64aa028f8e7bfbc225dd09a64a36cd93" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a71ddbebd98846cd305ba67fd8f3f3ef5" kind="function"><name>rateDeviceSuitability</name></member>
+    <member refid="classprism_1_1view_1_1_window_1addfe6172e6af7dabf1cb8bdd5f60655e" kind="function"><name>findQueueFamilies</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a85ae040c045e6e1d57e79ca5fd2b42c3" kind="function"><name>createLogicalDevice</name></member>
+    <member refid="classprism_1_1view_1_1_window_1a244e6e0144fe90f9604452a1cb515cea" kind="function"><name>createSurface</name></member>
+  </compound>
+  <compound refid="namespaceprism" kind="namespace"><name>prism</name>
+    <member refid="namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c" kind="function"><name>init</name></member>
+  </compound>
+  <compound refid="namespaceprism_1_1math" kind="namespace"><name>prism::math</name>
+    <member refid="namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446" kind="function"><name>degToRad</name></member>
+    <member refid="namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96" kind="function"><name>Matrix_MultiplyMatrix</name></member>
+    <member refid="namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7" kind="function"><name>Matrix_QuickInverse</name></member>
+    <member refid="namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f" kind="function"><name>Vector_DotProduct</name></member>
+    <member refid="namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6" kind="function"><name>Vector_CrossProduct</name></member>
+    <member refid="namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d" kind="function"><name>Vector_IntersectPlane</name></member>
+  </compound>
+  <compound refid="namespaceprism_1_1view" kind="namespace"><name>prism::view</name>
+    <member refid="namespaceprism_1_1view_1a5e08683d7e148199c9e82e1382ca3f97" kind="variable"><name>validationLayers</name></member>
+    <member refid="namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441" kind="variable"><name>deviceExtensions</name></member>
+  </compound>
+  <compound refid="_config_8h" kind="file"><name>Config.h</name>
+  </compound>
+  <compound refid="fmath_8cpp" kind="file"><name>fmath.cpp</name>
+  </compound>
+  <compound refid="fmath_8h" kind="file"><name>fmath.h</name>
+  </compound>
+  <compound refid="_frame_8cpp" kind="file"><name>Frame.cpp</name>
+  </compound>
+  <compound refid="_frame_8h" kind="file"><name>Frame.h</name>
+  </compound>
+  <compound refid="matrix_8cpp" kind="file"><name>matrix.cpp</name>
+  </compound>
+  <compound refid="matrix_8h" kind="file"><name>matrix.h</name>
+  </compound>
+  <compound refid="_prism_engine_8cpp" kind="file"><name>PrismEngine.cpp</name>
+  </compound>
+  <compound refid="_prism_engine_8h" kind="file"><name>PrismEngine.h</name>
+  </compound>
+  <compound refid="vector_8cpp" kind="file"><name>vector.cpp</name>
+  </compound>
+  <compound refid="vector_8h" kind="file"><name>vector.h</name>
+  </compound>
+  <compound refid="_window_8cpp" kind="file"><name>Window.cpp</name>
+  </compound>
+  <compound refid="_window_8h" kind="file"><name>Window.h</name>
+  </compound>
+  <compound refid="_window_vk_manager_8cpp" kind="file"><name>WindowVkManager.cpp</name>
+  </compound>
+  <compound refid="_window_vk_manager_8h" kind="file"><name>WindowVkManager.h</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

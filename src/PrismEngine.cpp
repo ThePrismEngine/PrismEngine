@@ -1,4 +1,4 @@
-﻿#include "PrismEngine.h"
+#include "PrismEngine.h"
 
 
 void prism::init()

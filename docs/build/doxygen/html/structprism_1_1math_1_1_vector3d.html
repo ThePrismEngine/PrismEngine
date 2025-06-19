@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrismEngine: Структура prism::math::Vector3d</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PrismEngine
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('structprism_1_1math_1_1_vector3d.html','','structprism_1_1math_1_1_vector3d-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура prism::math::Vector3d</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>3D вектор с дополнительной компонентой w  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="vector_8h_source.html">vector.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0666bd40f322dcea9a6e01f98717729c" id="r_a0666bd40f322dcea9a6e01f98717729c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0666bd40f322dcea9a6e01f98717729c">Vector3d</a> ()</td></tr>
+<tr class="memdesc:a0666bd40f322dcea9a6e01f98717729c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по умолчанию (нулевой вектор)  <br /></td></tr>
+<tr class="memitem:a4971bfe801e3559fbbfc5c806aa6f96d" id="r_a4971bfe801e3559fbbfc5c806aa6f96d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4971bfe801e3559fbbfc5c806aa6f96d">Vector3d</a> (float <a class="el" href="#a0fdf8e79434ed7bbba3a2ce5e525b736">x</a>, float <a class="el" href="#a754de72e6ab72e92e37dec7e1cdae710">y</a>, float <a class="el" href="#aac7af19efcd4d5e3738e3d2b1313efc5">z</a>, float <a class="el" href="#a46e1eb616728dab7095af12303438bba">w</a>=1.0f)</td></tr>
+<tr class="memdesc:a4971bfe801e3559fbbfc5c806aa6f96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор с параметрами  <br /></td></tr>
+<tr class="memitem:ae095b21e5923e3e09f186e423c4385b6" id="r_ae095b21e5923e3e09f186e423c4385b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae095b21e5923e3e09f186e423c4385b6">print</a> ()</td></tr>
+<tr class="memdesc:ae095b21e5923e3e09f186e423c4385b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод вектора в консоль  <br /></td></tr>
+<tr class="memitem:a0c8b693083a8af90d6b62808b57765fe" id="r_a0c8b693083a8af90d6b62808b57765fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c8b693083a8af90d6b62808b57765fe">operator+</a> (<a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;other)</td></tr>
+<tr class="memdesc:a0c8b693083a8af90d6b62808b57765fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сложение векторов  <br /></td></tr>
+<tr class="memitem:afe3a8371655b6b6a2d1e39c9bcda5665" id="r_afe3a8371655b6b6a2d1e39c9bcda5665"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe3a8371655b6b6a2d1e39c9bcda5665">operator-</a> (<a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;other)</td></tr>
+<tr class="memdesc:afe3a8371655b6b6a2d1e39c9bcda5665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычитание векторов  <br /></td></tr>
+<tr class="memitem:a96cda750eb855d0b784db5a3a64046ea" id="r_a96cda750eb855d0b784db5a3a64046ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96cda750eb855d0b784db5a3a64046ea">operator*</a> (float k)</td></tr>
+<tr class="memdesc:a96cda750eb855d0b784db5a3a64046ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Умножение на скаляр  <br /></td></tr>
+<tr class="memitem:af491978014b487f096ac0ac781365da5" id="r_af491978014b487f096ac0ac781365da5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af491978014b487f096ac0ac781365da5">operator/</a> (float k)</td></tr>
+<tr class="memdesc:af491978014b487f096ac0ac781365da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деление на скаляр  <br /></td></tr>
+<tr class="memitem:a8db312c4c2d5a5b2c0bc4a91af7dc36a" id="r_a8db312c4c2d5a5b2c0bc4a91af7dc36a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8db312c4c2d5a5b2c0bc4a91af7dc36a">operator[]</a> (int index)</td></tr>
+<tr class="memdesc:a8db312c4c2d5a5b2c0bc4a91af7dc36a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступ к компонентам по индексу  <br /></td></tr>
+<tr class="memitem:ab5a3dd7e3d1bb0f39557671fb7fe36fe" id="r_ab5a3dd7e3d1bb0f39557671fb7fe36fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5a3dd7e3d1bb0f39557671fb7fe36fe">operator==</a> (<a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;other)</td></tr>
+<tr class="memdesc:ab5a3dd7e3d1bb0f39557671fb7fe36fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнение векторов  <br /></td></tr>
+<tr class="memitem:a246d4ac8bf3bc3b237c3250a0acdfdb7" id="r_a246d4ac8bf3bc3b237c3250a0acdfdb7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a246d4ac8bf3bc3b237c3250a0acdfdb7">length</a> ()</td></tr>
+<tr class="memdesc:a246d4ac8bf3bc3b237c3250a0acdfdb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисление длины вектора  <br /></td></tr>
+<tr class="memitem:a59dbff9c0f786334970c93d16820fd8b" id="r_a59dbff9c0f786334970c93d16820fd8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59dbff9c0f786334970c93d16820fd8b">normalise</a> ()</td></tr>
+<tr class="memdesc:a59dbff9c0f786334970c93d16820fd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Нормализация вектора  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0fdf8e79434ed7bbba3a2ce5e525b736" id="r_a0fdf8e79434ed7bbba3a2ce5e525b736"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fdf8e79434ed7bbba3a2ce5e525b736">x</a></td></tr>
+<tr class="memdesc:a0fdf8e79434ed7bbba3a2ce5e525b736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата X.  <br /></td></tr>
+<tr class="memitem:a754de72e6ab72e92e37dec7e1cdae710" id="r_a754de72e6ab72e92e37dec7e1cdae710"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a754de72e6ab72e92e37dec7e1cdae710">y</a></td></tr>
+<tr class="memdesc:a754de72e6ab72e92e37dec7e1cdae710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата Y.  <br /></td></tr>
+<tr class="memitem:aac7af19efcd4d5e3738e3d2b1313efc5" id="r_aac7af19efcd4d5e3738e3d2b1313efc5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac7af19efcd4d5e3738e3d2b1313efc5">z</a></td></tr>
+<tr class="memdesc:aac7af19efcd4d5e3738e3d2b1313efc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата Z.  <br /></td></tr>
+<tr class="memitem:a46e1eb616728dab7095af12303438bba" id="r_a46e1eb616728dab7095af12303438bba"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46e1eb616728dab7095af12303438bba">w</a> = 1.0f</td></tr>
+<tr class="memdesc:a46e1eb616728dab7095af12303438bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Однородная координата (по умолчанию 1.0)  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>3D вектор с дополнительной компонентой w </p>
+<p>Используется для однородных координат и 3D преобразований </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a0666bd40f322dcea9a6e01f98717729c" name="a0666bd40f322dcea9a6e01f98717729c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0666bd40f322dcea9a6e01f98717729c">&#9670;&#160;</a></span>Vector3d() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::math::Vector3d::Vector3d </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор по умолчанию (нулевой вектор) </p>
+
+</div>
+</div>
+<a id="a4971bfe801e3559fbbfc5c806aa6f96d" name="a4971bfe801e3559fbbfc5c806aa6f96d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4971bfe801e3559fbbfc5c806aa6f96d">&#9670;&#160;</a></span>Vector3d() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::math::Vector3d::Vector3d </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор с параметрами </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Координата X </td></tr>
+    <tr><td class="paramname">y</td><td>Координата Y </td></tr>
+    <tr><td class="paramname">z</td><td>Координата Z </td></tr>
+    <tr><td class="paramname">w</td><td>Однородная координата (опционально) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a246d4ac8bf3bc3b237c3250a0acdfdb7" name="a246d4ac8bf3bc3b237c3250a0acdfdb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a246d4ac8bf3bc3b237c3250a0acdfdb7">&#9670;&#160;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float prism::math::Vector3d::length </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычисление длины вектора </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Длина вектора </dd></dl>
+
+</div>
+</div>
+<a id="a59dbff9c0f786334970c93d16820fd8b" name="a59dbff9c0f786334970c93d16820fd8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59dbff9c0f786334970c93d16820fd8b">&#9670;&#160;</a></span>normalise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> prism::math::Vector3d::normalise </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Нормализация вектора </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Нормализованный вектор </dd></dl>
+
+</div>
+</div>
+<a id="a96cda750eb855d0b784db5a3a64046ea" name="a96cda750eb855d0b784db5a3a64046ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96cda750eb855d0b784db5a3a64046ea">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> prism::math::Vector3d::operator* </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Умножение на скаляр </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Скаляр </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат умножения </dd></dl>
+
+</div>
+</div>
+<a id="a0c8b693083a8af90d6b62808b57765fe" name="a0c8b693083a8af90d6b62808b57765fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8b693083a8af90d6b62808b57765fe">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> prism::math::Vector3d::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сложение векторов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Второй вектор </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат сложения </dd></dl>
+
+</div>
+</div>
+<a id="afe3a8371655b6b6a2d1e39c9bcda5665" name="afe3a8371655b6b6a2d1e39c9bcda5665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3a8371655b6b6a2d1e39c9bcda5665">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> prism::math::Vector3d::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычитание векторов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Второй вектор </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат вычитания </dd></dl>
+
+</div>
+</div>
+<a id="af491978014b487f096ac0ac781365da5" name="af491978014b487f096ac0ac781365da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af491978014b487f096ac0ac781365da5">&#9670;&#160;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> prism::math::Vector3d::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деление на скаляр </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Скаляр (не должен быть 0) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат деления </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если k = 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab5a3dd7e3d1bb0f39557671fb7fe36fe" name="ab5a3dd7e3d1bb0f39557671fb7fe36fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a3dd7e3d1bb0f39557671fb7fe36fe">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::math::Vector3d::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сравнение векторов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Второй вектор </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если векторы равны (w не учитывается) </dd></dl>
+
+</div>
+</div>
+<a id="a8db312c4c2d5a5b2c0bc4a91af7dc36a" name="a8db312c4c2d5a5b2c0bc4a91af7dc36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db312c4c2d5a5b2c0bc4a91af7dc36a">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float prism::math::Vector3d::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Доступ к компонентам по индексу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>0-X, 1-Y, 2-Z, 3-W </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значение компоненты </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>При неверном индексе </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae095b21e5923e3e09f186e423c4385b6" name="ae095b21e5923e3e09f186e423c4385b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae095b21e5923e3e09f186e423c4385b6">&#9670;&#160;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::math::math::Vector3d::print </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вывод вектора в консоль </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a46e1eb616728dab7095af12303438bba" name="a46e1eb616728dab7095af12303438bba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e1eb616728dab7095af12303438bba">&#9670;&#160;</a></span>w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float prism::math::Vector3d::w = 1.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Однородная координата (по умолчанию 1.0) </p>
+
+</div>
+</div>
+<a id="a0fdf8e79434ed7bbba3a2ce5e525b736" name="a0fdf8e79434ed7bbba3a2ce5e525b736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fdf8e79434ed7bbba3a2ce5e525b736">&#9670;&#160;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float prism::math::Vector3d::x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата X. </p>
+
+</div>
+</div>
+<a id="a754de72e6ab72e92e37dec7e1cdae710" name="a754de72e6ab72e92e37dec7e1cdae710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a754de72e6ab72e92e37dec7e1cdae710">&#9670;&#160;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float prism::math::Vector3d::y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата Y. </p>
+
+</div>
+</div>
+<a id="aac7af19efcd4d5e3738e3d2b1313efc5" name="aac7af19efcd4d5e3738e3d2b1313efc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac7af19efcd4d5e3738e3d2b1313efc5">&#9670;&#160;</a></span>z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float prism::math::Vector3d::z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата Z. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>C:/Users/Admin/source/repos/PrismEngine/src/<a class="el" href="vector_8h_source.html">vector.h</a></li>
+<li>C:/Users/Admin/source/repos/PrismEngine/src/<a class="el" href="vector_8cpp.html">vector.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceprism.html">prism</a></li><li class="navelem"><a href="namespaceprism_1_1math.html">math</a></li><li class="navelem"><a href="structprism_1_1math_1_1_vector3d.html">Vector3d</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

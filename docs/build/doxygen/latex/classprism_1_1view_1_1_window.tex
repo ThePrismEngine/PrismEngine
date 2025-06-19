@@ -1,0 +1,490 @@
+\doxysection{Класс prism\+::view\+::Window}
+\hypertarget{classprism_1_1view_1_1_window}{}\label{classprism_1_1view_1_1_window}\index{prism::view::Window@{prism::view::Window}}
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}} (const char \texorpdfstring{$\ast$}{*}title, int width, int height)
+\item 
+\mbox{\hyperlink{classprism_1_1view_1_1_window_ae2cc8b5460d772a2549cbcde23c31d6f}{Window}} (const char \texorpdfstring{$\ast$}{*}title, int width, int height, Uint32 sdl\+Flags)
+\item 
+\mbox{\hyperlink{classprism_1_1view_1_1_window_abb2622120d5a2c4008453fd5f0e213c2}{Window}} (const char \texorpdfstring{$\ast$}{*}title, int x, int y, int width, int height)
+\item 
+\mbox{\hyperlink{classprism_1_1view_1_1_window_a115a76f66c617395fcfe4228188bd717}{Window}} (const char \texorpdfstring{$\ast$}{*}title, int width, int height, const std\+::string \&icon\+Path)
+\item 
+\mbox{\hyperlink{classprism_1_1view_1_1_window_a8431a79eba3e50614cc457f7ce0605f0}{Window}} (const char \texorpdfstring{$\ast$}{*}title, int width, int height, int min\+Width, int min\+Height, int max\+Width, int max\+Height)
+\item 
+\mbox{\hyperlink{classprism_1_1view_1_1_window_aa380520df5902e4c2f52dbd7486d65b8}{\texorpdfstring{$\sim$}{\string~}\+Window}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1view_1_1_window_a5cf935efd740352ab3ff7ebee06e7254}{get\+Title}} () const
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_adfe7fd34bbb853a8ac64ca0b5a68cadd}{set\+Title}} (const char \texorpdfstring{$\ast$}{*}title)
+\item 
+int \mbox{\hyperlink{classprism_1_1view_1_1_window_ab9f80b6a4d67e91bb8454a6e45b00c6a}{get\+Width}} ()
+\item 
+int \mbox{\hyperlink{classprism_1_1view_1_1_window_a45ff9b145b3fdd721de6ae4a7541f0c2}{get\+Height}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a80f7ecc7488b3a75da4ac2b45895ae2e}{get\+Size}} (int \texorpdfstring{$\ast$}{*}width, int \texorpdfstring{$\ast$}{*}height)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a29d789115d706e4f5bd98448cdae1108}{set\+Width}} (int width)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_ac2d1238a607bf29ac672870ebf9f73cb}{set\+Height}} (int height)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a9eddda4bbcacea440786c2ace67f2a16}{set\+Size}} (int width, int height)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a000dbd1aaf3338843829891b00de6cef}{set\+Fullscreen}} (bool enabled)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_aef39954d735b1762f1d4179a9f08d6e4}{set\+Borderless}} (bool enabled)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a064fdb06b7036f1dacaa110e6e0007db}{set\+Resizable}} (bool enabled)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a0e401cb1e3912c8e2394698dfdda2aeb}{set\+Grab\+Mouse}} (bool enabled)
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a4d340a4f8ec13659938a2e53d7c479d0}{is\+Fullscreen}} () const
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a0543c7f97e4d2ef79be90a0daab7976c}{is\+Borderless}} () const
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a0fcefa88943a843cc1cb79c8f281c58f}{is\+Resizable}} () const
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a916d1534c5118991329ac972b841c9b5}{is\+Grab\+Mouse}} () const
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_af46aa597947fb1e042ae20f744b3a785}{set\+Position}} (int x, int y)
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classprism_1_1view_1_1_window_a2762ec845f95405e8798107b8de8835b}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a6b100e90fbe4904d23bcac79921fd45b}{center\+Window}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a63072d9ec3267b92f28bc9559aa68907}{set\+Min\+Size}} (int min\+Width, int min\+Height)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a3682515a8b78f38e49bc00ef351d1e91}{set\+Max\+Size}} (int max\+Width, int max\+Height)
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a52a4884a96c2dbb938c23b4bafef341d}{should\+Close}} () const
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a95715b5d073f7a38592f3a344be48743}{set\+Close\+Requested}} (bool value)
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_ab4f40d8f9f44ff9e6f5310ba7cb3500d}{handle\+Events}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_ad904abdf14e9eb6e3f853763c7f06faf}{clear}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_aaec31f6c1a24777d4ce31811ef3d2050}{update}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a7e7ab6881f1847d75494d4e751c5826e}{destroy}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a5189f4eb8214086bed7037cdae2ffd89}{vulkan\+Inut}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a06e21fda269f7b8242de7ec8c5310e8d}{create\+Instance}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a7bb96f10739921534995f7e0e2a0360f}{pick\+Physical\+Device}} ()
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a76dc16248ebd56b8787302654689aa08}{is\+Device\+Suitable}} (Vk\+Physical\+Device \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}})
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_af18daa601490652e0bc0434b13cabb4f}{check\+Device\+Extension\+Support}} (Vk\+Physical\+Device \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classprism_1_1view_1_1_window}{Window}} \mbox{\hyperlink{classprism_1_1view_1_1_window_a5e4bd28cd96622e8b3b13e57778ebb8b}{Create\+Centered}} (const char \texorpdfstring{$\ast$}{*}title, int width, int height)
+\item 
+static void \mbox{\hyperlink{classprism_1_1view_1_1_window_a0ac1c3fd06ab0d3b1582ac9c448a161c}{set\+SDLInitialized}} (bool initialized)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprism_1_1view_1_1_window_a64aa028f8e7bfbc225dd09a64a36cd93}{Window}} (const char \texorpdfstring{$\ast$}{*}title, int x, int y, int width, int height, Uint32 sdl\+Flags)
+\item 
+int \mbox{\hyperlink{classprism_1_1view_1_1_window_a71ddbebd98846cd305ba67fd8f3f3ef5}{rate\+Device\+Suitability}} (Vk\+Physical\+Device \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}})
+\item 
+\mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices}{Queue\+Family\+Indices}} \mbox{\hyperlink{classprism_1_1view_1_1_window_addfe6172e6af7dabf1cb8bdd5f60655e}{find\+Queue\+Families}} (Vk\+Physical\+Device \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}})
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a85ae040c045e6e1d57e79ca5fd2b42c3}{create\+Logical\+Device}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1view_1_1_window_a244e6e0144fe90f9604452a1cb515cea}{create\+Surface}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+const bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a24fd09bbf7871e2448af8db4471879fe}{enable\+Validation\+Layers}} = true
+\item 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1view_1_1_window_a376baefea36091e57fa85ea6d4083dba}{m\+\_\+sdl\+Window}}
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a4565b56a9f438b6c87c9f262e8848fa0}{m\+\_\+is\+Destroyed}}
+\item 
+bool \mbox{\hyperlink{classprism_1_1view_1_1_window_a73b38623bf14708bf5ac9602d1ce684b}{m\+\_\+window\+Minimized}} = false
+\item 
+Vk\+Instance \mbox{\hyperlink{classprism_1_1view_1_1_window_a00ee05d32648685bb74fba379937ba0a}{instance}}
+\item 
+Vk\+Physical\+Device \mbox{\hyperlink{classprism_1_1view_1_1_window_a70e49b67dea0ee45f4d52e4ebb03db7e}{physical\+Device}}
+\item 
+Vk\+Device \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}}
+\item 
+Vk\+Queue \mbox{\hyperlink{classprism_1_1view_1_1_window_a9b0044913b1df68617169565b85e5cae}{graphics\+Queue}}
+\item 
+Vk\+Surface\+KHR \mbox{\hyperlink{classprism_1_1view_1_1_window_ada7a56e2c924860af9187e3994c88e31}{surface}}
+\item 
+Vk\+Queue \mbox{\hyperlink{classprism_1_1view_1_1_window_af508535cfe4d6904d01396d15ee0a91b}{present\+Queue}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые статические данные}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classprism_1_1view_1_1_window_ab54c30367a0c4d0630df18dab81e0c21}{s\+\_\+sdl\+Initialized}} = false
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classprism_1_1view_1_1_window_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}\index{prism::view::Window@{prism::view::Window}!Window@{Window}}
+\index{Window@{Window}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232} 
+prism\+::view\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_ae2cc8b5460d772a2549cbcde23c31d6f}\index{prism::view::Window@{prism::view::Window}!Window@{Window}}
+\index{Window@{Window}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_ae2cc8b5460d772a2549cbcde23c31d6f} 
+prism\+::view\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{Uint32}]{sdl\+Flags}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_abb2622120d5a2c4008453fd5f0e213c2}\index{prism::view::Window@{prism::view::Window}!Window@{Window}}
+\index{Window@{Window}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_abb2622120d5a2c4008453fd5f0e213c2} 
+prism\+::view\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a115a76f66c617395fcfe4228188bd717}\index{prism::view::Window@{prism::view::Window}!Window@{Window}}
+\index{Window@{Window}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a115a76f66c617395fcfe4228188bd717} 
+prism\+::view\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{const std\+::string \&}]{icon\+Path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a8431a79eba3e50614cc457f7ce0605f0}\index{prism::view::Window@{prism::view::Window}!Window@{Window}}
+\index{Window@{Window}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a8431a79eba3e50614cc457f7ce0605f0} 
+prism\+::view\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{int}]{min\+Width}{, }\item[{int}]{min\+Height}{, }\item[{int}]{max\+Width}{, }\item[{int}]{max\+Height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_aa380520df5902e4c2f52dbd7486d65b8}\index{prism::view::Window@{prism::view::Window}!````~Window@{\texorpdfstring{$\sim$}{\string~}Window}}
+\index{````~Window@{\texorpdfstring{$\sim$}{\string~}Window}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Window()}{\string~Window()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_aa380520df5902e4c2f52dbd7486d65b8} 
+prism\+::view\+::\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a64aa028f8e7bfbc225dd09a64a36cd93}\index{prism::view::Window@{prism::view::Window}!Window@{Window}}
+\index{Window@{Window}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a64aa028f8e7bfbc225dd09a64a36cd93} 
+prism\+::view\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{Uint32}]{sdl\+Flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1view_1_1_window_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1view_1_1_window_a6b100e90fbe4904d23bcac79921fd45b}\index{prism::view::Window@{prism::view::Window}!centerWindow@{centerWindow}}
+\index{centerWindow@{centerWindow}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{centerWindow()}{centerWindow()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a6b100e90fbe4904d23bcac79921fd45b} 
+void prism\+::view\+::\+Window\+::center\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_af18daa601490652e0bc0434b13cabb4f}\index{prism::view::Window@{prism::view::Window}!checkDeviceExtensionSupport@{checkDeviceExtensionSupport}}
+\index{checkDeviceExtensionSupport@{checkDeviceExtensionSupport}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{checkDeviceExtensionSupport()}{checkDeviceExtensionSupport()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_af18daa601490652e0bc0434b13cabb4f} 
+bool prism\+::view\+::\+Window\+::check\+Device\+Extension\+Support (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_ad904abdf14e9eb6e3f853763c7f06faf}\index{prism::view::Window@{prism::view::Window}!clear@{clear}}
+\index{clear@{clear}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_ad904abdf14e9eb6e3f853763c7f06faf} 
+void prism\+::view\+::\+Window\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a5e4bd28cd96622e8b3b13e57778ebb8b}\index{prism::view::Window@{prism::view::Window}!CreateCentered@{CreateCentered}}
+\index{CreateCentered@{CreateCentered}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{CreateCentered()}{CreateCentered()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a5e4bd28cd96622e8b3b13e57778ebb8b} 
+\mbox{\hyperlink{classprism_1_1view_1_1_window}{Window}} prism\+::view\+::\+Window\+::\+Create\+Centered (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a06e21fda269f7b8242de7ec8c5310e8d}\index{prism::view::Window@{prism::view::Window}!createInstance@{createInstance}}
+\index{createInstance@{createInstance}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{createInstance()}{createInstance()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a06e21fda269f7b8242de7ec8c5310e8d} 
+void prism\+::view\+::\+Window\+::create\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a85ae040c045e6e1d57e79ca5fd2b42c3}\index{prism::view::Window@{prism::view::Window}!createLogicalDevice@{createLogicalDevice}}
+\index{createLogicalDevice@{createLogicalDevice}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{createLogicalDevice()}{createLogicalDevice()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a85ae040c045e6e1d57e79ca5fd2b42c3} 
+void prism\+::view\+::\+Window\+::create\+Logical\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a244e6e0144fe90f9604452a1cb515cea}\index{prism::view::Window@{prism::view::Window}!createSurface@{createSurface}}
+\index{createSurface@{createSurface}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{createSurface()}{createSurface()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a244e6e0144fe90f9604452a1cb515cea} 
+void prism\+::view\+::\+Window\+::create\+Surface (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a7e7ab6881f1847d75494d4e751c5826e}\index{prism::view::Window@{prism::view::Window}!destroy@{destroy}}
+\index{destroy@{destroy}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a7e7ab6881f1847d75494d4e751c5826e} 
+void prism\+::view\+::\+Window\+::destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_addfe6172e6af7dabf1cb8bdd5f60655e}\index{prism::view::Window@{prism::view::Window}!findQueueFamilies@{findQueueFamilies}}
+\index{findQueueFamilies@{findQueueFamilies}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{findQueueFamilies()}{findQueueFamilies()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_addfe6172e6af7dabf1cb8bdd5f60655e} 
+\mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices}{Queue\+Family\+Indices}} prism\+::view\+::\+Window\+::find\+Queue\+Families (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a45ff9b145b3fdd721de6ae4a7541f0c2}\index{prism::view::Window@{prism::view::Window}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a45ff9b145b3fdd721de6ae4a7541f0c2} 
+int prism\+::view\+::\+Window\+::get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a2762ec845f95405e8798107b8de8835b}\index{prism::view::Window@{prism::view::Window}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a2762ec845f95405e8798107b8de8835b} 
+std\+::pair$<$ int, int $>$ prism\+::view\+::\+Window\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classprism_1_1view_1_1_window_a80f7ecc7488b3a75da4ac2b45895ae2e}\index{prism::view::Window@{prism::view::Window}!getSize@{getSize}}
+\index{getSize@{getSize}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a80f7ecc7488b3a75da4ac2b45895ae2e} 
+void prism\+::view\+::\+Window\+::get\+Size (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{width}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a5cf935efd740352ab3ff7ebee06e7254}\index{prism::view::Window@{prism::view::Window}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a5cf935efd740352ab3ff7ebee06e7254} 
+const char \texorpdfstring{$\ast$}{*} prism\+::view\+::\+Window\+::get\+Title (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classprism_1_1view_1_1_window_ab9f80b6a4d67e91bb8454a6e45b00c6a}\index{prism::view::Window@{prism::view::Window}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_ab9f80b6a4d67e91bb8454a6e45b00c6a} 
+int prism\+::view\+::\+Window\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_ab4f40d8f9f44ff9e6f5310ba7cb3500d}\index{prism::view::Window@{prism::view::Window}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_ab4f40d8f9f44ff9e6f5310ba7cb3500d} 
+void prism\+::view\+::\+Window\+::handle\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a0543c7f97e4d2ef79be90a0daab7976c}\index{prism::view::Window@{prism::view::Window}!isBorderless@{isBorderless}}
+\index{isBorderless@{isBorderless}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{isBorderless()}{isBorderless()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a0543c7f97e4d2ef79be90a0daab7976c} 
+bool prism\+::view\+::\+Window\+::is\+Borderless (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classprism_1_1view_1_1_window_a76dc16248ebd56b8787302654689aa08}\index{prism::view::Window@{prism::view::Window}!isDeviceSuitable@{isDeviceSuitable}}
+\index{isDeviceSuitable@{isDeviceSuitable}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{isDeviceSuitable()}{isDeviceSuitable()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a76dc16248ebd56b8787302654689aa08} 
+bool prism\+::view\+::\+Window\+::is\+Device\+Suitable (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a4d340a4f8ec13659938a2e53d7c479d0}\index{prism::view::Window@{prism::view::Window}!isFullscreen@{isFullscreen}}
+\index{isFullscreen@{isFullscreen}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{isFullscreen()}{isFullscreen()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a4d340a4f8ec13659938a2e53d7c479d0} 
+bool prism\+::view\+::\+Window\+::is\+Fullscreen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classprism_1_1view_1_1_window_a916d1534c5118991329ac972b841c9b5}\index{prism::view::Window@{prism::view::Window}!isGrabMouse@{isGrabMouse}}
+\index{isGrabMouse@{isGrabMouse}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{isGrabMouse()}{isGrabMouse()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a916d1534c5118991329ac972b841c9b5} 
+bool prism\+::view\+::\+Window\+::is\+Grab\+Mouse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classprism_1_1view_1_1_window_a0fcefa88943a843cc1cb79c8f281c58f}\index{prism::view::Window@{prism::view::Window}!isResizable@{isResizable}}
+\index{isResizable@{isResizable}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{isResizable()}{isResizable()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a0fcefa88943a843cc1cb79c8f281c58f} 
+bool prism\+::view\+::\+Window\+::is\+Resizable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classprism_1_1view_1_1_window_a7bb96f10739921534995f7e0e2a0360f}\index{prism::view::Window@{prism::view::Window}!pickPhysicalDevice@{pickPhysicalDevice}}
+\index{pickPhysicalDevice@{pickPhysicalDevice}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{pickPhysicalDevice()}{pickPhysicalDevice()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a7bb96f10739921534995f7e0e2a0360f} 
+void prism\+::view\+::\+Window\+::pick\+Physical\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a71ddbebd98846cd305ba67fd8f3f3ef5}\index{prism::view::Window@{prism::view::Window}!rateDeviceSuitability@{rateDeviceSuitability}}
+\index{rateDeviceSuitability@{rateDeviceSuitability}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{rateDeviceSuitability()}{rateDeviceSuitability()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a71ddbebd98846cd305ba67fd8f3f3ef5} 
+int prism\+::view\+::\+Window\+::rate\+Device\+Suitability (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_aef39954d735b1762f1d4179a9f08d6e4}\index{prism::view::Window@{prism::view::Window}!setBorderless@{setBorderless}}
+\index{setBorderless@{setBorderless}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setBorderless()}{setBorderless()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_aef39954d735b1762f1d4179a9f08d6e4} 
+void prism\+::view\+::\+Window\+::set\+Borderless (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a95715b5d073f7a38592f3a344be48743}\index{prism::view::Window@{prism::view::Window}!setCloseRequested@{setCloseRequested}}
+\index{setCloseRequested@{setCloseRequested}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setCloseRequested()}{setCloseRequested()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a95715b5d073f7a38592f3a344be48743} 
+void prism\+::view\+::\+Window\+::set\+Close\+Requested (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a000dbd1aaf3338843829891b00de6cef}\index{prism::view::Window@{prism::view::Window}!setFullscreen@{setFullscreen}}
+\index{setFullscreen@{setFullscreen}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setFullscreen()}{setFullscreen()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a000dbd1aaf3338843829891b00de6cef} 
+void prism\+::view\+::\+Window\+::set\+Fullscreen (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a0e401cb1e3912c8e2394698dfdda2aeb}\index{prism::view::Window@{prism::view::Window}!setGrabMouse@{setGrabMouse}}
+\index{setGrabMouse@{setGrabMouse}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setGrabMouse()}{setGrabMouse()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a0e401cb1e3912c8e2394698dfdda2aeb} 
+void prism\+::view\+::\+Window\+::set\+Grab\+Mouse (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_ac2d1238a607bf29ac672870ebf9f73cb}\index{prism::view::Window@{prism::view::Window}!setHeight@{setHeight}}
+\index{setHeight@{setHeight}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setHeight()}{setHeight()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_ac2d1238a607bf29ac672870ebf9f73cb} 
+void prism\+::view\+::\+Window\+::set\+Height (\begin{DoxyParamCaption}\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a3682515a8b78f38e49bc00ef351d1e91}\index{prism::view::Window@{prism::view::Window}!setMaxSize@{setMaxSize}}
+\index{setMaxSize@{setMaxSize}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setMaxSize()}{setMaxSize()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a3682515a8b78f38e49bc00ef351d1e91} 
+void prism\+::view\+::\+Window\+::set\+Max\+Size (\begin{DoxyParamCaption}\item[{int}]{max\+Width}{, }\item[{int}]{max\+Height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a63072d9ec3267b92f28bc9559aa68907}\index{prism::view::Window@{prism::view::Window}!setMinSize@{setMinSize}}
+\index{setMinSize@{setMinSize}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setMinSize()}{setMinSize()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a63072d9ec3267b92f28bc9559aa68907} 
+void prism\+::view\+::\+Window\+::set\+Min\+Size (\begin{DoxyParamCaption}\item[{int}]{min\+Width}{, }\item[{int}]{min\+Height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_af46aa597947fb1e042ae20f744b3a785}\index{prism::view::Window@{prism::view::Window}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_af46aa597947fb1e042ae20f744b3a785} 
+void prism\+::view\+::\+Window\+::set\+Position (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a064fdb06b7036f1dacaa110e6e0007db}\index{prism::view::Window@{prism::view::Window}!setResizable@{setResizable}}
+\index{setResizable@{setResizable}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setResizable()}{setResizable()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a064fdb06b7036f1dacaa110e6e0007db} 
+void prism\+::view\+::\+Window\+::set\+Resizable (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a0ac1c3fd06ab0d3b1582ac9c448a161c}\index{prism::view::Window@{prism::view::Window}!setSDLInitialized@{setSDLInitialized}}
+\index{setSDLInitialized@{setSDLInitialized}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setSDLInitialized()}{setSDLInitialized()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a0ac1c3fd06ab0d3b1582ac9c448a161c} 
+void prism\+::view\+::\+Window\+::set\+SDLInitialized (\begin{DoxyParamCaption}\item[{bool}]{initialized}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a9eddda4bbcacea440786c2ace67f2a16}\index{prism::view::Window@{prism::view::Window}!setSize@{setSize}}
+\index{setSize@{setSize}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a9eddda4bbcacea440786c2ace67f2a16} 
+void prism\+::view\+::\+Window\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_adfe7fd34bbb853a8ac64ca0b5a68cadd}\index{prism::view::Window@{prism::view::Window}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_adfe7fd34bbb853a8ac64ca0b5a68cadd} 
+void prism\+::view\+::\+Window\+::set\+Title (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a29d789115d706e4f5bd98448cdae1108}\index{prism::view::Window@{prism::view::Window}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{setWidth()}{setWidth()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a29d789115d706e4f5bd98448cdae1108} 
+void prism\+::view\+::\+Window\+::set\+Width (\begin{DoxyParamCaption}\item[{int}]{width}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a52a4884a96c2dbb938c23b4bafef341d}\index{prism::view::Window@{prism::view::Window}!shouldClose@{shouldClose}}
+\index{shouldClose@{shouldClose}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{shouldClose()}{shouldClose()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a52a4884a96c2dbb938c23b4bafef341d} 
+bool prism\+::view\+::\+Window\+::should\+Close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classprism_1_1view_1_1_window_aaec31f6c1a24777d4ce31811ef3d2050}\index{prism::view::Window@{prism::view::Window}!update@{update}}
+\index{update@{update}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_aaec31f6c1a24777d4ce31811ef3d2050} 
+void prism\+::view\+::\+Window\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1view_1_1_window_a5189f4eb8214086bed7037cdae2ffd89}\index{prism::view::Window@{prism::view::Window}!vulkanInut@{vulkanInut}}
+\index{vulkanInut@{vulkanInut}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{vulkanInut()}{vulkanInut()}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a5189f4eb8214086bed7037cdae2ffd89} 
+void prism\+::view\+::\+Window\+::vulkan\+Inut (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classprism_1_1view_1_1_window_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}\index{prism::view::Window@{prism::view::Window}!device@{device}}
+\index{device@{device}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3} 
+Vk\+Device prism\+::view\+::\+Window\+::device\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a24fd09bbf7871e2448af8db4471879fe}\index{prism::view::Window@{prism::view::Window}!enableValidationLayers@{enableValidationLayers}}
+\index{enableValidationLayers@{enableValidationLayers}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{enableValidationLayers}{enableValidationLayers}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a24fd09bbf7871e2448af8db4471879fe} 
+const bool prism\+::view\+::\+Window\+::enable\+Validation\+Layers = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a9b0044913b1df68617169565b85e5cae}\index{prism::view::Window@{prism::view::Window}!graphicsQueue@{graphicsQueue}}
+\index{graphicsQueue@{graphicsQueue}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{graphicsQueue}{graphicsQueue}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a9b0044913b1df68617169565b85e5cae} 
+Vk\+Queue prism\+::view\+::\+Window\+::graphics\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a00ee05d32648685bb74fba379937ba0a}\index{prism::view::Window@{prism::view::Window}!instance@{instance}}
+\index{instance@{instance}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a00ee05d32648685bb74fba379937ba0a} 
+Vk\+Instance prism\+::view\+::\+Window\+::instance\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a4565b56a9f438b6c87c9f262e8848fa0}\index{prism::view::Window@{prism::view::Window}!m\_isDestroyed@{m\_isDestroyed}}
+\index{m\_isDestroyed@{m\_isDestroyed}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{m\_isDestroyed}{m\_isDestroyed}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a4565b56a9f438b6c87c9f262e8848fa0} 
+bool prism\+::view\+::\+Window\+::m\+\_\+is\+Destroyed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a376baefea36091e57fa85ea6d4083dba}\index{prism::view::Window@{prism::view::Window}!m\_sdlWindow@{m\_sdlWindow}}
+\index{m\_sdlWindow@{m\_sdlWindow}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{m\_sdlWindow}{m\_sdlWindow}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a376baefea36091e57fa85ea6d4083dba} 
+SDL\+\_\+\+Window\texorpdfstring{$\ast$}{*} prism\+::view\+::\+Window\+::m\+\_\+sdl\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a73b38623bf14708bf5ac9602d1ce684b}\index{prism::view::Window@{prism::view::Window}!m\_windowMinimized@{m\_windowMinimized}}
+\index{m\_windowMinimized@{m\_windowMinimized}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{m\_windowMinimized}{m\_windowMinimized}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a73b38623bf14708bf5ac9602d1ce684b} 
+bool prism\+::view\+::\+Window\+::m\+\_\+window\+Minimized = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_a70e49b67dea0ee45f4d52e4ebb03db7e}\index{prism::view::Window@{prism::view::Window}!physicalDevice@{physicalDevice}}
+\index{physicalDevice@{physicalDevice}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{physicalDevice}{physicalDevice}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_a70e49b67dea0ee45f4d52e4ebb03db7e} 
+Vk\+Physical\+Device prism\+::view\+::\+Window\+::physical\+Device\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_af508535cfe4d6904d01396d15ee0a91b}\index{prism::view::Window@{prism::view::Window}!presentQueue@{presentQueue}}
+\index{presentQueue@{presentQueue}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{presentQueue}{presentQueue}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_af508535cfe4d6904d01396d15ee0a91b} 
+Vk\+Queue prism\+::view\+::\+Window\+::present\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_ab54c30367a0c4d0630df18dab81e0c21}\index{prism::view::Window@{prism::view::Window}!s\_sdlInitialized@{s\_sdlInitialized}}
+\index{s\_sdlInitialized@{s\_sdlInitialized}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{s\_sdlInitialized}{s\_sdlInitialized}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_ab54c30367a0c4d0630df18dab81e0c21} 
+bool prism\+::view\+::\+Window\+::s\+\_\+sdl\+Initialized = false\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1view_1_1_window_ada7a56e2c924860af9187e3994c88e31}\index{prism::view::Window@{prism::view::Window}!surface@{surface}}
+\index{surface@{surface}!prism::view::Window@{prism::view::Window}}
+\doxysubsubsection{\texorpdfstring{surface}{surface}}
+{\footnotesize\ttfamily \label{classprism_1_1view_1_1_window_ada7a56e2c924860af9187e3994c88e31} 
+Vk\+Surface\+KHR prism\+::view\+::\+Window\+::surface\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/source/repos/\+Prism\+Engine/src/\mbox{\hyperlink{_window_8h}{Window.\+h}}\item 
+C\+:/\+Users/\+Admin/source/repos/\+Prism\+Engine/src/\mbox{\hyperlink{_window_8cpp}{Window.\+cpp}}\end{DoxyCompactItemize}

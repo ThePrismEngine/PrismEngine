@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrismEngine: Исходный файл C:/Users/Admin/source/repos/PrismEngine/src/vector.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PrismEngine
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('vector_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">vector.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="vector_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;SDL.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceprism.html">prism</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceprism_1_1math.html">math</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structprism_1_1math_1_1_vector3d.html">   17</a></span>        <span class="keyword">struct </span><a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#a0666bd40f322dcea9a6e01f98717729c">Vector3d</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structprism_1_1math_1_1_vector3d.html#a0fdf8e79434ed7bbba3a2ce5e525b736">   18</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a0fdf8e79434ed7bbba3a2ce5e525b736">x</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structprism_1_1math_1_1_vector3d.html#a754de72e6ab72e92e37dec7e1cdae710">   19</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a754de72e6ab72e92e37dec7e1cdae710">y</a>; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structprism_1_1math_1_1_vector3d.html#aac7af19efcd4d5e3738e3d2b1313efc5">   20</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#aac7af19efcd4d5e3738e3d2b1313efc5">z</a>; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structprism_1_1math_1_1_vector3d.html#a46e1eb616728dab7095af12303438bba">   21</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a46e1eb616728dab7095af12303438bba">w</a> = 1.0f; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structprism_1_1math_1_1_vector3d.html#a0666bd40f322dcea9a6e01f98717729c">   26</a></span>            <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#a0666bd40f322dcea9a6e01f98717729c">Vector3d</a>() : <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a0fdf8e79434ed7bbba3a2ce5e525b736">x</a>(0), <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a754de72e6ab72e92e37dec7e1cdae710">y</a>(0), <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#aac7af19efcd4d5e3738e3d2b1313efc5">z</a>(0), <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a46e1eb616728dab7095af12303438bba">w</a>(1) {}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structprism_1_1math_1_1_vector3d.html#a4971bfe801e3559fbbfc5c806aa6f96d">   35</a></span>            <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#a4971bfe801e3559fbbfc5c806aa6f96d">Vector3d</a>(<span class="keywordtype">float</span> <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a0fdf8e79434ed7bbba3a2ce5e525b736">x</a>, <span class="keywordtype">float</span> <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a754de72e6ab72e92e37dec7e1cdae710">y</a>, <span class="keywordtype">float</span> <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#aac7af19efcd4d5e3738e3d2b1313efc5">z</a>, <span class="keywordtype">float</span> <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a46e1eb616728dab7095af12303438bba">w</a> = 1.0f) : <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a0fdf8e79434ed7bbba3a2ce5e525b736">x</a>(<a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a0fdf8e79434ed7bbba3a2ce5e525b736">x</a>), <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a754de72e6ab72e92e37dec7e1cdae710">y</a>(<a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a754de72e6ab72e92e37dec7e1cdae710">y</a>), <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#aac7af19efcd4d5e3738e3d2b1313efc5">z</a>(<a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#aac7af19efcd4d5e3738e3d2b1313efc5">z</a>), <a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a46e1eb616728dab7095af12303438bba">w</a>(<a class="code hl_variable" href="structprism_1_1math_1_1_vector3d.html#a46e1eb616728dab7095af12303438bba">w</a>) {}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#ae095b21e5923e3e09f186e423c4385b6">print</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_struct" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#a0c8b693083a8af90d6b62808b57765fe">operator+</a>(<a class="code hl_struct" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a>&amp; other);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <a class="code hl_struct" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#afe3a8371655b6b6a2d1e39c9bcda5665">operator-</a>(<a class="code hl_struct" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a>&amp; other);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <a class="code hl_struct" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#a96cda750eb855d0b784db5a3a64046ea">operator*</a>(<span class="keywordtype">float</span> k);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_struct" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#af491978014b487f096ac0ac781365da5">operator/</a>(<span class="keywordtype">float</span> k);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordtype">float</span> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#a8db312c4c2d5a5b2c0bc4a91af7dc36a">operator[]</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#ab5a3dd7e3d1bb0f39557671fb7fe36fe">operator==</a>(<a class="code hl_struct" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a>&amp; other);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordtype">float</span> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#a246d4ac8bf3bc3b237c3250a0acdfdb7">length</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_struct" href="structprism_1_1math_1_1_vector3d.html">Vector3d</a> <a class="code hl_function" href="structprism_1_1math_1_1_vector3d.html#a59dbff9c0f786334970c93d16820fd8b">normalise</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        };</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">float</span> <a class="code hl_function" href="namespaceprism_1_1math.html#a66cc48e6731c348a983b096ab80b5b6f">Vector_DotProduct</a>(Vector3d&amp; v1, Vector3d&amp; v2);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        Vector3d <a class="code hl_function" href="namespaceprism_1_1math.html#a656054ef093536949e61ac4a4f1f0ea6">Vector_CrossProduct</a>(Vector3d&amp; v1, Vector3d&amp; v2);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        Vector3d <a class="code hl_function" href="namespaceprism_1_1math.html#a5dabeebe5cc305b68b078008764e2b5d">Vector_IntersectPlane</a>(Vector3d&amp; plane_p, Vector3d&amp; plane_n, Vector3d&amp; lineStart, Vector3d&amp; lineEnd);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    } <span class="comment">// namespace math</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>} <span class="comment">// namespace prism</span></div>
+<div class="ttc" id="anamespaceprism_1_1math_html"><div class="ttname"><a href="namespaceprism_1_1math.html">prism::math</a></div><div class="ttdef"><b>Определения</b> fmath.cpp:4</div></div>
+<div class="ttc" id="anamespaceprism_1_1math_html_a5dabeebe5cc305b68b078008764e2b5d"><div class="ttname"><a href="namespaceprism_1_1math.html#a5dabeebe5cc305b68b078008764e2b5d">prism::math::Vector_IntersectPlane</a></div><div class="ttdeci">Vector3d Vector_IntersectPlane(Vector3d &amp;plane_p, Vector3d &amp;plane_n, Vector3d &amp;lineStart, Vector3d &amp;lineEnd)</div><div class="ttdoc">Пересечение плоскости и линии</div><div class="ttdef"><b>Определения</b> vector.cpp:82</div></div>
+<div class="ttc" id="anamespaceprism_1_1math_html_a656054ef093536949e61ac4a4f1f0ea6"><div class="ttname"><a href="namespaceprism_1_1math.html#a656054ef093536949e61ac4a4f1f0ea6">prism::math::Vector_CrossProduct</a></div><div class="ttdeci">Vector3d Vector_CrossProduct(Vector3d &amp;v1, Vector3d &amp;v2)</div><div class="ttdoc">Векторное произведение</div><div class="ttdef"><b>Определения</b> vector.cpp:73</div></div>
+<div class="ttc" id="anamespaceprism_1_1math_html_a66cc48e6731c348a983b096ab80b5b6f"><div class="ttname"><a href="namespaceprism_1_1math.html#a66cc48e6731c348a983b096ab80b5b6f">prism::math::Vector_DotProduct</a></div><div class="ttdeci">float Vector_DotProduct(Vector3d &amp;v1, Vector3d &amp;v2)</div><div class="ttdoc">Скалярное произведение векторов</div><div class="ttdef"><b>Определения</b> vector.cpp:66</div></div>
+<div class="ttc" id="anamespaceprism_html"><div class="ttname"><a href="namespaceprism.html">prism</a></div><div class="ttdef"><b>Определения</b> fmath.cpp:3</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html">prism::math::Vector3d</a></div><div class="ttdoc">3D вектор с дополнительной компонентой w</div><div class="ttdef"><b>Определения</b> vector.h:17</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a0666bd40f322dcea9a6e01f98717729c"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a0666bd40f322dcea9a6e01f98717729c">prism::math::Vector3d::Vector3d</a></div><div class="ttdeci">Vector3d()</div><div class="ttdoc">Конструктор по умолчанию (нулевой вектор)</div><div class="ttdef"><b>Определения</b> vector.h:26</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a0c8b693083a8af90d6b62808b57765fe"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a0c8b693083a8af90d6b62808b57765fe">prism::math::Vector3d::operator+</a></div><div class="ttdeci">Vector3d operator+(Vector3d &amp;other)</div><div class="ttdoc">Сложение векторов</div><div class="ttdef"><b>Определения</b> vector.cpp:9</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a0fdf8e79434ed7bbba3a2ce5e525b736"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a0fdf8e79434ed7bbba3a2ce5e525b736">prism::math::Vector3d::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Координата X.</div><div class="ttdef"><b>Определения</b> vector.h:18</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a246d4ac8bf3bc3b237c3250a0acdfdb7"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a246d4ac8bf3bc3b237c3250a0acdfdb7">prism::math::Vector3d::length</a></div><div class="ttdeci">float length()</div><div class="ttdoc">Вычисление длины вектора</div><div class="ttdef"><b>Определения</b> vector.cpp:53</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a46e1eb616728dab7095af12303438bba"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a46e1eb616728dab7095af12303438bba">prism::math::Vector3d::w</a></div><div class="ttdeci">float w</div><div class="ttdoc">Однородная координата (по умолчанию 1.0)</div><div class="ttdef"><b>Определения</b> vector.h:21</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a4971bfe801e3559fbbfc5c806aa6f96d"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a4971bfe801e3559fbbfc5c806aa6f96d">prism::math::Vector3d::Vector3d</a></div><div class="ttdeci">Vector3d(float x, float y, float z, float w=1.0f)</div><div class="ttdoc">Конструктор с параметрами</div><div class="ttdef"><b>Определения</b> vector.h:35</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a59dbff9c0f786334970c93d16820fd8b"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a59dbff9c0f786334970c93d16820fd8b">prism::math::Vector3d::normalise</a></div><div class="ttdeci">Vector3d normalise()</div><div class="ttdoc">Нормализация вектора</div><div class="ttdef"><b>Определения</b> vector.cpp:58</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a754de72e6ab72e92e37dec7e1cdae710"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a754de72e6ab72e92e37dec7e1cdae710">prism::math::Vector3d::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Координата Y.</div><div class="ttdef"><b>Определения</b> vector.h:19</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a8db312c4c2d5a5b2c0bc4a91af7dc36a"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a8db312c4c2d5a5b2c0bc4a91af7dc36a">prism::math::Vector3d::operator[]</a></div><div class="ttdeci">float operator[](int index)</div><div class="ttdoc">Доступ к компонентам по индексу</div><div class="ttdef"><b>Определения</b> vector.cpp:35</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_a96cda750eb855d0b784db5a3a64046ea"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#a96cda750eb855d0b784db5a3a64046ea">prism::math::Vector3d::operator*</a></div><div class="ttdeci">Vector3d operator*(float k)</div><div class="ttdoc">Умножение на скаляр</div><div class="ttdef"><b>Определения</b> vector.cpp:21</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_aac7af19efcd4d5e3738e3d2b1313efc5"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#aac7af19efcd4d5e3738e3d2b1313efc5">prism::math::Vector3d::z</a></div><div class="ttdeci">float z</div><div class="ttdoc">Координата Z.</div><div class="ttdef"><b>Определения</b> vector.h:20</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_ab5a3dd7e3d1bb0f39557671fb7fe36fe"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#ab5a3dd7e3d1bb0f39557671fb7fe36fe">prism::math::Vector3d::operator==</a></div><div class="ttdeci">bool operator==(Vector3d &amp;other)</div><div class="ttdoc">Сравнение векторов</div><div class="ttdef"><b>Определения</b> vector.cpp:46</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_ae095b21e5923e3e09f186e423c4385b6"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#ae095b21e5923e3e09f186e423c4385b6">prism::math::Vector3d::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Вывод вектора в консоль</div><div class="ttdef"><b>Определения</b> vector.cpp:5</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_af491978014b487f096ac0ac781365da5"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#af491978014b487f096ac0ac781365da5">prism::math::Vector3d::operator/</a></div><div class="ttdeci">Vector3d operator/(float k)</div><div class="ttdoc">Деление на скаляр</div><div class="ttdef"><b>Определения</b> vector.cpp:27</div></div>
+<div class="ttc" id="astructprism_1_1math_1_1_vector3d_html_afe3a8371655b6b6a2d1e39c9bcda5665"><div class="ttname"><a href="structprism_1_1math_1_1_vector3d.html#afe3a8371655b6b6a2d1e39c9bcda5665">prism::math::Vector3d::operator-</a></div><div class="ttdeci">Vector3d operator-(Vector3d &amp;other)</div><div class="ttdoc">Вычитание векторов</div><div class="ttdef"><b>Определения</b> vector.cpp:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="vector_8h.html">vector.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

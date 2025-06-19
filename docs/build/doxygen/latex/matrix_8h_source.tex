@@ -1,0 +1,48 @@
+\doxysection{matrix.\+h}
+\hypertarget{matrix_8h_source}{}\label{matrix_8h_source}\index{C:/Users/Admin/source/repos/PrismEngine/src/matrix.h@{C:/Users/Admin/source/repos/PrismEngine/src/matrix.h}}
+\mbox{\hyperlink{matrix_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vector_8h}{vector.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1math}{math}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a03f6ae69a0fc6e279a81bbdb1de1a4f1}{m}}[4][4]\ =\ \{\ 0\ \};\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a03e22f599fb64c73f5a2bdc8a6b2ed0b}{print}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a92ac545d71153f230ea7c9cd083e6737}{operator[]}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a48414a1a4973f0a079ad50def4a184b7}{operator==}}(\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\&\ other);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_aa37f4c9f136b9d5f686059bfc3ec09cc}{makeIdentity}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a0c75732edb441e3a49d7b8211dab32d5}{makeRotationX}}(\textcolor{keywordtype}{float}\ fAngleRad);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_abcfee1b63bcb6a95ec9e7eb00419d71d}{makeRotationY}}(\textcolor{keywordtype}{float}\ fAngleRad);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_ab3aa494e109566c1693e39aeb1cc6116}{makeRotationZ}}(\textcolor{keywordtype}{float}\ fAngleRad);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a0df69dd9ba7f1e59788e79ce2dc0c05a}{makeTranslation}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a618e4ed9879960963d3dd37bdcb82409}{makeScale}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a2c908d0c06bf596c8399154a63a6b8c7}{makeProjection}}(\textcolor{keywordtype}{float}\ fFovDegrees,\ \textcolor{keywordtype}{float}\ fAspectRatio,\ \textcolor{keywordtype}{float}\ fNear,\ \textcolor{keywordtype}{float}\ fFar);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4X4}}\ \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a141ac2d3e2abffea8afb383aeec57965}{Matrix\_PointAt}}(\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\&\ pos,\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\&\ target,\ \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}}\&\ up);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Matrix4X4\ \mbox{\hyperlink{namespaceprism_1_1math_a1ee2a21c4aa09e48c35adb5e4bf81f96}{Matrix\_MultiplyMatrix}}(Matrix4X4\&\ m1,\ Matrix4X4\&\ m2);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Matrix4X4\ \mbox{\hyperlink{namespaceprism_1_1math_a95812488fd848a4471b0d983c78a07f7}{Matrix\_QuickInverse}}(Matrix4X4\&\ m);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ math}}
+\DoxyCodeLine{00122\ \}\ \textcolor{comment}{//\ namespace\ prism}}
+
+\end{DoxyCode}

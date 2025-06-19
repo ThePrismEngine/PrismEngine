@@ -5,7 +5,7 @@
 #include <vulkan/vulkan.h>
 #include <optional>
 #include <stdexcept>
-#include <utility> // для std::pair
+#include <utility> // РґР»СЏ std::pair
 #include <SDL_vulkan.h>
 #include <memory> 
 #include <set>
@@ -31,21 +31,21 @@ namespace prism {
 
         class Window {
         public:
-            // === Конструкторы ===
+            // === РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹ ===
             Window(const char* title, int width, int height);
             Window(const char* title, int width, int height, Uint32 sdlFlags);
             Window(const char* title, int x, int y, int width, int height);
             Window(const char* title, int width, int height, const std::string& iconPath);
 
-            // Специальные конструкторы
+            // РЎРїРµС†РёР°Р»СЊРЅС‹Рµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹
             static Window CreateCentered(const char* title, int width, int height);
             Window(const char* title, int width, int height,
                 int minWidth, int minHeight, int maxWidth, int maxHeight);
 
-            // === Деструктор ===
+            // === Р”РµСЃС‚СЂСѓРєС‚РѕСЂ ===
             ~Window();
 
-            // === Управление окном ===
+            // === РЈРїСЂР°РІР»РµРЅРёРµ РѕРєРЅРѕРј ===
             const char* getTitle() const;
             void setTitle(const char* title);
             int getWidth();
@@ -55,7 +55,7 @@ namespace prism {
             void setHeight(int height);
             void setSize(int width, int height);
 
-            // === Режимы окна ===
+            // === Р РµР¶РёРјС‹ РѕРєРЅР° ===
             void setFullscreen(bool enabled);
             void setBorderless(bool enabled);
             void setResizable(bool enabled);
@@ -65,14 +65,14 @@ namespace prism {
             bool isResizable() const;
             bool isGrabMouse() const;
 
-            // === Позиция и размер ===
+            // === РџРѕР·РёС†РёСЏ Рё СЂР°Р·РјРµСЂ ===
             void setPosition(int x, int y);
             std::pair<int, int> getPosition() const;
             void centerWindow();
             void setMinSize(int minWidth, int minHeight);
             void setMaxSize(int maxWidth, int maxHeight);
 
-            // === События и рендеринг ===
+            // === РЎРѕР±С‹С‚РёСЏ Рё СЂРµРЅРґРµСЂРёРЅРі ===
             bool shouldClose() const;
             void setCloseRequested(bool value);
             void handleEvents();
@@ -80,12 +80,12 @@ namespace prism {
             void update();
 
 
-            // === Дополнительные методы ===
+            // === Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РјРµС‚РѕРґС‹ ===
             void destroy();
 
             static void setSDLInitialized(bool initialized) { s_sdlInitialized = initialized; }
 
-            // === Vulkan методы ===
+            // === Vulkan РјРµС‚РѕРґС‹ ===
             void vulkanInut();
             void createInstance();
             void pickPhysicalDevice();
@@ -104,9 +104,9 @@ namespace prism {
             SDL_Window* m_sdlWindow;
             bool m_isDestroyed;
 
-            bool m_windowMinimized = false; // Флаг минимизации окна
+            bool m_windowMinimized = false; // Р¤Р»Р°Рі РјРёРЅРёРјРёР·Р°С†РёРё РѕРєРЅР°
             
-            // Внутренний конструктор для делегирования
+            // Р’РЅСѓС‚СЂРµРЅРЅРёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ РґРµР»РµРіРёСЂРѕРІР°РЅРёСЏ
             Window(const char* title, int x, int y, int width, int height, Uint32 sdlFlags);
 
             VkInstance instance;

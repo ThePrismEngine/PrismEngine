@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="vector_8h" kind="file" language="C++">
+    <compoundname>vector.h</compoundname>
+    <includes local="no">stdexcept</includes>
+    <includes local="yes">SDL.h</includes>
+    <includedby refid="_prism_engine_8h" local="yes">src/PrismEngine.h</includedby>
+    <includedby refid="matrix_8h" local="yes">src/matrix.h</includedby>
+    <includedby refid="vector_8cpp" local="yes">src/vector.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SDL.h</label>
+      </node>
+      <node id="2">
+        <label>stdexcept</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/PrismEngine.cpp</label>
+        <link refid="_prism_engine_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/PrismEngine.h</label>
+        <link refid="_prism_engine_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/matrix.cpp</label>
+        <link refid="matrix_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/vector.cpp</label>
+        <link refid="vector_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structprism_1_1math_1_1_vector3d" prot="public">prism::math::Vector3d</innerclass>
+    <innernamespace refid="namespaceprism">prism</innernamespace>
+    <innernamespace refid="namespaceprism_1_1math">prism::math</innernamespace>
+    <briefdescription>
+<para>3D вектор и операции с ним </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SDL.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism" kindref="compound">prism</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism_1_1math" kindref="compound">math</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structprism_1_1math_1_1_vector3d" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1math_1_1_vector3d_1a0666bd40f322dcea9a6e01f98717729c" kindref="member">Vector3d</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736" kindref="member">x</ref>;<sp/></highlight></codeline>
+<codeline lineno="19" refid="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710" kindref="member">y</ref>;<sp/></highlight></codeline>
+<codeline lineno="20" refid="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5" kindref="member">z</ref>;<sp/></highlight></codeline>
+<codeline lineno="21" refid="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba" kindref="member">w</ref><sp/>=<sp/>1.0f;<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="structprism_1_1math_1_1_vector3d_1a0666bd40f322dcea9a6e01f98717729c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a0666bd40f322dcea9a6e01f98717729c" kindref="member">Vector3d</ref>()<sp/>:<sp/><ref refid="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736" kindref="member">x</ref>(0),<sp/><ref refid="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710" kindref="member">y</ref>(0),<sp/><ref refid="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5" kindref="member">z</ref>(0),<sp/><ref refid="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba" kindref="member">w</ref>(1)<sp/>{}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structprism_1_1math_1_1_vector3d_1a4971bfe801e3559fbbfc5c806aa6f96d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a4971bfe801e3559fbbfc5c806aa6f96d" kindref="member">Vector3d</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736" kindref="member">x</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710" kindref="member">y</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5" kindref="member">z</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba" kindref="member">w</ref><sp/>=<sp/>1.0f)<sp/>:<sp/><ref refid="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736" kindref="member">x</ref>(<ref refid="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736" kindref="member">x</ref>),<sp/><ref refid="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710" kindref="member">y</ref>(<ref refid="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710" kindref="member">y</ref>),<sp/><ref refid="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5" kindref="member">z</ref>(<ref refid="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5" kindref="member">z</ref>),<sp/><ref refid="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba" kindref="member">w</ref>(<ref refid="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba" kindref="member">w</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1ae095b21e5923e3e09f186e423c4385b6" kindref="member">print</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a0c8b693083a8af90d6b62808b57765fe" kindref="member">operator+</ref>(<ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref><sp/><ref refid="structprism_1_1math_1_1_vector3d_1afe3a8371655b6b6a2d1e39c9bcda5665" kindref="member">operator-</ref>(<ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a96cda750eb855d0b784db5a3a64046ea" kindref="member">operator*</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>k);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref><sp/><ref refid="structprism_1_1math_1_1_vector3d_1af491978014b487f096ac0ac781365da5" kindref="member">operator/</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>k);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a8db312c4c2d5a5b2c0bc4a91af7dc36a" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1ab5a3dd7e3d1bb0f39557671fb7fe36fe" kindref="member">operator==</ref>(<ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a246d4ac8bf3bc3b237c3250a0acdfdb7" kindref="member">length</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref><sp/><ref refid="structprism_1_1math_1_1_vector3d_1a59dbff9c0f786334970c93d16820fd8b" kindref="member">normalise</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f" kindref="member">Vector_DotProduct</ref>(Vector3d&amp;<sp/>v1,<sp/>Vector3d&amp;<sp/>v2);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3d<sp/><ref refid="namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6" kindref="member">Vector_CrossProduct</ref>(Vector3d&amp;<sp/>v1,<sp/>Vector3d&amp;<sp/>v2);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3d<sp/><ref refid="namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d" kindref="member">Vector_IntersectPlane</ref>(Vector3d&amp;<sp/>plane_p,<sp/>Vector3d&amp;<sp/>plane_n,<sp/>Vector3d&amp;<sp/>lineStart,<sp/>Vector3d&amp;<sp/>lineEnd);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>math</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>prism</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/vector.h"/>
+  </compounddef>
+</doxygen>

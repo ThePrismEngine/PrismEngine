@@ -1,0 +1,27 @@
+
+.. _file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h:
+
+File WindowVkManager.h
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir_C__Users_Admin_source_repos_PrismEngine_src>` (``C:\Users\Admin\source\repos\PrismEngine\src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``C:\Users\Admin\source\repos\PrismEngine\src\WindowVkManager.h``)
+------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.rst
+
+
+
+
+
+
+
+
+

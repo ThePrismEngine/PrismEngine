@@ -42,6 +42,9 @@
     <ClCompile Include="src\WindowVkManager.cpp">
       <Filter>Исходные файлы\view</Filter>
     </ClCompile>
+    <ClCompile Include="src\PrismEngine.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\fmath.h">

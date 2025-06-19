@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1math_1_1_matrix4_x4" kind="struct" language="C++" prot="public">
+    <compoundname>prism::math::Matrix4X4</compoundname>
+    <includes refid="matrix_8h" local="no">matrix.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1math_1_1_matrix4_x4_1a03f6ae69a0fc6e279a81bbdb1de1a4f1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::math::Matrix4X4::m[4][4]</definition>
+        <argsstring>[4][4]</argsstring>
+        <name>m</name>
+        <qualifiedname>prism::math::Matrix4X4::m</qualifiedname>
+        <initializer>= { 0 }</initializer>
+        <briefdescription>
+<para>Элементы матрицы (строка, столбец) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="19" column="19" bodyfile="src/matrix.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1a03e22f599fb64c73f5a2bdc8a6b2ed0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::math::Matrix4X4::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <qualifiedname>prism::math::Matrix4X4::print</qualifiedname>
+        <briefdescription>
+<para>Выводит матрицу в консоль </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="24" column="18" bodyfile="src/matrix.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1a92ac545d71153f230ea7c9cd083e6737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float *</type>
+        <definition>float * prism::math::Matrix4X4::operator[]</definition>
+        <argsstring>(int index)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>prism::math::Matrix4X4::operator[]</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Доступ к строке матрицы по индексу </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Индекс строки (0-3) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Указатель на строку матрицы </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>При неверном индексе </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="32" column="19" bodyfile="src/matrix.cpp" bodystart="10" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1a48414a1a4973f0a079ad50def4a184b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::math::Matrix4X4::operator==</definition>
+        <argsstring>(Matrix4X4 &amp;other)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>prism::math::Matrix4X4::operator==</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Сравнение матриц на равенство </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Матрица для сравнения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true если матрицы равны </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="39" column="18" bodyfile="src/matrix.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1aa37f4c9f136b9d5f686059bfc3ec09cc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>Matrix4X4 prism::math::Matrix4X4::makeIdentity</definition>
+        <argsstring>()</argsstring>
+        <name>makeIdentity</name>
+        <qualifiedname>prism::math::Matrix4X4::makeIdentity</qualifiedname>
+        <briefdescription>
+<para>Создает единичную матрицу </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Единичная матрица 4x4 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="45" column="30" bodyfile="src/matrix.cpp" bodystart="24" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1a0c75732edb441e3a49d7b8211dab32d5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>Matrix4X4 prism::math::Matrix4X4::makeRotationX</definition>
+        <argsstring>(float fAngleRad)</argsstring>
+        <name>makeRotationX</name>
+        <qualifiedname>prism::math::Matrix4X4::makeRotationX</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>fAngleRad</declname>
+        </param>
+        <briefdescription>
+<para>Создает матрицу поворота вокруг оси X. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fAngleRad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Угол поворота в радианах </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Матрица поворота вокруг X </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="52" column="30" bodyfile="src/matrix.cpp" bodystart="34" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1abcfee1b63bcb6a95ec9e7eb00419d71d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>Matrix4X4 prism::math::Matrix4X4::makeRotationY</definition>
+        <argsstring>(float fAngleRad)</argsstring>
+        <name>makeRotationY</name>
+        <qualifiedname>prism::math::Matrix4X4::makeRotationY</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>fAngleRad</declname>
+        </param>
+        <briefdescription>
+<para>Создает матрицу поворота вокруг оси Y. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fAngleRad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Угол поворота в радианах </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Матрица поворота вокруг Y </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="59" column="30" bodyfile="src/matrix.cpp" bodystart="47" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1ab3aa494e109566c1693e39aeb1cc6116" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>Matrix4X4 prism::math::Matrix4X4::makeRotationZ</definition>
+        <argsstring>(float fAngleRad)</argsstring>
+        <name>makeRotationZ</name>
+        <qualifiedname>prism::math::Matrix4X4::makeRotationZ</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>fAngleRad</declname>
+        </param>
+        <briefdescription>
+<para>Создает матрицу поворота вокруг оси Z. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fAngleRad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Угол поворота в радианах </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Матрица поворота вокруг Z </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="66" column="30" bodyfile="src/matrix.cpp" bodystart="59" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1a0df69dd9ba7f1e59788e79ce2dc0c05a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>Matrix4X4 prism::math::Matrix4X4::makeTranslation</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>makeTranslation</name>
+        <qualifiedname>prism::math::Matrix4X4::makeTranslation</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Создает матрицу переноса </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Смещение по X </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Смещение по Y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Смещение по Z </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Матрица переноса </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="75" column="30" bodyfile="src/matrix.cpp" bodystart="71" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1a618e4ed9879960963d3dd37bdcb82409" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>Matrix4X4 prism::math::Matrix4X4::makeScale</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>makeScale</name>
+        <qualifiedname>prism::math::Matrix4X4::makeScale</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Создает матрицу масштабирования </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Масштаб по X </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Масштаб по Y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Масштаб по Z </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Матрица масштабирования </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="84" column="30" bodyfile="src/matrix.cpp" bodystart="84" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1a2c908d0c06bf596c8399154a63a6b8c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>Matrix4X4 prism::math::Matrix4X4::makeProjection</definition>
+        <argsstring>(float fFovDegrees, float fAspectRatio, float fNear, float fFar)</argsstring>
+        <name>makeProjection</name>
+        <qualifiedname>prism::math::Matrix4X4::makeProjection</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>fFovDegrees</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fAspectRatio</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fNear</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fFar</declname>
+        </param>
+        <briefdescription>
+<para>Создает матрицу проекции </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fFovDegrees</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Угол обзора в градусах </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fAspectRatio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Соотношение сторон </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fNear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ближняя плоскость отсечения </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fFar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Дальняя плоскость отсечения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Матрица проекции </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="94" column="30" bodyfile="src/matrix.cpp" bodystart="94" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1math_1_1_matrix4_x4_1a141ac2d3e2abffea8afb383aeec57965" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
+        <definition>Matrix4X4 prism::math::Matrix4X4::Matrix_PointAt</definition>
+        <argsstring>(Vector3d &amp;pos, Vector3d &amp;target, Vector3d &amp;up)</argsstring>
+        <name>Matrix_PointAt</name>
+        <qualifiedname>prism::math::Matrix4X4::Matrix_PointAt</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref> &amp;</type>
+          <declname>up</declname>
+        </param>
+        <briefdescription>
+<para>Создает матрицу направления &quot;смотрит на&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Позиция наблюдателя </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Целевая точка </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>up</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Вектор &quot;вверх&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Матрица направления </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/matrix.h" line="103" column="30" bodyfile="src/matrix.cpp" bodystart="107" bodyend="128"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>4x4 матрица для линейных преобразований </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Поддерживает операции поворота, масштабирования, переноса, проекции </para>
+    </detaileddescription>
+    <location file="src/matrix.h" line="18" column="9" bodyfile="src/matrix.h" bodystart="18" bodyend="104"/>
+    <listofallmembers>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a03f6ae69a0fc6e279a81bbdb1de1a4f1" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>m</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1aa37f4c9f136b9d5f686059bfc3ec09cc" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>makeIdentity</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a2c908d0c06bf596c8399154a63a6b8c7" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>makeProjection</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a0c75732edb441e3a49d7b8211dab32d5" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>makeRotationX</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1abcfee1b63bcb6a95ec9e7eb00419d71d" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>makeRotationY</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1ab3aa494e109566c1693e39aeb1cc6116" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>makeRotationZ</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a618e4ed9879960963d3dd37bdcb82409" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>makeScale</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a0df69dd9ba7f1e59788e79ce2dc0c05a" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>makeTranslation</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a141ac2d3e2abffea8afb383aeec57965" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>Matrix_PointAt</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a48414a1a4973f0a079ad50def4a184b7" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>operator==</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a92ac545d71153f230ea7c9cd083e6737" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>operator[]</name></member>
+      <member refid="structprism_1_1math_1_1_matrix4_x4_1a03e22f599fb64c73f5a2bdc8a6b2ed0b" prot="public" virt="non-virtual"><scope>prism::math::Matrix4X4</scope><name>print</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

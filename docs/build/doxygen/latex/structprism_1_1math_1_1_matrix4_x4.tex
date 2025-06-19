@@ -1,0 +1,283 @@
+\doxysection{Структура prism\+::math\+::Matrix4\+X4}
+\hypertarget{structprism_1_1math_1_1_matrix4_x4}{}\label{structprism_1_1math_1_1_matrix4_x4}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+
+
+4x4 матрица для линейных преобразований  
+
+
+
+
+{\ttfamily \#include $<$matrix.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a03e22f599fb64c73f5a2bdc8a6b2ed0b}{print}} ()
+\begin{DoxyCompactList}\small\item\em Выводит матрицу в консоль \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a92ac545d71153f230ea7c9cd083e6737}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\begin{DoxyCompactList}\small\item\em Доступ к строке матрицы по индексу \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a48414a1a4973f0a079ad50def4a184b7}{operator==}} (\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \&other)
+\begin{DoxyCompactList}\small\item\em Сравнение матриц на равенство \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_aa37f4c9f136b9d5f686059bfc3ec09cc}{make\+Identity}} ()
+\begin{DoxyCompactList}\small\item\em Создает единичную матрицу \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a0c75732edb441e3a49d7b8211dab32d5}{make\+RotationX}} (float f\+Angle\+Rad)
+\begin{DoxyCompactList}\small\item\em Создает матрицу поворота вокруг оси X. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_abcfee1b63bcb6a95ec9e7eb00419d71d}{make\+RotationY}} (float f\+Angle\+Rad)
+\begin{DoxyCompactList}\small\item\em Создает матрицу поворота вокруг оси Y. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_ab3aa494e109566c1693e39aeb1cc6116}{make\+RotationZ}} (float f\+Angle\+Rad)
+\begin{DoxyCompactList}\small\item\em Создает матрицу поворота вокруг оси Z. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a0df69dd9ba7f1e59788e79ce2dc0c05a}{make\+Translation}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Создает матрицу переноса \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a618e4ed9879960963d3dd37bdcb82409}{make\+Scale}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Создает матрицу масштабирования \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a2c908d0c06bf596c8399154a63a6b8c7}{make\+Projection}} (float f\+Fov\+Degrees, float f\+Aspect\+Ratio, float f\+Near, float f\+Far)
+\begin{DoxyCompactList}\small\item\em Создает матрицу проекции \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a141ac2d3e2abffea8afb383aeec57965}{Matrix\+\_\+\+Point\+At}} (\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&pos, \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&target, \mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&up)
+\begin{DoxyCompactList}\small\item\em Создает матрицу направления "{}смотрит на"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4_a03f6ae69a0fc6e279a81bbdb1de1a4f1}{m}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]} = \{ 0 \}
+\begin{DoxyCompactList}\small\item\em Элементы матрицы (строка, столбец) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+4x4 матрица для линейных преобразований 
+
+Поддерживает операции поворота, масштабирования, переноса, проекции 
+
+\label{doc-func-members}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_aa37f4c9f136b9d5f686059bfc3ec09cc}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!makeIdentity@{makeIdentity}}
+\index{makeIdentity@{makeIdentity}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{makeIdentity()}{makeIdentity()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_aa37f4c9f136b9d5f686059bfc3ec09cc} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix4\+X4\+::make\+Identity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создает единичную матрицу 
+
+\begin{DoxyReturn}{Возвращает}
+Единичная матрица 4x4 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a2c908d0c06bf596c8399154a63a6b8c7}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!makeProjection@{makeProjection}}
+\index{makeProjection@{makeProjection}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{makeProjection()}{makeProjection()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a2c908d0c06bf596c8399154a63a6b8c7} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix4\+X4\+::make\+Projection (\begin{DoxyParamCaption}\item[{float}]{f\+Fov\+Degrees}{, }\item[{float}]{f\+Aspect\+Ratio}{, }\item[{float}]{f\+Near}{, }\item[{float}]{f\+Far}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создает матрицу проекции 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em f\+Fov\+Degrees} & Угол обзора в градусах \\
+\hline
+{\em f\+Aspect\+Ratio} & Соотношение сторон \\
+\hline
+{\em f\+Near} & Ближняя плоскость отсечения \\
+\hline
+{\em f\+Far} & Дальняя плоскость отсечения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Матрица проекции 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a0c75732edb441e3a49d7b8211dab32d5}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!makeRotationX@{makeRotationX}}
+\index{makeRotationX@{makeRotationX}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{makeRotationX()}{makeRotationX()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a0c75732edb441e3a49d7b8211dab32d5} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix4\+X4\+::make\+RotationX (\begin{DoxyParamCaption}\item[{float}]{f\+Angle\+Rad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создает матрицу поворота вокруг оси X. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em f\+Angle\+Rad} & Угол поворота в радианах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Матрица поворота вокруг X 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_abcfee1b63bcb6a95ec9e7eb00419d71d}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!makeRotationY@{makeRotationY}}
+\index{makeRotationY@{makeRotationY}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{makeRotationY()}{makeRotationY()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_abcfee1b63bcb6a95ec9e7eb00419d71d} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix4\+X4\+::make\+RotationY (\begin{DoxyParamCaption}\item[{float}]{f\+Angle\+Rad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создает матрицу поворота вокруг оси Y. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em f\+Angle\+Rad} & Угол поворота в радианах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Матрица поворота вокруг Y 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_ab3aa494e109566c1693e39aeb1cc6116}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!makeRotationZ@{makeRotationZ}}
+\index{makeRotationZ@{makeRotationZ}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{makeRotationZ()}{makeRotationZ()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_ab3aa494e109566c1693e39aeb1cc6116} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix4\+X4\+::make\+RotationZ (\begin{DoxyParamCaption}\item[{float}]{f\+Angle\+Rad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создает матрицу поворота вокруг оси Z. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em f\+Angle\+Rad} & Угол поворота в радианах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Матрица поворота вокруг Z 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a618e4ed9879960963d3dd37bdcb82409}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!makeScale@{makeScale}}
+\index{makeScale@{makeScale}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{makeScale()}{makeScale()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a618e4ed9879960963d3dd37bdcb82409} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix4\+X4\+::make\+Scale (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создает матрицу масштабирования 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & Масштаб по X \\
+\hline
+{\em y} & Масштаб по Y \\
+\hline
+{\em z} & Масштаб по Z \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Матрица масштабирования 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a0df69dd9ba7f1e59788e79ce2dc0c05a}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!makeTranslation@{makeTranslation}}
+\index{makeTranslation@{makeTranslation}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{makeTranslation()}{makeTranslation()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a0df69dd9ba7f1e59788e79ce2dc0c05a} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix4\+X4\+::make\+Translation (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создает матрицу переноса 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & Смещение по X \\
+\hline
+{\em y} & Смещение по Y \\
+\hline
+{\em z} & Смещение по Z \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Матрица переноса 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a141ac2d3e2abffea8afb383aeec57965}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!Matrix\_PointAt@{Matrix\_PointAt}}
+\index{Matrix\_PointAt@{Matrix\_PointAt}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{Matrix\_PointAt()}{Matrix\_PointAt()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a141ac2d3e2abffea8afb383aeec57965} 
+\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} prism\+::math\+::\+Matrix4\+X4\+::\+Matrix\+\_\+\+Point\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{pos}{, }\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{target}{, }\item[{\mbox{\hyperlink{structprism_1_1math_1_1_vector3d}{Vector3d}} \&}]{up}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создает матрицу направления "{}смотрит на"{}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em pos} & Позиция наблюдателя \\
+\hline
+{\em target} & Целевая точка \\
+\hline
+{\em up} & Вектор "{}вверх"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Матрица направления 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a48414a1a4973f0a079ad50def4a184b7}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!operator==@{operator==}}
+\index{operator==@{operator==}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a48414a1a4973f0a079ad50def4a184b7} 
+bool prism\+::math\+::\+Matrix4\+X4\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1math_1_1_matrix4_x4}{Matrix4\+X4}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Сравнение матриц на равенство 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em other} & Матрица для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если матрицы равны 
+\end{DoxyReturn}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a92ac545d71153f230ea7c9cd083e6737}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a92ac545d71153f230ea7c9cd083e6737} 
+float \texorpdfstring{$\ast$}{*} prism\+::math\+::\+Matrix4\+X4\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Доступ к строке матрицы по индексу 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em index} & Индекс строки (0-\/3) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Указатель на строку матрицы 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::out\+\_\+of\+\_\+range} & При неверном индексе \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a03e22f599fb64c73f5a2bdc8a6b2ed0b}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!print@{print}}
+\index{print@{print}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a03e22f599fb64c73f5a2bdc8a6b2ed0b} 
+void prism\+::math\+::\+Matrix4\+X4\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Выводит матрицу в консоль 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{structprism_1_1math_1_1_matrix4_x4_a03f6ae69a0fc6e279a81bbdb1de1a4f1}\index{prism::math::Matrix4X4@{prism::math::Matrix4X4}!m@{m}}
+\index{m@{m}!prism::math::Matrix4X4@{prism::math::Matrix4X4}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily \label{structprism_1_1math_1_1_matrix4_x4_a03f6ae69a0fc6e279a81bbdb1de1a4f1} 
+float prism\+::math\+::\+Matrix4\+X4\+::m\mbox{[}4\mbox{]}\mbox{[}4\mbox{]} = \{ 0 \}}
+
+
+
+Элементы матрицы (строка, столбец) 
+
+
+
+Объявления и описания членов структур находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/source/repos/\+Prism\+Engine/src/\mbox{\hyperlink{matrix_8h}{matrix.\+h}}\item 
+C\+:/\+Users/\+Admin/source/repos/\+Prism\+Engine/src/\mbox{\hyperlink{matrix_8cpp}{matrix.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespaceprism" kind="namespace" language="C++">
+    <compoundname>prism</compoundname>
+    <innernamespace refid="namespaceprism_1_1math">prism::math</innernamespace>
+    <innernamespace refid="namespaceprism_1_1view">prism::view</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/PrismEngine.h" line="4" column="10" bodyfile="src/PrismEngine.cpp" bodystart="4" bodyend="7" declfile="src/PrismEngine.h" declline="4" declcolumn="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/fmath.cpp" line="3" column="1"/>
+  </compounddef>
+</doxygen>

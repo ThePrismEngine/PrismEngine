@@ -1,0 +1,1400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrismEngine: Класс prism::view::Window</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PrismEngine
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classprism_1_1view_1_1_window.html','','classprism_1_1view_1_1_window-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс prism::view::Window</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_window_8h_source.html">Window.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab37a7db3c8ac082958cbf1cc76c53232" id="r_ab37a7db3c8ac082958cbf1cc76c53232"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab37a7db3c8ac082958cbf1cc76c53232">Window</a> (const char *title, int width, int height)</td></tr>
+<tr class="memitem:ae2cc8b5460d772a2549cbcde23c31d6f" id="r_ae2cc8b5460d772a2549cbcde23c31d6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2cc8b5460d772a2549cbcde23c31d6f">Window</a> (const char *title, int width, int height, Uint32 sdlFlags)</td></tr>
+<tr class="memitem:abb2622120d5a2c4008453fd5f0e213c2" id="r_abb2622120d5a2c4008453fd5f0e213c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb2622120d5a2c4008453fd5f0e213c2">Window</a> (const char *title, int x, int y, int width, int height)</td></tr>
+<tr class="memitem:a115a76f66c617395fcfe4228188bd717" id="r_a115a76f66c617395fcfe4228188bd717"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a115a76f66c617395fcfe4228188bd717">Window</a> (const char *title, int width, int height, const std::string &amp;iconPath)</td></tr>
+<tr class="memitem:a8431a79eba3e50614cc457f7ce0605f0" id="r_a8431a79eba3e50614cc457f7ce0605f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8431a79eba3e50614cc457f7ce0605f0">Window</a> (const char *title, int width, int height, int minWidth, int minHeight, int maxWidth, int maxHeight)</td></tr>
+<tr class="memitem:aa380520df5902e4c2f52dbd7486d65b8" id="r_aa380520df5902e4c2f52dbd7486d65b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa380520df5902e4c2f52dbd7486d65b8">~Window</a> ()</td></tr>
+<tr class="memitem:a5cf935efd740352ab3ff7ebee06e7254" id="r_a5cf935efd740352ab3ff7ebee06e7254"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cf935efd740352ab3ff7ebee06e7254">getTitle</a> () const</td></tr>
+<tr class="memitem:adfe7fd34bbb853a8ac64ca0b5a68cadd" id="r_adfe7fd34bbb853a8ac64ca0b5a68cadd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfe7fd34bbb853a8ac64ca0b5a68cadd">setTitle</a> (const char *title)</td></tr>
+<tr class="memitem:ab9f80b6a4d67e91bb8454a6e45b00c6a" id="r_ab9f80b6a4d67e91bb8454a6e45b00c6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9f80b6a4d67e91bb8454a6e45b00c6a">getWidth</a> ()</td></tr>
+<tr class="memitem:a45ff9b145b3fdd721de6ae4a7541f0c2" id="r_a45ff9b145b3fdd721de6ae4a7541f0c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45ff9b145b3fdd721de6ae4a7541f0c2">getHeight</a> ()</td></tr>
+<tr class="memitem:a80f7ecc7488b3a75da4ac2b45895ae2e" id="r_a80f7ecc7488b3a75da4ac2b45895ae2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f7ecc7488b3a75da4ac2b45895ae2e">getSize</a> (int *width, int *height)</td></tr>
+<tr class="memitem:a29d789115d706e4f5bd98448cdae1108" id="r_a29d789115d706e4f5bd98448cdae1108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29d789115d706e4f5bd98448cdae1108">setWidth</a> (int width)</td></tr>
+<tr class="memitem:ac2d1238a607bf29ac672870ebf9f73cb" id="r_ac2d1238a607bf29ac672870ebf9f73cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2d1238a607bf29ac672870ebf9f73cb">setHeight</a> (int height)</td></tr>
+<tr class="memitem:a9eddda4bbcacea440786c2ace67f2a16" id="r_a9eddda4bbcacea440786c2ace67f2a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9eddda4bbcacea440786c2ace67f2a16">setSize</a> (int width, int height)</td></tr>
+<tr class="memitem:a000dbd1aaf3338843829891b00de6cef" id="r_a000dbd1aaf3338843829891b00de6cef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a000dbd1aaf3338843829891b00de6cef">setFullscreen</a> (bool enabled)</td></tr>
+<tr class="memitem:aef39954d735b1762f1d4179a9f08d6e4" id="r_aef39954d735b1762f1d4179a9f08d6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef39954d735b1762f1d4179a9f08d6e4">setBorderless</a> (bool enabled)</td></tr>
+<tr class="memitem:a064fdb06b7036f1dacaa110e6e0007db" id="r_a064fdb06b7036f1dacaa110e6e0007db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a064fdb06b7036f1dacaa110e6e0007db">setResizable</a> (bool enabled)</td></tr>
+<tr class="memitem:a0e401cb1e3912c8e2394698dfdda2aeb" id="r_a0e401cb1e3912c8e2394698dfdda2aeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e401cb1e3912c8e2394698dfdda2aeb">setGrabMouse</a> (bool enabled)</td></tr>
+<tr class="memitem:a4d340a4f8ec13659938a2e53d7c479d0" id="r_a4d340a4f8ec13659938a2e53d7c479d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d340a4f8ec13659938a2e53d7c479d0">isFullscreen</a> () const</td></tr>
+<tr class="memitem:a0543c7f97e4d2ef79be90a0daab7976c" id="r_a0543c7f97e4d2ef79be90a0daab7976c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0543c7f97e4d2ef79be90a0daab7976c">isBorderless</a> () const</td></tr>
+<tr class="memitem:a0fcefa88943a843cc1cb79c8f281c58f" id="r_a0fcefa88943a843cc1cb79c8f281c58f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fcefa88943a843cc1cb79c8f281c58f">isResizable</a> () const</td></tr>
+<tr class="memitem:a916d1534c5118991329ac972b841c9b5" id="r_a916d1534c5118991329ac972b841c9b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a916d1534c5118991329ac972b841c9b5">isGrabMouse</a> () const</td></tr>
+<tr class="memitem:af46aa597947fb1e042ae20f744b3a785" id="r_af46aa597947fb1e042ae20f744b3a785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af46aa597947fb1e042ae20f744b3a785">setPosition</a> (int x, int y)</td></tr>
+<tr class="memitem:a2762ec845f95405e8798107b8de8835b" id="r_a2762ec845f95405e8798107b8de8835b"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2762ec845f95405e8798107b8de8835b">getPosition</a> () const</td></tr>
+<tr class="memitem:a6b100e90fbe4904d23bcac79921fd45b" id="r_a6b100e90fbe4904d23bcac79921fd45b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b100e90fbe4904d23bcac79921fd45b">centerWindow</a> ()</td></tr>
+<tr class="memitem:a63072d9ec3267b92f28bc9559aa68907" id="r_a63072d9ec3267b92f28bc9559aa68907"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63072d9ec3267b92f28bc9559aa68907">setMinSize</a> (int minWidth, int minHeight)</td></tr>
+<tr class="memitem:a3682515a8b78f38e49bc00ef351d1e91" id="r_a3682515a8b78f38e49bc00ef351d1e91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3682515a8b78f38e49bc00ef351d1e91">setMaxSize</a> (int maxWidth, int maxHeight)</td></tr>
+<tr class="memitem:a52a4884a96c2dbb938c23b4bafef341d" id="r_a52a4884a96c2dbb938c23b4bafef341d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52a4884a96c2dbb938c23b4bafef341d">shouldClose</a> () const</td></tr>
+<tr class="memitem:a95715b5d073f7a38592f3a344be48743" id="r_a95715b5d073f7a38592f3a344be48743"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95715b5d073f7a38592f3a344be48743">setCloseRequested</a> (bool value)</td></tr>
+<tr class="memitem:ab4f40d8f9f44ff9e6f5310ba7cb3500d" id="r_ab4f40d8f9f44ff9e6f5310ba7cb3500d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4f40d8f9f44ff9e6f5310ba7cb3500d">handleEvents</a> ()</td></tr>
+<tr class="memitem:ad904abdf14e9eb6e3f853763c7f06faf" id="r_ad904abdf14e9eb6e3f853763c7f06faf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad904abdf14e9eb6e3f853763c7f06faf">clear</a> ()</td></tr>
+<tr class="memitem:aaec31f6c1a24777d4ce31811ef3d2050" id="r_aaec31f6c1a24777d4ce31811ef3d2050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaec31f6c1a24777d4ce31811ef3d2050">update</a> ()</td></tr>
+<tr class="memitem:a7e7ab6881f1847d75494d4e751c5826e" id="r_a7e7ab6881f1847d75494d4e751c5826e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e7ab6881f1847d75494d4e751c5826e">destroy</a> ()</td></tr>
+<tr class="memitem:a5189f4eb8214086bed7037cdae2ffd89" id="r_a5189f4eb8214086bed7037cdae2ffd89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5189f4eb8214086bed7037cdae2ffd89">vulkanInut</a> ()</td></tr>
+<tr class="memitem:a06e21fda269f7b8242de7ec8c5310e8d" id="r_a06e21fda269f7b8242de7ec8c5310e8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06e21fda269f7b8242de7ec8c5310e8d">createInstance</a> ()</td></tr>
+<tr class="memitem:a7bb96f10739921534995f7e0e2a0360f" id="r_a7bb96f10739921534995f7e0e2a0360f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bb96f10739921534995f7e0e2a0360f">pickPhysicalDevice</a> ()</td></tr>
+<tr class="memitem:a76dc16248ebd56b8787302654689aa08" id="r_a76dc16248ebd56b8787302654689aa08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76dc16248ebd56b8787302654689aa08">isDeviceSuitable</a> (VkPhysicalDevice <a class="el" href="#a566b289231e8ab2506bccdd53a9b84f3">device</a>)</td></tr>
+<tr class="memitem:af18daa601490652e0bc0434b13cabb4f" id="r_af18daa601490652e0bc0434b13cabb4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af18daa601490652e0bc0434b13cabb4f">checkDeviceExtensionSupport</a> (VkPhysicalDevice <a class="el" href="#a566b289231e8ab2506bccdd53a9b84f3">device</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a5e4bd28cd96622e8b3b13e57778ebb8b" id="r_a5e4bd28cd96622e8b3b13e57778ebb8b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classprism_1_1view_1_1_window.html">Window</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e4bd28cd96622e8b3b13e57778ebb8b">CreateCentered</a> (const char *title, int width, int height)</td></tr>
+<tr class="memitem:a0ac1c3fd06ab0d3b1582ac9c448a161c" id="r_a0ac1c3fd06ab0d3b1582ac9c448a161c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ac1c3fd06ab0d3b1582ac9c448a161c">setSDLInitialized</a> (bool initialized)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a64aa028f8e7bfbc225dd09a64a36cd93" id="r_a64aa028f8e7bfbc225dd09a64a36cd93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64aa028f8e7bfbc225dd09a64a36cd93">Window</a> (const char *title, int x, int y, int width, int height, Uint32 sdlFlags)</td></tr>
+<tr class="memitem:a71ddbebd98846cd305ba67fd8f3f3ef5" id="r_a71ddbebd98846cd305ba67fd8f3f3ef5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71ddbebd98846cd305ba67fd8f3f3ef5">rateDeviceSuitability</a> (VkPhysicalDevice <a class="el" href="#a566b289231e8ab2506bccdd53a9b84f3">device</a>)</td></tr>
+<tr class="memitem:addfe6172e6af7dabf1cb8bdd5f60655e" id="r_addfe6172e6af7dabf1cb8bdd5f60655e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprism_1_1view_1_1_queue_family_indices.html">QueueFamilyIndices</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addfe6172e6af7dabf1cb8bdd5f60655e">findQueueFamilies</a> (VkPhysicalDevice <a class="el" href="#a566b289231e8ab2506bccdd53a9b84f3">device</a>)</td></tr>
+<tr class="memitem:a85ae040c045e6e1d57e79ca5fd2b42c3" id="r_a85ae040c045e6e1d57e79ca5fd2b42c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85ae040c045e6e1d57e79ca5fd2b42c3">createLogicalDevice</a> ()</td></tr>
+<tr class="memitem:a244e6e0144fe90f9604452a1cb515cea" id="r_a244e6e0144fe90f9604452a1cb515cea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a244e6e0144fe90f9604452a1cb515cea">createSurface</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a24fd09bbf7871e2448af8db4471879fe" id="r_a24fd09bbf7871e2448af8db4471879fe"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24fd09bbf7871e2448af8db4471879fe">enableValidationLayers</a> = true</td></tr>
+<tr class="memitem:a376baefea36091e57fa85ea6d4083dba" id="r_a376baefea36091e57fa85ea6d4083dba"><td class="memItemLeft" align="right" valign="top">SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a376baefea36091e57fa85ea6d4083dba">m_sdlWindow</a></td></tr>
+<tr class="memitem:a4565b56a9f438b6c87c9f262e8848fa0" id="r_a4565b56a9f438b6c87c9f262e8848fa0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4565b56a9f438b6c87c9f262e8848fa0">m_isDestroyed</a></td></tr>
+<tr class="memitem:a73b38623bf14708bf5ac9602d1ce684b" id="r_a73b38623bf14708bf5ac9602d1ce684b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73b38623bf14708bf5ac9602d1ce684b">m_windowMinimized</a> = false</td></tr>
+<tr class="memitem:a00ee05d32648685bb74fba379937ba0a" id="r_a00ee05d32648685bb74fba379937ba0a"><td class="memItemLeft" align="right" valign="top">VkInstance&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00ee05d32648685bb74fba379937ba0a">instance</a></td></tr>
+<tr class="memitem:a70e49b67dea0ee45f4d52e4ebb03db7e" id="r_a70e49b67dea0ee45f4d52e4ebb03db7e"><td class="memItemLeft" align="right" valign="top">VkPhysicalDevice&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70e49b67dea0ee45f4d52e4ebb03db7e">physicalDevice</a></td></tr>
+<tr class="memitem:a566b289231e8ab2506bccdd53a9b84f3" id="r_a566b289231e8ab2506bccdd53a9b84f3"><td class="memItemLeft" align="right" valign="top">VkDevice&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a566b289231e8ab2506bccdd53a9b84f3">device</a></td></tr>
+<tr class="memitem:a9b0044913b1df68617169565b85e5cae" id="r_a9b0044913b1df68617169565b85e5cae"><td class="memItemLeft" align="right" valign="top">VkQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b0044913b1df68617169565b85e5cae">graphicsQueue</a></td></tr>
+<tr class="memitem:ada7a56e2c924860af9187e3994c88e31" id="r_ada7a56e2c924860af9187e3994c88e31"><td class="memItemLeft" align="right" valign="top">VkSurfaceKHR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada7a56e2c924860af9187e3994c88e31">surface</a></td></tr>
+<tr class="memitem:af508535cfe4d6904d01396d15ee0a91b" id="r_af508535cfe4d6904d01396d15ee0a91b"><td class="memItemLeft" align="right" valign="top">VkQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af508535cfe4d6904d01396d15ee0a91b">presentQueue</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:ab54c30367a0c4d0630df18dab81e0c21" id="r_ab54c30367a0c4d0630df18dab81e0c21"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab54c30367a0c4d0630df18dab81e0c21">s_sdlInitialized</a> = false</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="ab37a7db3c8ac082958cbf1cc76c53232" name="ab37a7db3c8ac082958cbf1cc76c53232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab37a7db3c8ac082958cbf1cc76c53232">&#9670;&#160;</a></span>Window() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::view::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2cc8b5460d772a2549cbcde23c31d6f" name="ae2cc8b5460d772a2549cbcde23c31d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2cc8b5460d772a2549cbcde23c31d6f">&#9670;&#160;</a></span>Window() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::view::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Uint32</td>          <td class="paramname"><span class="paramname"><em>sdlFlags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb2622120d5a2c4008453fd5f0e213c2" name="abb2622120d5a2c4008453fd5f0e213c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2622120d5a2c4008453fd5f0e213c2">&#9670;&#160;</a></span>Window() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::view::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a115a76f66c617395fcfe4228188bd717" name="a115a76f66c617395fcfe4228188bd717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a115a76f66c617395fcfe4228188bd717">&#9670;&#160;</a></span>Window() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::view::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>iconPath</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8431a79eba3e50614cc457f7ce0605f0" name="a8431a79eba3e50614cc457f7ce0605f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8431a79eba3e50614cc457f7ce0605f0">&#9670;&#160;</a></span>Window() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::view::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minHeight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxHeight</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa380520df5902e4c2f52dbd7486d65b8" name="aa380520df5902e4c2f52dbd7486d65b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa380520df5902e4c2f52dbd7486d65b8">&#9670;&#160;</a></span>~Window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::view::Window::~Window </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64aa028f8e7bfbc225dd09a64a36cd93" name="a64aa028f8e7bfbc225dd09a64a36cd93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64aa028f8e7bfbc225dd09a64a36cd93">&#9670;&#160;</a></span>Window() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">prism::view::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Uint32</td>          <td class="paramname"><span class="paramname"><em>sdlFlags</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a6b100e90fbe4904d23bcac79921fd45b" name="a6b100e90fbe4904d23bcac79921fd45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b100e90fbe4904d23bcac79921fd45b">&#9670;&#160;</a></span>centerWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::centerWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af18daa601490652e0bc0434b13cabb4f" name="af18daa601490652e0bc0434b13cabb4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af18daa601490652e0bc0434b13cabb4f">&#9670;&#160;</a></span>checkDeviceExtensionSupport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::checkDeviceExtensionSupport </td>
+          <td>(</td>
+          <td class="paramtype">VkPhysicalDevice</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad904abdf14e9eb6e3f853763c7f06faf" name="ad904abdf14e9eb6e3f853763c7f06faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad904abdf14e9eb6e3f853763c7f06faf">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e4bd28cd96622e8b3b13e57778ebb8b" name="a5e4bd28cd96622e8b3b13e57778ebb8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4bd28cd96622e8b3b13e57778ebb8b">&#9670;&#160;</a></span>CreateCentered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classprism_1_1view_1_1_window.html">Window</a> prism::view::Window::CreateCentered </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06e21fda269f7b8242de7ec8c5310e8d" name="a06e21fda269f7b8242de7ec8c5310e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e21fda269f7b8242de7ec8c5310e8d">&#9670;&#160;</a></span>createInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::createInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85ae040c045e6e1d57e79ca5fd2b42c3" name="a85ae040c045e6e1d57e79ca5fd2b42c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ae040c045e6e1d57e79ca5fd2b42c3">&#9670;&#160;</a></span>createLogicalDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::createLogicalDevice </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a244e6e0144fe90f9604452a1cb515cea" name="a244e6e0144fe90f9604452a1cb515cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244e6e0144fe90f9604452a1cb515cea">&#9670;&#160;</a></span>createSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::createSurface </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e7ab6881f1847d75494d4e751c5826e" name="a7e7ab6881f1847d75494d4e751c5826e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7ab6881f1847d75494d4e751c5826e">&#9670;&#160;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::destroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addfe6172e6af7dabf1cb8bdd5f60655e" name="addfe6172e6af7dabf1cb8bdd5f60655e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addfe6172e6af7dabf1cb8bdd5f60655e">&#9670;&#160;</a></span>findQueueFamilies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprism_1_1view_1_1_queue_family_indices.html">QueueFamilyIndices</a> prism::view::Window::findQueueFamilies </td>
+          <td>(</td>
+          <td class="paramtype">VkPhysicalDevice</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45ff9b145b3fdd721de6ae4a7541f0c2" name="a45ff9b145b3fdd721de6ae4a7541f0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ff9b145b3fdd721de6ae4a7541f0c2">&#9670;&#160;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prism::view::Window::getHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2762ec845f95405e8798107b8de8835b" name="a2762ec845f95405e8798107b8de8835b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2762ec845f95405e8798107b8de8835b">&#9670;&#160;</a></span>getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; int, int &gt; prism::view::Window::getPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80f7ecc7488b3a75da4ac2b45895ae2e" name="a80f7ecc7488b3a75da4ac2b45895ae2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f7ecc7488b3a75da4ac2b45895ae2e">&#9670;&#160;</a></span>getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::getSize </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cf935efd740352ab3ff7ebee06e7254" name="a5cf935efd740352ab3ff7ebee06e7254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf935efd740352ab3ff7ebee06e7254">&#9670;&#160;</a></span>getTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * prism::view::Window::getTitle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9f80b6a4d67e91bb8454a6e45b00c6a" name="ab9f80b6a4d67e91bb8454a6e45b00c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f80b6a4d67e91bb8454a6e45b00c6a">&#9670;&#160;</a></span>getWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prism::view::Window::getWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4f40d8f9f44ff9e6f5310ba7cb3500d" name="ab4f40d8f9f44ff9e6f5310ba7cb3500d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f40d8f9f44ff9e6f5310ba7cb3500d">&#9670;&#160;</a></span>handleEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::handleEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0543c7f97e4d2ef79be90a0daab7976c" name="a0543c7f97e4d2ef79be90a0daab7976c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0543c7f97e4d2ef79be90a0daab7976c">&#9670;&#160;</a></span>isBorderless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::isBorderless </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76dc16248ebd56b8787302654689aa08" name="a76dc16248ebd56b8787302654689aa08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76dc16248ebd56b8787302654689aa08">&#9670;&#160;</a></span>isDeviceSuitable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::isDeviceSuitable </td>
+          <td>(</td>
+          <td class="paramtype">VkPhysicalDevice</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d340a4f8ec13659938a2e53d7c479d0" name="a4d340a4f8ec13659938a2e53d7c479d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d340a4f8ec13659938a2e53d7c479d0">&#9670;&#160;</a></span>isFullscreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::isFullscreen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a916d1534c5118991329ac972b841c9b5" name="a916d1534c5118991329ac972b841c9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916d1534c5118991329ac972b841c9b5">&#9670;&#160;</a></span>isGrabMouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::isGrabMouse </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fcefa88943a843cc1cb79c8f281c58f" name="a0fcefa88943a843cc1cb79c8f281c58f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fcefa88943a843cc1cb79c8f281c58f">&#9670;&#160;</a></span>isResizable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::isResizable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bb96f10739921534995f7e0e2a0360f" name="a7bb96f10739921534995f7e0e2a0360f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb96f10739921534995f7e0e2a0360f">&#9670;&#160;</a></span>pickPhysicalDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::pickPhysicalDevice </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71ddbebd98846cd305ba67fd8f3f3ef5" name="a71ddbebd98846cd305ba67fd8f3f3ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ddbebd98846cd305ba67fd8f3f3ef5">&#9670;&#160;</a></span>rateDeviceSuitability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prism::view::Window::rateDeviceSuitability </td>
+          <td>(</td>
+          <td class="paramtype">VkPhysicalDevice</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef39954d735b1762f1d4179a9f08d6e4" name="aef39954d735b1762f1d4179a9f08d6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef39954d735b1762f1d4179a9f08d6e4">&#9670;&#160;</a></span>setBorderless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setBorderless </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95715b5d073f7a38592f3a344be48743" name="a95715b5d073f7a38592f3a344be48743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95715b5d073f7a38592f3a344be48743">&#9670;&#160;</a></span>setCloseRequested()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setCloseRequested </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a000dbd1aaf3338843829891b00de6cef" name="a000dbd1aaf3338843829891b00de6cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000dbd1aaf3338843829891b00de6cef">&#9670;&#160;</a></span>setFullscreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setFullscreen </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e401cb1e3912c8e2394698dfdda2aeb" name="a0e401cb1e3912c8e2394698dfdda2aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e401cb1e3912c8e2394698dfdda2aeb">&#9670;&#160;</a></span>setGrabMouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setGrabMouse </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2d1238a607bf29ac672870ebf9f73cb" name="ac2d1238a607bf29ac672870ebf9f73cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d1238a607bf29ac672870ebf9f73cb">&#9670;&#160;</a></span>setHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setHeight </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3682515a8b78f38e49bc00ef351d1e91" name="a3682515a8b78f38e49bc00ef351d1e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3682515a8b78f38e49bc00ef351d1e91">&#9670;&#160;</a></span>setMaxSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setMaxSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxHeight</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63072d9ec3267b92f28bc9559aa68907" name="a63072d9ec3267b92f28bc9559aa68907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63072d9ec3267b92f28bc9559aa68907">&#9670;&#160;</a></span>setMinSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setMinSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minHeight</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af46aa597947fb1e042ae20f744b3a785" name="af46aa597947fb1e042ae20f744b3a785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46aa597947fb1e042ae20f744b3a785">&#9670;&#160;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a064fdb06b7036f1dacaa110e6e0007db" name="a064fdb06b7036f1dacaa110e6e0007db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064fdb06b7036f1dacaa110e6e0007db">&#9670;&#160;</a></span>setResizable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setResizable </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ac1c3fd06ab0d3b1582ac9c448a161c" name="a0ac1c3fd06ab0d3b1582ac9c448a161c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac1c3fd06ab0d3b1582ac9c448a161c">&#9670;&#160;</a></span>setSDLInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setSDLInitialized </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>initialized</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9eddda4bbcacea440786c2ace67f2a16" name="a9eddda4bbcacea440786c2ace67f2a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eddda4bbcacea440786c2ace67f2a16">&#9670;&#160;</a></span>setSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfe7fd34bbb853a8ac64ca0b5a68cadd" name="adfe7fd34bbb853a8ac64ca0b5a68cadd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe7fd34bbb853a8ac64ca0b5a68cadd">&#9670;&#160;</a></span>setTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setTitle </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29d789115d706e4f5bd98448cdae1108" name="a29d789115d706e4f5bd98448cdae1108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d789115d706e4f5bd98448cdae1108">&#9670;&#160;</a></span>setWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::setWidth </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52a4884a96c2dbb938c23b4bafef341d" name="a52a4884a96c2dbb938c23b4bafef341d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a4884a96c2dbb938c23b4bafef341d">&#9670;&#160;</a></span>shouldClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::shouldClose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaec31f6c1a24777d4ce31811ef3d2050" name="aaec31f6c1a24777d4ce31811ef3d2050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec31f6c1a24777d4ce31811ef3d2050">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5189f4eb8214086bed7037cdae2ffd89" name="a5189f4eb8214086bed7037cdae2ffd89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5189f4eb8214086bed7037cdae2ffd89">&#9670;&#160;</a></span>vulkanInut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prism::view::Window::vulkanInut </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a566b289231e8ab2506bccdd53a9b84f3" name="a566b289231e8ab2506bccdd53a9b84f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566b289231e8ab2506bccdd53a9b84f3">&#9670;&#160;</a></span>device</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkDevice prism::view::Window::device</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24fd09bbf7871e2448af8db4471879fe" name="a24fd09bbf7871e2448af8db4471879fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24fd09bbf7871e2448af8db4471879fe">&#9670;&#160;</a></span>enableValidationLayers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool prism::view::Window::enableValidationLayers = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b0044913b1df68617169565b85e5cae" name="a9b0044913b1df68617169565b85e5cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0044913b1df68617169565b85e5cae">&#9670;&#160;</a></span>graphicsQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkQueue prism::view::Window::graphicsQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00ee05d32648685bb74fba379937ba0a" name="a00ee05d32648685bb74fba379937ba0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ee05d32648685bb74fba379937ba0a">&#9670;&#160;</a></span>instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkInstance prism::view::Window::instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4565b56a9f438b6c87c9f262e8848fa0" name="a4565b56a9f438b6c87c9f262e8848fa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4565b56a9f438b6c87c9f262e8848fa0">&#9670;&#160;</a></span>m_isDestroyed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::m_isDestroyed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a376baefea36091e57fa85ea6d4083dba" name="a376baefea36091e57fa85ea6d4083dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a376baefea36091e57fa85ea6d4083dba">&#9670;&#160;</a></span>m_sdlWindow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Window* prism::view::Window::m_sdlWindow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73b38623bf14708bf5ac9602d1ce684b" name="a73b38623bf14708bf5ac9602d1ce684b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b38623bf14708bf5ac9602d1ce684b">&#9670;&#160;</a></span>m_windowMinimized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::m_windowMinimized = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70e49b67dea0ee45f4d52e4ebb03db7e" name="a70e49b67dea0ee45f4d52e4ebb03db7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e49b67dea0ee45f4d52e4ebb03db7e">&#9670;&#160;</a></span>physicalDevice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkPhysicalDevice prism::view::Window::physicalDevice</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af508535cfe4d6904d01396d15ee0a91b" name="af508535cfe4d6904d01396d15ee0a91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af508535cfe4d6904d01396d15ee0a91b">&#9670;&#160;</a></span>presentQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkQueue prism::view::Window::presentQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab54c30367a0c4d0630df18dab81e0c21" name="ab54c30367a0c4d0630df18dab81e0c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54c30367a0c4d0630df18dab81e0c21">&#9670;&#160;</a></span>s_sdlInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prism::view::Window::s_sdlInitialized = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada7a56e2c924860af9187e3994c88e31" name="ada7a56e2c924860af9187e3994c88e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7a56e2c924860af9187e3994c88e31">&#9670;&#160;</a></span>surface</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkSurfaceKHR prism::view::Window::surface</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/Users/Admin/source/repos/PrismEngine/src/<a class="el" href="_window_8h_source.html">Window.h</a></li>
+<li>C:/Users/Admin/source/repos/PrismEngine/src/<a class="el" href="_window_8cpp.html">Window.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceprism.html">prism</a></li><li class="navelem"><a href="namespaceprism_1_1view.html">view</a></li><li class="navelem"><a href="classprism_1_1view_1_1_window.html">Window</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

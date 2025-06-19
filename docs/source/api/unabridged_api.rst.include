@@ -1,0 +1,99 @@
+
+Full API
+--------
+
+Namespaces
+**********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_prism.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_prism__math.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_prism__view.rst
+
+Classes and Structs
+*******************
+
+
+.. toctree::
+   :maxdepth: 5
+
+   structprism_1_1math_1_1_matrix4_x4.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structprism_1_1math_1_1_vector3d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structprism_1_1view_1_1_queue_family_indices.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classprism_1_1view_1_1_window.rst
+
+Functions
+*********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d.rst
+
+Variables
+*********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_namespaceprism_1_1view_1a5e08683d7e148199c9e82e1382ca3f97.rst

@@ -179,11 +179,11 @@ namespace prism {
         }
 
         void Window::clear() {
-            // Реализация очистки окна будет зависеть от используемого API рендеринга
+            // Р РµР°Р»РёР·Р°С†РёСЏ РѕС‡РёСЃС‚РєРё РѕРєРЅР° Р±СѓРґРµС‚ Р·Р°РІРёСЃРµС‚СЊ РѕС‚ РёСЃРїРѕР»СЊР·СѓРµРјРѕРіРѕ API СЂРµРЅРґРµСЂРёРЅРіР°
         }
 
         void Window::update() {
-            // Реализация обновления окна будет зависеть от используемого API рендеринга
+            // Р РµР°Р»РёР·Р°С†РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ РѕРєРЅР° Р±СѓРґРµС‚ Р·Р°РІРёСЃРµС‚СЊ РѕС‚ РёСЃРїРѕР»СЊР·СѓРµРјРѕРіРѕ API СЂРµРЅРґРµСЂРёРЅРіР°
         }
 
         void Window::destroy() {
@@ -252,7 +252,7 @@ namespace prism {
             std::vector<VkPhysicalDevice> devices(deviceCount);
             vkEnumeratePhysicalDevices(instance, &deviceCount, devices.data());
 
-            // Вывод информации о всех доступных устройствах
+            // Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РІСЃРµС… РґРѕСЃС‚СѓРїРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІР°С…
             std::cout << "Available Vulkan devices:\n";
             for (const auto& device : devices) {
                 VkPhysicalDeviceProperties deviceProps;
@@ -264,14 +264,14 @@ namespace prism {
                     << VK_VERSION_PATCH(deviceProps.apiVersion) << ")\n";
             }
 
-            // Выбор устройства с максимальным рейтингом
+            // Р’С‹Р±РѕСЂ СѓСЃС‚СЂРѕР№СЃС‚РІР° СЃ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј СЂРµР№С‚РёРЅРіРѕРј
             std::multimap<int, VkPhysicalDevice> candidates;
             for (const auto& device : devices) {
                 int score = rateDeviceSuitability(device);
                 candidates.insert(std::make_pair(score, device));
             }
 
-            // Проверка, что лучшее устройство подходит
+            // РџСЂРѕРІРµСЂРєР°, С‡С‚Рѕ Р»СѓС‡С€РµРµ СѓСЃС‚СЂРѕР№СЃС‚РІРѕ РїРѕРґС…РѕРґРёС‚
             if (candidates.rbegin()->first > 0) {
                 physicalDevice = candidates.rbegin()->second;
             }
@@ -279,7 +279,7 @@ namespace prism {
                 throw std::runtime_error("failed to find a suitable GPU!");
             }
 
-            // Вывод информации о выбранном устройстве
+            // Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РІС‹Р±СЂР°РЅРЅРѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ
             VkPhysicalDeviceProperties deviceProps;
             vkGetPhysicalDeviceProperties(physicalDevice, &deviceProps);
             std::cout << "\nSelected Vulkan device:\n";
@@ -310,7 +310,7 @@ namespace prism {
 
             int score = 0;
 
-            // Вывод дополнительной информации при оценке
+            // Р’С‹РІРѕРґ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РїСЂРё РѕС†РµРЅРєРµ
             std::cout << "\nEvaluating device: " << deviceProps.deviceName << "\n";
             std::cout << "  - Device type: ";
             switch (deviceProps.deviceType) {
@@ -322,25 +322,25 @@ namespace prism {
             }
             std::cout << "\n";
 
-            // Дискретные GPU имеют преимущество в производительности
+            // Р”РёСЃРєСЂРµС‚РЅС‹Рµ GPU РёРјРµСЋС‚ РїСЂРµРёРјСѓС‰РµСЃС‚РІРѕ РІ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё
             if (deviceProps.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU) {
                 score += 1000;
                 std::cout << "  + 1000 points for discrete GPU\n";
             }
 
-            // Максимальный размер текстур влияет на качество графики
+            // РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ С‚РµРєСЃС‚СѓСЂ РІР»РёСЏРµС‚ РЅР° РєР°С‡РµСЃС‚РІРѕ РіСЂР°С„РёРєРё
             score += deviceProps.limits.maxImageDimension2D;
             std::cout << "  + " << deviceProps.limits.maxImageDimension2D
                 << " points for max image dimension ("
                 << deviceProps.limits.maxImageDimension2D << ")\n";
 
-            // Приложение не может работать без geometry shader
+            // РџСЂРёР»РѕР¶РµРЅРёРµ РЅРµ РјРѕР¶РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ Р±РµР· geometry shader
             if (!deviceFeatures.geometryShader) {
                 std::cout << "  - Device rejected (no geometry shader support)\n";
                 return 0;
             }
 
-            // Проверка поддержки необходимых очередей
+            // РџСЂРѕРІРµСЂРєР° РїРѕРґРґРµСЂР¶РєРё РЅРµРѕР±С…РѕРґРёРјС‹С… РѕС‡РµСЂРµРґРµР№
             if (!isDeviceSuitable(device)) {
                 std::cout << "  - Device rejected (missing required queue families)\n";
                 return 0;

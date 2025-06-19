@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct Vector3d &mdash; PrismEngine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct QueueFamilyIndices" href="structprism_1_1view_1_1_queue_family_indices.html" />
+    <link rel="prev" title="Struct Matrix4X4" href="structprism_1_1math_1_1_matrix4_x4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PrismEngine
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Основное:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О проекте PrismEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Быстрый старт</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1view_1_1_window.html">Class Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_C__Users_Admin_source_repos_PrismEngine_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp.html">File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.html">File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_WindowVkManager.cpp.html">File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_WindowVkManager.h.html">File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96.html">Function prism::math::Matrix_MultiplyMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d.html">Function prism::math::Vector_IntersectPlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6.html">Function prism::math::Vector_CrossProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f.html">Function prism::math::Vector_DotProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446.html">Function prism::math::degToRad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7.html">Function prism::math::Matrix_QuickInverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c.html">Function prism::init</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html">PrismEngine API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism.html">Namespace prism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__math.html">Namespace prism::math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__view.html">Namespace prism::view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp.html">Program Listing for File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.html">Program Listing for File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_WindowVkManager.cpp.html">Program Listing for File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_WindowVkManager.h.html">Program Listing for File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1math_1_1_matrix4_x4.html">Struct Matrix4X4</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Struct Vector3d</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE"><code class="docutils literal notranslate"><span class="pre">prism::math::Vector3d</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1view_1_1_queue_family_indices.html">Struct QueueFamilyIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unabridged_orphan.html">Full API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1view_1a5e08683d7e148199c9e82e1382ca3f97.html">Variable prism::view::validationLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441.html">Variable prism::view::deviceExtensions</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Компоненты:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/math.html">Модуль математики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/core.html">Ядро системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/render.html">Модуль рендеринга</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ui.html">Пользовательский интерфейс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/physics.html">Физический движок</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Разработка:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Участие в разработке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/code_style.html">Стандарты кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/build_guide.html">Руководство по сборке</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PrismEngine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">PrismEngine API</a></li>
+      <li class="breadcrumb-item active">Struct Vector3d</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/structprism_1_1math_1_1_vector3d.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-vector3d">
+<span id="exhale-struct-structprism-1-1math-1-1-vector3d"></span><h1>Struct Vector3d<a class="headerlink" href="#struct-vector3d" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_vector.h.html#file-src-vector-h"><span class="std std-ref">File vector.h</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3dE">
+<span id="_CPPv3N5prism4math8Vector3dE"></span><span id="_CPPv2N5prism4math8Vector3dE"></span><span id="prism::math::Vector3d"></span><span class="target" id="structprism_1_1math_1_1_vector3d"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vector3d</span></span></span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3dE" title="Link to this definition"></a><br /></dt>
+<dd><p>3D вектор с дополнительной компонентой w </p>
+<p>Используется для однородных координат и 3D преобразований </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d8Vector3dEv">
+<span id="_CPPv3N5prism4math8Vector3d8Vector3dEv"></span><span id="_CPPv2N5prism4math8Vector3d8Vector3dEv"></span><span id="prism::math::Vector3d::Vector3d"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a0666bd40f322dcea9a6e01f98717729c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vector3d</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d8Vector3dEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Конструктор по умолчанию (нулевой вектор) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d8Vector3dEffff">
+<span id="_CPPv3N5prism4math8Vector3d8Vector3dEffff"></span><span id="_CPPv2N5prism4math8Vector3d8Vector3dEffff"></span><span id="prism::math::Vector3d::Vector3d__float.float.float.float"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a4971bfe801e3559fbbfc5c806aa6f96d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vector3d</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">w</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d8Vector3dEffff" title="Link to this definition"></a><br /></dt>
+<dd><p>Конструктор с параметрами </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Координата X </p></li>
+<li><p><strong>y</strong> – Координата Y </p></li>
+<li><p><strong>z</strong> – Координата Z </p></li>
+<li><p><strong>w</strong> – Однородная координата (опционально) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d5printEv">
+<span id="_CPPv3N5prism4math8Vector3d5printEv"></span><span id="_CPPv2N5prism4math8Vector3d5printEv"></span><span id="prism::math::Vector3d::print"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1ae095b21e5923e3e09f186e423c4385b6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d5printEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Вывод вектора в консоль </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3dplER8Vector3d">
+<span id="_CPPv3N5prism4math8Vector3dplER8Vector3d"></span><span id="_CPPv2N5prism4math8Vector3dplER8Vector3d"></span><span id="prism::math::Vector3d::add-operator__Vector3dR"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a0c8b693083a8af90d6b62808b57765fe"></span><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE" title="prism::math::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE" title="prism::math::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3dplER8Vector3d" title="Link to this definition"></a><br /></dt>
+<dd><p>Сложение векторов </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – Второй вектор </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результат сложения </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3dmiER8Vector3d">
+<span id="_CPPv3N5prism4math8Vector3dmiER8Vector3d"></span><span id="_CPPv2N5prism4math8Vector3dmiER8Vector3d"></span><span id="prism::math::Vector3d::sub-operator__Vector3dR"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1afe3a8371655b6b6a2d1e39c9bcda5665"></span><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE" title="prism::math::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE" title="prism::math::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3dmiER8Vector3d" title="Link to this definition"></a><br /></dt>
+<dd><p>Вычитание векторов </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – Второй вектор </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результат вычитания </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3dmlEf">
+<span id="_CPPv3N5prism4math8Vector3dmlEf"></span><span id="_CPPv2N5prism4math8Vector3dmlEf"></span><span id="prism::math::Vector3d::mul-operator__float"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a96cda750eb855d0b784db5a3a64046ea"></span><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE" title="prism::math::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">k</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3dmlEf" title="Link to this definition"></a><br /></dt>
+<dd><p>Умножение на скаляр </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>k</strong> – Скаляр </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результат умножения </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3ddvEf">
+<span id="_CPPv3N5prism4math8Vector3ddvEf"></span><span id="_CPPv2N5prism4math8Vector3ddvEf"></span><span id="prism::math::Vector3d::div-operator__float"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1af491978014b487f096ac0ac781365da5"></span><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE" title="prism::math::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">/</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">k</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3ddvEf" title="Link to this definition"></a><br /></dt>
+<dd><p>Деление на скаляр </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>k</strong> – Скаляр (не должен быть 0) </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – Если k = 0 </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Результат деления </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3dixEi">
+<span id="_CPPv3N5prism4math8Vector3dixEi"></span><span id="_CPPv2N5prism4math8Vector3dixEi"></span><span id="prism::math::Vector3d::subscript-operator__i"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a8db312c4c2d5a5b2c0bc4a91af7dc36a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3dixEi" title="Link to this definition"></a><br /></dt>
+<dd><p>Доступ к компонентам по индексу </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> – 0-X, 1-Y, 2-Z, 3-W </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">out_of_range</span></span></span> – При неверном индексе </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Значение компоненты </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3deqER8Vector3d">
+<span id="_CPPv3N5prism4math8Vector3deqER8Vector3d"></span><span id="_CPPv2N5prism4math8Vector3deqER8Vector3d"></span><span id="prism::math::Vector3d::eq-operator__Vector3dR"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1ab5a3dd7e3d1bb0f39557671fb7fe36fe"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE" title="prism::math::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3deqER8Vector3d" title="Link to this definition"></a><br /></dt>
+<dd><p>Сравнение векторов </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – Второй вектор </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true если векторы равны (w не учитывается) </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d6lengthEv">
+<span id="_CPPv3N5prism4math8Vector3d6lengthEv"></span><span id="_CPPv2N5prism4math8Vector3d6lengthEv"></span><span id="prism::math::Vector3d::length"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a246d4ac8bf3bc3b237c3250a0acdfdb7"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d6lengthEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Вычисление длины вектора </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Длина вектора </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d9normaliseEv">
+<span id="_CPPv3N5prism4math8Vector3d9normaliseEv"></span><span id="_CPPv2N5prism4math8Vector3d9normaliseEv"></span><span id="prism::math::Vector3d::normalise"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a59dbff9c0f786334970c93d16820fd8b"></span><a class="reference internal" href="#_CPPv4N5prism4math8Vector3dE" title="prism::math::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">normalise</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d9normaliseEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Нормализация вектора </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Нормализованный вектор </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d1xE">
+<span id="_CPPv3N5prism4math8Vector3d1xE"></span><span id="_CPPv2N5prism4math8Vector3d1xE"></span><span id="prism::math::Vector3d::x__float"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d1xE" title="Link to this definition"></a><br /></dt>
+<dd><p>Координата X. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d1yE">
+<span id="_CPPv3N5prism4math8Vector3d1yE"></span><span id="_CPPv2N5prism4math8Vector3d1yE"></span><span id="prism::math::Vector3d::y__float"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d1yE" title="Link to this definition"></a><br /></dt>
+<dd><p>Координата Y. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d1zE">
+<span id="_CPPv3N5prism4math8Vector3d1zE"></span><span id="_CPPv2N5prism4math8Vector3d1zE"></span><span id="prism::math::Vector3d::z__float"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z</span></span></span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d1zE" title="Link to this definition"></a><br /></dt>
+<dd><p>Координата Z. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism4math8Vector3d1wE">
+<span id="_CPPv3N5prism4math8Vector3d1wE"></span><span id="_CPPv2N5prism4math8Vector3d1wE"></span><span id="prism::math::Vector3d::w__float"></span><span class="target" id="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">w</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0f</span></span><a class="headerlink" href="#_CPPv4N5prism4math8Vector3d1wE" title="Link to this definition"></a><br /></dt>
+<dd><p>Однородная координата (по умолчанию 1.0) </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structprism_1_1math_1_1_matrix4_x4.html" class="btn btn-neutral float-left" title="Struct Matrix4X4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structprism_1_1view_1_1_queue_family_indices.html" class="btn btn-neutral float-right" title="Struct QueueFamilyIndices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Alexei Kutuzov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

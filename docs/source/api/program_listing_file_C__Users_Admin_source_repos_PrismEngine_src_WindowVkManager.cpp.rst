@@ -1,0 +1,13 @@
+
+.. _program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp:
+
+Program Listing for File WindowVkManager.cpp
+============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp>` (``C:\Users\Admin\source\repos\PrismEngine\src\WindowVkManager.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   

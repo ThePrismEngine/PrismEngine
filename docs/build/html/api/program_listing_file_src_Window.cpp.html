@@ -1,0 +1,673 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File Window.cpp &mdash; PrismEngine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="File Window.h" href="file_src_Window.h.html" />
+    <link rel="prev" title="File Window.cpp" href="file_src_Window.cpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PrismEngine
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Основное:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О проекте PrismEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Быстрый старт</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1view_1_1_window.html">Class Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_C__Users_Admin_source_repos_PrismEngine_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp.html">File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.html">File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_WindowVkManager.cpp.html">File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_WindowVkManager.h.html">File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96.html">Function prism::math::Matrix_MultiplyMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d.html">Function prism::math::Vector_IntersectPlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6.html">Function prism::math::Vector_CrossProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f.html">Function prism::math::Vector_DotProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446.html">Function prism::math::degToRad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7.html">Function prism::math::Matrix_QuickInverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c.html">Function prism::init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html">PrismEngine API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism.html">Namespace prism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__math.html">Namespace prism::math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__view.html">Namespace prism::view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp.html">Program Listing for File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.html">Program Listing for File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_WindowVkManager.cpp.html">Program Listing for File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_WindowVkManager.h.html">Program Listing for File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1math_1_1_matrix4_x4.html">Struct Matrix4X4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1math_1_1_vector3d.html">Struct Vector3d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1view_1_1_queue_family_indices.html">Struct QueueFamilyIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unabridged_orphan.html">Full API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1view_1a5e08683d7e148199c9e82e1382ca3f97.html">Variable prism::view::validationLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441.html">Variable prism::view::deviceExtensions</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Компоненты:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/math.html">Модуль математики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/core.html">Ядро системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/render.html">Модуль рендеринга</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ui.html">Пользовательский интерфейс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/physics.html">Физический движок</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Разработка:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Участие в разработке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/code_style.html">Стандарты кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/build_guide.html">Руководство по сборке</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PrismEngine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="file_src_Window.cpp.html">File Window.cpp</a></li>
+      <li class="breadcrumb-item active">Program Listing for File Window.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file_src_Window.cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-window-cpp">
+<span id="program-listing-file-src-window-cpp"></span><h1>Program Listing for File Window.cpp<a class="headerlink" href="#program-listing-for-file-window-cpp" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="file_src_Window.cpp.html#file-src-window-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src\Window.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Window.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;map&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">prism</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">view</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+<span class="w">            </span><span class="o">:</span><span class="w"> </span><span class="n">Window</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOW_SHOWN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">Uint32</span><span class="w"> </span><span class="n">sdlFlags</span><span class="p">)</span>
+<span class="w">            </span><span class="o">:</span><span class="w"> </span><span class="n">Window</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">sdlFlags</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+<span class="w">            </span><span class="o">:</span><span class="w"> </span><span class="n">Window</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOW_SHOWN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">iconPath</span><span class="p">)</span>
+<span class="w">            </span><span class="o">:</span><span class="w"> </span><span class="n">Window</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOW_SHOWN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_Surface</span><span class="o">*</span><span class="w"> </span><span class="n">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SDL_LoadBMP</span><span class="p">(</span><span class="n">iconPath</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">icon</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">SDL_SetWindowIcon</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">icon</span><span class="p">);</span>
+<span class="w">                </span><span class="n">SDL_FreeSurface</span><span class="p">(</span><span class="n">icon</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Window</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">CreateCentered</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Window</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">minWidth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">minHeight</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxWidth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxHeight</span><span class="p">)</span>
+<span class="w">            </span><span class="o">:</span><span class="w"> </span><span class="n">Window</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowMinimumSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">minWidth</span><span class="p">,</span><span class="w"> </span><span class="n">minHeight</span><span class="p">);</span>
+<span class="w">            </span><span class="n">SDL_SetWindowMaximumSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">maxWidth</span><span class="p">,</span><span class="w"> </span><span class="n">maxHeight</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">Uint32</span><span class="w"> </span><span class="n">sdlFlags</span><span class="p">)</span>
+<span class="w">            </span><span class="o">:</span><span class="w"> </span><span class="n">m_isDestroyed</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span><span class="w"> </span><span class="n">instance</span><span class="p">(</span><span class="n">VK_NULL_HANDLE</span><span class="p">),</span><span class="w"> </span><span class="n">physicalDevice</span><span class="p">(</span><span class="n">VK_NULL_HANDLE</span><span class="p">),</span>
+<span class="w">            </span><span class="n">device</span><span class="p">(</span><span class="n">VK_NULL_HANDLE</span><span class="p">),</span><span class="w"> </span><span class="n">surface</span><span class="p">(</span><span class="n">VK_NULL_HANDLE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">s_sdlInitialized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">SDL_Init</span><span class="p">(</span><span class="n">SDL_INIT_VIDEO</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;SDL could not initialize!&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">s_sdlInitialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">m_sdlWindow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SDL_CreateWindow</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">sdlFlags</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">SDL_WINDOW_VULKAN</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">m_sdlWindow</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Window could not be created!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">vulkanInut</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Window</span><span class="o">::~</span><span class="n">Window</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">destroy</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">getTitle</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">SDL_GetWindowTitle</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setTitle</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowTitle</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">getWidth</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">            </span><span class="n">SDL_GetWindowSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">getHeight</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">            </span><span class="n">SDL_GetWindowSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">height</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">getSize</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_GetWindowSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setWidth</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">            </span><span class="n">SDL_GetWindowSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">height</span><span class="p">);</span>
+<span class="w">            </span><span class="n">SDL_SetWindowSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setHeight</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">            </span><span class="n">SDL_GetWindowSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">            </span><span class="n">SDL_SetWindowSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setSize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setFullscreen</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowFullscreen</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">SDL_WINDOW_FULLSCREEN</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setBorderless</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowBordered</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">SDL_FALSE</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">SDL_TRUE</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setResizable</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowResizable</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">SDL_TRUE</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">SDL_FALSE</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setGrabMouse</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowGrab</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">SDL_TRUE</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">SDL_FALSE</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">isFullscreen</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">SDL_GetWindowFlags</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">SDL_WINDOW_FULLSCREEN</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">isBorderless</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">SDL_GetWindowFlags</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">SDL_WINDOW_BORDERLESS</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">isResizable</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">SDL_GetWindowFlags</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">SDL_WINDOW_RESIZABLE</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">isGrabMouse</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">SDL_GetWindowGrab</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SDL_TRUE</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setPosition</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowPosition</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">getPosition</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">SDL_GetWindowPosition</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">centerWindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowPosition</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span><span class="w"> </span><span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setMinSize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">minWidth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">minHeight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowMinimumSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">minWidth</span><span class="p">,</span><span class="w"> </span><span class="n">minHeight</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setMaxSize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">maxWidth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxHeight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_SetWindowMaximumSize</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">maxWidth</span><span class="p">,</span><span class="w"> </span><span class="n">maxHeight</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">shouldClose</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">m_isDestroyed</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">setCloseRequested</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">m_isDestroyed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">handleEvents</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">SDL_Event</span><span class="w"> </span><span class="n">event</span><span class="p">;</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">SDL_PollEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SDL_QUIT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">m_isDestroyed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SDL_WINDOWEVENT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">event</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SDL_WINDOWEVENT_MINIMIZED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">m_windowMinimized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">event</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SDL_WINDOWEVENT_RESTORED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">m_windowMinimized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">clear</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Реализация очистки окна будет зависеть от используемого API рендеринга</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">update</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Реализация обновления окна будет зависеть от используемого API рендеринга</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">destroy</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">device</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VK_NULL_HANDLE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">vkDestroyDevice</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_NULL_HANDLE</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">surface</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VK_NULL_HANDLE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">vkDestroySurfaceKHR</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span><span class="w"> </span><span class="n">surface</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">surface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_NULL_HANDLE</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">instance</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VK_NULL_HANDLE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">vkDestroyInstance</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_NULL_HANDLE</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">SDL_DestroyWindow</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">);</span>
+<span class="w">                </span><span class="n">m_sdlWindow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">                </span><span class="n">m_isDestroyed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">vulkanInut</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">createInstance</span><span class="p">();</span>
+<span class="w">            </span><span class="n">createSurface</span><span class="p">();</span>
+<span class="w">            </span><span class="n">pickPhysicalDevice</span><span class="p">();</span>
+<span class="w">            </span><span class="n">createLogicalDevice</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">createInstance</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">VkApplicationInfo</span><span class="w"> </span><span class="n">appInfo</span><span class="p">{};</span>
+<span class="w">            </span><span class="n">appInfo</span><span class="p">.</span><span class="n">sType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_STRUCTURE_TYPE_APPLICATION_INFO</span><span class="p">;</span>
+<span class="w">            </span><span class="n">appInfo</span><span class="p">.</span><span class="n">pApplicationName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SDL_GetWindowTitle</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">);</span>
+<span class="w">            </span><span class="n">appInfo</span><span class="p">.</span><span class="n">applicationVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_MAKE_VERSION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">appInfo</span><span class="p">.</span><span class="n">pEngineName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;No Engine&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">appInfo</span><span class="p">.</span><span class="n">engineVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_MAKE_VERSION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">appInfo</span><span class="p">.</span><span class="n">apiVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_API_VERSION_1_0</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">VkInstanceCreateInfo</span><span class="w"> </span><span class="n">createInfo</span><span class="p">{};</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">sType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO</span><span class="p">;</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">pApplicationInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">appInfo</span><span class="p">;</span>
+
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">extensionCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">SDL_Vulkan_GetInstanceExtensions</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">extensionCount</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">extensions</span><span class="p">(</span><span class="n">extensionCount</span><span class="p">);</span>
+<span class="w">            </span><span class="n">SDL_Vulkan_GetInstanceExtensions</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">extensionCount</span><span class="p">,</span><span class="w"> </span><span class="n">extensions</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">enabledExtensionCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionCount</span><span class="p">;</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">ppEnabledExtensionNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensions</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">enabledLayerCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vkCreateInstance</span><span class="p">(</span><span class="o">&amp;</span><span class="n">createInfo</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">instance</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VK_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;failed to create Vulkan instance!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">pickPhysicalDevice</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">deviceCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">vkEnumeratePhysicalDevices</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">deviceCount</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">deviceCount</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;failed to find GPUs with Vulkan support!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">VkPhysicalDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">devices</span><span class="p">(</span><span class="n">deviceCount</span><span class="p">);</span>
+<span class="w">            </span><span class="n">vkEnumeratePhysicalDevices</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">deviceCount</span><span class="p">,</span><span class="w"> </span><span class="n">devices</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+
+<span class="w">            </span><span class="c1">// Вывод информации о всех доступных устройствах</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Available Vulkan devices:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">devices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">VkPhysicalDeviceProperties</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">;</span>
+<span class="w">                </span><span class="n">vkGetPhysicalDeviceProperties</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">deviceProps</span><span class="p">);</span>
+
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">deviceName</span>
+<span class="w">                    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (API: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">VK_VERSION_MAJOR</span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">apiVersion</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.&quot;</span>
+<span class="w">                    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">VK_VERSION_MINOR</span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">apiVersion</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.&quot;</span>
+<span class="w">                    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">VK_VERSION_PATCH</span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">apiVersion</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Выбор устройства с максимальным рейтингом</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">multimap</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">VkPhysicalDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">candidates</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">devices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rateDeviceSuitability</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+<span class="w">                </span><span class="n">candidates</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">));</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Проверка, что лучшее устройство подходит</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">candidates</span><span class="p">.</span><span class="n">rbegin</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">first</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">physicalDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">candidates</span><span class="p">.</span><span class="n">rbegin</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;failed to find a suitable GPU!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Вывод информации о выбранном устройстве</span>
+<span class="w">            </span><span class="n">VkPhysicalDeviceProperties</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">;</span>
+<span class="w">            </span><span class="n">vkGetPhysicalDeviceProperties</span><span class="p">(</span><span class="n">physicalDevice</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">deviceProps</span><span class="p">);</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Selected Vulkan device:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Name: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">deviceName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Type: &quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">deviceType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU</span><span class="p">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Integrated GPU&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU</span><span class="p">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Discrete GPU&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU</span><span class="p">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Virtual GPU&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">VK_PHYSICAL_DEVICE_TYPE_CPU</span><span class="p">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;CPU&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Other&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - API Version: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">VK_VERSION_MAJOR</span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">apiVersion</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.&quot;</span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">VK_VERSION_MINOR</span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">apiVersion</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.&quot;</span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">VK_VERSION_PATCH</span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">apiVersion</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Driver Version: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">driverVersion</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Vendor ID: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">vendorID</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Device ID: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">deviceID</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Score: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">candidates</span><span class="p">.</span><span class="n">rbegin</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">rateDeviceSuitability</span><span class="p">(</span><span class="n">VkPhysicalDevice</span><span class="w"> </span><span class="n">device</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">VkPhysicalDeviceProperties</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">;</span>
+<span class="w">            </span><span class="n">VkPhysicalDeviceFeatures</span><span class="w"> </span><span class="n">deviceFeatures</span><span class="p">;</span>
+<span class="w">            </span><span class="n">vkGetPhysicalDeviceProperties</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">deviceProps</span><span class="p">);</span>
+<span class="w">            </span><span class="n">vkGetPhysicalDeviceFeatures</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">deviceFeatures</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Вывод дополнительной информации при оценке</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Evaluating device: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">deviceName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Device type: &quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">deviceType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU</span><span class="p">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Integrated GPU&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU</span><span class="p">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Discrete GPU&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU</span><span class="p">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Virtual GPU&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">VK_PHYSICAL_DEVICE_TYPE_CPU</span><span class="p">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;CPU&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Other&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Дискретные GPU имеют преимущество в производительности</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">deviceProps</span><span class="p">.</span><span class="n">deviceType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">score</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  + 1000 points for discrete GPU</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Максимальный размер текстур влияет на качество графики</span>
+<span class="w">            </span><span class="n">score</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">limits</span><span class="p">.</span><span class="n">maxImageDimension2D</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  + &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">limits</span><span class="p">.</span><span class="n">maxImageDimension2D</span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; points for max image dimension (&quot;</span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">deviceProps</span><span class="p">.</span><span class="n">limits</span><span class="p">.</span><span class="n">maxImageDimension2D</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Приложение не может работать без geometry shader</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">deviceFeatures</span><span class="p">.</span><span class="n">geometryShader</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Device rejected (no geometry shader support)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Проверка поддержки необходимых очередей</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isDeviceSuitable</span><span class="p">(</span><span class="n">device</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Device rejected (missing required queue families)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - Total score: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">QueueFamilyIndices</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">findQueueFamilies</span><span class="p">(</span><span class="n">VkPhysicalDevice</span><span class="w"> </span><span class="n">device</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">QueueFamilyIndices</span><span class="w"> </span><span class="n">indices</span><span class="p">;</span>
+
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">queueFamilyCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">vkGetPhysicalDeviceQueueFamilyProperties</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">queueFamilyCount</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">VkQueueFamilyProperties</span><span class="o">&gt;</span><span class="w"> </span><span class="n">queueFamilies</span><span class="p">(</span><span class="n">queueFamilyCount</span><span class="p">);</span>
+<span class="w">            </span><span class="n">vkGetPhysicalDeviceQueueFamilyProperties</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">queueFamilyCount</span><span class="p">,</span><span class="w"> </span><span class="n">queueFamilies</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">queueFamily</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">queueFamilies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">queueFamily</span><span class="p">.</span><span class="n">queueFlags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">VK_QUEUE_GRAPHICS_BIT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">indices</span><span class="p">.</span><span class="n">graphicsFamily</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+
+<span class="w">                </span><span class="n">VkBool32</span><span class="w"> </span><span class="n">presentSupport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">                </span><span class="n">vkGetPhysicalDeviceSurfaceSupportKHR</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">surface</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">presentSupport</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">presentSupport</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">indices</span><span class="p">.</span><span class="n">presentFamily</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">indices</span><span class="p">.</span><span class="n">isComplete</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+
+<span class="w">                </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">indices</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">createLogicalDevice</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isDeviceSuitable</span><span class="p">(</span><span class="n">physicalDevice</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;queue families not complete!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">QueueFamilyIndices</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findQueueFamilies</span><span class="p">(</span><span class="n">physicalDevice</span><span class="p">);</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">VkDeviceQueueCreateInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">queueCreateInfos</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uniqueQueueFamilies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">indices</span><span class="p">.</span><span class="n">graphicsFamily</span><span class="p">.</span><span class="n">value</span><span class="p">(),</span>
+<span class="w">                </span><span class="n">indices</span><span class="p">.</span><span class="n">presentFamily</span><span class="p">.</span><span class="n">value</span><span class="p">()</span>
+<span class="w">            </span><span class="p">};</span>
+
+<span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">queuePriority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">queueFamily</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">uniqueQueueFamilies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">VkDeviceQueueCreateInfo</span><span class="w"> </span><span class="n">queueCreateInfo</span><span class="p">{};</span>
+<span class="w">                </span><span class="n">queueCreateInfo</span><span class="p">.</span><span class="n">sType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO</span><span class="p">;</span>
+<span class="w">                </span><span class="n">queueCreateInfo</span><span class="p">.</span><span class="n">queueFamilyIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queueFamily</span><span class="p">;</span>
+<span class="w">                </span><span class="n">queueCreateInfo</span><span class="p">.</span><span class="n">queueCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">                </span><span class="n">queueCreateInfo</span><span class="p">.</span><span class="n">pQueuePriorities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">queuePriority</span><span class="p">;</span>
+<span class="w">                </span><span class="n">queueCreateInfos</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">queueCreateInfo</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">VkPhysicalDeviceFeatures</span><span class="w"> </span><span class="n">deviceFeatures</span><span class="p">{};</span>
+
+<span class="w">            </span><span class="n">VkDeviceCreateInfo</span><span class="w"> </span><span class="n">createInfo</span><span class="p">{};</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">sType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO</span><span class="p">;</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">queueCreateInfoCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">queueCreateInfos</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">pQueueCreateInfos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queueCreateInfos</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">pEnabledFeatures</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">deviceFeatures</span><span class="p">;</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">enabledExtensionCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">deviceExtensions</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">ppEnabledExtensionNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deviceExtensions</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
+<span class="w">            </span><span class="n">createInfo</span><span class="p">.</span><span class="n">enabledLayerCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vkCreateDevice</span><span class="p">(</span><span class="n">physicalDevice</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">createInfo</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">device</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VK_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;failed to create logical device!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">vkGetDeviceQueue</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="n">indices</span><span class="p">.</span><span class="n">graphicsFamily</span><span class="p">.</span><span class="n">value</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">graphicsQueue</span><span class="p">);</span>
+<span class="w">            </span><span class="n">vkGetDeviceQueue</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="n">indices</span><span class="p">.</span><span class="n">presentFamily</span><span class="p">.</span><span class="n">value</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">presentQueue</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">createSurface</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">SDL_Vulkan_CreateSurface</span><span class="p">(</span><span class="n">m_sdlWindow</span><span class="p">,</span><span class="w"> </span><span class="n">instance</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">surface</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;failed to create window surface!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">isDeviceSuitable</span><span class="p">(</span><span class="n">VkPhysicalDevice</span><span class="w"> </span><span class="n">device</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">QueueFamilyIndices</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findQueueFamilies</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">extensionsSupported</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">checkDeviceExtensionSupport</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">indices</span><span class="p">.</span><span class="n">isComplete</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">extensionsSupported</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">Window</span><span class="o">::</span><span class="n">checkDeviceExtensionSupport</span><span class="p">(</span><span class="n">VkPhysicalDevice</span><span class="w"> </span><span class="n">device</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">extensionCount</span><span class="p">;</span>
+<span class="w">            </span><span class="n">vkEnumerateDeviceExtensionProperties</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">extensionCount</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">VkExtensionProperties</span><span class="o">&gt;</span><span class="w"> </span><span class="n">availableExtensions</span><span class="p">(</span><span class="n">extensionCount</span><span class="p">);</span>
+<span class="w">            </span><span class="n">vkEnumerateDeviceExtensionProperties</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">extensionCount</span><span class="p">,</span><span class="w"> </span><span class="n">availableExtensions</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">requiredExtensions</span><span class="p">(</span><span class="n">deviceExtensions</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">deviceExtensions</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">extension</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">availableExtensions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">requiredExtensions</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">extension</span><span class="p">.</span><span class="n">extensionName</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">requiredExtensions</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// namespace view</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace prism</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="file_src_Window.cpp.html" class="btn btn-neutral float-left" title="File Window.cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="file_src_Window.h.html" class="btn btn-neutral float-right" title="File Window.h" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Alexei Kutuzov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

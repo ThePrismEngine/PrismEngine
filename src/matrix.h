@@ -1,126 +1,122 @@
+/**
+ * @file matrix.h
+ * @brief Р Р°Р±РѕС‚Р° СЃ 4x4 РјР°С‚СЂРёС†Р°РјРё РґР»СЏ 3D РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёР№
+ */
+
 #pragma once
-
-
 #include <stdexcept>
 #include "SDL.h"
 #include "vector.h"
 
-
 namespace prism {
-	namespace math {
-		/// <summary>
-		/// Структура PRISM_Matrix_4X4 представляет 4x4 матрицу, которая может быть 
-		/// использована для различных линейных преобразований, таких как масштабирование, 
-		/// вращение, перенос, а также для работы с однородными координатами.
-		/// </summary>
-		struct Matrix_4X4
-		{
-			/// <summary>
-			/// Двумерный массив, представляющий элементы матрицы. 
-			/// Индексы: m[row][column].
-			/// Инициализируется нулями.
-			/// </summary>
-			float m[4][4] = { 0 };
+    namespace math {
 
-			/// <summary>
-			/// Выводит содержимое матрицы в консоль.
-			/// </summary>
-			void print();
+        /**
+         * @brief 4x4 РјР°С‚СЂРёС†Р° РґР»СЏ Р»РёРЅРµР№РЅС‹С… РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёР№
+         * @details РџРѕРґРґРµСЂР¶РёРІР°РµС‚ РѕРїРµСЂР°С†РёРё РїРѕРІРѕСЂРѕС‚Р°, РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёСЏ, РїРµСЂРµРЅРѕСЃР°, РїСЂРѕРµРєС†РёРё
+         */
+        struct Matrix4X4 {
+            float m[4][4] = { 0 }; ///< Р­Р»РµРјРµРЅС‚С‹ РјР°С‚СЂРёС†С‹ (СЃС‚СЂРѕРєР°, СЃС‚РѕР»Р±РµС†)
 
-			/// <summary>
-			/// Оператор доступа к строкам матрицы по индексу.
-			/// </summary>
-			/// <param name="index">Индекс строки (0-3).</param>
-			/// <returns>Указатель на строку матрицы.</returns>
-			/// <exception cref="std::out_of_range">Бросает исключение, если индекс выходит за пределы [0, 3].</exception>
-			float* operator[](int index);
+            /**
+             * @brief Р’С‹РІРѕРґРёС‚ РјР°С‚СЂРёС†Сѓ РІ РєРѕРЅСЃРѕР»СЊ
+             */
+            void print();
 
-			/// <summary>
-			/// Оператор сравнения двух матриц на равенство.
-			/// </summary>
-			/// <param name="other">Другая матрица для сравнения.</param>
-			/// <returns>True, если все элементы матриц равны; иначе False.</returns>
-			bool operator==(Matrix_4X4& other);
+            /**
+             * @brief Р”РѕСЃС‚СѓРї Рє СЃС‚СЂРѕРєРµ РјР°С‚СЂРёС†С‹ РїРѕ РёРЅРґРµРєСЃСѓ
+             * @param index РРЅРґРµРєСЃ СЃС‚СЂРѕРєРё (0-3)
+             * @return РЈРєР°Р·Р°С‚РµР»СЊ РЅР° СЃС‚СЂРѕРєСѓ РјР°С‚СЂРёС†С‹
+             * @throws std::out_of_range РџСЂРё РЅРµРІРµСЂРЅРѕРј РёРЅРґРµРєСЃРµ
+             */
+            float* operator[](int index);
 
-			/// <summary>
-			/// Создает единичную матрицу 4x4.
-			/// </summary>
-			/// <returns>Единичная матрица.</returns>
-			static Matrix_4X4 makeIdentity();
+            /**
+             * @brief РЎСЂР°РІРЅРµРЅРёРµ РјР°С‚СЂРёС† РЅР° СЂР°РІРµРЅСЃС‚РІРѕ
+             * @param other РњР°С‚СЂРёС†Р° РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ
+             * @return true РµСЃР»Рё РјР°С‚СЂРёС†С‹ СЂР°РІРЅС‹
+             */
+            bool operator==(Matrix4X4& other);
 
-			/// <summary>
-			/// Создает матрицу поворота вокруг оси X.
-			/// </summary>
-			/// <param name="fAngleRad">Угол поворота в радианах.</param>
-			/// <returns>Матрица поворота вокруг оси X.</returns>
-			static Matrix_4X4 makeRotationX(float fAngleRad);
+            /**
+             * @brief РЎРѕР·РґР°РµС‚ РµРґРёРЅРёС‡РЅСѓСЋ РјР°С‚СЂРёС†Сѓ
+             * @return Р•РґРёРЅРёС‡РЅР°СЏ РјР°С‚СЂРёС†Р° 4x4
+             */
+            static Matrix4X4 makeIdentity();
 
-			/// <summary>
-			/// Создает матрицу поворота вокруг оси Y.
-			/// </summary>
-			/// <param name="fAngleRad">Угол поворота в радианах.</param>
-			/// <returns>Матрица поворота вокруг оси Y.</returns>
-			static Matrix_4X4 makeRotationY(float fAngleRad);
+            /**
+             * @brief РЎРѕР·РґР°РµС‚ РјР°С‚СЂРёС†Сѓ РїРѕРІРѕСЂРѕС‚Р° РІРѕРєСЂСѓРі РѕСЃРё X
+             * @param fAngleRad РЈРіРѕР» РїРѕРІРѕСЂРѕС‚Р° РІ СЂР°РґРёР°РЅР°С…
+             * @return РњР°С‚СЂРёС†Р° РїРѕРІРѕСЂРѕС‚Р° РІРѕРєСЂСѓРі X
+             */
+            static Matrix4X4 makeRotationX(float fAngleRad);
 
-			/// <summary>
-			/// Создает матрицу поворота вокруг оси Z.
-			/// </summary>
-			/// <param name="fAngleRad">Угол поворота в радианах.</param>
-			/// <returns>Матрица поворота вокруг оси Z.</returns>
-			static Matrix_4X4 makeRotationZ(float fAngleRad);
+            /**
+             * @brief РЎРѕР·РґР°РµС‚ РјР°С‚СЂРёС†Сѓ РїРѕРІРѕСЂРѕС‚Р° РІРѕРєСЂСѓРі РѕСЃРё Y
+             * @param fAngleRad РЈРіРѕР» РїРѕРІРѕСЂРѕС‚Р° РІ СЂР°РґРёР°РЅР°С…
+             * @return РњР°С‚СЂРёС†Р° РїРѕРІРѕСЂРѕС‚Р° РІРѕРєСЂСѓРі Y
+             */
+            static Matrix4X4 makeRotationY(float fAngleRad);
 
-			/// <summary>
-			/// Создает матрицу переноса.
-			/// </summary>
-			/// <param name="x">Смещение по оси X.</param>
-			/// <param name="y">Смещение по оси Y.</param>
-			/// <param name="z">Смещение по оси Z.</param>
-			/// <returns>Матрица переноса.</returns>
-			static Matrix_4X4 makeTranslation(float x, float y, float z);
+            /**
+             * @brief РЎРѕР·РґР°РµС‚ РјР°С‚СЂРёС†Сѓ РїРѕРІРѕСЂРѕС‚Р° РІРѕРєСЂСѓРі РѕСЃРё Z
+             * @param fAngleRad РЈРіРѕР» РїРѕРІРѕСЂРѕС‚Р° РІ СЂР°РґРёР°РЅР°С…
+             * @return РњР°С‚СЂРёС†Р° РїРѕРІРѕСЂРѕС‚Р° РІРѕРєСЂСѓРі Z
+             */
+            static Matrix4X4 makeRotationZ(float fAngleRad);
 
-			/// <summary>
-			/// Создает матрицу масштабирования.
-			/// </summary>
-			/// <param name="x">Масштабирование по оси X.</param>
-			/// <param name="y">Масштабирование по оси Y.</param>
-			/// <param name="z">Масштабирование по оси Z.</param>
-			/// <returns>Матрица масштабирования.</returns>
-			static Matrix_4X4 makeScale(float x, float y, float z);
+            /**
+             * @brief РЎРѕР·РґР°РµС‚ РјР°С‚СЂРёС†Сѓ РїРµСЂРµРЅРѕСЃР°
+             * @param x РЎРјРµС‰РµРЅРёРµ РїРѕ X
+             * @param y РЎРјРµС‰РµРЅРёРµ РїРѕ Y
+             * @param z РЎРјРµС‰РµРЅРёРµ РїРѕ Z
+             * @return РњР°С‚СЂРёС†Р° РїРµСЂРµРЅРѕСЃР°
+             */
+            static Matrix4X4 makeTranslation(float x, float y, float z);
 
-			/// <summary>
-			/// Создает матрицу проекции.
-			/// </summary>
-			/// <param name="fFovDegrees">Угол обзора в градусах.</param>
-			/// <param name="fAspectRatio">Соотношение сторон экрана.</param>
-			/// <param name="fNear">Ближняя плоскость отсечения.</param>
-			/// <param name="fFar">Дальняя плоскость отсечения.</param>
-			/// <returns>Матрица проекции.</returns>
-			static Matrix_4X4 makeProjection(float fFovDegrees, float fAspectRatio, float fNear, float fFar);
+            /**
+             * @brief РЎРѕР·РґР°РµС‚ РјР°С‚СЂРёС†Сѓ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёСЏ
+             * @param x РњР°СЃС€С‚Р°Р± РїРѕ X
+             * @param y РњР°СЃС€С‚Р°Р± РїРѕ Y
+             * @param z РњР°СЃС€С‚Р°Р± РїРѕ Z
+             * @return РњР°С‚СЂРёС†Р° РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёСЏ
+             */
+            static Matrix4X4 makeScale(float x, float y, float z);
 
-			/// <summary>
-			/// Создает матрицу, указывающую из одной точки в другую.
-			/// </summary>
-			/// <param name="pos">Начальная точка.</param>
-			/// <param name="target">Целевая точка.</param>
-			/// <param name="up">Вектор "вверх".</param>
-			/// <returns>Матрица направления.</returns>
-			static Matrix_4X4 Matrix_PointAt(Vector3d& pos, Vector3d& target, Vector3d& up);
-		};
+            /**
+             * @brief РЎРѕР·РґР°РµС‚ РјР°С‚СЂРёС†Сѓ РїСЂРѕРµРєС†РёРё
+             * @param fFovDegrees РЈРіРѕР» РѕР±Р·РѕСЂР° РІ РіСЂР°РґСѓСЃР°С…
+             * @param fAspectRatio РЎРѕРѕС‚РЅРѕС€РµРЅРёРµ СЃС‚РѕСЂРѕРЅ
+             * @param fNear Р‘Р»РёР¶РЅСЏСЏ РїР»РѕСЃРєРѕСЃС‚СЊ РѕС‚СЃРµС‡РµРЅРёСЏ
+             * @param fFar Р”Р°Р»СЊРЅСЏСЏ РїР»РѕСЃРєРѕСЃС‚СЊ РѕС‚СЃРµС‡РµРЅРёСЏ
+             * @return РњР°С‚СЂРёС†Р° РїСЂРѕРµРєС†РёРё
+             */
+            static Matrix4X4 makeProjection(float fFovDegrees, float fAspectRatio, float fNear, float fFar);
 
-		/// <summary>
-		/// Умножает две матрицы 4x4.
-		/// </summary>
-		/// <param name="m1">Первая матрица.</param>
-		/// <param name="m2">Вторая матрица.</param>
-		/// <returns>Результирующая матрица.</returns>
-		static Matrix_4X4 Matrix_MultiplyMatrix(Matrix_4X4& m1, Matrix_4X4& m2);
-		
-		/// <summary>
-		/// Быстрое обратное преобразование матрицы 4x4.
-		/// </summary>
-		/// <param name="m">Матрица для инверсии.</param>
-		/// <returns>Инверсированная матрица.</returns>
-		static Matrix_4X4 Matrix_QuickInverse(Matrix_4X4& m);
+            /**
+             * @brief РЎРѕР·РґР°РµС‚ РјР°С‚СЂРёС†Сѓ РЅР°РїСЂР°РІР»РµРЅРёСЏ "СЃРјРѕС‚СЂРёС‚ РЅР°"
+             * @param pos РџРѕР·РёС†РёСЏ РЅР°Р±Р»СЋРґР°С‚РµР»СЏ
+             * @param target Р¦РµР»РµРІР°СЏ С‚РѕС‡РєР°
+             * @param up Р’РµРєС‚РѕСЂ "РІРІРµСЂС…"
+             * @return РњР°С‚СЂРёС†Р° РЅР°РїСЂР°РІР»РµРЅРёСЏ
+             */
+            static Matrix4X4 Matrix_PointAt(Vector3d& pos, Vector3d& target, Vector3d& up);
+        };
 
-	}
-}
+        /**
+         * @brief РЈРјРЅРѕР¶РµРЅРёРµ РјР°С‚СЂРёС† 4x4
+         * @param m1 РџРµСЂРІР°СЏ РјР°С‚СЂРёС†Р°
+         * @param m2 Р’С‚РѕСЂР°СЏ РјР°С‚СЂРёС†Р°
+         * @return Р РµР·СѓР»СЊС‚Р°С‚ СѓРјРЅРѕР¶РµРЅРёСЏ
+         */
+        static Matrix4X4 Matrix_MultiplyMatrix(Matrix4X4& m1, Matrix4X4& m2);
+
+        /**
+         * @brief Р‘С‹СЃС‚СЂРѕРµ РѕР±СЂР°С‰РµРЅРёРµ РјР°С‚СЂРёС†С‹ (СЃРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ)
+         * @param m РњР°С‚СЂРёС†Р° РґР»СЏ РѕР±СЂР°С‰РµРЅРёСЏ
+         * @return РћР±СЂР°С‰РµРЅРЅР°СЏ РјР°С‚СЂРёС†Р°
+         */
+        static Matrix4X4 Matrix_QuickInverse(Matrix4X4& m);
+
+    } // namespace math
+} // namespace prism

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['m_0',['m',['../structprism_1_1math_1_1_matrix4_x4.html#a03f6ae69a0fc6e279a81bbdb1de1a4f1',1,'prism::math::Matrix4X4']]],
+  ['m_5fisdestroyed_1',['m_isDestroyed',['../classprism_1_1view_1_1_window.html#a4565b56a9f438b6c87c9f262e8848fa0',1,'prism::view::Window']]],
+  ['m_5fsdlwindow_2',['m_sdlWindow',['../classprism_1_1view_1_1_window.html#a376baefea36091e57fa85ea6d4083dba',1,'prism::view::Window']]],
+  ['m_5fwindowminimized_3',['m_windowMinimized',['../classprism_1_1view_1_1_window.html#a73b38623bf14708bf5ac9602d1ce684b',1,'prism::view::Window']]],
+  ['makeidentity_4',['makeIdentity',['../structprism_1_1math_1_1_matrix4_x4.html#aa37f4c9f136b9d5f686059bfc3ec09cc',1,'prism::math::Matrix4X4']]],
+  ['makeprojection_5',['makeProjection',['../structprism_1_1math_1_1_matrix4_x4.html#a2c908d0c06bf596c8399154a63a6b8c7',1,'prism::math::Matrix4X4']]],
+  ['makerotationx_6',['makeRotationX',['../structprism_1_1math_1_1_matrix4_x4.html#a0c75732edb441e3a49d7b8211dab32d5',1,'prism::math::Matrix4X4']]],
+  ['makerotationy_7',['makeRotationY',['../structprism_1_1math_1_1_matrix4_x4.html#abcfee1b63bcb6a95ec9e7eb00419d71d',1,'prism::math::Matrix4X4']]],
+  ['makerotationz_8',['makeRotationZ',['../structprism_1_1math_1_1_matrix4_x4.html#ab3aa494e109566c1693e39aeb1cc6116',1,'prism::math::Matrix4X4']]],
+  ['makescale_9',['makeScale',['../structprism_1_1math_1_1_matrix4_x4.html#a618e4ed9879960963d3dd37bdcb82409',1,'prism::math::Matrix4X4']]],
+  ['maketranslation_10',['makeTranslation',['../structprism_1_1math_1_1_matrix4_x4.html#a0df69dd9ba7f1e59788e79ce2dc0c05a',1,'prism::math::Matrix4X4']]],
+  ['matrix_2ecpp_11',['matrix.cpp',['../matrix_8cpp.html',1,'']]],
+  ['matrix_2eh_12',['matrix.h',['../matrix_8h.html',1,'']]],
+  ['matrix4x4_13',['Matrix4X4',['../structprism_1_1math_1_1_matrix4_x4.html',1,'prism::math']]],
+  ['matrix_5fmultiplymatrix_14',['Matrix_MultiplyMatrix',['../namespaceprism_1_1math.html#a1ee2a21c4aa09e48c35adb5e4bf81f96',1,'prism::math']]],
+  ['matrix_5fpointat_15',['Matrix_PointAt',['../structprism_1_1math_1_1_matrix4_x4.html#a141ac2d3e2abffea8afb383aeec57965',1,'prism::math::Matrix4X4']]],
+  ['matrix_5fquickinverse_16',['Matrix_QuickInverse',['../namespaceprism_1_1math.html#a95812488fd848a4471b0d983c78a07f7',1,'prism::math']]]
+];

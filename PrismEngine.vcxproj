@@ -190,6 +190,7 @@
     <ClCompile Include="src\fmath.cpp" />
     <ClCompile Include="src\Frame.cpp" />
     <ClCompile Include="src\matrix.cpp" />
+    <ClCompile Include="src\PrismEngine.cpp" />
     <ClCompile Include="src\vector.cpp" />
     <ClCompile Include="src\Window.cpp" />
     <ClCompile Include="src\WindowVkManager.cpp" />
