@@ -16,6 +16,8 @@ Files
 - :ref:`file_src_fmath.h`
 - :ref:`file_src_Frame.cpp`
 - :ref:`file_src_Frame.h`
+- :ref:`file_src_logger.cpp`
+- :ref:`file_src_logger.h`
 - :ref:`file_src_matrix.cpp`
 - :ref:`file_src_matrix.h`
 - :ref:`file_src_PrismEngine.cpp`

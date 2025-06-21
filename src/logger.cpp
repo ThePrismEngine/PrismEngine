@@ -6,18 +6,18 @@ namespace prism::logger {
         std::unique_ptr<std::ofstream> logFileStream;
         bool useCustomOutput = false;
 
-        // Ñòàíäàðòíàÿ ôóíêöèÿ âûâîäà SDL
+        // Ð¡Ñ‚Ð°Ð½Ð´Ð°Ñ€Ñ‚Ð½Ð°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ñ‹Ð²Ð¾Ð´Ð° SDL
         static SDL_LogOutputFunction defaultOutputFunction = nullptr;
         static void* defaultUserdata = nullptr;
 
-        // Íàøà ôóíêöèÿ âûâîäà
+        // ÐÐ°ÑˆÐ° Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ñ‹Ð²Ð¾Ð´Ð°
         void CustomOutputFunction(void* userdata, int category,
             SDL_LogPriority priority, const char* message) {
             if (logFileStream && logFileStream->is_open()) {
                 *logFileStream << message << std::endl;
             }
 
-            // Âñåãäà âûâîäèì â ñòàíäàðòíûé âûâîä SDL
+            // Ð’ÑÐµÐ³Ð´Ð° Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ð¼ Ð² ÑÑ‚Ð°Ð½Ð´Ð°Ñ€Ñ‚Ð½Ñ‹Ð¹ Ð²Ñ‹Ð²Ð¾Ð´ SDL
             if (defaultOutputFunction) {
                 defaultOutputFunction(defaultUserdata, category, priority, message);
             }
@@ -36,7 +36,7 @@ namespace prism::logger {
 
     bool setOutputFile(const std::string& filename) {
         try {
-            // Ñîõðàíÿåì ñòàíäàðòíûé âûâîä, åñëè åù¸ íå ñäåëàëè ýòîãî
+            // Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÑÐµÐ¼ ÑÑ‚Ð°Ð½Ð´Ð°Ñ€Ñ‚Ð½Ñ‹Ð¹ Ð²Ñ‹Ð²Ð¾Ð´, ÐµÑÐ»Ð¸ ÐµÑ‰Ñ‘ Ð½Ðµ ÑÐ´ÐµÐ»Ð°Ð»Ð¸ ÑÑ‚Ð¾Ð³Ð¾
             if (!defaultOutputFunction) {
                 SDL_LogGetOutputFunction(&defaultOutputFunction, &defaultUserdata);
             }

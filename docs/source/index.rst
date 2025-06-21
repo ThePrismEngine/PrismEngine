@@ -17,11 +17,11 @@
    :caption: Компоненты:
 
    modules/math
-   modules/logger
    modules/core
    modules/render
    modules/ui
    modules/physics
+   modules/logger
 
 Для разработчиков
 ----------------

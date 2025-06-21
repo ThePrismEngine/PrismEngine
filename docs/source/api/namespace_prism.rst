@@ -17,6 +17,8 @@ Namespaces
 ----------
 
 
+- :ref:`namespace_prism__logger`
+
 - :ref:`namespace_prism__math`
 
 - :ref:`namespace_prism__view`

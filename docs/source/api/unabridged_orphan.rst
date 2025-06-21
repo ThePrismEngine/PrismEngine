@@ -45,6 +45,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_src_logger.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_logger.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_src_matrix.cpp.rst
 
 .. toctree::

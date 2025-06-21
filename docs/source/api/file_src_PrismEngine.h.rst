@@ -30,9 +30,9 @@ Includes
 --------
 
 
-- ``Window.h`` (:ref:`file_src_Window.h`)
-
 - ``fmath.h`` (:ref:`file_src_fmath.h`)
+
+- ``logger.h`` (:ref:`file_src_logger.h`)
 
 - ``matrix.h`` (:ref:`file_src_matrix.h`)
 
