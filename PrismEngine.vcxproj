@@ -70,6 +70,22 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Configuration)\</IntDir>
+  </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnableManifest>true</VcpkgEnableManifest>
     <VcpkgXUseBuiltInApplocalDeps>false</VcpkgXUseBuiltInApplocalDeps>
@@ -188,22 +204,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\fmath.cpp" />
-    <ClCompile Include="src\Frame.cpp" />
+    <ClCompile Include="src\logger.cpp" />
     <ClCompile Include="src\matrix.cpp" />
     <ClCompile Include="src\PrismEngine.cpp" />
     <ClCompile Include="src\vector.cpp" />
-    <ClCompile Include="src\Window.cpp" />
-    <ClCompile Include="src\WindowVkManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Config.h" />
     <ClInclude Include="src\fmath.h" />
-    <ClInclude Include="src\Frame.h" />
+    <ClInclude Include="src\logger.h" />
     <ClInclude Include="src\matrix.h" />
     <ClInclude Include="src\PrismEngine.h" />
     <ClInclude Include="src\vector.h" />
-    <ClInclude Include="src\Window.h" />
-    <ClInclude Include="src\WindowVkManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
