@@ -21,6 +21,7 @@
    modules/render
    modules/ui
    modules/physics
+   modules/logger
 
 Для разработчиков
 ----------------

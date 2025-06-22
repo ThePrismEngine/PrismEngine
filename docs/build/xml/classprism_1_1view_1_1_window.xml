@@ -1,0 +1,1087 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1view_1_1_window" kind="class" language="C++" prot="public">
+    <compoundname>prism::view::Window</compoundname>
+    <includes refid="_window_8h" local="no">Window.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1a24fd09bbf7871e2448af8db4471879fe" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool prism::view::Window::enableValidationLayers</definition>
+        <argsstring></argsstring>
+        <name>enableValidationLayers</name>
+        <qualifiedname>prism::view::Window::enableValidationLayers</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="101" column="24" bodyfile="src/Window.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1a376baefea36091e57fa85ea6d4083dba" prot="private" static="no" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* prism::view::Window::m_sdlWindow</definition>
+        <argsstring></argsstring>
+        <name>m_sdlWindow</name>
+        <qualifiedname>prism::view::Window::m_sdlWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="104" column="24" bodyfile="src/Window.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1a4565b56a9f438b6c87c9f262e8848fa0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::view::Window::m_isDestroyed</definition>
+        <argsstring></argsstring>
+        <name>m_isDestroyed</name>
+        <qualifiedname>prism::view::Window::m_isDestroyed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="105" column="18" bodyfile="src/Window.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1a73b38623bf14708bf5ac9602d1ce684b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::view::Window::m_windowMinimized</definition>
+        <argsstring></argsstring>
+        <name>m_windowMinimized</name>
+        <qualifiedname>prism::view::Window::m_windowMinimized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="107" column="18" bodyfile="src/Window.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1a00ee05d32648685bb74fba379937ba0a" prot="private" static="no" mutable="no">
+        <type>VkInstance</type>
+        <definition>VkInstance prism::view::Window::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <qualifiedname>prism::view::Window::instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="112" column="24" bodyfile="src/Window.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1a70e49b67dea0ee45f4d52e4ebb03db7e" prot="private" static="no" mutable="no">
+        <type>VkPhysicalDevice</type>
+        <definition>VkPhysicalDevice prism::view::Window::physicalDevice</definition>
+        <argsstring></argsstring>
+        <name>physicalDevice</name>
+        <qualifiedname>prism::view::Window::physicalDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="113" column="30" bodyfile="src/Window.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" prot="private" static="no" mutable="no">
+        <type>VkDevice</type>
+        <definition>VkDevice prism::view::Window::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>prism::view::Window::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="114" column="22" bodyfile="src/Window.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1a9b0044913b1df68617169565b85e5cae" prot="private" static="no" mutable="no">
+        <type>VkQueue</type>
+        <definition>VkQueue prism::view::Window::graphicsQueue</definition>
+        <argsstring></argsstring>
+        <name>graphicsQueue</name>
+        <qualifiedname>prism::view::Window::graphicsQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="115" column="21" bodyfile="src/Window.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1ada7a56e2c924860af9187e3994c88e31" prot="private" static="no" mutable="no">
+        <type>VkSurfaceKHR</type>
+        <definition>VkSurfaceKHR prism::view::Window::surface</definition>
+        <argsstring></argsstring>
+        <name>surface</name>
+        <qualifiedname>prism::view::Window::surface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="116" column="26" bodyfile="src/Window.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1af508535cfe4d6904d01396d15ee0a91b" prot="private" static="no" mutable="no">
+        <type>VkQueue</type>
+        <definition>VkQueue prism::view::Window::presentQueue</definition>
+        <argsstring></argsstring>
+        <name>presentQueue</name>
+        <qualifiedname>prism::view::Window::presentQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="117" column="21" bodyfile="src/Window.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classprism_1_1view_1_1_window_1ab54c30367a0c4d0630df18dab81e0c21" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::view::Window::s_sdlInitialized</definition>
+        <argsstring></argsstring>
+        <name>s_sdlInitialized</name>
+        <qualifiedname>prism::view::Window::s_sdlInitialized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="103" column="25" bodyfile="src/Window.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1ab37a7db3c8ac082958cbf1cc76c53232" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::view::Window::Window</definition>
+        <argsstring>(const char *title, int width, int height)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::view::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="35" column="13" bodyfile="src/Window.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1ae2cc8b5460d772a2549cbcde23c31d6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::view::Window::Window</definition>
+        <argsstring>(const char *title, int width, int height, Uint32 sdlFlags)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::view::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>Uint32</type>
+          <declname>sdlFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="36" column="13" bodyfile="src/Window.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1abb2622120d5a2c4008453fd5f0e213c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::view::Window::Window</definition>
+        <argsstring>(const char *title, int x, int y, int width, int height)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::view::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="37" column="13" bodyfile="src/Window.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a115a76f66c617395fcfe4228188bd717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::view::Window::Window</definition>
+        <argsstring>(const char *title, int width, int height, const std::string &amp;iconPath)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::view::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>iconPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="38" column="13" bodyfile="src/Window.cpp" bodystart="20" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a8431a79eba3e50614cc457f7ce0605f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::view::Window::Window</definition>
+        <argsstring>(const char *title, int width, int height, int minWidth, int minHeight, int maxWidth, int maxHeight)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::view::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minHeight</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="42" column="13" bodyfile="src/Window.cpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1aa380520df5902e4c2f52dbd7486d65b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::view::Window::~Window</definition>
+        <argsstring>()</argsstring>
+        <name>~Window</name>
+        <qualifiedname>prism::view::Window::~Window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="46" column="13" bodyfile="src/Window.cpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a5cf935efd740352ab3ff7ebee06e7254" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * prism::view::Window::getTitle</definition>
+        <argsstring>() const</argsstring>
+        <name>getTitle</name>
+        <qualifiedname>prism::view::Window::getTitle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="49" column="24" bodyfile="src/Window.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1adfe7fd34bbb853a8ac64ca0b5a68cadd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setTitle</definition>
+        <argsstring>(const char *title)</argsstring>
+        <name>setTitle</name>
+        <qualifiedname>prism::view::Window::setTitle</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="50" column="18" bodyfile="src/Window.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1ab9f80b6a4d67e91bb8454a6e45b00c6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int prism::view::Window::getWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getWidth</name>
+        <qualifiedname>prism::view::Window::getWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="51" column="17" bodyfile="src/Window.cpp" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a45ff9b145b3fdd721de6ae4a7541f0c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int prism::view::Window::getHeight</definition>
+        <argsstring>()</argsstring>
+        <name>getHeight</name>
+        <qualifiedname>prism::view::Window::getHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="52" column="17" bodyfile="src/Window.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a80f7ecc7488b3a75da4ac2b45895ae2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::getSize</definition>
+        <argsstring>(int *width, int *height)</argsstring>
+        <name>getSize</name>
+        <qualifiedname>prism::view::Window::getSize</qualifiedname>
+        <param>
+          <type>int *</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="53" column="18" bodyfile="src/Window.cpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a29d789115d706e4f5bd98448cdae1108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>setWidth</name>
+        <qualifiedname>prism::view::Window::setWidth</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="54" column="18" bodyfile="src/Window.cpp" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1ac2d1238a607bf29ac672870ebf9f73cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setHeight</definition>
+        <argsstring>(int height)</argsstring>
+        <name>setHeight</name>
+        <qualifiedname>prism::view::Window::setHeight</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="55" column="18" bodyfile="src/Window.cpp" bodystart="92" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a9eddda4bbcacea440786c2ace67f2a16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setSize</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>setSize</name>
+        <qualifiedname>prism::view::Window::setSize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="56" column="18" bodyfile="src/Window.cpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a000dbd1aaf3338843829891b00de6cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setFullscreen</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setFullscreen</name>
+        <qualifiedname>prism::view::Window::setFullscreen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="59" column="18" bodyfile="src/Window.cpp" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1aef39954d735b1762f1d4179a9f08d6e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setBorderless</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setBorderless</name>
+        <qualifiedname>prism::view::Window::setBorderless</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="60" column="18" bodyfile="src/Window.cpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a064fdb06b7036f1dacaa110e6e0007db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setResizable</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setResizable</name>
+        <qualifiedname>prism::view::Window::setResizable</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="61" column="18" bodyfile="src/Window.cpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a0e401cb1e3912c8e2394698dfdda2aeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setGrabMouse</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setGrabMouse</name>
+        <qualifiedname>prism::view::Window::setGrabMouse</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="62" column="18" bodyfile="src/Window.cpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a4d340a4f8ec13659938a2e53d7c479d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::view::Window::isFullscreen</definition>
+        <argsstring>() const</argsstring>
+        <name>isFullscreen</name>
+        <qualifiedname>prism::view::Window::isFullscreen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="63" column="18" bodyfile="src/Window.cpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a0543c7f97e4d2ef79be90a0daab7976c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::view::Window::isBorderless</definition>
+        <argsstring>() const</argsstring>
+        <name>isBorderless</name>
+        <qualifiedname>prism::view::Window::isBorderless</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="64" column="18" bodyfile="src/Window.cpp" bodystart="122" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a0fcefa88943a843cc1cb79c8f281c58f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::view::Window::isResizable</definition>
+        <argsstring>() const</argsstring>
+        <name>isResizable</name>
+        <qualifiedname>prism::view::Window::isResizable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="65" column="18" bodyfile="src/Window.cpp" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a916d1534c5118991329ac972b841c9b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::view::Window::isGrabMouse</definition>
+        <argsstring>() const</argsstring>
+        <name>isGrabMouse</name>
+        <qualifiedname>prism::view::Window::isGrabMouse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="66" column="18" bodyfile="src/Window.cpp" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1af46aa597947fb1e042ae20f744b3a785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setPosition</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>setPosition</name>
+        <qualifiedname>prism::view::Window::setPosition</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="69" column="18" bodyfile="src/Window.cpp" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a2762ec845f95405e8798107b8de8835b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; int, int &gt;</type>
+        <definition>std::pair&lt; int, int &gt; prism::view::Window::getPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>getPosition</name>
+        <qualifiedname>prism::view::Window::getPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="70" column="23" bodyfile="src/Window.cpp" bodystart="138" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a6b100e90fbe4904d23bcac79921fd45b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::centerWindow</definition>
+        <argsstring>()</argsstring>
+        <name>centerWindow</name>
+        <qualifiedname>prism::view::Window::centerWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="71" column="18" bodyfile="src/Window.cpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a63072d9ec3267b92f28bc9559aa68907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setMinSize</definition>
+        <argsstring>(int minWidth, int minHeight)</argsstring>
+        <name>setMinSize</name>
+        <qualifiedname>prism::view::Window::setMinSize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>minWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="72" column="18" bodyfile="src/Window.cpp" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a3682515a8b78f38e49bc00ef351d1e91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setMaxSize</definition>
+        <argsstring>(int maxWidth, int maxHeight)</argsstring>
+        <name>setMaxSize</name>
+        <qualifiedname>prism::view::Window::setMaxSize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>maxWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="73" column="18" bodyfile="src/Window.cpp" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a52a4884a96c2dbb938c23b4bafef341d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::view::Window::shouldClose</definition>
+        <argsstring>() const</argsstring>
+        <name>shouldClose</name>
+        <qualifiedname>prism::view::Window::shouldClose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="76" column="18" bodyfile="src/Window.cpp" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a95715b5d073f7a38592f3a344be48743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::setCloseRequested</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>setCloseRequested</name>
+        <qualifiedname>prism::view::Window::setCloseRequested</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="77" column="18" bodyfile="src/Window.cpp" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1ab4f40d8f9f44ff9e6f5310ba7cb3500d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::handleEvents</definition>
+        <argsstring>()</argsstring>
+        <name>handleEvents</name>
+        <qualifiedname>prism::view::Window::handleEvents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="78" column="18" bodyfile="src/Window.cpp" bodystart="164" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1ad904abdf14e9eb6e3f853763c7f06faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>prism::view::Window::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="79" column="18" bodyfile="src/Window.cpp" bodystart="181" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1aaec31f6c1a24777d4ce31811ef3d2050" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <qualifiedname>prism::view::Window::update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="80" column="18" bodyfile="src/Window.cpp" bodystart="185" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a7e7ab6881f1847d75494d4e751c5826e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>prism::view::Window::destroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="84" column="18" bodyfile="src/Window.cpp" bodystart="189" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a5189f4eb8214086bed7037cdae2ffd89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::vulkanInut</definition>
+        <argsstring>()</argsstring>
+        <name>vulkanInut</name>
+        <qualifiedname>prism::view::Window::vulkanInut</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="89" column="18" bodyfile="src/Window.cpp" bodystart="209" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a06e21fda269f7b8242de7ec8c5310e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::createInstance</definition>
+        <argsstring>()</argsstring>
+        <name>createInstance</name>
+        <qualifiedname>prism::view::Window::createInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="90" column="18" bodyfile="src/Window.cpp" bodystart="217" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a7bb96f10739921534995f7e0e2a0360f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::pickPhysicalDevice</definition>
+        <argsstring>()</argsstring>
+        <name>pickPhysicalDevice</name>
+        <qualifiedname>prism::view::Window::pickPhysicalDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="91" column="18" bodyfile="src/Window.cpp" bodystart="244" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a76dc16248ebd56b8787302654689aa08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::view::Window::isDeviceSuitable</definition>
+        <argsstring>(VkPhysicalDevice device)</argsstring>
+        <name>isDeviceSuitable</name>
+        <qualifiedname>prism::view::Window::isDeviceSuitable</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="92" column="18" bodyfile="src/Window.cpp" bodystart="432" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1af18daa601490652e0bc0434b13cabb4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::view::Window::checkDeviceExtensionSupport</definition>
+        <argsstring>(VkPhysicalDevice device)</argsstring>
+        <name>checkDeviceExtensionSupport</name>
+        <qualifiedname>prism::view::Window::checkDeviceExtensionSupport</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="94" column="18" bodyfile="src/Window.cpp" bodystart="440" bodyend="454"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a5e4bd28cd96622e8b3b13e57778ebb8b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classprism_1_1view_1_1_window" kindref="compound">Window</ref></type>
+        <definition>Window prism::view::Window::CreateCentered</definition>
+        <argsstring>(const char *title, int width, int height)</argsstring>
+        <name>CreateCentered</name>
+        <qualifiedname>prism::view::Window::CreateCentered</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="41" column="27" bodyfile="src/Window.cpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a0ac1c3fd06ab0d3b1582ac9c448a161c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void prism::view::Window::setSDLInitialized</definition>
+        <argsstring>(bool initialized)</argsstring>
+        <name>setSDLInitialized</name>
+        <qualifiedname>prism::view::Window::setSDLInitialized</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>initialized</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="86" column="25" bodyfile="src/Window.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a64aa028f8e7bfbc225dd09a64a36cd93" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::view::Window::Window</definition>
+        <argsstring>(const char *title, int x, int y, int width, int height, Uint32 sdlFlags)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::view::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>Uint32</type>
+          <declname>sdlFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="110" column="13" bodyfile="src/Window.cpp" bodystart="40" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a71ddbebd98846cd305ba67fd8f3f3ef5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int prism::view::Window::rateDeviceSuitability</definition>
+        <argsstring>(VkPhysicalDevice device)</argsstring>
+        <name>rateDeviceSuitability</name>
+        <qualifiedname>prism::view::Window::rateDeviceSuitability</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="119" column="17" bodyfile="src/Window.cpp" bodystart="305" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1addfe6172e6af7dabf1cb8bdd5f60655e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1view_1_1_queue_family_indices" kindref="compound">QueueFamilyIndices</ref></type>
+        <definition>QueueFamilyIndices prism::view::Window::findQueueFamilies</definition>
+        <argsstring>(VkPhysicalDevice device)</argsstring>
+        <name>findQueueFamilies</name>
+        <qualifiedname>prism::view::Window::findQueueFamilies</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="121" column="32" bodyfile="src/Window.cpp" bodystart="354" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a85ae040c045e6e1d57e79ca5fd2b42c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::createLogicalDevice</definition>
+        <argsstring>()</argsstring>
+        <name>createLogicalDevice</name>
+        <qualifiedname>prism::view::Window::createLogicalDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="122" column="18" bodyfile="src/Window.cpp" bodystart="385" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1view_1_1_window_1a244e6e0144fe90f9604452a1cb515cea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::view::Window::createSurface</definition>
+        <argsstring>()</argsstring>
+        <name>createSurface</name>
+        <qualifiedname>prism::view::Window::createSurface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="123" column="18" bodyfile="src/Window.cpp" bodystart="426" bodyend="430"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Window.h" line="32" column="9" bodyfile="src/Window.h" bodystart="32" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classprism_1_1view_1_1_window_1a6b100e90fbe4904d23bcac79921fd45b" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>centerWindow</name></member>
+      <member refid="classprism_1_1view_1_1_window_1af18daa601490652e0bc0434b13cabb4f" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>checkDeviceExtensionSupport</name></member>
+      <member refid="classprism_1_1view_1_1_window_1ad904abdf14e9eb6e3f853763c7f06faf" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>clear</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a5e4bd28cd96622e8b3b13e57778ebb8b" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>CreateCentered</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a06e21fda269f7b8242de7ec8c5310e8d" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>createInstance</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a85ae040c045e6e1d57e79ca5fd2b42c3" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>createLogicalDevice</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a244e6e0144fe90f9604452a1cb515cea" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>createSurface</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a7e7ab6881f1847d75494d4e751c5826e" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>destroy</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>device</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a24fd09bbf7871e2448af8db4471879fe" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>enableValidationLayers</name></member>
+      <member refid="classprism_1_1view_1_1_window_1addfe6172e6af7dabf1cb8bdd5f60655e" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>findQueueFamilies</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a45ff9b145b3fdd721de6ae4a7541f0c2" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>getHeight</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a2762ec845f95405e8798107b8de8835b" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>getPosition</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a80f7ecc7488b3a75da4ac2b45895ae2e" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>getSize</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a5cf935efd740352ab3ff7ebee06e7254" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>getTitle</name></member>
+      <member refid="classprism_1_1view_1_1_window_1ab9f80b6a4d67e91bb8454a6e45b00c6a" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>getWidth</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a9b0044913b1df68617169565b85e5cae" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>graphicsQueue</name></member>
+      <member refid="classprism_1_1view_1_1_window_1ab4f40d8f9f44ff9e6f5310ba7cb3500d" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>handleEvents</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a00ee05d32648685bb74fba379937ba0a" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>instance</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a0543c7f97e4d2ef79be90a0daab7976c" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>isBorderless</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a76dc16248ebd56b8787302654689aa08" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>isDeviceSuitable</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a4d340a4f8ec13659938a2e53d7c479d0" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>isFullscreen</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a916d1534c5118991329ac972b841c9b5" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>isGrabMouse</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a0fcefa88943a843cc1cb79c8f281c58f" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>isResizable</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a4565b56a9f438b6c87c9f262e8848fa0" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>m_isDestroyed</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a376baefea36091e57fa85ea6d4083dba" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>m_sdlWindow</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a73b38623bf14708bf5ac9602d1ce684b" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>m_windowMinimized</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a70e49b67dea0ee45f4d52e4ebb03db7e" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>physicalDevice</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a7bb96f10739921534995f7e0e2a0360f" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>pickPhysicalDevice</name></member>
+      <member refid="classprism_1_1view_1_1_window_1af508535cfe4d6904d01396d15ee0a91b" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>presentQueue</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a71ddbebd98846cd305ba67fd8f3f3ef5" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>rateDeviceSuitability</name></member>
+      <member refid="classprism_1_1view_1_1_window_1ab54c30367a0c4d0630df18dab81e0c21" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>s_sdlInitialized</name></member>
+      <member refid="classprism_1_1view_1_1_window_1aef39954d735b1762f1d4179a9f08d6e4" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setBorderless</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a95715b5d073f7a38592f3a344be48743" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setCloseRequested</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a000dbd1aaf3338843829891b00de6cef" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setFullscreen</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a0e401cb1e3912c8e2394698dfdda2aeb" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setGrabMouse</name></member>
+      <member refid="classprism_1_1view_1_1_window_1ac2d1238a607bf29ac672870ebf9f73cb" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setHeight</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a3682515a8b78f38e49bc00ef351d1e91" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setMaxSize</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a63072d9ec3267b92f28bc9559aa68907" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setMinSize</name></member>
+      <member refid="classprism_1_1view_1_1_window_1af46aa597947fb1e042ae20f744b3a785" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setPosition</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a064fdb06b7036f1dacaa110e6e0007db" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setResizable</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a0ac1c3fd06ab0d3b1582ac9c448a161c" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setSDLInitialized</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a9eddda4bbcacea440786c2ace67f2a16" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setSize</name></member>
+      <member refid="classprism_1_1view_1_1_window_1adfe7fd34bbb853a8ac64ca0b5a68cadd" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setTitle</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a29d789115d706e4f5bd98448cdae1108" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>setWidth</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a52a4884a96c2dbb938c23b4bafef341d" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>shouldClose</name></member>
+      <member refid="classprism_1_1view_1_1_window_1ada7a56e2c924860af9187e3994c88e31" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>surface</name></member>
+      <member refid="classprism_1_1view_1_1_window_1aaec31f6c1a24777d4ce31811ef3d2050" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>update</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a5189f4eb8214086bed7037cdae2ffd89" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>vulkanInut</name></member>
+      <member refid="classprism_1_1view_1_1_window_1ab37a7db3c8ac082958cbf1cc76c53232" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1view_1_1_window_1ae2cc8b5460d772a2549cbcde23c31d6f" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1view_1_1_window_1abb2622120d5a2c4008453fd5f0e213c2" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a115a76f66c617395fcfe4228188bd717" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a8431a79eba3e50614cc457f7ce0605f0" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1view_1_1_window_1a64aa028f8e7bfbc225dd09a64a36cd93" prot="private" virt="non-virtual"><scope>prism::view::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1view_1_1_window_1aa380520df5902e4c2f52dbd7486d65b8" prot="public" virt="non-virtual"><scope>prism::view::Window</scope><name>~Window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

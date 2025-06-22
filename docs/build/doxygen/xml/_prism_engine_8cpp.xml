@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="_prism_engine_8cpp" kind="file" language="C++">
     <compoundname>PrismEngine.cpp</compoundname>
     <includes refid="_prism_engine_8h" local="yes">PrismEngine.h</includes>
     <incdepgraph>
       <node id="1">
-        <label>src/PrismEngine.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.cpp</label>
         <link refid="_prism_engine_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -22,34 +22,26 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>fmath.h</label>
+        <link refid="fmath_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
       <node id="9">
-        <label>Window.h</label>
-        <link refid="_window_8h"/>
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>fmath.h</label>
-        <link refid="fmath_8h"/>
-        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -73,20 +65,20 @@
       <node id="5">
         <label>SDL.h</label>
       </node>
-      <node id="15">
-        <label>SDL_vulkan.h</label>
+      <node id="10">
+        <label>SDL2/SDL_log.h</label>
       </node>
       <node id="8">
         <label>corecrt_math_defines.h</label>
       </node>
-      <node id="16">
+      <node id="13">
+        <label>fstream</label>
+      </node>
+      <node id="12">
         <label>memory</label>
       </node>
-      <node id="13">
+      <node id="15">
         <label>optional</label>
-      </node>
-      <node id="17">
-        <label>set</label>
       </node>
       <node id="4">
         <label>stdexcept</label>
@@ -95,13 +87,7 @@
         <label>string</label>
       </node>
       <node id="14">
-        <label>utility</label>
-      </node>
-      <node id="10">
-        <label>vector</label>
-      </node>
-      <node id="12">
-        <label>vulkan/vulkan.h</label>
+        <label>unordered_map</label>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -117,6 +103,6 @@
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Init(SDL_INIT_EVERYTHING);</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/PrismEngine.cpp"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.cpp"/>
   </compounddef>
 </doxygen>

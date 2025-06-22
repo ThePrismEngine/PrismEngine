@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="fmath_8h" kind="file" language="C++">
     <compoundname>fmath.h</compoundname>
     <includes local="no">corecrt_math_defines.h</includes>
-    <includedby refid="_prism_engine_8h" local="yes">src/PrismEngine.h</includedby>
-    <includedby refid="fmath_8cpp" local="yes">src/fmath.cpp</includedby>
+    <includedby refid="_prism_engine_8h" local="yes">C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.h</includedby>
+    <includedby refid="fmath_8cpp" local="yes">C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>src/fmath.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/fmath.h</label>
         <link refid="fmath_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -18,21 +18,21 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>src/PrismEngine.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.cpp</label>
         <link refid="_prism_engine_8cpp"/>
       </node>
       <node id="2">
-        <label>src/PrismEngine.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.h</label>
         <link refid="_prism_engine_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>src/fmath.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp</label>
         <link refid="fmath_8cpp"/>
       </node>
       <node id="1">
-        <label>src/fmath.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/fmath.h</label>
         <link refid="fmath_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -61,6 +61,6 @@
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>math</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>prism</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="src/fmath.h"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/fmath.h"/>
   </compounddef>
 </doxygen>

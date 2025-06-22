@@ -1,0 +1,527 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespaceprism_1_1logger" kind="namespace" language="C++">
+    <compoundname>prism::logger</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Error</name>
+        <qualifiedname>prism::logger::Error</qualifiedname>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654" prot="public">
+          <name>TEST_ERROR</name>
+          <briefdescription>
+<para>Тестовая ошибка (пример) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Перечисление ошибок движка </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Содержит коды ошибок, которые могут быть залогированы через <ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logError()</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.h" line="14" column="5" bodyfile="src/logger.h" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Level</name>
+        <qualifiedname>prism::logger::Level</qualifiedname>
+        <enumvalue id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc" prot="public">
+          <name>VERBOSE</name>
+          <initializer>= SDL_LOG_PRIORITY_VERBOSE</initializer>
+          <briefdescription>
+<para>Подробные сообщения (наибольшая детализация) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15" prot="public">
+          <name>DEBUG</name>
+          <initializer>= SDL_LOG_PRIORITY_DEBUG</initializer>
+          <briefdescription>
+<para>Отладочные сообщения </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3" prot="public">
+          <name>INFO</name>
+          <initializer>= SDL_LOG_PRIORITY_INFO</initializer>
+          <briefdescription>
+<para>Информационные сообщения </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b" prot="public">
+          <name>WARNING</name>
+          <initializer>= SDL_LOG_PRIORITY_WARN</initializer>
+          <briefdescription>
+<para>Предупреждения </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5" prot="public">
+          <name>ERROR</name>
+          <initializer>= SDL_LOG_PRIORITY_ERROR</initializer>
+          <briefdescription>
+<para>Ошибки </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870" prot="public">
+          <name>CRITICAL</name>
+          <initializer>= SDL_LOG_PRIORITY_CRITICAL</initializer>
+          <briefdescription>
+<para>Критические ошибки </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Уровни логирования </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Совместимы с уровнями логирования SDL (используют соответствующие приоритеты) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.h" line="22" column="5" bodyfile="src/logger.h" bodystart="22" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a44ab0bc2022efc1dbfe3234031cac93e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::setLevel</definition>
+        <argsstring>(Level level)</argsstring>
+        <name>setLevel</name>
+        <qualifiedname>prism::logger::setLevel</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856" kindref="member">Level</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>Устанавливает уровень логирования </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Минимальный уровень логирования (сообщения ниже этого уровня игнорируются) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="33" column="10" bodyfile="src/logger.cpp" bodystart="33" bodyend="37" declfile="src/logger.h" declline="35" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a0f5071ef54b1884256b312cec14e910d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::logger::setOutputFile</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>setOutputFile</name>
+        <qualifiedname>prism::logger::setOutputFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Настраивает вывод логов в файл </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Имя файла для записи логов </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true если файл успешно открыт для записи, false в случае ошибки </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="39" column="10" bodyfile="src/logger.cpp" bodystart="39" bodyend="62" declfile="src/logger.h" declline="42" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1aea6335133a1d9d4d190d24737b4d12cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::setOutputConsole</definition>
+        <argsstring>()</argsstring>
+        <name>setOutputConsole</name>
+        <qualifiedname>prism::logger::setOutputConsole</qualifiedname>
+        <briefdescription>
+<para>Настраивает вывод логов в консоль </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Это режим по умолчанию для системы логирования </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="64" column="10" bodyfile="src/logger.cpp" bodystart="64" bodyend="74" declfile="src/logger.h" declline="48" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a011c76bbfb6104919163e337e828a26e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::log</definition>
+        <argsstring>(Level level, const std::string &amp;message)</argsstring>
+        <name>log</name>
+        <qualifiedname>prism::logger::log</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856" kindref="member">Level</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Основная функция логирования </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Уровень важности сообщения </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Текст сообщения для логирования </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="76" column="10" bodyfile="src/logger.cpp" bodystart="76" bodyend="80" declfile="src/logger.h" declline="55" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::logError</definition>
+        <argsstring>(Error err, const std::string &amp;details=&quot;&quot;)</argsstring>
+        <name>logError</name>
+        <qualifiedname>prism::logger::logError</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f" kindref="member">Error</ref></type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>details</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Логирует ошибку движка с дополнительными деталями </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Код ошибки из перечисления <ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f" kindref="member">Error</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Дополнительная информация об ошибке (по умолчанию пустая строка) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="82" column="10" bodyfile="src/logger.cpp" bodystart="82" bodyend="92" declfile="src/logger.h" declline="62" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1af4a740cd72b4f7684f4466728cf548d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::verbose</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>verbose</name>
+        <qualifiedname>prism::logger::verbose</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Логирует сообщение с уровнем VERBOSE. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Текст сообщения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="94" column="10" bodyfile="src/logger.cpp" bodystart="94" bodyend="94" declfile="src/logger.h" declline="68" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a3ce9ded53e563d7894a199406899a18c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::debug</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>debug</name>
+        <qualifiedname>prism::logger::debug</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Логирует сообщение с уровнем DEBUG. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Текст сообщения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="95" column="10" bodyfile="src/logger.cpp" bodystart="95" bodyend="95" declfile="src/logger.h" declline="74" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::info</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>info</name>
+        <qualifiedname>prism::logger::info</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Логирует сообщение с уровнем INFO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Текст сообщения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="96" column="10" bodyfile="src/logger.cpp" bodystart="96" bodyend="96" declfile="src/logger.h" declline="80" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a95789fad40cdbf5ca47baef4c355c1e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::warning</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>warning</name>
+        <qualifiedname>prism::logger::warning</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Логирует сообщение с уровнем WARNING. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Текст сообщения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="97" column="10" bodyfile="src/logger.cpp" bodystart="97" bodyend="97" declfile="src/logger.h" declline="86" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1ae5db974c5397849b8fc4230c9147906d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::error</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>error</name>
+        <qualifiedname>prism::logger::error</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Логирует сообщение с уровнем ERROR. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Текст сообщения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="98" column="10" bodyfile="src/logger.cpp" bodystart="98" bodyend="98" declfile="src/logger.h" declline="92" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1ab7af2a1862659afcddc003e975de9734" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::critical</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>critical</name>
+        <qualifiedname>prism::logger::critical</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Логирует сообщение с уровнем CRITICAL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Текст сообщения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="99" column="10" bodyfile="src/logger.cpp" bodystart="99" bodyend="99" declfile="src/logger.h" declline="98" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f" kindref="member">Error</ref> &gt;</type>
+        <definition>std::optional&lt; Error &gt; prism::logger::getLastError</definition>
+        <argsstring>()</argsstring>
+        <name>getLastError</name>
+        <qualifiedname>prism::logger::getLastError</qualifiedname>
+        <briefdescription>
+<para>Получает последнюю залогированную ошибку </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::optional&lt;Error&gt; - последняя ошибка или std::nullopt, если ошибок не было </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="100" column="19" bodyfile="src/logger.cpp" bodystart="100" bodyend="103" declfile="src/logger.h" declline="104" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a95da0e71a7281fed4c011c2dd58ba1af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::logger::hasLastError</definition>
+        <argsstring>()</argsstring>
+        <name>hasLastError</name>
+        <qualifiedname>prism::logger::hasLastError</qualifiedname>
+        <briefdescription>
+<para>Проверяет наличие залогированных ошибок </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true если есть необработанная ошибка, false иначе </para>
+</simplesect>
+<simplesect kind="note"><para>Эквивалентно <ref refid="namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1" kindref="member">getLastError()</ref>.has_value() </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="105" column="10" bodyfile="src/logger.cpp" bodystart="105" bodyend="107" declfile="src/logger.h" declline="111" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1aa50f2608949bcbf87806915fb04c4abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::logger::checkLastErrorType</definition>
+        <argsstring>(Error errorType)</argsstring>
+        <name>checkLastErrorType</name>
+        <qualifiedname>prism::logger::checkLastErrorType</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f" kindref="member">Error</ref></type>
+          <declname>errorType</declname>
+        </param>
+        <briefdescription>
+<para>Проверяет тип последней ошибки </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ожидаемый тип ошибки для проверки </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true если последняя ошибка существует и совпадает с заданным типом </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1" kindref="member">getLastError()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="109" column="10" bodyfile="src/logger.cpp" bodystart="109" bodyend="111" declfile="src/logger.h" declline="119" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1logger_1a7e98e993d5b16cdd4d5d39c6f2797967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::logger::clearLastError</definition>
+        <argsstring>()</argsstring>
+        <name>clearLastError</name>
+        <qualifiedname>prism::logger::clearLastError</qualifiedname>
+        <briefdescription>
+<para>Сбрасывает состояние последней ошибки </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="post"><para>После вызова <ref refid="namespaceprism_1_1logger_1a95da0e71a7281fed4c011c2dd58ba1af" kindref="member">hasLastError()</ref> будет возвращать false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger.cpp" line="113" column="10" bodyfile="src/logger.cpp" bodystart="113" bodyend="115" declfile="src/logger.h" declline="125" declcolumn="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/logger.cpp" line="3" column="1"/>
+  </compounddef>
+</doxygen>

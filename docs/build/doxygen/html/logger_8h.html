@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrismEngine: Файл C:/Users/Admin/source/repos/PrismEngine/src/logger.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PrismEngine
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('logger_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл logger.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SDL2/SDL_log.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+</div>
+<p><a href="logger_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:prism" id="r_prism"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism.html">prism</a></td></tr>
+<tr class="memitem:prism_3A_3Alogger" id="r_prism_3A_3Alogger"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html">prism::logger</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a3e930b50cf4b43b8d9e75a260feb989f" id="r_a3e930b50cf4b43b8d9e75a260feb989f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#a3e930b50cf4b43b8d9e75a260feb989f">prism::logger::Error</a> { <a class="el" href="namespaceprism_1_1logger.html#a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654">prism::logger::TEST_ERROR</a>
+ }</td></tr>
+<tr class="memdesc:a3e930b50cf4b43b8d9e75a260feb989f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перечисление ошибок движка  <a href="namespaceprism_1_1logger.html#a3e930b50cf4b43b8d9e75a260feb989f">Подробнее...</a><br /></td></tr>
+<tr class="memitem:abd51414545b3b1a07bc3b2161cf69856" id="r_abd51414545b3b1a07bc3b2161cf69856"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856">prism::logger::Level</a> { <br />
+&#160;&#160;<a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc">prism::logger::VERBOSE</a> = SDL_LOG_PRIORITY_VERBOSE
+, <a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15">prism::logger::DEBUG</a> = SDL_LOG_PRIORITY_DEBUG
+, <a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3">prism::logger::INFO</a> = SDL_LOG_PRIORITY_INFO
+, <a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b">prism::logger::WARNING</a> = SDL_LOG_PRIORITY_WARN
+, <br />
+&#160;&#160;<a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5">prism::logger::ERROR</a> = SDL_LOG_PRIORITY_ERROR
+, <a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870">prism::logger::CRITICAL</a> = SDL_LOG_PRIORITY_CRITICAL
+<br />
+ }</td></tr>
+<tr class="memdesc:abd51414545b3b1a07bc3b2161cf69856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уровни логирования  <a href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856">Подробнее...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a44ab0bc2022efc1dbfe3234031cac93e" id="r_a44ab0bc2022efc1dbfe3234031cac93e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#a44ab0bc2022efc1dbfe3234031cac93e">prism::logger::setLevel</a> (<a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856">Level</a> level)</td></tr>
+<tr class="memdesc:a44ab0bc2022efc1dbfe3234031cac93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает уровень логирования  <br /></td></tr>
+<tr class="memitem:a0f5071ef54b1884256b312cec14e910d" id="r_a0f5071ef54b1884256b312cec14e910d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#a0f5071ef54b1884256b312cec14e910d">prism::logger::setOutputFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a0f5071ef54b1884256b312cec14e910d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Настраивает вывод логов в файл  <br /></td></tr>
+<tr class="memitem:aea6335133a1d9d4d190d24737b4d12cc" id="r_aea6335133a1d9d4d190d24737b4d12cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#aea6335133a1d9d4d190d24737b4d12cc">prism::logger::setOutputConsole</a> ()</td></tr>
+<tr class="memdesc:aea6335133a1d9d4d190d24737b4d12cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Настраивает вывод логов в консоль  <br /></td></tr>
+<tr class="memitem:a011c76bbfb6104919163e337e828a26e" id="r_a011c76bbfb6104919163e337e828a26e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#a011c76bbfb6104919163e337e828a26e">prism::logger::log</a> (<a class="el" href="namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856">Level</a> level, const std::string &amp;message)</td></tr>
+<tr class="memdesc:a011c76bbfb6104919163e337e828a26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Основная функция логирования  <br /></td></tr>
+<tr class="memitem:af1807bb00385d1c5c4ad487f5869e9bd" id="r_af1807bb00385d1c5c4ad487f5869e9bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#af1807bb00385d1c5c4ad487f5869e9bd">prism::logger::logError</a> (<a class="el" href="namespaceprism_1_1logger.html#a3e930b50cf4b43b8d9e75a260feb989f">Error</a> err, const std::string &amp;details=&quot;&quot;)</td></tr>
+<tr class="memdesc:af1807bb00385d1c5c4ad487f5869e9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логирует ошибку движка с дополнительными деталями  <br /></td></tr>
+<tr class="memitem:af4a740cd72b4f7684f4466728cf548d3" id="r_af4a740cd72b4f7684f4466728cf548d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#af4a740cd72b4f7684f4466728cf548d3">prism::logger::verbose</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:af4a740cd72b4f7684f4466728cf548d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логирует сообщение с уровнем VERBOSE.  <br /></td></tr>
+<tr class="memitem:a3ce9ded53e563d7894a199406899a18c" id="r_a3ce9ded53e563d7894a199406899a18c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#a3ce9ded53e563d7894a199406899a18c">prism::logger::debug</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a3ce9ded53e563d7894a199406899a18c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логирует сообщение с уровнем DEBUG.  <br /></td></tr>
+<tr class="memitem:a53c114bd789848844092ce408a10a38c" id="r_a53c114bd789848844092ce408a10a38c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#a53c114bd789848844092ce408a10a38c">prism::logger::info</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a53c114bd789848844092ce408a10a38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логирует сообщение с уровнем INFO.  <br /></td></tr>
+<tr class="memitem:a95789fad40cdbf5ca47baef4c355c1e1" id="r_a95789fad40cdbf5ca47baef4c355c1e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#a95789fad40cdbf5ca47baef4c355c1e1">prism::logger::warning</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a95789fad40cdbf5ca47baef4c355c1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логирует сообщение с уровнем WARNING.  <br /></td></tr>
+<tr class="memitem:ae5db974c5397849b8fc4230c9147906d" id="r_ae5db974c5397849b8fc4230c9147906d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#ae5db974c5397849b8fc4230c9147906d">prism::logger::error</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:ae5db974c5397849b8fc4230c9147906d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логирует сообщение с уровнем ERROR.  <br /></td></tr>
+<tr class="memitem:ab7af2a1862659afcddc003e975de9734" id="r_ab7af2a1862659afcddc003e975de9734"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprism_1_1logger.html#ab7af2a1862659afcddc003e975de9734">prism::logger::critical</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:ab7af2a1862659afcddc003e975de9734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логирует сообщение с уровнем CRITICAL.  <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="logger_8h.html">logger.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

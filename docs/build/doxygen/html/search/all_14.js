@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z_0',['z',['../structprism_1_1math_1_1_vector3d.html#aac7af19efcd4d5e3738e3d2b1313efc5',1,'prism::math::Vector3d']]]
+  ['y_0',['y',['../structprism_1_1math_1_1_vector3d.html#a754de72e6ab72e92e37dec7e1cdae710',1,'prism::math::Vector3d']]]
 ];

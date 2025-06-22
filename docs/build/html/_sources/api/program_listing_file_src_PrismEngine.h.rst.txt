@@ -20,8 +20,10 @@ Program Listing for File PrismEngine.h
    #include "matrix.h"
    #include "fmath.h"
    
+   #include "logger.h"
+   
    //#include "VkInit.h"
    //#include "Canvas.h"
-   #include "Window.h"
+   //#include "Window.h"
    //#include "Frame.h"
    //#include "RenderAPI.h"

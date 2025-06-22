@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['w_0',['w',['../structprism_1_1math_1_1_vector3d.html#a46e1eb616728dab7095af12303438bba',1,'prism::math::Vector3d']]],
-  ['window_1',['Window',['../classprism_1_1view_1_1_window.html',1,'prism::view::Window'],['../classprism_1_1view_1_1_window.html#ab37a7db3c8ac082958cbf1cc76c53232',1,'prism::view::Window::Window(const char *title, int width, int height)'],['../classprism_1_1view_1_1_window.html#ae2cc8b5460d772a2549cbcde23c31d6f',1,'prism::view::Window::Window(const char *title, int width, int height, Uint32 sdlFlags)'],['../classprism_1_1view_1_1_window.html#abb2622120d5a2c4008453fd5f0e213c2',1,'prism::view::Window::Window(const char *title, int x, int y, int width, int height)'],['../classprism_1_1view_1_1_window.html#a115a76f66c617395fcfe4228188bd717',1,'prism::view::Window::Window(const char *title, int width, int height, const std::string &amp;iconPath)'],['../classprism_1_1view_1_1_window.html#a8431a79eba3e50614cc457f7ce0605f0',1,'prism::view::Window::Window(const char *title, int width, int height, int minWidth, int minHeight, int maxWidth, int maxHeight)'],['../classprism_1_1view_1_1_window.html#a64aa028f8e7bfbc225dd09a64a36cd93',1,'prism::view::Window::Window(const char *title, int x, int y, int width, int height, Uint32 sdlFlags)']]],
-  ['window_2ecpp_2',['Window.cpp',['../_window_8cpp.html',1,'']]],
-  ['window_2eh_3',['Window.h',['../_window_8h.html',1,'']]],
-  ['windowvkmanager_2ecpp_4',['WindowVkManager.cpp',['../_window_vk_manager_8cpp.html',1,'']]],
-  ['windowvkmanager_2eh_5',['WindowVkManager.h',['../_window_vk_manager_8h.html',1,'']]]
+  ['validationlayers_0',['validationLayers',['../namespaceprism_1_1view.html#a5e08683d7e148199c9e82e1382ca3f97',1,'prism::view']]],
+  ['vector_2ecpp_1',['vector.cpp',['../vector_8cpp.html',1,'']]],
+  ['vector_2eh_2',['vector.h',['../vector_8h.html',1,'']]],
+  ['vector3d_3',['Vector3d',['../structprism_1_1math_1_1_vector3d.html',1,'prism::math::Vector3d'],['../structprism_1_1math_1_1_vector3d.html#a0666bd40f322dcea9a6e01f98717729c',1,'prism::math::Vector3d::Vector3d()'],['../structprism_1_1math_1_1_vector3d.html#a4971bfe801e3559fbbfc5c806aa6f96d',1,'prism::math::Vector3d::Vector3d(float x, float y, float z, float w=1.0f)']]],
+  ['vector_5fcrossproduct_4',['Vector_CrossProduct',['../namespaceprism_1_1math.html#a656054ef093536949e61ac4a4f1f0ea6',1,'prism::math']]],
+  ['vector_5fdotproduct_5',['Vector_DotProduct',['../namespaceprism_1_1math.html#a66cc48e6731c348a983b096ab80b5b6f',1,'prism::math']]],
+  ['vector_5fintersectplane_6',['Vector_IntersectPlane',['../namespaceprism_1_1math.html#a5dabeebe5cc305b68b078008764e2b5d',1,'prism::math']]],
+  ['verbose_7',['VERBOSE',['../namespaceprism_1_1logger.html#abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc',1,'prism::logger']]],
+  ['verbose_8',['verbose',['../namespaceprism_1_1logger.html#af4a740cd72b4f7684f4466728cf548d3',1,'prism::logger']]],
+  ['vulkaninut_9',['vulkanInut',['../classprism_1_1view_1_1_window.html#a5189f4eb8214086bed7037cdae2ffd89',1,'prism::view::Window']]]
 ];

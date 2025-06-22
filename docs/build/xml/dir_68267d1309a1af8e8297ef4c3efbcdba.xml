@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="_config_8h">Config.h</innerfile>
+    <innerfile refid="fmath_8cpp">fmath.cpp</innerfile>
+    <innerfile refid="fmath_8h">fmath.h</innerfile>
+    <innerfile refid="_frame_8cpp">Frame.cpp</innerfile>
+    <innerfile refid="_frame_8h">Frame.h</innerfile>
+    <innerfile refid="logger_8cpp">logger.cpp</innerfile>
+    <innerfile refid="logger_8h">logger.h</innerfile>
+    <innerfile refid="matrix_8cpp">matrix.cpp</innerfile>
+    <innerfile refid="matrix_8h">matrix.h</innerfile>
+    <innerfile refid="_prism_engine_8cpp">PrismEngine.cpp</innerfile>
+    <innerfile refid="_prism_engine_8h">PrismEngine.h</innerfile>
+    <innerfile refid="vector_8cpp">vector.cpp</innerfile>
+    <innerfile refid="vector_8h">vector.h</innerfile>
+    <innerfile refid="_window_8cpp">Window.cpp</innerfile>
+    <innerfile refid="_window_8h">Window.h</innerfile>
+    <innerfile refid="_window_vk_manager_8cpp">WindowVkManager.cpp</innerfile>
+    <innerfile refid="_window_vk_manager_8h">WindowVkManager.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

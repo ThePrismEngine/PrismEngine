@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="vector_8h" kind="file" language="C++">
     <compoundname>vector.h</compoundname>
     <includes local="no">stdexcept</includes>
     <includes local="yes">SDL.h</includes>
-    <includedby refid="_prism_engine_8h" local="yes">src/PrismEngine.h</includedby>
-    <includedby refid="matrix_8h" local="yes">src/matrix.h</includedby>
-    <includedby refid="vector_8cpp" local="yes">src/vector.cpp</includedby>
+    <includedby refid="_prism_engine_8h" local="yes">C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.h</includedby>
+    <includedby refid="matrix_8h" local="yes">C:/Users/Admin/source/repos/PrismEngine/src/matrix.h</includedby>
+    <includedby refid="vector_8cpp" local="yes">C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>src/vector.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/vector.h</label>
         <link refid="vector_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -25,21 +25,21 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>src/PrismEngine.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.cpp</label>
         <link refid="_prism_engine_8cpp"/>
       </node>
       <node id="2">
-        <label>src/PrismEngine.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.h</label>
         <link refid="_prism_engine_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="5">
-        <label>src/matrix.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/matrix.cpp</label>
         <link refid="matrix_8cpp"/>
       </node>
       <node id="4">
-        <label>src/matrix.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/matrix.h</label>
         <link refid="matrix_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -47,11 +47,11 @@
         </childnode>
       </node>
       <node id="6">
-        <label>src/vector.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp</label>
         <link refid="vector_8cpp"/>
       </node>
       <node id="1">
-        <label>src/vector.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/vector.h</label>
         <link refid="vector_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -117,6 +117,6 @@
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>math</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>prism</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="src/vector.h"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h"/>
   </compounddef>
 </doxygen>

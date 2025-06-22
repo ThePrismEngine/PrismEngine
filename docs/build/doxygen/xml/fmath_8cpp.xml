@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="fmath_8cpp" kind="file" language="C++">
     <compoundname>fmath.cpp</compoundname>
     <includes refid="fmath_8h" local="yes">fmath.h</includes>
     <incdepgraph>
       <node id="1">
-        <label>src/fmath.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp</label>
         <link refid="fmath_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -37,6 +37,6 @@
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/fmath.cpp"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp"/>
   </compounddef>
 </doxygen>

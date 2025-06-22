@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="namespaceprism" kind="namespace" language="C++">
     <compoundname>prism</compoundname>
+    <innernamespace refid="namespaceprism_1_1logger">prism::logger</innernamespace>
     <innernamespace refid="namespaceprism_1_1math">prism::math</innernamespace>
     <innernamespace refid="namespaceprism_1_1view">prism::view</innernamespace>
     <sectiondef kind="func">
@@ -17,13 +18,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/PrismEngine.h" line="4" column="10" bodyfile="src/PrismEngine.cpp" bodystart="4" bodyend="7" declfile="src/PrismEngine.h" declline="4" declcolumn="10"/>
+        <location file="C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.h" line="4" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.cpp" bodystart="4" bodyend="7" declfile="C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.h" declline="4" declcolumn="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/fmath.cpp" line="3" column="1"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp" line="3" column="1"/>
   </compounddef>
 </doxygen>

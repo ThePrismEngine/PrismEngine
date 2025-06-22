@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="_window_8h" kind="file" language="C++">
     <compoundname>Window.h</compoundname>
     <includes local="no">vector</includes>
@@ -12,11 +12,10 @@
     <includes local="no">SDL_vulkan.h</includes>
     <includes local="no">memory</includes>
     <includes local="no">set</includes>
-    <includedby refid="_prism_engine_8h" local="yes">src/PrismEngine.h</includedby>
-    <includedby refid="_window_8cpp" local="yes">src/Window.cpp</includedby>
+    <includedby refid="_window_8cpp" local="yes">C:/Users/Admin/source/repos/PrismEngine/src/Window.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>src/Window.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/Window.h</label>
         <link refid="_window_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -71,26 +70,14 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>src/PrismEngine.cpp</label>
-        <link refid="_prism_engine_8cpp"/>
-      </node>
       <node id="2">
-        <label>src/PrismEngine.h</label>
-        <link refid="_prism_engine_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>src/Window.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/Window.cpp</label>
         <link refid="_window_8cpp"/>
       </node>
       <node id="1">
-        <label>src/Window.h</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/Window.h</label>
         <link refid="_window_8h"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -188,50 +175,50 @@
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Дополнительные<sp/>методы<sp/>===</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a7e7ab6881f1847d75494d4e751c5826e" kindref="member">destroy</ref>();</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="classprism_1_1view_1_1_window_1a0ac1c3fd06ab0d3b1582ac9c448a161c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a0ac1c3fd06ab0d3b1582ac9c448a161c" kindref="member">setSDLInitialized</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>initialized)<sp/>{<sp/>s_sdlInitialized<sp/>=<sp/>initialized;<sp/>}</highlight></codeline>
+<codeline lineno="86" refid="classprism_1_1view_1_1_window_1a0ac1c3fd06ab0d3b1582ac9c448a161c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a0ac1c3fd06ab0d3b1582ac9c448a161c" kindref="member">setSDLInitialized</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>initialized)<sp/>{<sp/><ref refid="classprism_1_1view_1_1_window_1ab54c30367a0c4d0630df18dab81e0c21" kindref="member">s_sdlInitialized</ref><sp/>=<sp/>initialized;<sp/>}</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>Vulkan<sp/>методы<sp/>===</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a5189f4eb8214086bed7037cdae2ffd89" kindref="member">vulkanInut</ref>();</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a06e21fda269f7b8242de7ec8c5310e8d" kindref="member">createInstance</ref>();</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a7bb96f10739921534995f7e0e2a0360f" kindref="member">pickPhysicalDevice</ref>();</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a76dc16248ebd56b8787302654689aa08" kindref="member">isDeviceSuitable</ref>(VkPhysicalDevice<sp/>device);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a76dc16248ebd56b8787302654689aa08" kindref="member">isDeviceSuitable</ref>(VkPhysicalDevice<sp/><ref refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" kindref="member">device</ref>);</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1af18daa601490652e0bc0434b13cabb4f" kindref="member">checkDeviceExtensionSupport</ref>(VkPhysicalDevice<sp/>device);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1af18daa601490652e0bc0434b13cabb4f" kindref="member">checkDeviceExtensionSupport</ref>(VkPhysicalDevice<sp/><ref refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" kindref="member">device</ref>);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NDEBUG</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableValidationLayers<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a24fd09bbf7871e2448af8db4471879fe" kindref="member">enableValidationLayers</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableValidationLayers<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101" refid="classprism_1_1view_1_1_window_1a24fd09bbf7871e2448af8db4471879fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a24fd09bbf7871e2448af8db4471879fe" kindref="member">enableValidationLayers</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>s_sdlInitialized;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Window*<sp/>m_sdlWindow;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_isDestroyed;</highlight></codeline>
+<codeline lineno="103" refid="classprism_1_1view_1_1_window_1ab54c30367a0c4d0630df18dab81e0c21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1ab54c30367a0c4d0630df18dab81e0c21" kindref="member">s_sdlInitialized</ref>;</highlight></codeline>
+<codeline lineno="104" refid="classprism_1_1view_1_1_window_1a376baefea36091e57fa85ea6d4083dba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Window*<sp/><ref refid="classprism_1_1view_1_1_window_1a376baefea36091e57fa85ea6d4083dba" kindref="member">m_sdlWindow</ref>;</highlight></codeline>
+<codeline lineno="105" refid="classprism_1_1view_1_1_window_1a4565b56a9f438b6c87c9f262e8848fa0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a4565b56a9f438b6c87c9f262e8848fa0" kindref="member">m_isDestroyed</ref>;</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_windowMinimized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Флаг<sp/>минимизации<sp/>окна</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classprism_1_1view_1_1_window_1a73b38623bf14708bf5ac9602d1ce684b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a73b38623bf14708bf5ac9602d1ce684b" kindref="member">m_windowMinimized</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Флаг<sp/>минимизации<sp/>окна</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Внутренний<sp/>конструктор<sp/>для<sp/>делегирования</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1view_1_1_window_1ab37a7db3c8ac082958cbf1cc76c53232" kindref="member">Window</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>title,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/>Uint32<sp/>sdlFlags);</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkInstance<sp/>instance;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPhysicalDevice<sp/>physicalDevice;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDevice<sp/>device;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkQueue<sp/>graphicsQueue;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkSurfaceKHR<sp/>surface;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkQueue<sp/>presentQueue;</highlight></codeline>
+<codeline lineno="112" refid="classprism_1_1view_1_1_window_1a00ee05d32648685bb74fba379937ba0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkInstance<sp/><ref refid="classprism_1_1view_1_1_window_1a00ee05d32648685bb74fba379937ba0a" kindref="member">instance</ref>;</highlight></codeline>
+<codeline lineno="113" refid="classprism_1_1view_1_1_window_1a70e49b67dea0ee45f4d52e4ebb03db7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPhysicalDevice<sp/><ref refid="classprism_1_1view_1_1_window_1a70e49b67dea0ee45f4d52e4ebb03db7e" kindref="member">physicalDevice</ref>;</highlight></codeline>
+<codeline lineno="114" refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDevice<sp/><ref refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" kindref="member">device</ref>;</highlight></codeline>
+<codeline lineno="115" refid="classprism_1_1view_1_1_window_1a9b0044913b1df68617169565b85e5cae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkQueue<sp/><ref refid="classprism_1_1view_1_1_window_1a9b0044913b1df68617169565b85e5cae" kindref="member">graphicsQueue</ref>;</highlight></codeline>
+<codeline lineno="116" refid="classprism_1_1view_1_1_window_1ada7a56e2c924860af9187e3994c88e31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkSurfaceKHR<sp/><ref refid="classprism_1_1view_1_1_window_1ada7a56e2c924860af9187e3994c88e31" kindref="member">surface</ref>;</highlight></codeline>
+<codeline lineno="117" refid="classprism_1_1view_1_1_window_1af508535cfe4d6904d01396d15ee0a91b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkQueue<sp/><ref refid="classprism_1_1view_1_1_window_1af508535cfe4d6904d01396d15ee0a91b" kindref="member">presentQueue</ref>;</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rateDeviceSuitability(VkPhysicalDevice<sp/>device);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a71ddbebd98846cd305ba67fd8f3f3ef5" kindref="member">rateDeviceSuitability</ref>(VkPhysicalDevice<sp/><ref refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" kindref="member">device</ref>);</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1view_1_1_queue_family_indices" kindref="compound">QueueFamilyIndices</ref><sp/>findQueueFamilies(VkPhysicalDevice<sp/>device);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createLogicalDevice();</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createSurface();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1view_1_1_queue_family_indices" kindref="compound">QueueFamilyIndices</ref><sp/><ref refid="classprism_1_1view_1_1_window_1addfe6172e6af7dabf1cb8bdd5f60655e" kindref="member">findQueueFamilies</ref>(VkPhysicalDevice<sp/><ref refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a85ae040c045e6e1d57e79ca5fd2b42c3" kindref="member">createLogicalDevice</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1a244e6e0144fe90f9604452a1cb515cea" kindref="member">createSurface</ref>();</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Window::s_sdlInitialized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1view_1_1_window_1ab54c30367a0c4d0630df18dab81e0c21" kindref="member">Window::s_sdlInitialized</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>view</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>prism</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="src/Window.h"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/Window.h"/>
   </compounddef>
 </doxygen>

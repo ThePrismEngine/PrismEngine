@@ -1,0 +1,343 @@
+\doxysection{Пространство имен prism\+::logger}
+\hypertarget{namespaceprism_1_1logger}{}\label{namespaceprism_1_1logger}\index{prism::logger@{prism::logger}}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}} \{ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654}{TEST\+\_\+\+ERROR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление ошибок движка \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}} \{ \newline
+\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc}{VERBOSE}} = SDL\+\_\+\+LOG\+\_\+\+PRIORITY\+\_\+\+VERBOSE
+, \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}} = SDL\+\_\+\+LOG\+\_\+\+PRIORITY\+\_\+\+DEBUG
+, \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3}{INFO}} = SDL\+\_\+\+LOG\+\_\+\+PRIORITY\+\_\+\+INFO
+, \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b}{WARNING}} = SDL\+\_\+\+LOG\+\_\+\+PRIORITY\+\_\+\+WARN
+, \newline
+\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}} = SDL\+\_\+\+LOG\+\_\+\+PRIORITY\+\_\+\+ERROR
+, \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}} = SDL\+\_\+\+LOG\+\_\+\+PRIORITY\+\_\+\+CRITICAL
+ \}
+\begin{DoxyCompactList}\small\item\em Уровни логирования \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a44ab0bc2022efc1dbfe3234031cac93e}{set\+Level}} (\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}} level)
+\begin{DoxyCompactList}\small\item\em Устанавливает уровень логирования \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceprism_1_1logger_a0f5071ef54b1884256b312cec14e910d}{set\+Output\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Настраивает вывод логов в файл \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_aea6335133a1d9d4d190d24737b4d12cc}{set\+Output\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Настраивает вывод логов в консоль \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a011c76bbfb6104919163e337e828a26e}{log}} (\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}} level, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Основная функция логирования \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_af1807bb00385d1c5c4ad487f5869e9bd}{log\+Error}} (\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}} err, const std\+::string \&details="{}"{})
+\begin{DoxyCompactList}\small\item\em Логирует ошибку движка с дополнительными деталями \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_af4a740cd72b4f7684f4466728cf548d3}{verbose}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем VERBOSE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a3ce9ded53e563d7894a199406899a18c}{debug}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем DEBUG. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a53c114bd789848844092ce408a10a38c}{info}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем INFO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a95789fad40cdbf5ca47baef4c355c1e1}{warning}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем WARNING. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_ae5db974c5397849b8fc4230c9147906d}{error}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем ERROR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_ab7af2a1862659afcddc003e975de9734}{critical}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем CRITICAL. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}} $>$ \mbox{\hyperlink{namespaceprism_1_1logger_a4009b1213765d57c2690fb9297c6bea1}{get\+Last\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Получает последнюю залогированную ошибку \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceprism_1_1logger_a95da0e71a7281fed4c011c2dd58ba1af}{has\+Last\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Проверяет наличие залогированных ошибок \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceprism_1_1logger_aa50f2608949bcbf87806915fb04c4abc}{check\+Last\+Error\+Type}} (\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}} error\+Type)
+\begin{DoxyCompactList}\small\item\em Проверяет тип последней ошибки \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a7e98e993d5b16cdd4d5d39c6f2797967}{clear\+Last\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Сбрасывает состояние последней ошибки \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{namespaceprism_1_1logger_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}\index{prism::logger@{prism::logger}!Error@{Error}}
+\index{Error@{Error}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{Error}{Error}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f} 
+enum class \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{prism\+::logger\+::\+Error}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Перечисление ошибок движка 
+
+Содержит коды ошибок, которые могут быть залогированы через \doxylink{namespaceprism_1_1logger_af1807bb00385d1c5c4ad487f5869e9bd}{log\+Error()} \begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_ERROR@{TEST\_ERROR}!prism::logger@{prism::logger}}\index{prism::logger@{prism::logger}!TEST\_ERROR@{TEST\_ERROR}}}\Hypertarget{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654}\label{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654} 
+TEST\+\_\+\+ERROR&Тестовая ошибка (пример) \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}\index{prism::logger@{prism::logger}!Level@{Level}}
+\index{Level@{Level}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{Level}{Level}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856} 
+enum class \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{prism\+::logger\+::\+Level}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Уровни логирования 
+
+Совместимы с уровнями логирования SDL (используют соответствующие приоритеты) \begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VERBOSE@{VERBOSE}!prism::logger@{prism::logger}}\index{prism::logger@{prism::logger}!VERBOSE@{VERBOSE}}}\Hypertarget{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc}\label{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc} 
+VERBOSE&Подробные сообщения (наибольшая детализация) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!prism::logger@{prism::logger}}\index{prism::logger@{prism::logger}!DEBUG@{DEBUG}}}\Hypertarget{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15}\label{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15} 
+DEBUG&Отладочные сообщения \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!prism::logger@{prism::logger}}\index{prism::logger@{prism::logger}!INFO@{INFO}}}\Hypertarget{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3}\label{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3} 
+INFO&Информационные сообщения \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARNING@{WARNING}!prism::logger@{prism::logger}}\index{prism::logger@{prism::logger}!WARNING@{WARNING}}}\Hypertarget{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b}\label{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b} 
+WARNING&Предупреждения \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!prism::logger@{prism::logger}}\index{prism::logger@{prism::logger}!ERROR@{ERROR}}}\Hypertarget{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5}\label{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5} 
+ERROR&Ошибки \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRITICAL@{CRITICAL}!prism::logger@{prism::logger}}\index{prism::logger@{prism::logger}!CRITICAL@{CRITICAL}}}\Hypertarget{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870}\label{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870} 
+CRITICAL&Критические ошибки \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceprism_1_1logger_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{namespaceprism_1_1logger_aa50f2608949bcbf87806915fb04c4abc}\index{prism::logger@{prism::logger}!checkLastErrorType@{checkLastErrorType}}
+\index{checkLastErrorType@{checkLastErrorType}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{checkLastErrorType()}{checkLastErrorType()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_aa50f2608949bcbf87806915fb04c4abc} 
+bool prism\+::logger\+::check\+Last\+Error\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}}}]{error\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет тип последней ошибки 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em error\+Type} & Ожидаемый тип ошибки для проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если последняя ошибка существует и совпадает с заданным типом 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{См. также}
+\doxylink{namespaceprism_1_1logger_a4009b1213765d57c2690fb9297c6bea1}{get\+Last\+Error()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespaceprism_1_1logger_a7e98e993d5b16cdd4d5d39c6f2797967}\index{prism::logger@{prism::logger}!clearLastError@{clearLastError}}
+\index{clearLastError@{clearLastError}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{clearLastError()}{clearLastError()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a7e98e993d5b16cdd4d5d39c6f2797967} 
+void prism\+::logger\+::clear\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Сбрасывает состояние последней ошибки 
+
+\begin{DoxyPostcond}{Постусловие}
+После вызова \doxylink{namespaceprism_1_1logger_a95da0e71a7281fed4c011c2dd58ba1af}{has\+Last\+Error()} будет возвращать false 
+\end{DoxyPostcond}
+\Hypertarget{namespaceprism_1_1logger_ab7af2a1862659afcddc003e975de9734}\index{prism::logger@{prism::logger}!critical@{critical}}
+\index{critical@{critical}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{critical()}{critical()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_ab7af2a1862659afcddc003e975de9734} 
+void prism\+::logger\+::critical (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Логирует сообщение с уровнем CRITICAL. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceprism_1_1logger_a3ce9ded53e563d7894a199406899a18c}\index{prism::logger@{prism::logger}!debug@{debug}}
+\index{debug@{debug}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a3ce9ded53e563d7894a199406899a18c} 
+void prism\+::logger\+::debug (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Логирует сообщение с уровнем DEBUG. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceprism_1_1logger_ae5db974c5397849b8fc4230c9147906d}\index{prism::logger@{prism::logger}!error@{error}}
+\index{error@{error}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_ae5db974c5397849b8fc4230c9147906d} 
+void prism\+::logger\+::error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Логирует сообщение с уровнем ERROR. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceprism_1_1logger_a4009b1213765d57c2690fb9297c6bea1}\index{prism::logger@{prism::logger}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a4009b1213765d57c2690fb9297c6bea1} 
+std\+::optional$<$ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}} $>$ prism\+::logger\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Получает последнюю залогированную ошибку 
+
+\begin{DoxyReturn}{Возвращает}
+std\+::optional$<$\+Error$>$ -\/ последняя ошибка или std\+::nullopt, если ошибок не было 
+\end{DoxyReturn}
+\Hypertarget{namespaceprism_1_1logger_a95da0e71a7281fed4c011c2dd58ba1af}\index{prism::logger@{prism::logger}!hasLastError@{hasLastError}}
+\index{hasLastError@{hasLastError}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{hasLastError()}{hasLastError()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a95da0e71a7281fed4c011c2dd58ba1af} 
+bool prism\+::logger\+::has\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет наличие залогированных ошибок 
+
+\begin{DoxyReturn}{Возвращает}
+true если есть необработанная ошибка, false иначе 
+\end{DoxyReturn}
+\begin{DoxyNote}{Заметки}
+Эквивалентно \doxylink{namespaceprism_1_1logger_a4009b1213765d57c2690fb9297c6bea1}{get\+Last\+Error()}.has\+\_\+value() 
+\end{DoxyNote}
+\Hypertarget{namespaceprism_1_1logger_a53c114bd789848844092ce408a10a38c}\index{prism::logger@{prism::logger}!info@{info}}
+\index{info@{info}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a53c114bd789848844092ce408a10a38c} 
+void prism\+::logger\+::info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Логирует сообщение с уровнем INFO. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceprism_1_1logger_a011c76bbfb6104919163e337e828a26e}\index{prism::logger@{prism::logger}!log@{log}}
+\index{log@{log}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a011c76bbfb6104919163e337e828a26e} 
+void prism\+::logger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}}}]{level}{, }\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Основная функция логирования 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em level} & Уровень важности сообщения \\
+\hline
+{\em message} & Текст сообщения для логирования \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceprism_1_1logger_af1807bb00385d1c5c4ad487f5869e9bd}\index{prism::logger@{prism::logger}!logError@{logError}}
+\index{logError@{logError}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{logError()}{logError()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_af1807bb00385d1c5c4ad487f5869e9bd} 
+void prism\+::logger\+::log\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}}}]{err}{, }\item[{const std\+::string \&}]{details}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Логирует ошибку движка с дополнительными деталями 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em err} & Код ошибки из перечисления \doxylink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error} \\
+\hline
+{\em details} & Дополнительная информация об ошибке (по умолчанию пустая строка) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceprism_1_1logger_a44ab0bc2022efc1dbfe3234031cac93e}\index{prism::logger@{prism::logger}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a44ab0bc2022efc1dbfe3234031cac93e} 
+void prism\+::logger\+::set\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}}}]{level}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает уровень логирования 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em level} & Минимальный уровень логирования (сообщения ниже этого уровня игнорируются) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceprism_1_1logger_aea6335133a1d9d4d190d24737b4d12cc}\index{prism::logger@{prism::logger}!setOutputConsole@{setOutputConsole}}
+\index{setOutputConsole@{setOutputConsole}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{setOutputConsole()}{setOutputConsole()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_aea6335133a1d9d4d190d24737b4d12cc} 
+void prism\+::logger\+::set\+Output\+Console (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Настраивает вывод логов в консоль 
+
+Это режим по умолчанию для системы логирования \Hypertarget{namespaceprism_1_1logger_a0f5071ef54b1884256b312cec14e910d}\index{prism::logger@{prism::logger}!setOutputFile@{setOutputFile}}
+\index{setOutputFile@{setOutputFile}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{setOutputFile()}{setOutputFile()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a0f5071ef54b1884256b312cec14e910d} 
+bool prism\+::logger\+::set\+Output\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Настраивает вывод логов в файл 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em filename} & Имя файла для записи логов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если файл успешно открыт для записи, false в случае ошибки 
+\end{DoxyReturn}
+\Hypertarget{namespaceprism_1_1logger_af4a740cd72b4f7684f4466728cf548d3}\index{prism::logger@{prism::logger}!verbose@{verbose}}
+\index{verbose@{verbose}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{verbose()}{verbose()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_af4a740cd72b4f7684f4466728cf548d3} 
+void prism\+::logger\+::verbose (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Логирует сообщение с уровнем VERBOSE. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceprism_1_1logger_a95789fad40cdbf5ca47baef4c355c1e1}\index{prism::logger@{prism::logger}!warning@{warning}}
+\index{warning@{warning}!prism::logger@{prism::logger}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily \label{namespaceprism_1_1logger_a95789fad40cdbf5ca47baef4c355c1e1} 
+void prism\+::logger\+::warning (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Логирует сообщение с уровнем WARNING. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения \\
+\hline
+\end{DoxyParams}

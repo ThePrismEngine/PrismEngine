@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="structprism_1_1view_1_1_queue_family_indices" kind="struct" language="C++" prot="public">
     <compoundname>prism::view::QueueFamilyIndices</compoundname>
     <includes refid="_window_8h" local="no">Window.h</includes>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Window.h" line="24" column="27" bodyfile="src/Window.h" bodystart="24" bodyend="-1"/>
+        <location file="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" line="24" column="27" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structprism_1_1view_1_1_queue_family_indices_1aa84d262b22d58e73295a7ad73ab17ca3" prot="public" static="no" mutable="no">
         <type>std::optional&lt; uint32_t &gt;</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Window.h" line="25" column="27" bodyfile="src/Window.h" bodystart="25" bodyend="-1"/>
+        <location file="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" line="25" column="27" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" bodystart="25" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -46,14 +46,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Window.h" line="27" column="18" bodyfile="src/Window.h" bodystart="27" bodyend="29"/>
+        <location file="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" line="27" column="18" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" bodystart="27" bodyend="29"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Window.h" line="23" column="9" bodyfile="src/Window.h" bodystart="23" bodyend="30"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" line="23" column="9" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" bodystart="23" bodyend="30"/>
     <listofallmembers>
       <member refid="structprism_1_1view_1_1_queue_family_indices_1a9850754d20bfa6fda8ec34d6197630b0" prot="public" virt="non-virtual"><scope>prism::view::QueueFamilyIndices</scope><name>graphicsFamily</name></member>
       <member refid="structprism_1_1view_1_1_queue_family_indices_1afcb56ae02ff571b22da0cf6a4a59578a" prot="public" virt="non-virtual"><scope>prism::view::QueueFamilyIndices</scope><name>isComplete</name></member>

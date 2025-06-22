@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="ru">
   <compound refid="structprism_1_1math_1_1_matrix4_x4" kind="struct"><name>prism::math::Matrix4X4</name>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a03f6ae69a0fc6e279a81bbdb1de1a4f1" kind="variable"><name>m</name></member>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a03e22f599fb64c73f5a2bdc8a6b2ed0b" kind="function"><name>print</name></member>
@@ -97,6 +97,34 @@
   <compound refid="namespaceprism" kind="namespace"><name>prism</name>
     <member refid="namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c" kind="function"><name>init</name></member>
   </compound>
+  <compound refid="namespaceprism_1_1logger" kind="namespace"><name>prism::logger</name>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f" kind="enum"><name>Error</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654" kind="enumvalue"><name>TEST_ERROR</name></member>
+    <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856" kind="enum"><name>Level</name></member>
+    <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc" kind="enumvalue"><name>VERBOSE</name></member>
+    <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15" kind="enumvalue"><name>DEBUG</name></member>
+    <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3" kind="enumvalue"><name>INFO</name></member>
+    <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b" kind="enumvalue"><name>WARNING</name></member>
+    <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5" kind="enumvalue"><name>ERROR</name></member>
+    <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870" kind="enumvalue"><name>CRITICAL</name></member>
+    <member refid="namespaceprism_1_1logger_1a44ab0bc2022efc1dbfe3234031cac93e" kind="function"><name>setLevel</name></member>
+    <member refid="namespaceprism_1_1logger_1a0f5071ef54b1884256b312cec14e910d" kind="function"><name>setOutputFile</name></member>
+    <member refid="namespaceprism_1_1logger_1aea6335133a1d9d4d190d24737b4d12cc" kind="function"><name>setOutputConsole</name></member>
+    <member refid="namespaceprism_1_1logger_1a011c76bbfb6104919163e337e828a26e" kind="function"><name>log</name></member>
+    <member refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kind="function"><name>logError</name></member>
+    <member refid="namespaceprism_1_1logger_1af4a740cd72b4f7684f4466728cf548d3" kind="function"><name>verbose</name></member>
+    <member refid="namespaceprism_1_1logger_1a3ce9ded53e563d7894a199406899a18c" kind="function"><name>debug</name></member>
+    <member refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kind="function"><name>info</name></member>
+    <member refid="namespaceprism_1_1logger_1a95789fad40cdbf5ca47baef4c355c1e1" kind="function"><name>warning</name></member>
+    <member refid="namespaceprism_1_1logger_1ae5db974c5397849b8fc4230c9147906d" kind="function"><name>error</name></member>
+    <member refid="namespaceprism_1_1logger_1ab7af2a1862659afcddc003e975de9734" kind="function"><name>critical</name></member>
+    <member refid="namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1" kind="function"><name>getLastError</name></member>
+    <member refid="namespaceprism_1_1logger_1a95da0e71a7281fed4c011c2dd58ba1af" kind="function"><name>hasLastError</name></member>
+    <member refid="namespaceprism_1_1logger_1aa50f2608949bcbf87806915fb04c4abc" kind="function"><name>checkLastErrorType</name></member>
+    <member refid="namespaceprism_1_1logger_1a7e98e993d5b16cdd4d5d39c6f2797967" kind="function"><name>clearLastError</name></member>
+  </compound>
+  <compound refid="namespaceprism_1_1logger_1_1_0d030063132126215367251221213367113174146367017232" kind="namespace"><name>prism::logger::@030063132126215367251221213367113174146367017232</name>
+  </compound>
   <compound refid="namespaceprism_1_1math" kind="namespace"><name>prism::math</name>
     <member refid="namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446" kind="function"><name>degToRad</name></member>
     <member refid="namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96" kind="function"><name>Matrix_MultiplyMatrix</name></member>
@@ -119,6 +147,10 @@
   </compound>
   <compound refid="_frame_8h" kind="file"><name>Frame.h</name>
   </compound>
+  <compound refid="logger_8cpp" kind="file"><name>logger.cpp</name>
+  </compound>
+  <compound refid="logger_8h" kind="file"><name>logger.h</name>
+  </compound>
   <compound refid="matrix_8cpp" kind="file"><name>matrix.cpp</name>
   </compound>
   <compound refid="matrix_8h" kind="file"><name>matrix.h</name>
@@ -139,6 +171,6 @@
   </compound>
   <compound refid="_window_vk_manager_8h" kind="file"><name>WindowVkManager.h</name>
   </compound>
-  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>C:/Users/Admin/source/repos/PrismEngine/src</name>
   </compound>
 </doxygenindex>

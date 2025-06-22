@@ -5,6 +5,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "fmath.h", "fmath_8h.html", "fmath_8h" ],
     [ "Frame.cpp", "_frame_8cpp.html", null ],
     [ "Frame.h", "_frame_8h.html", null ],
+    [ "logger.cpp", "logger_8cpp.html", "logger_8cpp" ],
+    [ "logger.h", "logger_8h.html", "logger_8h" ],
     [ "matrix.cpp", "matrix_8cpp.html", "matrix_8cpp" ],
     [ "matrix.h", "matrix_8h.html", "matrix_8h" ],
     [ "PrismEngine.cpp", "_prism_engine_8cpp.html", null ],

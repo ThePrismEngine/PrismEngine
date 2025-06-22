@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['findqueuefamilies_0',['findQueueFamilies',['../classprism_1_1view_1_1_window.html#addfe6172e6af7dabf1cb8bdd5f60655e',1,'prism::view::Window']]]
+  ['error_0',['error',['../namespaceprism_1_1logger.html#ae5db974c5397849b8fc4230c9147906d',1,'prism::logger']]]
 ];

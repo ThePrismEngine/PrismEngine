@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespaceprism_1_1view" kind="namespace" language="C++">
+    <compoundname>prism::view</compoundname>
+    <innerclass refid="structprism_1_1view_1_1_queue_family_indices" prot="public">prism::view::QueueFamilyIndices</innerclass>
+    <innerclass refid="classprism_1_1view_1_1_window" prot="public">prism::view::Window</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceprism_1_1view_1a5e08683d7e148199c9e82e1382ca3f97" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; const char * &gt;</type>
+        <definition>const std::vector&lt;const char*&gt; prism::view::validationLayers</definition>
+        <argsstring></argsstring>
+        <name>validationLayers</name>
+        <qualifiedname>prism::view::validationLayers</qualifiedname>
+        <initializer>= {
+                &quot;VK_LAYER_KHRONOS_validation&quot;
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="16" column="27" bodyfile="src/Window.h" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; const char * &gt;</type>
+        <definition>const std::vector&lt;const char*&gt; prism::view::deviceExtensions</definition>
+        <argsstring></argsstring>
+        <name>deviceExtensions</name>
+        <qualifiedname>prism::view::deviceExtensions</qualifiedname>
+        <initializer>= {
+                VK_KHR_SWAPCHAIN_EXTENSION_NAME
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Window.h" line="19" column="27" bodyfile="src/Window.h" bodystart="19" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Window.cpp" line="6" column="5"/>
+  </compounddef>
+</doxygen>

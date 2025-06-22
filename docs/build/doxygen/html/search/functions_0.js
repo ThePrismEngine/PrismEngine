@@ -6,5 +6,6 @@ var searchData=
   ['createcentered_3',['CreateCentered',['../classprism_1_1view_1_1_window.html#a5e4bd28cd96622e8b3b13e57778ebb8b',1,'prism::view::Window']]],
   ['createinstance_4',['createInstance',['../classprism_1_1view_1_1_window.html#a06e21fda269f7b8242de7ec8c5310e8d',1,'prism::view::Window']]],
   ['createlogicaldevice_5',['createLogicalDevice',['../classprism_1_1view_1_1_window.html#a85ae040c045e6e1d57e79ca5fd2b42c3',1,'prism::view::Window']]],
-  ['createsurface_6',['createSurface',['../classprism_1_1view_1_1_window.html#a244e6e0144fe90f9604452a1cb515cea',1,'prism::view::Window']]]
+  ['createsurface_6',['createSurface',['../classprism_1_1view_1_1_window.html#a244e6e0144fe90f9604452a1cb515cea',1,'prism::view::Window']]],
+  ['critical_7',['critical',['../namespaceprism_1_1logger.html#ab7af2a1862659afcddc003e975de9734',1,'prism::logger']]]
 ];

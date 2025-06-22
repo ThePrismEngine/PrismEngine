@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Модуль логирования &mdash; PrismEngine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Участие в разработке" href="../dev/contributing.html" />
+    <link rel="prev" title="Физический движок" href="physics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PrismEngine
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Основное:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О проекте PrismEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Быстрый старт</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Компоненты:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="math.html">Модуль математики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Ядро системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="render.html">Модуль рендеринга</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui.html">Пользовательский интерфейс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physics.html">Физический движок</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Модуль логирования</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Перечисления</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger5ErrorE"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism6logger5Error10TEST_ERRORE"><code class="docutils literal notranslate"><span class="pre">TEST_ERROR</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger5LevelE"><code class="docutils literal notranslate"><span class="pre">Level</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism6logger5Level7VERBOSEE"><code class="docutils literal notranslate"><span class="pre">VERBOSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism6logger5Level5DEBUGE"><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism6logger5Level4INFOE"><code class="docutils literal notranslate"><span class="pre">INFO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism6logger5Level7WARNINGE"><code class="docutils literal notranslate"><span class="pre">WARNING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism6logger5Level5ERRORE"><code class="docutils literal notranslate"><span class="pre">ERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism6logger5Level8CRITICALE"><code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Функции</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger8setLevelE5Level"><code class="docutils literal notranslate"><span class="pre">setLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger13setOutputFileERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">setOutputFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger16setOutputConsoleEv"><code class="docutils literal notranslate"><span class="pre">setOutputConsole()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger3logE5LevelRKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger8logErrorE5ErrorRKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">logError()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger7verboseERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">verbose()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger5debugERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger4infoERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger7warningERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">warning()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger5errorERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger8criticalERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">critical()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger12getLastErrorEv"><code class="docutils literal notranslate"><span class="pre">getLastError()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger12hasLastErrorEv"><code class="docutils literal notranslate"><span class="pre">hasLastError()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger18checkLastErrorTypeE5Error"><code class="docutils literal notranslate"><span class="pre">checkLastErrorType()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N5prism6logger14clearLastErrorEv"><code class="docutils literal notranslate"><span class="pre">clearLastError()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Разработка:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Участие в разработке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/code_style.html">Стандарты кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/build_guide.html">Руководство по сборке</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PrismEngine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Модуль логирования</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/logger.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>Модуль логирования<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>Модуль логирования предоставляет систему для записи сообщений различного уровня важности с возможностью вывода в консоль или файл.</p>
+<section id="id2">
+<h2>Перечисления<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5ErrorE">
+<span id="_CPPv3N5prism6logger5ErrorE"></span><span id="_CPPv2N5prism6logger5ErrorE"></span><span class="target" id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><br /></dt>
+<dd><p>Перечисление ошибок движка </p>
+<p>Содержит коды ошибок, которые могут быть залогированы через <a class="reference internal" href="#namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd"><span class="std std-ref">logError()</span></a></p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5Error10TEST_ERRORE">
+<span id="_CPPv3N5prism6logger5Error10TEST_ERRORE"></span><span id="_CPPv2N5prism6logger5Error10TEST_ERRORE"></span><span class="target" id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TEST_ERROR</span></span></span><br /></dt>
+<dd><p>Тестовая ошибка (пример) </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5LevelE">
+<span id="_CPPv3N5prism6logger5LevelE"></span><span id="_CPPv2N5prism6logger5LevelE"></span><span class="target" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Level</span></span></span><br /></dt>
+<dd><p>Уровни логирования </p>
+<p>Совместимы с уровнями логирования SDL (используют соответствующие приоритеты) </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5Level7VERBOSEE">
+<span id="_CPPv3N5prism6logger5Level7VERBOSEE"></span><span id="_CPPv2N5prism6logger5Level7VERBOSEE"></span><span class="target" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VERBOSE</span></span></span><br /></dt>
+<dd><p>Подробные сообщения (наибольшая детализация) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5Level5DEBUGE">
+<span id="_CPPv3N5prism6logger5Level5DEBUGE"></span><span id="_CPPv2N5prism6logger5Level5DEBUGE"></span><span class="target" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DEBUG</span></span></span><br /></dt>
+<dd><p>Отладочные сообщения </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5Level4INFOE">
+<span id="_CPPv3N5prism6logger5Level4INFOE"></span><span id="_CPPv2N5prism6logger5Level4INFOE"></span><span class="target" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INFO</span></span></span><br /></dt>
+<dd><p>Информационные сообщения </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5Level7WARNINGE">
+<span id="_CPPv3N5prism6logger5Level7WARNINGE"></span><span id="_CPPv2N5prism6logger5Level7WARNINGE"></span><span class="target" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WARNING</span></span></span><br /></dt>
+<dd><p>Предупреждения </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5Level5ERRORE">
+<span id="_CPPv3N5prism6logger5Level5ERRORE"></span><span id="_CPPv2N5prism6logger5Level5ERRORE"></span><span class="target" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ERROR</span></span></span><br /></dt>
+<dd><p>Ошибки </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5Level8CRITICALE">
+<span id="_CPPv3N5prism6logger5Level8CRITICALE"></span><span id="_CPPv2N5prism6logger5Level8CRITICALE"></span><span class="target" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CRITICAL</span></span></span><br /></dt>
+<dd><p>Критические ошибки </p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id3">
+<h2>Функции<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Основные функции управления логированием:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger8setLevelE5Level">
+<span id="_CPPv3N5prism6logger8setLevelE5Level"></span><span id="_CPPv2N5prism6logger8setLevelE5Level"></span><span id="prism::logger::setLevel__Level"></span><span class="target" id="namespaceprism_1_1logger_1a44ab0bc2022efc1dbfe3234031cac93e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setLevel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/enum_namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856.html#_CPPv4N5prism6logger5LevelE" title="prism::logger::Level"><span class="n"><span class="pre">Level</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">level</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Устанавливает уровень логирования </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>level</strong> – Минимальный уровень логирования (сообщения ниже этого уровня игнорируются) </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger13setOutputFileERKNSt6stringE">
+<span id="_CPPv3N5prism6logger13setOutputFileERKNSt6stringE"></span><span id="_CPPv2N5prism6logger13setOutputFileERKNSt6stringE"></span><span id="prism::logger::setOutputFile__ssCR"></span><span class="target" id="namespaceprism_1_1logger_1a0f5071ef54b1884256b312cec14e910d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setOutputFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Настраивает вывод логов в файл </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> – Имя файла для записи логов </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true если файл успешно открыт для записи, false в случае ошибки </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger16setOutputConsoleEv">
+<span id="_CPPv3N5prism6logger16setOutputConsoleEv"></span><span id="_CPPv2N5prism6logger16setOutputConsoleEv"></span><span id="prism::logger::setOutputConsole"></span><span class="target" id="namespaceprism_1_1logger_1aea6335133a1d9d4d190d24737b4d12cc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setOutputConsole</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Настраивает вывод логов в консоль </p>
+<p>Это режим по умолчанию для системы логирования </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger3logE5LevelRKNSt6stringE">
+<span id="_CPPv3N5prism6logger3logE5LevelRKNSt6stringE"></span><span id="_CPPv2N5prism6logger3logE5LevelRKNSt6stringE"></span><span id="prism::logger::log__Level.ssCR"></span><span class="target" id="namespaceprism_1_1logger_1a011c76bbfb6104919163e337e828a26e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">log</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/enum_namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856.html#_CPPv4N5prism6logger5LevelE" title="prism::logger::Level"><span class="n"><span class="pre">Level</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">level</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Основная функция логирования </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>level</strong> – Уровень важности сообщения </p></li>
+<li><p><strong>message</strong> – Текст сообщения для логирования </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger8logErrorE5ErrorRKNSt6stringE">
+<span id="_CPPv3N5prism6logger8logErrorE5ErrorRKNSt6stringE"></span><span id="_CPPv2N5prism6logger8logErrorE5ErrorRKNSt6stringE"></span><span id="prism::logger::logError__Error.ssCR"></span><span class="target" id="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">logError</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/enum_namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f.html#_CPPv4N5prism6logger5ErrorE" title="prism::logger::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">err</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">details</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Логирует ошибку движка с дополнительными деталями </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>err</strong> – Код ошибки из перечисления <a class="reference internal" href="#namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f"><span class="std std-ref">Error</span></a></p></li>
+<li><p><strong>details</strong> – Дополнительная информация об ошибке (по умолчанию пустая строка) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Удобные функции для разных уровней логирования:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger7verboseERKNSt6stringE">
+<span id="_CPPv3N5prism6logger7verboseERKNSt6stringE"></span><span id="_CPPv2N5prism6logger7verboseERKNSt6stringE"></span><span id="prism::logger::verbose__ssCR"></span><span class="target" id="namespaceprism_1_1logger_1af4a740cd72b4f7684f4466728cf548d3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">verbose</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Логирует сообщение с уровнем VERBOSE. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – Текст сообщения </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5debugERKNSt6stringE">
+<span id="_CPPv3N5prism6logger5debugERKNSt6stringE"></span><span id="_CPPv2N5prism6logger5debugERKNSt6stringE"></span><span id="prism::logger::debug__ssCR"></span><span class="target" id="namespaceprism_1_1logger_1a3ce9ded53e563d7894a199406899a18c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">debug</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Логирует сообщение с уровнем DEBUG. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – Текст сообщения </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger4infoERKNSt6stringE">
+<span id="_CPPv3N5prism6logger4infoERKNSt6stringE"></span><span id="_CPPv2N5prism6logger4infoERKNSt6stringE"></span><span id="prism::logger::info__ssCR"></span><span class="target" id="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">info</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Логирует сообщение с уровнем INFO. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – Текст сообщения </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger7warningERKNSt6stringE">
+<span id="_CPPv3N5prism6logger7warningERKNSt6stringE"></span><span id="_CPPv2N5prism6logger7warningERKNSt6stringE"></span><span id="prism::logger::warning__ssCR"></span><span class="target" id="namespaceprism_1_1logger_1a95789fad40cdbf5ca47baef4c355c1e1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">warning</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Логирует сообщение с уровнем WARNING. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – Текст сообщения </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger5errorERKNSt6stringE">
+<span id="_CPPv3N5prism6logger5errorERKNSt6stringE"></span><span id="_CPPv2N5prism6logger5errorERKNSt6stringE"></span><span id="prism::logger::error__ssCR"></span><span class="target" id="namespaceprism_1_1logger_1ae5db974c5397849b8fc4230c9147906d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">error</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Логирует сообщение с уровнем ERROR. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – Текст сообщения </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger8criticalERKNSt6stringE">
+<span id="_CPPv3N5prism6logger8criticalERKNSt6stringE"></span><span id="_CPPv2N5prism6logger8criticalERKNSt6stringE"></span><span id="prism::logger::critical__ssCR"></span><span class="target" id="namespaceprism_1_1logger_1ab7af2a1862659afcddc003e975de9734"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">critical</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Логирует сообщение с уровнем CRITICAL. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – Текст сообщения </p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Функции для работы с последней ошибкой:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger12getLastErrorEv">
+<span id="_CPPv3N5prism6logger12getLastErrorEv"></span><span id="_CPPv2N5prism6logger12getLastErrorEv"></span><span id="prism::logger::getLastError"></span><span class="target" id="namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api/enum_namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f.html#_CPPv4N5prism6logger5ErrorE" title="prism::logger::Error"><span class="n"><span class="pre">Error</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getLastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Получает последнюю залогированную ошибку </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>std::optional&lt;Error&gt; - последняя ошибка или std::nullopt, если ошибок не было </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger12hasLastErrorEv">
+<span id="_CPPv3N5prism6logger12hasLastErrorEv"></span><span id="_CPPv2N5prism6logger12hasLastErrorEv"></span><span id="prism::logger::hasLastError"></span><span class="target" id="namespaceprism_1_1logger_1a95da0e71a7281fed4c011c2dd58ba1af"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">hasLastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Проверяет наличие залогированных ошибок </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Эквивалентно <a class="reference internal" href="#namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1"><span class="std std-ref">getLastError()</span></a>.has_value() </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true если есть необработанная ошибка, false иначе </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger18checkLastErrorTypeE5Error">
+<span id="_CPPv3N5prism6logger18checkLastErrorTypeE5Error"></span><span id="_CPPv2N5prism6logger18checkLastErrorTypeE5Error"></span><span id="prism::logger::checkLastErrorType__Error"></span><span class="target" id="namespaceprism_1_1logger_1aa50f2608949bcbf87806915fb04c4abc"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">checkLastErrorType</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/enum_namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f.html#_CPPv4N5prism6logger5ErrorE" title="prism::logger::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">errorType</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Проверяет тип последней ошибки </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1"><span class="std std-ref">getLastError()</span></a></p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>errorType</strong> – Ожидаемый тип ошибки для проверки </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true если последняя ошибка существует и совпадает с заданным типом </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism6logger14clearLastErrorEv">
+<span id="_CPPv3N5prism6logger14clearLastErrorEv"></span><span id="_CPPv2N5prism6logger14clearLastErrorEv"></span><span id="prism::logger::clearLastError"></span><span class="target" id="namespaceprism_1_1logger_1a7e98e993d5b16cdd4d5d39c6f2797967"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clearLastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Сбрасывает состояние последней ошибки </p>
+<dl class="field-list simple">
+<dt class="field-odd">Post<span class="colon">:</span></dt>
+<dd class="field-odd"><p>После вызова <a class="reference internal" href="#namespaceprism_1_1logger_1a95da0e71a7281fed4c011c2dd58ba1af"><span class="std std-ref">hasLastError()</span></a> будет возвращать false </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="physics.html" class="btn btn-neutral float-left" title="Физический движок" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../dev/contributing.html" class="btn btn-neutral float-right" title="Участие в разработке" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Alexei Kutuzov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

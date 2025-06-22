@@ -56,8 +56,6 @@ Included By
 -----------
 
 
-- :ref:`file_src_PrismEngine.h`
-
 - :ref:`file_src_Window.cpp`
 
 

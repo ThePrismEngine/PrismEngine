@@ -1,0 +1,43 @@
+\doxysection{Файл C\+:/\+Users/\+Admin/source/repos/\+Prism\+Engine/src/logger.cpp}
+\hypertarget{logger_8cpp}{}\label{logger_8cpp}\index{C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp@{C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp}}
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+\doxysubsubsection*{Пространства имен}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceprism}{prism}}
+\item 
+namespace \mbox{\hyperlink{namespaceprism_1_1logger}{prism\+::logger}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a44ab0bc2022efc1dbfe3234031cac93e}{prism\+::logger\+::set\+Level}} (\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}} level)
+\begin{DoxyCompactList}\small\item\em Устанавливает уровень логирования \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceprism_1_1logger_a0f5071ef54b1884256b312cec14e910d}{prism\+::logger\+::set\+Output\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Настраивает вывод логов в файл \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_aea6335133a1d9d4d190d24737b4d12cc}{prism\+::logger\+::set\+Output\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Настраивает вывод логов в консоль \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a011c76bbfb6104919163e337e828a26e}{prism\+::logger\+::log}} (\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}} level, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Основная функция логирования \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_af1807bb00385d1c5c4ad487f5869e9bd}{prism\+::logger\+::log\+Error}} (\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}} err, const std\+::string \&details="{}"{})
+\begin{DoxyCompactList}\small\item\em Логирует ошибку движка с дополнительными деталями \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_af4a740cd72b4f7684f4466728cf548d3}{prism\+::logger\+::verbose}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем VERBOSE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a3ce9ded53e563d7894a199406899a18c}{prism\+::logger\+::debug}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем DEBUG. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a53c114bd789848844092ce408a10a38c}{prism\+::logger\+::info}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем INFO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a95789fad40cdbf5ca47baef4c355c1e1}{prism\+::logger\+::warning}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем WARNING. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_ae5db974c5397849b8fc4230c9147906d}{prism\+::logger\+::error}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем ERROR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_ab7af2a1862659afcddc003e975de9734}{prism\+::logger\+::critical}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Логирует сообщение с уровнем CRITICAL. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}} $>$ \mbox{\hyperlink{namespaceprism_1_1logger_a4009b1213765d57c2690fb9297c6bea1}{prism\+::logger\+::get\+Last\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Получает последнюю залогированную ошибку \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceprism_1_1logger_a95da0e71a7281fed4c011c2dd58ba1af}{prism\+::logger\+::has\+Last\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Проверяет наличие залогированных ошибок \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceprism_1_1logger_aa50f2608949bcbf87806915fb04c4abc}{prism\+::logger\+::check\+Last\+Error\+Type}} (\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}} error\+Type)
+\begin{DoxyCompactList}\small\item\em Проверяет тип последней ошибки \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceprism_1_1logger_a7e98e993d5b16cdd4d5d39c6f2797967}{prism\+::logger\+::clear\+Last\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Сбрасывает состояние последней ошибки \end{DoxyCompactList}\end{DoxyCompactItemize}

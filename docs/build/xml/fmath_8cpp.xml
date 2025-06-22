@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="fmath_8cpp" kind="file" language="C++">
+    <compoundname>fmath.cpp</compoundname>
+    <includes refid="fmath_8h" local="yes">fmath.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/fmath.cpp</label>
+        <link refid="fmath_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>fmath.h</label>
+        <link refid="fmath_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>corecrt_math_defines.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceprism">prism</innernamespace>
+    <innernamespace refid="namespaceprism_1_1math">prism::math</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fmath_8h" kindref="compound">fmath.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespaceprism" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism" kindref="compound">prism</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="namespaceprism_1_1math" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism_1_1math" kindref="compound">math</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446" kindref="member">degToRad</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>degrees)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>degrees<sp/>*<sp/>(float)M_PI<sp/>/<sp/>180.0f;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/fmath.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="namespaceprism_1_1view" kind="namespace" language="C++">
     <compoundname>prism::view</compoundname>
     <innerclass refid="structprism_1_1view_1_1_queue_family_indices" prot="public">prism::view::QueueFamilyIndices</innerclass>
@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Window.h" line="16" column="27" bodyfile="src/Window.h" bodystart="16" bodyend="18"/>
+        <location file="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" line="16" column="27" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" bodystart="16" bodyend="18"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441" prot="public" static="no" mutable="no">
         <type>const std::vector&lt; const char * &gt;</type>
@@ -37,13 +37,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Window.h" line="19" column="27" bodyfile="src/Window.h" bodystart="19" bodyend="21"/>
+        <location file="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" line="19" column="27" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/Window.h" bodystart="19" bodyend="21"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Window.cpp" line="6" column="5"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/Window.cpp" line="6" column="5"/>
   </compounddef>
 </doxygen>

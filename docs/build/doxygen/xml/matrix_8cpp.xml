@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="matrix_8cpp" kind="file" language="C++">
     <compoundname>matrix.cpp</compoundname>
     <includes refid="matrix_8h" local="yes">matrix.h</includes>
     <incdepgraph>
       <node id="1">
-        <label>src/matrix.cpp</label>
+        <label>C:/Users/Admin/source/repos/PrismEngine/src/matrix.cpp</label>
         <link refid="matrix_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -194,6 +194,6 @@
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="151"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/matrix.cpp"/>
+    <location file="C:/Users/Admin/source/repos/PrismEngine/src/matrix.cpp"/>
   </compounddef>
 </doxygen>
