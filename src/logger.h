@@ -4,6 +4,7 @@
 #include <memory>
 #include <fstream>
 #include <unordered_map>
+#include <optional>
 
 namespace prism::logger {
     /**
@@ -95,4 +96,31 @@ namespace prism::logger {
      * @param message Текст сообщения
      */
     void critical(const std::string& message);
+
+    /**
+     * @brief Получает последнюю залогированную ошибку
+     * @return std::optional<Error> - последняя ошибка или std::nullopt, если ошибок не было
+     */
+    std::optional<Error> getLastError();
+
+    /**
+     * @brief Проверяет наличие залогированных ошибок
+     * @return true если есть необработанная ошибка, false иначе
+     * @note Эквивалентно getLastError().has_value()
+     */
+    bool hasLastError();
+
+    /**
+     * @brief Проверяет тип последней ошибки
+     * @param errorType Ожидаемый тип ошибки для проверки
+     * @return true если последняя ошибка существует и совпадает с заданным типом
+     * @see getLastError()
+     */
+    bool checkLastErrorType(Error errorType);
+
+    /**
+     * @brief Сбрасывает состояние последней ошибки
+     * @post После вызова hasLastError() будет возвращать false
+     */
+    void clearLastError();
 }

@@ -10,7 +10,9 @@ namespace prism::logger {
         static SDL_LogOutputFunction defaultOutputFunction = nullptr;
         static void* defaultUserdata = nullptr;
 
-        // Наша функция вывода
+        std::optional<Error> lastError;
+
+        // функция вывода
         void CustomOutputFunction(void* userdata, int category,
             SDL_LogPriority priority, const char* message) {
             if (logFileStream && logFileStream->is_open()) {
@@ -82,6 +84,10 @@ namespace prism::logger {
         if (!details.empty()) {
             fullMsg += " | Details: " + details;
         }
+
+        // Сохраняем ошибку
+        lastError = err;
+
         log(Level::ERROR, fullMsg);
     }
 
@@ -91,4 +97,20 @@ namespace prism::logger {
     void warning(const std::string& message) { log(Level::WARNING, message); }
     void error(const std::string& message) { log(Level::ERROR, message); }
     void critical(const std::string& message) { log(Level::CRITICAL, message); }
+    std::optional<Error> getLastError()
+    {
+        return lastError;
+    }
+
+    bool hasLastError() {
+        return lastError.has_value();
+    }
+
+    bool checkLastErrorType(Error errorType) {
+        return lastError.has_value() && lastError == errorType;
+    }
+
+    void clearLastError() {
+        lastError.reset();
+    }
 }
