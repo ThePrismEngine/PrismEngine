@@ -12,7 +12,11 @@ namespace prism::logger {
      * @details Содержит коды ошибок, которые могут быть залогированы через logError()
      */
     enum class Error {
-        TEST_ERROR ///< Тестовая ошибка (пример)
+        TEST_ERROR, ///< Тестовая ошибка (пример)
+        FAILED_TO_CREATE_VK_INSTANCE,
+        FAILED_TO_CREATE_WINDOW_SURFACE,
+        PRISM_ENGINE_NOT_INITIALIZE,
+        WINDOW_INSTANCE_CREATE_ERROR,
     };
 
     /**

@@ -26,7 +26,11 @@ namespace prism::logger {
         }
 
         const std::unordered_map<Error, std::string> errorMessages = {
-            {Error::TEST_ERROR, "It is test error"}
+            {Error::TEST_ERROR, "It is test error"},
+            {Error::FAILED_TO_CREATE_VK_INSTANCE, "failed to create Vulkan instance!"},
+            {Error::FAILED_TO_CREATE_WINDOW_SURFACE, "failed to create window surface!"},
+            {Error::PRISM_ENGINE_NOT_INITIALIZE, "the part of PrismEngine that requires initialization has been called, please call prism::init() at the beginning of your program" },
+            {Error::WINDOW_INSTANCE_CREATE_ERROR, "Window instance creation failed for unspecified reasons"}
         };
     }
 

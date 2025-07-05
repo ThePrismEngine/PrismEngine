@@ -9,26 +9,14 @@
 #include <SDL_vulkan.h>
 #include <memory> 
 #include <set>
+#include <map>
+#include <iostream>
+#include "logger.h"
+#include "init.h"
+#include "WindowVkManager.h"
 
 namespace prism {
     namespace view {
-
-        const std::vector<const char*> validationLayers = {
-                "VK_LAYER_KHRONOS_validation"
-        };
-        const std::vector<const char*> deviceExtensions = {
-                VK_KHR_SWAPCHAIN_EXTENSION_NAME
-        };
-
-        struct QueueFamilyIndices {
-            std::optional<uint32_t> graphicsFamily;
-            std::optional<uint32_t> presentFamily;
-
-            bool isComplete() {
-                return graphicsFamily.has_value() && presentFamily.has_value();
-            }
-        };
-
         class Window {
         public:
             // === Конструкторы ===
@@ -79,50 +67,30 @@ namespace prism {
             void clear();
             void update();
 
+            void drawFrame();
+
+            void endRenderingProcess();
+
 
             // === Дополнительные методы ===
             void destroy();
 
             static void setSDLInitialized(bool initialized) { s_sdlInitialized = initialized; }
 
-            // === Vulkan методы ===
-            void vulkanInut();
-            void createInstance();
-            void pickPhysicalDevice();
-            bool isDeviceSuitable(VkPhysicalDevice device);
-
-            bool checkDeviceExtensionSupport(VkPhysicalDevice device);
+    
 
 
         private:
-#ifdef NDEBUG
-            const bool enableValidationLayers = false;
-#else
-            const bool enableValidationLayers = true;
-#endif
             static bool s_sdlInitialized;
             SDL_Window* m_sdlWindow;
             bool m_isDestroyed;
 
             bool m_windowMinimized = false; // Флаг минимизации окна
+
+            WindowVkManager windowVkManager;
             
             // Внутренний конструктор для делегирования
             Window(const char* title, int x, int y, int width, int height, Uint32 sdlFlags);
-
-            VkInstance instance;
-            VkPhysicalDevice physicalDevice;
-            VkDevice device;
-            VkQueue graphicsQueue;
-            VkSurfaceKHR surface;
-            VkQueue presentQueue;
-
-            int rateDeviceSuitability(VkPhysicalDevice device);
-
-            QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
-            void createLogicalDevice();
-            void createSurface();
         };
-
-        inline bool Window::s_sdlInitialized = false;
     } // namespace view
 } // namespace prism
