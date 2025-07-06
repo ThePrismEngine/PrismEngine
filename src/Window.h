@@ -69,7 +69,7 @@ namespace prism {
 
             void drawFrame();
 
-            void endRenderingProcess();
+            void awaitRenderingCompletion();
 
 
             // === Дополнительные методы ===
@@ -84,8 +84,6 @@ namespace prism {
             static bool s_sdlInitialized;
             SDL_Window* m_sdlWindow;
             bool m_isDestroyed;
-
-            bool m_windowMinimized = false; // Флаг минимизации окна
 
             WindowVkManager windowVkManager;
             

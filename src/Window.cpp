@@ -162,11 +162,14 @@ namespace prism {
                     m_isDestroyed = true;
                 }
                 else if (event.type == SDL_WINDOWEVENT) {
-                    if (event.window.event == SDL_WINDOWEVENT_MINIMIZED) {
-                        m_windowMinimized = true;
+                    if (event.window.event == SDL_WINDOWEVENT_RESIZED) {
+                        windowVkManager.framebufferResized = true;
+                    }
+                    else if (event.window.event == SDL_WINDOWEVENT_MINIMIZED) {
+                        windowVkManager.windowMinimized = true;
                     }
                     else if (event.window.event == SDL_WINDOWEVENT_RESTORED) {
-                        m_windowMinimized = false;
+                        windowVkManager.windowMinimized = false;
                     }
                 }
             }
@@ -185,9 +188,9 @@ namespace prism {
             windowVkManager.drawFrame();
         }
 
-        void Window::endRenderingProcess()
+        void Window::awaitRenderingCompletion()
         {
-            windowVkManager.endRenderingProcess();
+            windowVkManager.awaitRenderingCompletion();
         }
 
         void Window::destroy() {

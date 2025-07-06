@@ -60,7 +60,10 @@ namespace prism {
             void init(SDL_Window* window);
             void drawFrame();
             void cleanup();
-            void endRenderingProcess();
+            void awaitRenderingCompletion();
+
+            bool framebufferResized = false;
+            bool windowMinimized = false;
 
         private:
             void createInstance();
@@ -76,6 +79,11 @@ namespace prism {
             void createCommandPool();
             void createCommandBuffer();
             void createSyncObjects();
+
+            void recreateSwapChain();
+            void cleanupSwapChain();
+
+            const int MAX_FRAMES_IN_FLIGHT = 2;
 
             SDL_Window* window;
             VkInstance instance;
@@ -96,16 +104,20 @@ namespace prism {
             VkPipelineLayout pipelineLayout;
 
             VkPipeline graphicsPipeline;
-
-            VkCommandPool commandPool;
-            VkCommandBuffer commandBuffer;
-
+            
             std::vector<VkFramebuffer> swapChainFramebuffers;
 
-            VkSemaphore imageAvailableSemaphore;
-            VkSemaphore renderFinishedSemaphore;
-            VkFence inFlightFence;
+            VkCommandPool commandPool;
+            std::vector<VkCommandBuffer> commandBuffers;
 
+            std::vector<VkSemaphore> imageAvailableSemaphores;
+            std::vector<VkSemaphore> renderFinishedSemaphores;
+            std::vector<VkFence> inFlightFences;
+
+            uint32_t currentFrame = 0;
+            bool wasRenderingActive = true;
+
+            bool isWindowReadyForRendering(SDL_Window* window);
             std::vector<const char*> getRequiredExtensions();
             void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
             bool checkValidationLayerSupport();
