@@ -1,11 +1,11 @@
 #include "WindowVkManager.h"
 
-prism::view::WindowVkManager::WindowVkManager()
+prism::render::WindowVkManager::WindowVkManager()
 {
 	//init()
 }
 
-void prism::view::WindowVkManager::init(SDL_Window* window)
+void prism::render::WindowVkManager::init(SDL_Window* window)
 {
     this->window = window;
 	createInstance();
@@ -23,7 +23,7 @@ void prism::view::WindowVkManager::init(SDL_Window* window)
     createSyncObjects();
 }
 
-void prism::view::WindowVkManager::drawFrame()
+void prism::render::WindowVkManager::drawFrame()
 {
     if (!isWindowReadyForRendering(window)) { 
         if (wasRenderingActive) {
@@ -100,7 +100,7 @@ void prism::view::WindowVkManager::drawFrame()
     currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
 }
 
-void prism::view::WindowVkManager::createInstance()
+void prism::render::WindowVkManager::createInstance()
 {
     if (enableValidationLayers && !checkValidationLayerSupport()) {
         throw std::runtime_error("validation layers requested, but not available!");
@@ -141,7 +141,7 @@ void prism::view::WindowVkManager::createInstance()
     }
 }
 
-bool prism::view::WindowVkManager::isWindowReadyForRendering(SDL_Window* window)
+bool prism::render::WindowVkManager::isWindowReadyForRendering(SDL_Window* window)
 {
     Uint32 flags = SDL_GetWindowFlags(window);
     if (flags & (SDL_WINDOW_HIDDEN | SDL_WINDOW_MINIMIZED)) {
@@ -154,7 +154,7 @@ bool prism::view::WindowVkManager::isWindowReadyForRendering(SDL_Window* window)
     return (width > 0 && height > 0);  // Проверяем, что размер ненулевой
 }
 
-std::vector<const char*> prism::view::WindowVkManager::getRequiredExtensions() {
+std::vector<const char*> prism::render::WindowVkManager::getRequiredExtensions() {
     std::vector<const char*> extensions;
 
     unsigned extensionCount = 0;
@@ -176,7 +176,7 @@ std::vector<const char*> prism::view::WindowVkManager::getRequiredExtensions() {
     return extensions;
 }
 
-void prism::view::WindowVkManager::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo)
+void prism::render::WindowVkManager::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo)
 {
     createInfo = {};
     createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
@@ -185,7 +185,7 @@ void prism::view::WindowVkManager::populateDebugMessengerCreateInfo(VkDebugUtils
     createInfo.pfnUserCallback = debugCallback;
 }
 
-bool prism::view::WindowVkManager::checkValidationLayerSupport()
+bool prism::render::WindowVkManager::checkValidationLayerSupport()
 {
     uint32_t layerCount;
     vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
@@ -211,7 +211,7 @@ bool prism::view::WindowVkManager::checkValidationLayerSupport()
     return true;
 }
 
-bool prism::view::WindowVkManager::isDeviceSuitable(VkPhysicalDevice device) {
+bool prism::render::WindowVkManager::isDeviceSuitable(VkPhysicalDevice device) {
     QueueFamilyIndices indices = findQueueFamilies(device);
 
     bool extensionsSupported = checkDeviceExtensionSupport(device);
@@ -225,7 +225,7 @@ bool prism::view::WindowVkManager::isDeviceSuitable(VkPhysicalDevice device) {
     return indices.isComplete() && extensionsSupported && swapChainAdequate;
 }
 
-bool prism::view::WindowVkManager::checkDeviceExtensionSupport(VkPhysicalDevice device) {
+bool prism::render::WindowVkManager::checkDeviceExtensionSupport(VkPhysicalDevice device) {
     uint32_t extensionCount;
     vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, nullptr);
 
@@ -241,7 +241,7 @@ bool prism::view::WindowVkManager::checkDeviceExtensionSupport(VkPhysicalDevice 
     return requiredExtensions.empty();
 }
 
-prism::view::QueueFamilyIndices prism::view::WindowVkManager::findQueueFamilies(VkPhysicalDevice device)
+prism::render::QueueFamilyIndices prism::render::WindowVkManager::findQueueFamilies(VkPhysicalDevice device)
 {
     QueueFamilyIndices indices;
 
@@ -274,7 +274,7 @@ prism::view::QueueFamilyIndices prism::view::WindowVkManager::findQueueFamilies(
     return indices;
 }
 
-int prism::view::WindowVkManager::rateDeviceSuitability(VkPhysicalDevice device)
+int prism::render::WindowVkManager::rateDeviceSuitability(VkPhysicalDevice device)
 {
     VkPhysicalDeviceProperties deviceProps;
     VkPhysicalDeviceFeatures deviceFeatures;
@@ -324,7 +324,7 @@ int prism::view::WindowVkManager::rateDeviceSuitability(VkPhysicalDevice device)
     return score;
 }
 
-prism::view::SwapChainSupportDetails prism::view::WindowVkManager::querySwapChainSupport(VkPhysicalDevice device)
+prism::render::SwapChainSupportDetails prism::render::WindowVkManager::querySwapChainSupport(VkPhysicalDevice device)
 {
     SwapChainSupportDetails details;
     vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &details.capabilities);
@@ -348,7 +348,7 @@ prism::view::SwapChainSupportDetails prism::view::WindowVkManager::querySwapChai
     return details;
 }
 
-std::vector<char> prism::view::WindowVkManager::readShaderFile(const std::string& filename)
+std::vector<char> prism::render::WindowVkManager::readShaderFile(const std::string& filename)
 {
     std::ifstream file(filename, std::ios::ate | std::ios::binary);
 
@@ -367,7 +367,7 @@ std::vector<char> prism::view::WindowVkManager::readShaderFile(const std::string
     return buffer;
 }
 
-VkShaderModule prism::view::WindowVkManager::createShaderModule(const std::vector<char>& code)
+VkShaderModule prism::render::WindowVkManager::createShaderModule(const std::vector<char>& code)
 {
     VkShaderModuleCreateInfo createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
@@ -382,7 +382,7 @@ VkShaderModule prism::view::WindowVkManager::createShaderModule(const std::vecto
     return shaderModule;
 }
 
-void prism::view::WindowVkManager::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex)
+void prism::render::WindowVkManager::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex)
 {
     VkCommandBufferBeginInfo beginInfo{};
     beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
@@ -431,7 +431,7 @@ void prism::view::WindowVkManager::recordCommandBuffer(VkCommandBuffer commandBu
 
 }
 
-VkSurfaceFormatKHR prism::view::WindowVkManager::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats)
+VkSurfaceFormatKHR prism::render::WindowVkManager::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats)
 {
     for (const auto& availableFormat : availableFormats) {
         if (availableFormat.format == VK_FORMAT_B8G8R8A8_SRGB && availableFormat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
@@ -442,7 +442,7 @@ VkSurfaceFormatKHR prism::view::WindowVkManager::chooseSwapSurfaceFormat(const s
     return availableFormats[0];
 }
 
-VkPresentModeKHR prism::view::WindowVkManager::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes)
+VkPresentModeKHR prism::render::WindowVkManager::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes)
 {
     for (const auto& availablePresentMode : availablePresentModes) {
         if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
@@ -453,7 +453,7 @@ VkPresentModeKHR prism::view::WindowVkManager::chooseSwapPresentMode(const std::
     return VK_PRESENT_MODE_FIFO_KHR;
 }
 
-VkExtent2D prism::view::WindowVkManager::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities)
+VkExtent2D prism::render::WindowVkManager::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities)
 {
     if (capabilities.currentExtent.width != std::numeric_limits<uint32_t>::max()) {
         return capabilities.currentExtent;
@@ -474,7 +474,7 @@ VkExtent2D prism::view::WindowVkManager::chooseSwapExtent(const VkSurfaceCapabil
     }
 }
 
-void prism::view::WindowVkManager::setupDebugMessenger()
+void prism::render::WindowVkManager::setupDebugMessenger()
 {
     if (!enableValidationLayers) return;
 
@@ -486,7 +486,7 @@ void prism::view::WindowVkManager::setupDebugMessenger()
     }
 }
 
-void prism::view::WindowVkManager::pickPhysicalDevice()
+void prism::render::WindowVkManager::pickPhysicalDevice()
 {
     uint32_t deviceCount = 0;
     vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
@@ -537,7 +537,7 @@ void prism::view::WindowVkManager::pickPhysicalDevice()
     std::cout << "  - Score: " << candidates.rbegin()->first << "\n\n";
 }
 
-void prism::view::WindowVkManager::createLogicalDevice()
+void prism::render::WindowVkManager::createLogicalDevice()
 {
     QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
 
@@ -583,14 +583,14 @@ void prism::view::WindowVkManager::createLogicalDevice()
     vkGetDeviceQueue(device, indices.presentFamily.value(), 0, &presentQueue);
 }
 
-void prism::view::WindowVkManager::createSurface()
+void prism::render::WindowVkManager::createSurface()
 {
     if (!SDL_Vulkan_CreateSurface(window, instance, &surface)) {
         logger::logError(logger::Error::FAILED_TO_CREATE_WINDOW_SURFACE, "WindowVkManager::createSurface");
     }
 }
 
-void prism::view::WindowVkManager::createSwapChain()
+void prism::render::WindowVkManager::createSwapChain()
 {
     SwapChainSupportDetails swapChainSupport = querySwapChainSupport(physicalDevice);
 
@@ -646,7 +646,7 @@ void prism::view::WindowVkManager::createSwapChain()
     swapChainExtent = extent;
 }
 
-void prism::view::WindowVkManager::createImageViews()
+void prism::render::WindowVkManager::createImageViews()
 {
     swapChainImageViews.resize(swapChainImages.size());
     for (size_t i = 0; i < swapChainImages.size(); i++) {
@@ -674,7 +674,7 @@ void prism::view::WindowVkManager::createImageViews()
     }
 }
 
-void prism::view::WindowVkManager::createGraphicsPipeline()
+void prism::render::WindowVkManager::createGraphicsPipeline()
 {
     auto vertShaderCode = readShaderFile("shaders/vert.spv");
     auto fragShaderCode = readShaderFile("shaders/frag.spv");
@@ -786,7 +786,7 @@ void prism::view::WindowVkManager::createGraphicsPipeline()
     vkDestroyShaderModule(device, vertShaderModule, nullptr);
 }
 
-void prism::view::WindowVkManager::createRenderPass()
+void prism::render::WindowVkManager::createRenderPass()
 {
     VkAttachmentDescription colorAttachment{};
     colorAttachment.format = swapChainImageFormat;
@@ -828,7 +828,7 @@ void prism::view::WindowVkManager::createRenderPass()
     }
 }
 
-void prism::view::WindowVkManager::createFramebuffers()
+void prism::render::WindowVkManager::createFramebuffers()
 {
     swapChainFramebuffers.resize(swapChainImageViews.size());
 
@@ -852,7 +852,7 @@ void prism::view::WindowVkManager::createFramebuffers()
     }
 }
 
-void prism::view::WindowVkManager::createCommandPool()
+void prism::render::WindowVkManager::createCommandPool()
 {
     QueueFamilyIndices queueFamilyIndices = findQueueFamilies(physicalDevice);
 
@@ -866,7 +866,7 @@ void prism::view::WindowVkManager::createCommandPool()
     }
 }
 
-void prism::view::WindowVkManager::createCommandBuffer()
+void prism::render::WindowVkManager::createCommandBuffer()
 {
     commandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
 
@@ -881,7 +881,7 @@ void prism::view::WindowVkManager::createCommandBuffer()
     }
 }
 
-void prism::view::WindowVkManager::createSyncObjects()
+void prism::render::WindowVkManager::createSyncObjects()
 {
     imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
     renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
@@ -904,7 +904,7 @@ void prism::view::WindowVkManager::createSyncObjects()
     }
 }
 
-void prism::view::WindowVkManager::recreateSwapChain()
+void prism::render::WindowVkManager::recreateSwapChain()
 {
     awaitRenderingCompletion();
 
@@ -915,7 +915,7 @@ void prism::view::WindowVkManager::recreateSwapChain()
     createFramebuffers();
 }
 
-void prism::view::WindowVkManager::cleanupSwapChain()
+void prism::render::WindowVkManager::cleanupSwapChain()
 {
     for (auto framebuffer : swapChainFramebuffers) {
         vkDestroyFramebuffer(device, framebuffer, nullptr);
@@ -928,7 +928,7 @@ void prism::view::WindowVkManager::cleanupSwapChain()
     vkDestroySwapchainKHR(device, swapChain, nullptr);
 }
 
-void prism::view::WindowVkManager::cleanup()
+void prism::render::WindowVkManager::cleanup()
 {
     cleanupSwapChain();
 
@@ -955,7 +955,7 @@ void prism::view::WindowVkManager::cleanup()
     vkDestroyInstance(instance, nullptr);
 }
 
-void prism::view::WindowVkManager::awaitRenderingCompletion()
+void prism::render::WindowVkManager::awaitRenderingCompletion()
 {
     vkDeviceWaitIdle(device);
 }

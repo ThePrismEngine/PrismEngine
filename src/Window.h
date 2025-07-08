@@ -16,7 +16,7 @@
 #include "WindowVkManager.h"
 
 namespace prism {
-    namespace view {
+    namespace render {
         class Window {
         public:
             // === Конструкторы ===
@@ -90,5 +90,5 @@ namespace prism {
             // Внутренний конструктор для делегирования
             Window(const char* title, int x, int y, int width, int height, Uint32 sdlFlags);
         };
-    } // namespace view
+    } // namespace render
 } // namespace prism

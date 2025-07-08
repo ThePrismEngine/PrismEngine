@@ -208,6 +208,7 @@
     <ClCompile Include="src\matrix.cpp" />
     <ClCompile Include="src\PrismEngine.cpp" />
     <ClCompile Include="src\vector.cpp" />
+    <ClCompile Include="src\vertex.cpp" />
     <ClCompile Include="src\Window.cpp" />
     <ClCompile Include="src\WindowVkManager.cpp" />
   </ItemGroup>
@@ -219,6 +220,7 @@
     <ClInclude Include="src\matrix.h" />
     <ClInclude Include="src\PrismEngine.h" />
     <ClInclude Include="src\vector.h" />
+    <ClInclude Include="src\vertex.h" />
     <ClInclude Include="src\Window.h" />
     <ClInclude Include="src\WindowVkManager.h" />
   </ItemGroup>

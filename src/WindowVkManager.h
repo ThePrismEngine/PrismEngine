@@ -18,7 +18,7 @@
 #include "logger.h"
 
 namespace prism {
-    namespace view {
+    namespace render {
 
         inline VkResult CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger) {
             auto func = (PFN_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT");
@@ -157,5 +157,5 @@ namespace prism {
 #endif
         };
 
-    } // namespace view
+    } // namespace render
 } // namespace prism

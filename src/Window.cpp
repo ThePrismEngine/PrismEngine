@@ -2,7 +2,7 @@
 
 
 namespace prism {
-    namespace view {
+    namespace render {
 
         Window::Window(const char* title, int width, int height)
             : Window(title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN) {
@@ -201,5 +201,5 @@ namespace prism {
                 m_isDestroyed = true;
             }
         }
-    } // namespace view
+    } // namespace render
 } // namespace prism

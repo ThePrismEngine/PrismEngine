@@ -16,14 +16,14 @@
     <Filter Include="math">
       <UniqueIdentifier>{a26c7da2-0ec4-4555-8674-023f410e7787}</UniqueIdentifier>
     </Filter>
-    <Filter Include="view">
-      <UniqueIdentifier>{20c1a72d-f9bb-48cb-8674-433670b8699b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="logger">
       <UniqueIdentifier>{4a13ca97-9be7-4ddd-b604-ccaf5f3138a3}</UniqueIdentifier>
     </Filter>
     <Filter Include="init">
       <UniqueIdentifier>{ecd5987a-b7a8-4140-b733-e2fc9f7ca3eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render">
+      <UniqueIdentifier>{20c1a72d-f9bb-48cb-8674-433670b8699b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,16 +37,19 @@
       <Filter>math</Filter>
     </ClCompile>
     <ClCompile Include="src\Window.cpp">
-      <Filter>view</Filter>
+      <Filter>render</Filter>
     </ClCompile>
     <ClCompile Include="src\WindowVkManager.cpp">
-      <Filter>view</Filter>
+      <Filter>render</Filter>
     </ClCompile>
     <ClCompile Include="src\PrismEngine.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="src\logger.cpp">
       <Filter>logger</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vertex.cpp">
+      <Filter>render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -66,16 +69,19 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Window.h">
-      <Filter>view</Filter>
+      <Filter>render</Filter>
     </ClInclude>
     <ClInclude Include="src\WindowVkManager.h">
-      <Filter>view</Filter>
+      <Filter>render</Filter>
     </ClInclude>
     <ClInclude Include="src\logger.h">
       <Filter>logger</Filter>
     </ClInclude>
     <ClInclude Include="src\init.h">
       <Filter>init</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vertex.h">
+      <Filter>render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
