@@ -28,6 +28,9 @@
     <Filter Include="scene">
       <UniqueIdentifier>{a30449b4-0874-4067-bef7-879c48798530}</UniqueIdentifier>
     </Filter>
+    <Filter Include="pgc">
+      <UniqueIdentifier>{24140a25-8f69-4300-ac9e-2fc0755c4639}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\fmath.cpp">
