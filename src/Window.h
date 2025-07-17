@@ -13,7 +13,7 @@
 #include <iostream>
 #include "logger.h"
 #include "init.h"
-#include "WindowVkManager.h"
+#include "RenderVkManager.h"
 
 namespace prism {
     namespace render {
@@ -85,7 +85,7 @@ namespace prism {
             SDL_Window* m_sdlWindow;
             bool m_isDestroyed;
 
-            WindowVkManager windowVkManager;
+            RenderVkManager windowVkManager;
             
             // Внутренний конструктор для делегирования
             Window(const char* title, int x, int y, int width, int height, Uint32 sdlFlags);

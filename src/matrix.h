@@ -38,6 +38,8 @@ namespace prism {
              */
             bool operator==(Matrix4X4& other);
 
+            Matrix4X4 getTransposed();
+
             /**
              * @brief Создает единичную матрицу
              * @return Единичная матрица 4x4
@@ -116,7 +118,6 @@ namespace prism {
          * @param m Матрица для обращения
          * @return Обращенная матрица
          */
-        static Matrix4X4 Matrix_QuickInverse(Matrix4X4& m);
-
+        Matrix4X4 Matrix_QuickInverse(Matrix4X4& m);
     } // namespace math
 } // namespace prism

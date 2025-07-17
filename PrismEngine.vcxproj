@@ -110,7 +110,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Libs\SDL2-devel-2.30.9-VC %281%29\SDL2-2.30.9\include;C:\VulkanSDK\1.4.309.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libs\SDL2-devel-2.30.9-VC %281%29\SDL2-2.30.9\include;C:\VulkanSDK\1.4.309.0\Include;C:\Libs\glm;C:\Libs\stb_image;C:\Libs\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -135,7 +135,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Libs\SDL2-devel-2.30.9-VC %281%29\SDL2-2.30.9\include;C:\VulkanSDK\1.4.309.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libs\SDL2-devel-2.30.9-VC %281%29\SDL2-2.30.9\include;C:\VulkanSDK\1.4.309.0\Include;C:\Libs\glm;C:\Libs\stb_image;C:\Libs\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -160,7 +160,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Libs\SDL2-devel-2.30.9-VC %281%29\SDL2-2.30.9\include;C:\VulkanSDK\1.4.309.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libs\SDL2-devel-2.30.9-VC %281%29\SDL2-2.30.9\include;C:\VulkanSDK\1.4.309.0\Include;C:\Libs\glm;C:\Libs\stb_image;C:\Libs\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -185,7 +185,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Libs\SDL2-devel-2.30.9-VC %281%29\SDL2-2.30.9\include;C:\VulkanSDK\1.4.309.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libs\SDL2-devel-2.30.9-VC %281%29\SDL2-2.30.9\include;C:\VulkanSDK\1.4.309.0\Include;C:\Libs\glm;C:\Libs\stb_image;C:\Libs\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -210,7 +210,7 @@
     <ClCompile Include="src\vector.cpp" />
     <ClCompile Include="src\vertex.cpp" />
     <ClCompile Include="src\Window.cpp" />
-    <ClCompile Include="src\WindowVkManager.cpp" />
+    <ClCompile Include="src\RenderVkManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\config.h" />
@@ -219,10 +219,11 @@
     <ClInclude Include="src\logger.h" />
     <ClInclude Include="src\matrix.h" />
     <ClInclude Include="src\PrismEngine.h" />
+    <ClInclude Include="src\stb_image.h" />
     <ClInclude Include="src\vector.h" />
     <ClInclude Include="src\vertex.h" />
     <ClInclude Include="src\Window.h" />
-    <ClInclude Include="src\WindowVkManager.h" />
+    <ClInclude Include="src\RenderVkManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

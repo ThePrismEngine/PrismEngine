@@ -103,6 +103,17 @@ namespace prism {
 			matrix.m[3][3] = 0.0f;
 			return matrix;
 		}
+
+		Matrix4X4 Matrix4X4::getTransposed()
+		{
+			Matrix4X4 matrix(*this);
+			for (int i = 0; i < 4; ++i) {
+				for (int j = i + 1; j < 4; ++j) {
+					std::swap(matrix.m[i][j], matrix.m[j][i]);
+				}
+			}
+			return matrix;
+		}
 		
 		Matrix4X4 Matrix4X4::Matrix_PointAt(Vector3d& pos, Vector3d& target, Vector3d& up)
 		{

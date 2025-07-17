@@ -25,6 +25,9 @@
     <Filter Include="render">
       <UniqueIdentifier>{20c1a72d-f9bb-48cb-8674-433670b8699b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{a30449b4-0874-4067-bef7-879c48798530}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\fmath.cpp">
@@ -39,7 +42,7 @@
     <ClCompile Include="src\Window.cpp">
       <Filter>render</Filter>
     </ClCompile>
-    <ClCompile Include="src\WindowVkManager.cpp">
+    <ClCompile Include="src\RenderVkManager.cpp">
       <Filter>render</Filter>
     </ClCompile>
     <ClCompile Include="src\PrismEngine.cpp">
@@ -71,7 +74,7 @@
     <ClInclude Include="src\Window.h">
       <Filter>render</Filter>
     </ClInclude>
-    <ClInclude Include="src\WindowVkManager.h">
+    <ClInclude Include="src\RenderVkManager.h">
       <Filter>render</Filter>
     </ClInclude>
     <ClInclude Include="src\logger.h">
@@ -82,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="src\vertex.h">
       <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stb_image.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
