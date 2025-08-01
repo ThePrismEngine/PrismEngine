@@ -30,7 +30,15 @@ namespace prism::logger {
             {Error::FAILED_TO_CREATE_VK_INSTANCE, "failed to create Vulkan instance!"},
             {Error::FAILED_TO_CREATE_WINDOW_SURFACE, "failed to create window surface!"},
             {Error::PRISM_ENGINE_NOT_INITIALIZE, "the part of PrismEngine that requires initialization has been called, please call prism::init() at the beginning of your program" },
-            {Error::WINDOW_INSTANCE_CREATE_ERROR, "Window instance creation failed for unspecified reasons"}
+            {Error::WINDOW_INSTANCE_CREATE_ERROR, "Window instance creation failed for unspecified reasons"},
+            {Error::NOT_CALL_CLEANUP_IN_PGC_CORE, "Cleanup was not called for an instance of the PGC::core::Core class"},
+            {Error::SDL_VULKAN_EXTENSIONS_COUNT_FAILED, "Failed to get SDL Vulkan instance extensions count"},
+            {Error::VULKAN_VALIDATION_LAYERS_UNAVAILABLE, "Vulkan validation layers requested, but not available!"},
+            {Error::VULKAN_DEBUG_MESSENGER_SETUP_FAILED, "Failed to set up debug messenger!"},
+            {Error::VULKAN_NO_GPU_SUPPORT, "Failed to find GPUs with Vulkan support!"},
+            {Error::VULKAN_NO_SUITABLE_GPU, "Failed to find a suitable GPU!"},
+            {Error::VULKAN_LOGICAL_DEVICE_CREATION_FAILED, "Failed to create logical device!"},
+            {Error::VULKAN_SWAP_CHAIN_FAILED, "Failed to create swap chain!"}
         };
     }
 

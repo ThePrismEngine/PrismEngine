@@ -1,6 +1,4 @@
 #pragma once
-
-#pragma once
 #include <vector>
 #include <string>
 #include <SDL.h>
@@ -23,43 +21,14 @@
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
+#include "core.h"
+#include "deviceWrapper.h"
+#include "deviceChecker.h"
+#include "swapChain.h"
+#include "utils.h"
 
 namespace prism {
     namespace render {
-
-        inline VkResult CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger) {
-            auto func = (PFN_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT");
-            if (func != nullptr) {
-                return func(instance, pCreateInfo, pAllocator, pDebugMessenger);
-            }
-            else {
-                return VK_ERROR_EXTENSION_NOT_PRESENT;
-            }
-        }
-
-        inline void DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger, const VkAllocationCallbacks* pAllocator) {
-            auto func = (PFN_vkDestroyDebugUtilsMessengerEXT)vkGetInstanceProcAddr(instance, "vkDestroyDebugUtilsMessengerEXT");
-            if (func != nullptr) {
-                func(instance, debugMessenger, pAllocator);
-            }
-        }
-
-        struct QueueFamilyIndices {
-            std::optional<uint32_t> graphicsFamily;
-            std::optional<uint32_t> presentFamily;
-
-            bool isComplete() {
-                return graphicsFamily.has_value() && presentFamily.has_value();
-            }
-        };
-
-        struct SwapChainSupportDetails {
-            VkSurfaceCapabilitiesKHR capabilities;
-            std::vector<VkSurfaceFormatKHR> formats;
-            std::vector<VkPresentModeKHR> presentModes;
-        };
-
-
         class RenderVkManager {
         public:
             // === Деструктор и контрруктор ===
@@ -73,13 +42,8 @@ namespace prism {
             bool windowMinimized = false;
 
         private:
-            void createInstance();
-            void setupDebugMessenger();
-            void pickPhysicalDevice();
-            void createLogicalDevice();
-            void createSurface();
+            void createCore();
             void createSwapChain();
-            void createImageViews();
             void createGraphicsPipeline();
             void createRenderPass();
             void createFramebuffers();
@@ -99,32 +63,23 @@ namespace prism {
             void loadModel();
             void createColorResources();
 
-            void recreateSwapChain();
-            void cleanupSwapChain();
 
             const int MAX_FRAMES_IN_FLIGHT = 2;
 
             SDL_Window* window;
-            VkInstance instance;
-            VkDebugUtilsMessengerEXT debugMessenger;
-            VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
-            VkDevice device;
-            VkQueue graphicsQueue;
-            VkQueue presentQueue;
-            VkSurfaceKHR surface;
-            std::vector<VkImageView> swapChainImageViews;
 
-            VkSwapchainKHR swapChain;
-            std::vector<VkImage> swapChainImages;
-            VkFormat swapChainImageFormat;
-            VkExtent2D swapChainExtent;
+            PGC::core::Core core;
+            PGC::SwapChain swapChain;
+            PGC::utils::CoreSettings coreSettings;
+
+            PGC::utils::CoreContext context;
+
+           
 
             VkRenderPass renderPass;
             VkPipelineLayout pipelineLayout;
 
             VkPipeline graphicsPipeline;
-            
-            std::vector<VkFramebuffer> swapChainFramebuffers;
 
             VkCommandPool commandPool;
             std::vector<VkCommandBuffer> commandBuffers;
@@ -156,20 +111,10 @@ namespace prism {
             VkImageView textureImageView;
             VkSampler textureSampler;
 
-            VkImage depthImage;
-            VkDeviceMemory depthImageMemory;
-            VkImageView depthImageView;
-
             std::vector<Vertex> vertices;
             std::vector<uint32_t> indices;
 
             uint32_t mipLevels;
-            
-            VkSampleCountFlagBits msaaSamples = VK_SAMPLE_COUNT_1_BIT;
-
-            VkImage colorImage;
-            VkDeviceMemory colorImageMemory;
-            VkImageView colorImageView;
 
             const std::string MODEL_PATH = "models/viking_room.obj";
             const std::string TEXTURE_PATH = "textures/viking_room.png";
@@ -180,14 +125,6 @@ namespace prism {
             void createImage(uint32_t width, uint32_t height, uint32_t mipLevels, VkSampleCountFlagBits numSamples, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory);
             void updateUniformBuffer(uint32_t currentImage);
             bool isWindowReadyForRendering(SDL_Window* window);
-            std::vector<const char*> getRequiredExtensions();
-            void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
-            bool checkValidationLayerSupport();
-            bool isDeviceSuitable(VkPhysicalDevice device);
-            bool checkDeviceExtensionSupport(VkPhysicalDevice device);
-            QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
-            int rateDeviceSuitability(VkPhysicalDevice device);
-            SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice device);
 
             VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats);
             VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes);
@@ -207,34 +144,12 @@ namespace prism {
             void transitionImageLayout(VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout, uint32_t mipLevels);
             void copyBufferToImage(VkBuffer buffer, VkImage image, uint32_t width, uint32_t height);
 
-            VkImageView createImageView(VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels);
-
             VkFormat findDepthFormat();
             VkFormat findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
             bool hasStencilComponent(VkFormat format);
             void generateMipmaps(VkImage image, VkFormat imageFormat, int32_t texWidth, int32_t texHeight, uint32_t mipLevels);
 
             VkSampleCountFlagBits getMaxUsableSampleCount();
-
-            const std::vector<const char*> validationLayers = {
-                "VK_LAYER_KHRONOS_validation"
-            };
-
-            const std::vector<const char*> deviceExtensions = {
-                VK_KHR_SWAPCHAIN_EXTENSION_NAME
-            };
-
-            static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData) {
-                std::cerr << "validation layer: " << pCallbackData->pMessage << std::endl;
-
-                return VK_FALSE;
-            }
-
-#ifdef NDEBUG
-            const bool enableValidationLayers = false;
-#else
-            const bool enableValidationLayers = true;
-#endif
         };
 
     } // namespace render

@@ -203,10 +203,15 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\core.cpp" />
+    <ClCompile Include="src\deviceChecker.cpp" />
+    <ClCompile Include="src\deviceRater.cpp" />
+    <ClCompile Include="src\deviceWrapper.cpp" />
     <ClCompile Include="src\fmath.cpp" />
     <ClCompile Include="src\logger.cpp" />
     <ClCompile Include="src\matrix.cpp" />
     <ClCompile Include="src\PrismEngine.cpp" />
+    <ClCompile Include="src\swapChain.cpp" />
     <ClCompile Include="src\vector.cpp" />
     <ClCompile Include="src\vertex.cpp" />
     <ClCompile Include="src\Window.cpp" />
@@ -214,12 +219,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\configs.h" />
+    <ClInclude Include="src\core.h" />
+    <ClInclude Include="src\deviceChecker.h" />
+    <ClInclude Include="src\deviceRater.h" />
+    <ClInclude Include="src\deviceWrapper.h" />
     <ClInclude Include="src\fmath.h" />
     <ClInclude Include="src\init.h" />
     <ClInclude Include="src\logger.h" />
     <ClInclude Include="src\matrix.h" />
     <ClInclude Include="src\PrismEngine.h" />
     <ClInclude Include="src\stb_image.h" />
+    <ClInclude Include="src\swapChain.h" />
+    <ClInclude Include="src\utils.h" />
     <ClInclude Include="src\vector.h" />
     <ClInclude Include="src\vertex.h" />
     <ClInclude Include="src\Window.h" />

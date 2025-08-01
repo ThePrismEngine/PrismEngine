@@ -57,6 +57,21 @@
     <ClCompile Include="src\vertex.cpp">
       <Filter>render</Filter>
     </ClCompile>
+    <ClCompile Include="src\core.cpp">
+      <Filter>pgc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\deviceRater.cpp">
+      <Filter>pgc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\deviceWrapper.cpp">
+      <Filter>pgc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\deviceChecker.cpp">
+      <Filter>pgc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\swapChain.cpp">
+      <Filter>pgc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\fmath.h">
@@ -91,6 +106,27 @@
     </ClInclude>
     <ClInclude Include="src\stb_image.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\configs.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\deviceWrapper.h">
+      <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\deviceRater.h">
+      <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core.h">
+      <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils.h">
+      <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\deviceChecker.h">
+      <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\swapChain.h">
+      <Filter>pgc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
