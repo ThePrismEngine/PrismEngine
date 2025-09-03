@@ -1,6 +1,5 @@
 #pragma once
 #include "vulkan/vulkan.h"
-#include "configs.h"
 #include "utils.h"
 
 namespace prism {
@@ -51,7 +50,7 @@ namespace prism {
 
 		class DeviceRater {
 		public:
-			int rate(VkPhysicalDevice device, PGC::utils::CoreContext* context, utils::CoreSettings* settings);
+			int rate(VkPhysicalDevice device, PGC::utils::Context* context, utils::Settings* settings);
 		private:
 			bool debugDeviceSelection = false;
 			int getDeviceTypeScore(VkPhysicalDevice device);

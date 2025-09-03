@@ -7,13 +7,12 @@ namespace prism {
 		{
 		public:
 			SwapChain() : context(nullptr), settings(nullptr) {}
-			void init(PGC::utils::CoreContext* context, PGC::utils::CoreSettings* settings);
+			void init(PGC::utils::Context* context, PGC::utils::Settings* settings);
 			~SwapChain();
 			void cleanup();
 			void awaitRenderingCompletion();
 			void recreate();
 
-			VkImageView createImageView(VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels);
 		private:
 			void create();
 			void createImageViews();
@@ -23,8 +22,8 @@ namespace prism {
 			VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
 			uint32_t getImageCount(PGC::utils::SwapChainSupportDetails swapChainSupport);
 
-			utils::CoreContext* context;
-			utils::CoreSettings* settings;
+			utils::Context* context;
+			utils::Settings* settings;
 		};
 	}
 }

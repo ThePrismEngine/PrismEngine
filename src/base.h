@@ -5,14 +5,13 @@
 #include <iostream>
 #include <map>
 #include <set>
+#include <vector>
 #include <unordered_set>
 #include <vulkan/vulkan.h>
 #include <SDL_vulkan.h>
 #include "config.h"
 #include "logger.h"
 #include "utils.h"
-#include "utils.h"
-#include "configs.h"
 #include "deviceWrapper.h"
 #include "deviceRater.h"
 
@@ -35,17 +34,15 @@ namespace prism {
 			}
 		}
 
-		namespace core 
+		namespace base 
 		{
-			class Core
+			class Base
 			{
 			public:
-				Core() : context(nullptr), settings(nullptr) {}
-				void init(PGC::utils::CoreContext* context, PGC::utils::CoreSettings* settings);
-				~Core();
+				Base() : context(nullptr), settings(nullptr) {}
+				void init(PGC::utils::Context* context, PGC::utils::Settings* settings);
+				~Base();
 				void cleanup();
-
-				VkSampleCountFlagBits msaaSamples = VK_SAMPLE_COUNT_1_BIT;
 			private:
 				void create();
 
@@ -55,8 +52,8 @@ namespace prism {
 				void createSurface();
 				void createLogicalDevice();
 
-				PGC::utils::CoreContext* context;
-				PGC::utils::CoreSettings* settings;
+				PGC::utils::Context* context;
+				PGC::utils::Settings* settings;
 
 				//help
 				bool checkValidationLayerSupport();
@@ -65,6 +62,9 @@ namespace prism {
 				static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData);
 
 				VkSampleCountFlagBits getMaxUsableSampleCount();
+
+				std::vector<VkSampleCountFlagBits> getPossibleCounts(VkSampleCountFlagBits maxCount);
+				VkSampleCountFlagBits getMsaaSamples();
 
 				VkDebugUtilsMessengerEXT debugMessenger;
 			};

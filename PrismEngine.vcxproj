@@ -203,39 +203,66 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\core.cpp" />
+    <ClCompile Include="src\bufferWrapper.cpp" />
+    <ClCompile Include="src\base.cpp" />
+    <ClCompile Include="src\componentManager.cpp" />
+    <ClCompile Include="src\descriptorSet.cpp" />
+    <ClCompile Include="src\descriptorSetLayout.cpp" />
     <ClCompile Include="src\deviceChecker.cpp" />
     <ClCompile Include="src\deviceRater.cpp" />
     <ClCompile Include="src\deviceWrapper.cpp" />
+    <ClCompile Include="src\entityManager.cpp" />
     <ClCompile Include="src\fmath.cpp" />
+    <ClCompile Include="src\graphicsPipeline.cpp" />
     <ClCompile Include="src\logger.cpp" />
     <ClCompile Include="src\matrix.cpp" />
     <ClCompile Include="src\PrismEngine.cpp" />
+    <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\renderPass.cpp" />
+    <ClCompile Include="src\resourcesCreater.cpp" />
+    <ClCompile Include="src\shaderStagesLoader.cpp" />
     <ClCompile Include="src\swapChain.cpp" />
+    <ClCompile Include="src\systemManager.cpp" />
     <ClCompile Include="src\vector.cpp" />
-    <ClCompile Include="src\vertex.cpp" />
+    <ClCompile Include="src\model.cpp" />
     <ClCompile Include="src\Window.cpp" />
-    <ClCompile Include="src\RenderVkManager.cpp" />
+    <ClCompile Include="src\prismGraphicCore.cpp" />
+    <ClCompile Include="src\world.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\bufferWrapper.h" />
+    <ClInclude Include="src\component.h" />
+    <ClInclude Include="src\componentManager.h" />
     <ClInclude Include="src\config.h" />
-    <ClInclude Include="src\configs.h" />
-    <ClInclude Include="src\core.h" />
+    <ClInclude Include="src\base.h" />
+    <ClInclude Include="src\descriptorSet.h" />
+    <ClInclude Include="src\descriptorSetLayout.h" />
     <ClInclude Include="src\deviceChecker.h" />
     <ClInclude Include="src\deviceRater.h" />
     <ClInclude Include="src\deviceWrapper.h" />
+    <ClInclude Include="src\entity.h" />
+    <ClInclude Include="src\entityManager.h" />
     <ClInclude Include="src\fmath.h" />
+    <ClInclude Include="src\graphicsPipeline.h" />
     <ClInclude Include="src\init.h" />
     <ClInclude Include="src\logger.h" />
     <ClInclude Include="src\matrix.h" />
     <ClInclude Include="src\PrismEngine.h" />
+    <ClInclude Include="src\renderer.h" />
+    <ClInclude Include="src\renderPass.h" />
+    <ClInclude Include="src\resourcesCreater.h" />
+    <ClInclude Include="src\shaderStagesLoader.h" />
     <ClInclude Include="src\stb_image.h" />
     <ClInclude Include="src\swapChain.h" />
+    <ClInclude Include="src\system.h" />
+    <ClInclude Include="src\systemManager.h" />
     <ClInclude Include="src\utils.h" />
     <ClInclude Include="src\vector.h" />
-    <ClInclude Include="src\vertex.h" />
+    <ClInclude Include="src\model.h" />
     <ClInclude Include="src\Window.h" />
-    <ClInclude Include="src\RenderVkManager.h" />
+    <ClInclude Include="src\prismGraphicCore.h" />
+    <ClInclude Include="src\world.h" />
+    <ClInclude Include="ubo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

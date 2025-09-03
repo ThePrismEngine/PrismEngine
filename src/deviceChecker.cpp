@@ -4,7 +4,7 @@
 #include <set>
 #include <string>
 
-bool prism::PGC::DeviceChecker::check(VkPhysicalDevice device, utils::CoreContext* context, utils::CoreSettings* settings)
+bool prism::PGC::DeviceChecker::check(VkPhysicalDevice device, utils::Context* context, utils::Settings* settings)
 {
     prism::PGC::utils::QueueFamilyIndices indices = DeviceWrapper::findQueueFamilies(device, context->surface);
 

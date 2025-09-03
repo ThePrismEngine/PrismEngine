@@ -38,7 +38,10 @@ namespace prism::logger {
             {Error::VULKAN_NO_GPU_SUPPORT, "Failed to find GPUs with Vulkan support!"},
             {Error::VULKAN_NO_SUITABLE_GPU, "Failed to find a suitable GPU!"},
             {Error::VULKAN_LOGICAL_DEVICE_CREATION_FAILED, "Failed to create logical device!"},
-            {Error::VULKAN_SWAP_CHAIN_FAILED, "Failed to create swap chain!"}
+            {Error::VULKAN_SWAP_CHAIN_FAILED, "Failed to create swap chain!"},
+            {Error::FAILED_TO_OPEN_FILE, "Failed to open file"},
+            {Error::FAILED_TO_DETERMINE_FILE_SIZE, "Failed to determine file size"},
+            {Error::FAILED_TO_READ_FILE, "Failed to read file"}
         };
     }
 

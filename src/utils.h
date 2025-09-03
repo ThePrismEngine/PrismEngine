@@ -2,9 +2,11 @@
 #include <vector>
 #include <optional>
 #include "vulkan/vulkan.h"
-#include "configs.h"
 #include "config.h"
 #include "SDL.h"
+#include <string>
+#include "model.h"
+#include "./ubo.h"
 
 namespace prism {
 	namespace PGC {
@@ -24,7 +26,7 @@ namespace prism {
 				std::vector<VkPresentModeKHR> presentModes;
 			};
 
-			struct CoreContext {
+			struct Context {
 				VkInstance instance;
 				VkSurfaceKHR surface;
 				VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
@@ -47,6 +49,46 @@ namespace prism {
 				VkDeviceMemory colorImageMemory;
 				VkImageView colorImageView;
 
+				VkSampleCountFlagBits msaaSamples = VK_SAMPLE_COUNT_1_BIT;
+				VkRenderPass renderPass;
+
+				VkBuffer vertexBuffer;
+				VkDeviceMemory vertexBufferMemory;
+				VkBuffer indexBuffer;
+				VkDeviceMemory indexBufferMemory;
+
+				VkDescriptorSetLayout descriptorSetLayout;
+
+				VkPipelineLayout pipelineLayout;
+				VkPipeline graphicsPipeline;
+
+				VkCommandPool commandPool;
+				std::vector<VkCommandBuffer> commandBuffers;
+
+				VkImageView textureImageView;
+				VkSampler textureSampler;
+
+				VkImage textureImage;
+				VkDeviceMemory textureImageMemory;
+
+				std::vector<render::UniformBuffers> uniformBuffers;
+
+				std::vector<render::Vertex> vertices;
+				std::vector<uint32_t> indices;
+
+				uint32_t mipLevels;
+
+				std::vector<VkSemaphore> imageAvailableSemaphores;
+				std::vector<VkSemaphore> renderFinishedSemaphores;
+				std::vector<VkFence> inFlightFences;
+
+				uint32_t currentFrame = 0;
+				bool wasRenderingActive = true;
+
+				VkDescriptorPool descriptorPool;
+				std::vector<VkDescriptorSet> descriptorSets;
+
+				const int MAX_FRAMES_IN_FLIGHT = 2;
 
 				const std::vector<const char*> validationLayers = {
 					"VK_LAYER_KHRONOS_validation"
@@ -66,7 +108,7 @@ namespace prism {
 			struct AppSettings
 			{
 				const char* applicationName = "";
-				Version applicationVersion = { 1, 0, 0 };
+				prism::Version applicationVersion = { 1, 0, 0 };
 			};
 
 			struct DebugSettings
@@ -80,17 +122,131 @@ namespace prism {
 #endif
 			};
 
-			struct SwapChainSettings
-			{
-
+			struct DeviceEvaluationWeightsSettings {
+				float wType = 0.3;
+				float wFeatures = 0.25;
+				float wHardware = 0.35;
+				float wApi = 0.1;
 			};
 
-			struct CoreSettings
+			struct SwapChainSettings
+			{
+				bool enableVSync = true;
+				bool enableTripleBuffering = true;
+				VkFormat preferredFormat = VK_FORMAT_B8G8R8A8_SRGB;
+			};
+
+			// Конфигурация для одного биндинга
+			struct BindingConfig {
+				uint32_t binding;
+				VkDescriptorType descriptorType;
+				uint32_t descriptorCount;
+				VkShaderStageFlags stageFlags;
+				const VkSampler* immutableSamplers = nullptr;
+			};
+
+			struct DescriptorSetLayoutSettings {
+				std::vector<BindingConfig> bindings;
+				VkDescriptorSetLayoutCreateFlags flags = 0;
+			};
+
+			struct ShadersSettings
+			{
+				std::string vertexShaderFilename;
+				std::string fragmentShaderFilename;
+				std::string shadersDirectory;
+			};
+
+			struct RasterizationSettings {
+				VkPolygonMode polygonMode = VK_POLYGON_MODE_FILL;
+				float lineWidth = 1.0f;
+				VkCullModeFlags cullMode = VK_CULL_MODE_BACK_BIT;
+				VkFrontFace frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;
+				VkBool32 depthClampEnable = VK_FALSE;
+				VkBool32 rasterizerDiscardEnable = VK_FALSE;
+				VkBool32 depthBiasEnable = VK_FALSE;
+			};
+
+			enum MultisampleSelectionStrategy {
+				MINIMAL,  // Минимальный уровень после 1x(обычно 2x)
+				MIDDLE,   // Среднее значение из доступных
+				MAXIMAL,  // Максимальное значение
+				CUSTOM,   // Значение из цели или максимально приближенное
+				//ADAPTIVE, // Оценка по баллам устройства
+			};
+
+			struct MultisampleSettings {
+				VkBool32 sampleShadingEnable = VK_FALSE;
+				VkSampleCountFlagBits rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
+				MultisampleSelectionStrategy strategy = MultisampleSelectionStrategy::MAXIMAL;
+			};
+
+			struct ColorBlendAttachmentSettings {
+				VkBool32 blendEnable = VK_FALSE;
+				VkColorComponentFlags colorWriteMask =
+					VK_COLOR_COMPONENT_R_BIT |
+					VK_COLOR_COMPONENT_G_BIT |
+					VK_COLOR_COMPONENT_B_BIT |
+					VK_COLOR_COMPONENT_A_BIT;
+			};
+
+			struct ColorBlendSettings {
+				std::vector<VkPipelineColorBlendAttachmentState> attachments;
+				VkBool32 logicOpEnable = VK_FALSE;
+				VkLogicOp logicOp = VK_LOGIC_OP_COPY;
+				float blendConstants[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
+			};
+
+			struct DynamicStateSettings {
+				std::vector<VkDynamicState> dynamicStates = {
+					VK_DYNAMIC_STATE_VIEWPORT,
+					VK_DYNAMIC_STATE_SCISSOR
+				};
+			};
+
+			struct DepthStencilSettings {
+				VkBool32 depthTestEnable = VK_TRUE;
+				VkBool32 depthWriteEnable = VK_TRUE;
+				VkCompareOp depthCompareOp = VK_COMPARE_OP_LESS;
+				VkBool32 depthBoundsTestEnable = VK_FALSE;
+				float minDepthBounds = 0.0f;
+				float maxDepthBounds = 1.0f;
+				VkBool32 stencilTestEnable = VK_FALSE;
+				VkStencilOpState front = {};
+				VkStencilOpState back = {};
+			};
+
+			struct InputAssemblySettings {
+				VkPrimitiveTopology topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+				VkBool32 primitiveRestartEnable = VK_FALSE;
+			};
+
+			struct ViewportStateSettings {
+				uint32_t viewportCount = 1;
+				uint32_t scissorCount = 1;
+			};
+
+			struct PipelineSettings {
+				ShadersSettings shaders = { "vert.spv", "frag.spv", "shaders/" };;
+				InputAssemblySettings inputAssembly;
+				RasterizationSettings rasterization;
+				DepthStencilSettings depthStencil;
+				MultisampleSettings multisample;
+				ColorBlendSettings colorBlend;
+				DynamicStateSettings dynamicState;
+				ViewportStateSettings viewportState;
+			};
+
+			struct Settings
 			{
 				AppSettings app;
 				DeviceEvaluationWeightsSettings deviceEvaluationWeights;
 				DebugSettings debug;
 				SwapChainSettings swapChain;
+				DescriptorSetLayoutSettings descriptorSetLayout;
+				
+				PipelineSettings pipeline;
+
 				SDL_Window* window;
 			};
 		}

@@ -13,12 +13,16 @@
 #include <iostream>
 #include "logger.h"
 #include "init.h"
-#include "RenderVkManager.h"
 
 namespace prism {
     namespace render {
         class Window {
         public:
+            Window(Window&&) = delete;
+            Window& operator=(Window&&) = delete;
+            Window(const Window&) = delete;
+            Window& operator=(const Window&) = delete;
+
             // === Конструкторы ===
             Window(const char* title, int width, int height);
             Window(const char* title, int width, int height, Uint32 sdlFlags);
@@ -67,9 +71,6 @@ namespace prism {
             void clear();
             void update();
 
-            void drawFrame();
-
-            void awaitRenderingCompletion();
 
 
             // === Дополнительные методы ===
@@ -77,15 +78,15 @@ namespace prism {
 
             static void setSDLInitialized(bool initialized) { s_sdlInitialized = initialized; }
 
-    
+            SDL_Window* sdlWindow;
 
+            // состояния
+            bool windowResized = false;
+            bool windowMinimized = false;
 
         private:
             static bool s_sdlInitialized;
-            SDL_Window* m_sdlWindow;
             bool m_isDestroyed;
-
-            RenderVkManager windowVkManager;
             
             // Внутренний конструктор для делегирования
             Window(const char* title, int x, int y, int width, int height, Uint32 sdlFlags);

@@ -25,6 +25,9 @@ namespace prism::logger {
         VULKAN_NO_SUITABLE_GPU,
         VULKAN_LOGICAL_DEVICE_CREATION_FAILED,
         VULKAN_SWAP_CHAIN_FAILED,
+        FAILED_TO_OPEN_FILE,
+        FAILED_TO_DETERMINE_FILE_SIZE,
+        FAILED_TO_READ_FILE,
     };
 
     /**

@@ -1,11 +1,11 @@
 #include <unordered_set>
 #include <algorithm>
 #include "deviceRater.h"
-#include "core.h"
+#include "base.h"
 #include "deviceWrapper.h"
 #include "deviceChecker.h"
 
-int prism::PGC::DeviceRater::rate(VkPhysicalDevice device, PGC::utils::CoreContext* context, utils::CoreSettings* settings)
+int prism::PGC::DeviceRater::rate(VkPhysicalDevice device, PGC::utils::Context* context, utils::Settings* settings)
 {
     debugDeviceSelection = settings->debug.debugDeviceSelection;
     // Базовые проверки

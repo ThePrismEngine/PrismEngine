@@ -33,8 +33,23 @@ namespace prism {
 		struct VertexHasher {
 			size_t operator()(const Vertex& v) const noexcept;
 		};
+		/*
+		class Model {
+		public:
+			Model(PGC::utils::Context* context, PGC::utils::Settings* settings);
+			~Model();
 
-		struct UniformBufferObject {
+			bool loadFromFile(const std::string& filepath);
+			bool loadFromData(const std::vector<Vertex>& vertices, const std::vector<uint32_t>& indices);
+
+
+		private:
+			PGC::utils::Context* context;
+			PGC::utils::Settings* settings;
+		};
+		*/
+		/*
+		struct ObjectUBO {
 			///prism::math::Matrix4X4 model;
 			///prism::math::Matrix4X4 view;
 			///prism::math::Matrix4X4 proj;
@@ -42,5 +57,6 @@ namespace prism {
 			alignas(16) glm::mat4 view;
 			alignas(16) glm::mat4 proj;
 		};
+		*/
 	}
 }

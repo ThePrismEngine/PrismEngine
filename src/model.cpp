@@ -1,4 +1,4 @@
-#include "vertex.h"
+#include "model.h"
 #include <functional>
 
 VkVertexInputBindingDescription prism::render::Vertex::getBindingDescription()

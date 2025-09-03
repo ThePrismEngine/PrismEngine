@@ -25,11 +25,59 @@
     <Filter Include="render">
       <UniqueIdentifier>{20c1a72d-f9bb-48cb-8674-433670b8699b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="scene">
-      <UniqueIdentifier>{a30449b4-0874-4067-bef7-879c48798530}</UniqueIdentifier>
-    </Filter>
     <Filter Include="pgc">
       <UniqueIdentifier>{24140a25-8f69-4300-ac9e-2fc0755c4639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\deviceChecker">
+      <UniqueIdentifier>{5abacc10-c187-4a64-9064-c98b4dcaacbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\deviceRater">
+      <UniqueIdentifier>{56d2917b-6803-43ed-b919-28078dba5fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\deviceWrapper">
+      <UniqueIdentifier>{d52727b7-de87-496e-ad31-a4b4f3b623bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\renderPass">
+      <UniqueIdentifier>{2c3d8703-84d0-4a20-a9be-1b15cf9f59ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\swapChain">
+      <UniqueIdentifier>{dfc4bec6-3eec-498c-ba5e-4738c1c253f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\descriptorSetLayout">
+      <UniqueIdentifier>{63902bb7-9688-41a9-95ba-243be8fb4212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\resourcesCreater">
+      <UniqueIdentifier>{6cff4c67-af37-4b8b-9468-5fbab3890a8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\graphicsPipeline">
+      <UniqueIdentifier>{eaaf8027-7a01-4552-97f3-588bfa5b0468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\shaderStagesLoader">
+      <UniqueIdentifier>{22af9c39-b406-4e16-a9c4-5f9daa5e4cb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\bufferWrapper">
+      <UniqueIdentifier>{50abc52e-6619-411d-b3ef-25bdd72cc325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\descriptorSet">
+      <UniqueIdentifier>{fa913751-899d-4c72-97ff-c076f4a0c3d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\base">
+      <UniqueIdentifier>{345ae278-d889-4aa8-a6e9-0fa2ff374906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\renderer">
+      <UniqueIdentifier>{8724f297-e369-4494-aed9-f4bd0e87eaea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ECS">
+      <UniqueIdentifier>{a30449b4-0874-4067-bef7-879c48798530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ECS\entity">
+      <UniqueIdentifier>{5eb93861-75e7-4396-b4ad-68ac283bdd85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ECS\component">
+      <UniqueIdentifier>{137671f2-d23c-4ccd-b69c-535e8fdda8ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ECS\system">
+      <UniqueIdentifier>{83f611dd-4693-4a70-b3d1-dcdd97552e9b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,32 +93,68 @@
     <ClCompile Include="src\Window.cpp">
       <Filter>render</Filter>
     </ClCompile>
-    <ClCompile Include="src\RenderVkManager.cpp">
-      <Filter>render</Filter>
-    </ClCompile>
     <ClCompile Include="src\PrismEngine.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="src\logger.cpp">
       <Filter>logger</Filter>
     </ClCompile>
-    <ClCompile Include="src\vertex.cpp">
+    <ClCompile Include="src\model.cpp">
       <Filter>render</Filter>
     </ClCompile>
-    <ClCompile Include="src\core.cpp">
-      <Filter>pgc</Filter>
-    </ClCompile>
-    <ClCompile Include="src\deviceRater.cpp">
-      <Filter>pgc</Filter>
-    </ClCompile>
-    <ClCompile Include="src\deviceWrapper.cpp">
-      <Filter>pgc</Filter>
+    <ClCompile Include="src\base.cpp">
+      <Filter>pgc\base</Filter>
     </ClCompile>
     <ClCompile Include="src\deviceChecker.cpp">
-      <Filter>pgc</Filter>
+      <Filter>pgc\deviceChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\deviceRater.cpp">
+      <Filter>pgc\deviceRater</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderPass.cpp">
+      <Filter>pgc\renderPass</Filter>
     </ClCompile>
     <ClCompile Include="src\swapChain.cpp">
+      <Filter>pgc\swapChain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\descriptorSetLayout.cpp">
+      <Filter>pgc\descriptorSetLayout</Filter>
+    </ClCompile>
+    <ClCompile Include="src\deviceWrapper.cpp">
+      <Filter>pgc\deviceWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\resourcesCreater.cpp">
+      <Filter>pgc\resourcesCreater</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphicsPipeline.cpp">
+      <Filter>pgc\graphicsPipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shaderStagesLoader.cpp">
+      <Filter>pgc\shaderStagesLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bufferWrapper.cpp">
+      <Filter>pgc\bufferWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\descriptorSet.cpp">
+      <Filter>pgc\descriptorSet</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prismGraphicCore.cpp">
       <Filter>pgc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer.cpp">
+      <Filter>render\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world.cpp">
+      <Filter>ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entityManager.cpp">
+      <Filter>ECS\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\componentManager.cpp">
+      <Filter>ECS\component</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systemManager.cpp">
+      <Filter>ECS\system</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -92,41 +176,86 @@
     <ClInclude Include="src\Window.h">
       <Filter>render</Filter>
     </ClInclude>
-    <ClInclude Include="src\RenderVkManager.h">
-      <Filter>render</Filter>
-    </ClInclude>
     <ClInclude Include="src\logger.h">
       <Filter>logger</Filter>
     </ClInclude>
     <ClInclude Include="src\init.h">
       <Filter>init</Filter>
     </ClInclude>
-    <ClInclude Include="src\vertex.h">
+    <ClInclude Include="src\model.h">
       <Filter>render</Filter>
     </ClInclude>
     <ClInclude Include="src\stb_image.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\configs.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\deviceWrapper.h">
-      <Filter>pgc</Filter>
-    </ClInclude>
-    <ClInclude Include="src\deviceRater.h">
-      <Filter>pgc</Filter>
-    </ClInclude>
-    <ClInclude Include="src\core.h">
-      <Filter>pgc</Filter>
-    </ClInclude>
     <ClInclude Include="src\utils.h">
       <Filter>pgc</Filter>
     </ClInclude>
+    <ClInclude Include="src\base.h">
+      <Filter>pgc\base</Filter>
+    </ClInclude>
     <ClInclude Include="src\deviceChecker.h">
-      <Filter>pgc</Filter>
+      <Filter>pgc\deviceChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\deviceRater.h">
+      <Filter>pgc\deviceRater</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderPass.h">
+      <Filter>pgc\renderPass</Filter>
     </ClInclude>
     <ClInclude Include="src\swapChain.h">
+      <Filter>pgc\swapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\descriptorSetLayout.h">
+      <Filter>pgc\descriptorSetLayout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\deviceWrapper.h">
+      <Filter>pgc\deviceWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resourcesCreater.h">
+      <Filter>pgc\resourcesCreater</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphicsPipeline.h">
+      <Filter>pgc\graphicsPipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shaderStagesLoader.h">
+      <Filter>pgc\shaderStagesLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bufferWrapper.h">
+      <Filter>pgc\bufferWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\descriptorSet.h">
+      <Filter>pgc\descriptorSet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\prismGraphicCore.h">
       <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer.h">
+      <Filter>render\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ubo.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world.h">
+      <Filter>ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entityManager.h">
+      <Filter>ECS\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entity.h">
+      <Filter>ECS\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\component.h">
+      <Filter>ECS\component</Filter>
+    </ClInclude>
+    <ClInclude Include="src\componentManager.h">
+      <Filter>ECS\component</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systemManager.h">
+      <Filter>ECS\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system.h">
+      <Filter>ECS\system</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

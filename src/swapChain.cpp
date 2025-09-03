@@ -4,8 +4,9 @@
 #include "logger.h"
 #include "deviceChecker.h"
 #include "deviceWrapper.h"
+#include "resourcesCreater.h"
 
-void prism::PGC::SwapChain::init(PGC::utils::CoreContext* context, PGC::utils::CoreSettings* settings)
+void prism::PGC::SwapChain::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
 {
     this->context = context;
     this->settings = settings;
@@ -52,9 +53,9 @@ void prism::PGC::SwapChain::recreate()
     create();
     createImageViews();
 
-    //createColorResources();
-    //createDepthResources();
-    //createFramebuffers();
+    PGC::ResourcesCreater::createColorResources(context, settings);
+    PGC::ResourcesCreater::createDepthResources(context, settings);
+    PGC::ResourcesCreater::createFramebuffers(context, settings);
 
     awaitRenderingCompletion();
 }
@@ -126,31 +127,10 @@ void prism::PGC::SwapChain::createImageViews()
     context->swapChainImageViews.resize(context->swapChainImages.size());
 
     for (uint32_t i = 0; i < context->swapChainImages.size(); i++) {
-        context->swapChainImageViews[i] = createImageView(context->swapChainImages[i], context->swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
+        context->swapChainImageViews[i] = ResourcesCreater::createImageView(context->device, context->swapChainImages[i], context->swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
     }
 }
 
-VkImageView prism::PGC::SwapChain::createImageView(VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels)
-{
-    VkImageViewCreateInfo viewInfo{};
-    viewInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
-    viewInfo.image = image;
-    viewInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
-    viewInfo.format = format;
-    viewInfo.subresourceRange.aspectMask = aspectFlags;
-    viewInfo.subresourceRange.baseMipLevel = 0;
-    viewInfo.subresourceRange.levelCount = 1;
-    viewInfo.subresourceRange.baseArrayLayer = 0;
-    viewInfo.subresourceRange.layerCount = 1;
-    viewInfo.subresourceRange.levelCount = mipLevels;
-
-    VkImageView imageView;
-    if (vkCreateImageView(context->device, &viewInfo, nullptr, &imageView) != VK_SUCCESS) {
-        throw std::runtime_error("failed to create image view!");
-    }
-
-    return imageView;
-}
 
 VkSurfaceFormatKHR prism::PGC::SwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats)
 {
@@ -165,13 +145,14 @@ VkSurfaceFormatKHR prism::PGC::SwapChain::chooseSwapSurfaceFormat(const std::vec
 
 VkPresentModeKHR prism::PGC::SwapChain::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes)
 {
-    for (const auto& availablePresentMode : availablePresentModes) {
-        if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
-            return availablePresentMode;
+    if (settings->swapChain.enableTripleBuffering) {
+        for (const auto& availablePresentMode : availablePresentModes) {
+            if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+                return availablePresentMode;
+            }
         }
     }
-
-    return VK_PRESENT_MODE_FIFO_KHR;
+    return settings->swapChain.enableVSync ? VK_PRESENT_MODE_FIFO_KHR : VK_PRESENT_MODE_IMMEDIATE_KHR;
 }
 
 VkExtent2D prism::PGC::SwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities)
