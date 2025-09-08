@@ -152,6 +152,7 @@ void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
     
     // Обновляем UBO камеры
     // Обновляем UBO камеры
+    // Обновление CameraUBO (остается без изменений)
     render::CameraUBO cameraUbo{};
 
     // Убедитесь, что камера смотрит на объект
@@ -170,19 +171,30 @@ void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
     cameraUbo.viewProj = cameraUbo.proj * cameraUbo.view;
     cameraUbo.cameraPos = glm::vec3(2.0f, 2.0f, 2.0f);
 
+    // Копируем данные камеры (как и раньше)
     memcpy(context.uniformBuffers[currentImage].cameraMapped, &cameraUbo, sizeof(cameraUbo));
 
-    // Обновляем UBO объекта
-    render::ObjectUBO objectUbo{};
-    objectUbo.model = glm::rotate(
-        glm::mat4(1.0f),
-        time * glm::radians(90.0f),
-        glm::vec3(0.0f, 0.0f, 1.0f)  // Вращение вокруг оси Z
-    );
-    objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
+    // Обновление ObjectUBO для каждого объекта
+    int objectCount = 1;
+    for (uint32_t i = 0; i < objectCount; i++) {
+        render::ObjectUBO objectUbo{};
 
-    memcpy(context.uniformBuffers[currentImage].objectMapped, &objectUbo, sizeof(objectUbo));
+        // Вычисляем трансформацию для каждого объекта
+        objectUbo.model = glm::rotate(
+            glm::mat4(1.0f),
+            time * glm::radians(90.0f) * (i + 1),  // Разная скорость вращения для каждого объекта
+            glm::vec3(0.0f, 0.0f, 1.0f)  // Вращение вокруг оси Z
+        );
 
+        // Добавляем смещение для каждого объекта
+        objectUbo.model = glm::translate(objectUbo.model, glm::vec3(i * 2.0f, 0.0f, 0.0f));
+
+        objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
+
+        // Копируем данные объекта в правильное место в динамическом буфере
+        size_t offset = i * context.dynamicAlignment;
+        memcpy((char*)context.uniformBuffers[currentImage].objectMapped + offset, &objectUbo, sizeof(objectUbo));
+    }
 
     /*
     // Обновляем UBO объекта
@@ -254,9 +266,21 @@ void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBu
         VkDeviceSize offsets[] = { 0 };
         vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
         vkCmdBindIndexBuffer(commandBuffer, context.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
-        vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, context.pipelineLayout, 0, 1, &context.descriptorSets[context.currentFrame], 0, nullptr);
 
-        vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.indices.size()), 1, 0, 0, 0);
+        int objectCount = 1;
+        for (uint32_t i = 0; i < objectCount; i++) {
+            uint32_t dynamicOffset = i * static_cast<uint32_t>(context.dynamicAlignment);
+
+            vkCmdBindDescriptorSets(commandBuffer,
+                VK_PIPELINE_BIND_POINT_GRAPHICS,
+                context.pipelineLayout,
+                0, 1,
+                &context.descriptorSets[context.currentFrame],
+                1, &dynamicOffset);
+
+            // Отрисовка объекта
+            vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.indices.size()), 1, 0, 0, 0);
+        }
     vkCmdEndRenderPass(commandBuffer);
 
     if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) {
@@ -361,11 +385,13 @@ void prism::PGC::PrismGraphicCore::createUniformBuffers()
 
 void prism::PGC::PrismGraphicCore::createDescriptorPool()
 {
-    std::array<VkDescriptorPoolSize, 2> poolSizes{};
+    std::array<VkDescriptorPoolSize, 3> poolSizes{};
     poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-    poolSizes[0].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT) * 2;
+    poolSizes[0].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
     poolSizes[1].type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
     poolSizes[1].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
+    poolSizes[2].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
+    poolSizes[2].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
 
     VkDescriptorPoolCreateInfo poolInfo{};
     poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
@@ -601,7 +627,7 @@ void prism::PGC::PrismGraphicCore::cleanup()
 
     descriptorSetLayout.cleanup();
 
-    for (size_t i = 0; i < context.swapChainImages.size(); i++) {
+    for (size_t i = 0; i < context.MAX_FRAMES_IN_FLIGHT; i++) {
         // Проверка, была ли память отображена
         if (context.uniformBuffers[i].cameraMemory != VK_NULL_HANDLE) {
             vkUnmapMemory(context.device, context.uniformBuffers[i].cameraMemory);

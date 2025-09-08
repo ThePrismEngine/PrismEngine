@@ -98,6 +98,9 @@ namespace prism {
 					VK_KHR_SWAPCHAIN_EXTENSION_NAME
 				};
 
+				size_t dynamicAlignment=0;      // Выровненный размер ObjectUBO
+				uint32_t MAX_OBJECTS=500;         // Максимальное количество объектов
+
 #ifdef NDEBUG
 				bool enableValidationLayers = false;
 #else

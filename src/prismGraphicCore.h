@@ -44,6 +44,8 @@ namespace prism {
             void cleanup();
             void awaitRenderingCompletion();
 
+
+
             bool* windowResized;
             bool* windowMinimized;
 

@@ -231,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\bufferWrapper.h" />
+    <ClInclude Include="src\cameraComponent.h" />
     <ClInclude Include="src\component.h" />
     <ClInclude Include="src\componentManager.h" />
     <ClInclude Include="src\config.h" />
@@ -256,6 +257,7 @@
     <ClInclude Include="src\swapChain.h" />
     <ClInclude Include="src\system.h" />
     <ClInclude Include="src\systemManager.h" />
+    <ClInclude Include="src\transformComponent.h" />
     <ClInclude Include="src\utils.h" />
     <ClInclude Include="src\vector.h" />
     <ClInclude Include="src\model.h" />

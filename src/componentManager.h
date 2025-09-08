@@ -89,7 +89,7 @@ namespace prism {
                         );
                         result = std::move(temp);
                     }
-
+                    
                     return result;
                 }
             }
@@ -97,13 +97,11 @@ namespace prism {
             void removeAllComponents(Entity entityId);
 
         private:
-            // Базовый класс для хранилищ компонентов
             struct IComponentStorage {
                 virtual ~IComponentStorage() = default;
                 virtual void removeEntity(Entity entityId) = 0;
             };
 
-            // Конкретное хранилище для компонентов типа T
             template<typename T>
             struct ComponentStorage : public IComponentStorage {
                 std::unordered_map<Entity, std::shared_ptr<T>> components;

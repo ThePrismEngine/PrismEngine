@@ -79,6 +79,15 @@
     <Filter Include="ECS\system">
       <UniqueIdentifier>{83f611dd-4693-4a70-b3d1-dcdd97552e9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ECS\world">
+      <UniqueIdentifier>{729752ad-bb95-4e6d-b3ea-5f627b74d74a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stComponents">
+      <UniqueIdentifier>{1d531cba-949d-481f-966c-01434f97225a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sSsystems">
+      <UniqueIdentifier>{100c9d80-a30f-49a2-99f8-d1207b625003}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\fmath.cpp">
@@ -144,9 +153,6 @@
     <ClCompile Include="src\renderer.cpp">
       <Filter>render\renderer</Filter>
     </ClCompile>
-    <ClCompile Include="src\world.cpp">
-      <Filter>ECS</Filter>
-    </ClCompile>
     <ClCompile Include="src\entityManager.cpp">
       <Filter>ECS\entity</Filter>
     </ClCompile>
@@ -155,6 +161,9 @@
     </ClCompile>
     <ClCompile Include="src\systemManager.cpp">
       <Filter>ECS\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world.cpp">
+      <Filter>ECS\world</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -236,9 +245,6 @@
     <ClInclude Include="ubo.h">
       <Filter>render</Filter>
     </ClInclude>
-    <ClInclude Include="src\world.h">
-      <Filter>ECS</Filter>
-    </ClInclude>
     <ClInclude Include="src\entityManager.h">
       <Filter>ECS\entity</Filter>
     </ClInclude>
@@ -256,6 +262,15 @@
     </ClInclude>
     <ClInclude Include="src\system.h">
       <Filter>ECS\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world.h">
+      <Filter>ECS\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cameraComponent.h">
+      <Filter>stComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transformComponent.h">
+      <Filter>stComponents</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

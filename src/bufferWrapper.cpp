@@ -192,17 +192,48 @@ void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
 
 void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
 {
-    context->uniformBuffers.resize(context->swapChainImages.size());
+    context->uniformBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
 
     VkDeviceSize cameraBufferSize = sizeof(render::CameraUBO);
-    VkDeviceSize objectBufferSize = sizeof(render::ObjectUBO);
+
+    // Получаем требования к выравниванию
+    size_t minUboAlignment = DeviceWrapper::getDeviceProperties(context->physicalDevice).limits.minUniformBufferOffsetAlignment;
+
+    // Вычисляем выровненный размер для ObjectUBO
+    size_t objectUBOSize = sizeof(render::ObjectUBO);
+    context->dynamicAlignment = objectUBOSize;
+
+    if (minUboAlignment > 0) {
+        context->dynamicAlignment = (objectUBOSize + minUboAlignment - 1) & ~(minUboAlignment - 1);
+    }
+
+    // Размер динамического буфера (для MAX_OBJECTS объектов)
+    VkDeviceSize objectBufferSize = context->dynamicAlignment * context->MAX_OBJECTS;
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
-        PGC::BufferWrapper::createBuffer(context, cameraBufferSize, VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, context->uniformBuffers[i].camera, context->uniformBuffers[i].cameraMemory);
-        vkMapMemory(context->device, context->uniformBuffers[i].cameraMemory, 0, cameraBufferSize, 0, &context->uniformBuffers[i].cameraMapped);
-        
-        PGC::BufferWrapper::createBuffer(context, objectBufferSize, VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, context->uniformBuffers[i].object, context->uniformBuffers[i].objectMemory);
-        vkMapMemory(context->device, context->uniformBuffers[i].objectMemory, 0, objectBufferSize, 0, &context->uniformBuffers[i].objectMapped);
+        // Создаем буфер для камеры (обычный UBO)
+        PGC::BufferWrapper::createBuffer(context, cameraBufferSize,
+            VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
+            VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
+            context->uniformBuffers[i].camera,
+            context->uniformBuffers[i].cameraMemory);
 
+        vkMapMemory(context->device, context->uniformBuffers[i].cameraMemory, 0,
+            cameraBufferSize, 0, &context->uniformBuffers[i].cameraMapped);
+
+        // Создаем динамический буфер для объектов
+        PGC::BufferWrapper::createBuffer(context, objectBufferSize,
+            VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
+            VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
+            context->uniformBuffers[i].object,
+            context->uniformBuffers[i].objectMemory);
+
+        vkMapMemory(context->device, context->uniformBuffers[i].objectMemory, 0,
+            objectBufferSize, 0, &context->uniformBuffers[i].objectMapped);
+    }
+
+    // Инициализируем нулями динамический буфер
+    for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
+        memset(context->uniformBuffers[i].objectMapped, 0, objectBufferSize);
     }
 }
