@@ -196,7 +196,7 @@ void prism::PGC::base::Base::pickPhysicalDevice()
     }
 
 
-    // Âûâîä èíôîðìàöèè î âûáðàííîì óñòðîéñòâå
+    // Ð’Ñ‹Ð²Ð¾Ð´ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸ Ð¾ Ð²Ñ‹Ð±Ñ€Ð°Ð½Ð½Ð¾Ð¼ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ðµ
     VkPhysicalDeviceProperties deviceProps = DeviceWrapper::getDeviceProperties(context->physicalDevice);
     logger::info("\n");
     logger::info("Selected Vulkan device:");

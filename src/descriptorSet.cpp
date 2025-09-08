@@ -32,17 +32,17 @@ void prism::PGC::DescriptorSet::create()
     }
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
-        // CameraUBO (статический)
+        // CameraUBO (СЃС‚Р°С‚РёС‡РµСЃРєРёР№)
         VkDescriptorBufferInfo cameraBufferInfo{};
         cameraBufferInfo.buffer = context->uniformBuffers[i].camera;
         cameraBufferInfo.offset = 0;
         cameraBufferInfo.range = sizeof(prism::render::CameraUBO);
 
-        // ObjectUBO (динамический)
+        // ObjectUBO (РґРёРЅР°РјРёС‡РµСЃРєРёР№)
         VkDescriptorBufferInfo objectBufferInfo{};
         objectBufferInfo.buffer = context->uniformBuffers[i].object;
-        objectBufferInfo.offset = 0; // Смещение будет устанавливаться при binding'е
-        objectBufferInfo.range = sizeof(prism::render::ObjectUBO); // Размер одного UBO
+        objectBufferInfo.offset = 0; // РЎРјРµС‰РµРЅРёРµ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊСЃСЏ РїСЂРё binding'Рµ
+        objectBufferInfo.range = sizeof(prism::render::ObjectUBO); // Р Р°Р·РјРµСЂ РѕРґРЅРѕРіРѕ UBO
 
         VkDescriptorImageInfo imageInfo{};
         imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
@@ -51,7 +51,7 @@ void prism::PGC::DescriptorSet::create()
 
         std::array<VkWriteDescriptorSet, 3> descriptorWrites{};
 
-        // Camera UBO (binding 0) - статический
+        // Camera UBO (binding 0) - СЃС‚Р°С‚РёС‡РµСЃРєРёР№
         descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
         descriptorWrites[0].dstSet = context->descriptorSets[i];
         descriptorWrites[0].dstBinding = 0;
@@ -69,12 +69,12 @@ void prism::PGC::DescriptorSet::create()
         descriptorWrites[1].descriptorCount = 1;
         descriptorWrites[1].pImageInfo = &imageInfo;
 
-        // Object UBO (binding 2) - динамический
+        // Object UBO (binding 2) - РґРёРЅР°РјРёС‡РµСЃРєРёР№
         descriptorWrites[2].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
         descriptorWrites[2].dstSet = context->descriptorSets[i];
         descriptorWrites[2].dstBinding = 2;
         descriptorWrites[2].dstArrayElement = 0;
-        descriptorWrites[2].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC; // Изменено на DYNAMIC
+        descriptorWrites[2].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC; // РР·РјРµРЅРµРЅРѕ РЅР° DYNAMIC
         descriptorWrites[2].descriptorCount = 1;
         descriptorWrites[2].pBufferInfo = &objectBufferInfo;
 

@@ -29,7 +29,7 @@ namespace prism {
                 systemManager.update(deltaTime);
             }
 
-            //с шаблонами определины здесь в .h (по другому не компилится)
+            //СЃ С€Р°Р±Р»РѕРЅР°РјРё РѕРїСЂРµРґРµР»РёРЅС‹ Р·РґРµСЃСЊ РІ .h (РїРѕ РґСЂСѓРіРѕРјСѓ РЅРµ РєРѕРјРїРёР»РёС‚СЃСЏ)
             template<typename T>
             bool addComponent(Entity entityId, T component) {
                 return componentManager.addComponent(entityId, component);

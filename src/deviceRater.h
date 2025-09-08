@@ -13,9 +13,9 @@ namespace prism {
 
 		struct FeatureScores {
 			float swapchain = 0.0f;		
-			float raytracing = 0.0f;      // RT поддержка
+			float raytracing = 0.0f;      // RT РїРѕРґРґРµСЂР¶РєР°
 			float upscaling = 0.0f;        // DLSS/FSR
-			float advancedFeatures = 0.0f; // Доп. возможности
+			float advancedFeatures = 0.0f; // Р”РѕРї. РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё
 
 			
 		};
@@ -26,15 +26,15 @@ namespace prism {
 			float clockSpeedGHz = 0.0f;
 			float textureUnits = 0.0f;
 
-			// Весовые коэффициенты для расчета оценки
+			// Р’РµСЃРѕРІС‹Рµ РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РґР»СЏ СЂР°СЃС‡РµС‚Р° РѕС†РµРЅРєРё
 			const float VRAM_WEIGHT = 0.5f;
 			const float SHADER_CORES_WEIGHT = 0.3f;
 			const float CLOCK_SPEED_WEIGHT = 0.2f;
 
-			// Референсные значения для нормализации
-			const float REFERENCE_VRAM_GB = 16.0f;    // 16GB считается "идеальным" объемом
-			const float REFERENCE_SHADER_CORES = 10.0f; // 10 ядер как опорная точка
-			const float REFERENCE_CLOCK_SPEED_GHZ = 3.0f; // 3GHz как опорная частота
+			// Р РµС„РµСЂРµРЅСЃРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РЅРѕСЂРјР°Р»РёР·Р°С†РёРё
+			const float REFERENCE_VRAM_GB = 16.0f;    // 16GB СЃС‡РёС‚Р°РµС‚СЃСЏ "РёРґРµР°Р»СЊРЅС‹Рј" РѕР±СЉРµРјРѕРј
+			const float REFERENCE_SHADER_CORES = 10.0f; // 10 СЏРґРµСЂ РєР°Рє РѕРїРѕСЂРЅР°СЏ С‚РѕС‡РєР°
+			const float REFERENCE_CLOCK_SPEED_GHZ = 3.0f; // 3GHz РєР°Рє РѕРїРѕСЂРЅР°СЏ С‡Р°СЃС‚РѕС‚Р°
 		};
 
 		class ScoreWrapper {

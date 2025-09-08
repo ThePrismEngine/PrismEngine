@@ -196,10 +196,10 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
 
     VkDeviceSize cameraBufferSize = sizeof(render::CameraUBO);
 
-    // Получаем требования к выравниванию
+    // РџРѕР»СѓС‡Р°РµРј С‚СЂРµР±РѕРІР°РЅРёСЏ Рє РІС‹СЂР°РІРЅРёРІР°РЅРёСЋ
     size_t minUboAlignment = DeviceWrapper::getDeviceProperties(context->physicalDevice).limits.minUniformBufferOffsetAlignment;
 
-    // Вычисляем выровненный размер для ObjectUBO
+    // Р’С‹С‡РёСЃР»СЏРµРј РІС‹СЂРѕРІРЅРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РґР»СЏ ObjectUBO
     size_t objectUBOSize = sizeof(render::ObjectUBO);
     context->dynamicAlignment = objectUBOSize;
 
@@ -207,11 +207,11 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
         context->dynamicAlignment = (objectUBOSize + minUboAlignment - 1) & ~(minUboAlignment - 1);
     }
 
-    // Размер динамического буфера (для MAX_OBJECTS объектов)
+    // Р Р°Р·РјРµСЂ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ Р±СѓС„РµСЂР° (РґР»СЏ MAX_OBJECTS РѕР±СЉРµРєС‚РѕРІ)
     VkDeviceSize objectBufferSize = context->dynamicAlignment * context->MAX_OBJECTS;
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
-        // Создаем буфер для камеры (обычный UBO)
+        // РЎРѕР·РґР°РµРј Р±СѓС„РµСЂ РґР»СЏ РєР°РјРµСЂС‹ (РѕР±С‹С‡РЅС‹Р№ UBO)
         PGC::BufferWrapper::createBuffer(context, cameraBufferSize,
             VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
             VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
@@ -221,7 +221,7 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
         vkMapMemory(context->device, context->uniformBuffers[i].cameraMemory, 0,
             cameraBufferSize, 0, &context->uniformBuffers[i].cameraMapped);
 
-        // Создаем динамический буфер для объектов
+        // РЎРѕР·РґР°РµРј РґРёРЅР°РјРёС‡РµСЃРєРёР№ Р±СѓС„РµСЂ РґР»СЏ РѕР±СЉРµРєС‚РѕРІ
         PGC::BufferWrapper::createBuffer(context, objectBufferSize,
             VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
             VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
@@ -232,7 +232,7 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
             objectBufferSize, 0, &context->uniformBuffers[i].objectMapped);
     }
 
-    // Инициализируем нулями динамический буфер
+    // РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј РЅСѓР»СЏРјРё РґРёРЅР°РјРёС‡РµСЃРєРёР№ Р±СѓС„РµСЂ
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
         memset(context->uniformBuffers[i].objectMapped, 0, objectBufferSize);
     }

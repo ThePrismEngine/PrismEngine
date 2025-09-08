@@ -129,80 +129,80 @@ void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
 
 ///    ObjectUBO ubo{};
 
-    // --- Замена glm::rotate ---
-    // Поворот вокруг оси Z на 90 градусов * time
+    // --- Р—Р°РјРµРЅР° glm::rotate ---
+    // РџРѕРІРѕСЂРѕС‚ РІРѕРєСЂСѓРі РѕСЃРё Z РЅР° 90 РіСЂР°РґСѓСЃРѕРІ * time
 ///    ubo.model = prism::math::Matrix4X4::makeRotationZ(prism::math::degToRad(90));
 
-    // --- Замена glm::lookAt ---
+    // --- Р—Р°РјРµРЅР° glm::lookAt ---
 ///    prism::math::Vector3d eyePos(2.0f, 2.0f, 2.0f);
 ///    prism::math::Vector3d target(0.0f, 0.0f, 0.0f);
 ///    prism::math::Vector3d up(0.0f, 0.0f, 1.0f);
 ///    prism::math::Matrix4X4 viewMatrix = prism::math::Matrix4X4::Matrix_PointAt(eyePos, target, up);
-///    ubo.view = Matrix_QuickInverse(viewMatrix);  // lookAt = обратная матрица "PointAt"
+///    ubo.view = Matrix_QuickInverse(viewMatrix);  // lookAt = РѕР±СЂР°С‚РЅР°СЏ РјР°С‚СЂРёС†Р° "PointAt"
 
-    // --- Замена glm::perspective ---
+    // --- Р—Р°РјРµРЅР° glm::perspective ---
 ///    float aspect = swapChainExtent.width / (float)swapChainExtent.height;
 ///    ubo.proj = prism::math::Matrix4X4::makeProjection(45.0f, aspect, 0.1f, 10.0f);
-///    ubo.proj[1][1] *= -1;  // Инвертируем Y для Vulkan
+///    ubo.proj[1][1] *= -1;  // РРЅРІРµСЂС‚РёСЂСѓРµРј Y РґР»СЏ Vulkan
 
-    // Транспонируем матрицы перед отправкой в буфер
+    // РўСЂР°РЅСЃРїРѕРЅРёСЂСѓРµРј РјР°С‚СЂРёС†С‹ РїРµСЂРµРґ РѕС‚РїСЂР°РІРєРѕР№ РІ Р±СѓС„РµСЂ
 ///    ubo.model = ubo.model.getTransposed();
 ///    ubo.view = ubo.view.getTransposed();
 ///    ubo.proj = ubo.proj.getTransposed();
     
-    // Обновляем UBO камеры
-    // Обновляем UBO камеры
-    // Обновление CameraUBO (остается без изменений)
+    // РћР±РЅРѕРІР»СЏРµРј UBO РєР°РјРµСЂС‹
+    // РћР±РЅРѕРІР»СЏРµРј UBO РєР°РјРµСЂС‹
+    // РћР±РЅРѕРІР»РµРЅРёРµ CameraUBO (РѕСЃС‚Р°РµС‚СЃСЏ Р±РµР· РёР·РјРµРЅРµРЅРёР№)
     render::CameraUBO cameraUbo{};
 
-    // Убедитесь, что камера смотрит на объект
+    // РЈР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ РєР°РјРµСЂР° СЃРјРѕС‚СЂРёС‚ РЅР° РѕР±СЉРµРєС‚
     cameraUbo.view = glm::lookAt(
-        glm::vec3(2.0f, 2.0f, 2.0f),  // Положение камеры
-        glm::vec3(0.0f, 0.0f, 0.0f),  // Точка, на которую смотрит камера
-        glm::vec3(0.0f, 0.0f, 1.0f)   // Вектор "вверх"
+        glm::vec3(2.0f, 2.0f, 2.0f),  // РџРѕР»РѕР¶РµРЅРёРµ РєР°РјРµСЂС‹
+        glm::vec3(0.0f, 0.0f, 0.0f),  // РўРѕС‡РєР°, РЅР° РєРѕС‚РѕСЂСѓСЋ СЃРјРѕС‚СЂРёС‚ РєР°РјРµСЂР°
+        glm::vec3(0.0f, 0.0f, 1.0f)   // Р’РµРєС‚РѕСЂ "РІРІРµСЂС…"
     );
 
     cameraUbo.proj = glm::perspective(
-        glm::radians(45.0f),  // Угол обзора
-        context.swapChainExtent.width / (float)context.swapChainExtent.height,  // Соотношение сторон
-        0.1f, 10.0f  // Ближняя и дальняя плоскости отсечения
+        glm::radians(45.0f),  // РЈРіРѕР» РѕР±Р·РѕСЂР°
+        context.swapChainExtent.width / (float)context.swapChainExtent.height,  // РЎРѕРѕС‚РЅРѕС€РµРЅРёРµ СЃС‚РѕСЂРѕРЅ
+        0.1f, 10.0f  // Р‘Р»РёР¶РЅСЏСЏ Рё РґР°Р»СЊРЅСЏСЏ РїР»РѕСЃРєРѕСЃС‚Рё РѕС‚СЃРµС‡РµРЅРёСЏ
     );
-    cameraUbo.proj[1][1] *= -1;  // Важно для Vulkan!
+    cameraUbo.proj[1][1] *= -1;  // Р’Р°Р¶РЅРѕ РґР»СЏ Vulkan!
     cameraUbo.viewProj = cameraUbo.proj * cameraUbo.view;
     cameraUbo.cameraPos = glm::vec3(2.0f, 2.0f, 2.0f);
 
-    // Копируем данные камеры (как и раньше)
+    // РљРѕРїРёСЂСѓРµРј РґР°РЅРЅС‹Рµ РєР°РјРµСЂС‹ (РєР°Рє Рё СЂР°РЅСЊС€Рµ)
     memcpy(context.uniformBuffers[currentImage].cameraMapped, &cameraUbo, sizeof(cameraUbo));
 
-    // Обновление ObjectUBO для каждого объекта
+    // РћР±РЅРѕРІР»РµРЅРёРµ ObjectUBO РґР»СЏ РєР°Р¶РґРѕРіРѕ РѕР±СЉРµРєС‚Р°
     int objectCount = 1;
     for (uint32_t i = 0; i < objectCount; i++) {
         render::ObjectUBO objectUbo{};
 
-        // Вычисляем трансформацию для каждого объекта
+        // Р’С‹С‡РёСЃР»СЏРµРј С‚СЂР°РЅСЃС„РѕСЂРјР°С†РёСЋ РґР»СЏ РєР°Р¶РґРѕРіРѕ РѕР±СЉРµРєС‚Р°
         objectUbo.model = glm::rotate(
             glm::mat4(1.0f),
-            time * glm::radians(90.0f) * (i + 1),  // Разная скорость вращения для каждого объекта
-            glm::vec3(0.0f, 0.0f, 1.0f)  // Вращение вокруг оси Z
+            time * glm::radians(90.0f) * (i + 1),  // Р Р°Р·РЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РІСЂР°С‰РµРЅРёСЏ РґР»СЏ РєР°Р¶РґРѕРіРѕ РѕР±СЉРµРєС‚Р°
+            glm::vec3(0.0f, 0.0f, 1.0f)  // Р’СЂР°С‰РµРЅРёРµ РІРѕРєСЂСѓРі РѕСЃРё Z
         );
 
-        // Добавляем смещение для каждого объекта
+        // Р”РѕР±Р°РІР»СЏРµРј СЃРјРµС‰РµРЅРёРµ РґР»СЏ РєР°Р¶РґРѕРіРѕ РѕР±СЉРµРєС‚Р°
         objectUbo.model = glm::translate(objectUbo.model, glm::vec3(i * 2.0f, 0.0f, 0.0f));
 
         objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
 
-        // Копируем данные объекта в правильное место в динамическом буфере
+        // РљРѕРїРёСЂСѓРµРј РґР°РЅРЅС‹Рµ РѕР±СЉРµРєС‚Р° РІ РїСЂР°РІРёР»СЊРЅРѕРµ РјРµСЃС‚Рѕ РІ РґРёРЅР°РјРёС‡РµСЃРєРѕРј Р±СѓС„РµСЂРµ
         size_t offset = i * context.dynamicAlignment;
         memcpy((char*)context.uniformBuffers[currentImage].objectMapped + offset, &objectUbo, sizeof(objectUbo));
     }
 
     /*
-    // Обновляем UBO объекта
+    // РћР±РЅРѕРІР»СЏРµРј UBO РѕР±СЉРµРєС‚Р°
     ObjectUBO objectUbo{};
     objectUbo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
     objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
 
-    // Копируем данные объекта напрямую в отображенную память
+    // РљРѕРїРёСЂСѓРµРј РґР°РЅРЅС‹Рµ РѕР±СЉРµРєС‚Р° РЅР°РїСЂСЏРјСѓСЋ РІ РѕС‚РѕР±СЂР°Р¶РµРЅРЅСѓСЋ РїР°РјСЏС‚СЊ
     memcpy(uniformBuffers[currentImage].objectMapped, &objectUbo, sizeof(objectUbo));*/
 }
 
@@ -210,12 +210,12 @@ bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering(SDL_Window* window)
 {
     Uint32 flags = SDL_GetWindowFlags(window);
     if (flags & (SDL_WINDOW_HIDDEN | SDL_WINDOW_MINIMIZED)) {
-        return false;  // Окно скрыто или свёрнуто — рендерить нельзя
+        return false;  // РћРєРЅРѕ СЃРєСЂС‹С‚Рѕ РёР»Рё СЃРІС‘СЂРЅСѓС‚Рѕ вЂ” СЂРµРЅРґРµСЂРёС‚СЊ РЅРµР»СЊР·СЏ
     }
 
     int width, height;
     SDL_GL_GetDrawableSize(window, &width, &height); 
-    // Или: SDL_GetWindowSize(window, &width, &height);  // Если не важен HiDPI
+    // РР»Рё: SDL_GetWindowSize(window, &width, &height);  // Р•СЃР»Рё РЅРµ РІР°Р¶РµРЅ HiDPI
     return (width > 0 && height > 0);
 }
 
@@ -278,7 +278,7 @@ void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBu
                 &context.descriptorSets[context.currentFrame],
                 1, &dynamicOffset);
 
-            // Отрисовка объекта
+            // РћС‚СЂРёСЃРѕРІРєР° РѕР±СЉРµРєС‚Р°
             vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.indices.size()), 1, 0, 0, 0);
         }
     vkCmdEndRenderPass(commandBuffer);
@@ -628,7 +628,7 @@ void prism::PGC::PrismGraphicCore::cleanup()
     descriptorSetLayout.cleanup();
 
     for (size_t i = 0; i < context.MAX_FRAMES_IN_FLIGHT; i++) {
-        // Проверка, была ли память отображена
+        // РџСЂРѕРІРµСЂРєР°, Р±С‹Р»Р° Р»Рё РїР°РјСЏС‚СЊ РѕС‚РѕР±СЂР°Р¶РµРЅР°
         if (context.uniformBuffers[i].cameraMemory != VK_NULL_HANDLE) {
             vkUnmapMemory(context.device, context.uniformBuffers[i].cameraMemory);
             vkDestroyBuffer(context.device, context.uniformBuffers[i].camera, nullptr);

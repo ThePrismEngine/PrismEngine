@@ -98,8 +98,8 @@ namespace prism {
 					VK_KHR_SWAPCHAIN_EXTENSION_NAME
 				};
 
-				size_t dynamicAlignment=0;      // Выровненный размер ObjectUBO
-				uint32_t MAX_OBJECTS=500;         // Максимальное количество объектов
+				size_t dynamicAlignment=0;      // Р’С‹СЂРѕРІРЅРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ ObjectUBO
+				uint32_t MAX_OBJECTS=500;         // РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ
 
 #ifdef NDEBUG
 				bool enableValidationLayers = false;
@@ -139,7 +139,7 @@ namespace prism {
 				VkFormat preferredFormat = VK_FORMAT_B8G8R8A8_SRGB;
 			};
 
-			// Конфигурация для одного биндинга
+			// РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РґР»СЏ РѕРґРЅРѕРіРѕ Р±РёРЅРґРёРЅРіР°
 			struct BindingConfig {
 				uint32_t binding;
 				VkDescriptorType descriptorType;
@@ -171,11 +171,11 @@ namespace prism {
 			};
 
 			enum MultisampleSelectionStrategy {
-				MINIMAL,  // Минимальный уровень после 1x(обычно 2x)
-				MIDDLE,   // Среднее значение из доступных
-				MAXIMAL,  // Максимальное значение
-				CUSTOM,   // Значение из цели или максимально приближенное
-				//ADAPTIVE, // Оценка по баллам устройства
+				MINIMAL,  // РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ РїРѕСЃР»Рµ 1x(РѕР±С‹С‡РЅРѕ 2x)
+				MIDDLE,   // РЎСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ РёР· РґРѕСЃС‚СѓРїРЅС‹С…
+				MAXIMAL,  // РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
+				CUSTOM,   // Р—РЅР°С‡РµРЅРёРµ РёР· С†РµР»Рё РёР»Рё РјР°РєСЃРёРјР°Р»СЊРЅРѕ РїСЂРёР±Р»РёР¶РµРЅРЅРѕРµ
+				//ADAPTIVE, // РћС†РµРЅРєР° РїРѕ Р±Р°Р»Р»Р°Рј СѓСЃС‚СЂРѕР№СЃС‚РІР°
 			};
 
 			struct MultisampleSettings {

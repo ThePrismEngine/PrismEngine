@@ -5,7 +5,7 @@
 #include <vulkan/vulkan.h>
 #include <optional>
 #include <stdexcept>
-#include <utility> // для std::pair
+#include <utility> // РґР»СЏ std::pair
 #include <SDL_vulkan.h>
 #include <memory> 
 #include <set>
@@ -37,7 +37,7 @@ namespace prism {
     namespace PGC {
         class PrismGraphicCore {
         public:
-            // === Деструктор и контрруктор ===
+            // === Р”РµСЃС‚СЂСѓРєС‚РѕСЂ Рё РєРѕРЅС‚СЂСЂСѓРєС‚РѕСЂ ===
             PrismGraphicCore();
             void init(utils::Settings settings);
             void drawFrame();

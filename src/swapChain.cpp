@@ -111,7 +111,7 @@ void prism::PGC::SwapChain::create()
     context->swapChainImageFormat = surfaceFormat.format;
     context->swapChainExtent = extent;
 
-    // Логируем выбранный режим
+    // Р›РѕРіРёСЂСѓРµРј РІС‹Р±СЂР°РЅРЅС‹Р№ СЂРµР¶РёРј
     const char* presentModeStr = "";
     switch (presentMode) {
     case VK_PRESENT_MODE_FIFO_KHR: presentModeStr = "FIFO (VSync)"; break;

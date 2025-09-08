@@ -8,7 +8,7 @@
 int prism::PGC::DeviceRater::rate(VkPhysicalDevice device, PGC::utils::Context* context, utils::Settings* settings)
 {
     debugDeviceSelection = settings->debug.debugDeviceSelection;
-    // Базовые проверки
+    // Р‘Р°Р·РѕРІС‹Рµ РїСЂРѕРІРµСЂРєРё
     if (!DeviceChecker::check(device, context, settings)) return 0;
     
     DeviceScore deviceScore;
@@ -40,7 +40,7 @@ int prism::PGC::DeviceRater::getDeviceFeatureScore(VkPhysicalDevice device)
 {
     FeatureScores features = calculateFeatureScore(device);
 
-    // Учитываем вендора для RT и Upscaling
+    // РЈС‡РёС‚С‹РІР°РµРј РІРµРЅРґРѕСЂР° РґР»СЏ RT Рё Upscaling
     VkPhysicalDeviceProperties props = DeviceWrapper::getDeviceProperties(device);;
 
     if (props.vendorID == 0x10DE) { // NVIDIA
@@ -61,26 +61,26 @@ int prism::PGC::DeviceRater::getDeviceHardwareScore(VkPhysicalDevice device)
     VkPhysicalDeviceProperties props = DeviceWrapper::getDeviceProperties(device);
     VkPhysicalDeviceMemoryProperties memProps = DeviceWrapper::getDeviceMemoryProperties(device);
 
-    // Константы для преобразования единиц
+    // РљРѕРЅСЃС‚Р°РЅС‚С‹ РґР»СЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РµРґРёРЅРёС†
     constexpr float BYTES_TO_GB = 1.0f / (1024 * 1024 * 1024);
     constexpr float MHZ_TO_GHZ = 1.0f / 1000.0f;
     constexpr float TEXTURE_UNITS_NORMALIZER = 1.0f / 10000.0f;
 
-    // Расчет VRAM
+    // Р Р°СЃС‡РµС‚ VRAM
     for (uint32_t i = 0; i < memProps.memoryHeapCount; ++i) {
         if (memProps.memoryHeaps[i].flags & VK_MEMORY_HEAP_DEVICE_LOCAL_BIT) {
             score.vramGB += static_cast<float>(memProps.memoryHeaps[i].size) * BYTES_TO_GB;
         }
     }
 
-    // показатели производительности
+    // РїРѕРєР°Р·Р°С‚РµР»Рё РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё
     score.shaderCores = std::log2(static_cast<float>(props.limits.maxComputeWorkGroupInvocations) + 1.0f);
 
     if (props.limits.maxComputeWorkGroupSize[0] > 0) {
         score.clockSpeedGHz = static_cast<float>(props.limits.maxComputeWorkGroupSize[0]) * MHZ_TO_GHZ;
     }
     else {
-        score.clockSpeedGHz = 1.0f; // Значение по умолчанию
+        score.clockSpeedGHz = 1.0f; // Р—РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     }
 
     score.textureUnits = static_cast<float>(props.limits.maxImageDimension2D) * TEXTURE_UNITS_NORMALIZER;
@@ -89,7 +89,7 @@ int prism::PGC::DeviceRater::getDeviceHardwareScore(VkPhysicalDevice device)
         ScoreWrapper::print(score);
     }
 
-    // Возвращаем нормализованную оценку (0-100)
+    // Р’РѕР·РІСЂР°С‰Р°РµРј РЅРѕСЂРјР°Р»РёР·РѕРІР°РЅРЅСѓСЋ РѕС†РµРЅРєСѓ (0-100)
     return ScoreWrapper::getTotal(score);
 }
 
@@ -110,22 +110,22 @@ int prism::PGC::DeviceRater::getDeviceApiScore(VkPhysicalDevice device)
     const int minor = VK_VERSION_MINOR(api_version);
 
 
-    // Базовые баллы
+    // Р‘Р°Р·РѕРІС‹Рµ Р±Р°Р»Р»С‹
     if (major >= 1) {
         score += BASE_SCORE_V1; // Vulkan 1.0+
 
-        // Бонусы за минорные версии через switch-case
+        // Р‘РѕРЅСѓСЃС‹ Р·Р° РјРёРЅРѕСЂРЅС‹Рµ РІРµСЂСЃРёРё С‡РµСЂРµР· switch-case
         switch (minor) {
         case 3: score += V1_3_BONUS; break; // 1.3
         case 2: score += V1_2_BONUS; break; // 1.2
         case 1: score += V1_1_BONUS; break; // 1.1
-        case 0: break; // 1.0 - без бонусов
-        default:       // Для версий выше 1.3
+        case 0: break; // 1.0 - Р±РµР· Р±РѕРЅСѓСЃРѕРІ
+        default:       // Р”Р»СЏ РІРµСЂСЃРёР№ РІС‹С€Рµ 1.3
             if (minor > 3) score += V1_3_BONUS;
             break;
         }
 
-        // Проверка фич Vulkan 1.2+
+        // РџСЂРѕРІРµСЂРєР° С„РёС‡ Vulkan 1.2+
         if (minor >= 2) {
             VkPhysicalDeviceVulkan12Features features12 = {};
             features12.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_2_FEATURES;
@@ -147,23 +147,23 @@ prism::PGC::FeatureScores prism::PGC::DeviceRater::calculateFeatureScore(VkPhysi
 {
     FeatureScores scores;
 
-    // Получаем список всех расширений
+    // РџРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє РІСЃРµС… СЂР°СЃС€РёСЂРµРЅРёР№
     std::vector<VkExtensionProperties> extensions;
     DeviceWrapper::getDeviceExtensionProperties(device, &extensions);
 
-    // Создаем множество для быстрого поиска
+    // РЎРѕР·РґР°РµРј РјРЅРѕР¶РµСЃС‚РІРѕ РґР»СЏ Р±С‹СЃС‚СЂРѕРіРѕ РїРѕРёСЃРєР°
     std::unordered_set<std::string> availableExtensions;
     for (const auto& ext : extensions) {
         availableExtensions.insert(ext.extensionName);
     }
 
-    // Проверяем базовые расширения
+    // РџСЂРѕРІРµСЂСЏРµРј Р±Р°Р·РѕРІС‹Рµ СЂР°СЃС€РёСЂРµРЅРёСЏ
     const std::string swapchainExt = "VK_KHR_swapchain";
     if (availableExtensions.count(swapchainExt)) {
         scores.swapchain = 10.0f;
     }
 
-    // Проверяем Ray Tracing
+    // РџСЂРѕРІРµСЂСЏРµРј Ray Tracing
     const std::vector<std::string> rtExtensions = {
         "VK_KHR_ray_tracing_pipeline",
         "VK_NV_ray_tracing"
@@ -175,11 +175,11 @@ prism::PGC::FeatureScores prism::PGC::DeviceRater::calculateFeatureScore(VkPhysi
         }
     }
 
-    // Проверяем Upscaling технологии
+    // РџСЂРѕРІРµСЂСЏРµРј Upscaling С‚РµС…РЅРѕР»РѕРіРёРё
     const std::vector<std::string> upscalingExtensions = {
         "VK_NV_DLSS",          // NVIDIA DLSS
         "VK_KHR_fragment_shading_rate", // FSR/XeSS
-        "VK_EXT_fragment_density_map"   // Альтернативный механизм
+        "VK_EXT_fragment_density_map"   // РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ РјРµС…Р°РЅРёР·Рј
     };
     for (const auto& upExt : upscalingExtensions) {
         if (availableExtensions.count(upExt)) {
@@ -192,7 +192,7 @@ prism::PGC::FeatureScores prism::PGC::DeviceRater::calculateFeatureScore(VkPhysi
     }
 }
 
-    // Проверяем дополнительные возможности
+    // РџСЂРѕРІРµСЂСЏРµРј РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё
     VkPhysicalDeviceFeatures2 features2 = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FEATURES_2 };
     vkGetPhysicalDeviceFeatures2(device, &features2);
 
@@ -248,7 +248,7 @@ int prism::PGC::ScoreWrapper::getTotal(FeatureScores score)
 
 int prism::PGC::ScoreWrapper::getTotal(HardwareScore score)
 {
-    // Нормализованные компоненты(ограничены 1.0 как максимум)
+    // РќРѕСЂРјР°Р»РёР·РѕРІР°РЅРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹(РѕРіСЂР°РЅРёС‡РµРЅС‹ 1.0 РєР°Рє РјР°РєСЃРёРјСѓРј)
     float normalizedVram = std::min(score.vramGB / score.REFERENCE_VRAM_GB, 1.0f);
     float normalizedShaderCores = std::min(score.shaderCores / score.REFERENCE_SHADER_CORES, 1.0f);
     float normalizedClockSpeed = std::min(score.clockSpeedGHz / score.REFERENCE_CLOCK_SPEED_GHZ, 1.0f);
@@ -257,6 +257,6 @@ int prism::PGC::ScoreWrapper::getTotal(HardwareScore score)
                   normalizedShaderCores * score.SHADER_CORES_WEIGHT +
                   normalizedClockSpeed  * score.CLOCK_SPEED_WEIGHT;
 
-    // Взвешенная сумма компонентов
+    // Р’Р·РІРµС€РµРЅРЅР°СЏ СЃСѓРјРјР° РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
     return static_cast<int>(std::clamp(total * 100.0f, 0.0f, 100.0f));
 }

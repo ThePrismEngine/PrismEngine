@@ -65,11 +65,11 @@ namespace prism {
                     return std::set<Entity>();
                 }
                 else {
-                    // Получаем множества для каждого типа компонентов
+                    // РџРѕР»СѓС‡Р°РµРј РјРЅРѕР¶РµСЃС‚РІР° РґР»СЏ РєР°Р¶РґРѕРіРѕ С‚РёРїР° РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
                     std::vector<const std::set<Entity>*> sets;
                     (sets.push_back(&getEntitiesWith<ComponentTypes>()), ...);
 
-                    // Находим наименьшее множество для оптимизации
+                    // РќР°С…РѕРґРёРј РЅР°РёРјРµРЅСЊС€РµРµ РјРЅРѕР¶РµСЃС‚РІРѕ РґР»СЏ РѕРїС‚РёРјРёР·Р°С†РёРё
                     auto smallestIt = std::min_element(sets.begin(), sets.end(),
                         [](const std::set<Entity>* a, const std::set<Entity>* b) {
                             return a->size() < b->size();
@@ -77,7 +77,7 @@ namespace prism {
 
                     std::set<Entity> result = **smallestIt;
 
-                    // Пересекаем с остальными множествами
+                    // РџРµСЂРµСЃРµРєР°РµРј СЃ РѕСЃС‚Р°Р»СЊРЅС‹РјРё РјРЅРѕР¶РµСЃС‚РІР°РјРё
                     for (const auto& entitySetPtr : sets) {
                         if (entitySetPtr == *smallestIt) continue;
 

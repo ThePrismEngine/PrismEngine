@@ -31,22 +31,22 @@ std::array<VkPipelineShaderStageCreateInfo, 2> prism::PGC::ShaderStagesLoader::l
 
 std::vector<char> prism::PGC::ShaderStagesLoader::readShaderFile(const std::string& filename)
 {
-    // Открываем файл в режиме бинарного чтения с курсором в конце
+    // РћС‚РєСЂС‹РІР°РµРј С„Р°Р№Р» РІ СЂРµР¶РёРјРµ Р±РёРЅР°СЂРЅРѕРіРѕ С‡С‚РµРЅРёСЏ СЃ РєСѓСЂСЃРѕСЂРѕРј РІ РєРѕРЅС†Рµ
     std::ifstream file(filename, std::ios::binary | std::ios::ate);
     if (!file.is_open()) {
         logger::logError(logger::Error::FAILED_TO_OPEN_FILE, "An error occurred in the Prism graphic core during the stage of loading shaders to create a pipeline. FILENAME: " + filename);
     }
 
-    // Получаем размер файла
+    // РџРѕР»СѓС‡Р°РµРј СЂР°Р·РјРµСЂ С„Р°Р№Р»Р°
     const auto fileSize = file.tellg();
     if (fileSize == -1) {
         logger::logError(logger::Error::FAILED_TO_DETERMINE_FILE_SIZE, "An error occurred in the Prism graphic core during the stage of loading shaders to create a pipeline. FILENAME: " + filename);
     }
 
-    // Перемещаем курсор в начало
+    // РџРµСЂРµРјРµС‰Р°РµРј РєСѓСЂСЃРѕСЂ РІ РЅР°С‡Р°Р»Рѕ
     file.seekg(0);
 
-    // Создаем вектор размером fileSize и читаем данные напрямую
+    // РЎРѕР·РґР°РµРј РІРµРєС‚РѕСЂ СЂР°Р·РјРµСЂРѕРј fileSize Рё С‡РёС‚Р°РµРј РґР°РЅРЅС‹Рµ РЅР°РїСЂСЏРјСѓСЋ
     std::vector<char> buffer(static_cast<size_t>(fileSize));
     if (!file.read(buffer.data(), fileSize)) {
         logger::logError(logger::Error::FAILED_TO_READ_FILE, "An error occurred in the Prism graphic core during the stage of loading shaders to create a pipeline. FILENAME: " + filename);

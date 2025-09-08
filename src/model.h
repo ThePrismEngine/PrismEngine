@@ -29,7 +29,7 @@ namespace prism {
 			bool operator==(const Vertex& other) const;
 		};
 
-		// Отдельный функтор для хеширования
+		// РћС‚РґРµР»СЊРЅС‹Р№ С„СѓРЅРєС‚РѕСЂ РґР»СЏ С…РµС€РёСЂРѕРІР°РЅРёСЏ
 		struct VertexHasher {
 			size_t operator()(const Vertex& v) const noexcept;
 		};

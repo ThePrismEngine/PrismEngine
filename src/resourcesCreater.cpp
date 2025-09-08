@@ -122,9 +122,9 @@ void prism::PGC::ResourcesCreater::createTextureSampler(utils::Context* context,
     samplerInfo.compareEnable = VK_FALSE;
     samplerInfo.compareOp = VK_COMPARE_OP_ALWAYS;
     samplerInfo.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
-    samplerInfo.minLod = 0.0f; // Необязательно
+    samplerInfo.minLod = 0.0f; // РќРµРѕР±СЏР·Р°С‚РµР»СЊРЅРѕ
     samplerInfo.maxLod = VK_LOD_CLAMP_NONE;
-    samplerInfo.mipLodBias = 0.0f; // Необязательно
+    samplerInfo.mipLodBias = 0.0f; // РќРµРѕР±СЏР·Р°С‚РµР»СЊРЅРѕ
 
     if (vkCreateSampler(context->device, &samplerInfo, nullptr, &context->textureSampler) != VK_SUCCESS) {
         throw std::runtime_error("failed to create texture sampler!");
