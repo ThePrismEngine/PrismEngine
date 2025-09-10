@@ -103,7 +103,7 @@ void prism::PGC::ResourcesCreater::createDepthResources(utils::Context* context,
 
 }
 
-void prism::PGC::ResourcesCreater::createTextureSampler(utils::Context* context, utils::Settings* settings)
+void prism::PGC::ResourcesCreater::createTextureSampler(utils::Context* context, VkSampler* textureSampler)
 {
     VkPhysicalDeviceProperties properties{};
     vkGetPhysicalDeviceProperties(context->physicalDevice, &properties);
@@ -126,7 +126,7 @@ void prism::PGC::ResourcesCreater::createTextureSampler(utils::Context* context,
     samplerInfo.maxLod = VK_LOD_CLAMP_NONE;
     samplerInfo.mipLodBias = 0.0f; // Необязательно
 
-    if (vkCreateSampler(context->device, &samplerInfo, nullptr, &context->textureSampler) != VK_SUCCESS) {
+    if (vkCreateSampler(context->device, &samplerInfo, nullptr, textureSampler) != VK_SUCCESS) {
         throw std::runtime_error("failed to create texture sampler!");
     }
 }

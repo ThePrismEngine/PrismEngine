@@ -1,5 +1,6 @@
 #include "renderer.h"
 
+
 prism::render::Renderer::Renderer(Window* window)
 {
 	this->window = window;
@@ -16,6 +17,7 @@ void prism::render::Renderer::init()
 	pgc.windowMinimized = &window->windowMinimized;
 	pgc.init(this->settings);
 }
+
 
 void prism::render::Renderer::drawFrame()
 {

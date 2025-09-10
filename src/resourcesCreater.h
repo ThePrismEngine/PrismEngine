@@ -14,7 +14,7 @@ namespace prism {
 			static void createFramebuffers(utils::Context* context, utils::Settings* settings);
 			static void createColorResources(utils::Context* context, utils::Settings* settings);
             static void createDepthResources(utils::Context* context, utils::Settings* settings);
-			static void createTextureSampler(utils::Context* context, utils::Settings* settings);
+			static void createTextureSampler(utils::Context* context, VkSampler* textureSampler);
 		private:
 
 		};

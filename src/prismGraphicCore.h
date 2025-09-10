@@ -15,7 +15,7 @@
 #include <chrono>
 #include "config.h"
 #include "logger.h"
-#include "model.h"
+#include "vertex.h"
 #include "fmath.h"
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE
@@ -44,7 +44,8 @@ namespace prism {
             void cleanup();
             void awaitRenderingCompletion();
 
-            
+            PGC::utils::Settings settings;
+            PGC::utils::Context context;
 
             bool* windowResized;
             bool* windowMinimized;
@@ -80,11 +81,8 @@ namespace prism {
             PGC::GraphicsPipeline graphicsPipeline;
             PGC::DescriptorSet descriptorSet;
 
-            PGC::utils::Settings settings;
-            PGC::utils::Context context;
-
             const std::string MODEL_PATH = "models/viking_room.obj";
-            const std::string TEXTURE_PATH = "textures/viking_room.png";
+            const std::string TEXTURE_PATH = "textures/viking_room.png"; //TODEL
 
             //ObjectUBO ubo;
       

@@ -1,7 +1,7 @@
-#include "model.h"
+#include "vertex.h"
 #include <functional>
 
-VkVertexInputBindingDescription prism::render::Vertex::getBindingDescription()
+VkVertexInputBindingDescription prism::PGC::Vertex::getBindingDescription()
 {
 	VkVertexInputBindingDescription bindingDescription{};
 
@@ -12,7 +12,7 @@ VkVertexInputBindingDescription prism::render::Vertex::getBindingDescription()
 	return bindingDescription;
 }
 
-std::array<VkVertexInputAttributeDescription, 3> prism::render::Vertex::getAttributeDescriptions()
+std::array<VkVertexInputAttributeDescription, 3> prism::PGC::Vertex::getAttributeDescriptions()
 {
 	std::array<VkVertexInputAttributeDescription, 3> attributeDescriptions{};
 
@@ -34,12 +34,12 @@ std::array<VkVertexInputAttributeDescription, 3> prism::render::Vertex::getAttri
 	return attributeDescriptions;
 }
 
-bool prism::render::Vertex::operator==(const Vertex& other)
+bool prism::PGC::Vertex::operator==(const Vertex& other)
  const {
 	return pos == other.pos && color == other.color && texCoord == other.texCoord;
 }
 
-size_t prism::render::VertexHasher::operator()(const Vertex& v) const noexcept {
+size_t prism::PGC::VertexHasher::operator()(const Vertex& v) const noexcept {
 	size_t seed = 0;
 
 	auto hash_combine = [&seed](float value) {

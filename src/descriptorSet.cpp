@@ -46,8 +46,8 @@ void prism::PGC::DescriptorSet::create()
 
         VkDescriptorImageInfo imageInfo{};
         imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-        imageInfo.imageView = context->textureImageView;
-        imageInfo.sampler = context->textureSampler;
+        imageInfo.imageView = context->texture.imageView;
+        imageInfo.sampler = context->texture.sampler;
 
         std::array<VkWriteDescriptorSet, 3> descriptorWrites{};
 

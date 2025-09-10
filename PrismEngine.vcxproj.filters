@@ -88,6 +88,12 @@
     <Filter Include="sSsystems">
       <UniqueIdentifier>{100c9d80-a30f-49a2-99f8-d1207b625003}</UniqueIdentifier>
     </Filter>
+    <Filter Include="pgc\vertex">
+      <UniqueIdentifier>{7e67c3d1-e872-4108-a292-343ba99a204d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\textureCreater">
+      <UniqueIdentifier>{995ed1f7-4828-4f13-b9dc-76f1cde1e99b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\fmath.cpp">
@@ -107,9 +113,6 @@
     </ClCompile>
     <ClCompile Include="src\logger.cpp">
       <Filter>logger</Filter>
-    </ClCompile>
-    <ClCompile Include="src\model.cpp">
-      <Filter>render</Filter>
     </ClCompile>
     <ClCompile Include="src\base.cpp">
       <Filter>pgc\base</Filter>
@@ -165,6 +168,12 @@
     <ClCompile Include="src\world.cpp">
       <Filter>ECS\world</Filter>
     </ClCompile>
+    <ClCompile Include="src\vertex.cpp">
+      <Filter>pgc\vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="src\textureLoader.cpp">
+      <Filter>pgc\textureCreater</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\fmath.h">
@@ -190,9 +199,6 @@
     </ClInclude>
     <ClInclude Include="src\init.h">
       <Filter>init</Filter>
-    </ClInclude>
-    <ClInclude Include="src\model.h">
-      <Filter>render</Filter>
     </ClInclude>
     <ClInclude Include="src\stb_image.h">
       <Filter>Файлы заголовков</Filter>
@@ -242,9 +248,6 @@
     <ClInclude Include="src\renderer.h">
       <Filter>render\renderer</Filter>
     </ClInclude>
-    <ClInclude Include="ubo.h">
-      <Filter>render</Filter>
-    </ClInclude>
     <ClInclude Include="src\entityManager.h">
       <Filter>ECS\entity</Filter>
     </ClInclude>
@@ -271,6 +274,18 @@
     </ClInclude>
     <ClInclude Include="src\transformComponent.h">
       <Filter>stComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ubo.h">
+      <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vertex.h">
+      <Filter>pgc\vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="src\texture.h">
+      <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\textureLoader.h">
+      <Filter>pgc\textureCreater</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

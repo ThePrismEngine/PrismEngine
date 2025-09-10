@@ -7,7 +7,7 @@
 
 
 namespace prism {
-	namespace render {
+	namespace PGC {
 		struct Color
 		{
 			float r, g, b;

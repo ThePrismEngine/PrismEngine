@@ -223,8 +223,9 @@
     <ClCompile Include="src\shaderStagesLoader.cpp" />
     <ClCompile Include="src\swapChain.cpp" />
     <ClCompile Include="src\systemManager.cpp" />
+    <ClCompile Include="src\textureLoader.cpp" />
     <ClCompile Include="src\vector.cpp" />
-    <ClCompile Include="src\model.cpp" />
+    <ClCompile Include="src\vertex.cpp" />
     <ClCompile Include="src\Window.cpp" />
     <ClCompile Include="src\prismGraphicCore.cpp" />
     <ClCompile Include="src\world.cpp" />
@@ -257,14 +258,16 @@
     <ClInclude Include="src\swapChain.h" />
     <ClInclude Include="src\system.h" />
     <ClInclude Include="src\systemManager.h" />
+    <ClInclude Include="src\texture.h" />
+    <ClInclude Include="src\textureLoader.h" />
     <ClInclude Include="src\transformComponent.h" />
+    <ClInclude Include="src\ubo.h" />
     <ClInclude Include="src\utils.h" />
     <ClInclude Include="src\vector.h" />
-    <ClInclude Include="src\model.h" />
+    <ClInclude Include="src\vertex.h" />
     <ClInclude Include="src\Window.h" />
     <ClInclude Include="src\prismGraphicCore.h" />
     <ClInclude Include="src\world.h" />
-    <ClInclude Include="ubo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

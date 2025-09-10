@@ -5,8 +5,9 @@
 #include "config.h"
 #include "SDL.h"
 #include <string>
-#include "model.h"
 #include "./ubo.h"
+#include "vertex.h"
+#include "texture.h"
 
 namespace prism {
 	namespace PGC {
@@ -65,18 +66,13 @@ namespace prism {
 				VkCommandPool commandPool;
 				std::vector<VkCommandBuffer> commandBuffers;
 
-				VkImageView textureImageView;
-				VkSampler textureSampler;
-
-				VkImage textureImage;
-				VkDeviceMemory textureImageMemory;
+				Texture texture;
 
 				std::vector<UniformBuffers> uniformBuffers;
 
-				std::vector<render::Vertex> vertices;
+				std::vector<Vertex> vertices;
 				std::vector<uint32_t> indices;
 
-				uint32_t mipLevels;
 
 				std::vector<VkSemaphore> imageAvailableSemaphores;
 				std::vector<VkSemaphore> renderFinishedSemaphores;

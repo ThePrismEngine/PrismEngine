@@ -1,5 +1,5 @@
 #include "graphicsPipeline.h"
-#include "model.h"
+#include "vertex.h"
 
 void prism::PGC::GraphicsPipeline::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
 {
@@ -26,8 +26,8 @@ void prism::PGC::GraphicsPipeline::create()
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
     vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
 
-    auto bindingDescription = render::Vertex::getBindingDescription();
-    auto attributeDescriptions = render::Vertex::getAttributeDescriptions();
+    auto bindingDescription = Vertex::getBindingDescription();
+    auto attributeDescriptions = Vertex::getAttributeDescriptions();
 
     vertexInputInfo.vertexBindingDescriptionCount = 1;
     vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(attributeDescriptions.size());

@@ -1,8 +1,5 @@
 #include "prismGraphicCore.h"
-
-
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#include "textureLoader.h"
 
 #define TINYOBJLOADER_IMPLEMENTATION
 #include "tiny_obj_loader.h"
@@ -25,9 +22,10 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createColorResources();
     createDepthResources();
     createFramebuffers();
-    createTextureImage();
-    createTextureImageView();
-    createTextureSampler();
+    context.texture = TextureLoader::load(&context, TEXTURE_PATH);
+//    createTextureImage();
+//    createTextureImageView();
+//    createTextureSampler();
     loadModel();
     createVertexBuffer();
     createIndexBuffer();
@@ -409,12 +407,13 @@ void prism::PGC::PrismGraphicCore::createDescriptorSets()
     descriptorSet.init(&context, &settings);
 }
 
+/*
 void prism::PGC::PrismGraphicCore::createTextureImage()
 {
     int texWidth, texHeight, texChannels;
     stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
     VkDeviceSize imageSize = texWidth * texHeight * 4;
-    context.mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(texWidth, texHeight)))) + 1;
+    context.texture.mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(texWidth, texHeight)))) + 1;
     if (!pixels) {
         throw std::runtime_error("failed to load texture image!");
     }
@@ -430,28 +429,28 @@ void prism::PGC::PrismGraphicCore::createTextureImage()
 
     stbi_image_free(pixels);
 
-    PGC::ResourcesCreater::createImage(&context, texWidth, texHeight, context.mipLevels, VK_SAMPLE_COUNT_1_BIT, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context.textureImage, context.textureImageMemory);
+    PGC::ResourcesCreater::createImage(&context, texWidth, texHeight, context.texture.mipLevels, VK_SAMPLE_COUNT_1_BIT, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context.texture.image, context.texture.imageMemory);
 
 
-    PGC::BufferWrapper::transitionImageLayout(&context, context.textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, context.mipLevels);
-    PGC::BufferWrapper::copyBufferToImage(&context, stagingBuffer, context.textureImage, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight));
+    PGC::BufferWrapper::transitionImageLayout(&context, context.texture.image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, context.texture.mipLevels);
+    PGC::BufferWrapper::copyBufferToImage(&context, stagingBuffer, context.texture.image, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight));
 
     vkDestroyBuffer(context.device, stagingBuffer, nullptr);
     vkFreeMemory(context.device, stagingBufferMemory, nullptr);
 
-    generateMipmaps(context.textureImage, VK_FORMAT_R8G8B8A8_SRGB, texWidth, texHeight, context.mipLevels);
+    generateMipmaps(context.texture.image, VK_FORMAT_R8G8B8A8_SRGB, texWidth, texHeight, context.texture.mipLevels);
 }
 
 void prism::PGC::PrismGraphicCore::createTextureImageView()
 {
-    context.textureImageView = PGC::ResourcesCreater::createImageView(context.device, context.textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT, context.mipLevels);
+    context.texture.imageView = PGC::ResourcesCreater::createImageView(context.device, context.texture.image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT, context.texture.mipLevels);
 }
 
 void prism::PGC::PrismGraphicCore::createTextureSampler()
 {
-    PGC::ResourcesCreater::createTextureSampler(&context, &settings);
+    PGC::ResourcesCreater::createTextureSampler(&context, &context.texture.sampler);
 }
-
+*/
 void prism::PGC::PrismGraphicCore::createDepthResources()
 {
     PGC::ResourcesCreater::createDepthResources(&context, &settings);
@@ -468,11 +467,11 @@ void prism::PGC::PrismGraphicCore::loadModel()
         throw std::runtime_error(err);
     }
 
-    std::unordered_map<prism::render::Vertex, uint32_t, prism::render::VertexHasher> uniqueVertices{};
+    std::unordered_map<prism::PGC::Vertex, uint32_t, prism::PGC::VertexHasher> uniqueVertices{};
 
     for (const auto& shape : shapes) {
         for (const auto& index : shape.mesh.indices) {
-            render::Vertex vertex{};
+            Vertex vertex{};
 
             vertex.pos = {
                 attrib.vertices[3 * index.vertex_index + 0],
@@ -641,17 +640,7 @@ void prism::PGC::PrismGraphicCore::cleanup()
         }
     }
 
-    vkDestroySampler(context.device, context.textureSampler, nullptr);
-    context.textureSampler = VK_NULL_HANDLE;
-
-    vkDestroyImageView(context.device, context.textureImageView, nullptr);
-    context.textureImageView = VK_NULL_HANDLE;
-
-    vkDestroyImage(context.device, context.textureImage, nullptr);
-    context.textureImage = VK_NULL_HANDLE;
-
-    vkFreeMemory(context.device, context.textureImageMemory, nullptr);
-    context.textureImageMemory = VK_NULL_HANDLE;
+    TextureLoader::cleanup(&context, &context.texture);
 
     vkDestroyBuffer(context.device, context.indexBuffer, nullptr);
     context.indexBuffer = VK_NULL_HANDLE;
