@@ -44,8 +44,6 @@ namespace prism {
             void cleanup();
             void awaitRenderingCompletion();
 
-            PGC::utils::Settings settings;
-            PGC::utils::Context context;
 
             bool* windowResized;
             bool* windowMinimized;
@@ -73,6 +71,9 @@ namespace prism {
             void createColorResources();
 
             SDL_Window* window;
+
+            PGC::utils::Settings settings;
+            PGC::utils::Context context;
 
             PGC::base::Base base;
             PGC::SwapChain swapChain;
