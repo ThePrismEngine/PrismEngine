@@ -153,7 +153,7 @@ void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
     // Обновляем UBO камеры
     // Обновляем UBO камеры
     // Обновление CameraUBO (остается без изменений)
-    render::CameraUBO cameraUbo{};
+    CameraUBO cameraUbo{};
 
     // Убедитесь, что камера смотрит на объект
     cameraUbo.view = glm::lookAt(
@@ -177,7 +177,7 @@ void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
     // Обновление ObjectUBO для каждого объекта
     int objectCount = 1;
     for (uint32_t i = 0; i < objectCount; i++) {
-        render::ObjectUBO objectUbo{};
+        ObjectUBO objectUbo{};
 
         // Вычисляем трансформацию для каждого объекта
         objectUbo.model = glm::rotate(
@@ -413,7 +413,6 @@ void prism::PGC::PrismGraphicCore::createTextureImage()
 {
     int texWidth, texHeight, texChannels;
     stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
-    //stbi_uc* pixels = stbi_load("textures/texture.jpg", &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
     VkDeviceSize imageSize = texWidth * texHeight * 4;
     context.mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(texWidth, texHeight)))) + 1;
     if (!pixels) {
@@ -436,8 +435,6 @@ void prism::PGC::PrismGraphicCore::createTextureImage()
 
     PGC::BufferWrapper::transitionImageLayout(&context, context.textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, context.mipLevels);
     PGC::BufferWrapper::copyBufferToImage(&context, stagingBuffer, context.textureImage, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight));
-
-    //transitionImageLayout(textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, mipLevels);
 
     vkDestroyBuffer(context.device, stagingBuffer, nullptr);
     vkFreeMemory(context.device, stagingBufferMemory, nullptr);

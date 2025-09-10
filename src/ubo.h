@@ -4,7 +4,7 @@
 
 
 namespace prism {
-	namespace render {
+	namespace PGC {
 		struct ObjectUBO {
 			alignas(16) glm::mat4 model;
 			alignas(16) glm::mat4 normals;

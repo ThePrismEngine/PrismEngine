@@ -71,7 +71,7 @@ namespace prism {
 				VkImage textureImage;
 				VkDeviceMemory textureImageMemory;
 
-				std::vector<render::UniformBuffers> uniformBuffers;
+				std::vector<UniformBuffers> uniformBuffers;
 
 				std::vector<render::Vertex> vertices;
 				std::vector<uint32_t> indices;

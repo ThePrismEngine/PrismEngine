@@ -194,13 +194,13 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
 {
     context->uniformBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
 
-    VkDeviceSize cameraBufferSize = sizeof(render::CameraUBO);
+    VkDeviceSize cameraBufferSize = sizeof(CameraUBO);
 
     // Получаем требования к выравниванию
     size_t minUboAlignment = DeviceWrapper::getDeviceProperties(context->physicalDevice).limits.minUniformBufferOffsetAlignment;
 
     // Вычисляем выровненный размер для ObjectUBO
-    size_t objectUBOSize = sizeof(render::ObjectUBO);
+    size_t objectUBOSize = sizeof(ObjectUBO);
     context->dynamicAlignment = objectUBOSize;
 
     if (minUboAlignment > 0) {

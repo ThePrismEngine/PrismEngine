@@ -36,13 +36,13 @@ void prism::PGC::DescriptorSet::create()
         VkDescriptorBufferInfo cameraBufferInfo{};
         cameraBufferInfo.buffer = context->uniformBuffers[i].camera;
         cameraBufferInfo.offset = 0;
-        cameraBufferInfo.range = sizeof(prism::render::CameraUBO);
+        cameraBufferInfo.range = sizeof(CameraUBO);
 
         // ObjectUBO (динамический)
         VkDescriptorBufferInfo objectBufferInfo{};
         objectBufferInfo.buffer = context->uniformBuffers[i].object;
         objectBufferInfo.offset = 0; // Смещение будет устанавливаться при binding'е
-        objectBufferInfo.range = sizeof(prism::render::ObjectUBO); // Размер одного UBO
+        objectBufferInfo.range = sizeof(ObjectUBO); // Размер одного UBO
 
         VkDescriptorImageInfo imageInfo{};
         imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
