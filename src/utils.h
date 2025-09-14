@@ -66,8 +66,6 @@ namespace prism {
 				VkCommandPool commandPool;
 				std::vector<VkCommandBuffer> commandBuffers;
 
-				Texture texture;
-
 				std::vector<UniformBuffers> uniformBuffers;
 
 				std::vector<Vertex> vertices;
@@ -82,6 +80,16 @@ namespace prism {
 				bool wasRenderingActive = true;
 
 				VkDescriptorPool descriptorPool;
+				VkDescriptorPool textureDescriptorPool;
+
+			    // Текстуры и управление ими
+				std::vector<PGC::Texture> textures;
+				std::vector<uint32_t> freeTextureIndices;
+				VkDescriptorSet textureDescriptorSet = VK_NULL_HANDLE;
+				VkDescriptorSetLayout textureDescriptorSetLayout = VK_NULL_HANDLE;
+				uint32_t textureID;
+
+
 				std::vector<VkDescriptorSet> descriptorSets;
 
 				const int MAX_FRAMES_IN_FLIGHT = 2;
@@ -91,7 +99,8 @@ namespace prism {
 				};
 
 				const std::vector<const char*> deviceExtensions = {
-					VK_KHR_SWAPCHAIN_EXTENSION_NAME
+					VK_KHR_SWAPCHAIN_EXTENSION_NAME,
+					VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME
 				};
 
 				size_t dynamicAlignment=0;      // Выровненный размер ObjectUBO
@@ -144,8 +153,22 @@ namespace prism {
 				const VkSampler* immutableSamplers = nullptr;
 			};
 
+			struct TextureBindingConfig {
+				uint32_t binding;
+				VkDescriptorType descriptorType;
+				uint32_t descriptorCount;
+				VkShaderStageFlags stageFlags;
+				const VkSampler* immutableSamplers = nullptr;
+				VkDescriptorBindingFlagsEXT bindingFlags;
+			};
+
 			struct DescriptorSetLayoutSettings {
 				std::vector<BindingConfig> bindings;
+				VkDescriptorSetLayoutCreateFlags flags = 0;
+			};
+
+			struct TextureDescriptorSetLayoutSettings {
+				std::vector<TextureBindingConfig> bindings;
 				VkDescriptorSetLayoutCreateFlags flags = 0;
 			};
 
@@ -243,6 +266,9 @@ namespace prism {
 				DebugSettings debug;
 				SwapChainSettings swapChain;
 				DescriptorSetLayoutSettings descriptorSetLayout;
+				TextureDescriptorSetLayoutSettings textureDescriptorSetLayout;
+
+				uint32_t MAX_TEXTURES = 350;
 				
 				PipelineSettings pipeline;
 

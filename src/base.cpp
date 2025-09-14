@@ -298,9 +298,28 @@ void prism::PGC::base::Base::createLogicalDevice()
 
     VkPhysicalDeviceFeatures deviceFeatures{};
     deviceFeatures.samplerAnisotropy = VK_TRUE;
+    deviceFeatures.fillModeNonSolid = VK_TRUE;
+
+    VkPhysicalDeviceVulkan12Features vulkan12Features{};
+    vulkan12Features.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_2_FEATURES;
+
+    VkPhysicalDeviceFeatures2 physicalFeatures2{};
+    physicalFeatures2.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FEATURES_2;
+    physicalFeatures2.pNext = &vulkan12Features;
+    physicalFeatures2.features = deviceFeatures;
+
+    vkGetPhysicalDeviceFeatures2(context->physicalDevice, &physicalFeatures2);
+
+    vulkan12Features.runtimeDescriptorArray = VK_TRUE;
+    vulkan12Features.shaderSampledImageArrayNonUniformIndexing = VK_TRUE;
+    vulkan12Features.descriptorBindingPartiallyBound = VK_TRUE;
+    vulkan12Features.descriptorBindingSampledImageUpdateAfterBind = VK_TRUE;
+    vulkan12Features.descriptorBindingUniformBufferUpdateAfterBind = VK_TRUE;
+
 
     VkDeviceCreateInfo createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+    createInfo.pNext = &vulkan12Features;
 
     createInfo.queueCreateInfoCount = static_cast<uint32_t>(queueCreateInfos.size());
     createInfo.pQueueCreateInfos = queueCreateInfos.data();

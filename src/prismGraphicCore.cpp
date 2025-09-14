@@ -1,5 +1,6 @@
 #include "prismGraphicCore.h"
 #include "textureLoader.h"
+#include "textureManager.h"
 
 #define TINYOBJLOADER_IMPLEMENTATION
 #include "tiny_obj_loader.h"
@@ -15,6 +16,7 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     this->window = settings.window;
 	createBase();
     createSwapChain();
+    createTextureDescriptorSetLayout();
     createRenderPass();
     createDescriptorSetLayout();
     createGraphicsPipeline();
@@ -22,7 +24,6 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createColorResources();
     createDepthResources();
     createFramebuffers();
-    context.texture = TextureLoader::load(&context, TEXTURE_PATH);
 //    createTextureImage();
 //    createTextureImageView();
 //    createTextureSampler();
@@ -31,9 +32,13 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createIndexBuffer();
     createUniformBuffers();
     createDescriptorPool();
+    createTextureDescriptorSet();
+    context.textureID = TextureManager::addTexture(&context, TEXTURE_PATH);
+    TextureManager::addTexture(&context, TEXTURE_PATH);
     createDescriptorSets();
     createCommandBuffer();
     createSyncObjects();
+
 }
 
 void prism::PGC::PrismGraphicCore::drawFrame()
@@ -219,6 +224,7 @@ bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering(SDL_Window* window)
 
 void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex)
 {
+
     VkCommandBufferBeginInfo beginInfo{};
     beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
     beginInfo.flags = 0; // Optional
@@ -265,6 +271,15 @@ void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBu
         vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
         vkCmdBindIndexBuffer(commandBuffer, context.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
 
+        vkCmdBindDescriptorSets(commandBuffer,
+            VK_PIPELINE_BIND_POINT_GRAPHICS,
+            context.pipelineLayout,
+            1, // set = 1 для текстур
+            1,
+            &context.textureDescriptorSet,
+            0,
+            nullptr);
+
         int objectCount = 1;
         for (uint32_t i = 0; i < objectCount; i++) {
             uint32_t dynamicOffset = i * static_cast<uint32_t>(context.dynamicAlignment);
@@ -272,9 +287,22 @@ void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBu
             vkCmdBindDescriptorSets(commandBuffer,
                 VK_PIPELINE_BIND_POINT_GRAPHICS,
                 context.pipelineLayout,
-                0, 1,
+                0, // set = 0 для текстур
+                1,
                 &context.descriptorSets[context.currentFrame],
                 1, &dynamicOffset);
+
+            PushConstants pushConstants{};
+            pushConstants.textureIndex = static_cast<int>(context.textureID);
+            vkCmdPushConstants(
+                commandBuffer,
+                context.pipelineLayout,
+                VK_SHADER_STAGE_FRAGMENT_BIT, // Указываем, что push-константы используются во фрагментном шейдере
+                0,
+                sizeof(PushConstants),
+                &pushConstants
+            );
+
 
             // Отрисовка объекта
             vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.indices.size()), 1, 0, 0, 0);
@@ -376,6 +404,46 @@ void prism::PGC::PrismGraphicCore::createDescriptorSetLayout()
     descriptorSetLayout.init(&context, &settings);
 }
 
+void prism::PGC::PrismGraphicCore::createTextureDescriptorSetLayout() {
+    VkDescriptorSetLayoutBinding binding{};
+    binding.binding = 0;
+    binding.descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    binding.descriptorCount = settings.MAX_TEXTURES;
+    binding.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT;
+
+    VkDescriptorBindingFlagsEXT bindingFlags =
+        VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT_EXT |
+        VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT_EXT;
+
+    VkDescriptorSetLayoutBindingFlagsCreateInfoEXT flagsInfo{};
+    flagsInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO_EXT;
+    flagsInfo.bindingCount = 1;
+    flagsInfo.pBindingFlags = &bindingFlags;
+
+    VkDescriptorSetLayoutCreateInfo layoutInfo{};
+    layoutInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+    layoutInfo.pNext = &flagsInfo;
+    layoutInfo.bindingCount = 1;
+    layoutInfo.pBindings = &binding;
+    layoutInfo.flags = VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT_EXT;
+
+    if (vkCreateDescriptorSetLayout(context.device, &layoutInfo, nullptr, &context.textureDescriptorSetLayout) != VK_SUCCESS) {
+        throw std::runtime_error("failed to create texture descriptor set layout!");
+    }
+}
+
+void prism::PGC::PrismGraphicCore::createTextureDescriptorSet() {
+    VkDescriptorSetAllocateInfo allocInfo{};
+    allocInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO;
+    allocInfo.descriptorPool = context.textureDescriptorPool;
+    allocInfo.descriptorSetCount = 1;
+    allocInfo.pSetLayouts = &context.textureDescriptorSetLayout;
+
+    if (vkAllocateDescriptorSets(context.device, &allocInfo, &context.textureDescriptorSet) != VK_SUCCESS) {
+        throw std::runtime_error("failed to allocate texture descriptor set!");
+    }
+}
+
 void prism::PGC::PrismGraphicCore::createUniformBuffers()
 {
     PGC::BufferWrapper::createUniformBuffers(&context);
@@ -383,22 +451,41 @@ void prism::PGC::PrismGraphicCore::createUniformBuffers()
 
 void prism::PGC::PrismGraphicCore::createDescriptorPool()
 {
-    std::array<VkDescriptorPoolSize, 3> poolSizes{};
-    poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-    poolSizes[0].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
-    poolSizes[1].type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
-    poolSizes[1].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
-    poolSizes[2].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
-    poolSizes[2].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
+    // Пул для uniform буферов
+    {
+        std::array<VkDescriptorPoolSize, 2> poolSizes{};
+        poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+        poolSizes[0].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
+        poolSizes[1].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
+        poolSizes[1].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
 
-    VkDescriptorPoolCreateInfo poolInfo{};
-    poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
-    poolInfo.poolSizeCount = static_cast<uint32_t>(poolSizes.size());
-    poolInfo.pPoolSizes = poolSizes.data();
-    poolInfo.maxSets = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
+        VkDescriptorPoolCreateInfo poolInfo{};
+        poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
+        poolInfo.poolSizeCount = static_cast<uint32_t>(poolSizes.size());
+        poolInfo.pPoolSizes = poolSizes.data();
+        poolInfo.maxSets = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
 
-    if (vkCreateDescriptorPool(context.device, &poolInfo, nullptr, &context.descriptorPool) != VK_SUCCESS) {
-        throw std::runtime_error("failed to create descriptor pool!");
+        if (vkCreateDescriptorPool(context.device, &poolInfo, nullptr, &context.descriptorPool) != VK_SUCCESS) {
+            throw std::runtime_error("failed to create descriptor pool!");
+        }
+    }
+
+    // Пул для bindless текстур
+    {
+        VkDescriptorPoolSize poolSize{};
+        poolSize.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+        poolSize.descriptorCount = settings.MAX_TEXTURES;
+
+        VkDescriptorPoolCreateInfo poolInfo = {};
+        poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
+        poolInfo.flags = VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT_EXT;
+        poolInfo.poolSizeCount = 1;
+        poolInfo.pPoolSizes = &poolSize;
+        poolInfo.maxSets = 1;
+
+        if (vkCreateDescriptorPool(context.device, &poolInfo, nullptr, &context.textureDescriptorPool) != VK_SUCCESS) {
+            throw std::runtime_error("failed to create texture descriptor pool!");
+        }
     }
 }
 
@@ -607,6 +694,13 @@ VkSampleCountFlagBits prism::PGC::PrismGraphicCore::getMaxUsableSampleCount()
 
 void prism::PGC::PrismGraphicCore::cleanup()
 {
+    TextureManager::cleanup(&context);
+
+    if (context.textureDescriptorSetLayout != VK_NULL_HANDLE) {
+        vkDestroyDescriptorSetLayout(context.device, context.textureDescriptorSetLayout, nullptr);
+        context.textureDescriptorSetLayout = VK_NULL_HANDLE;
+    }
+
     for (auto framebuffer : context.swapChainFramebuffers) {
         vkDestroyFramebuffer(context.device, framebuffer, nullptr);
     }
@@ -640,7 +734,6 @@ void prism::PGC::PrismGraphicCore::cleanup()
         }
     }
 
-    TextureLoader::cleanup(&context, &context.texture);
 
     vkDestroyBuffer(context.device, context.indexBuffer, nullptr);
     context.indexBuffer = VK_NULL_HANDLE;

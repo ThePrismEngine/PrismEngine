@@ -6,6 +6,7 @@
 
 #include "logger.h"
 
+#include "prismGraphicCore.h"
 #include "Window.h"
 #include "renderer.h"
 

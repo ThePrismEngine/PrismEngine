@@ -35,6 +35,22 @@ void prism::PGC::DescriptorSetLayout::create()
     if (vkCreateDescriptorSetLayout(context->device, &layoutInfo, nullptr, &context->descriptorSetLayout) != VK_SUCCESS) {
         throw std::runtime_error("failed to create descriptor set layout!");
     }
+
+    // Пул для bindless текстур
+    VkDescriptorPoolSize texturePoolSize{};
+    texturePoolSize.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    texturePoolSize.descriptorCount = settings->MAX_TEXTURES;
+
+    VkDescriptorPoolCreateInfo texturePoolInfo{};
+    texturePoolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
+    texturePoolInfo.flags = VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT_EXT;
+    texturePoolInfo.poolSizeCount = 1;
+    texturePoolInfo.pPoolSizes = &texturePoolSize;
+    texturePoolInfo.maxSets = 1;
+
+    if (vkCreateDescriptorPool(context->device, &texturePoolInfo, nullptr, &context->textureDescriptorPool) != VK_SUCCESS) {
+        throw std::runtime_error("failed to create texture descriptor pool!");
+    }
 }
 
 VkDescriptorSetLayoutBinding prism::PGC::DescriptorSetLayout::createDescriptorSetLayoutBinding(uint32_t binding, VkDescriptorType descriptorType, uint32_t descriptorCount, VkShaderStageFlags stageFlags, const VkSampler* immutableSamplers)

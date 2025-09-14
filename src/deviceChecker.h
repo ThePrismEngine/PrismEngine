@@ -8,7 +8,7 @@ namespace prism {
 		class DeviceChecker {
 		public:
 			static bool check(VkPhysicalDevice device, utils::Context* context, utils::Settings* settings);
-
+			static bool checkBindless(VkPhysicalDevice device);
 			static bool checkDeviceExtensionSupport(VkPhysicalDevice device, const std::vector<const char*> deviceExtensions);
 		private:
 		};

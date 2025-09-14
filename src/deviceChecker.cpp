@@ -22,6 +22,28 @@ bool prism::PGC::DeviceChecker::check(VkPhysicalDevice device, utils::Context* c
     return indices.isComplete() && extensionsSupported && swapChainAdequate && supportedFeatures.samplerAnisotropy;
 }
 
+bool prism::PGC::DeviceChecker::checkBindless(VkPhysicalDevice device)
+{
+    VkPhysicalDeviceVulkan12Features vulkan12Features = {};
+    vulkan12Features.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_2_FEATURES;
+
+    VkPhysicalDeviceFeatures2 deviceFeatures2 = {};
+    deviceFeatures2.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FEATURES_2;
+    deviceFeatures2.pNext = &vulkan12Features;
+
+    vkGetPhysicalDeviceFeatures2(device, &deviceFeatures2);
+
+    // Проверяем необходимые функции
+    if (!vulkan12Features.descriptorBindingSampledImageUpdateAfterBind ||
+        !vulkan12Features.descriptorBindingPartiallyBound ||
+        !vulkan12Features.runtimeDescriptorArray ||
+        !vulkan12Features.shaderSampledImageArrayNonUniformIndexing) {
+        return false;
+    }
+
+    return true;
+}
+
 bool prism::PGC::DeviceChecker::checkDeviceExtensionSupport(VkPhysicalDevice device, const std::vector<const char*> deviceExtensions)
 {
     uint32_t extensionCount;

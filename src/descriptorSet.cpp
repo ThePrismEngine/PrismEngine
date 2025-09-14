@@ -44,12 +44,10 @@ void prism::PGC::DescriptorSet::create()
         objectBufferInfo.offset = 0; // Смещение будет устанавливаться при binding'е
         objectBufferInfo.range = sizeof(ObjectUBO); // Размер одного UBO
 
-        VkDescriptorImageInfo imageInfo{};
-        imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-        imageInfo.imageView = context->texture.imageView;
-        imageInfo.sampler = context->texture.sampler;
+        // УБИРАЕМ текстуру из этого набора дескрипторов
+        // Текстуры теперь будут в отдельном bindless наборе
 
-        std::array<VkWriteDescriptorSet, 3> descriptorWrites{};
+        std::array<VkWriteDescriptorSet, 2> descriptorWrites{}; // Уменьшили с 3 до 2
 
         // Camera UBO (binding 0) - статический
         descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
@@ -60,23 +58,14 @@ void prism::PGC::DescriptorSet::create()
         descriptorWrites[0].descriptorCount = 1;
         descriptorWrites[0].pBufferInfo = &cameraBufferInfo;
 
-        // Texture sampler (binding 1)
+        // Object UBO (binding 1) - динамический (изменили binding с 2 на 1)
         descriptorWrites[1].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
         descriptorWrites[1].dstSet = context->descriptorSets[i];
-        descriptorWrites[1].dstBinding = 1;
+        descriptorWrites[1].dstBinding = 1; // Изменили с 2 на 1
         descriptorWrites[1].dstArrayElement = 0;
-        descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+        descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
         descriptorWrites[1].descriptorCount = 1;
-        descriptorWrites[1].pImageInfo = &imageInfo;
-
-        // Object UBO (binding 2) - динамический
-        descriptorWrites[2].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-        descriptorWrites[2].dstSet = context->descriptorSets[i];
-        descriptorWrites[2].dstBinding = 2;
-        descriptorWrites[2].dstArrayElement = 0;
-        descriptorWrites[2].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC; // Изменено на DYNAMIC
-        descriptorWrites[2].descriptorCount = 1;
-        descriptorWrites[2].pBufferInfo = &objectBufferInfo;
+        descriptorWrites[1].pBufferInfo = &objectBufferInfo;
 
         vkUpdateDescriptorSets(context->device, static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
     }

@@ -203,6 +203,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\textureManager.cpp" />
     <ClCompile Include="src\bufferWrapper.cpp" />
     <ClCompile Include="src\base.cpp" />
     <ClCompile Include="src\componentManager.cpp" />
@@ -231,6 +232,7 @@
     <ClCompile Include="src\world.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\textureManager.h" />
     <ClInclude Include="src\bufferWrapper.h" />
     <ClInclude Include="src\cameraComponent.h" />
     <ClInclude Include="src\component.h" />

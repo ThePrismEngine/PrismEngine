@@ -89,10 +89,20 @@ void prism::PGC::GraphicsPipeline::create()
     dynamicState.dynamicStateCount = static_cast<uint32_t>(settings->pipeline.dynamicState.dynamicStates.size());
     dynamicState.pDynamicStates = settings->pipeline.dynamicState.dynamicStates.data();
 
+    VkPushConstantRange pushConstantRange{}; 
+    pushConstantRange.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT; // Наш push-констант используется во фрагментном шейдере
+    pushConstantRange.offset = 0;
+    pushConstantRange.size = sizeof(PushConstants); // Используем ту же структуру, что и в командном буфере
+
+    std::vector<VkDescriptorSetLayout> setLayouts = { context->descriptorSetLayout, context->textureDescriptorSetLayout };
+
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
-    pipelineLayoutInfo.setLayoutCount = 1;
-    pipelineLayoutInfo.pSetLayouts = &context->descriptorSetLayout;
+    pipelineLayoutInfo.setLayoutCount = static_cast<uint32_t>(setLayouts.size());
+    pipelineLayoutInfo.pSetLayouts = setLayouts.data();
+
+    pipelineLayoutInfo.pushConstantRangeCount = 1;
+    pipelineLayoutInfo.pPushConstantRanges = &pushConstantRange;
 
     if (vkCreatePipelineLayout(context->device, &pipelineLayoutInfo, nullptr, &context->pipelineLayout) != VK_SUCCESS) {
         throw std::runtime_error("failed to create pipeline layout!");

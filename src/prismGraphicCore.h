@@ -60,12 +60,14 @@ namespace prism {
             void createVertexBuffer();///
             void createIndexBuffer();///
             void createDescriptorSetLayout();
+            void createTextureDescriptorSetLayout();
+            void createTextureDescriptorSet();
             void createUniformBuffers();///
             void createDescriptorPool();///
             void createDescriptorSets();///
-            void createTextureImage();///
-            void createTextureImageView();///
-            void createTextureSampler();///
+            //void createTextureImage();///
+            //void createTextureImageView();///
+            //void createTextureSampler();///
             void createDepthResources();/*@*/
             void loadModel();
             void createColorResources();
