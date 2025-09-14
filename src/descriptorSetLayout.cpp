@@ -36,7 +36,7 @@ void prism::PGC::DescriptorSetLayout::create()
         throw std::runtime_error("failed to create descriptor set layout!");
     }
 
-    // Ïóë äëÿ bindless òåêñòóð
+    // ÐŸÑƒÐ» Ð´Ð»Ñ bindless Ñ‚ÐµÐºÑÑ‚ÑƒÑ€
     VkDescriptorPoolSize texturePoolSize{};
     texturePoolSize.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
     texturePoolSize.descriptorCount = settings->MAX_TEXTURES;

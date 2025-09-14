@@ -33,7 +33,7 @@ bool prism::PGC::DeviceChecker::checkBindless(VkPhysicalDevice device)
 
     vkGetPhysicalDeviceFeatures2(device, &deviceFeatures2);
 
-    // Проверяем необходимые функции
+    // РџСЂРѕРІРµСЂСЏРµРј РЅРµРѕР±С…РѕРґРёРјС‹Рµ С„СѓРЅРєС†РёРё
     if (!vulkan12Features.descriptorBindingSampledImageUpdateAfterBind ||
         !vulkan12Features.descriptorBindingPartiallyBound ||
         !vulkan12Features.runtimeDescriptorArray ||
