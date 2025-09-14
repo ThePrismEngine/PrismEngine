@@ -47,37 +47,41 @@ namespace prism::PGC {
             return;
         }
 
-        std::vector<VkWriteDescriptorSet> descriptorWrites;
-        std::vector<VkDescriptorImageInfo> imageInfos;
-
+        std::vector<std::pair<uint32_t, VkDescriptorImageInfo>> validTextures;
         for (uint32_t i = 0; i < context->textures.size(); i++) {
-            if (context->textures[i].image == VK_NULL_HANDLE) {
-                continue;
+            if (context->textures[i].image != VK_NULL_HANDLE) {
+                VkDescriptorImageInfo imageInfo{};
+                imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+                imageInfo.imageView = context->textures[i].imageView;
+                imageInfo.sampler = context->textures[i].sampler;
+                validTextures.emplace_back(i, imageInfo);
             }
+        }
 
-            VkDescriptorImageInfo imageInfo{};
-            imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-            imageInfo.imageView = context->textures[i].imageView;
-            imageInfo.sampler = context->textures[i].sampler;
-            imageInfos.push_back(imageInfo);
+        if (validTextures.empty()) {
+            return;
+        }
 
+        std::vector<VkWriteDescriptorSet> descriptorWrites;
+        descriptorWrites.reserve(validTextures.size());
+
+        for (const auto& [index, imageInfo] : validTextures) {
             VkWriteDescriptorSet descriptorWrite{};
             descriptorWrite.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
             descriptorWrite.dstSet = context->textureDescriptorSet;
             descriptorWrite.dstBinding = 0;
-            descriptorWrite.dstArrayElement = i;
+            descriptorWrite.dstArrayElement = index;
             descriptorWrite.descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
             descriptorWrite.descriptorCount = 1;
-            descriptorWrite.pImageInfo = &imageInfos.back();
+            descriptorWrite.pImageInfo = &imageInfo;
 
             descriptorWrites.push_back(descriptorWrite);
         }
 
-        if (!descriptorWrites.empty()) {
-            vkUpdateDescriptorSets(context->device,
-                static_cast<uint32_t>(descriptorWrites.size()),
-                descriptorWrites.data(), 0, nullptr);
-        }
+
+        vkUpdateDescriptorSets(context->device,
+            static_cast<uint32_t>(descriptorWrites.size()),
+            descriptorWrites.data(), 0, nullptr);
     }
 
     uint32_t TextureManager::getNextAvailableIndex(utils::Context* context) {
