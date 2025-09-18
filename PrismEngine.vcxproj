@@ -203,6 +203,8 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\meshLoader.cpp" />
+    <ClCompile Include="src\meshManager.cpp" />
     <ClCompile Include="src\textureManager.cpp" />
     <ClCompile Include="src\bufferWrapper.cpp" />
     <ClCompile Include="src\base.cpp" />
@@ -232,6 +234,9 @@
     <ClCompile Include="src\world.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\mesh.h" />
+    <ClInclude Include="src\meshLoader.h" />
+    <ClInclude Include="src\meshManager.h" />
     <ClInclude Include="src\textureManager.h" />
     <ClInclude Include="src\bufferWrapper.h" />
     <ClInclude Include="src\cameraComponent.h" />

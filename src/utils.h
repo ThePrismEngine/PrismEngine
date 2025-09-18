@@ -8,6 +8,7 @@
 #include "./ubo.h"
 #include "vertex.h"
 #include "texture.h"
+#include "mesh.h"
 
 namespace prism {
 	namespace PGC {
@@ -58,6 +59,12 @@ namespace prism {
 				VkBuffer indexBuffer;
 				VkDeviceMemory indexBufferMemory;
 
+				std::vector<Vertex> allVertices;
+				std::vector<uint32_t> allIndices;
+				std::vector<prism::PGC::Mesh> meshes;
+				std::vector<uint32_t> freeMeshIndices;
+				bool meshBuffersDirty = false;
+
 				VkDescriptorSetLayout descriptorSetLayout;
 
 				VkPipelineLayout pipelineLayout;
@@ -67,10 +74,6 @@ namespace prism {
 				std::vector<VkCommandBuffer> commandBuffers;
 
 				std::vector<UniformBuffers> uniformBuffers;
-
-				std::vector<Vertex> vertices;
-				std::vector<uint32_t> indices;
-
 
 				std::vector<VkSemaphore> imageAvailableSemaphores;
 				std::vector<VkSemaphore> renderFinishedSemaphores;

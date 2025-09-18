@@ -130,32 +130,6 @@ void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
     auto currentTime = std::chrono::high_resolution_clock::now();
     float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
 
-///    ObjectUBO ubo{};
-
-    // --- Замена glm::rotate ---
-    // Поворот вокруг оси Z на 90 градусов * time
-///    ubo.model = prism::math::Matrix4X4::makeRotationZ(prism::math::degToRad(90));
-
-    // --- Замена glm::lookAt ---
-///    prism::math::Vector3d eyePos(2.0f, 2.0f, 2.0f);
-///    prism::math::Vector3d target(0.0f, 0.0f, 0.0f);
-///    prism::math::Vector3d up(0.0f, 0.0f, 1.0f);
-///    prism::math::Matrix4X4 viewMatrix = prism::math::Matrix4X4::Matrix_PointAt(eyePos, target, up);
-///    ubo.view = Matrix_QuickInverse(viewMatrix);  // lookAt = обратная матрица "PointAt"
-
-    // --- Замена glm::perspective ---
-///    float aspect = swapChainExtent.width / (float)swapChainExtent.height;
-///    ubo.proj = prism::math::Matrix4X4::makeProjection(45.0f, aspect, 0.1f, 10.0f);
-///    ubo.proj[1][1] *= -1;  // Инвертируем Y для Vulkan
-
-    // Транспонируем матрицы перед отправкой в буфер
-///    ubo.model = ubo.model.getTransposed();
-///    ubo.view = ubo.view.getTransposed();
-///    ubo.proj = ubo.proj.getTransposed();
-    
-    // Обновляем UBO камеры
-    // Обновляем UBO камеры
-    // Обновление CameraUBO (остается без изменений)
     CameraUBO cameraUbo{};
 
     // Убедитесь, что камера смотрит на объект
@@ -305,7 +279,7 @@ void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBu
 
 
             // Отрисовка объекта
-            vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.indices.size()), 1, 0, 0, 0);
+            vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.allIndices.size()), 1, 0, 0, 0);
         }
     vkCmdEndRenderPass(commandBuffer);
 
@@ -574,11 +548,11 @@ void prism::PGC::PrismGraphicCore::loadModel()
             vertex.color = { 1.0f, 1.0f, 1.0f };
 
             if (uniqueVertices.count(vertex) == 0) {
-                uniqueVertices[vertex] = static_cast<uint32_t>(context.vertices.size());
-                context.vertices.push_back(vertex);
+                uniqueVertices[vertex] = static_cast<uint32_t>(context.allVertices.size());
+                context.allVertices.push_back(vertex);
             }
 
-            context.indices.push_back(uniqueVertices[vertex]);
+            context.allIndices.push_back(uniqueVertices[vertex]);
         }
     }
 }

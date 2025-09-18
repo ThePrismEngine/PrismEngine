@@ -97,6 +97,12 @@
     <Filter Include="pgc\textureManager">
       <UniqueIdentifier>{35f6a074-4461-4839-ba7c-4655f0441ad0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="pgc\meshManager">
+      <UniqueIdentifier>{21ed911b-efb8-44d6-963a-0cfd62b79868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\meshLoader">
+      <UniqueIdentifier>{bd6dfe6b-86af-453b-9ada-85aabf8a972e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\fmath.cpp">
@@ -179,6 +185,12 @@
     </ClCompile>
     <ClCompile Include="src\textureManager.cpp">
       <Filter>pgc\textureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\meshManager.cpp">
+      <Filter>pgc\meshManager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\meshLoader.cpp">
+      <Filter>pgc\meshLoader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +307,15 @@
     </ClInclude>
     <ClInclude Include="src\textureManager.h">
       <Filter>pgc\textureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\meshManager.h">
+      <Filter>pgc\meshManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\meshLoader.h">
+      <Filter>pgc\meshLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mesh.h">
+      <Filter>pgc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

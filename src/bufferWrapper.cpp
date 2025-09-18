@@ -150,7 +150,7 @@ void prism::PGC::BufferWrapper::copyBufferToImage(utils::Context* context, VkBuf
 
 void prism::PGC::BufferWrapper::createVertexBuffer(utils::Context* context)
 {
-    VkDeviceSize bufferSize = sizeof(context->vertices[0]) * context->vertices.size();
+    VkDeviceSize bufferSize = sizeof(context->allVertices[0]) * context->allVertices.size();
 
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
@@ -158,7 +158,7 @@ void prism::PGC::BufferWrapper::createVertexBuffer(utils::Context* context)
 
     void* data;
     vkMapMemory(context->device, stagingBufferMemory, 0, bufferSize, 0, &data);
-    memcpy(data, context->vertices.data(), (size_t)bufferSize);
+    memcpy(data, context->allVertices.data(), (size_t)bufferSize);
     vkUnmapMemory(context->device, stagingBufferMemory);
 
     PGC::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->vertexBuffer, context->vertexBufferMemory);
@@ -171,7 +171,7 @@ void prism::PGC::BufferWrapper::createVertexBuffer(utils::Context* context)
 
 void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
 {
-    VkDeviceSize bufferSize = sizeof(context->indices[0]) * context->indices.size();
+    VkDeviceSize bufferSize = sizeof(context->allIndices[0]) * context->allIndices.size();
 
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
@@ -179,7 +179,7 @@ void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
 
     void* data;
     vkMapMemory(context->device, stagingBufferMemory, 0, bufferSize, 0, &data);
-    memcpy(data, context->indices.data(), (size_t)bufferSize);
+    memcpy(data, context->allIndices.data(), (size_t)bufferSize);
     vkUnmapMemory(context->device, stagingBufferMemory);
 
     PGC::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->indexBuffer, context->indexBufferMemory);
