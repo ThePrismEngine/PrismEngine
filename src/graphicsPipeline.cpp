@@ -90,9 +90,9 @@ void prism::PGC::GraphicsPipeline::create()
     dynamicState.pDynamicStates = settings->pipeline.dynamicState.dynamicStates.data();
 
     VkPushConstantRange pushConstantRange{}; 
-    pushConstantRange.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT; // Наш push-констант используется во фрагментном шейдере
+    pushConstantRange.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT;
     pushConstantRange.offset = 0;
-    pushConstantRange.size = sizeof(PushConstants); // Используем ту же структуру, что и в командном буфере
+    pushConstantRange.size = sizeof(PushConstants);
 
     std::vector<VkDescriptorSetLayout> setLayouts = { context->descriptorSetLayout, context->textureDescriptorSetLayout };
 

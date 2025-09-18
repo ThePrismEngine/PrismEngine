@@ -42,12 +42,10 @@ void prism::PGC::DescriptorSet::create()
         VkDescriptorBufferInfo objectBufferInfo{};
         objectBufferInfo.buffer = context->uniformBuffers[i].object;
         objectBufferInfo.offset = 0; // Смещение будет устанавливаться при binding'е
-        objectBufferInfo.range = sizeof(ObjectUBO); // Размер одного UBO
+        objectBufferInfo.range = sizeof(ObjectUBO);
 
-        // УБИРАЕМ текстуру из этого набора дескрипторов
-        // Текстуры теперь будут в отдельном bindless наборе
 
-        std::array<VkWriteDescriptorSet, 2> descriptorWrites{}; // Уменьшили с 3 до 2
+        std::array<VkWriteDescriptorSet, 2> descriptorWrites{};
 
         // Camera UBO (binding 0) - статический
         descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
@@ -61,7 +59,7 @@ void prism::PGC::DescriptorSet::create()
         // Object UBO (binding 1) - динамический (изменили binding с 2 на 1)
         descriptorWrites[1].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
         descriptorWrites[1].dstSet = context->descriptorSets[i];
-        descriptorWrites[1].dstBinding = 1; // Изменили с 2 на 1
+        descriptorWrites[1].dstBinding = 1;
         descriptorWrites[1].dstArrayElement = 0;
         descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
         descriptorWrites[1].descriptorCount = 1;

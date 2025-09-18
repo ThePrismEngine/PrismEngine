@@ -196,10 +196,8 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
 
     VkDeviceSize cameraBufferSize = sizeof(CameraUBO);
 
-    // Получаем требования к выравниванию
     size_t minUboAlignment = DeviceWrapper::getDeviceProperties(context->physicalDevice).limits.minUniformBufferOffsetAlignment;
 
-    // Вычисляем выровненный размер для ObjectUBO
     size_t objectUBOSize = sizeof(ObjectUBO);
     context->dynamicAlignment = objectUBOSize;
 
@@ -207,11 +205,9 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
         context->dynamicAlignment = (objectUBOSize + minUboAlignment - 1) & ~(minUboAlignment - 1);
     }
 
-    // Размер динамического буфера (для MAX_OBJECTS объектов)
     VkDeviceSize objectBufferSize = context->dynamicAlignment * context->MAX_OBJECTS;
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
-        // Создаем буфер для камеры (обычный UBO)
         PGC::BufferWrapper::createBuffer(context, cameraBufferSize,
             VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
             VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
@@ -221,7 +217,6 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
         vkMapMemory(context->device, context->uniformBuffers[i].cameraMemory, 0,
             cameraBufferSize, 0, &context->uniformBuffers[i].cameraMapped);
 
-        // Создаем динамический буфер для объектов
         PGC::BufferWrapper::createBuffer(context, objectBufferSize,
             VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
             VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,

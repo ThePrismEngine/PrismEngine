@@ -91,9 +91,6 @@
     <Filter Include="pgc\vertex">
       <UniqueIdentifier>{7e67c3d1-e872-4108-a292-343ba99a204d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="pgc\textureCreater">
-      <UniqueIdentifier>{995ed1f7-4828-4f13-b9dc-76f1cde1e99b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="pgc\textureManager">
       <UniqueIdentifier>{35f6a074-4461-4839-ba7c-4655f0441ad0}</UniqueIdentifier>
     </Filter>
@@ -102,6 +99,9 @@
     </Filter>
     <Filter Include="pgc\meshLoader">
       <UniqueIdentifier>{bd6dfe6b-86af-453b-9ada-85aabf8a972e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pgc\textureLoader">
+      <UniqueIdentifier>{995ed1f7-4828-4f13-b9dc-76f1cde1e99b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -181,7 +181,7 @@
       <Filter>pgc\vertex</Filter>
     </ClCompile>
     <ClCompile Include="src\textureLoader.cpp">
-      <Filter>pgc\textureCreater</Filter>
+      <Filter>pgc\textureLoader</Filter>
     </ClCompile>
     <ClCompile Include="src\textureManager.cpp">
       <Filter>pgc\textureManager</Filter>
@@ -303,7 +303,7 @@
       <Filter>pgc</Filter>
     </ClInclude>
     <ClInclude Include="src\textureLoader.h">
-      <Filter>pgc\textureCreater</Filter>
+      <Filter>pgc\textureLoader</Filter>
     </ClInclude>
     <ClInclude Include="src\textureManager.h">
       <Filter>pgc\textureManager</Filter>

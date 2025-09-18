@@ -25,9 +25,6 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createColorResources();
     createDepthResources();
     createFramebuffers();
-//    createTextureImage();
-//    createTextureImageView();
-//    createTextureSampler();
     loadModel();
     createVertexBuffer();
     createIndexBuffer();
@@ -108,8 +105,6 @@ void prism::PGC::PrismGraphicCore::drawFrame()
 
     result = vkQueuePresentKHR(context.presentQueue, &presentInfo);
 
-    //SDL_GL_SetSwapInterval(1);
-
     if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || *windowResized) {
         *windowResized = false;
         swapChain.recreate();
@@ -173,15 +168,6 @@ void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
         size_t offset = i * context.dynamicAlignment;
         memcpy((char*)context.uniformBuffers[currentImage].objectMapped + offset, &objectUbo, sizeof(objectUbo));
     }
-
-    /*
-    // Обновляем UBO объекта
-    ObjectUBO objectUbo{};
-    objectUbo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-    objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
-
-    // Копируем данные объекта напрямую в отображенную память
-    memcpy(uniformBuffers[currentImage].objectMapped, &objectUbo, sizeof(objectUbo));*/
 }
 
 bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering(SDL_Window* window)
@@ -471,50 +457,6 @@ void prism::PGC::PrismGraphicCore::createDescriptorSets()
     descriptorSet.init(&context, &settings);
 }
 
-/*
-void prism::PGC::PrismGraphicCore::createTextureImage()
-{
-    int texWidth, texHeight, texChannels;
-    stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
-    VkDeviceSize imageSize = texWidth * texHeight * 4;
-    context.texture.mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(texWidth, texHeight)))) + 1;
-    if (!pixels) {
-        throw std::runtime_error("failed to load texture image!");
-    }
-
-    VkBuffer stagingBuffer;
-    VkDeviceMemory stagingBufferMemory;
-    PGC::BufferWrapper::createBuffer(&context, imageSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
-
-    void* data;
-    vkMapMemory(context.device, stagingBufferMemory, 0, imageSize, 0, &data);
-    memcpy(data, pixels, static_cast<size_t>(imageSize));
-    vkUnmapMemory(context.device, stagingBufferMemory);
-
-    stbi_image_free(pixels);
-
-    PGC::ResourcesCreater::createImage(&context, texWidth, texHeight, context.texture.mipLevels, VK_SAMPLE_COUNT_1_BIT, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context.texture.image, context.texture.imageMemory);
-
-
-    PGC::BufferWrapper::transitionImageLayout(&context, context.texture.image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, context.texture.mipLevels);
-    PGC::BufferWrapper::copyBufferToImage(&context, stagingBuffer, context.texture.image, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight));
-
-    vkDestroyBuffer(context.device, stagingBuffer, nullptr);
-    vkFreeMemory(context.device, stagingBufferMemory, nullptr);
-
-    generateMipmaps(context.texture.image, VK_FORMAT_R8G8B8A8_SRGB, texWidth, texHeight, context.texture.mipLevels);
-}
-
-void prism::PGC::PrismGraphicCore::createTextureImageView()
-{
-    context.texture.imageView = PGC::ResourcesCreater::createImageView(context.device, context.texture.image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT, context.texture.mipLevels);
-}
-
-void prism::PGC::PrismGraphicCore::createTextureSampler()
-{
-    PGC::ResourcesCreater::createTextureSampler(&context, &context.texture.sampler);
-}
-*/
 void prism::PGC::PrismGraphicCore::createDepthResources()
 {
     PGC::ResourcesCreater::createDepthResources(&context, &settings);

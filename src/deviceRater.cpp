@@ -80,7 +80,7 @@ int prism::PGC::DeviceRater::getDeviceHardwareScore(VkPhysicalDevice device)
         score.clockSpeedGHz = static_cast<float>(props.limits.maxComputeWorkGroupSize[0]) * MHZ_TO_GHZ;
     }
     else {
-        score.clockSpeedGHz = 1.0f; // Значение по умолчанию
+        score.clockSpeedGHz = 1.0f;
     }
 
     score.textureUnits = static_cast<float>(props.limits.maxImageDimension2D) * TEXTURE_UNITS_NORMALIZER;
@@ -89,7 +89,6 @@ int prism::PGC::DeviceRater::getDeviceHardwareScore(VkPhysicalDevice device)
         ScoreWrapper::print(score);
     }
 
-    // Возвращаем нормализованную оценку (0-100)
     return ScoreWrapper::getTotal(score);
 }
 
@@ -147,17 +146,14 @@ prism::PGC::FeatureScores prism::PGC::DeviceRater::calculateFeatureScore(VkPhysi
 {
     FeatureScores scores;
 
-    // Получаем список всех расширений
     std::vector<VkExtensionProperties> extensions;
     DeviceWrapper::getDeviceExtensionProperties(device, &extensions);
 
-    // Создаем множество для быстрого поиска
     std::unordered_set<std::string> availableExtensions;
     for (const auto& ext : extensions) {
         availableExtensions.insert(ext.extensionName);
     }
 
-    // Проверяем базовые расширения
     const std::string swapchainExt = "VK_KHR_swapchain";
     if (availableExtensions.count(swapchainExt)) {
         scores.swapchain = 10.0f;
@@ -248,7 +244,7 @@ int prism::PGC::ScoreWrapper::getTotal(FeatureScores score)
 
 int prism::PGC::ScoreWrapper::getTotal(HardwareScore score)
 {
-    // Нормализованные компоненты(ограничены 1.0 как максимум)
+  
     float normalizedVram = std::min(score.vramGB / score.REFERENCE_VRAM_GB, 1.0f);
     float normalizedShaderCores = std::min(score.shaderCores / score.REFERENCE_SHADER_CORES, 1.0f);
     float normalizedClockSpeed = std::min(score.clockSpeedGHz / score.REFERENCE_CLOCK_SPEED_GHZ, 1.0f);
@@ -257,6 +253,6 @@ int prism::PGC::ScoreWrapper::getTotal(HardwareScore score)
                   normalizedShaderCores * score.SHADER_CORES_WEIGHT +
                   normalizedClockSpeed  * score.CLOCK_SPEED_WEIGHT;
 
-    // Взвешенная сумма компонентов
+
     return static_cast<int>(std::clamp(total * 100.0f, 0.0f, 100.0f));
 }

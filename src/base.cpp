@@ -195,7 +195,6 @@ void prism::PGC::base::Base::pickPhysicalDevice()
         logger::logError(logger::Error::VULKAN_NO_SUITABLE_GPU, "prism::PGC::core::Core::pickPhysicalDevice()");
     }
 
-
     // Вывод информации о выбранном устройстве
     VkPhysicalDeviceProperties deviceProps = DeviceWrapper::getDeviceProperties(context->physicalDevice);
     logger::info("\n");

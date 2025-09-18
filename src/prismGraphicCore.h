@@ -57,18 +57,15 @@ namespace prism {
             void createCommandPool();
             void createCommandBuffer();
             void createSyncObjects();
-            void createVertexBuffer();///
-            void createIndexBuffer();///
+            void createVertexBuffer();
+            void createIndexBuffer();
             void createDescriptorSetLayout();
             void createTextureDescriptorSetLayout();
             void createTextureDescriptorSet();
-            void createUniformBuffers();///
-            void createDescriptorPool();///
-            void createDescriptorSets();///
-            //void createTextureImage();///
-            //void createTextureImageView();///
-            //void createTextureSampler();///
-            void createDepthResources();/*@*/
+            void createUniformBuffers();
+            void createDescriptorPool();
+            void createDescriptorSets();
+            void createDepthResources();
             void loadModel();
             void createColorResources();
 
@@ -85,9 +82,8 @@ namespace prism {
             PGC::DescriptorSet descriptorSet;
 
             const std::string MODEL_PATH = "models/viking_room.obj";
-            const std::string TEXTURE_PATH = "textures/viking_room.png"; //TODEL
+            const std::string TEXTURE_PATH = "textures/viking_room.png";
 
-            //ObjectUBO ubo;
       
             void updateUniformBuffer(uint32_t currentImage);
             bool isWindowReadyForRendering(SDL_Window* window);
