@@ -35,7 +35,7 @@ void prism::PGC::MeshManager::update(utils::Context* context)
 {
     if (!context->meshBuffersDirty) return;
 
-    // Îñâîáîæäàåì ñòàðûå áóôåðû åñëè îíè ñóùåñòâóþò
+    // ÐžÑÐ²Ð¾Ð±Ð¾Ð¶Ð´Ð°ÐµÐ¼ ÑÑ‚Ð°Ñ€Ñ‹Ðµ Ð±ÑƒÑ„ÐµÑ€Ñ‹ ÐµÑÐ»Ð¸ Ð¾Ð½Ð¸ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÑŽÑ‚
     if (context->vertexBuffer != VK_NULL_HANDLE) {
         vkDestroyBuffer(context->device, context->vertexBuffer, nullptr);
         vkFreeMemory(context->device, context->vertexBufferMemory, nullptr);
@@ -45,7 +45,7 @@ void prism::PGC::MeshManager::update(utils::Context* context)
         vkFreeMemory(context->device, context->indexBufferMemory, nullptr);
     }
 
-    // Ñîçäàåì íîâûå áóôåðû ñ àêòóàëüíûìè äàííûìè
+    // Ð¡Ð¾Ð·Ð´Ð°ÐµÐ¼ Ð½Ð¾Ð²Ñ‹Ðµ Ð±ÑƒÑ„ÐµÑ€Ñ‹ Ñ Ð°ÐºÑ‚ÑƒÐ°Ð»ÑŒÐ½Ñ‹Ð¼Ð¸ Ð´Ð°Ð½Ð½Ñ‹Ð¼Ð¸
     if (!context->allVertices.empty()) {
         BufferWrapper::createVertexBuffer(context);
     }
