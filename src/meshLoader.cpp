@@ -41,4 +41,6 @@ prism::PGC::MeshData prism::PGC::MeshLoader::load(std::string texturePath)
             meshData.indices.push_back(uniqueVertices[vertex]);
         }
     }
+
+    return meshData;
 }

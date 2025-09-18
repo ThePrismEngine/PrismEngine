@@ -1,6 +1,7 @@
 #include "prismGraphicCore.h"
 #include "textureLoader.h"
 #include "textureManager.h"
+#include "meshManager.h"
 
 #define TINYOBJLOADER_IMPLEMENTATION
 #include "tiny_obj_loader.h"
@@ -277,6 +278,8 @@ void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBu
                 &pushConstants
             );
 
+            const Mesh& info = MeshManager::getMeshInfo(&context, context.mainMeshId);
+            vkCmdDrawIndexed(commandBuffer, info.indexCount, 1, info.indexOffset, info.vertexOffset, 0);
 
             // Отрисовка объекта
             vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.allIndices.size()), 1, 0, 0, 0);
@@ -519,42 +522,12 @@ void prism::PGC::PrismGraphicCore::createDepthResources()
 
 void prism::PGC::PrismGraphicCore::loadModel()
 {
-    tinyobj::attrib_t attrib;
-    std::vector<tinyobj::shape_t> shapes;
-    std::vector<tinyobj::material_t> materials;
-    std::string err;
-
-    if (!tinyobj::LoadObj(&attrib, &shapes, &materials, nullptr, &err, MODEL_PATH.c_str())) {
-        throw std::runtime_error(err);
-    }
-
-    std::unordered_map<prism::PGC::Vertex, uint32_t, prism::PGC::VertexHasher> uniqueVertices{};
-
-    for (const auto& shape : shapes) {
-        for (const auto& index : shape.mesh.indices) {
-            Vertex vertex{};
-
-            vertex.pos = {
-                attrib.vertices[3 * index.vertex_index + 0],
-                attrib.vertices[3 * index.vertex_index + 1],
-                attrib.vertices[3 * index.vertex_index + 2]
-            };
-
-            vertex.texCoord = {
-                attrib.texcoords[2 * index.texcoord_index + 0],
-                attrib.texcoords[2 * index.texcoord_index + 1]
-            };
-
-            vertex.color = { 1.0f, 1.0f, 1.0f };
-
-            if (uniqueVertices.count(vertex) == 0) {
-                uniqueVertices[vertex] = static_cast<uint32_t>(context.allVertices.size());
-                context.allVertices.push_back(vertex);
-            }
-
-            context.allIndices.push_back(uniqueVertices[vertex]);
-        }
-    }
+    MeshManager::addMesh(&context, MODEL_PATH);
+    MeshManager::update(&context);
+    MeshManager::clear(&context);
+    context.mainMeshId = MeshManager::addMesh(&context, MODEL_PATH);
+    MeshManager::addMesh(&context, MODEL_PATH);
+    MeshManager::update(&context);
 }
 
 void prism::PGC::PrismGraphicCore::createColorResources()

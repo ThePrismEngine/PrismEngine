@@ -90,7 +90,9 @@ namespace prism {
 				std::vector<uint32_t> freeTextureIndices;
 				VkDescriptorSet textureDescriptorSet = VK_NULL_HANDLE;
 				VkDescriptorSetLayout textureDescriptorSetLayout = VK_NULL_HANDLE;
+
 				uint32_t textureID;
+				uint32_t mainMeshId;
 
 
 				std::vector<VkDescriptorSet> descriptorSets;
