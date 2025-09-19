@@ -1,4 +1,5 @@
 #pragma once
+#pragma once
 #include <cstdint>
 #include <memory>
 #include <unordered_map>
@@ -12,12 +13,12 @@
 
 
 namespace prism {
-	namespace world {
+	namespace scene {
 
-        class World
+        class Scene
         {
         public:
-            World() = default;
+            Scene() = default;
 
             Entity createEntity();
             bool destroyEntity(Entity entityId);

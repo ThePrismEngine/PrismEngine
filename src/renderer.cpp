@@ -1,10 +1,9 @@
 #include "renderer.h"
 
 
-prism::render::Renderer::Renderer(Window* window)
+void prism::render::Renderer::linkWindow(Window* window)
 {
 	this->window = window;
-	setDefaultSettings();
 }
 
 prism::render::Renderer::~Renderer()
@@ -24,6 +23,19 @@ void prism::render::Renderer::drawFrame()
 	pgc.drawFrame();
 }
 
+void prism::render::Renderer::updateCamera(prism::scene::TransformComponent* transform, prism::scene::CameraComponent* camera)
+{
+	prism::PGC::utils::CameraData* cameraData = pgc.getCameraDataPtr();
+
+	cameraData->pos = { transform->pos.x, transform->pos.z, transform->pos.y }; // из пространства сцены в vulkan 
+	cameraData->look = { camera->look.x, camera->look.y, camera->look.z };
+	cameraData->fovy = camera->fovy;
+	cameraData->aspect = camera->aspect;
+	cameraData->zFar = camera->zFar;
+	cameraData->zNear = camera->zNear;
+	cameraData->useСurrentWindowAspect = camera->useСurrentWindowAspect;
+}
+
 void prism::render::Renderer::awaitRenderingCompletion()
 {
 	pgc.awaitRenderingCompletion();
@@ -31,6 +43,7 @@ void prism::render::Renderer::awaitRenderingCompletion()
 
 void prism::render::Renderer::destroy()
 {
+	pgc.awaitRenderingCompletion();
 	pgc.cleanup();
 }
 

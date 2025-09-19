@@ -79,14 +79,8 @@
     <Filter Include="ECS\system">
       <UniqueIdentifier>{83f611dd-4693-4a70-b3d1-dcdd97552e9b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ECS\world">
-      <UniqueIdentifier>{729752ad-bb95-4e6d-b3ea-5f627b74d74a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="stComponents">
       <UniqueIdentifier>{1d531cba-949d-481f-966c-01434f97225a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="sSsystems">
-      <UniqueIdentifier>{100c9d80-a30f-49a2-99f8-d1207b625003}</UniqueIdentifier>
     </Filter>
     <Filter Include="pgc\vertex">
       <UniqueIdentifier>{7e67c3d1-e872-4108-a292-343ba99a204d}</UniqueIdentifier>
@@ -103,6 +97,15 @@
     <Filter Include="pgc\textureLoader">
       <UniqueIdentifier>{995ed1f7-4828-4f13-b9dc-76f1cde1e99b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="stSystems">
+      <UniqueIdentifier>{100c9d80-a30f-49a2-99f8-d1207b625003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ECS\scene">
+      <UniqueIdentifier>{729752ad-bb95-4e6d-b3ea-5f627b74d74a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\window">
+      <UniqueIdentifier>{e9d35436-deb3-46f7-8545-eddee21e1f7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\fmath.cpp">
@@ -113,9 +116,6 @@
     </ClCompile>
     <ClCompile Include="src\vector.cpp">
       <Filter>math</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Window.cpp">
-      <Filter>render</Filter>
     </ClCompile>
     <ClCompile Include="src\PrismEngine.cpp">
       <Filter>Исходные файлы</Filter>
@@ -174,8 +174,8 @@
     <ClCompile Include="src\systemManager.cpp">
       <Filter>ECS\system</Filter>
     </ClCompile>
-    <ClCompile Include="src\world.cpp">
-      <Filter>ECS\world</Filter>
+    <ClCompile Include="src\scene.cpp">
+      <Filter>ECS\scene</Filter>
     </ClCompile>
     <ClCompile Include="src\vertex.cpp">
       <Filter>pgc\vertex</Filter>
@@ -191,6 +191,12 @@
     </ClCompile>
     <ClCompile Include="src\meshLoader.cpp">
       <Filter>pgc\meshLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
+      <Filter>render\window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderSystem.cpp">
+      <Filter>stSystems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -208,9 +214,6 @@
     </ClInclude>
     <ClInclude Include="src\PrismEngine.h">
       <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Window.h">
-      <Filter>render</Filter>
     </ClInclude>
     <ClInclude Include="src\logger.h">
       <Filter>logger</Filter>
@@ -284,8 +287,8 @@
     <ClInclude Include="src\system.h">
       <Filter>ECS\system</Filter>
     </ClInclude>
-    <ClInclude Include="src\world.h">
-      <Filter>ECS\world</Filter>
+    <ClInclude Include="src\scene.h">
+      <Filter>ECS\scene</Filter>
     </ClInclude>
     <ClInclude Include="src\cameraComponent.h">
       <Filter>stComponents</Filter>
@@ -316,6 +319,12 @@
     </ClInclude>
     <ClInclude Include="src\mesh.h">
       <Filter>pgc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderSystem.h">
+      <Filter>stSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window.h">
+      <Filter>render\window</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

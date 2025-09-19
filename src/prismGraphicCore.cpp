@@ -115,6 +115,11 @@ void prism::PGC::PrismGraphicCore::drawFrame()
     context.currentFrame = (context.currentFrame + 1) % context.MAX_FRAMES_IN_FLIGHT;
 }
 
+prism::PGC::utils::CameraData* prism::PGC::PrismGraphicCore::getCameraDataPtr()
+{
+    return &context.cameraData;
+}
+
 void prism::PGC::PrismGraphicCore::createBase()
 {
     base.init(&context, &settings);
@@ -128,21 +133,28 @@ void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
 
     CameraUBO cameraUbo{};
 
-    // Убедитесь, что камера смотрит на объект
     cameraUbo.view = glm::lookAt(
-        glm::vec3(2.0f, 2.0f, 2.0f),  // Положение камеры
-        glm::vec3(0.0f, 0.0f, 0.0f),  // Точка, на которую смотрит камера
-        glm::vec3(0.0f, 0.0f, 1.0f)   // Вектор "вверх"
+        context.cameraData.pos,
+        context.cameraData.look,
+        context.cameraData.up
     );
+    if (context.cameraData.useСurrentWindowAspect) {
+        cameraUbo.proj = glm::perspective(
+            glm::radians(context.cameraData.fovy),
+            context.swapChainExtent.width / (float)context.swapChainExtent.height,
+            context.cameraData.zNear, context.cameraData.zFar
+        );
+    } else {
+        cameraUbo.proj = glm::perspective(
+            glm::radians(context.cameraData.fovy),
+            context.cameraData.aspect,
+            context.cameraData.zNear, context.cameraData.zFar
+        );
+    }
 
-    cameraUbo.proj = glm::perspective(
-        glm::radians(45.0f),  // Угол обзора
-        context.swapChainExtent.width / (float)context.swapChainExtent.height,  // Соотношение сторон
-        0.1f, 10.0f  // Ближняя и дальняя плоскости отсечения
-    );
     cameraUbo.proj[1][1] *= -1;  // Важно для Vulkan!
     cameraUbo.viewProj = cameraUbo.proj * cameraUbo.view;
-    cameraUbo.cameraPos = glm::vec3(2.0f, 2.0f, 2.0f);
+    cameraUbo.cameraPos = context.cameraData.pos;
 
     // Копируем данные камеры (как и раньше)
     memcpy(context.uniformBuffers[currentImage].cameraMapped, &cameraUbo, sizeof(cameraUbo));

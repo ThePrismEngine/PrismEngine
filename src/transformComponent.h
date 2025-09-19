@@ -1,7 +1,7 @@
 #pragma once
 
 namespace prism {
-	namespace ECS {
+	namespace scene {
 		struct Position {
 			float x, y, z;
 		};
@@ -11,7 +11,7 @@ namespace prism {
 		};
 
 		struct Scale {
-			float x, y;
+			float x, y, z;
 		};
 
 		struct TransformComponent

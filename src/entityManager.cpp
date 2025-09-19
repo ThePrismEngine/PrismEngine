@@ -1,7 +1,7 @@
 #include "entityManager.h"
 
 
-prism::world::Entity prism::world::EntityManager::createEntity()
+prism::scene::Entity prism::scene::EntityManager::createEntity()
 {
     if (!freeList.empty()) {
         Entity id = freeList.front();
@@ -11,7 +11,7 @@ prism::world::Entity prism::world::EntityManager::createEntity()
     return nextEntityId++;
 }
 
-bool prism::world::EntityManager::destroyEntity(Entity entityId)
+bool prism::scene::EntityManager::destroyEntity(Entity entityId)
 {
     if (entityId == INVALID_ENTITY_ID || entityId >= nextEntityId) {
         return false;
@@ -20,7 +20,7 @@ bool prism::world::EntityManager::destroyEntity(Entity entityId)
     return true;
 }
 
-bool prism::world::EntityManager::isEntityValid(Entity entityId) const
+bool prism::scene::EntityManager::isEntityValid(Entity entityId) const
 {
     return entityId != INVALID_ENTITY_ID && entityId < nextEntityId;
 }

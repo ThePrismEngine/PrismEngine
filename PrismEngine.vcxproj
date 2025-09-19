@@ -205,6 +205,7 @@
   <ItemGroup>
     <ClCompile Include="src\meshLoader.cpp" />
     <ClCompile Include="src\meshManager.cpp" />
+    <ClCompile Include="src\renderSystem.cpp" />
     <ClCompile Include="src\textureManager.cpp" />
     <ClCompile Include="src\bufferWrapper.cpp" />
     <ClCompile Include="src\base.cpp" />
@@ -231,12 +232,13 @@
     <ClCompile Include="src\vertex.cpp" />
     <ClCompile Include="src\Window.cpp" />
     <ClCompile Include="src\prismGraphicCore.cpp" />
-    <ClCompile Include="src\world.cpp" />
+    <ClCompile Include="src\scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\mesh.h" />
     <ClInclude Include="src\meshLoader.h" />
     <ClInclude Include="src\meshManager.h" />
+    <ClInclude Include="src\renderSystem.h" />
     <ClInclude Include="src\textureManager.h" />
     <ClInclude Include="src\bufferWrapper.h" />
     <ClInclude Include="src\cameraComponent.h" />
@@ -274,7 +276,7 @@
     <ClInclude Include="src\vertex.h" />
     <ClInclude Include="src\Window.h" />
     <ClInclude Include="src\prismGraphicCore.h" />
-    <ClInclude Include="src\world.h" />
+    <ClInclude Include="src\scene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

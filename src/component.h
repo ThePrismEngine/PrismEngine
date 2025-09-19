@@ -2,7 +2,7 @@
 #include <cstdint>
 
 namespace prism {
-	namespace world {
+	namespace scene {
 		typedef uint32_t ComponentType;
 		const ComponentType INVALID_COMPONENT_TYPE = 0;
 

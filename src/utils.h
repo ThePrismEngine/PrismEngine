@@ -28,6 +28,21 @@ namespace prism {
 				std::vector<VkPresentModeKHR> presentModes;
 			};
 
+
+			struct CameraData {
+				glm::vec3 pos = { 2.0f, 2.0f, 2.0f };  // Позиция
+				glm::vec3 look = { 0.0f, 0.0f, 0.0f }; // Взгляд
+				glm::vec3 up = { 0.0f, 0.0f, 1.0f };   // Вектор вверх
+
+				float fovy = 45.0f;        // Угол обзора в градусах
+				float aspect = 16.f / 9.f; // Соотношение сторон
+				float zNear = 0.1f;        // Ближняя плоскость отсечения
+				float zFar = 10.0f;        // Дальняя плоскость отсечения
+
+				bool useСurrentWindowAspect = true; // Если истино то aspect игнорируется и соотношение камеры равно соотношению окна
+
+			};
+
 			struct Context {
 				VkInstance instance;
 				VkSurfaceKHR surface;
@@ -91,6 +106,7 @@ namespace prism {
 				VkDescriptorSet textureDescriptorSet = VK_NULL_HANDLE;
 				VkDescriptorSetLayout textureDescriptorSetLayout = VK_NULL_HANDLE;
 
+				CameraData cameraData;
 				uint32_t textureID;
 				uint32_t mainMeshId;
 

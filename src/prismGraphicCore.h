@@ -41,6 +41,7 @@ namespace prism {
             PrismGraphicCore();
             void init(utils::Settings settings);
             void drawFrame();
+            prism::PGC::utils::CameraData* getCameraDataPtr();
             void cleanup();
             void awaitRenderingCompletion();
 

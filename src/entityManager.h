@@ -3,7 +3,7 @@
 #include <queue>
 
 namespace prism {
-	namespace world {
+	namespace scene {
         class EntityManager
         {
         public:

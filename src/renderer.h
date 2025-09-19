@@ -1,23 +1,27 @@
 #pragma once
 #include "prismGraphicCore.h"
 #include "Window.h"
+#include "transformComponent.h"
+#include "cameraComponent.h"
 
 namespace prism {
 	namespace render {
-		class Renderer
-		{
+	   class Renderer
+	    {
 		public:
-
-			Renderer(Window* window);
-			~Renderer();
+			Renderer() : window(nullptr) {};
+			void linkWindow(Window* window);
+			void setDefaultSettings();
 			void init();
+			~Renderer();
+
 			void drawFrame();
+			void updateCamera(prism::scene::TransformComponent* transform, prism::scene::CameraComponent* camera);
 			void awaitRenderingCompletion();
 			void destroy();
 
 			PGC::utils::Settings settings;
 		private:
-			void setDefaultSettings();
 
 			PGC::PrismGraphicCore pgc;
 			Window* window;

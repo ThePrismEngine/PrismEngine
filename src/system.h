@@ -2,7 +2,7 @@
 #include <cstdint>
 
 namespace prism {
-	namespace world {
+	namespace scene {
 		typedef uint32_t SystemId;
 
 		const SystemId INVALID_SYSTEM_ID = 0;

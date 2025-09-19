@@ -5,7 +5,7 @@
 
 
 namespace prism {
-	namespace world {
+	namespace scene {
         class SystemManager
         {
         public:

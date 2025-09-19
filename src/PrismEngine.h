@@ -13,8 +13,4 @@
 #include "entityManager.h"
 #include "componentManager.h"
 #include "systemManager.h"
-#include "world.h"
-//#include "VkInit.h"
-//#include "Canvas.h"/
-//#include "Frame.h"
-//#include "RenderAPI.h"
+#include "scene.h"

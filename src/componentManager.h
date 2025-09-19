@@ -8,7 +8,7 @@
 #include <iterator>
 
 namespace prism {
-    namespace world {
+    namespace scene {
         class ComponentManager
         {
         public:
