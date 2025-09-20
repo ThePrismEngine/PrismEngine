@@ -280,7 +280,7 @@ void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBu
             vkCmdDrawIndexed(commandBuffer, info.indexCount, 1, info.indexOffset, info.vertexOffset, 0);
 
             // Отрисовка объекта
-            vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.allIndices.size()), 1, 0, 0, 0);
+            //vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.allIndices.size()), 1, 0, 0, 0);
         }
     vkCmdEndRenderPass(commandBuffer);
 
