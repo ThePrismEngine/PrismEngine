@@ -12,4 +12,6 @@ void prism::scene::RenderSystem::update(float deltaTime)
             renderer->updateCamera(transformComponent, cameraComponent);
         }
     }
+
+    renderer->drawFrame();
 }
