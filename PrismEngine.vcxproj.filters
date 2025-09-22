@@ -326,5 +326,8 @@
     <ClInclude Include="src\Window.h">
       <Filter>render\window</Filter>
     </ClInclude>
+    <ClInclude Include="src\meshComponent.h">
+      <Filter>stComponents</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

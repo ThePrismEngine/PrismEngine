@@ -95,6 +95,7 @@ namespace prism {
 				std::vector<VkFence> inFlightFences;
 
 				uint32_t currentFrame = 0;
+				uint32_t imageIndex;
 				bool wasRenderingActive = true;
 
 				VkDescriptorPool descriptorPool;

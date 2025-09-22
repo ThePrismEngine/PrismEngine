@@ -236,6 +236,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\mesh.h" />
+    <ClInclude Include="src\meshComponent.h" />
     <ClInclude Include="src\meshLoader.h" />
     <ClInclude Include="src\meshManager.h" />
     <ClInclude Include="src\renderSystem.h" />

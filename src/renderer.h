@@ -15,8 +15,17 @@ namespace prism {
 			void init();
 			~Renderer();
 
-			void drawFrame();
+			bool isRenderingActive();
+			void beginFrame();
+			void beginRender();
+			void endRender();
+			void endFrame();
 			void updateCamera(prism::scene::TransformComponent* transform, prism::scene::CameraComponent* camera);
+			void updateObjectTransform(prism::scene::TransformComponent* transform, uint32_t transformId);
+			void bindDefault();
+			void bindTransform(uint32_t transformId);
+			void pushTextureId(uint32_t textureId);
+			void drawMesh(uint32_t meshId);
 			void awaitRenderingCompletion();
 			void destroy();
 

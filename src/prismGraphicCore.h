@@ -41,14 +41,19 @@ namespace prism {
             PrismGraphicCore();
             void init(utils::Settings settings);
             void drawFrame();
+            void startRender();
             prism::PGC::utils::CameraData* getCameraDataPtr();
+            PGC::SwapChain* getSwapChainPtr();
+
             void cleanup();
             void awaitRenderingCompletion();
-
+            bool isWindowReadyForRendering(SDL_Window* window);
 
             bool* windowResized;
             bool* windowMinimized;
 
+            PGC::utils::Settings settings;
+            PGC::utils::Context context;
         private:
             void createBase();
             void createSwapChain();
@@ -72,9 +77,6 @@ namespace prism {
 
             SDL_Window* window;
 
-            PGC::utils::Settings settings;
-            PGC::utils::Context context;
-
             PGC::base::Base base;
             PGC::SwapChain swapChain;
             PGC::RenderPass renderPass;
@@ -87,7 +89,7 @@ namespace prism {
 
       
             void updateUniformBuffer(uint32_t currentImage);
-            bool isWindowReadyForRendering(SDL_Window* window);
+
 
             void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
 

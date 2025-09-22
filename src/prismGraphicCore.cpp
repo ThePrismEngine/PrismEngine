@@ -41,78 +41,34 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
 
 void prism::PGC::PrismGraphicCore::drawFrame()
 {
-    if (!isWindowReadyForRendering(window)) { 
-        if (context.wasRenderingActive) {
-            awaitRenderingCompletion();
-            context.wasRenderingActive = false;
-        }
-        SDL_PumpEvents(); 
-        SDL_Delay(10);
-        return;
-    }
-    context.wasRenderingActive = true;
+    //if (isRenderingActive) {
+
+    //beginFrame
+
+    //updateCameraTransform
+    // for () {
+    // updateObjectTransform
+    // }
+
+    //beginRender
     
-    vkWaitForFences(context.device, 1, &context.inFlightFences[context.currentFrame], VK_TRUE, UINT64_MAX);
-    uint32_t imageIndex;
-    VkResult result = vkAcquireNextImageKHR(context.device, context.vkSwapChain, UINT64_MAX, context.imageAvailableSemaphores[context.currentFrame], VK_NULL_HANDLE, &imageIndex);
+    //bindDefault
 
-    if (result == VK_ERROR_OUT_OF_DATE_KHR) {
-        swapChain.recreate();
-        return;
-    }
-    else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) {
-        throw std::runtime_error("failed to acquire swap chain image!");
-    }
-    updateUniformBuffer(context.currentFrame);
+    //for (uint32_t i = 0; i < objectCount; i++) {
+    //    bindTransform
+    //    pushTextureId
+    //    drawMesh
+    //}
+    
+    //endRender
+    //endFrame
 
+    //}
+}
 
-    vkResetFences(context.device, 1, &context.inFlightFences[context.currentFrame]);
+void prism::PGC::PrismGraphicCore::startRender()
+{
 
-    vkResetCommandBuffer(context.commandBuffers[context.currentFrame], /*VkCommandBufferResetFlagBits*/ 0);
-    recordCommandBuffer(context.commandBuffers[context.currentFrame], imageIndex);
-
-    VkSubmitInfo submitInfo{};
-    submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
-
-    VkSemaphore waitSemaphores[] = { context.imageAvailableSemaphores[context.currentFrame] };
-    VkPipelineStageFlags waitStages[] = { VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
-    submitInfo.waitSemaphoreCount = 1;
-    submitInfo.pWaitSemaphores = waitSemaphores;
-    submitInfo.pWaitDstStageMask = waitStages;
-
-    submitInfo.commandBufferCount = 1;
-    submitInfo.pCommandBuffers = &context.commandBuffers[context.currentFrame];
-
-    VkSemaphore signalSemaphores[] = { context.renderFinishedSemaphores[context.currentFrame] };
-    submitInfo.signalSemaphoreCount = 1;
-    submitInfo.pSignalSemaphores = signalSemaphores;
-
-    if (vkQueueSubmit(context.graphicsQueue, 1, &submitInfo, context.inFlightFences[context.currentFrame]) != VK_SUCCESS) {
-        throw std::runtime_error("failed to submit draw command buffer!");
-    }
-
-    VkPresentInfoKHR presentInfo{};
-    presentInfo.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
-
-    presentInfo.waitSemaphoreCount = 1;
-    presentInfo.pWaitSemaphores = signalSemaphores;
-
-    VkSwapchainKHR swapChains[] = { context.vkSwapChain };
-    presentInfo.swapchainCount = 1;
-    presentInfo.pSwapchains = swapChains;
-
-    presentInfo.pImageIndices = &imageIndex;
-
-    result = vkQueuePresentKHR(context.presentQueue, &presentInfo);
-
-    if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || *windowResized) {
-        *windowResized = false;
-        swapChain.recreate();
-    }
-    else if (result != VK_SUCCESS) {
-        throw std::runtime_error("failed to present swap chain image!");
-    }
-    context.currentFrame = (context.currentFrame + 1) % context.MAX_FRAMES_IN_FLIGHT;
 }
 
 prism::PGC::utils::CameraData* prism::PGC::PrismGraphicCore::getCameraDataPtr()
@@ -120,67 +76,16 @@ prism::PGC::utils::CameraData* prism::PGC::PrismGraphicCore::getCameraDataPtr()
     return &context.cameraData;
 }
 
+prism::PGC::SwapChain* prism::PGC::PrismGraphicCore::getSwapChainPtr()
+{
+    return &swapChain;
+}
+
 void prism::PGC::PrismGraphicCore::createBase()
 {
     base.init(&context, &settings);
 }
 
-void prism::PGC::PrismGraphicCore::updateUniformBuffer(uint32_t currentImage)
-{
-    static auto startTime = std::chrono::high_resolution_clock::now();
-    auto currentTime = std::chrono::high_resolution_clock::now();
-    float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
-
-    CameraUBO cameraUbo{};
-
-    cameraUbo.view = glm::lookAt(
-        context.cameraData.pos,
-        context.cameraData.look,
-        context.cameraData.up
-    );
-    if (context.cameraData.useСurrentWindowAspect) {
-        cameraUbo.proj = glm::perspective(
-            glm::radians(context.cameraData.fovy),
-            context.swapChainExtent.width / (float)context.swapChainExtent.height,
-            context.cameraData.zNear, context.cameraData.zFar
-        );
-    } else {
-        cameraUbo.proj = glm::perspective(
-            glm::radians(context.cameraData.fovy),
-            context.cameraData.aspect,
-            context.cameraData.zNear, context.cameraData.zFar
-        );
-    }
-
-    cameraUbo.proj[1][1] *= -1;  // Важно для Vulkan!
-    cameraUbo.viewProj = cameraUbo.proj * cameraUbo.view;
-    cameraUbo.cameraPos = context.cameraData.pos;
-
-    // Копируем данные камеры (как и раньше)
-    memcpy(context.uniformBuffers[currentImage].cameraMapped, &cameraUbo, sizeof(cameraUbo));
-
-    // Обновление ObjectUBO для каждого объекта
-    int objectCount = 1;
-    for (uint32_t i = 0; i < objectCount; i++) {
-        ObjectUBO objectUbo{};
-
-        // Вычисляем трансформацию для каждого объекта
-        objectUbo.model = glm::rotate(
-            glm::mat4(1.0f),
-            time * glm::radians(90.0f) * (i + 1),  // Разная скорость вращения для каждого объекта
-            glm::vec3(0.0f, 0.0f, 1.0f)  // Вращение вокруг оси Z
-        );
-
-        // Добавляем смещение для каждого объекта
-        objectUbo.model = glm::translate(objectUbo.model, glm::vec3(i * 2.0f, 0.0f, 0.0f));
-
-        objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
-
-        // Копируем данные объекта в правильное место в динамическом буфере
-        size_t offset = i * context.dynamicAlignment;
-        memcpy((char*)context.uniformBuffers[currentImage].objectMapped + offset, &objectUbo, sizeof(objectUbo));
-    }
-}
 
 bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering(SDL_Window* window)
 {
@@ -193,101 +98,6 @@ bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering(SDL_Window* window)
     SDL_GL_GetDrawableSize(window, &width, &height); 
     // Или: SDL_GetWindowSize(window, &width, &height);  // Если не важен HiDPI
     return (width > 0 && height > 0);
-}
-
-void prism::PGC::PrismGraphicCore::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex)
-{
-
-    VkCommandBufferBeginInfo beginInfo{};
-    beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
-    beginInfo.flags = 0; // Optional
-    beginInfo.pInheritanceInfo = nullptr; // Optional
-
-    if (vkBeginCommandBuffer(commandBuffer, &beginInfo) != VK_SUCCESS) {
-        throw std::runtime_error("failed to begin recording command buffer!");
-    }
-
-    VkRenderPassBeginInfo renderPassInfo{};
-    renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
-    renderPassInfo.renderPass = context.renderPass;
-    renderPassInfo.framebuffer = context.swapChainFramebuffers[imageIndex];
-
-    renderPassInfo.renderArea.offset = { 0, 0 };
-    renderPassInfo.renderArea.extent = context.swapChainExtent;
-
-    std::array<VkClearValue, 2> clearValues{};
-    clearValues[0].color = { {0.0f, 0.0f, 0.0f, 1.0f} };
-    clearValues[1].depthStencil = { 1.0f, 0 };
-
-    renderPassInfo.clearValueCount = static_cast<uint32_t>(clearValues.size());
-    renderPassInfo.pClearValues = clearValues.data();
-
-    vkCmdBeginRenderPass(commandBuffer, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
-        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, context.graphicsPipeline);
-       
-        VkViewport viewport{};
-        viewport.x = 0.0f;
-        viewport.y = 0.0f;
-        viewport.width = static_cast<float>(context.swapChainExtent.width);
-        viewport.height = static_cast<float>(context.swapChainExtent.height);
-        viewport.minDepth = 0.0f;
-        viewport.maxDepth = 1.0f;
-        vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
-
-        VkRect2D scissor{};
-        scissor.offset = { 0, 0 };
-        scissor.extent = context.swapChainExtent;
-        vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
-
-        VkBuffer vertexBuffers[] = { context.vertexBuffer };
-        VkDeviceSize offsets[] = { 0 };
-        vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
-        vkCmdBindIndexBuffer(commandBuffer, context.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
-
-        vkCmdBindDescriptorSets(commandBuffer,
-            VK_PIPELINE_BIND_POINT_GRAPHICS,
-            context.pipelineLayout,
-            1, // set = 1 для текстур
-            1,
-            &context.textureDescriptorSet,
-            0,
-            nullptr);
-
-        int objectCount = 1;
-        for (uint32_t i = 0; i < objectCount; i++) {
-            uint32_t dynamicOffset = i * static_cast<uint32_t>(context.dynamicAlignment);
-
-            vkCmdBindDescriptorSets(commandBuffer,
-                VK_PIPELINE_BIND_POINT_GRAPHICS,
-                context.pipelineLayout,
-                0, // set = 0 для текстур
-                1,
-                &context.descriptorSets[context.currentFrame],
-                1, &dynamicOffset);
-
-            PushConstants pushConstants{};
-            pushConstants.textureIndex = static_cast<int>(context.textureID);
-            vkCmdPushConstants(
-                commandBuffer,
-                context.pipelineLayout,
-                VK_SHADER_STAGE_FRAGMENT_BIT, // Указываем, что push-константы используются во фрагментном шейдере
-                0,
-                sizeof(PushConstants),
-                &pushConstants
-            );
-
-            const Mesh& info = MeshManager::getMeshInfo(&context, context.mainMeshId);
-            vkCmdDrawIndexed(commandBuffer, info.indexCount, 1, info.indexOffset, info.vertexOffset, 0);
-
-            // Отрисовка объекта
-            //vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(context.allIndices.size()), 1, 0, 0, 0);
-        }
-    vkCmdEndRenderPass(commandBuffer);
-
-    if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) {
-        throw std::runtime_error("failed to record command buffer!");
-    }
-
 }
 
 
