@@ -186,14 +186,14 @@ void prism::render::Renderer::updateObjectTransform(prism::scene::TransformCompo
 	prism::PGC::ObjectUBO objectUbo{};
 
 	objectUbo.model = glm::mat4(1.0f);
-
-	objectUbo.model = glm::scale(objectUbo.model, glm::vec3(transform->scale.x, transform->scale.y, transform->scale.z));
+    
+	objectUbo.model = glm::translate(objectUbo.model, glm::vec3(transform->pos.x, transform->pos.z, transform->pos.y));
+	
+	objectUbo.model = glm::scale(objectUbo.model, glm::vec3(transform->scale.x, transform->scale.z, transform->scale.y));
 
 	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.x), glm::vec3(1.0f, 0.0f, 0.0f));
-	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.y), glm::vec3(0.0f, 1.0f, 0.0f));
-	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.z), glm::vec3(0.0f, 0.0f, 1.0f));
-
-	objectUbo.model = glm::translate(objectUbo.model, glm::vec3(transform->pos.x, transform->pos.y, transform->pos.z));
+	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.y), glm::vec3(0.0f, 0.0f, 1.0f));
+	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.z), glm::vec3(0.0f, 1.0f, 0.0f));
 
 	objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
 
