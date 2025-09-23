@@ -329,5 +329,8 @@
     <ClInclude Include="src\meshComponent.h">
       <Filter>stComponents</Filter>
     </ClInclude>
+    <ClInclude Include="src\textureComponent.h">
+      <Filter>stComponents</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

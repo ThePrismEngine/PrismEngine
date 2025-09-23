@@ -2,6 +2,7 @@
 #include "cameraComponent.h"
 #include "transformComponent.h"
 #include "meshComponent.h"
+#include "textureComponent.h"
 
 void prism::scene::RenderSystem::update(float deltaTime)
 {
@@ -16,18 +17,19 @@ void prism::scene::RenderSystem::update(float deltaTime)
                 renderer->updateCamera(transformComponent, cameraComponent);
             }
         }
+        uint32_t i = 0;
         auto forRenderingEntites = scene->getEntitiesWithAll<TransformComponent, MeshComponent>();
         for (auto entity : forRenderingEntites) {
-            renderer->updateObjectTransform(scene->getComponent<TransformComponent>(entity), entity);
+            renderer->updateObjectTransform(scene->getComponent<TransformComponent>(entity), i++);
         }
 
         renderer->beginRender();
 
         renderer->bindDefault();
-
+        i = 0;
         for (auto entity : forRenderingEntites) {
-            renderer->bindTransform(entity);
-            renderer->pushTextureId(0);
+            renderer->bindTransform(i);
+            renderer->pushTextureId(scene->getComponent<TextureComponent>(entity)->texture);
             renderer->drawMesh(scene->getComponent<MeshComponent>(entity)->mesh);
         }
 

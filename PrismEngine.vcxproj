@@ -240,6 +240,7 @@
     <ClInclude Include="src\meshLoader.h" />
     <ClInclude Include="src\meshManager.h" />
     <ClInclude Include="src\renderSystem.h" />
+    <ClInclude Include="src\textureComponent.h" />
     <ClInclude Include="src\textureManager.h" />
     <ClInclude Include="src\bufferWrapper.h" />
     <ClInclude Include="src\cameraComponent.h" />
