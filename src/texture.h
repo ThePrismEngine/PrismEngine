@@ -5,6 +5,7 @@
 
 namespace prism {
 	typedef uint32_t Texture;
+	const Texture INVALID_TEXTURE = 0;
 
 
 	namespace PGC {

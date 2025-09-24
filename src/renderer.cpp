@@ -16,6 +16,7 @@ void prism::render::Renderer::init()
 {
 	pgc.windowResized = &window->windowResized;
 	pgc.windowMinimized = &window->windowMinimized;
+	pgc.context.textures.push_back(PGC::Texture{});
 	pgc.init(this->settings);
 }
 

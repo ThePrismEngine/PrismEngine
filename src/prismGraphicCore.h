@@ -63,8 +63,6 @@ namespace prism {
             void createCommandPool();
             void createCommandBuffer();
             void createSyncObjects();
-            void createVertexBuffer();
-            void createIndexBuffer();
             void createDescriptorSetLayout();
             void createTextureDescriptorSetLayout();
             void createTextureDescriptorSet();

@@ -29,7 +29,12 @@ void prism::scene::RenderSystem::update(float deltaTime)
         i = 0;
         for (auto entity : forRenderingEntites) {
             renderer->bindTransform(i);
-            renderer->pushTextureId(scene->getComponent<TextureComponent>(entity)->texture);
+            if (scene->getComponent<TextureComponent>(entity) == nullptr) {
+                renderer->pushTextureId(INVALID_TEXTURE);
+            }
+            else {
+                renderer->pushTextureId(scene->getComponent<TextureComponent>(entity)->texture);
+            }
             renderer->drawMesh(scene->getComponent<MeshComponent>(entity)->mesh);
         }
 

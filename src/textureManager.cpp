@@ -5,6 +5,10 @@ namespace prism::PGC {
     uint32_t TextureManager::addTexture(utils::Context* context, const std::string& texturePath) {
         Texture texture = TextureLoader::load(context, texturePath);
 
+        if (texture.image == VK_NULL_HANDLE) {
+            return INVALID_TEXTURE;
+        }
+
         uint32_t index = getNextAvailableIndex(context);
         texture.bindlessIndex = index;
 
@@ -21,7 +25,7 @@ namespace prism::PGC {
     }
 
     void TextureManager::removeTexture(utils::Context* context, uint32_t textureId) {
-        if (textureId >= context->textures.size()) {
+        if (textureId == INVALID_TEXTURE || textureId >= context->textures.size()) {
             return;
         }
 
@@ -33,11 +37,13 @@ namespace prism::PGC {
     }
 
     void TextureManager::cleanup(utils::Context* context) {
-        for (auto& texture : context->textures) {
+        for (uint32_t i = INVALID_TEXTURE+1; i < context->textures.size(); i++) {
+            auto& texture = context->textures[i];
             if (texture.image != VK_NULL_HANDLE) {
                 TextureLoader::cleanup(context, &texture);
             }
         }
+
         context->textures.clear();
         context->freeTextureIndices.clear();
     }
@@ -48,7 +54,7 @@ namespace prism::PGC {
         }
 
         std::vector<std::pair<uint32_t, VkDescriptorImageInfo>> validTextures;
-        for (uint32_t i = 0; i < context->textures.size(); i++) {
+        for (uint32_t i = INVALID_TEXTURE+1; i < context->textures.size(); i++) {
             if (context->textures[i].image != VK_NULL_HANDLE) {
                 VkDescriptorImageInfo imageInfo{};
                 imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
@@ -88,9 +94,9 @@ namespace prism::PGC {
         if (!context->freeTextureIndices.empty()) {
             uint32_t index = context->freeTextureIndices.back();
             context->freeTextureIndices.pop_back();
-            return index;
+            return index >= INVALID_TEXTURE+1 ? index : getNextAvailableIndex(context);
         }
 
-        return static_cast<uint32_t>(context->textures.size());
+        return static_cast<uint32_t>(context->textures.size() > 0 ? context->textures.size() : INVALID_TEXTURE+1);
     }
 }

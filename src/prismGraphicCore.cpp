@@ -25,15 +25,12 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createColorResources();
     createDepthResources();
     createFramebuffers();
-    createVertexBuffer();
-    createIndexBuffer();
     createUniformBuffers();
     createDescriptorPool();
     createTextureDescriptorSet();
     createDescriptorSets();
     createCommandBuffer();
     createSyncObjects();
-
 }
 
 void prism::PGC::PrismGraphicCore::drawFrame()
@@ -169,17 +166,6 @@ void prism::PGC::PrismGraphicCore::createSyncObjects()
         }
     }
 }
-
-void prism::PGC::PrismGraphicCore::createVertexBuffer()
-{
-    PGC::BufferWrapper::createVertexBuffer(&context);
-}
-
-void prism::PGC::PrismGraphicCore::createIndexBuffer()
-{
-    PGC::BufferWrapper::createIndexBuffer(&context);
-}
-
 
 void prism::PGC::PrismGraphicCore::createDescriptorSetLayout()
 {
