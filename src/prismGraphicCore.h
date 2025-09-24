@@ -72,7 +72,6 @@ namespace prism {
             void createDescriptorPool();
             void createDescriptorSets();
             void createDepthResources();
-            void loadModel();
             void createColorResources();
 
             SDL_Window* window;
@@ -83,15 +82,6 @@ namespace prism {
             PGC::DescriptorSetLayout descriptorSetLayout;
             PGC::GraphicsPipeline graphicsPipeline;
             PGC::DescriptorSet descriptorSet;
-
-            const std::string MODEL_PATH = "models/viking_room.obj";
-            const std::string TEXTURE_PATH = "textures/viking_room.png";
-
-      
-            void updateUniformBuffer(uint32_t currentImage);
-
-
-            void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
 
             void generateMipmaps(VkImage image, VkFormat imageFormat, int32_t texWidth, int32_t texHeight, uint32_t mipLevels);
 

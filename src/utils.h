@@ -108,9 +108,6 @@ namespace prism {
 				VkDescriptorSetLayout textureDescriptorSetLayout = VK_NULL_HANDLE;
 
 				CameraData cameraData;
-				uint32_t textureID;
-				uint32_t mainMeshId;
-
 
 				std::vector<VkDescriptorSet> descriptorSets;
 

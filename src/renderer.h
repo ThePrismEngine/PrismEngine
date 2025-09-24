@@ -3,6 +3,8 @@
 #include "Window.h"
 #include "transformComponent.h"
 #include "cameraComponent.h"
+#include "textureComponent.h"
+#include "meshComponent.h"
 
 namespace prism {
 	namespace render {
@@ -26,6 +28,13 @@ namespace prism {
 			void bindTransform(uint32_t transformId);
 			void pushTextureId(uint32_t textureId);
 			void drawMesh(uint32_t meshId);
+			scene::TextureComponent addTexture(const std::string& texturePath);
+			void removeTexture(scene::TextureComponent texture);
+
+			scene::MeshComponent addMesh(std::string texturePath);
+			void updateMeshes();
+			void clearMeshes();
+
 			void awaitRenderingCompletion();
 			void destroy();
 

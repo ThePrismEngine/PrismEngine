@@ -1,5 +1,6 @@
 #include "renderer.h"
 #include "meshManager.h"
+#include "textureManager.h"
 
 
 void prism::render::Renderer::linkWindow(Window* window)
@@ -251,7 +252,8 @@ void prism::render::Renderer::bindTransform(uint32_t transformId)
 void prism::render::Renderer::pushTextureId(uint32_t textureId)
 {
 	prism::PGC::PushConstants pushConstants{};
-	pushConstants.textureIndex = static_cast<int>(pgc.context.textureID);
+	pushConstants.textureIndex = static_cast<int>(textureId);
+	SDL_Log("%d", static_cast<int>(textureId));
 	vkCmdPushConstants(
 		pgc.context.commandBuffers[pgc.context.currentFrame],
 		pgc.context.pipelineLayout,
@@ -264,8 +266,33 @@ void prism::render::Renderer::pushTextureId(uint32_t textureId)
 
 void prism::render::Renderer::drawMesh(uint32_t meshId)
 {
-	const PGC::Mesh& info = prism::PGC::MeshManager::getMeshInfo(&pgc.context, pgc.context.mainMeshId);
+	const PGC::Mesh& info = prism::PGC::MeshManager::getMeshInfo(&pgc.context, meshId);
 	vkCmdDrawIndexed(pgc.context.commandBuffers[pgc.context.currentFrame], info.indexCount, 1, info.indexOffset, info.vertexOffset, 0);
+}
+
+prism::scene::TextureComponent prism::render::Renderer::addTexture(const std::string& texturePath)
+{
+	return { PGC::TextureManager::addTexture(&pgc.context, texturePath) };
+}
+
+void prism::render::Renderer::removeTexture(scene::TextureComponent texture)
+{
+	PGC::TextureManager::removeTexture(&pgc.context, texture.texture);
+}
+
+prism::scene::MeshComponent prism::render::Renderer::addMesh(std::string texturePath)
+{
+	return { PGC::MeshManager::addMesh(&pgc.context, texturePath)};
+}
+
+void prism::render::Renderer::updateMeshes()
+{
+	PGC::MeshManager::update(&pgc.context);
+}
+
+void prism::render::Renderer::clearMeshes()
+{
+	PGC::MeshManager::clear(&pgc.context);
 }
 
 void prism::render::Renderer::awaitRenderingCompletion()

@@ -25,14 +25,11 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createColorResources();
     createDepthResources();
     createFramebuffers();
-    loadModel();
     createVertexBuffer();
     createIndexBuffer();
     createUniformBuffers();
     createDescriptorPool();
     createTextureDescriptorSet();
-    context.textureID = TextureManager::addTexture(&context, TEXTURE_PATH);
-    TextureManager::addTexture(&context, TEXTURE_PATH);
     createDescriptorSets();
     createCommandBuffer();
     createSyncObjects();
@@ -282,16 +279,6 @@ void prism::PGC::PrismGraphicCore::createDescriptorSets()
 void prism::PGC::PrismGraphicCore::createDepthResources()
 {
     PGC::ResourcesCreater::createDepthResources(&context, &settings);
-}
-
-void prism::PGC::PrismGraphicCore::loadModel()
-{
-    MeshManager::addMesh(&context, MODEL_PATH);
-    MeshManager::update(&context);
-    MeshManager::clear(&context);
-    context.mainMeshId = MeshManager::addMesh(&context, MODEL_PATH);
-    MeshManager::addMesh(&context, MODEL_PATH);
-    MeshManager::update(&context);
 }
 
 void prism::PGC::PrismGraphicCore::createColorResources()
