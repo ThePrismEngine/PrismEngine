@@ -254,7 +254,6 @@ void prism::render::Renderer::pushTextureId(uint32_t textureId)
 {
 	prism::PGC::PushConstants pushConstants{};
 	pushConstants.textureIndex = static_cast<int>(textureId);
-	SDL_Log("%d", static_cast<int>(textureId));
 	vkCmdPushConstants(
 		pgc.context.commandBuffers[pgc.context.currentFrame],
 		pgc.context.pipelineLayout,
