@@ -141,7 +141,8 @@ void prism::render::Renderer::updateCamera(prism::scene::TransformComponent* tra
 {
 	prism::PGC::utils::CameraData* cameraData = pgc.getCameraDataPtr();
 
-	cameraData->pos = { transform->pos.x, transform->pos.z, transform->pos.y }; // из пространства сцены в vulkan 
+	// Правильное преобразование координат: X→X, Y→Z, Z→-Y (для Vulkan)
+	cameraData->pos = { transform->pos.x, transform->pos.y, transform->pos.z };
 	cameraData->look = { camera->look.x, camera->look.y, camera->look.z };
 	cameraData->fovy = camera->fovy;
 	cameraData->aspect = camera->aspect;
@@ -151,11 +152,22 @@ void prism::render::Renderer::updateCamera(prism::scene::TransformComponent* tra
 
 	prism::PGC::CameraUBO cameraUbo{};
 
+	// Вычисляем точку, куда смотрит камера, на основе углов
+	glm::vec3 direction;
+	direction.x = cos(glm::radians(camera->look.x)) * cos(glm::radians(camera->look.y));
+	direction.y = sin(glm::radians(camera->look.y));
+	direction.z = sin(glm::radians(camera->look.x)) * cos(glm::radians(camera->look.y));
+	direction = glm::normalize(direction);
+
+	glm::vec3 cameraPos = { transform->pos.x, transform->pos.y, transform->pos.z };
+	glm::vec3 cameraTarget = cameraPos + direction;
+
 	cameraUbo.view = glm::lookAt(
-		pgc.context.cameraData.pos,
-		pgc.context.cameraData.look,
-		pgc.context.cameraData.up
+		cameraPos,
+		cameraTarget,
+		glm::vec3(0.0f, 1.0f, 0.0f)  // Up vector (Y вверх)
 	);
+
 	if (pgc.context.cameraData.useСurrentWindowAspect) {
 		cameraUbo.proj = glm::perspective(
 			glm::radians(pgc.context.cameraData.fovy),
@@ -171,35 +183,32 @@ void prism::render::Renderer::updateCamera(prism::scene::TransformComponent* tra
 		);
 	}
 
-	cameraUbo.proj[1][1] *= -1;  // Важно для Vulkan!
+	cameraUbo.proj[1][1] *= -1;
 	cameraUbo.viewProj = cameraUbo.proj * cameraUbo.view;
-	cameraUbo.cameraPos = pgc.context.cameraData.pos;
-	
+	cameraUbo.cameraPos = cameraPos;
+
 	memcpy(pgc.context.uniformBuffers[pgc.context.currentFrame].cameraMapped, &cameraUbo, sizeof(cameraUbo));
 }
 
 void prism::render::Renderer::updateObjectTransform(prism::scene::TransformComponent* transform, uint32_t transformId)
 {
-	//static auto startTime = std::chrono::high_resolution_clock::now();
-	//auto currentTime = std::chrono::high_resolution_clock::now();
-	//float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
-
-	// Обновление ObjectUBO для каждого объекта
 	prism::PGC::ObjectUBO objectUbo{};
-
 	objectUbo.model = glm::mat4(1.0f);
-    
-	objectUbo.model = glm::translate(objectUbo.model, glm::vec3(transform->pos.x, transform->pos.z, transform->pos.y));
-	
-	objectUbo.model = glm::scale(objectUbo.model, glm::vec3(transform->scale.x, transform->scale.z, transform->scale.y));
 
-	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.x), glm::vec3(1.0f, 0.0f, 0.0f));
-	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.y), glm::vec3(0.0f, 0.0f, 1.0f));
-	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.z), glm::vec3(0.0f, 1.0f, 0.0f));
+	// Порядок: сначала масштаб, потом вращение, потом перенос
+
+	objectUbo.model = glm::translate(objectUbo.model,
+		glm::vec3(transform->pos.x, transform->pos.y, transform->pos.z));
+
+	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.y), glm::vec3(0.0f, 1.0f, 0.0f)); // Y
+	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.x), glm::vec3(1.0f, 0.0f, 0.0f)); // X
+	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.z), glm::vec3(0.0f, 0.0f, 1.0f)); // Z
+	
+	objectUbo.model = glm::scale(objectUbo.model,
+		glm::vec3(transform->scale.x, transform->scale.y, transform->scale.z));
 
 	objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
 
-	// Копируем данные объекта в правильное место в динамическом буфере
 	size_t offset = transformId * pgc.context.dynamicAlignment;
 	memcpy((char*)pgc.context.uniformBuffers[pgc.context.currentFrame].objectMapped + offset, &objectUbo, sizeof(objectUbo));
 }
