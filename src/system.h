@@ -1,17 +1,27 @@
-#pragma once
-#include <cstdint>
-
 namespace prism {
-	namespace scene {
-		typedef uint32_t SystemId;
+    namespace scene {
+        /// @brief Идентификатор системы
+        /// @details Уникальный числовой идентификатор для обращения к системе
+        typedef uint32_t SystemId;
 
-		const SystemId INVALID_SYSTEM_ID = 0;
+        /// @brief Неверный идентификатор системы
+        /// @details Используется для обозначения отсутствующей или невалидной системы
+        const SystemId INVALID_SYSTEM_ID = 0;
 
-		class ISystem {
-		public:
-			virtual ~ISystem() = default;
-			virtual void update(float deltaTime) = 0;
-			bool enabled = true;
-		};
-	}
+        /// @brief Базовый интерфейс для всех систем
+        /// @details Системы должны наследоваться от этого интерфейса и реализовывать метод update
+        class ISystem {
+        public:
+            virtual ~ISystem() = default;
+
+            /// @brief Обновление состояния системы
+            /// @param deltaTime Время, прошедшее с предыдущего обновления (в секундах)
+            /// @details Вызывается каждый кадр для обновления логики системы
+            virtual void update(float deltaTime) = 0;
+
+            /// @brief Флаг активности системы.
+            /// @details Если true - система обновляется, если false - пропускается
+            bool enabled = true;
+        };
+    }
 }
