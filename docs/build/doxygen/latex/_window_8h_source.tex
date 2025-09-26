@@ -1,5 +1,5 @@
 \doxysection{Window.\+h}
-\hypertarget{_window_8h_source}{}\label{_window_8h_source}\index{C:/Users/Admin/source/repos/PrismEngine/src/Window.h@{C:/Users/Admin/source/repos/PrismEngine/src/Window.h}}
+\hypertarget{_window_8h_source}{}\label{_window_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h}}
 \mbox{\hyperlink{_window_8h}{См. документацию.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
@@ -13,122 +13,89 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SDL\_vulkan.h>}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}\ }
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <set>}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1view}{view}}\ \{}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<const\ char*>\ \mbox{\hyperlink{namespaceprism_1_1view_a5e08683d7e148199c9e82e1382ca3f97}{validationLayers}}\ =\ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}VK\_LAYER\_KHRONOS\_validation"{}}}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<const\ char*>\ \mbox{\hyperlink{namespaceprism_1_1view_aad0a33fb229c69df767196676a0bb441}{deviceExtensions}}\ =\ \{}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_KHR\_SWAPCHAIN\_EXTENSION\_NAME}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices}{QueueFamilyIndices}}\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ \mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices_a9850754d20bfa6fda8ec34d6197630b0}{graphicsFamily}};}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ \mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices_aa84d262b22d58e73295a7ad73ab17ca3}{presentFamily}};}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices_afcb56ae02ff571b22da0cf6a4a59578a}{isComplete}}()\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices_a9850754d20bfa6fda8ec34d6197630b0}{graphicsFamily}}.has\_value()\ \&\&\ \mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices_aa84d262b22d58e73295a7ad73ab17ca3}{presentFamily}}.has\_value();}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{logger.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{init_8h}{init.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1render}{render}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}(\mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}\&\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ac8d189427c5ab1b7f7d5a8e6a17c9036}{operator=}}(\mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_a502990af2c873d6b9dffb2855e55989d}{Window}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}\&\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a3df97713b0e4a4aae89f407b7d7976b9}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Конструкторы\ ===}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ Uint32\ sdlFlags);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keyword}{const}\ std::string\&\ iconPath);}
 \DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}}\ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Конструкторы\ ===}}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ Uint32\ sdlFlags);}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keyword}{const}\ std::string\&\ iconPath);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Специальные\ конструкторы}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a9e9f63bec9bbbcb78a8df282da869a13}{CreateCentered}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ minWidth,\ \textcolor{keywordtype}{int}\ minHeight,\ \textcolor{keywordtype}{int}\ maxWidth,\ \textcolor{keywordtype}{int}\ maxHeight);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Деструктор\ ===}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_acd645c0704f49907ec4f8a35d22ad300}{\string~Window}}();}
 \DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Специальные\ конструкторы}}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a5e4bd28cd96622e8b3b13e57778ebb8b}{CreateCentered}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ minWidth,\ \textcolor{keywordtype}{int}\ minHeight,\ \textcolor{keywordtype}{int}\ maxWidth,\ \textcolor{keywordtype}{int}\ maxHeight);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Деструктор\ ===}}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1view_1_1_window_aa380520df5902e4c2f52dbd7486d65b8}{\string~Window}}();}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Управление\ окном\ ===}}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a5cf935efd740352ab3ff7ebee06e7254}{getTitle}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_adfe7fd34bbb853a8ac64ca0b5a68cadd}{setTitle}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title);}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab9f80b6a4d67e91bb8454a6e45b00c6a}{getWidth}}();}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a45ff9b145b3fdd721de6ae4a7541f0c2}{getHeight}}();}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a80f7ecc7488b3a75da4ac2b45895ae2e}{getSize}}(\textcolor{keywordtype}{int}*\ width,\ \textcolor{keywordtype}{int}*\ height);}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a29d789115d706e4f5bd98448cdae1108}{setWidth}}(\textcolor{keywordtype}{int}\ width);}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ac2d1238a607bf29ac672870ebf9f73cb}{setHeight}}(\textcolor{keywordtype}{int}\ height);}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a9eddda4bbcacea440786c2ace67f2a16}{setSize}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Режимы\ окна\ ===}}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a000dbd1aaf3338843829891b00de6cef}{setFullscreen}}(\textcolor{keywordtype}{bool}\ enabled);}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_aef39954d735b1762f1d4179a9f08d6e4}{setBorderless}}(\textcolor{keywordtype}{bool}\ enabled);}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a064fdb06b7036f1dacaa110e6e0007db}{setResizable}}(\textcolor{keywordtype}{bool}\ enabled);}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a0e401cb1e3912c8e2394698dfdda2aeb}{setGrabMouse}}(\textcolor{keywordtype}{bool}\ enabled);}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a4d340a4f8ec13659938a2e53d7c479d0}{isFullscreen}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a0543c7f97e4d2ef79be90a0daab7976c}{isBorderless}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a0fcefa88943a843cc1cb79c8f281c58f}{isResizable}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a916d1534c5118991329ac972b841c9b5}{isGrabMouse}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Позиция\ и\ размер\ ===}}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_af46aa597947fb1e042ae20f744b3a785}{setPosition}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a2762ec845f95405e8798107b8de8835b}{getPosition}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a6b100e90fbe4904d23bcac79921fd45b}{centerWindow}}();}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a63072d9ec3267b92f28bc9559aa68907}{setMinSize}}(\textcolor{keywordtype}{int}\ minWidth,\ \textcolor{keywordtype}{int}\ minHeight);}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a3682515a8b78f38e49bc00ef351d1e91}{setMaxSize}}(\textcolor{keywordtype}{int}\ maxWidth,\ \textcolor{keywordtype}{int}\ maxHeight);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Управление\ окном\ ===}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a661ca497c04a9cb449ab2fe9fbed3a1d}{getTitle}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_acdd4f7425fb12df92ca18ff9db181e12}{setTitle}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ae5bf309d8ccd12ef502310d2309df22a}{getWidth}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad0be25effa227b7c8863f74eb9c345ed}{getHeight}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_acad9cf0884d13bb996d161fb741a27cf}{getSize}}(\textcolor{keywordtype}{int}*\ width,\ \textcolor{keywordtype}{int}*\ height);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_aefafd2342185404f0a3cfc68a47091dc}{setWidth}}(\textcolor{keywordtype}{int}\ width);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a73775ef15335e2924e7538e72c499d6b}{setHeight}}(\textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a00badb3a468b50736e8f2a94076fad64}{setSize}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Режимы\ окна\ ===}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_aa9777031fdbe6e2d7decd15d306c5195}{setFullscreen}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a1bcc059d6c6728ae0f21e49f277a6856}{setBorderless}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_afc4b812de25c228decae998c74b72ac9}{setResizable}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a71bfd120a906b926bcfc2e9df6b27ea4}{setGrabMouse}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_adfc25e1606ec45bc5333cd4cf5b99efe}{isFullscreen}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_aae96df68ff41a0346769969692e0b123}{isBorderless}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a91ee4de644156c2b6c79252eea7431fe}{isResizable}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_aef916de46513d7c1837dad64c969bbf7}{isGrabMouse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Позиция\ и\ размер\ ===}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a9af3ba46d2a2817b54b389b657be7b1a}{setPosition}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a3e1d19beae96a7f317bbf2da9f92750c}{getPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ae3f3021bb43a76b5808bc4bc89007a29}{centerWindow}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_afa2c304374a6e1dcfc81ae06a006873e}{setMinSize}}(\textcolor{keywordtype}{int}\ minWidth,\ \textcolor{keywordtype}{int}\ minHeight);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ab90cba28068a5b17b695c6ecf1aea6de}{setMaxSize}}(\textcolor{keywordtype}{int}\ maxWidth,\ \textcolor{keywordtype}{int}\ maxHeight);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ События\ и\ рендеринг\ ===}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a4418e9f03d9a2529617edb9b43347a4a}{shouldClose}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_aafd2531eb1713aa544d877e4777efd83}{setCloseRequested}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a87a6c5971d1ccff29f8303818442e35e}{handleEvents}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a3e49d69c6a6e7edb12d74203a972553b}{clear}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ae4a0e367be25a53034ef6e39ef95c9a0}{update}}();}
+\DoxyCodeLine{00073\ }
 \DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ События\ и\ рендеринг\ ===}}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a52a4884a96c2dbb938c23b4bafef341d}{shouldClose}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a95715b5d073f7a38592f3a344be48743}{setCloseRequested}}(\textcolor{keywordtype}{bool}\ value);}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab4f40d8f9f44ff9e6f5310ba7cb3500d}{handleEvents}}();}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ad904abdf14e9eb6e3f853763c7f06faf}{clear}}();}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_aaec31f6c1a24777d4ce31811ef3d2050}{update}}();}
-\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Дополнительные\ методы\ ===}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_af0547d7addea41c1f522c8f242eae970}{destroy}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a30911b434e086b05fb34ca559b6c346f}{setSDLInitialized}}(\textcolor{keywordtype}{bool}\ initialized)\ \{\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a5d62e642468dde7e2ea4d25618ce5b85}{s\_sdlInitialized}}\ =\ initialized;\ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_Window*\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a80114ce20353fd9404814dba2fb343bc}{sdlWindow}};}
 \DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Дополнительные\ методы\ ===}}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a7e7ab6881f1847d75494d4e751c5826e}{destroy}}();}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a0ac1c3fd06ab0d3b1582ac9c448a161c}{setSDLInitialized}}(\textcolor{keywordtype}{bool}\ initialized)\ \{\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab54c30367a0c4d0630df18dab81e0c21}{s\_sdlInitialized}}\ =\ initialized;\ \}}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Vulkan\ методы\ ===}}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a5189f4eb8214086bed7037cdae2ffd89}{vulkanInut}}();}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a06e21fda269f7b8242de7ec8c5310e8d}{createInstance}}();}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a7bb96f10739921534995f7e0e2a0360f}{pickPhysicalDevice}}();}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a76dc16248ebd56b8787302654689aa08}{isDeviceSuitable}}(VkPhysicalDevice\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}});}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_af18daa601490652e0bc0434b13cabb4f}{checkDeviceExtensionSupport}}(VkPhysicalDevice\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}});}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00096\ }
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#ifdef\ NDEBUG}}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a24fd09bbf7871e2448af8db4471879fe}{enableValidationLayers}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a24fd09bbf7871e2448af8db4471879fe}{enableValidationLayers}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab54c30367a0c4d0630df18dab81e0c21}{s\_sdlInitialized}};}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_Window*\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a376baefea36091e57fa85ea6d4083dba}{m\_sdlWindow}};}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a4565b56a9f438b6c87c9f262e8848fa0}{m\_isDestroyed}};}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a73b38623bf14708bf5ac9602d1ce684b}{m\_windowMinimized}}\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Флаг\ минимизации\ окна}}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Внутренний\ конструктор\ для\ делегирования}}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab37a7db3c8ac082958cbf1cc76c53232}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ Uint32\ sdlFlags);}
-\DoxyCodeLine{00111\ }
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ VkInstance\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a00ee05d32648685bb74fba379937ba0a}{instance}};}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ VkPhysicalDevice\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a70e49b67dea0ee45f4d52e4ebb03db7e}{physicalDevice}};}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ VkDevice\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}};}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ VkQueue\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a9b0044913b1df68617169565b85e5cae}{graphicsQueue}};}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ VkSurfaceKHR\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ada7a56e2c924860af9187e3994c88e31}{surface}};}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ VkQueue\ \mbox{\hyperlink{classprism_1_1view_1_1_window_af508535cfe4d6904d01396d15ee0a91b}{presentQueue}};}
-\DoxyCodeLine{00118\ }
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a71ddbebd98846cd305ba67fd8f3f3ef5}{rateDeviceSuitability}}(VkPhysicalDevice\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}});}
-\DoxyCodeLine{00120\ }
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1view_1_1_queue_family_indices}{QueueFamilyIndices}}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_addfe6172e6af7dabf1cb8bdd5f60655e}{findQueueFamilies}}(VkPhysicalDevice\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a566b289231e8ab2506bccdd53a9b84f3}{device}});}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a85ae040c045e6e1d57e79ca5fd2b42c3}{createLogicalDevice}}();}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_a244e6e0144fe90f9604452a1cb515cea}{createSurface}}();}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00125\ }
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1view_1_1_window_ab54c30367a0c4d0630df18dab81e0c21}{Window::s\_sdlInitialized}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00127\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ view}}
-\DoxyCodeLine{00128\ \}\ \textcolor{comment}{//\ namespace\ prism}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ состояния}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a41165d8c62416df762c8d032abce8c42}{windowResized}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad3b0fdd480cc17c7d628bd32f1a2a24c}{windowMinimized}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_a5d62e642468dde7e2ea4d25618ce5b85}{s\_sdlInitialized}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1render_1_1_window_af723b1149e1bb2a1cae99bd22466edec}{m\_isDestroyed}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Внутренний\ конструктор\ для\ делегирования}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1render_1_1_window_ad2586f1bbadf4e7fed2e63f6164f96cd}{Window}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ Uint32\ sdlFlags);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00094\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ render}}
+\DoxyCodeLine{00095\ \}\ \textcolor{comment}{//\ namespace\ prism}}
 
 \end{DoxyCode}

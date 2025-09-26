@@ -11,7 +11,7 @@
         <name>nextEntityId</name>
         <qualifiedname>prism::scene::EntityManager::nextEntityId</qualifiedname>
         <briefdescription>
-<para>Следующий доступный идентификатор сущности </para>
+<para>РЎР»РµРґСѓСЋС‰РёР№ РґРѕСЃС‚СѓРїРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -26,7 +26,7 @@
         <name>freeList</name>
         <qualifiedname>prism::scene::EntityManager::freeList</qualifiedname>
         <briefdescription>
-<para>Очередь свободных идентификаторов для повторного использования </para>
+<para>РћС‡РµСЂРµРґСЊ СЃРІРѕР±РѕРґРЅС‹С… РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РґР»СЏ РїРѕРІС‚РѕСЂРЅРѕРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -57,12 +57,12 @@
         <name>createEntity</name>
         <qualifiedname>prism::scene::EntityManager::createEntity</qualifiedname>
         <briefdescription>
-<para>Создает новую сущность. </para>
+<para>РЎРѕР·РґР°РµС‚ РЅРѕРІСѓСЋ СЃСѓС‰РЅРѕСЃС‚СЊ </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>Идентификатор созданной сущности</para>
+<para><simplesect kind="return"><para>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРѕР·РґР°РЅРЅРѕР№ СЃСѓС‰РЅРѕСЃС‚Рё</para>
 </simplesect>
-Использует свободные ID из пула при наличии, иначе генерирует новый </para>
+РСЃРїРѕР»СЊР·СѓРµС‚ СЃРІРѕР±РѕРґРЅС‹Рµ ID РёР· РїСѓР»Р° РїСЂРё РЅР°Р»РёС‡РёРё, РёРЅР°С‡Рµ РіРµРЅРµСЂРёСЂСѓРµС‚ РЅРѕРІС‹Р№ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -79,7 +79,7 @@
           <declname>entityId</declname>
         </param>
         <briefdescription>
-<para>Удаляет сущность и освобождает ее ID. </para>
+<para>РЈРґР°Р»СЏРµС‚ СЃСѓС‰РЅРѕСЃС‚СЊ Рё РѕСЃРІРѕР±РѕР¶РґР°РµС‚ РµРµ ID. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -87,13 +87,13 @@
 <parametername>entityId</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Идентификатор сущности для удаления </para>
+<para>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё РґР»СЏ СѓРґР°Р»РµРЅРёСЏ </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>true если сущность успешно удалена, false если ID невалиден</para>
+<simplesect kind="return"><para>true РµСЃР»Рё СЃСѓС‰РЅРѕСЃС‚СЊ СѓСЃРїРµС€РЅРѕ СѓРґР°Р»РµРЅР°, false РµСЃР»Рё ID РЅРµРІР°Р»РёРґРµРЅ</para>
 </simplesect>
-Освобожденный ID помещается в пул для повторного использования </para>
+РћСЃРІРѕР±РѕР¶РґРµРЅРЅС‹Р№ ID РїРѕРјРµС‰Р°РµС‚СЃСЏ РІ РїСѓР» РґР»СЏ РїРѕРІС‚РѕСЂРЅРѕРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -110,7 +110,7 @@
           <declname>entityId</declname>
         </param>
         <briefdescription>
-<para>Проверяет валидность идентификатора сущности </para>
+<para>РџСЂРѕРІРµСЂСЏРµС‚ РІР°Р»РёРґРЅРѕСЃС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР° СЃСѓС‰РЅРѕСЃС‚Рё </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -118,11 +118,11 @@
 <parametername>entityId</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Идентификатор сущности для проверки </para>
+<para>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё РґР»СЏ РїСЂРѕРІРµСЂРєРё </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>true если сущность существует и валидна, false в противном случае </para>
+<simplesect kind="return"><para>true РµСЃР»Рё СЃСѓС‰РЅРѕСЃС‚СЊ СЃСѓС‰РµСЃС‚РІСѓРµС‚ Рё РІР°Р»РёРґРЅР°, false РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -132,10 +132,10 @@
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Менеджер для создания и управления сущностями </para>
+<para>РњРµРЅРµРґР¶РµСЂ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ Рё СѓРїСЂР°РІР»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚СЏРјРё </para>
     </briefdescription>
     <detaileddescription>
-<para>Обеспечивает создание, удаление и валидацию сущностей с использованием пула идентификаторов </para>
+<para>РћР±РµСЃРїРµС‡РёРІР°РµС‚ СЃРѕР·РґР°РЅРёРµ, СѓРґР°Р»РµРЅРёРµ Рё РІР°Р»РёРґР°С†РёСЋ СЃСѓС‰РЅРѕСЃС‚РµР№ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РїСѓР»Р° РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ </para>
     </detaileddescription>
     <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" line="9" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" bodystart="10" bodyend="36"/>
     <listofallmembers>

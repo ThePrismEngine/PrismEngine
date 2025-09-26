@@ -2,7 +2,7 @@
 \hypertarget{classprism_1_1scene_1_1_i_system}{}\label{classprism_1_1scene_1_1_i_system}\index{prism::scene::ISystem@{prism::scene::ISystem}}
 
 
-Базовый интерфейс для всех систем  
+Р‘Р°Р·РѕРІС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РІСЃРµС… СЃРёСЃС‚РµРј  
 
 
 
@@ -21,18 +21,18 @@
 virtual \mbox{\hyperlink{classprism_1_1scene_1_1_i_system_a3a7fc6382464d9b1fc94f95eb4dda159}{\texorpdfstring{$\sim$}{\string~}\+ISystem}} ()=default
 \item 
 virtual void \mbox{\hyperlink{classprism_1_1scene_1_1_i_system_a406b867d27b268665a6cc8d82c740f68}{update}} (float delta\+Time)=0
-\begin{DoxyCompactList}\small\item\em Обновление состояния системы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em РћР±РЅРѕРІР»РµРЅРёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃРёСЃС‚РµРјС‹ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{РћС‚РєСЂС‹С‚С‹Рµ Р°С‚СЂРёР±СѓС‚С‹}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classprism_1_1scene_1_1_i_system_a7c2ea1d298dac0b99b6a83af5ae26b93}{enabled}} = true
-\begin{DoxyCompactList}\small\item\em Флаг активности системы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Р¤Р»Р°Рі Р°РєС‚РёРІРЅРѕСЃС‚Рё СЃРёСЃС‚РµРјС‹. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
-Базовый интерфейс для всех систем 
+Р‘Р°Р·РѕРІС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РІСЃРµС… СЃРёСЃС‚РµРј 
 
-Системы должны наследоваться от этого интерфейса и реализовывать метод update 
+РЎРёСЃС‚РµРјС‹ РґРѕР»Р¶РЅС‹ РЅР°СЃР»РµРґРѕРІР°С‚СЊСЃСЏ РѕС‚ СЌС‚РѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР° Рё СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ РјРµС‚РѕРґ update 
 
 \label{doc-constructors}
 \Hypertarget{classprism_1_1scene_1_1_i_system_doc-constructors}
@@ -56,14 +56,14 @@ virtual void prism\+::scene\+::\+ISystem\+::update (\begin{DoxyParamCaption}\ite
 
 
 
-Обновление состояния системы. 
+РћР±РЅРѕРІР»РµРЅРёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃРёСЃС‚РµРјС‹ 
 
 
 \begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
-{\em delta\+Time} & Время, прошедшее с предыдущего обновления (в секундах)\\
+{\em delta\+Time} & Р’СЂРµРјСЏ, РїСЂРѕС€РµРґС€РµРµ СЃ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ (РІ СЃРµРєСѓРЅРґР°С…)\\
 \hline
 \end{DoxyParams}
-Вызывается каждый кадр для обновления логики системы 
+Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєР°Р¶РґС‹Р№ РєР°РґСЂ РґР»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ Р»РѕРіРёРєРё СЃРёСЃС‚РµРјС‹ 
 
 Р—Р°РјРµС‰Р°РµС‚СЃСЏ РІ \mbox{\hyperlink{classprism_1_1scene_1_1_render_system_ae28dd1ba57114dfacf9ce65f8aeff5a9}{prism\+::scene\+::\+Render\+System}}.
 
@@ -80,9 +80,9 @@ bool prism\+::scene\+::\+ISystem\+::enabled = true}
 
 
 
-Флаг активности системы. 
+Р¤Р»Р°Рі Р°РєС‚РёРІРЅРѕСЃС‚Рё СЃРёСЃС‚РµРјС‹. 
 
-Если true -\/ система обновляется, если false -\/ пропускается 
+Р•СЃР»Рё true -\/ СЃРёСЃС‚РµРјР° РѕР±РЅРѕРІР»СЏРµС‚СЃСЏ, РµСЃР»Рё false -\/ РїСЂРѕРїСѓСЃРєР°РµС‚СЃСЏ 
 
 РћР±СЉСЏРІР»РµРЅРёСЏ Рё РѕРїРёСЃР°РЅРёСЏ С‡Р»РµРЅРѕРІ РєР»Р°СЃСЃР° РЅР°С…РѕРґСЏС‚СЃСЏ РІ С„Р°Р№Р»Рµ\+:\begin{DoxyCompactItemize}
 \item 

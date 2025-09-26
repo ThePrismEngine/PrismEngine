@@ -69,7 +69,7 @@
           <declname>deltaTime</declname>
         </param>
         <briefdescription>
-<para>Обновление состояния системы. </para>
+<para>РћР±РЅРѕРІР»РµРЅРёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃРёСЃС‚РµРјС‹ </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -77,11 +77,11 @@
 <parametername>deltaTime</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Время, прошедшее с предыдущего обновления (в секундах)</para>
+<para>Р’СЂРµРјСЏ, РїСЂРѕС€РµРґС€РµРµ СЃ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ (РІ СЃРµРєСѓРЅРґР°С…)</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-Вызывается каждый кадр для обновления логики системы </para>
+Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєР°Р¶РґС‹Р№ РєР°РґСЂ РґР»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ Р»РѕРіРёРєРё СЃРёСЃС‚РµРјС‹ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

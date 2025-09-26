@@ -11,7 +11,7 @@
         <name>systems</name>
         <qualifiedname>prism::scene::SystemManager::systems</qualifiedname>
         <briefdescription>
-<para>Массив зарегистрированных систем </para>
+<para>РњР°СЃСЃРёРІ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… СЃРёСЃС‚РµРј </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -56,7 +56,7 @@
           <declname>args</declname>
         </param>
         <briefdescription>
-<para>Регистрирует новую систему в менеджере. </para>
+<para>Р РµРіРёСЃС‚СЂРёСЂСѓРµС‚ РЅРѕРІСѓСЋ СЃРёСЃС‚РµРјСѓ РІ РјРµРЅРµРґР¶РµСЂРµ. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="templateparam"><parameteritem>
@@ -64,7 +64,7 @@
 <parametername>T</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Тип системы (должен быть производным от <ref refid="classprism_1_1scene_1_1_i_system" kindref="compound">ISystem</ref>). </para>
+<para>РўРёРї СЃРёСЃС‚РµРјС‹ (РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїСЂРѕРёР·РІРѕРґРЅС‹Рј РѕС‚ <ref refid="classprism_1_1scene_1_1_i_system" kindref="compound">ISystem</ref>). </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -72,7 +72,7 @@
 <parametername>Args</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Типы аргументов для конструктора системы. </para>
+<para>РўРёРїС‹ Р°СЂРіСѓРјРµРЅС‚РѕРІ РґР»СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° СЃРёСЃС‚РµРјС‹. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -81,13 +81,13 @@
 <parametername>args</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Аргументы для передачи конструктору системы. </para>
+<para>РђСЂРіСѓРјРµРЅС‚С‹ РґР»СЏ РїРµСЂРµРґР°С‡Рё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂСѓ СЃРёСЃС‚РµРјС‹. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Идентификатор зарегистрированной системы.</para>
+<simplesect kind="return"><para>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅРѕР№ СЃРёСЃС‚РµРјС‹.</para>
 </simplesect>
-Создает экземпляр системы и добавляет его в список управления </para>
+РЎРѕР·РґР°РµС‚ СЌРєР·РµРјРїР»СЏСЂ СЃРёСЃС‚РµРјС‹ Рё РґРѕР±Р°РІР»СЏРµС‚ РµРіРѕ РІ СЃРїРёСЃРѕРє СѓРїСЂР°РІР»РµРЅРёСЏ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -104,7 +104,7 @@
           <declname>systemId</declname>
         </param>
         <briefdescription>
-<para>Включает систему по идентификатору. </para>
+<para>Р’РєР»СЋС‡Р°РµС‚ СЃРёСЃС‚РµРјСѓ РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -112,7 +112,7 @@
 <parametername>systemId</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Идентификатор системы, которую нужно включить. </para>
+<para>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРёСЃС‚РµРјС‹, РєРѕС‚РѕСЂСѓСЋ РЅСѓР¶РЅРѕ РІРєР»СЋС‡РёС‚СЊ. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -133,7 +133,7 @@
           <declname>systemId</declname>
         </param>
         <briefdescription>
-<para>Выключает систему по идентификатору. </para>
+<para>Р’С‹РєР»СЋС‡Р°РµС‚ СЃРёСЃС‚РµРјСѓ РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -141,7 +141,7 @@
 <parametername>systemId</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Идентификатор системы, которую нужно выключить. </para>
+<para>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРёСЃС‚РµРјС‹, РєРѕС‚РѕСЂСѓСЋ РЅСѓР¶РЅРѕ РІС‹РєР»СЋС‡РёС‚СЊ. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -162,7 +162,7 @@
           <declname>deltaTime</declname>
         </param>
         <briefdescription>
-<para>Обновляет все активные системы. </para>
+<para>РћР±РЅРѕРІР»СЏРµС‚ РІСЃРµ Р°РєС‚РёРІРЅС‹Рµ СЃРёСЃС‚РµРјС‹ </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -170,11 +170,11 @@
 <parametername>deltaTime</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Время, прошедшее с предыдущего обновления</para>
+<para>Р’СЂРµРјСЏ, РїСЂРѕС€РµРґС€РµРµ СЃ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-Вызывает <ref refid="classprism_1_1scene_1_1_system_manager_1acfa1db8417866bfce1b77d4aa76e1a09" kindref="member">update()</ref> для всех включенных систем в порядке регистрации </para>
+Р’С‹Р·С‹РІР°РµС‚ <ref refid="classprism_1_1scene_1_1_system_manager_1acfa1db8417866bfce1b77d4aa76e1a09" kindref="member">update()</ref> РґР»СЏ РІСЃРµС… РІРєР»СЋС‡РµРЅРЅС‹С… СЃРёСЃС‚РµРј РІ РїРѕСЂСЏРґРєРµ СЂРµРіРёСЃС‚СЂР°С†РёРё </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -182,10 +182,10 @@
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Менеджер систем для регистрации, включения/выключения и обновления систем. </para>
+<para>РњРµРЅРµРґР¶РµСЂ СЃРёСЃС‚РµРј РґР»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё, РІРєР»СЋС‡РµРЅРёСЏ/РІС‹РєР»СЋС‡РµРЅРёСЏ Рё РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРёСЃС‚РµРј. </para>
     </briefdescription>
     <detaileddescription>
-<para>Управляет коллекцией систем, обновляя их в порядке регистрации. </para>
+<para>РЈРїСЂР°РІР»СЏРµС‚ РєРѕР»Р»РµРєС†РёРµР№ СЃРёСЃС‚РµРј, РѕР±РЅРѕРІР»СЏСЏ РёС… РІ РїРѕСЂСЏРґРєРµ СЂРµРіРёСЃС‚СЂР°С†РёРё. </para>
     </detaileddescription>
     <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" line="11" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" bodystart="12" bodyend="45"/>
     <listofallmembers>

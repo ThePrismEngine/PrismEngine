@@ -2,11 +2,78 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
   <compounddef id="namespaceprism" kind="namespace" language="C++">
     <compoundname>prism</compoundname>
+    <innerclass refid="structprism_1_1_prism_info" prot="public">prism::PrismInfo</innerclass>
+    <innerclass refid="structprism_1_1_prism_version" prot="public">prism::PrismVersion</innerclass>
+    <innerclass refid="structprism_1_1_version" prot="public">prism::Version</innerclass>
     <innernamespace refid="namespaceprism_1_1logger">prism::logger</innernamespace>
     <innernamespace refid="namespaceprism_1_1math">prism::math</innernamespace>
-    <innernamespace refid="namespaceprism_1_1view">prism::view</innernamespace>
+    <innernamespace refid="namespaceprism_1_1_p_g_c">prism::PGC</innernamespace>
+    <innernamespace refid="namespaceprism_1_1render">prism::render</innernamespace>
+    <innernamespace refid="namespaceprism_1_1scene">prism::scene</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t prism::Mesh</definition>
+        <argsstring></argsstring>
+        <name>Mesh</name>
+        <qualifiedname>prism::Mesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/mesh.h" line="5" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/mesh.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceprism_1a0bb25671f356c934c5602ac140b29a3d" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t prism::Texture</definition>
+        <argsstring></argsstring>
+        <name>Texture</name>
+        <qualifiedname>prism::Texture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/texture.h" line="7" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/texture.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceprism_1a0894323454f28ab68c93aa1039a08672" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::isInit</definition>
+        <argsstring></argsstring>
+        <name>isInit</name>
+        <qualifiedname>prism::isInit</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/init.h" line="5" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/init.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprism_1ab88df87c3fd3b1403a69f7b6e8cb6128" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceprism_1a0bb25671f356c934c5602ac140b29a3d" kindref="member">Texture</ref></type>
+        <definition>const Texture prism::INVALID_TEXTURE</definition>
+        <argsstring></argsstring>
+        <name>INVALID_TEXTURE</name>
+        <qualifiedname>prism::INVALID_TEXTURE</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/texture.h" line="8" column="15" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/texture.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="func">
-      <memberdef kind="function" id="namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void prism::init</definition>
         <argsstring>()</argsstring>
@@ -18,13 +85,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.h" line="4" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.cpp" bodystart="4" bodyend="7" declfile="C:/Users/Admin/source/repos/PrismEngine/src/PrismEngine.h" declline="4" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/init.h" line="6" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/init.h" bodystart="6" bodyend="9"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp" line="3" column="1"/>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/base.h" line="18" column="1"/>
   </compounddef>
 </doxygen>

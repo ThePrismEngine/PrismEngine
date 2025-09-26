@@ -15,6 +15,111 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fac996121b2cdab372dbe567bdf3338409" prot="public">
+          <name>FAILED_TO_CREATE_VK_INSTANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fadd63255ee65e45ee2b61316ab1decf3c" prot="public">
+          <name>FAILED_TO_CREATE_WINDOW_SURFACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fab43344927fcdc1074a456a237d2b1ce3" prot="public">
+          <name>PRISM_ENGINE_NOT_INITIALIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa860eb54520a554a78bd21c7293923fb1" prot="public">
+          <name>WINDOW_INSTANCE_CREATE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fad8313c32829b7632ea0145d413618a06" prot="public">
+          <name>NOT_CALL_CLEANUP_IN_PGC_CORE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989facd5d0e77c82518803520ad29a49bf3b8" prot="public">
+          <name>SDL_VULKAN_EXTENSIONS_COUNT_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa685d03e7509232a071e84689c6e817cd" prot="public">
+          <name>VULKAN_VALIDATION_LAYERS_UNAVAILABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa8a698cb421b3e29da20940a7e5a84103" prot="public">
+          <name>VULKAN_DEBUG_MESSENGER_SETUP_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa3368d5c98c0566bbab7fde79e49a1d94" prot="public">
+          <name>VULKAN_NO_GPU_SUPPORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fabdbdbec21fe7a2864315caec4929194f" prot="public">
+          <name>VULKAN_NO_SUITABLE_GPU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa3b0899a81586e97eff0745fff0134a6a" prot="public">
+          <name>VULKAN_LOGICAL_DEVICE_CREATION_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fae3ded1bafa3ccea6fca5129abad7aa6c" prot="public">
+          <name>VULKAN_SWAP_CHAIN_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa5a2ca8d747770ea2ae4add296c5a4b7f" prot="public">
+          <name>FAILED_TO_OPEN_FILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989facfd53859bdd7926af37ee236293bbcc1" prot="public">
+          <name>FAILED_TO_DETERMINE_FILE_SIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989faac46bf3c7fe3caec13c2671c656317e6" prot="public">
+          <name>FAILED_TO_READ_FILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <briefdescription>
 <para>Перечисление ошибок движка </para>
         </briefdescription>
@@ -23,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" line="14" column="5" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" bodystart="14" bodyend="16"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" line="14" column="5" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" bodystart="14" bodyend="31"/>
       </memberdef>
       <memberdef kind="enum" id="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856" prot="public" static="no" strong="yes">
         <type></type>
@@ -91,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" line="22" column="5" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" bodystart="22" bodyend="29"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" line="37" column="5" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" bodystart="37" bodyend="44"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -122,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="33" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="33" bodyend="37" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="35" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="48" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="48" bodyend="52" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="50" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1a0f5071ef54b1884256b312cec14e910d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -153,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="39" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="39" bodyend="62" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="42" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="54" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="54" bodyend="77" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="57" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1aea6335133a1d9d4d190d24737b4d12cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="64" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="64" bodyend="74" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="48" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="79" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="79" bodyend="89" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="63" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1a011c76bbfb6104919163e337e828a26e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -210,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="76" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="76" bodyend="80" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="55" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="91" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="91" bodyend="95" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="70" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -252,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="82" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="82" bodyend="92" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="62" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="97" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="97" bodyend="107" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="77" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1af4a740cd72b4f7684f4466728cf548d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,7 +386,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="94" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="94" bodyend="94" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="68" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="109" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="109" bodyend="109" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="83" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1a3ce9ded53e563d7894a199406899a18c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -310,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="95" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="95" bodyend="95" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="74" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="110" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="110" bodyend="110" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="89" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -339,7 +444,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="96" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="96" bodyend="96" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="80" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="111" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="111" bodyend="111" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="95" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1a95789fad40cdbf5ca47baef4c355c1e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -368,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="97" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="97" bodyend="97" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="86" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="112" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="112" bodyend="112" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="101" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1ae5db974c5397849b8fc4230c9147906d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -397,7 +502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="98" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="98" bodyend="98" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="92" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="113" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="113" bodyend="113" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="107" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1ab7af2a1862659afcddc003e975de9734" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -426,7 +531,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="99" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="99" bodyend="99" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="98" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="114" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="114" bodyend="114" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="113" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::optional&lt; <ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f" kindref="member">Error</ref> &gt;</type>
@@ -444,7 +549,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="100" column="19" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="100" bodyend="103" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="104" declcolumn="19"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="115" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="115" bodyend="118" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="119" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1a95da0e71a7281fed4c011c2dd58ba1af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -464,7 +569,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="105" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="105" bodyend="107" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="111" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="120" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="120" bodyend="122" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="126" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1aa50f2608949bcbf87806915fb04c4abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -497,7 +602,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="109" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="109" bodyend="111" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="119" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="124" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="124" bodyend="126" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="134" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1logger_1a7e98e993d5b16cdd4d5d39c6f2797967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -515,13 +620,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="113" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" bodystart="113" bodyend="115" declfile="C:/Users/Admin/source/repos/PrismEngine/src/logger.h" declline="125" declcolumn="10"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="128" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" bodystart="128" bodyend="130" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h" declline="140" declcolumn="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Admin/source/repos/PrismEngine/src/logger.cpp" line="3" column="1"/>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.cpp" line="3" column="1"/>
   </compounddef>
 </doxygen>

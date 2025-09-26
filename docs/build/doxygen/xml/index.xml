@@ -1,10 +1,301 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="ru">
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings" kind="struct"><name>prism::PGC::utils::AppSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings_1aef32a03b41818b8f91b2948ba33051cf" kind="variable"><name>applicationName</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings_1a454e942ece8c969ada980cc36cd9f384" kind="variable"><name>applicationVersion</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1base_1_1_base" kind="class"><name>prism::PGC::base::Base</name>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a6792acb9ae7b492590b48d6ec4a115a5" kind="variable"><name>context</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a879e0eca305bc4d05ee0dd5f68946c9d" kind="variable"><name>settings</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1ab7493519804d682d5e38803b9fafe339" kind="variable"><name>debugMessenger</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a8e779fa1c21f0cf85c6266b414450200" kind="function"><name>Base</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a5e78710df6af2bd95cbf365d6a56dd3a" kind="function"><name>init</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1ac97c049af5147002e8c6399d6eb1479c" kind="function"><name>~Base</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a9c0300069ebded997a9ab608bd18734b" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aabe93e25020c9e6387bb7d8ec9a839db" kind="function"><name>create</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aae3ea4b54eb2abb5183ab15af7123c73" kind="function"><name>createInstance</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a3c28f273f80c69439abe0f067f661692" kind="function"><name>setupDebugMessenger</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1af4e03b04645178568deb025d985d3faf" kind="function"><name>pickPhysicalDevice</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a4ad9dc34bca6ea2629b22af7ee3b7594" kind="function"><name>createSurface</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a7159217f3f0694baa2c0e5d3da2497e0" kind="function"><name>createLogicalDevice</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aeeb68987aa79cbb01f04c14be9942dd4" kind="function"><name>checkValidationLayerSupport</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a634d029f5850961ba6819d6334bbd17b" kind="function"><name>getRequiredExtensions</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a6cd1f74bdaa58779c4f7e017aa0be2f8" kind="function"><name>populateDebugMessengerCreateInfo</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1ac29f5e2a550983d3f2ec7bd9c73863de" kind="function"><name>getMaxUsableSampleCount</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a9c4f62c73bebb1a8acd7e045f52eb005" kind="function"><name>getPossibleCounts</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1af32784fe71c111c6a16d7944380e21f0" kind="function"><name>getMsaaSamples</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a4b5b95811813234f8d15ab948a7944a4" kind="function"><name>debugCallback</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config" kind="struct"><name>prism::PGC::utils::BindingConfig</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1ae555473cde6c981aa71529d4d5298061" kind="variable"><name>binding</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a397d16e41518ebeeef32622045f1c4cc" kind="variable"><name>descriptorType</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a0076a98392481b25610091f7983dab89" kind="variable"><name>descriptorCount</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a61dbb8eada8a03d5a939333174457616" kind="variable"><name>stageFlags</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a76ff6b1b02f190221df95233e56cdebd" kind="variable"><name>immutableSamplers</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_buffer_wrapper" kind="class"><name>prism::PGC::BufferWrapper</name>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kind="function"><name>createBuffer</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ae2b3ed3cddadc027dbcf687357b92dad" kind="function"><name>copyBuffer</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a99cf311cd95b3c2a94ea37886b2e7681" kind="function"><name>endSingleTimeCommands</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a476d6d005e1b9e7a19ef8d95efc25006" kind="function"><name>beginSingleTimeCommands</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a41720d6455629660a265368b4c450552" kind="function"><name>transitionImageLayout</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a5029074ed5969712c8a7b1bf9928bae6" kind="function"><name>copyBufferToImage</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a9ef9f5cb858ca4a25e773b5d62e2a0de" kind="function"><name>createVertexBuffer</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a021d6dd30688e704d4ad191bbcaaea40" kind="function"><name>createIndexBuffer</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab005ab379cc8b35a7b07abafc602e118" kind="function"><name>createUniformBuffers</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_camera_component" kind="struct"><name>prism::scene::CameraComponent</name>
+    <member refid="structprism_1_1scene_1_1_camera_component_1a526eb024a451aeeb264b4b617250d9a8" kind="variable"><name>isActive</name></member>
+    <member refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kind="variable"><name>look</name></member>
+    <member refid="structprism_1_1scene_1_1_camera_component_1a81a79c9ac6815d97e5738865639124bc" kind="variable"><name>fovy</name></member>
+    <member refid="structprism_1_1scene_1_1_camera_component_1a2a20f6f43a213b7c8c79939b24ad6868" kind="variable"><name>aspect</name></member>
+    <member refid="structprism_1_1scene_1_1_camera_component_1a6b41fc4706802499c3a6f4c274dc9f7e" kind="variable"><name>zNear</name></member>
+    <member refid="structprism_1_1scene_1_1_camera_component_1a7d58fda77459e28f65b5f47a499931a5" kind="variable"><name>zFar</name></member>
+    <member refid="structprism_1_1scene_1_1_camera_component_1a2fcf04acc5550a83af87e2545e1a857b" kind="variable"><name>useСurrentWindowAspect</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data" kind="struct"><name>prism::PGC::utils::CameraData</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1aa86ddf6f4e2fe3f72e06c15be1c1dc8c" kind="variable"><name>pos</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a517cc84de8e2e6420d0ffcf38a744a4d" kind="variable"><name>look</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a8f2580ffda7ef1cfd8c90670b0eca73f" kind="variable"><name>up</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1ac97568451475afc1ed61acfdb42d1368" kind="variable"><name>fovy</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a7a931e6d6c78bb75d05966bd4c825479" kind="variable"><name>aspect</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a0184dc6de3c9bdd30f81ba871ec1da72" kind="variable"><name>zNear</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a54614513275959cfb8064bbec8e14e25" kind="variable"><name>zFar</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1add1b529f72e631b7824a6ef8e448ec8e" kind="variable"><name>useСurrentWindowAspect</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_camera_u_b_o" kind="struct"><name>prism::PGC::CameraUBO</name>
+    <member refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a2d2efb8863870ffc74838e792e4fed34" kind="variable"><name>view</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a76a06e39169e1ce5bb6f5e8a947204df" kind="variable"><name>proj</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a043fbbaf809ef7076c046abec302139a" kind="variable"><name>viewProj</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a4086fc90287a22a756b8543a9763764d" kind="variable"><name>cameraPos</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_color" kind="struct"><name>prism::PGC::Color</name>
+    <member refid="structprism_1_1_p_g_c_1_1_color_1adfccfbc55af6496c5b3b615dc38e36b5" kind="variable"><name>r</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_color_1a4dcec896309c575542f3efc71cbd41ea" kind="variable"><name>g</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_color_1a11a7b1253206c9cef355efda689cc0c4" kind="variable"><name>b</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings" kind="struct"><name>prism::PGC::utils::ColorBlendAttachmentSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings_1ad9944069aee5486883dc44065998a23e" kind="variable"><name>blendEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings_1ad69d032b418c3f936ea0fee90c1edc12" kind="variable"><name>colorWriteMask</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings" kind="struct"><name>prism::PGC::utils::ColorBlendSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1ab7e492a8019d4f44ee3cfe1b40f2f746" kind="variable"><name>attachments</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1a40932407f280bd6aa68e7a0d74263628" kind="variable"><name>logicOpEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1aab4d4c4e9585165fdfbad1c842732090" kind="variable"><name>logicOp</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1aca3667fb6394ee7ef07da6816c40326d" kind="variable"><name>blendConstants</name></member>
+  </compound>
+  <compound refid="classprism_1_1scene_1_1_component_manager" kind="class"><name>prism::scene::ComponentManager</name>
+    <member refid="classprism_1_1scene_1_1_component_manager_1a6a1a60608eac94caea1b144d2697b5fd" kind="variable"><name>componentStorages</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1a5273dbd0f3a9fdb9ab9de36d0b53012f" kind="variable"><name>entitiesWithComponentSets</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1a6c739470f713ecd5abb532ac163b6926" kind="function"><name>ComponentManager</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1a7ee343b770cd5a1a67fd68d50bec2ca0" kind="function"><name>addComponent</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1a9e173149b5cb23f208ade28e5ee34f4d" kind="function"><name>removeComponent</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1a14aed5f1bd821d92fd91577a63cdad7f" kind="function"><name>getComponent</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1ad91853d37150f5c4add892dc7fa6fcea" kind="function"><name>getEntitiesWith</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1acffef2c762094de4bd7ca08593f8139d" kind="function"><name>getEntitiesWith</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1af84b9831cf557c0d8beb0f43ea85782c" kind="function"><name>getEntitiesWithAll</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1a207f9e235e87280a6b072f4a03d0b91b" kind="function"><name>removeAllComponents</name></member>
+    <member refid="classprism_1_1scene_1_1_component_manager_1a89b0e0805d4739180f8c826aff31aed2" kind="function"><name>getComponentStorage</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage" kind="struct"><name>prism::scene::ComponentManager::ComponentStorage</name>
+    <member refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage_1a52394866052b0bb7f1c31b1320cce844" kind="variable"><name>components</name></member>
+    <member refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage_1a34a31deec21993564366818b26628db4" kind="function"><name>removeEntity</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kind="struct"><name>prism::PGC::utils::Context</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ac9500f33456f5f1a9971b5563729eaf6" kind="variable"><name>instance</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a6e5cc346c3461cbf311815952d38ca83" kind="variable"><name>surface</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a759203e6822e3ad8a46b29672ef7b19c" kind="variable"><name>physicalDevice</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a1044c94f8ccd00b268cd85af72fd11b3" kind="variable"><name>device</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aaf2e5bd3583d87df7d204569157d98cc" kind="variable"><name>graphicsQueue</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1abad3bde0d4cfc986aa57e410b9f8b7a1" kind="variable"><name>presentQueue</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a191f1aaea47b9147fb93301ac11c8f52" kind="variable"><name>vkSwapChain</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a61c2506389c5cd06807885a98458e46c" kind="variable"><name>swapChainImageViews</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a663b57954f0090efddcdf3aeb2837861" kind="variable"><name>swapChainFramebuffers</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2a15bac8577d170c400b7c32ffdd842d" kind="variable"><name>swapChainImages</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1afdac47e49cd0ae38d95a93c33cf7ecd2" kind="variable"><name>swapChainImageFormat</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2cfd6b1fa14df88a820c0c4ebd996aaf" kind="variable"><name>swapChainExtent</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8d1b459631b7e17b99a2891ab8f37311" kind="variable"><name>depthImage</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a92659cf24ec4ece474f873cb57aa6015" kind="variable"><name>depthImageMemory</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1acef6ba561ba15d0e67809c65068e31b4" kind="variable"><name>depthImageView</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0a7c084aa2c8a0ce8ac930d8e927857b" kind="variable"><name>colorImage</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a733a1313e3fb135660fb1c4b4e18b1e7" kind="variable"><name>colorImageMemory</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a94142c5e6869a4e66cc07073d9eead4c" kind="variable"><name>colorImageView</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a26c289ae13be8830714d93d3b934ea75" kind="variable"><name>msaaSamples</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a58e40fd8040df70886377c59224adb8e" kind="variable"><name>renderPass</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1afd2091a730d8d5f697f75ab96371f9a3" kind="variable"><name>vertexBuffer</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ae9486dffb20bfc761f06ee3e4fe06860" kind="variable"><name>vertexBufferMemory</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1afdd17d23c2221d734bb42e41b3b1de3f" kind="variable"><name>indexBuffer</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a53783cccbeaa4774e8f779f00fcd77ee" kind="variable"><name>indexBufferMemory</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab6fb5ba2cb7bfe2dee1a0eb01d31ce34" kind="variable"><name>allVertices</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a7c3c5b7c6f198e9d2eaf48f9bc0b0fdb" kind="variable"><name>allIndices</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9142edd2bb4a82ff2b348eac78ab8a8c" kind="variable"><name>meshes</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1af8e9a687b9a3f5879012a8a0cfa152cf" kind="variable"><name>freeMeshIndices</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab33d085a44ff7655f167296bdcf38d58" kind="variable"><name>meshBuffersDirty</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2be303f40e36da97bc49dc434567820b" kind="variable"><name>descriptorSetLayout</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1abd8be7f7b8e01fb62e0900fa0dfc37d5" kind="variable"><name>pipelineLayout</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a420655923bdbf77125c266a039b5b99b" kind="variable"><name>graphicsPipeline</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a36dc055df91a851fb1dd07e7a6027050" kind="variable"><name>commandPool</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a135a182e81a4b833d985372444d4ef2a" kind="variable"><name>commandBuffers</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8151c42953061a2010f5b93450c96dc7" kind="variable"><name>uniformBuffers</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a65e5acfeb5a3d263007587b61148e82d" kind="variable"><name>imageAvailableSemaphores</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0c0a94f856fe6f802eb3229d9170a6fe" kind="variable"><name>renderFinishedSemaphores</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aeff088aa1c0c75e5b9a38645c10a2911" kind="variable"><name>inFlightFences</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab55fc602f6216a6486a333cdc59139f9" kind="variable"><name>currentFrame</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aa193b6790ed1658ad001a280b8c043a4" kind="variable"><name>imageIndex</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aefdb78e08e5847b3d311b923255a5de7" kind="variable"><name>wasRenderingActive</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a18e42b896ee57c92b97a1ab5a3844054" kind="variable"><name>descriptorPool</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1abbf627893291ec495b05a3150cc1f9ba" kind="variable"><name>textureDescriptorPool</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0bc0d8cc76d5fa2ca079b6cc03aa82d3" kind="variable"><name>textures</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a07aeb09f7483de2bc2d9f3fe99830a66" kind="variable"><name>freeTextureIndices</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ae43eb6e117b69646acf9db16e2ac72ce" kind="variable"><name>textureDescriptorSet</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8f459a9f17d6faf584e25a851885221a" kind="variable"><name>textureDescriptorSetLayout</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9b6351ddb73b77efe20d3264c5207e6f" kind="variable"><name>cameraData</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a26b3de428ebddb65d93918e911c037f1" kind="variable"><name>descriptorSets</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9eca9f1f2ce41389b90c17a2477df558" kind="variable"><name>MAX_FRAMES_IN_FLIGHT</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aad40d80a4e22067cd51a9a1fa0128f66" kind="variable"><name>validationLayers</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2839741dfe5060bef37fb694c51f4c72" kind="variable"><name>deviceExtensions</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a689375014bda6088bc48fc64077ecaa6" kind="variable"><name>dynamicAlignment</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a3aa659de42727b676c161ea31623bde3" kind="variable"><name>MAX_OBJECTS</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9176cc478987deb4fcc7ef8c26d768cf" kind="variable"><name>enableValidationLayers</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings" kind="struct"><name>prism::PGC::utils::DebugSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1ab0b1d1bd47de0825f3cb8fd975a22c53" kind="variable"><name>VulkanMessageSeverity</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1a389dc5fd711a81a8b6d7c824f6c32d9c" kind="variable"><name>VulkanMessageType</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1a1e88cda59742d0f0c3977b39de86a3f6" kind="variable"><name>debugDeviceSelection</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings" kind="struct"><name>prism::PGC::utils::DepthStencilSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a94862f8c4518a86a773860b0b5d5a9e8" kind="variable"><name>depthTestEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a6a06e07e1f40081595f1d5d5a3d84cb2" kind="variable"><name>depthWriteEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad800cb83732af9af3c330f7c8c870ab2" kind="variable"><name>depthCompareOp</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad7a4ce1b896097d7a3d4edb467c52e55" kind="variable"><name>depthBoundsTestEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a9d00adc23945edc546dd28483034d1fc" kind="variable"><name>minDepthBounds</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a2fcf658a19cc7e299cd6f2dd20d62156" kind="variable"><name>maxDepthBounds</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad741569ede58e6cd31a46e9108cd5922" kind="variable"><name>stencilTestEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1aa0c0f9cbde327799a4638ea19643d2d8" kind="variable"><name>front</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a6ee3cedb24a450ee5bee931dc312f34a" kind="variable"><name>back</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_descriptor_set" kind="class"><name>prism::PGC::DescriptorSet</name>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1a4c2de1f38154c6203d53628cf6de0017" kind="variable"><name>context</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1ac53524a47e476cb30f450fc9d7d28522" kind="variable"><name>settings</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1af02c958c53d395cfca76d7ce79ed0241" kind="function"><name>DescriptorSet</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1a81252e1b0c4a45d64560d45889a1f80f" kind="function"><name>init</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1aa5652a469f821ecc3c22b7f38868230e" kind="function"><name>~DescriptorSet</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1a0c97cb4460cfd61722507c4cbd3840ea" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1a4e560c4b7c5a19a2c17878517cbf5364" kind="function"><name>create</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout" kind="class"><name>prism::PGC::DescriptorSetLayout</name>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1ac53e238dc92ec4a9b8111f855c342130" kind="variable"><name>context</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1ab1b10567cc554a5107bb56e7e5eba054" kind="variable"><name>settings</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a6cb0751d3e85d87706ede028081afc92" kind="function"><name>DescriptorSetLayout</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a02dd1bc56941b0571f22eb4cb35b3a22" kind="function"><name>init</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a1f8418373647d69552a094d23e8d6b1a" kind="function"><name>~DescriptorSetLayout</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a11eb78f66ecbcc518ac1d9db39fe1a7f" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a06a81014bc8ee086e624c908038a4515" kind="function"><name>create</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a58ec7507feb2ccf58890ce1eae5eb21a" kind="function"><name>createDescriptorSetLayoutBinding</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings" kind="struct"><name>prism::PGC::utils::DescriptorSetLayoutSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings_1a1243f1fc1e4a434e592d1dbebaf912a3" kind="variable"><name>bindings</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings_1ab89f22dc01c3183cb8f2f9ad4ad0fad4" kind="variable"><name>flags</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_device_checker" kind="class"><name>prism::PGC::DeviceChecker</name>
+    <member refid="classprism_1_1_p_g_c_1_1_device_checker_1a6906a2ca41d0ad48efa5b1679afd2dc8" kind="function"><name>check</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_checker_1a584ac624d18a60cb6bab0252ac1aa71a" kind="function"><name>checkBindless</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_checker_1a2a956be65284c95af474fefff3b4c3c2" kind="function"><name>checkDeviceExtensionSupport</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings" kind="struct"><name>prism::PGC::utils::DeviceEvaluationWeightsSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1ace387992ce0ab450076cd433e2fcf7a5" kind="variable"><name>wType</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1ad274fafa7043eda5f92e0141c142de31" kind="variable"><name>wFeatures</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1a0b50de64fa7d4092209b5abd68f8370a" kind="variable"><name>wHardware</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1af0f6ff098849e7dde893ba853dbff1fb" kind="variable"><name>wApi</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_device_rater" kind="class"><name>prism::PGC::DeviceRater</name>
+    <member refid="classprism_1_1_p_g_c_1_1_device_rater_1afcaf74e7371b669c7c3719d599fcc913" kind="variable"><name>debugDeviceSelection</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_rater_1a75ec84388186457666beb97111f8a8d6" kind="function"><name>rate</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_rater_1af19dd6c0a960f9206b58d320514a7d0e" kind="function"><name>getDeviceTypeScore</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_rater_1a699b466cde759c7b2d95218bdbd7e15c" kind="function"><name>getDeviceFeatureScore</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_rater_1a65e32202617923a7d73f7ee29a8d8b08" kind="function"><name>getDeviceHardwareScore</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_rater_1ad36db9dc1f623d8835ad19bd456053c2" kind="function"><name>getDeviceApiScore</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_rater_1a8400fc54676f3b03713f80a3ddd8e428" kind="function"><name>calculateFeatureScore</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_device_score" kind="struct"><name>prism::PGC::DeviceScore</name>
+    <member refid="structprism_1_1_p_g_c_1_1_device_score_1a8c3c9d1f5091a5007a1b52539174d07c" kind="variable"><name>typeScore</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_device_score_1aecb9f00308efee2aebacc93628f02492" kind="variable"><name>featureScore</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_device_score_1a6eb475d2250a8c0b53d18e2482efdfc1" kind="variable"><name>hardwareScore</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_device_score_1a8e476bc99003b15dc0c15c54320dd5e1" kind="variable"><name>apiScore</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_device_wrapper" kind="class"><name>prism::PGC::DeviceWrapper</name>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a7e777734683993078714a50d4ecf0a6e" kind="function"><name>getDeviceProperties</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1aba678e3d2c055470b13c6c97ea53e973" kind="function"><name>getDeviceExtensionProperties</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1af917d5dc002c1e1473bc7401b8e07d0a" kind="function"><name>getDeviceMemoryProperties</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a88c9489702bce265bee70147ed98fcd2" kind="function"><name>findQueueFamilies</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1ae57c33d3319be7ebe69a85890c26959d" kind="function"><name>querySwapChainSupport</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a1d2619db4cf9fff8f2bc31bc50faa072" kind="function"><name>getDeviceFormatProperties</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a2dca5c9dabfc59451df88f96685ce185" kind="function"><name>findDepthFormat</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a63c317f0927d63bd97bb1f94a4e6768c" kind="function"><name>findMemoryType</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1ad25c1eaf42cd86e9c678b4da83ca87bb" kind="function"><name>findSupportedFormat</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings" kind="struct"><name>prism::PGC::utils::DynamicStateSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings_1a15cd1bfd4e7b651cd818bdba94814795" kind="variable"><name>dynamicStates</name></member>
+  </compound>
+  <compound refid="classprism_1_1scene_1_1_entity_manager" kind="class"><name>prism::scene::EntityManager</name>
+    <member refid="classprism_1_1scene_1_1_entity_manager_1a0b6d5b122445aff8f48ff5999262aa50" kind="variable"><name>nextEntityId</name></member>
+    <member refid="classprism_1_1scene_1_1_entity_manager_1a97fcaafd355dd916cd3a53e7b4b83c73" kind="variable"><name>freeList</name></member>
+    <member refid="classprism_1_1scene_1_1_entity_manager_1abe9a531c0cd25477ab10b8cdb0856188" kind="function"><name>EntityManager</name></member>
+    <member refid="classprism_1_1scene_1_1_entity_manager_1a0e6fd16fd8313e33f366d3bffb14b8e3" kind="function"><name>createEntity</name></member>
+    <member refid="classprism_1_1scene_1_1_entity_manager_1a64b40ac4717222997d2c577acc020687" kind="function"><name>destroyEntity</name></member>
+    <member refid="classprism_1_1scene_1_1_entity_manager_1ab5b69633034025889c6126f94cc0fde5" kind="function"><name>isEntityValid</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_feature_scores" kind="struct"><name>prism::PGC::FeatureScores</name>
+    <member refid="structprism_1_1_p_g_c_1_1_feature_scores_1a3895e76537d9b5ce027266d4413571d5" kind="variable"><name>swapchain</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_feature_scores_1a6a931c45ec12f10775b2dec48e244ad1" kind="variable"><name>raytracing</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_feature_scores_1a29e93c73a52926a3d4cd9d5140c4686e" kind="variable"><name>upscaling</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_feature_scores_1af449d8d5b0f2d3de15a4ec585106cab6" kind="variable"><name>advancedFeatures</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_graphics_pipeline" kind="class"><name>prism::PGC::GraphicsPipeline</name>
+    <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a6694572e421cfe1b3db505c08fa4d2e8" kind="variable"><name>context</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1ab8e3cd026c62a088ae05f964e6079e22" kind="variable"><name>settings</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a840fb51b60a2ea2247a701975c97764f" kind="function"><name>GraphicsPipeline</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1abab77003ea1268010cae9d8e3c2f9287" kind="function"><name>init</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a957f0d03c241b419ff96efd7c3f0e1e4" kind="function"><name>~GraphicsPipeline</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a6caad12b0bb9718a053f60c5ffe565e8" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1aaf543d56e4e21cf052c2c222415d4ecb" kind="function"><name>create</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_hardware_score" kind="struct"><name>prism::PGC::HardwareScore</name>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a99d406af4ecb587232a42d1f59f10148" kind="variable"><name>vramGB</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a99abc3e23446d45f657a21e729878bec" kind="variable"><name>shaderCores</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a47b0ca7a52afff0440ce752419f3ae1a" kind="variable"><name>clockSpeedGHz</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1acf817bbcb053be409cbb6ac575cf118a" kind="variable"><name>textureUnits</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1afd04a2c3cc10249ea64c8a408faf3bfa" kind="variable"><name>VRAM_WEIGHT</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a7a34d8960aadbe566e96332f29d90fa1" kind="variable"><name>SHADER_CORES_WEIGHT</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a08a7433f80715523c1ad93b6b0e08892" kind="variable"><name>CLOCK_SPEED_WEIGHT</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1ab293d1a7c561d7d2e19a293f0efa83ad" kind="variable"><name>REFERENCE_VRAM_GB</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1abf658d642232678048f74a2cb4da4485" kind="variable"><name>REFERENCE_SHADER_CORES</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a7b5f0ee2f5ddd9230db931255b42faf9" kind="variable"><name>REFERENCE_CLOCK_SPEED_GHZ</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage" kind="struct"><name>prism::scene::ComponentManager::IComponentStorage</name>
+    <member refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_1a8add7a07bcb46a0b1f43750bbf18afe7" kind="function"><name>~IComponentStorage</name></member>
+    <member refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_1a7a9a568a38454a2e123626f54c03355e" kind="function"><name>removeEntity</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings" kind="struct"><name>prism::PGC::utils::InputAssemblySettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings_1a2f0903faf4051d39f3e328aa7ceaf211" kind="variable"><name>topology</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings_1ab91323523e515b1758ba9c2b71430900" kind="variable"><name>primitiveRestartEnable</name></member>
+  </compound>
+  <compound refid="classprism_1_1scene_1_1_i_system" kind="class"><name>prism::scene::ISystem</name>
+    <member refid="classprism_1_1scene_1_1_i_system_1a7c2ea1d298dac0b99b6a83af5ae26b93" kind="variable"><name>enabled</name></member>
+    <member refid="classprism_1_1scene_1_1_i_system_1a3a7fc6382464d9b1fc94f95eb4dda159" kind="function"><name>~ISystem</name></member>
+    <member refid="classprism_1_1scene_1_1_i_system_1a406b867d27b268665a6cc8d82c740f68" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_look" kind="struct"><name>prism::scene::Look</name>
+    <member refid="structprism_1_1scene_1_1_look_1a684b68e3cd2118bf8a97b89a163b3498" kind="variable"><name>x</name></member>
+    <member refid="structprism_1_1scene_1_1_look_1a24e121b357bda2c5e58f71c55cbb3cd2" kind="variable"><name>y</name></member>
+    <member refid="structprism_1_1scene_1_1_look_1ad48bf86097551f962dd84b2c07b25321" kind="variable"><name>z</name></member>
+  </compound>
   <compound refid="structprism_1_1math_1_1_matrix4_x4" kind="struct"><name>prism::math::Matrix4X4</name>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a03f6ae69a0fc6e279a81bbdb1de1a4f1" kind="variable"><name>m</name></member>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a03e22f599fb64c73f5a2bdc8a6b2ed0b" kind="function"><name>print</name></member>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a92ac545d71153f230ea7c9cd083e6737" kind="function"><name>operator[]</name></member>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a48414a1a4973f0a079ad50def4a184b7" kind="function"><name>operator==</name></member>
+    <member refid="structprism_1_1math_1_1_matrix4_x4_1a7c7764b87455c5358ba152d15fba3c2d" kind="function"><name>getTransposed</name></member>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1aa37f4c9f136b9d5f686059bfc3ec09cc" kind="function"><name>makeIdentity</name></member>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a0c75732edb441e3a49d7b8211dab32d5" kind="function"><name>makeRotationX</name></member>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1abcfee1b63bcb6a95ec9e7eb00419d71d" kind="function"><name>makeRotationY</name></member>
@@ -14,10 +305,298 @@
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a2c908d0c06bf596c8399154a63a6b8c7" kind="function"><name>makeProjection</name></member>
     <member refid="structprism_1_1math_1_1_matrix4_x4_1a141ac2d3e2abffea8afb383aeec57965" kind="function"><name>Matrix_PointAt</name></member>
   </compound>
-  <compound refid="structprism_1_1view_1_1_queue_family_indices" kind="struct"><name>prism::view::QueueFamilyIndices</name>
-    <member refid="structprism_1_1view_1_1_queue_family_indices_1a9850754d20bfa6fda8ec34d6197630b0" kind="variable"><name>graphicsFamily</name></member>
-    <member refid="structprism_1_1view_1_1_queue_family_indices_1aa84d262b22d58e73295a7ad73ab17ca3" kind="variable"><name>presentFamily</name></member>
-    <member refid="structprism_1_1view_1_1_queue_family_indices_1afcb56ae02ff571b22da0cf6a4a59578a" kind="function"><name>isComplete</name></member>
+  <compound refid="structprism_1_1_p_g_c_1_1_mesh" kind="struct"><name>prism::PGC::Mesh</name>
+    <member refid="structprism_1_1_p_g_c_1_1_mesh_1aa757ca651c9dc058a7e730985c9a2d6c" kind="variable"><name>vertexOffset</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_mesh_1ac03b954fa953a4cbc3731faca02b3ded" kind="variable"><name>indexOffset</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_mesh_1a6e463d587d49888c37a8164b14338fb6" kind="variable"><name>vertexCount</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_mesh_1a426cc0b88f2c838404145b38148f9260" kind="variable"><name>indexCount</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_mesh_component" kind="struct"><name>prism::scene::MeshComponent</name>
+    <member refid="structprism_1_1scene_1_1_mesh_component_1ab7affeb7aa3a9b6c19b3549641eb98b9" kind="variable"><name>mesh</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_mesh_data" kind="struct"><name>prism::PGC::MeshData</name>
+    <member refid="structprism_1_1_p_g_c_1_1_mesh_data_1a4bc43f340a4e404e00b2cf8d589daaa8" kind="variable"><name>vertices</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_mesh_data_1ab796f684d17a6f311a68ee8c7b92a508" kind="variable"><name>indices</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_mesh_loader" kind="class"><name>prism::PGC::MeshLoader</name>
+    <member refid="classprism_1_1_p_g_c_1_1_mesh_loader_1a75216c52a3c93d04d6c74a2ed03c15ef" kind="function"><name>load</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_mesh_manager" kind="class"><name>prism::PGC::MeshManager</name>
+    <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1ad8e196abefb40df09e4261e052006594" kind="function"><name>addMesh</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a3a85932f084ad97b08bbd3e5d041fdb6" kind="function"><name>update</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1ab14cf34dcf9571afa71cea03bf548c94" kind="function"><name>clear</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a89e892d582f289d16d39636bc441d013" kind="function"><name>getMeshInfo</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a2f792d6e9147bde63a6dc87e8a27f6d2" kind="function"><name>getNextAvailableIndex</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings" kind="struct"><name>prism::PGC::utils::MultisampleSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1af1f0466234a5d978e76840738216c796" kind="variable"><name>sampleShadingEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1a216c5c2bbe8523649e5c1306d7ea5369" kind="variable"><name>rasterizationSamples</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1a1e28bb769fba57542e2a8aef08b8a74b" kind="variable"><name>strategy</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_object_u_b_o" kind="struct"><name>prism::PGC::ObjectUBO</name>
+    <member refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kind="variable"><name>model</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1ad31ca5726b7ebe6df52fb0a52e43766e" kind="variable"><name>normals</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings" kind="struct"><name>prism::PGC::utils::PipelineSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1a8f9153fa0a40311ad06128de7c8862f2" kind="variable"><name>shaders</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1afd7becb2aa421bfe5777e089e6c667e3" kind="variable"><name>inputAssembly</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1afc61024c0a725c2cced455b60af8f9ae" kind="variable"><name>rasterization</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aeeac69a126a55b076000a777386883df" kind="variable"><name>depthStencil</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa2b9bad54f0092b4b4fc6b99f80e38a2" kind="variable"><name>multisample</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa7c5ebf2679b7ca18b3708827b0c79ff" kind="variable"><name>colorBlend</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa3bca2e1a268849820f771f08bb4b3e6" kind="variable"><name>dynamicState</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1a7d3e6d581354d2b23101d1b15a25310c" kind="variable"><name>viewportState</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_position" kind="struct"><name>prism::scene::Position</name>
+    <member refid="structprism_1_1scene_1_1_position_1afb72c8ab2012525655084db905487feb" kind="variable"><name>x</name></member>
+    <member refid="structprism_1_1scene_1_1_position_1a15659c51a61528ab6335c24f7727b44c" kind="variable"><name>y</name></member>
+    <member refid="structprism_1_1scene_1_1_position_1a806e7290cbafa395e9ce83511540d4d4" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_prism_graphic_core" kind="class"><name>prism::PGC::PrismGraphicCore</name>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a753fa35096fa05f297bdea70afa5e33c" kind="variable"><name>windowResized</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a6f5c118b620526fd87e3bac408aebbbe" kind="variable"><name>windowMinimized</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a55ffc68b57853b631c9b4814f137fe35" kind="variable"><name>settings</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a31f1cef5cc83ac1a18edc7d3b89d614e" kind="variable"><name>context</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a211f201b28de195923a8c320facf8022" kind="variable"><name>window</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1aa342c65aa462fff2f176f70709b7b106" kind="variable"><name>base</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a0dd17cd2a4cc0775631dfe789c82f8ee" kind="variable"><name>swapChain</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1af1b76f64293f0292b219dfcf0b432c5a" kind="variable"><name>renderPass</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a87fd93b86567719bdd9dbf5da3071d55" kind="variable"><name>descriptorSetLayout</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a3ca09132e3ff4a8388a5edae449e0675" kind="variable"><name>graphicsPipeline</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1afc31cffb31e326de0fd0a45c6322e614" kind="variable"><name>descriptorSet</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1abc11212e7a68ded2bbe1f8d8dc71b56d" kind="function"><name>PrismGraphicCore</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4bacbfbd6c0905dcdc4882be3c371161" kind="function"><name>init</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a3b9e48a05623b6cc0b9ed7320d4e8e91" kind="function"><name>drawFrame</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4d95481a52b8d64b2d60651032d835ee" kind="function"><name>startRender</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a6eab6576d07a3820cbdccd5babbf7fb8" kind="function"><name>getCameraDataPtr</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1acdd1cff2d554d37c035a7b00b307852c" kind="function"><name>getSwapChainPtr</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac7e1e22c259dd2e1793193cbb0a5281f" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a0e9b7954a1e4b8a8ff173816a7d26e1c" kind="function"><name>awaitRenderingCompletion</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a5202b6e55da493f576930f53f0692705" kind="function"><name>isWindowReadyForRendering</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a08b422facb0a4a3dd074a550c1c9d1ea" kind="function"><name>createBase</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a2c3787c4a72e660bb4a40afeb71ea2a4" kind="function"><name>createSwapChain</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4a8bd71a4ab83fe639f8e5762cb4cffd" kind="function"><name>createGraphicsPipeline</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ad742d515a20d820fd936dc465828fa93" kind="function"><name>createRenderPass</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1af910ed78722649b6f4ccab7f42295df4" kind="function"><name>createFramebuffers</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a08cc6c55d4e468392534974226fdebf2" kind="function"><name>createCommandPool</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a304ed66f116a14a4e1eaabad38148057" kind="function"><name>createCommandBuffer</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac80bc9624587f789b972b4d8e3ee1bc9" kind="function"><name>createSyncObjects</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4efae367067d6838fa7c22d9e5dff06b" kind="function"><name>createDescriptorSetLayout</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a56bb80154e887c60badb9cdf18a0e81e" kind="function"><name>createTextureDescriptorSetLayout</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1afd85feadb8ae7f635c9324acc57cf442" kind="function"><name>createTextureDescriptorSet</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ab75d350b460580e73f8c5ef40f17e7e8" kind="function"><name>createUniformBuffers</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a701357ad5c785a9b52ba9a6f6c597a89" kind="function"><name>createDescriptorPool</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac79cf119a7b9d48d34e7ef04d324eb29" kind="function"><name>createDescriptorSets</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a2983dab58a83db9204e14c3da172c640" kind="function"><name>createDepthResources</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a9652d07a0152ca7e603ae0e643edac47" kind="function"><name>createColorResources</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1aecfad4272b514d286ae46e83639f817e" kind="function"><name>generateMipmaps</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1abb197c77af33e20c187d96a6ce87d4dd" kind="function"><name>getMaxUsableSampleCount</name></member>
+  </compound>
+  <compound refid="structprism_1_1_prism_info" kind="struct"><name>prism::PrismInfo</name>
+    <member refid="structprism_1_1_prism_info_1a70a726517453a24b291089a81b114ff3" kind="variable"><name>NAME</name></member>
+    <member refid="structprism_1_1_prism_info_1af65e9e303ac4fe0b04e4ff10b73deea2" kind="variable"><name>DESCRIPTION</name></member>
+  </compound>
+  <compound refid="structprism_1_1_prism_version" kind="struct"><name>prism::PrismVersion</name>
+    <member refid="structprism_1_1_prism_version_1a7f380b7d2f046e0d6ad1cc97fed1efee" kind="variable"><name>MAJOR</name></member>
+    <member refid="structprism_1_1_prism_version_1aa84da8412a45feb73d1002eace9c28c4" kind="variable"><name>MINOR</name></member>
+    <member refid="structprism_1_1_prism_version_1af7fec056de4fbedc1da950a49dc2aa3e" kind="variable"><name>PATCH</name></member>
+    <member refid="structprism_1_1_prism_version_1ac7814c37b5420af63dbf7341cf2c1541" kind="variable"><name>STRING</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_push_constants" kind="struct"><name>prism::PGC::PushConstants</name>
+    <member refid="structprism_1_1_p_g_c_1_1_push_constants_1a502b60b68472518e700e6c13fdae73ec" kind="variable"><name>textureIndex</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices" kind="struct"><name>prism::PGC::utils::QueueFamilyIndices</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a5480668afadb23064e60828cfef73027" kind="variable"><name>graphicsFamily</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a1ecf2fab3b0c6b1272d8787aa875b2f9" kind="variable"><name>presentFamily</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a907a87fbe64c801fee96e6d0c0242b69" kind="function"><name>isComplete</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings" kind="struct"><name>prism::PGC::utils::RasterizationSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a2bcefa37a2c02866aa211cc2a3bbc6cc" kind="variable"><name>polygonMode</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a25b167d3ed958b55a93bdf21c3e6ba1b" kind="variable"><name>lineWidth</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a9fffcb91bd6ba955bfed9f82b2b9cebd" kind="variable"><name>cullMode</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a47e5208647172a1cab75dbf5d797fb89" kind="variable"><name>frontFace</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1adff42ee68718b965e677060d9cf48314" kind="variable"><name>depthClampEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a150300b8301848c26ed08c9dbd7c1484" kind="variable"><name>rasterizerDiscardEnable</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a26d76a381e5b29f11f874a4ae436e52d" kind="variable"><name>depthBiasEnable</name></member>
+  </compound>
+  <compound refid="classprism_1_1render_1_1_renderer" kind="class"><name>prism::render::Renderer</name>
+    <member refid="classprism_1_1render_1_1_renderer_1a243e7686f4b67abe3c7d2d1a43392952" kind="variable"><name>settings</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a26709f59d44783b8537214152f0b4acd" kind="variable"><name>pgc</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" kind="variable"><name>window</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1ae498da6a0eb0d42b865d4e94d34d1ae8" kind="function"><name>Renderer</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a224455fc4449d00731733f10c5f251d2" kind="function"><name>linkWindow</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1ad08f303f7b275e225e6ae60624f05ea6" kind="function"><name>setDefaultSettings</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1af0a1b4efcfc3e10305aa63d853211969" kind="function"><name>init</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a8a00f1ca3f3749a416a659571f48d449" kind="function"><name>~Renderer</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a49701f3b045b5b337965b23dab0e4c1b" kind="function"><name>isRenderingActive</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a5f9fa3afbeab8957d89e39a01df6e4ee" kind="function"><name>beginFrame</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1ad8fd91a24b9288dde8a38e2751b800c8" kind="function"><name>beginRender</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a1010ac870bd190aca9d3120364d3edad" kind="function"><name>endRender</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1ada03788c5ed3af510750bd0a8594a414" kind="function"><name>endFrame</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1ae3c9523889cbd7f3004e31f906a6f2ff" kind="function"><name>updateCamera</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1ae5c8a2b18d84b4f9e48569e1cfad008f" kind="function"><name>updateObjectTransform</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a2319cee54bb56ef9f049c9524223a419" kind="function"><name>bindDefault</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a06bef0391485c39b34decc3473a657a5" kind="function"><name>bindTransform</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a0014026cfe386d9d7f70defdb8a29f79" kind="function"><name>pushTextureId</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a3c6bf3adf404d1224ffb83deff4cf0f8" kind="function"><name>drawMesh</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1ad20e7753bb504469d2282c78dec45ecf" kind="function"><name>addTexture</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a2f02e729d87dfad12ba907e1b4edd6b3" kind="function"><name>removeTexture</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a68a37c4196f2dbca4f2493a6e6e1b37f" kind="function"><name>addMesh</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a1c81fafddd77b32e87f84802b637fd72" kind="function"><name>updateMeshes</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a3e3c570ac1677ba5231e4a39796c6d04" kind="function"><name>clearMeshes</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a516f6fe9573a01de252ad9d947b7820e" kind="function"><name>awaitRenderingCompletion</name></member>
+    <member refid="classprism_1_1render_1_1_renderer_1a8aee301e8ea80c2376240e672060f283" kind="function"><name>destroy</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_render_pass" kind="class"><name>prism::PGC::RenderPass</name>
+    <member refid="classprism_1_1_p_g_c_1_1_render_pass_1abecd79ef9a97d01ebb2297d1f13a6e38" kind="variable"><name>context</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_render_pass_1a66832325b511ff98d5a1bbb51f86b1ae" kind="variable"><name>settings</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_render_pass_1acfea0341a6453f15f667191f9a260953" kind="function"><name>RenderPass</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_render_pass_1af0d0d398d9204187958caa20fc6c34f0" kind="function"><name>init</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_render_pass_1acd98ae0b9087cec40ae4b05a0feeae81" kind="function"><name>~RenderPass</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_render_pass_1ae73147d80f1695b95d5e54f70d1cfea0" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_render_pass_1a2efa53e0315254e7dfed30b6853dcb72" kind="function"><name>create</name></member>
+  </compound>
+  <compound refid="classprism_1_1scene_1_1_render_system" kind="class"><name>prism::scene::RenderSystem</name>
+    <member refid="classprism_1_1scene_1_1_render_system_1af402945bb406756be8c8a4fd44121186" kind="variable"><name>scene</name></member>
+    <member refid="classprism_1_1scene_1_1_render_system_1a3f32342110a0239f8f2e342426901196" kind="variable"><name>renderer</name></member>
+    <member refid="classprism_1_1scene_1_1_render_system_1a45fef494fc5d3564ab0a83fa7ac9ef2e" kind="function"><name>RenderSystem</name></member>
+    <member refid="classprism_1_1scene_1_1_render_system_1ae28dd1ba57114dfacf9ce65f8aeff5a9" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_resources_creater" kind="class"><name>prism::PGC::ResourcesCreater</name>
+    <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1abd176274158468bb98a309f56b21aba8" kind="function"><name>createImage</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1a47be41c0f55c49f83af5f407b310b49a" kind="function"><name>createImageView</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1adcf795e7e2f15fd8efa60674a139fe2c" kind="function"><name>createFramebuffers</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1ac09e34b5b6c2bcb1edbf3c9e264d1fe6" kind="function"><name>createColorResources</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1aaff73dce2f951521017bf9cfd7e74267" kind="function"><name>createDepthResources</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1a50d8fcc21c002432511c9f541354fedc" kind="function"><name>createTextureSampler</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_rotation" kind="struct"><name>prism::scene::Rotation</name>
+    <member refid="structprism_1_1scene_1_1_rotation_1a966ba7232e2bb99137f21f40ec80f905" kind="variable"><name>x</name></member>
+    <member refid="structprism_1_1scene_1_1_rotation_1a0ec26ecffa1e208df5182fd853aa257b" kind="variable"><name>y</name></member>
+    <member refid="structprism_1_1scene_1_1_rotation_1a8c014c7202933c73dbcdec818fc80682" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_scale" kind="struct"><name>prism::scene::Scale</name>
+    <member refid="structprism_1_1scene_1_1_scale_1abe9e8b15c7b3d6df7cd86c12d569cd65" kind="variable"><name>x</name></member>
+    <member refid="structprism_1_1scene_1_1_scale_1aaa1fe28e3b8d794464e9ed28fa5141c8" kind="variable"><name>y</name></member>
+    <member refid="structprism_1_1scene_1_1_scale_1a24bd28cde4bc109a597b0e3648e97990" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_score_wrapper" kind="class"><name>prism::PGC::ScoreWrapper</name>
+    <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1a9ebdeaaa783828a4fce76d2c2ac5933b" kind="function"><name>print</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1ace22ae1047307f29e9621a5b376ee921" kind="function"><name>print</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1a76015895dcb2aa5b08fb4bc840bf4ce1" kind="function"><name>print</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1a08ca1dda43fb009894cdef7e1c3700d1" kind="function"><name>getTotal</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1a182c182d4bad85cd50bde7b69804e29c" kind="function"><name>getTotal</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1adcae936064607442dbf6821d767597c9" kind="function"><name>getTotal</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kind="struct"><name>prism::PGC::utils::Settings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ab96d332c46dd421181cf6197c4f869c6" kind="variable"><name>app</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1acb67f2bf38a2a718053640b5e10ff493" kind="variable"><name>deviceEvaluationWeights</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a224a5453ec0fdb5ef9b637c3325a6751" kind="variable"><name>debug</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ac56aa93ce0a90eaef74ab718dcd16261" kind="variable"><name>swapChain</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ac07b6da9b6764928661eef70e95bdae4" kind="variable"><name>descriptorSetLayout</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a142299b238747c830ea085dd0f2ec05d" kind="variable"><name>textureDescriptorSetLayout</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a8150b0a86cc235973fe641cdb260d7cc" kind="variable"><name>MAX_TEXTURES</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ab0edf9cb2b267c3647781c2a12de0eb2" kind="variable"><name>pipeline</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a762e8813dbc05670d0b2802986ef46f6" kind="variable"><name>window</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings" kind="struct"><name>prism::PGC::utils::ShadersSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1aac49878cd2a35c48f30187868a386798" kind="variable"><name>vertexShaderFilename</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1aaa93e7752a945b925a34a41f14d79545" kind="variable"><name>fragmentShaderFilename</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1a909f2bfcbfef2a782db5d468abc9fab4" kind="variable"><name>shadersDirectory</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_shader_stages_loader" kind="class"><name>prism::PGC::ShaderStagesLoader</name>
+    <member refid="classprism_1_1_p_g_c_1_1_shader_stages_loader_1aa721677c5e3813655eececa0aa18f8ee" kind="function"><name>load</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_shader_stages_loader_1a5ae78e6ad0055912add4f73f909bdbfc" kind="function"><name>readShaderFile</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_shader_stages_loader_1a6a1687c2e83b486c9de98fe0dac7e9b9" kind="function"><name>createShaderModule</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_swap_chain" kind="class"><name>prism::PGC::SwapChain</name>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a98ef5abfe1f700ca0f0dcdbc91129abc" kind="variable"><name>context</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a1f8f8349ec28a0ee50f716bef225260f" kind="variable"><name>settings</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1ac0c55a3fd3fec4bc4ee0fdd6d026903f" kind="function"><name>SwapChain</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a764ee99dcf83f09a01776b378d768a90" kind="function"><name>init</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a68df1d235f8043c72ab03b2645c97de5" kind="function"><name>~SwapChain</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1ae0eff1bf37e4b4f87431c4060a6bee86" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a71dc7570cb6c903f810841f57dcbe7f8" kind="function"><name>awaitRenderingCompletion</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a6b556b9c4d9053b46b9598749d3ed768" kind="function"><name>recreate</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a6846f862a3f113e3bffaf2de5fbb9fe5" kind="function"><name>create</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a4c7f128a792d602a7e9d791a55d71579" kind="function"><name>createImageViews</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1ac9e805f45a94b40c80e103088470f6f5" kind="function"><name>chooseSwapSurfaceFormat</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a6327c63363a56b3ad07ea03762c3a316" kind="function"><name>chooseSwapPresentMode</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a60b9fd49d6941d6b8cef997dadd3faf9" kind="function"><name>chooseSwapExtent</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a997057c8be4d1aac9beb88bb6327c0e0" kind="function"><name>getImageCount</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings" kind="struct"><name>prism::PGC::utils::SwapChainSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ac5d98e72da506aaca6e810eb8d399031" kind="variable"><name>enableVSync</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ad40e001a8d72883714cf2f42d040c931" kind="variable"><name>enableTripleBuffering</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ab0598478739d07238a00a713bae97855" kind="variable"><name>preferredFormat</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details" kind="struct"><name>prism::PGC::utils::SwapChainSupportDetails</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1ab2a212d23e373c47b37c34943a96b527" kind="variable"><name>capabilities</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1a8e05aa62743e059398b488cc12bd5a29" kind="variable"><name>formats</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1a8f89077c7917504ab55a93b8f2bf76db" kind="variable"><name>presentModes</name></member>
+  </compound>
+  <compound refid="classprism_1_1scene_1_1_system_manager" kind="class"><name>prism::scene::SystemManager</name>
+    <member refid="classprism_1_1scene_1_1_system_manager_1a7430581dc763a8217472d313a2145a5a" kind="variable"><name>systems</name></member>
+    <member refid="classprism_1_1scene_1_1_system_manager_1a37b3f8b281e8503f6f4d08de1e8a2aa0" kind="function"><name>SystemManager</name></member>
+    <member refid="classprism_1_1scene_1_1_system_manager_1a871edb29fd162e17d59b3d36fe3bfae6" kind="function"><name>registerSystem</name></member>
+    <member refid="classprism_1_1scene_1_1_system_manager_1a0810e774cfc31a4cf1c1eb3bac4f0997" kind="function"><name>enableSystem</name></member>
+    <member refid="classprism_1_1scene_1_1_system_manager_1a277d39c230cb33e55636aaa60d844c04" kind="function"><name>disableSystem</name></member>
+    <member refid="classprism_1_1scene_1_1_system_manager_1acfa1db8417866bfce1b77d4aa76e1a09" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_texture" kind="struct"><name>prism::PGC::Texture</name>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1ae2ea89d2703e9867baf39038cbe8bbea" kind="variable"><name>path</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1a7d476368920ebb232a5f4e94e3ff55ae" kind="variable"><name>mipLevels</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1abd40ed204816dfcc65c523f153604bad" kind="variable"><name>image</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1add3c672745e73859d33150e7c4c4eda5" kind="variable"><name>imageView</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1ad08bf531d52c02d1f38df4dace4af33b" kind="variable"><name>imageMemory</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1a61bcd37ea4a3370e511be1ff20f1ebfd" kind="variable"><name>sampler</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1a2e1bfede8b7c3bdbddfa469b451f52f9" kind="variable"><name>width</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1a7fa75c86eb665bc42d2f0e5dd8bacfed" kind="variable"><name>height</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1a91d71b52858a94f75d7f25a198b22c29" kind="variable"><name>channels</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_texture_1a001aa2bc27b0950c7a40d65065cbd75c" kind="variable"><name>bindlessIndex</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config" kind="struct"><name>prism::PGC::utils::TextureBindingConfig</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1af458042a128c12776264fdc3943762e5" kind="variable"><name>binding</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1addf06858738ae8a93f371080154aae01" kind="variable"><name>descriptorType</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a4d45da354c745af5f6ea053d7c6e3599" kind="variable"><name>descriptorCount</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a4ab91494879f8f753f9c8c767d47ea8a" kind="variable"><name>stageFlags</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1ac067231afaf9c20103a9a79d9377bee8" kind="variable"><name>immutableSamplers</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a9a0cf6db540b27482ffda6b68e759e46" kind="variable"><name>bindingFlags</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_texture_component" kind="struct"><name>prism::scene::TextureComponent</name>
+    <member refid="structprism_1_1scene_1_1_texture_component_1a62e9360955d1d1af70132c317c61ac7f" kind="variable"><name>texture</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings" kind="struct"><name>prism::PGC::utils::TextureDescriptorSetLayoutSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings_1a8709305cc9ed75c8dddde3e29206b9a8" kind="variable"><name>bindings</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings_1a31c28e1ec60386811d895c4f638c53b7" kind="variable"><name>flags</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_texture_loader" kind="class"><name>prism::PGC::TextureLoader</name>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1abfd63994cc54d8df2c61533a802fb782" kind="function"><name>load</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1a522f5a31968bebe09ba3d113f16db9dc" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1a5bb7d9078725b4ba9815e786f1c90883" kind="function"><name>createTextureImage</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1aaf14dc47d4371346e84b87a901b3e92f" kind="function"><name>createTextureImageView</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1a7d0d544cbd13df616f5615ae82a17366" kind="function"><name>createTextureSampler</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1ae9fc1ba2404bbe90b1e56eaa9d4fbf94" kind="function"><name>generateMipmaps</name></member>
+  </compound>
+  <compound refid="classprism_1_1_p_g_c_1_1_texture_manager" kind="class"><name>prism::PGC::TextureManager</name>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_manager_1a99cb333148b984410c83e39ce8555de8" kind="function"><name>addTexture</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_manager_1a22ff57981f36d1bd6ca1fd08f5270e22" kind="function"><name>removeTexture</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_manager_1aa22a59161930c341627c98d159cfc38f" kind="function"><name>cleanup</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_manager_1a89702920e5003efaf565293a7603c6dc" kind="function"><name>updateDescriptors</name></member>
+    <member refid="classprism_1_1_p_g_c_1_1_texture_manager_1a668c08beeb746fcc6d9abccd867a2571" kind="function"><name>getNextAvailableIndex</name></member>
+  </compound>
+  <compound refid="structprism_1_1scene_1_1_transform_component" kind="struct"><name>prism::scene::TransformComponent</name>
+    <member refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kind="variable"><name>pos</name></member>
+    <member refid="structprism_1_1scene_1_1_transform_component_1afe6bbe02710e5c9704ecdfa0f5629932" kind="variable"><name>rot</name></member>
+    <member refid="structprism_1_1scene_1_1_transform_component_1a3270258dd47f2b1caa104acac83edbd7" kind="variable"><name>scale</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_uniform_buffers" kind="struct"><name>prism::PGC::UniformBuffers</name>
+    <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1ae28940e1bd6c86448eaf0fdc9a6d32b5" kind="variable"><name>camera</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1a1547b44dc337c2b7a1c7c08b055e74ba" kind="variable"><name>cameraMemory</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1aaa836b6e43906acf9d68af4e52eefc14" kind="variable"><name>cameraMapped</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1ada37f01ba2a25fd49a0bba2e7df446a7" kind="variable"><name>object</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1a131612e5d7939c23ec5161aaf97d4b78" kind="variable"><name>objectMemory</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1a0b6df00b37a6636c0726ba3a62efc9ed" kind="variable"><name>objectMapped</name></member>
   </compound>
   <compound refid="structprism_1_1math_1_1_vector3d" kind="struct"><name>prism::math::Vector3d</name>
     <member refid="structprism_1_1math_1_1_vector3d_1a0fdf8e79434ed7bbba3a2ce5e525b736" kind="variable"><name>x</name></member>
@@ -36,70 +615,98 @@
     <member refid="structprism_1_1math_1_1_vector3d_1a246d4ac8bf3bc3b237c3250a0acdfdb7" kind="function"><name>length</name></member>
     <member refid="structprism_1_1math_1_1_vector3d_1a59dbff9c0f786334970c93d16820fd8b" kind="function"><name>normalise</name></member>
   </compound>
-  <compound refid="classprism_1_1view_1_1_window" kind="class"><name>prism::view::Window</name>
-    <member refid="classprism_1_1view_1_1_window_1a24fd09bbf7871e2448af8db4471879fe" kind="variable"><name>enableValidationLayers</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a376baefea36091e57fa85ea6d4083dba" kind="variable"><name>m_sdlWindow</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a4565b56a9f438b6c87c9f262e8848fa0" kind="variable"><name>m_isDestroyed</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a73b38623bf14708bf5ac9602d1ce684b" kind="variable"><name>m_windowMinimized</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a00ee05d32648685bb74fba379937ba0a" kind="variable"><name>instance</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a70e49b67dea0ee45f4d52e4ebb03db7e" kind="variable"><name>physicalDevice</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a566b289231e8ab2506bccdd53a9b84f3" kind="variable"><name>device</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a9b0044913b1df68617169565b85e5cae" kind="variable"><name>graphicsQueue</name></member>
-    <member refid="classprism_1_1view_1_1_window_1ada7a56e2c924860af9187e3994c88e31" kind="variable"><name>surface</name></member>
-    <member refid="classprism_1_1view_1_1_window_1af508535cfe4d6904d01396d15ee0a91b" kind="variable"><name>presentQueue</name></member>
-    <member refid="classprism_1_1view_1_1_window_1ab54c30367a0c4d0630df18dab81e0c21" kind="variable"><name>s_sdlInitialized</name></member>
-    <member refid="classprism_1_1view_1_1_window_1ab37a7db3c8ac082958cbf1cc76c53232" kind="function"><name>Window</name></member>
-    <member refid="classprism_1_1view_1_1_window_1ae2cc8b5460d772a2549cbcde23c31d6f" kind="function"><name>Window</name></member>
-    <member refid="classprism_1_1view_1_1_window_1abb2622120d5a2c4008453fd5f0e213c2" kind="function"><name>Window</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a115a76f66c617395fcfe4228188bd717" kind="function"><name>Window</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a8431a79eba3e50614cc457f7ce0605f0" kind="function"><name>Window</name></member>
-    <member refid="classprism_1_1view_1_1_window_1aa380520df5902e4c2f52dbd7486d65b8" kind="function"><name>~Window</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a5cf935efd740352ab3ff7ebee06e7254" kind="function"><name>getTitle</name></member>
-    <member refid="classprism_1_1view_1_1_window_1adfe7fd34bbb853a8ac64ca0b5a68cadd" kind="function"><name>setTitle</name></member>
-    <member refid="classprism_1_1view_1_1_window_1ab9f80b6a4d67e91bb8454a6e45b00c6a" kind="function"><name>getWidth</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a45ff9b145b3fdd721de6ae4a7541f0c2" kind="function"><name>getHeight</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a80f7ecc7488b3a75da4ac2b45895ae2e" kind="function"><name>getSize</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a29d789115d706e4f5bd98448cdae1108" kind="function"><name>setWidth</name></member>
-    <member refid="classprism_1_1view_1_1_window_1ac2d1238a607bf29ac672870ebf9f73cb" kind="function"><name>setHeight</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a9eddda4bbcacea440786c2ace67f2a16" kind="function"><name>setSize</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a000dbd1aaf3338843829891b00de6cef" kind="function"><name>setFullscreen</name></member>
-    <member refid="classprism_1_1view_1_1_window_1aef39954d735b1762f1d4179a9f08d6e4" kind="function"><name>setBorderless</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a064fdb06b7036f1dacaa110e6e0007db" kind="function"><name>setResizable</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a0e401cb1e3912c8e2394698dfdda2aeb" kind="function"><name>setGrabMouse</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a4d340a4f8ec13659938a2e53d7c479d0" kind="function"><name>isFullscreen</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a0543c7f97e4d2ef79be90a0daab7976c" kind="function"><name>isBorderless</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a0fcefa88943a843cc1cb79c8f281c58f" kind="function"><name>isResizable</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a916d1534c5118991329ac972b841c9b5" kind="function"><name>isGrabMouse</name></member>
-    <member refid="classprism_1_1view_1_1_window_1af46aa597947fb1e042ae20f744b3a785" kind="function"><name>setPosition</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a2762ec845f95405e8798107b8de8835b" kind="function"><name>getPosition</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a6b100e90fbe4904d23bcac79921fd45b" kind="function"><name>centerWindow</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a63072d9ec3267b92f28bc9559aa68907" kind="function"><name>setMinSize</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a3682515a8b78f38e49bc00ef351d1e91" kind="function"><name>setMaxSize</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a52a4884a96c2dbb938c23b4bafef341d" kind="function"><name>shouldClose</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a95715b5d073f7a38592f3a344be48743" kind="function"><name>setCloseRequested</name></member>
-    <member refid="classprism_1_1view_1_1_window_1ab4f40d8f9f44ff9e6f5310ba7cb3500d" kind="function"><name>handleEvents</name></member>
-    <member refid="classprism_1_1view_1_1_window_1ad904abdf14e9eb6e3f853763c7f06faf" kind="function"><name>clear</name></member>
-    <member refid="classprism_1_1view_1_1_window_1aaec31f6c1a24777d4ce31811ef3d2050" kind="function"><name>update</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a7e7ab6881f1847d75494d4e751c5826e" kind="function"><name>destroy</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a5189f4eb8214086bed7037cdae2ffd89" kind="function"><name>vulkanInut</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a06e21fda269f7b8242de7ec8c5310e8d" kind="function"><name>createInstance</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a7bb96f10739921534995f7e0e2a0360f" kind="function"><name>pickPhysicalDevice</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a76dc16248ebd56b8787302654689aa08" kind="function"><name>isDeviceSuitable</name></member>
-    <member refid="classprism_1_1view_1_1_window_1af18daa601490652e0bc0434b13cabb4f" kind="function"><name>checkDeviceExtensionSupport</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a5e4bd28cd96622e8b3b13e57778ebb8b" kind="function"><name>CreateCentered</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a0ac1c3fd06ab0d3b1582ac9c448a161c" kind="function"><name>setSDLInitialized</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a64aa028f8e7bfbc225dd09a64a36cd93" kind="function"><name>Window</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a71ddbebd98846cd305ba67fd8f3f3ef5" kind="function"><name>rateDeviceSuitability</name></member>
-    <member refid="classprism_1_1view_1_1_window_1addfe6172e6af7dabf1cb8bdd5f60655e" kind="function"><name>findQueueFamilies</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a85ae040c045e6e1d57e79ca5fd2b42c3" kind="function"><name>createLogicalDevice</name></member>
-    <member refid="classprism_1_1view_1_1_window_1a244e6e0144fe90f9604452a1cb515cea" kind="function"><name>createSurface</name></member>
+  <compound refid="structprism_1_1_version" kind="struct"><name>prism::Version</name>
+    <member refid="structprism_1_1_version_1ae47e079272299e8d3b8847e0ff27fb29" kind="variable"><name>MAJOR</name></member>
+    <member refid="structprism_1_1_version_1a380c66fd55dc321fccbcd09b8d35b86f" kind="variable"><name>MINOR</name></member>
+    <member refid="structprism_1_1_version_1a99f69fade32102d8e1135f97bdd2a74a" kind="variable"><name>PATCH</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_vertex" kind="struct"><name>prism::PGC::Vertex</name>
+    <member refid="structprism_1_1_p_g_c_1_1_vertex_1a8c0755ee0ac49e5cedcc9b0ff0d26d0c" kind="variable"><name>pos</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_vertex_1a5690bce120d7610a29dc609c59e6d21f" kind="variable"><name>color</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_vertex_1a1ea019b9a4af597d776b4eb1f472f5d4" kind="variable"><name>texCoord</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_vertex_1a6702e1cd9936929ddaa711d0258d1a07" kind="function"><name>getBindingDescription</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_vertex_1a96daf3ba818593f35e48a0eda00c2094" kind="function"><name>getAttributeDescriptions</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1_vertex_1a63cc3df4f485c079a90d64920ce928c6" kind="function"><name>operator==</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1_vertex_hasher" kind="struct"><name>prism::PGC::VertexHasher</name>
+    <member refid="structprism_1_1_p_g_c_1_1_vertex_hasher_1ab3d56c10d33af778a849c8c4bf705388" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings" kind="struct"><name>prism::PGC::utils::ViewportStateSettings</name>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings_1a018c8e8dc0d9a65ec66ca894deab34ea" kind="variable"><name>viewportCount</name></member>
+    <member refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings_1a4a6c86fefccfe944bfc89f9509909dfe" kind="variable"><name>scissorCount</name></member>
+  </compound>
+  <compound refid="classprism_1_1render_1_1_window" kind="class"><name>prism::render::Window</name>
+    <member refid="classprism_1_1render_1_1_window_1a80114ce20353fd9404814dba2fb343bc" kind="variable"><name>sdlWindow</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a41165d8c62416df762c8d032abce8c42" kind="variable"><name>windowResized</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ad3b0fdd480cc17c7d628bd32f1a2a24c" kind="variable"><name>windowMinimized</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a5d62e642468dde7e2ea4d25618ce5b85" kind="variable"><name>s_sdlInitialized</name></member>
+    <member refid="classprism_1_1render_1_1_window_1af723b1149e1bb2a1cae99bd22466edec" kind="variable"><name>m_isDestroyed</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ad2586f1bbadf4e7fed2e63f6164f96cd" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ac8d189427c5ab1b7f7d5a8e6a17c9036" kind="function"><name>operator=</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a502990af2c873d6b9dffb2855e55989d" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a3df97713b0e4a4aae89f407b7d7976b9" kind="function"><name>operator=</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a1bfa6743f1cb3ccc2b40d4f2d4d0ec86" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ab348789841debcf3dd69842d1b84f0d8" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a08a26de82ddbb6dc3ab9e22ffb80e430" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ac2240db34a7815715b06612b6176a930" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a04801b7ccc6b21d2f30f9fd522fb4984" kind="function"><name>Window</name></member>
+    <member refid="classprism_1_1render_1_1_window_1acd645c0704f49907ec4f8a35d22ad300" kind="function"><name>~Window</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a661ca497c04a9cb449ab2fe9fbed3a1d" kind="function"><name>getTitle</name></member>
+    <member refid="classprism_1_1render_1_1_window_1acdd4f7425fb12df92ca18ff9db181e12" kind="function"><name>setTitle</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ae5bf309d8ccd12ef502310d2309df22a" kind="function"><name>getWidth</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ad0be25effa227b7c8863f74eb9c345ed" kind="function"><name>getHeight</name></member>
+    <member refid="classprism_1_1render_1_1_window_1acad9cf0884d13bb996d161fb741a27cf" kind="function"><name>getSize</name></member>
+    <member refid="classprism_1_1render_1_1_window_1aefafd2342185404f0a3cfc68a47091dc" kind="function"><name>setWidth</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a73775ef15335e2924e7538e72c499d6b" kind="function"><name>setHeight</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a00badb3a468b50736e8f2a94076fad64" kind="function"><name>setSize</name></member>
+    <member refid="classprism_1_1render_1_1_window_1aa9777031fdbe6e2d7decd15d306c5195" kind="function"><name>setFullscreen</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a1bcc059d6c6728ae0f21e49f277a6856" kind="function"><name>setBorderless</name></member>
+    <member refid="classprism_1_1render_1_1_window_1afc4b812de25c228decae998c74b72ac9" kind="function"><name>setResizable</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a71bfd120a906b926bcfc2e9df6b27ea4" kind="function"><name>setGrabMouse</name></member>
+    <member refid="classprism_1_1render_1_1_window_1adfc25e1606ec45bc5333cd4cf5b99efe" kind="function"><name>isFullscreen</name></member>
+    <member refid="classprism_1_1render_1_1_window_1aae96df68ff41a0346769969692e0b123" kind="function"><name>isBorderless</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a91ee4de644156c2b6c79252eea7431fe" kind="function"><name>isResizable</name></member>
+    <member refid="classprism_1_1render_1_1_window_1aef916de46513d7c1837dad64c969bbf7" kind="function"><name>isGrabMouse</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a9af3ba46d2a2817b54b389b657be7b1a" kind="function"><name>setPosition</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a3e1d19beae96a7f317bbf2da9f92750c" kind="function"><name>getPosition</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ae3f3021bb43a76b5808bc4bc89007a29" kind="function"><name>centerWindow</name></member>
+    <member refid="classprism_1_1render_1_1_window_1afa2c304374a6e1dcfc81ae06a006873e" kind="function"><name>setMinSize</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ab90cba28068a5b17b695c6ecf1aea6de" kind="function"><name>setMaxSize</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a4418e9f03d9a2529617edb9b43347a4a" kind="function"><name>shouldClose</name></member>
+    <member refid="classprism_1_1render_1_1_window_1aafd2531eb1713aa544d877e4777efd83" kind="function"><name>setCloseRequested</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a87a6c5971d1ccff29f8303818442e35e" kind="function"><name>handleEvents</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a3e49d69c6a6e7edb12d74203a972553b" kind="function"><name>clear</name></member>
+    <member refid="classprism_1_1render_1_1_window_1ae4a0e367be25a53034ef6e39ef95c9a0" kind="function"><name>update</name></member>
+    <member refid="classprism_1_1render_1_1_window_1af0547d7addea41c1f522c8f242eae970" kind="function"><name>destroy</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a9e9f63bec9bbbcb78a8df282da869a13" kind="function"><name>CreateCentered</name></member>
+    <member refid="classprism_1_1render_1_1_window_1a30911b434e086b05fb34ca559b6c346f" kind="function"><name>setSDLInitialized</name></member>
+    <member refid="classprism_1_1render_1_1_window_1aef89add08c54150b7ba429eaacd75ed1" kind="function"><name>Window</name></member>
   </compound>
   <compound refid="namespaceprism" kind="namespace"><name>prism</name>
+    <member refid="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" kind="typedef"><name>Mesh</name></member>
+    <member refid="namespaceprism_1a0bb25671f356c934c5602ac140b29a3d" kind="typedef"><name>Texture</name></member>
+    <member refid="namespaceprism_1a0894323454f28ab68c93aa1039a08672" kind="variable"><name>isInit</name></member>
+    <member refid="namespaceprism_1ab88df87c3fd3b1403a69f7b6e8cb6128" kind="variable"><name>INVALID_TEXTURE</name></member>
     <member refid="namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c" kind="function"><name>init</name></member>
   </compound>
   <compound refid="namespaceprism_1_1logger" kind="namespace"><name>prism::logger</name>
     <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f" kind="enum"><name>Error</name></member>
     <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654" kind="enumvalue"><name>TEST_ERROR</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fac996121b2cdab372dbe567bdf3338409" kind="enumvalue"><name>FAILED_TO_CREATE_VK_INSTANCE</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fadd63255ee65e45ee2b61316ab1decf3c" kind="enumvalue"><name>FAILED_TO_CREATE_WINDOW_SURFACE</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fab43344927fcdc1074a456a237d2b1ce3" kind="enumvalue"><name>PRISM_ENGINE_NOT_INITIALIZE</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa860eb54520a554a78bd21c7293923fb1" kind="enumvalue"><name>WINDOW_INSTANCE_CREATE_ERROR</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fad8313c32829b7632ea0145d413618a06" kind="enumvalue"><name>NOT_CALL_CLEANUP_IN_PGC_CORE</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989facd5d0e77c82518803520ad29a49bf3b8" kind="enumvalue"><name>SDL_VULKAN_EXTENSIONS_COUNT_FAILED</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa685d03e7509232a071e84689c6e817cd" kind="enumvalue"><name>VULKAN_VALIDATION_LAYERS_UNAVAILABLE</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa8a698cb421b3e29da20940a7e5a84103" kind="enumvalue"><name>VULKAN_DEBUG_MESSENGER_SETUP_FAILED</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa3368d5c98c0566bbab7fde79e49a1d94" kind="enumvalue"><name>VULKAN_NO_GPU_SUPPORT</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fabdbdbec21fe7a2864315caec4929194f" kind="enumvalue"><name>VULKAN_NO_SUITABLE_GPU</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa3b0899a81586e97eff0745fff0134a6a" kind="enumvalue"><name>VULKAN_LOGICAL_DEVICE_CREATION_FAILED</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fae3ded1bafa3ccea6fca5129abad7aa6c" kind="enumvalue"><name>VULKAN_SWAP_CHAIN_FAILED</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa5a2ca8d747770ea2ae4add296c5a4b7f" kind="enumvalue"><name>FAILED_TO_OPEN_FILE</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989facfd53859bdd7926af37ee236293bbcc1" kind="enumvalue"><name>FAILED_TO_DETERMINE_FILE_SIZE</name></member>
+    <member refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989faac46bf3c7fe3caec13c2671c656317e6" kind="enumvalue"><name>FAILED_TO_READ_FILE</name></member>
     <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856" kind="enum"><name>Level</name></member>
     <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc" kind="enumvalue"><name>VERBOSE</name></member>
     <member refid="namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15" kind="enumvalue"><name>DEBUG</name></member>
@@ -123,21 +730,82 @@
     <member refid="namespaceprism_1_1logger_1aa50f2608949bcbf87806915fb04c4abc" kind="function"><name>checkLastErrorType</name></member>
     <member refid="namespaceprism_1_1logger_1a7e98e993d5b16cdd4d5d39c6f2797967" kind="function"><name>clearLastError</name></member>
   </compound>
-  <compound refid="namespaceprism_1_1logger_1_1_0d030063132126215367251221213367113174146367017232" kind="namespace"><name>prism::logger::@030063132126215367251221213367113174146367017232</name>
+  <compound refid="namespaceprism_1_1logger_1_1_0d043253012031061315037345312214127360170024233310" kind="namespace"><name>prism::logger::@043253012031061315037345312214127360170024233310</name>
   </compound>
   <compound refid="namespaceprism_1_1math" kind="namespace"><name>prism::math</name>
     <member refid="namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446" kind="function"><name>degToRad</name></member>
     <member refid="namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96" kind="function"><name>Matrix_MultiplyMatrix</name></member>
-    <member refid="namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7" kind="function"><name>Matrix_QuickInverse</name></member>
+    <member refid="namespaceprism_1_1math_1a1677733d560794b1e46fd1dcfd7b4f7a" kind="function"><name>Matrix_QuickInverse</name></member>
     <member refid="namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f" kind="function"><name>Vector_DotProduct</name></member>
     <member refid="namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6" kind="function"><name>Vector_CrossProduct</name></member>
     <member refid="namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d" kind="function"><name>Vector_IntersectPlane</name></member>
   </compound>
-  <compound refid="namespaceprism_1_1view" kind="namespace"><name>prism::view</name>
-    <member refid="namespaceprism_1_1view_1a5e08683d7e148199c9e82e1382ca3f97" kind="variable"><name>validationLayers</name></member>
-    <member refid="namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441" kind="variable"><name>deviceExtensions</name></member>
+  <compound refid="namespaceprism_1_1_p_g_c" kind="namespace"><name>prism::PGC</name>
+    <member refid="namespaceprism_1_1_p_g_c_1ad693ecf2f5af4ca4af972d2be76e6da6" kind="function"><name>CreateDebugUtilsMessengerEXT</name></member>
+    <member refid="namespaceprism_1_1_p_g_c_1aeaf6f35f94c997ce724f2de4a39a1a34" kind="function"><name>DestroyDebugUtilsMessengerEXT</name></member>
+  </compound>
+  <compound refid="namespaceprism_1_1_p_g_c_1_1base" kind="namespace"><name>prism::PGC::base</name>
+  </compound>
+  <compound refid="namespaceprism_1_1_p_g_c_1_1utils" kind="namespace"><name>prism::PGC::utils</name>
+    <member refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23f" kind="enum"><name>MultisampleSelectionStrategy</name></member>
+    <member refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa23bd02d770fe9f1ea82d40438037cf25" kind="enumvalue"><name>MINIMAL</name></member>
+    <member refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa9eea90ec596d66e2a1fd8edd09cd61d9" kind="enumvalue"><name>MIDDLE</name></member>
+    <member refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fad9ff5583d4cddf516dbd5e1f38b654d1" kind="enumvalue"><name>MAXIMAL</name></member>
+    <member refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa28800c8afb35060c17cefe2f645685ad" kind="enumvalue"><name>CUSTOM</name></member>
+  </compound>
+  <compound refid="namespaceprism_1_1render" kind="namespace"><name>prism::render</name>
+  </compound>
+  <compound refid="namespaceprism_1_1scene" kind="namespace"><name>prism::scene</name>
+    <member refid="namespaceprism_1_1scene_1a6233cae67fb5dbba2836694cdc18a810" kind="typedef"><name>ComponentType</name></member>
+    <member refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kind="typedef"><name>Entity</name></member>
+    <member refid="namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de" kind="typedef"><name>SystemId</name></member>
+    <member refid="namespaceprism_1_1scene_1ad63c2c31072dfa1cb1b74b5c51557299" kind="variable"><name>INVALID_COMPONENT_TYPE</name></member>
+    <member refid="namespaceprism_1_1scene_1a3949544449808fa9981f4ac8cc49537b" kind="variable"><name>INVALID_ENTITY_ID</name></member>
+    <member refid="namespaceprism_1_1scene_1a4ce677c2eee0379c21cce541c0bc9752" kind="variable"><name>INVALID_SYSTEM_ID</name></member>
+  </compound>
+  <compound refid="base_8cpp" kind="file"><name>base.cpp</name>
+  </compound>
+  <compound refid="base_8h" kind="file"><name>base.h</name>
+  </compound>
+  <compound refid="buffer_wrapper_8cpp" kind="file"><name>bufferWrapper.cpp</name>
+  </compound>
+  <compound refid="buffer_wrapper_8h" kind="file"><name>bufferWrapper.h</name>
+  </compound>
+  <compound refid="camera_component_8h" kind="file"><name>cameraComponent.h</name>
+  </compound>
+  <compound refid="component_8h" kind="file"><name>component.h</name>
+  </compound>
+  <compound refid="component_manager_8cpp" kind="file"><name>componentManager.cpp</name>
+  </compound>
+  <compound refid="component_manager_8h" kind="file"><name>componentManager.h</name>
   </compound>
   <compound refid="_config_8h" kind="file"><name>Config.h</name>
+  </compound>
+  <compound refid="descriptor_set_8cpp" kind="file"><name>descriptorSet.cpp</name>
+  </compound>
+  <compound refid="descriptor_set_8h" kind="file"><name>descriptorSet.h</name>
+  </compound>
+  <compound refid="descriptor_set_layout_8cpp" kind="file"><name>descriptorSetLayout.cpp</name>
+  </compound>
+  <compound refid="descriptor_set_layout_8h" kind="file"><name>descriptorSetLayout.h</name>
+  </compound>
+  <compound refid="device_checker_8cpp" kind="file"><name>deviceChecker.cpp</name>
+  </compound>
+  <compound refid="device_checker_8h" kind="file"><name>deviceChecker.h</name>
+  </compound>
+  <compound refid="device_rater_8cpp" kind="file"><name>deviceRater.cpp</name>
+  </compound>
+  <compound refid="device_rater_8h" kind="file"><name>deviceRater.h</name>
+  </compound>
+  <compound refid="device_wrapper_8cpp" kind="file"><name>deviceWrapper.cpp</name>
+  </compound>
+  <compound refid="device_wrapper_8h" kind="file"><name>deviceWrapper.h</name>
+  </compound>
+  <compound refid="entity_8h" kind="file"><name>entity.h</name>
+  </compound>
+  <compound refid="entity_manager_8cpp" kind="file"><name>entityManager.cpp</name>
+  </compound>
+  <compound refid="entity_manager_8h" kind="file"><name>entityManager.h</name>
   </compound>
   <compound refid="fmath_8cpp" kind="file"><name>fmath.cpp</name>
   </compound>
@@ -147,6 +815,12 @@
   </compound>
   <compound refid="_frame_8h" kind="file"><name>Frame.h</name>
   </compound>
+  <compound refid="graphics_pipeline_8cpp" kind="file"><name>graphicsPipeline.cpp</name>
+  </compound>
+  <compound refid="graphics_pipeline_8h" kind="file"><name>graphicsPipeline.h</name>
+  </compound>
+  <compound refid="init_8h" kind="file"><name>init.h</name>
+  </compound>
   <compound refid="logger_8cpp" kind="file"><name>logger.cpp</name>
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
@@ -155,22 +829,94 @@
   </compound>
   <compound refid="matrix_8h" kind="file"><name>matrix.h</name>
   </compound>
+  <compound refid="mesh_8h" kind="file"><name>mesh.h</name>
+  </compound>
+  <compound refid="mesh_component_8h" kind="file"><name>meshComponent.h</name>
+  </compound>
+  <compound refid="mesh_loader_8cpp" kind="file"><name>meshLoader.cpp</name>
+  </compound>
+  <compound refid="mesh_loader_8h" kind="file"><name>meshLoader.h</name>
+  </compound>
+  <compound refid="mesh_manager_8cpp" kind="file"><name>meshManager.cpp</name>
+  </compound>
+  <compound refid="mesh_manager_8h" kind="file"><name>meshManager.h</name>
+  </compound>
   <compound refid="_prism_engine_8cpp" kind="file"><name>PrismEngine.cpp</name>
   </compound>
   <compound refid="_prism_engine_8h" kind="file"><name>PrismEngine.h</name>
+  </compound>
+  <compound refid="prism_graphic_core_8cpp" kind="file"><name>prismGraphicCore.cpp</name>
+    <member refid="prism_graphic_core_8cpp_1af14fac7fbc250522a78849d58d5b0811" kind="define"><name>TINYOBJLOADER_IMPLEMENTATION</name></member>
+  </compound>
+  <compound refid="prism_graphic_core_8h" kind="file"><name>prismGraphicCore.h</name>
+    <member refid="prism_graphic_core_8h_1a816ab7d5c2ce1f0a01216042837beb93" kind="define"><name>GLM_FORCE_RADIANS</name></member>
+    <member refid="prism_graphic_core_8h_1aa53e0967978ad7a8792f6961156ec968" kind="define"><name>GLM_FORCE_DEPTH_ZERO_TO_ONE</name></member>
+  </compound>
+  <compound refid="renderer_8cpp" kind="file"><name>renderer.cpp</name>
+  </compound>
+  <compound refid="renderer_8h" kind="file"><name>renderer.h</name>
+  </compound>
+  <compound refid="render_pass_8cpp" kind="file"><name>renderPass.cpp</name>
+  </compound>
+  <compound refid="render_pass_8h" kind="file"><name>renderPass.h</name>
+  </compound>
+  <compound refid="render_system_8cpp" kind="file"><name>renderSystem.cpp</name>
+  </compound>
+  <compound refid="render_system_8h" kind="file"><name>renderSystem.h</name>
+  </compound>
+  <compound refid="resources_creater_8cpp" kind="file"><name>resourcesCreater.cpp</name>
+  </compound>
+  <compound refid="resources_creater_8h" kind="file"><name>resourcesCreater.h</name>
+  </compound>
+  <compound refid="scene_8cpp" kind="file"><name>scene.cpp</name>
+  </compound>
+  <compound refid="scene_8h" kind="file"><name>scene.h</name>
+  </compound>
+  <compound refid="shader_stages_loader_8cpp" kind="file"><name>shaderStagesLoader.cpp</name>
+  </compound>
+  <compound refid="shader_stages_loader_8h" kind="file"><name>shaderStagesLoader.h</name>
+  </compound>
+  <compound refid="swap_chain_8cpp" kind="file"><name>swapChain.cpp</name>
+  </compound>
+  <compound refid="swap_chain_8h" kind="file"><name>swapChain.h</name>
+  </compound>
+  <compound refid="system_8h" kind="file"><name>system.h</name>
+  </compound>
+  <compound refid="system_manager_8cpp" kind="file"><name>systemManager.cpp</name>
+  </compound>
+  <compound refid="system_manager_8h" kind="file"><name>systemManager.h</name>
+  </compound>
+  <compound refid="texture_8h" kind="file"><name>texture.h</name>
+  </compound>
+  <compound refid="texture_component_8h" kind="file"><name>textureComponent.h</name>
+  </compound>
+  <compound refid="texture_loader_8cpp" kind="file"><name>textureLoader.cpp</name>
+    <member refid="texture_loader_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78" kind="define"><name>STB_IMAGE_IMPLEMENTATION</name></member>
+  </compound>
+  <compound refid="texture_loader_8h" kind="file"><name>textureLoader.h</name>
+  </compound>
+  <compound refid="texture_manager_8cpp" kind="file"><name>textureManager.cpp</name>
+  </compound>
+  <compound refid="texture_manager_8h" kind="file"><name>textureManager.h</name>
+  </compound>
+  <compound refid="transform_component_8h" kind="file"><name>transformComponent.h</name>
+  </compound>
+  <compound refid="ubo_8h" kind="file"><name>ubo.h</name>
+  </compound>
+  <compound refid="utils_8h" kind="file"><name>utils.h</name>
   </compound>
   <compound refid="vector_8cpp" kind="file"><name>vector.cpp</name>
   </compound>
   <compound refid="vector_8h" kind="file"><name>vector.h</name>
   </compound>
+  <compound refid="vertex_8cpp" kind="file"><name>vertex.cpp</name>
+  </compound>
+  <compound refid="vertex_8h" kind="file"><name>vertex.h</name>
+  </compound>
   <compound refid="_window_8cpp" kind="file"><name>Window.cpp</name>
   </compound>
   <compound refid="_window_8h" kind="file"><name>Window.h</name>
   </compound>
-  <compound refid="_window_vk_manager_8cpp" kind="file"><name>WindowVkManager.cpp</name>
-  </compound>
-  <compound refid="_window_vk_manager_8h" kind="file"><name>WindowVkManager.h</name>
-  </compound>
-  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>C:/Users/Admin/source/repos/PrismEngine/src</name>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src</name>
   </compound>
 </doxygenindex>

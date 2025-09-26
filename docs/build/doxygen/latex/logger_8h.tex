@@ -1,5 +1,5 @@
-\doxysection{Файл C\+:/\+Users/\+Admin/source/repos/\+Prism\+Engine/src/logger.h}
-\hypertarget{logger_8h}{}\label{logger_8h}\index{C:/Users/Admin/source/repos/PrismEngine/src/logger.h@{C:/Users/Admin/source/repos/PrismEngine/src/logger.h}}
+\doxysection{Файл C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/logger.h}
+\hypertarget{logger_8h}{}\label{logger_8h}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h}}
 {\ttfamily \#include $<$SDL2/\+SDL\+\_\+log.\+h$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
@@ -16,7 +16,26 @@ namespace \mbox{\hyperlink{namespaceprism_1_1logger}{prism\+::logger}}
 \doxysubsubsection*{Перечисления}
 \begin{DoxyCompactItemize}
 \item 
-enum class \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{prism\+::logger\+::\+Error}} \{ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654}{prism\+::logger\+::\+TEST\+\_\+\+ERROR}}
+enum class \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{prism\+::logger\+::\+Error}} \{ \newline
+\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654}{prism\+::logger\+::\+TEST\+\_\+\+ERROR}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fac996121b2cdab372dbe567bdf3338409}{prism\+::logger\+::\+FAILED\+\_\+\+TO\+\_\+\+CREATE\+\_\+\+VK\+\_\+\+INSTANCE}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fadd63255ee65e45ee2b61316ab1decf3c}{prism\+::logger\+::\+FAILED\+\_\+\+TO\+\_\+\+CREATE\+\_\+\+WINDOW\+\_\+\+SURFACE}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fab43344927fcdc1074a456a237d2b1ce3}{prism\+::logger\+::\+PRISM\+\_\+\+ENGINE\+\_\+\+NOT\+\_\+\+INITIALIZE}}
+, \newline
+\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa860eb54520a554a78bd21c7293923fb1}{prism\+::logger\+::\+WINDOW\+\_\+\+INSTANCE\+\_\+\+CREATE\+\_\+\+ERROR}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fad8313c32829b7632ea0145d413618a06}{prism\+::logger\+::\+NOT\+\_\+\+CALL\+\_\+\+CLEANUP\+\_\+\+IN\+\_\+\+PGC\+\_\+\+CORE}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989facd5d0e77c82518803520ad29a49bf3b8}{prism\+::logger\+::\+SDL\+\_\+\+VULKAN\+\_\+\+EXTENSIONS\+\_\+\+COUNT\+\_\+\+FAILED}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa685d03e7509232a071e84689c6e817cd}{prism\+::logger\+::\+VULKAN\+\_\+\+VALIDATION\+\_\+\+LAYERS\+\_\+\+UNAVAILABLE}}
+, \newline
+\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa8a698cb421b3e29da20940a7e5a84103}{prism\+::logger\+::\+VULKAN\+\_\+\+DEBUG\+\_\+\+MESSENGER\+\_\+\+SETUP\+\_\+\+FAILED}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa3368d5c98c0566bbab7fde79e49a1d94}{prism\+::logger\+::\+VULKAN\+\_\+\+NO\+\_\+\+GPU\+\_\+\+SUPPORT}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fabdbdbec21fe7a2864315caec4929194f}{prism\+::logger\+::\+VULKAN\+\_\+\+NO\+\_\+\+SUITABLE\+\_\+\+GPU}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa3b0899a81586e97eff0745fff0134a6a}{prism\+::logger\+::\+VULKAN\+\_\+\+LOGICAL\+\_\+\+DEVICE\+\_\+\+CREATION\+\_\+\+FAILED}}
+, \newline
+\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fae3ded1bafa3ccea6fca5129abad7aa6c}{prism\+::logger\+::\+VULKAN\+\_\+\+SWAP\+\_\+\+CHAIN\+\_\+\+FAILED}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa5a2ca8d747770ea2ae4add296c5a4b7f}{prism\+::logger\+::\+FAILED\+\_\+\+TO\+\_\+\+OPEN\+\_\+\+FILE}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989facfd53859bdd7926af37ee236293bbcc1}{prism\+::logger\+::\+FAILED\+\_\+\+TO\+\_\+\+DETERMINE\+\_\+\+FILE\+\_\+\+SIZE}}
+, \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989faac46bf3c7fe3caec13c2671c656317e6}{prism\+::logger\+::\+FAILED\+\_\+\+TO\+\_\+\+READ\+\_\+\+FILE}}
  \}
 \begin{DoxyCompactList}\small\item\em Перечисление ошибок движка \end{DoxyCompactList}\item 
 enum class \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{prism\+::logger\+::\+Level}} \{ \newline

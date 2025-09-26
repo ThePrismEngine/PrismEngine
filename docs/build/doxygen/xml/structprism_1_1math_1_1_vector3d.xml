@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="18" column="19" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" bodystart="18" bodyend="-1"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="18" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structprism_1_1math_1_1_vector3d_1a754de72e6ab72e92e37dec7e1cdae710" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="19" column="19" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" bodystart="19" bodyend="-1"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="19" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structprism_1_1math_1_1_vector3d_1aac7af19efcd4d5e3738e3d2b1313efc5" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="20" column="19" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" bodystart="20" bodyend="-1"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="20" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structprism_1_1math_1_1_vector3d_1a46e1eb616728dab7095af12303438bba" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="21" column="19" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" bodystart="21" bodyend="-1"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="21" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" bodystart="21" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="26" column="13" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" bodystart="26" bodyend="26"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="26" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" bodystart="26" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1a4971bfe801e3559fbbfc5c806aa6f96d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="35" column="13" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" bodystart="35" bodyend="35"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="35" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1ae095b21e5923e3e09f186e423c4385b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="40" column="18" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="5" bodyend="8"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="40" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="5" bodyend="8"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1a0c8b693083a8af90d6b62808b57765fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="47" column="22" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="9" bodyend="14"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="47" column="22" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="9" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1afe3a8371655b6b6a2d1e39c9bcda5665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="54" column="22" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="15" bodyend="20"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="54" column="22" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="15" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1a96cda750eb855d0b784db5a3a64046ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="61" column="22" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="21" bodyend="26"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="61" column="22" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="21" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1af491978014b487f096ac0ac781365da5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
@@ -294,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="69" column="22" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="27" bodyend="33"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="69" column="22" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="27" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1a8db312c4c2d5a5b2c0bc4a91af7dc36a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -334,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="77" column="19" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="35" bodyend="45"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="77" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="35" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1ab5a3dd7e3d1bb0f39557671fb7fe36fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -365,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="84" column="18" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="46" bodyend="51"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="84" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="46" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1a246d4ac8bf3bc3b237c3250a0acdfdb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -383,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="90" column="19" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="53" bodyend="56"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="90" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="53" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="structprism_1_1math_1_1_vector3d_1a59dbff9c0f786334970c93d16820fd8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
@@ -401,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="96" column="22" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="58" bodyend="64"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="96" column="22" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="58" bodyend="64"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -410,7 +410,7 @@
     <detaileddescription>
 <para>Используется для однородных координат и 3D преобразований </para>
     </detaileddescription>
-    <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" line="17" column="9" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" bodystart="17" bodyend="97"/>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" line="17" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" bodystart="17" bodyend="97"/>
     <listofallmembers>
       <member refid="structprism_1_1math_1_1_vector3d_1a246d4ac8bf3bc3b237c3250a0acdfdb7" prot="public" virt="non-virtual"><scope>prism::math::Vector3d</scope><name>length</name></member>
       <member refid="structprism_1_1math_1_1_vector3d_1a59dbff9c0f786334970c93d16820fd8b" prot="public" virt="non-virtual"><scope>prism::math::Vector3d</scope><name>normalise</name></member>

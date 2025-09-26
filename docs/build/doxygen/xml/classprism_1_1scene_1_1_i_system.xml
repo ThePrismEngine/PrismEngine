@@ -13,10 +13,10 @@
         <qualifiedname>prism::scene::ISystem::enabled</qualifiedname>
         <initializer>= true</initializer>
         <briefdescription>
-<para>Флаг активности системы. </para>
+<para>Р¤Р»Р°Рі Р°РєС‚РёРІРЅРѕСЃС‚Рё СЃРёСЃС‚РµРјС‹. </para>
         </briefdescription>
         <detaileddescription>
-<para>Если true - система обновляется, если false - пропускается </para>
+<para>Р•СЃР»Рё true - СЃРёСЃС‚РµРјР° РѕР±РЅРѕРІР»СЏРµС‚СЃСЏ, РµСЃР»Рё false - РїСЂРѕРїСѓСЃРєР°РµС‚СЃСЏ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -50,7 +50,7 @@
           <declname>deltaTime</declname>
         </param>
         <briefdescription>
-<para>Обновление состояния системы. </para>
+<para>РћР±РЅРѕРІР»РµРЅРёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃРёСЃС‚РµРјС‹ </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -58,11 +58,11 @@
 <parametername>deltaTime</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Время, прошедшее с предыдущего обновления (в секундах)</para>
+<para>Р’СЂРµРјСЏ, РїСЂРѕС€РµРґС€РµРµ СЃ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ (РІ СЃРµРєСѓРЅРґР°С…)</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-Вызывается каждый кадр для обновления логики системы </para>
+Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєР°Р¶РґС‹Р№ РєР°РґСЂ РґР»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ Р»РѕРіРёРєРё СЃРёСЃС‚РµРјС‹ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -70,10 +70,10 @@
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Базовый интерфейс для всех систем </para>
+<para>Р‘Р°Р·РѕРІС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РІСЃРµС… СЃРёСЃС‚РµРј </para>
     </briefdescription>
     <detaileddescription>
-<para>Системы должны наследоваться от этого интерфейса и реализовывать метод update </para>
+<para>РЎРёСЃС‚РµРјС‹ РґРѕР»Р¶РЅС‹ РЅР°СЃР»РµРґРѕРІР°С‚СЊСЃСЏ РѕС‚ СЌС‚РѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР° Рё СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ РјРµС‚РѕРґ update </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

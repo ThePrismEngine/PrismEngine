@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp" line="5" column="7" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp" bodystart="5" bodyend="7" declfile="C:/Users/Admin/source/repos/PrismEngine/src/fmath.h" declline="17" declcolumn="7"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/fmath.cpp" line="5" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/fmath.cpp" bodystart="5" bodyend="7" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/fmath.h" declline="17" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
@@ -77,11 +77,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/matrix.cpp" line="130" column="11" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/matrix.cpp" bodystart="130" bodyend="137" declfile="C:/Users/Admin/source/repos/PrismEngine/src/matrix.h" declline="112" declcolumn="26"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/matrix.cpp" line="141" column="11" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/matrix.cpp" bodystart="141" bodyend="148" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/matrix.h" declline="114" declcolumn="26"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceprism_1_1math_1a1677733d560794b1e46fd1dcfd7b4f7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_matrix4_x4" kindref="compound">Matrix4X4</ref></type>
-        <definition>static Matrix4X4 prism::math::Matrix_QuickInverse</definition>
+        <definition>Matrix4X4 prism::math::Matrix_QuickInverse</definition>
         <argsstring>(Matrix4X4 &amp;m)</argsstring>
         <name>Matrix_QuickInverse</name>
         <qualifiedname>prism::math::Matrix_QuickInverse</qualifiedname>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/matrix.cpp" line="138" column="11" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/matrix.cpp" bodystart="138" bodyend="149" declfile="C:/Users/Admin/source/repos/PrismEngine/src/matrix.h" declline="119" declcolumn="26"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/matrix.cpp" line="149" column="11" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/matrix.cpp" bodystart="149" bodyend="160" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/matrix.h" declline="121" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" line="66" column="7" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="66" bodyend="71" declfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" declline="105" declcolumn="15"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" line="66" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="66" bodyend="71" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" declline="105" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" line="73" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="73" bodyend="80" declfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" declline="113" declcolumn="18"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" line="73" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="73" bodyend="80" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" declline="113" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structprism_1_1math_1_1_vector3d" kindref="compound">Vector3d</ref></type>
@@ -261,13 +261,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" line="82" column="10" bodyfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.cpp" bodystart="82" bodyend="91" declfile="C:/Users/Admin/source/repos/PrismEngine/src/vector.h" declline="123" declcolumn="18"/>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" line="82" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.cpp" bodystart="82" bodyend="91" declfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vector.h" declline="123" declcolumn="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Admin/source/repos/PrismEngine/src/fmath.cpp" line="4" column="1"/>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/fmath.cpp" line="4" column="1"/>
   </compounddef>
 </doxygen>

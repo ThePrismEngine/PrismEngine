@@ -1,5 +1,5 @@
 \doxysection{logger.\+h}
-\hypertarget{logger_8h_source}{}\label{logger_8h_source}\index{C:/Users/Admin/source/repos/PrismEngine/src/logger.h@{C:/Users/Admin/source/repos/PrismEngine/src/logger.h}}
+\hypertarget{logger_8h_source}{}\label{logger_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/logger.h}}
 \mbox{\hyperlink{logger_8h}{См. документацию.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
@@ -12,47 +12,62 @@
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1logger}{prism::logger}}\ \{}
 \DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}}\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654}{TEST\_ERROR}}\ }
-\DoxyCodeLine{00016\ \ \ \ \ \};}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}}\ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc}{VERBOSE}}\ =\ SDL\_LOG\_PRIORITY\_VERBOSE,\ \ }
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}}\ =\ SDL\_LOG\_PRIORITY\_DEBUG,\ \ \ \ \ \ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3}{INFO}}\ =\ SDL\_LOG\_PRIORITY\_INFO,\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b}{WARNING}}\ =\ SDL\_LOG\_PRIORITY\_WARN,\ \ \ \ \ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}\ =\ SDL\_LOG\_PRIORITY\_ERROR,\ \ \ \ \ \ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}\ =\ SDL\_LOG\_PRIORITY\_CRITICAL\ }
-\DoxyCodeLine{00029\ \ \ \ \ \};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a44ab0bc2022efc1dbfe3234031cac93e}{setLevel}}(\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}}\ level);}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceprism_1_1logger_a0f5071ef54b1884256b312cec14e910d}{setOutputFile}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_aea6335133a1d9d4d190d24737b4d12cc}{setOutputConsole}}();}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a011c76bbfb6104919163e337e828a26e}{log}}(\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}}\ level,\ \textcolor{keyword}{const}\ std::string\&\ message);}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_af1807bb00385d1c5c4ad487f5869e9bd}{logError}}(\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}}\ err,\ \textcolor{keyword}{const}\ std::string\&\ details\ =\ \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_af4a740cd72b4f7684f4466728cf548d3}{verbose}}(\textcolor{keyword}{const}\ std::string\&\ message);}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a3ce9ded53e563d7894a199406899a18c}{debug}}(\textcolor{keyword}{const}\ std::string\&\ message);}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a53c114bd789848844092ce408a10a38c}{info}}(\textcolor{keyword}{const}\ std::string\&\ message);}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a95789fad40cdbf5ca47baef4c355c1e1}{warning}}(\textcolor{keyword}{const}\ std::string\&\ message);}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_ae5db974c5397849b8fc4230c9147906d}{error}}(\textcolor{keyword}{const}\ std::string\&\ message);}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_ab7af2a1862659afcddc003e975de9734}{critical}}(\textcolor{keyword}{const}\ std::string\&\ message);}
-\DoxyCodeLine{00099\ }
-\DoxyCodeLine{00104\ \ \ \ \ std::optional<Error>\ \mbox{\hyperlink{namespaceprism_1_1logger_a4009b1213765d57c2690fb9297c6bea1}{getLastError}}();}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceprism_1_1logger_a95da0e71a7281fed4c011c2dd58ba1af}{hasLastError}}();}
-\DoxyCodeLine{00112\ }
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceprism_1_1logger_aa50f2608949bcbf87806915fb04c4abc}{checkLastErrorType}}(\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}}\ errorType);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa7b815a6d9b972abbc88a0b4394e74654}{TEST\_ERROR}},\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fac996121b2cdab372dbe567bdf3338409}{FAILED\_TO\_CREATE\_VK\_INSTANCE}},}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fadd63255ee65e45ee2b61316ab1decf3c}{FAILED\_TO\_CREATE\_WINDOW\_SURFACE}},}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fab43344927fcdc1074a456a237d2b1ce3}{PRISM\_ENGINE\_NOT\_INITIALIZE}},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa860eb54520a554a78bd21c7293923fb1}{WINDOW\_INSTANCE\_CREATE\_ERROR}},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fad8313c32829b7632ea0145d413618a06}{NOT\_CALL\_CLEANUP\_IN\_PGC\_CORE}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989facd5d0e77c82518803520ad29a49bf3b8}{SDL\_VULKAN\_EXTENSIONS\_COUNT\_FAILED}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa685d03e7509232a071e84689c6e817cd}{VULKAN\_VALIDATION\_LAYERS\_UNAVAILABLE}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa8a698cb421b3e29da20940a7e5a84103}{VULKAN\_DEBUG\_MESSENGER\_SETUP\_FAILED}},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa3368d5c98c0566bbab7fde79e49a1d94}{VULKAN\_NO\_GPU\_SUPPORT}},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fabdbdbec21fe7a2864315caec4929194f}{VULKAN\_NO\_SUITABLE\_GPU}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa3b0899a81586e97eff0745fff0134a6a}{VULKAN\_LOGICAL\_DEVICE\_CREATION\_FAILED}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fae3ded1bafa3ccea6fca5129abad7aa6c}{VULKAN\_SWAP\_CHAIN\_FAILED}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989fa5a2ca8d747770ea2ae4add296c5a4b7f}{FAILED\_TO\_OPEN\_FILE}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989facfd53859bdd7926af37ee236293bbcc1}{FAILED\_TO\_DETERMINE\_FILE\_SIZE}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989faac46bf3c7fe3caec13c2671c656317e6}{FAILED\_TO\_READ\_FILE}},}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856aec1f06e9fb39c4ef0729b3c7c9c8e8cc}{VERBOSE}}\ =\ SDL\_LOG\_PRIORITY\_VERBOSE,\ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}}\ =\ SDL\_LOG\_PRIORITY\_DEBUG,\ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a551b723eafd6a31d444fcb2f5920fbd3}{INFO}}\ =\ SDL\_LOG\_PRIORITY\_INFO,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a059e9861e0400dfbe05c98a841f3f96b}{WARNING}}\ =\ SDL\_LOG\_PRIORITY\_WARN,\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}\ =\ SDL\_LOG\_PRIORITY\_ERROR,\ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}\ =\ SDL\_LOG\_PRIORITY\_CRITICAL\ }
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a44ab0bc2022efc1dbfe3234031cac93e}{setLevel}}(\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}}\ level);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceprism_1_1logger_a0f5071ef54b1884256b312cec14e910d}{setOutputFile}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_aea6335133a1d9d4d190d24737b4d12cc}{setOutputConsole}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a011c76bbfb6104919163e337e828a26e}{log}}(\mbox{\hyperlink{namespaceprism_1_1logger_abd51414545b3b1a07bc3b2161cf69856}{Level}}\ level,\ \textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_af1807bb00385d1c5c4ad487f5869e9bd}{logError}}(\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}}\ err,\ \textcolor{keyword}{const}\ std::string\&\ details\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_af4a740cd72b4f7684f4466728cf548d3}{verbose}}(\textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a3ce9ded53e563d7894a199406899a18c}{debug}}(\textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a53c114bd789848844092ce408a10a38c}{info}}(\textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a95789fad40cdbf5ca47baef4c355c1e1}{warning}}(\textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_ae5db974c5397849b8fc4230c9147906d}{error}}(\textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_ab7af2a1862659afcddc003e975de9734}{critical}}(\textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ std::optional<Error>\ \mbox{\hyperlink{namespaceprism_1_1logger_a4009b1213765d57c2690fb9297c6bea1}{getLastError}}();}
 \DoxyCodeLine{00120\ }
-\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a7e98e993d5b16cdd4d5d39c6f2797967}{clearLastError}}();}
-\DoxyCodeLine{00126\ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceprism_1_1logger_a95da0e71a7281fed4c011c2dd58ba1af}{hasLastError}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceprism_1_1logger_aa50f2608949bcbf87806915fb04c4abc}{checkLastErrorType}}(\mbox{\hyperlink{namespaceprism_1_1logger_a3e930b50cf4b43b8d9e75a260feb989f}{Error}}\ errorType);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1logger_a7e98e993d5b16cdd4d5d39c6f2797967}{clearLastError}}();}
+\DoxyCodeLine{00141\ \}}
 
 \end{DoxyCode}

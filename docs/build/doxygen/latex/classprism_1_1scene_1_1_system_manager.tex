@@ -2,7 +2,7 @@
 \hypertarget{classprism_1_1scene_1_1_system_manager}{}\label{classprism_1_1scene_1_1_system_manager}\index{prism::scene::SystemManager@{prism::scene::SystemManager}}
 
 
-Менеджер систем для регистрации, включения/выключения и обновления систем.  
+РњРµРЅРµРґР¶РµСЂ СЃРёСЃС‚РµРј РґР»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё, РІРєР»СЋС‡РµРЅРёСЏ/РІС‹РєР»СЋС‡РµРЅРёСЏ Рё РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРёСЃС‚РµРј.  
 
 
 
@@ -15,24 +15,24 @@
 \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a37b3f8b281e8503f6f4d08de1e8a2aa0}{System\+Manager}} ()=default
 \item 
 {\footnotesize template$<$typename T, typename... Args$>$ }\\\mbox{\hyperlink{namespaceprism_1_1scene_a26a27fa2da7635c84c4d875e8cdac5de}{System\+Id}} \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a871edb29fd162e17d59b3d36fe3bfae6}{register\+System}} (Args \&\&... args)
-\begin{DoxyCompactList}\small\item\em Регистрирует новую систему в менеджере. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Р РµРіРёСЃС‚СЂРёСЂСѓРµС‚ РЅРѕРІСѓСЋ СЃРёСЃС‚РµРјСѓ РІ РјРµРЅРµРґР¶РµСЂРµ. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a0810e774cfc31a4cf1c1eb3bac4f0997}{enable\+System}} (\mbox{\hyperlink{namespaceprism_1_1scene_a26a27fa2da7635c84c4d875e8cdac5de}{System\+Id}} system\+Id)
-\begin{DoxyCompactList}\small\item\em Включает систему по идентификатору. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Р’РєР»СЋС‡Р°РµС‚ СЃРёСЃС‚РµРјСѓ РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a277d39c230cb33e55636aaa60d844c04}{disable\+System}} (\mbox{\hyperlink{namespaceprism_1_1scene_a26a27fa2da7635c84c4d875e8cdac5de}{System\+Id}} system\+Id)
-\begin{DoxyCompactList}\small\item\em Выключает систему по идентификатору. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Р’С‹РєР»СЋС‡Р°РµС‚ СЃРёСЃС‚РµРјСѓ РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_acfa1db8417866bfce1b77d4aa76e1a09}{update}} (float delta\+Time)
-\begin{DoxyCompactList}\small\item\em Обновляет все активные системы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em РћР±РЅРѕРІР»СЏРµС‚ РІСЃРµ Р°РєС‚РёРІРЅС‹Рµ СЃРёСЃС‚РµРјС‹ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Р—Р°РєСЂС‹С‚С‹Рµ РґР°РЅРЅС‹Рµ}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classprism_1_1scene_1_1_i_system}{ISystem}} $>$ $>$ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a7430581dc763a8217472d313a2145a5a}{systems}}
-\begin{DoxyCompactList}\small\item\em Массив зарегистрированных систем \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em РњР°СЃСЃРёРІ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… СЃРёСЃС‚РµРј \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
-Менеджер систем для регистрации, включения/выключения и обновления систем. 
+РњРµРЅРµРґР¶РµСЂ СЃРёСЃС‚РµРј РґР»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё, РІРєР»СЋС‡РµРЅРёСЏ/РІС‹РєР»СЋС‡РµРЅРёСЏ Рё РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРёСЃС‚РµРј. 
 
-Управляет коллекцией систем, обновляя их в порядке регистрации. 
+РЈРїСЂР°РІР»СЏРµС‚ РєРѕР»Р»РµРєС†РёРµР№ СЃРёСЃС‚РµРј, РѕР±РЅРѕРІР»СЏСЏ РёС… РІ РїРѕСЂСЏРґРєРµ СЂРµРіРёСЃС‚СЂР°С†РёРё. 
 
 \label{doc-constructors}
 \Hypertarget{classprism_1_1scene_1_1_system_manager_doc-constructors}
@@ -56,11 +56,11 @@ void prism\+::scene\+::\+System\+Manager\+::disable\+System (\begin{DoxyParamCap
 
 
 
-Выключает систему по идентификатору. 
+Р’С‹РєР»СЋС‡Р°РµС‚ СЃРёСЃС‚РµРјСѓ РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ. 
 
 
 \begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
-{\em system\+Id} & Идентификатор системы, которую нужно выключить. \\
+{\em system\+Id} & РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРёСЃС‚РµРјС‹, РєРѕС‚РѕСЂСѓСЋ РЅСѓР¶РЅРѕ РІС‹РєР»СЋС‡РёС‚СЊ. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classprism_1_1scene_1_1_system_manager_a0810e774cfc31a4cf1c1eb3bac4f0997}\index{prism::scene::SystemManager@{prism::scene::SystemManager}!enableSystem@{enableSystem}}
@@ -71,11 +71,11 @@ void prism\+::scene\+::\+System\+Manager\+::enable\+System (\begin{DoxyParamCapt
 
 
 
-Включает систему по идентификатору. 
+Р’РєР»СЋС‡Р°РµС‚ СЃРёСЃС‚РµРјСѓ РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ. 
 
 
 \begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
-{\em system\+Id} & Идентификатор системы, которую нужно включить. \\
+{\em system\+Id} & РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРёСЃС‚РµРјС‹, РєРѕС‚РѕСЂСѓСЋ РЅСѓР¶РЅРѕ РІРєР»СЋС‡РёС‚СЊ. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classprism_1_1scene_1_1_system_manager_a871edb29fd162e17d59b3d36fe3bfae6}\index{prism::scene::SystemManager@{prism::scene::SystemManager}!registerSystem@{registerSystem}}
@@ -87,24 +87,24 @@ template$<$typename T, typename... Args$>$ \\
 
 
 
-Регистрирует новую систему в менеджере. 
+Р РµРіРёСЃС‚СЂРёСЂСѓРµС‚ РЅРѕРІСѓСЋ СЃРёСЃС‚РµРјСѓ РІ РјРµРЅРµРґР¶РµСЂРµ. 
 
 
 \begin{DoxyTemplParams}{РџР°СЂР°РјРµС‚СЂС‹ С€Р°Р±Р»РѕРЅР°}
-{\em T} & Тип системы (должен быть производным от \doxylink{classprism_1_1scene_1_1_i_system}{ISystem}). \\
+{\em T} & РўРёРї СЃРёСЃС‚РµРјС‹ (РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїСЂРѕРёР·РІРѕРґРЅС‹Рј РѕС‚ \doxylink{classprism_1_1scene_1_1_i_system}{ISystem}). \\
 \hline
-{\em Args} & Типы аргументов для конструктора системы. \\
+{\em Args} & РўРёРїС‹ Р°СЂРіСѓРјРµРЅС‚РѕРІ РґР»СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° СЃРёСЃС‚РµРјС‹. \\
 \hline
 \end{DoxyTemplParams}
 
 \begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
-{\em args} & Аргументы для передачи конструктору системы. \\
+{\em args} & РђСЂРіСѓРјРµРЅС‚С‹ РґР»СЏ РїРµСЂРµРґР°С‡Рё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂСѓ СЃРёСЃС‚РµРјС‹. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
-Идентификатор зарегистрированной системы.
+РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅРѕР№ СЃРёСЃС‚РµРјС‹.
 \end{DoxyReturn}
-Создает экземпляр системы и добавляет его в список управления \Hypertarget{classprism_1_1scene_1_1_system_manager_acfa1db8417866bfce1b77d4aa76e1a09}\index{prism::scene::SystemManager@{prism::scene::SystemManager}!update@{update}}
+РЎРѕР·РґР°РµС‚ СЌРєР·РµРјРїР»СЏСЂ СЃРёСЃС‚РµРјС‹ Рё РґРѕР±Р°РІР»СЏРµС‚ РµРіРѕ РІ СЃРїРёСЃРѕРє СѓРїСЂР°РІР»РµРЅРёСЏ \Hypertarget{classprism_1_1scene_1_1_system_manager_acfa1db8417866bfce1b77d4aa76e1a09}\index{prism::scene::SystemManager@{prism::scene::SystemManager}!update@{update}}
 \index{update@{update}!prism::scene::SystemManager@{prism::scene::SystemManager}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily \label{classprism_1_1scene_1_1_system_manager_acfa1db8417866bfce1b77d4aa76e1a09} 
@@ -112,14 +112,14 @@ void prism\+::scene\+::\+System\+Manager\+::update (\begin{DoxyParamCaption}\ite
 
 
 
-Обновляет все активные системы. 
+РћР±РЅРѕРІР»СЏРµС‚ РІСЃРµ Р°РєС‚РёРІРЅС‹Рµ СЃРёСЃС‚РµРјС‹ 
 
 
 \begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
-{\em delta\+Time} & Время, прошедшее с предыдущего обновления\\
+{\em delta\+Time} & Р’СЂРµРјСЏ, РїСЂРѕС€РµРґС€РµРµ СЃ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ\\
 \hline
 \end{DoxyParams}
-Вызывает \doxylink{classprism_1_1scene_1_1_system_manager_acfa1db8417866bfce1b77d4aa76e1a09}{update()} для всех включенных систем в порядке регистрации 
+Р’С‹Р·С‹РІР°РµС‚ \doxylink{classprism_1_1scene_1_1_system_manager_acfa1db8417866bfce1b77d4aa76e1a09}{update()} РґР»СЏ РІСЃРµС… РІРєР»СЋС‡РµРЅРЅС‹С… СЃРёСЃС‚РµРј РІ РїРѕСЂСЏРґРєРµ СЂРµРіРёСЃС‚СЂР°С†РёРё 
 
 \label{doc-variable-members}
 \Hypertarget{classprism_1_1scene_1_1_system_manager_doc-variable-members}
@@ -132,7 +132,7 @@ std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classprism_1_1scene_1_
 
 
 
-Массив зарегистрированных систем 
+РњР°СЃСЃРёРІ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… СЃРёСЃС‚РµРј 
 
 
 

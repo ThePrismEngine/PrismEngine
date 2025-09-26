@@ -23,10 +23,10 @@
         <name>ComponentType</name>
         <qualifiedname>prism::scene::ComponentType</qualifiedname>
         <briefdescription>
-<para>Тип компонента. </para>
+<para>РўРёРї РєРѕРјРїРѕРЅРµРЅС‚Р° </para>
         </briefdescription>
         <detaileddescription>
-<para>Уникальный идентификатор типа компонента в системе </para>
+<para>РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РєРѕРјРїРѕРЅРµРЅС‚Р° РІ СЃРёСЃС‚РµРјРµ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -39,10 +39,10 @@
         <name>Entity</name>
         <qualifiedname>prism::scene::Entity</qualifiedname>
         <briefdescription>
-<para>Идентификатор сущности. </para>
+<para>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё </para>
         </briefdescription>
         <detaileddescription>
-<para>Уникальный числовой идентификатор для обращения к сущности в системе </para>
+<para>РЈРЅРёРєР°Р»СЊРЅС‹Р№ С‡РёСЃР»РѕРІРѕР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґР»СЏ РѕР±СЂР°С‰РµРЅРёСЏ Рє СЃСѓС‰РЅРѕСЃС‚Рё РІ СЃРёСЃС‚РµРјРµ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -55,10 +55,10 @@
         <name>SystemId</name>
         <qualifiedname>prism::scene::SystemId</qualifiedname>
         <briefdescription>
-<para>Идентификатор системы. </para>
+<para>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРёСЃС‚РµРјС‹ </para>
         </briefdescription>
         <detaileddescription>
-<para>Уникальный числовой идентификатор для обращения к системе </para>
+<para>РЈРЅРёРєР°Р»СЊРЅС‹Р№ С‡РёСЃР»РѕРІРѕР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґР»СЏ РѕР±СЂР°С‰РµРЅРёСЏ Рє СЃРёСЃС‚РµРјРµ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -74,10 +74,10 @@
         <qualifiedname>prism::scene::INVALID_COMPONENT_TYPE</qualifiedname>
         <initializer>= 0</initializer>
         <briefdescription>
-<para>Неверный тип компонента </para>
+<para>РќРµРІРµСЂРЅС‹Р№ С‚РёРї РєРѕРјРїРѕРЅРµРЅС‚Р° </para>
         </briefdescription>
         <detaileddescription>
-<para>Используется для обозначения отсутствующего или невалидного типа компонента </para>
+<para>РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РµРіРѕ РёР»Рё РЅРµРІР°Р»РёРґРЅРѕРіРѕ С‚РёРїР° РєРѕРјРїРѕРЅРµРЅС‚Р° </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -91,10 +91,10 @@
         <qualifiedname>prism::scene::INVALID_ENTITY_ID</qualifiedname>
         <initializer>= 0</initializer>
         <briefdescription>
-<para>Неверный идентификатор сущности </para>
+<para>РќРµРІРµСЂРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё </para>
         </briefdescription>
         <detaileddescription>
-<para>Используется для обозначения отсутствующей или невалидной сущности </para>
+<para>РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РµР№ РёР»Рё РЅРµРІР°Р»РёРґРЅРѕР№ СЃСѓС‰РЅРѕСЃС‚Рё </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -108,10 +108,10 @@
         <qualifiedname>prism::scene::INVALID_SYSTEM_ID</qualifiedname>
         <initializer>= 0</initializer>
         <briefdescription>
-<para>Неверный идентификатор системы </para>
+<para>РќРµРІРµСЂРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРёСЃС‚РµРјС‹ </para>
         </briefdescription>
         <detaileddescription>
-<para>Используется для обозначения отсутствующей или невалидной системы </para>
+<para>РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РµР№ РёР»Рё РЅРµРІР°Р»РёРґРЅРѕР№ СЃРёСЃС‚РµРјС‹ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
