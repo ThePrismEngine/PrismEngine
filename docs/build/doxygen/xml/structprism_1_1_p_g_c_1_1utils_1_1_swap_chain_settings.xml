@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::SwapChainSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ac5d98e72da506aaca6e810eb8d399031" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::PGC::utils::SwapChainSettings::enableVSync</definition>
+        <argsstring></argsstring>
+        <name>enableVSync</name>
+        <qualifiedname>prism::PGC::utils::SwapChainSettings::enableVSync</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="161" column="6" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ad40e001a8d72883714cf2f42d040c931" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::PGC::utils::SwapChainSettings::enableTripleBuffering</definition>
+        <argsstring></argsstring>
+        <name>enableTripleBuffering</name>
+        <qualifiedname>prism::PGC::utils::SwapChainSettings::enableTripleBuffering</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="162" column="6" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ab0598478739d07238a00a713bae97855" prot="public" static="no" mutable="no">
+        <type>VkFormat</type>
+        <definition>VkFormat prism::PGC::utils::SwapChainSettings::preferredFormat</definition>
+        <argsstring></argsstring>
+        <name>preferredFormat</name>
+        <qualifiedname>prism::PGC::utils::SwapChainSettings::preferredFormat</qualifiedname>
+        <initializer>= VK_FORMAT_B8G8R8A8_SRGB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="163" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="159" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="160" bodyend="164"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ad40e001a8d72883714cf2f42d040c931" prot="public" virt="non-virtual"><scope>prism::PGC::utils::SwapChainSettings</scope><name>enableTripleBuffering</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ac5d98e72da506aaca6e810eb8d399031" prot="public" virt="non-virtual"><scope>prism::PGC::utils::SwapChainSettings</scope><name>enableVSync</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_1ab0598478739d07238a00a713bae97855" prot="public" virt="non-virtual"><scope>prism::PGC::utils::SwapChainSettings</scope><name>preferredFormat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+\doxysection{Класс prism\+::PGC\+::Shader\+Stages\+Loader}
+\hypertarget{classprism_1_1_p_g_c_1_1_shader_stages_loader}{}\label{classprism_1_1_p_g_c_1_1_shader_stages_loader}\index{prism::PGC::ShaderStagesLoader@{prism::PGC::ShaderStagesLoader}}
+
+
+{\ttfamily \#include $<$shader\+Stages\+Loader.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::array$<$ Vk\+Pipeline\+Shader\+Stage\+Create\+Info, 2 $>$ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_shader_stages_loader_aa721677c5e3813655eececa0aa18f8ee}{load}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}settings)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ char $>$ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_shader_stages_loader_a5ae78e6ad0055912add4f73f909bdbfc}{read\+Shader\+File}} (const std\+::string \&filename)
+\item 
+static Vk\+Shader\+Module \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_shader_stages_loader_a6a1687c2e83b486c9de98fe0dac7e9b9}{create\+Shader\+Module}} (Vk\+Device device, const std\+::vector$<$ char $>$ \&code)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_shader_stages_loader_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1_shader_stages_loader_a6a1687c2e83b486c9de98fe0dac7e9b9}\index{prism::PGC::ShaderStagesLoader@{prism::PGC::ShaderStagesLoader}!createShaderModule@{createShaderModule}}
+\index{createShaderModule@{createShaderModule}!prism::PGC::ShaderStagesLoader@{prism::PGC::ShaderStagesLoader}}
+\doxysubsubsection{\texorpdfstring{createShaderModule()}{createShaderModule()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_shader_stages_loader_a6a1687c2e83b486c9de98fe0dac7e9b9} 
+Vk\+Shader\+Module prism\+::\+PGC\+::\+Shader\+Stages\+Loader\+::create\+Shader\+Module (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{const std\+::vector$<$ char $>$ \&}]{code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_shader_stages_loader_aa721677c5e3813655eececa0aa18f8ee}\index{prism::PGC::ShaderStagesLoader@{prism::PGC::ShaderStagesLoader}!load@{load}}
+\index{load@{load}!prism::PGC::ShaderStagesLoader@{prism::PGC::ShaderStagesLoader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_shader_stages_loader_aa721677c5e3813655eececa0aa18f8ee} 
+std\+::array$<$ Vk\+Pipeline\+Shader\+Stage\+Create\+Info, 2 $>$ prism\+::\+PGC\+::\+Shader\+Stages\+Loader\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}}]{settings}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_shader_stages_loader_a5ae78e6ad0055912add4f73f909bdbfc}\index{prism::PGC::ShaderStagesLoader@{prism::PGC::ShaderStagesLoader}!readShaderFile@{readShaderFile}}
+\index{readShaderFile@{readShaderFile}!prism::PGC::ShaderStagesLoader@{prism::PGC::ShaderStagesLoader}}
+\doxysubsubsection{\texorpdfstring{readShaderFile()}{readShaderFile()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_shader_stages_loader_a5ae78e6ad0055912add4f73f909bdbfc} 
+std\+::vector$<$ char $>$ prism\+::\+PGC\+::\+Shader\+Stages\+Loader\+::read\+Shader\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{shader_stages_loader_8h}{shader\+Stages\+Loader.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{shader_stages_loader_8cpp}{shader\+Stages\+Loader.\+cpp}}\end{DoxyCompactItemize}

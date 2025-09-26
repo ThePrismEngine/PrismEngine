@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="component_manager_8cpp" kind="file" language="C++">
+    <compoundname>componentManager.cpp</compoundname>
+    <includes refid="component_manager_8h" local="yes">componentManager.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.cpp</label>
+        <link refid="component_manager_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>componentManager.h</label>
+        <link refid="component_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>entity.h</label>
+        <link refid="entity_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>algorithm</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="10">
+        <label>iterator</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>set</label>
+      </node>
+      <node id="7">
+        <label>typeindex</label>
+      </node>
+      <node id="5">
+        <label>unordered_map</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="component_manager_8h" kindref="compound">componentManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1scene_1_1_component_manager_1a207f9e235e87280a6b072f4a03d0b91b" kindref="member">prism::scene::ComponentManager::removeAllComponents</ref>(Entity<sp/>entityId)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pair<sp/>:<sp/><ref refid="classprism_1_1scene_1_1_component_manager_1a6a1a60608eac94caea1b144d2697b5fd" kindref="member">componentStorages</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pair.second-&gt;removeEntity(entityId);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pair<sp/>:<sp/><ref refid="classprism_1_1scene_1_1_component_manager_1a5273dbd0f3a9fdb9ab9de36d0b53012f" kindref="member">entitiesWithComponentSets</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pair.second-&gt;erase(entityId);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.cpp"/>
+  </compounddef>
+</doxygen>

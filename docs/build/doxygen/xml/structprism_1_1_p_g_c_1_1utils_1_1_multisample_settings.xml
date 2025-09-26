@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::MultisampleSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1af1f0466234a5d978e76840738216c796" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::MultisampleSettings::sampleShadingEnable</definition>
+        <argsstring></argsstring>
+        <name>sampleShadingEnable</name>
+        <qualifiedname>prism::PGC::utils::MultisampleSettings::sampleShadingEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="220" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1a216c5c2bbe8523649e5c1306d7ea5369" prot="public" static="no" mutable="no">
+        <type>VkSampleCountFlagBits</type>
+        <definition>VkSampleCountFlagBits prism::PGC::utils::MultisampleSettings::rasterizationSamples</definition>
+        <argsstring></argsstring>
+        <name>rasterizationSamples</name>
+        <qualifiedname>prism::PGC::utils::MultisampleSettings::rasterizationSamples</qualifiedname>
+        <initializer>= VK_SAMPLE_COUNT_1_BIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="221" column="23" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1a1e28bb769fba57542e2a8aef08b8a74b" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23f" kindref="member">MultisampleSelectionStrategy</ref></type>
+        <definition>MultisampleSelectionStrategy prism::PGC::utils::MultisampleSettings::strategy</definition>
+        <argsstring></argsstring>
+        <name>strategy</name>
+        <qualifiedname>prism::PGC::utils::MultisampleSettings::strategy</qualifiedname>
+        <initializer>= <ref refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fad9ff5583d4cddf516dbd5e1f38b654d1" kindref="member">MultisampleSelectionStrategy::MAXIMAL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="222" column="30" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="219" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="219" bodyend="223"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1a216c5c2bbe8523649e5c1306d7ea5369" prot="public" virt="non-virtual"><scope>prism::PGC::utils::MultisampleSettings</scope><name>rasterizationSamples</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1af1f0466234a5d978e76840738216c796" prot="public" virt="non-virtual"><scope>prism::PGC::utils::MultisampleSettings</scope><name>sampleShadingEnable</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_1a1e28bb769fba57542e2a8aef08b8a74b" prot="public" virt="non-virtual"><scope>prism::PGC::utils::MultisampleSettings</scope><name>strategy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

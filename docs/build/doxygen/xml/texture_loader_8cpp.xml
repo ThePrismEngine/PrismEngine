@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="texture_loader_8cpp" kind="file" language="C++">
+    <compoundname>textureLoader.cpp</compoundname>
+    <includes refid="texture_loader_8h" local="yes">textureLoader.h</includes>
+    <includes refid="buffer_wrapper_8h" local="yes">bufferWrapper.h</includes>
+    <includes refid="resources_creater_8h" local="yes">resourcesCreater.h</includes>
+    <includes local="yes">stb_image.h</includes>
+    <includes local="no">stdexcept</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="21">
+        <label>bufferWrapper.h</label>
+        <link refid="buffer_wrapper_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>resourcesCreater.h</label>
+        <link refid="resources_creater_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp</label>
+        <link refid="texture_loader_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>textureLoader.h</label>
+        <link refid="texture_loader_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SDL.h</label>
+      </node>
+      <node id="14">
+        <label>array</label>
+      </node>
+      <node id="20">
+        <label>cstdint</label>
+      </node>
+      <node id="11">
+        <label>glm.hpp</label>
+      </node>
+      <node id="5">
+        <label>optional</label>
+      </node>
+      <node id="24">
+        <label>stb_image.h</label>
+      </node>
+      <node id="16">
+        <label>stdexcept</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="12">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="texture_loader_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78" prot="public" static="no">
+        <name>STB_IMAGE_IMPLEMENTATION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp" line="4" column="12" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="texture_loader_8h" kindref="compound">textureLoader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_wrapper_8h" kindref="compound">bufferWrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="resources_creater_8h" kindref="compound">resourcesCreater.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STB_IMAGE_IMPLEMENTATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stb_image.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="structprism_1_1_p_g_c_1_1_texture" kindref="compound">prism::PGC::Texture</ref><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1abfd63994cc54d8df2c61533a802fb782" kindref="member">prism::PGC::TextureLoader::load</ref>(utils::Context*<sp/>context,<sp/>std::string<sp/>texturePath)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>PGC::Texture<sp/>texture;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>texture.<ref refid="structprism_1_1_p_g_c_1_1_texture_1ae2ea89d2703e9867baf39038cbe8bbea" kindref="member">path</ref><sp/>=<sp/>texturePath;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1a5bb7d9078725b4ba9815e786f1c90883" kindref="member">createTextureImage</ref>(context,<sp/>&amp;texture);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1aaf14dc47d4371346e84b87a901b3e92f" kindref="member">createTextureImageView</ref>(context,<sp/>&amp;texture);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1a7d0d544cbd13df616f5615ae82a17366" kindref="member">createTextureSampler</ref>(context,<sp/>&amp;texture);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>texture;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1a522f5a31968bebe09ba3d113f16db9dc" kindref="member">prism::PGC::TextureLoader::cleanup</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>PGC::Texture*<sp/>texture)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroySampler(context-&gt;device,<sp/>texture-&gt;sampler,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;sampler<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyImageView(context-&gt;device,<sp/>texture-&gt;imageView,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;imageView<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyImage(context-&gt;device,<sp/>texture-&gt;image,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;image<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>vkFreeMemory(context-&gt;device,<sp/>texture-&gt;imageMemory,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;imageMemory<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1a5bb7d9078725b4ba9815e786f1c90883" kindref="member">prism::PGC::TextureLoader::createTextureImage</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>PGC::Texture*<sp/>texture)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>texWidth,<sp/>texHeight,<sp/>texChannels;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>stbi_uc*<sp/>pixels<sp/>=<sp/>stbi_load(texture-&gt;path.c_str(),<sp/>&amp;texWidth,<sp/>&amp;texHeight,<sp/>&amp;texChannels,<sp/>STBI_rgb_alpha);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>imageSize<sp/>=<sp/>texWidth<sp/>*<sp/>texHeight<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;mipLevels<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::floor(std::log2(std::max(texWidth,<sp/>texHeight))))<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pixels)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>load<sp/>texture<sp/>image!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;width<sp/>=<sp/>texWidth;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;height<sp/>=<sp/>texHeight;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;channels<sp/>=<sp/>texChannels;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>VkBuffer<sp/>stagingBuffer;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceMemory<sp/>stagingBufferMemory;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kindref="member">PGC::BufferWrapper::createBuffer</ref>(context,<sp/>imageSize,<sp/>VK_BUFFER_USAGE_TRANSFER_SRC_BIT,<sp/>VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT<sp/>|<sp/>VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,<sp/>stagingBuffer,<sp/>stagingBufferMemory);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>vkMapMemory(context-&gt;device,<sp/>stagingBufferMemory,<sp/>0,<sp/>imageSize,<sp/>0,<sp/>&amp;data);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(data,<sp/>pixels,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(imageSize));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>vkUnmapMemory(context-&gt;device,<sp/>stagingBufferMemory);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>stbi_image_free(pixels);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1abd176274158468bb98a309f56b21aba8" kindref="member">PGC::ResourcesCreater::createImage</ref>(context,<sp/>texWidth,<sp/>texHeight,<sp/>texture-&gt;mipLevels,<sp/>VK_SAMPLE_COUNT_1_BIT,<sp/>VK_FORMAT_R8G8B8A8_SRGB,<sp/>VK_IMAGE_TILING_OPTIMAL,<sp/>VK_IMAGE_USAGE_TRANSFER_SRC_BIT<sp/>|<sp/>VK_IMAGE_USAGE_TRANSFER_DST_BIT<sp/>|<sp/>VK_IMAGE_USAGE_SAMPLED_BIT,<sp/>VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,<sp/>texture-&gt;image,<sp/>texture-&gt;imageMemory);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a41720d6455629660a265368b4c450552" kindref="member">PGC::BufferWrapper::transitionImageLayout</ref>(context,<sp/>texture-&gt;image,<sp/>VK_FORMAT_R8G8B8A8_SRGB,<sp/>VK_IMAGE_LAYOUT_UNDEFINED,<sp/>VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,<sp/>texture-&gt;mipLevels);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a5029074ed5969712c8a7b1bf9928bae6" kindref="member">PGC::BufferWrapper::copyBufferToImage</ref>(context,<sp/>stagingBuffer,<sp/>texture-&gt;image,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(texWidth),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(texHeight));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyBuffer(context-&gt;device,<sp/>stagingBuffer,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>vkFreeMemory(context-&gt;device,<sp/>stagingBufferMemory,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>generateMipmaps(context,<sp/>texture-&gt;image,<sp/>VK_FORMAT_R8G8B8A8_SRGB,<sp/>texWidth,<sp/>texHeight,<sp/>texture-&gt;mipLevels);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1aaf14dc47d4371346e84b87a901b3e92f" kindref="member">prism::PGC::TextureLoader::createTextureImageView</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>PGC::Texture*<sp/>texture)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>texture-&gt;imageView<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1a47be41c0f55c49f83af5f407b310b49a" kindref="member">PGC::ResourcesCreater::createImageView</ref>(context-&gt;device,<sp/>texture-&gt;image,<sp/>VK_FORMAT_R8G8B8A8_SRGB,<sp/>VK_IMAGE_ASPECT_COLOR_BIT,<sp/>texture-&gt;mipLevels);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1a7d0d544cbd13df616f5615ae82a17366" kindref="member">prism::PGC::TextureLoader::createTextureSampler</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>PGC::Texture*<sp/>texture)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1a50d8fcc21c002432511c9f541354fedc" kindref="member">PGC::ResourcesCreater::createTextureSampler</ref>(context,<sp/>&amp;texture-&gt;sampler);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_loader_1ae9fc1ba2404bbe90b1e56eaa9d4fbf94" kindref="member">prism::PGC::TextureLoader::generateMipmaps</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>VkImage<sp/>image,<sp/>VkFormat<sp/>imageFormat,<sp/>int32_t<sp/>texWidth,<sp/>int32_t<sp/>texHeight,<sp/>uint32_t<sp/>mipLevels)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>VkFormatProperties<sp/>formatProperties;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceFormatProperties(context-&gt;physicalDevice,<sp/>imageFormat,<sp/>&amp;formatProperties);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(formatProperties.optimalTilingFeatures<sp/>&amp;<sp/>VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT))<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;texture<sp/>image<sp/>format<sp/>does<sp/>not<sp/>support<sp/>linear<sp/>blitting!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>VkCommandBuffer<sp/>commandBuffer<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a476d6d005e1b9e7a19ef8d95efc25006" kindref="member">PGC::BufferWrapper::beginSingleTimeCommands</ref>(context);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>VkImageMemoryBarrier<sp/>barrier{};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.image<sp/>=<sp/>image;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.srcQueueFamilyIndex<sp/>=<sp/>VK_QUEUE_FAMILY_IGNORED;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.dstQueueFamilyIndex<sp/>=<sp/>VK_QUEUE_FAMILY_IGNORED;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.aspectMask<sp/>=<sp/>VK_IMAGE_ASPECT_COLOR_BIT;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.baseArrayLayer<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.layerCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.levelCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>mipWidth<sp/>=<sp/>texWidth;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>mipHeight<sp/>=<sp/>texHeight;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>mipLevels;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.subresourceRange.baseMipLevel<sp/>=<sp/>i<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.oldLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.newLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.srcAccessMask<sp/>=<sp/>VK_ACCESS_TRANSFER_WRITE_BIT;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.dstAccessMask<sp/>=<sp/>VK_ACCESS_TRANSFER_READ_BIT;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdPipelineBarrier(commandBuffer,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_PIPELINE_STAGE_TRANSFER_BIT,<sp/>VK_PIPELINE_STAGE_TRANSFER_BIT,<sp/>0,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/>&amp;barrier);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkImageBlit<sp/>blit{};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.srcOffsets[0]<sp/>=<sp/>{<sp/>0,<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.srcOffsets[1]<sp/>=<sp/>{<sp/>mipWidth,<sp/>mipHeight,<sp/>1<sp/>};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.srcSubresource.aspectMask<sp/>=<sp/>VK_IMAGE_ASPECT_COLOR_BIT;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.srcSubresource.mipLevel<sp/>=<sp/>i<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.srcSubresource.baseArrayLayer<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.srcSubresource.layerCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.dstOffsets[0]<sp/>=<sp/>{<sp/>0,<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.dstOffsets[1]<sp/>=<sp/>{<sp/>mipWidth<sp/>&gt;<sp/>1<sp/>?<sp/>mipWidth<sp/>/<sp/>2<sp/>:<sp/>1,<sp/>mipHeight<sp/>&gt;<sp/>1<sp/>?<sp/>mipHeight<sp/>/<sp/>2<sp/>:<sp/>1,<sp/>1<sp/>};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.dstSubresource.aspectMask<sp/>=<sp/>VK_IMAGE_ASPECT_COLOR_BIT;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.dstSubresource.mipLevel<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.dstSubresource.baseArrayLayer<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit.dstSubresource.layerCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdBlitImage(commandBuffer,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>image,<sp/>VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>image,<sp/>VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/>&amp;blit,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_FILTER_LINEAR);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.oldLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.newLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.srcAccessMask<sp/>=<sp/>VK_ACCESS_TRANSFER_READ_BIT;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.dstAccessMask<sp/>=<sp/>VK_ACCESS_SHADER_READ_BIT;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdPipelineBarrier(commandBuffer,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_PIPELINE_STAGE_TRANSFER_BIT,<sp/>VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT,<sp/>0,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/>&amp;barrier);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mipWidth<sp/>&gt;<sp/>1)<sp/>mipWidth<sp/>/=<sp/>2;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mipHeight<sp/>&gt;<sp/>1)<sp/>mipHeight<sp/>/=<sp/>2;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.baseMipLevel<sp/>=<sp/>mipLevels<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.oldLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.newLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.srcAccessMask<sp/>=<sp/>VK_ACCESS_TRANSFER_WRITE_BIT;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.dstAccessMask<sp/>=<sp/>VK_ACCESS_SHADER_READ_BIT;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdPipelineBarrier(commandBuffer,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_PIPELINE_STAGE_TRANSFER_BIT,<sp/>VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT,<sp/>0,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/>&amp;barrier);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a99cf311cd95b3c2a94ea37886b2e7681" kindref="member">PGC::BufferWrapper::endSingleTimeCommands</ref>(context,<sp/>commandBuffer);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp"/>
+  </compounddef>
+</doxygen>

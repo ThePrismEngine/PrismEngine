@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::ColorBlendAttachmentSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings_1ad9944069aee5486883dc44065998a23e" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::ColorBlendAttachmentSettings::blendEnable</definition>
+        <argsstring></argsstring>
+        <name>blendEnable</name>
+        <qualifiedname>prism::PGC::utils::ColorBlendAttachmentSettings::blendEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="226" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings_1ad69d032b418c3f936ea0fee90c1edc12" prot="public" static="no" mutable="no">
+        <type>VkColorComponentFlags</type>
+        <definition>VkColorComponentFlags prism::PGC::utils::ColorBlendAttachmentSettings::colorWriteMask</definition>
+        <argsstring></argsstring>
+        <name>colorWriteMask</name>
+        <qualifiedname>prism::PGC::utils::ColorBlendAttachmentSettings::colorWriteMask</qualifiedname>
+        <initializer>=
+					VK_COLOR_COMPONENT_R_BIT |
+					VK_COLOR_COMPONENT_G_BIT |
+					VK_COLOR_COMPONENT_B_BIT |
+					VK_COLOR_COMPONENT_A_BIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="227" column="23" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="225" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="225" bodyend="232"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings_1ad9944069aee5486883dc44065998a23e" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ColorBlendAttachmentSettings</scope><name>blendEnable</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings_1ad69d032b418c3f936ea0fee90c1edc12" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ColorBlendAttachmentSettings</scope><name>colorWriteMask</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

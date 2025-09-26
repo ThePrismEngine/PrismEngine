@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::QueueFamilyIndices</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a5480668afadb23064e60828cfef73027" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; uint32_t &gt;</type>
+        <definition>std::optional&lt;uint32_t&gt; prism::PGC::utils::QueueFamilyIndices::graphicsFamily</definition>
+        <argsstring></argsstring>
+        <name>graphicsFamily</name>
+        <qualifiedname>prism::PGC::utils::QueueFamilyIndices::graphicsFamily</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="17" column="15" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a1ecf2fab3b0c6b1272d8787aa875b2f9" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; uint32_t &gt;</type>
+        <definition>std::optional&lt;uint32_t&gt; prism::PGC::utils::QueueFamilyIndices::presentFamily</definition>
+        <argsstring></argsstring>
+        <name>presentFamily</name>
+        <qualifiedname>prism::PGC::utils::QueueFamilyIndices::presentFamily</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="18" column="15" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a907a87fbe64c801fee96e6d0c0242b69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::PGC::utils::QueueFamilyIndices::isComplete</definition>
+        <argsstring>()</argsstring>
+        <name>isComplete</name>
+        <qualifiedname>prism::PGC::utils::QueueFamilyIndices::isComplete</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="20" column="6" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="20" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="16" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="16" bodyend="23"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a5480668afadb23064e60828cfef73027" prot="public" virt="non-virtual"><scope>prism::PGC::utils::QueueFamilyIndices</scope><name>graphicsFamily</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a907a87fbe64c801fee96e6d0c0242b69" prot="public" virt="non-virtual"><scope>prism::PGC::utils::QueueFamilyIndices</scope><name>isComplete</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_1a1ecf2fab3b0c6b1272d8787aa875b2f9" prot="public" virt="non-virtual"><scope>prism::PGC::utils::QueueFamilyIndices</scope><name>presentFamily</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

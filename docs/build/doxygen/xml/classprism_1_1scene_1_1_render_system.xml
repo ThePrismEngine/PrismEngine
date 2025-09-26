@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1scene_1_1_render_system" kind="class" language="C++" prot="public">
+    <compoundname>prism::scene::RenderSystem</compoundname>
+    <basecompoundref refid="classprism_1_1scene_1_1_i_system" prot="public" virt="non-virtual">prism::scene::ISystem</basecompoundref>
+    <includes refid="render_system_8h" local="no">renderSystem.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_render_system_1af402945bb406756be8c8a4fd44121186" prot="private" static="no" mutable="no">
+        <type>prism::scene::Scene *</type>
+        <definition>prism::scene::Scene* prism::scene::RenderSystem::scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <qualifiedname>prism::scene::RenderSystem::scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" line="14" column="33" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_render_system_1a3f32342110a0239f8f2e342426901196" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1render_1_1_renderer" kindref="compound">prism::render::Renderer</ref> *</type>
+        <definition>prism::render::Renderer* prism::scene::RenderSystem::renderer</definition>
+        <argsstring></argsstring>
+        <name>renderer</name>
+        <qualifiedname>prism::scene::RenderSystem::renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" line="15" column="37" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1scene_1_1_render_system_1a45fef494fc5d3564ab0a83fa7ac9ef2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::scene::RenderSystem::RenderSystem</definition>
+        <argsstring>(Scene *scene, render::Renderer *renderer)</argsstring>
+        <name>RenderSystem</name>
+        <qualifiedname>prism::scene::RenderSystem::RenderSystem</qualifiedname>
+        <param>
+          <type>Scene *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type><ref refid="classprism_1_1render_1_1_renderer" kindref="compound">render::Renderer</ref> *</type>
+          <declname>renderer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" line="10" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_render_system_1ae28dd1ba57114dfacf9ce65f8aeff5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void prism::scene::RenderSystem::update</definition>
+        <argsstring>(float deltaTime) override</argsstring>
+        <name>update</name>
+        <qualifiedname>prism::scene::RenderSystem::update</qualifiedname>
+        <reimplements refid="classprism_1_1scene_1_1_i_system_1a406b867d27b268665a6cc8d82c740f68">update</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Обновление состояния системы. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Время, прошедшее с предыдущего обновления (в секундах)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Вызывается каждый кадр для обновления логики системы </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" line="11" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.cpp" bodystart="7" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>prism::scene::ISystem</label>
+        <link refid="classprism_1_1scene_1_1_i_system"/>
+      </node>
+      <node id="1">
+        <label>prism::scene::RenderSystem</label>
+        <link refid="classprism_1_1scene_1_1_render_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>prism::PGC::DescriptorSet</label>
+        <link refid="classprism_1_1_p_g_c_1_1_descriptor_set"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>prism::PGC::DescriptorSetLayout</label>
+        <link refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>prism::PGC::GraphicsPipeline</label>
+        <link refid="classprism_1_1_p_g_c_1_1_graphics_pipeline"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>prism::PGC::PrismGraphicCore</label>
+        <link refid="classprism_1_1_p_g_c_1_1_prism_graphic_core"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>renderPass</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>descriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>graphicsPipeline</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>descriptorSet</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>prism::PGC::RenderPass</label>
+        <link refid="classprism_1_1_p_g_c_1_1_render_pass"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>prism::PGC::SwapChain</label>
+        <link refid="classprism_1_1_p_g_c_1_1_swap_chain"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>prism::PGC::base::Base</label>
+        <link refid="classprism_1_1_p_g_c_1_1base_1_1_base"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>prism::PGC::utils::AppSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>applicationVersion</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>prism::PGC::utils::CameraData</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data"/>
+      </node>
+      <node id="18">
+        <label>prism::PGC::utils::ColorBlendSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings"/>
+      </node>
+      <node id="22">
+        <label>prism::PGC::utils::Context</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_context"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>cameraData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>prism::PGC::utils::DebugSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings"/>
+      </node>
+      <node id="16">
+        <label>prism::PGC::utils::DepthStencilSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings"/>
+      </node>
+      <node id="10">
+        <label>prism::PGC::utils::DescriptorSetLayoutSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings"/>
+      </node>
+      <node id="7">
+        <label>prism::PGC::utils::DeviceEvaluationWeightsSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings"/>
+      </node>
+      <node id="19">
+        <label>prism::PGC::utils::DynamicStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings"/>
+      </node>
+      <node id="14">
+        <label>prism::PGC::utils::InputAssemblySettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings"/>
+      </node>
+      <node id="17">
+        <label>prism::PGC::utils::MultisampleSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings"/>
+      </node>
+      <node id="12">
+        <label>prism::PGC::utils::PipelineSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>shaders</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>inputAssembly</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>rasterization</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>depthStencil</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>multisample</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>colorBlend</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>dynamicState</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>viewportState</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>prism::PGC::utils::RasterizationSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings"/>
+      </node>
+      <node id="4">
+        <label>prism::PGC::utils::Settings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_settings"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>deviceEvaluationWeights</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>descriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>textureDescriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>pipeline</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>prism::PGC::utils::ShadersSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings"/>
+      </node>
+      <node id="9">
+        <label>prism::PGC::utils::SwapChainSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings"/>
+      </node>
+      <node id="11">
+        <label>prism::PGC::utils::TextureDescriptorSetLayoutSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings"/>
+      </node>
+      <node id="20">
+        <label>prism::PGC::utils::ViewportStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings"/>
+      </node>
+      <node id="6">
+        <label>prism::Version</label>
+        <link refid="structprism_1_1_version"/>
+      </node>
+      <node id="3">
+        <label>prism::render::Renderer</label>
+        <link refid="classprism_1_1render_1_1_renderer"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>pgc</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>window</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>prism::render::Window</label>
+        <link refid="classprism_1_1render_1_1_window"/>
+      </node>
+      <node id="2">
+        <label>prism::scene::ISystem</label>
+        <link refid="classprism_1_1scene_1_1_i_system"/>
+      </node>
+      <node id="1">
+        <label>prism::scene::RenderSystem</label>
+        <link refid="classprism_1_1scene_1_1_render_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>renderer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" line="8" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h" bodystart="8" bodyend="16"/>
+    <listofallmembers>
+      <member refid="classprism_1_1scene_1_1_i_system_1a7c2ea1d298dac0b99b6a83af5ae26b93" prot="public" virt="non-virtual"><scope>prism::scene::RenderSystem</scope><name>enabled</name></member>
+      <member refid="classprism_1_1scene_1_1_render_system_1a3f32342110a0239f8f2e342426901196" prot="private" virt="non-virtual"><scope>prism::scene::RenderSystem</scope><name>renderer</name></member>
+      <member refid="classprism_1_1scene_1_1_render_system_1a45fef494fc5d3564ab0a83fa7ac9ef2e" prot="public" virt="non-virtual"><scope>prism::scene::RenderSystem</scope><name>RenderSystem</name></member>
+      <member refid="classprism_1_1scene_1_1_render_system_1af402945bb406756be8c8a4fd44121186" prot="private" virt="non-virtual"><scope>prism::scene::RenderSystem</scope><name>scene</name></member>
+      <member refid="classprism_1_1scene_1_1_render_system_1ae28dd1ba57114dfacf9ce65f8aeff5a9" prot="public" virt="virtual"><scope>prism::scene::RenderSystem</scope><name>update</name></member>
+      <member refid="classprism_1_1scene_1_1_i_system_1a3a7fc6382464d9b1fc94f95eb4dda159" prot="public" virt="virtual"><scope>prism::scene::RenderSystem</scope><name>~ISystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="renderer_8h" kind="file" language="C++">
+    <compoundname>renderer.h</compoundname>
+    <includes refid="prism_graphic_core_8h" local="yes">prismGraphicCore.h</includes>
+    <includes refid="_window_8h" local="yes">Window.h</includes>
+    <includes refid="transform_component_8h" local="yes">transformComponent.h</includes>
+    <includes refid="camera_component_8h" local="yes">cameraComponent.h</includes>
+    <includes refid="texture_component_8h" local="yes">textureComponent.h</includes>
+    <includes refid="mesh_component_8h" local="yes">meshComponent.h</includes>
+    <includedby refid="_prism_engine_8h" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.h</includedby>
+    <includedby refid="render_system_8h" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h</includedby>
+    <includedby refid="renderer_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.cpp</includedby>
+    <incdepgraph>
+      <node id="17">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="49">
+        <label>Window.h</label>
+        <link refid="_window_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>bufferWrapper.h</label>
+        <link refid="buffer_wrapper_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>cameraComponent.h</label>
+        <link refid="camera_component_8h"/>
+      </node>
+      <node id="47">
+        <label>descriptorSet.h</label>
+        <link refid="descriptor_set_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>descriptorSetLayout.h</label>
+        <link refid="descriptor_set_layout_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>deviceChecker.h</label>
+        <link refid="device_checker_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>deviceRater.h</label>
+        <link refid="device_rater_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>fmath.h</label>
+        <link refid="fmath_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>graphicsPipeline.h</label>
+        <link refid="graphics_pipeline_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>meshComponent.h</label>
+        <link refid="mesh_component_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>prismGraphicCore.h</label>
+        <link refid="prism_graphic_core_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>renderPass.h</label>
+        <link refid="render_pass_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.h</label>
+        <link refid="renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>resourcesCreater.h</label>
+        <link refid="resources_creater_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>shaderStagesLoader.h</label>
+        <link refid="shader_stages_loader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>swapChain.h</label>
+        <link refid="swap_chain_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>textureComponent.h</label>
+        <link refid="texture_component_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>transformComponent.h</label>
+        <link refid="transform_component_8h"/>
+      </node>
+      <node id="34">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SDL.h</label>
+      </node>
+      <node id="19">
+        <label>SDL2/SDL_log.h</label>
+      </node>
+      <node id="10">
+        <label>SDL_vulkan.h</label>
+      </node>
+      <node id="15">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
+        <label>array</label>
+      </node>
+      <node id="16">
+        <label>chrono</label>
+      </node>
+      <node id="29">
+        <label>corecrt_math_defines.h</label>
+      </node>
+      <node id="37">
+        <label>cstdint</label>
+      </node>
+      <node id="20">
+        <label>fstream</label>
+      </node>
+      <node id="27">
+        <label>glm.hpp</label>
+      </node>
+      <node id="30">
+        <label>gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+      <node id="7">
+        <label>optional</label>
+      </node>
+      <node id="12">
+        <label>set</label>
+      </node>
+      <node id="8">
+        <label>stdexcept</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>unordered_map</label>
+      </node>
+      <node id="32">
+        <label>unordered_set</label>
+      </node>
+      <node id="9">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="23">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.cpp</label>
+        <link refid="_prism_engine_8cpp"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.h</label>
+        <link refid="_prism_engine_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.cpp</label>
+        <link refid="render_system_8cpp"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h</label>
+        <link refid="render_system_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.cpp</label>
+        <link refid="renderer_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.h</label>
+        <link refid="renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classprism_1_1render_1_1_renderer" prot="public">prism::render::Renderer</innerclass>
+    <innernamespace refid="namespaceprism">prism</innernamespace>
+    <innernamespace refid="namespaceprism_1_1render">prism::render</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="prism_graphic_core_8h" kindref="compound">prismGraphicCore.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_window_8h" kindref="compound">Window.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="transform_component_8h" kindref="compound">transformComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="camera_component_8h" kindref="compound">cameraComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="texture_component_8h" kindref="compound">textureComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mesh_component_8h" kindref="compound">meshComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism" kindref="compound">prism</ref><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="namespaceprism_1_1render" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism_1_1render" kindref="compound">render</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="classprism_1_1render_1_1_renderer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classprism_1_1render_1_1_renderer_1ae498da6a0eb0d42b865d4e94d34d1ae8" kindref="member">Renderer</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14" refid="classprism_1_1render_1_1_renderer_1ae498da6a0eb0d42b865d4e94d34d1ae8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1render_1_1_renderer_1ae498da6a0eb0d42b865d4e94d34d1ae8" kindref="member">Renderer</ref>()<sp/>:<sp/><ref refid="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" kindref="member">window</ref>(nullptr)<sp/>{};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a224455fc4449d00731733f10c5f251d2" kindref="member">linkWindow</ref>(<ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref>*<sp/><ref refid="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" kindref="member">window</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ad08f303f7b275e225e6ae60624f05ea6" kindref="member">setDefaultSettings</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1af0a1b4efcfc3e10305aa63d853211969" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1render_1_1_renderer_1a8a00f1ca3f3749a416a659571f48d449" kindref="member">~Renderer</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a49701f3b045b5b337965b23dab0e4c1b" kindref="member">isRenderingActive</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a5f9fa3afbeab8957d89e39a01df6e4ee" kindref="member">beginFrame</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ad8fd91a24b9288dde8a38e2751b800c8" kindref="member">beginRender</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a1010ac870bd190aca9d3120364d3edad" kindref="member">endRender</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ada03788c5ed3af510750bd0a8594a414" kindref="member">endFrame</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ae3c9523889cbd7f3004e31f906a6f2ff" kindref="member">updateCamera</ref>(<ref refid="structprism_1_1scene_1_1_transform_component" kindref="compound">prism::scene::TransformComponent</ref>*<sp/>transform,<sp/><ref refid="structprism_1_1scene_1_1_camera_component" kindref="compound">prism::scene::CameraComponent</ref>*<sp/>camera);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ae5c8a2b18d84b4f9e48569e1cfad008f" kindref="member">updateObjectTransform</ref>(<ref refid="structprism_1_1scene_1_1_transform_component" kindref="compound">prism::scene::TransformComponent</ref>*<sp/>transform,<sp/>uint32_t<sp/>transformId);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a2319cee54bb56ef9f049c9524223a419" kindref="member">bindDefault</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a06bef0391485c39b34decc3473a657a5" kindref="member">bindTransform</ref>(uint32_t<sp/>transformId);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a0014026cfe386d9d7f70defdb8a29f79" kindref="member">pushTextureId</ref>(uint32_t<sp/>textureId);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a3c6bf3adf404d1224ffb83deff4cf0f8" kindref="member">drawMesh</ref>(uint32_t<sp/>meshId);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1scene_1_1_texture_component" kindref="compound">scene::TextureComponent</ref><sp/><ref refid="classprism_1_1render_1_1_renderer_1ad20e7753bb504469d2282c78dec45ecf" kindref="member">addTexture</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>texturePath);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a2f02e729d87dfad12ba907e1b4edd6b3" kindref="member">removeTexture</ref>(<ref refid="structprism_1_1scene_1_1_texture_component" kindref="compound">scene::TextureComponent</ref><sp/>texture);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1scene_1_1_mesh_component" kindref="compound">scene::MeshComponent</ref><sp/><ref refid="classprism_1_1render_1_1_renderer_1a68a37c4196f2dbca4f2493a6e6e1b37f" kindref="member">addMesh</ref>(std::string<sp/>texturePath);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a1c81fafddd77b32e87f84802b637fd72" kindref="member">updateMeshes</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a3e3c570ac1677ba5231e4a39796c6d04" kindref="member">clearMeshes</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a516f6fe9573a01de252ad9d947b7820e" kindref="member">awaitRenderingCompletion</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a8aee301e8ea80c2376240e672060f283" kindref="member">destroy</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classprism_1_1render_1_1_renderer_1a243e7686f4b67abe3c7d2d1a43392952" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref><sp/><ref refid="classprism_1_1render_1_1_renderer_1a243e7686f4b67abe3c7d2d1a43392952" kindref="member">settings</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classprism_1_1render_1_1_renderer_1a26709f59d44783b8537214152f0b4acd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_prism_graphic_core" kindref="compound">PGC::PrismGraphicCore</ref><sp/><ref refid="classprism_1_1render_1_1_renderer_1a26709f59d44783b8537214152f0b4acd" kindref="member">pgc</ref>;</highlight></codeline>
+<codeline lineno="45" refid="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref>*<sp/><ref refid="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" kindref="member">window</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.h"/>
+  </compounddef>
+</doxygen>

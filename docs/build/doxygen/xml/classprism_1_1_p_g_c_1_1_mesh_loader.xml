@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1_p_g_c_1_1_mesh_loader" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::MeshLoader</compoundname>
+    <includes refid="mesh_loader_8h" local="no">meshLoader.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_mesh_loader_1a75216c52a3c93d04d6c74a2ed03c15ef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1_p_g_c_1_1_mesh_data" kindref="compound">MeshData</ref></type>
+        <definition>prism::PGC::MeshData prism::PGC::MeshLoader::load</definition>
+        <argsstring>(std::string texturePath)</argsstring>
+        <name>load</name>
+        <qualifiedname>prism::PGC::MeshLoader::load</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>texturePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.h" line="15" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.cpp" bodystart="5" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.h" line="12" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.h" bodystart="13" bodyend="18"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_mesh_loader_1a75216c52a3c93d04d6c74a2ed03c15ef" prot="public" virt="non-virtual"><scope>prism::PGC::MeshLoader</scope><name>load</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

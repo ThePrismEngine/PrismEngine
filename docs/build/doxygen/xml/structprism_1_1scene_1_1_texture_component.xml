@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1scene_1_1_texture_component" kind="struct" language="C++" prot="public">
+    <compoundname>prism::scene::TextureComponent</compoundname>
+    <includes refid="texture_component_8h" local="no">textureComponent.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_texture_component_1a62e9360955d1d1af70132c317c61ac7f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceprism_1a0bb25671f356c934c5602ac140b29a3d" kindref="member">prism::Texture</ref></type>
+        <definition>prism::Texture prism::scene::TextureComponent::texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <qualifiedname>prism::scene::TextureComponent::texture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureComponent.h" line="8" column="16" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureComponent.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureComponent.h" line="6" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureComponent.h" bodystart="7" bodyend="9"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_texture_component_1a62e9360955d1d1af70132c317c61ac7f" prot="public" virt="non-virtual"><scope>prism::scene::TextureComponent</scope><name>texture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

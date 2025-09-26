@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1_p_g_c_1_1_device_checker" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::DeviceChecker</compoundname>
+    <includes refid="device_checker_8h" local="no">deviceChecker.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_checker_1a6906a2ca41d0ad48efa5b1679afd2dc8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::PGC::DeviceChecker::check</definition>
+        <argsstring>(VkPhysicalDevice device, utils::Context *context, utils::Settings *settings)</argsstring>
+        <name>check</name>
+        <qualifiedname>prism::PGC::DeviceChecker::check</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.h" line="10" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.cpp" bodystart="7" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_checker_1a584ac624d18a60cb6bab0252ac1aa71a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::PGC::DeviceChecker::checkBindless</definition>
+        <argsstring>(VkPhysicalDevice device)</argsstring>
+        <name>checkBindless</name>
+        <qualifiedname>prism::PGC::DeviceChecker::checkBindless</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.h" line="11" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.cpp" bodystart="25" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_checker_1a2a956be65284c95af474fefff3b4c3c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::PGC::DeviceChecker::checkDeviceExtensionSupport</definition>
+        <argsstring>(VkPhysicalDevice device, const std::vector&lt; const char * &gt; deviceExtensions)</argsstring>
+        <name>checkDeviceExtensionSupport</name>
+        <qualifiedname>prism::PGC::DeviceChecker::checkDeviceExtensionSupport</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; const char * &gt;</type>
+          <declname>deviceExtensions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.h" line="12" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.cpp" bodystart="46" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.h" line="8" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.h" bodystart="8" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_device_checker_1a6906a2ca41d0ad48efa5b1679afd2dc8" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceChecker</scope><name>check</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_checker_1a584ac624d18a60cb6bab0252ac1aa71a" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceChecker</scope><name>checkBindless</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_checker_1a2a956be65284c95af474fefff3b4c3c2" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceChecker</scope><name>checkDeviceExtensionSupport</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

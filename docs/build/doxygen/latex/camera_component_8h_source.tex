@@ -1,0 +1,28 @@
+\doxysection{camera\+Component.\+h}
+\hypertarget{camera_component_8h_source}{}\label{camera_component_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h}}
+\mbox{\hyperlink{camera_component_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1scene}{scene}}\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1scene_1_1_look}{Look}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1scene_1_1_look_a684b68e3cd2118bf8a97b89a163b3498}{x}},\ \mbox{\hyperlink{structprism_1_1scene_1_1_look_a24e121b357bda2c5e58f71c55cbb3cd2}{y}},\ \mbox{\hyperlink{structprism_1_1scene_1_1_look_ad48bf86097551f962dd84b2c07b25321}{z}};}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1scene_1_1_camera_component}{CameraComponent}}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1scene_1_1_camera_component_a526eb024a451aeeb264b4b617250d9a8}{isActive}};\ \textcolor{comment}{//\ Рендерить\ ли}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1scene_1_1_look}{Look}}\ \mbox{\hyperlink{structprism_1_1scene_1_1_camera_component_a9ee3767dd608e3169013009029b7d658}{look}}\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};\ \textcolor{comment}{//\ Взгляд}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1scene_1_1_camera_component_a81a79c9ac6815d97e5738865639124bc}{fovy}}\ =\ 45.0f;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Угол\ обзора\ в\ градусах}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1scene_1_1_camera_component_a2a20f6f43a213b7c8c79939b24ad6868}{aspect}}\ =\ 16.f\ /\ 9.f;\ \textcolor{comment}{//\ Соотношение\ сторон}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1scene_1_1_camera_component_a6b41fc4706802499c3a6f4c274dc9f7e}{zNear}}\ =\ 0.1f;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ближняя\ плоскость\ отсечения}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1scene_1_1_camera_component_a7d58fda77459e28f65b5f47a499931a5}{zFar}}\ =\ 10.0f;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Дальняя\ плоскость\ отсечения}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1scene_1_1_camera_component_a2fcf04acc5550a83af87e2545e1a857b}{useСurrentWindowAspect}}\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Если\ истино\ то\ aspect\ игнорируется\ и\ соотношение\ камеры\ равно\ соотношению\ окна}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}

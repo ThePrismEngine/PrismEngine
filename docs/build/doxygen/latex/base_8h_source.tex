@@ -1,0 +1,79 @@
+\doxysection{base.\+h}
+\hypertarget{base_8h_source}{}\label{base_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/base.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/base.h}}
+\mbox{\hyperlink{base_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SDL\_vulkan.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{logger.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utils_8h}{utils.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{device_wrapper_8h}{deviceWrapper.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{device_rater_8h}{deviceRater.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c}{PGC}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ VkResult\ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_ad693ecf2f5af4ca4af972d2be76e6da6}{CreateDebugUtilsMessengerEXT}}(VkInstance\ instance,\ \textcolor{keyword}{const}\ VkDebugUtilsMessengerCreateInfoEXT*\ pCreateInfo,\ \textcolor{keyword}{const}\ VkAllocationCallbacks*\ pAllocator,\ VkDebugUtilsMessengerEXT*\ pDebugMessenger)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ func\ =\ (PFN\_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(instance,\ \textcolor{stringliteral}{"{}vkCreateDebugUtilsMessengerEXT"{}});}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (func\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ func(instance,\ pCreateInfo,\ pAllocator,\ pDebugMessenger);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ VK\_ERROR\_EXTENSION\_NOT\_PRESENT;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_aeaf6f35f94c997ce724f2de4a39a1a34}{DestroyDebugUtilsMessengerEXT}}(VkInstance\ instance,\ VkDebugUtilsMessengerEXT\ debugMessenger,\ \textcolor{keyword}{const}\ VkAllocationCallbacks*\ pAllocator)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ func\ =\ (PFN\_vkDestroyDebugUtilsMessengerEXT)vkGetInstanceProcAddr(instance,\ \textcolor{stringliteral}{"{}vkDestroyDebugUtilsMessengerEXT"{}});}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (func\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ func(instance,\ debugMessenger,\ pAllocator);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1base}{base}}\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a8e779fa1c21f0cf85c6266b414450200}{Base}}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a8e779fa1c21f0cf85c6266b414450200}{Base}}()\ :\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a6792acb9ae7b492590b48d6ec4a115a5}{context}}(nullptr),\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a879e0eca305bc4d05ee0dd5f68946c9d}{settings}}(nullptr)\ \{\}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_ae2101b42e1b35a873edd3e9bb0cc5b6c}{init}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC::utils::Context}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a6792acb9ae7b492590b48d6ec4a115a5}{context}},\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC::utils::Settings}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a879e0eca305bc4d05ee0dd5f68946c9d}{settings}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_ac97c049af5147002e8c6399d6eb1479c}{\string~Base}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a9c0300069ebded997a9ab608bd18734b}{cleanup}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_aabe93e25020c9e6387bb7d8ec9a839db}{create}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_aae3ea4b54eb2abb5183ab15af7123c73}{createInstance}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a3c28f273f80c69439abe0f067f661692}{setupDebugMessenger}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_af4e03b04645178568deb025d985d3faf}{pickPhysicalDevice}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a4ad9dc34bca6ea2629b22af7ee3b7594}{createSurface}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a7159217f3f0694baa2c0e5d3da2497e0}{createLogicalDevice}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC::utils::Context}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a6792acb9ae7b492590b48d6ec4a115a5}{context}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC::utils::Settings}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a879e0eca305bc4d05ee0dd5f68946c9d}{settings}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//help}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_aeeb68987aa79cbb01f04c14be9942dd4}{checkValidationLayerSupport}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<const\ char*>\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a634d029f5850961ba6819d6334bbd17b}{getRequiredExtensions}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a6cd1f74bdaa58779c4f7e017aa0be2f8}{populateDebugMessengerCreateInfo}}(VkDebugUtilsMessengerCreateInfoEXT\&\ createInfo);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ VKAPI\_ATTR\ VkBool32\ VKAPI\_CALL\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a4b5b95811813234f8d15ab948a7944a4}{debugCallback}}(VkDebugUtilsMessageSeverityFlagBitsEXT\ messageSeverity,\ VkDebugUtilsMessageTypeFlagsEXT\ messageType,\ \textcolor{keyword}{const}\ VkDebugUtilsMessengerCallbackDataEXT*\ pCallbackData,\ \textcolor{keywordtype}{void}*\ pUserData);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSampleCountFlagBits\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_ac29f5e2a550983d3f2ec7bd9c73863de}{getMaxUsableSampleCount}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkSampleCountFlagBits>\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a9c4f62c73bebb1a8acd7e045f52eb005}{getPossibleCounts}}(VkSampleCountFlagBits\ maxCount);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSampleCountFlagBits\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_af32784fe71c111c6a16d7944380e21f0}{getMsaaSamples}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDebugUtilsMessengerEXT\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_ab7493519804d682d5e38803b9fafe339}{debugMessenger}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}

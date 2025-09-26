@@ -1,0 +1,35 @@
+\doxysection{swap\+Chain.\+h}
+\hypertarget{swap_chain_8h_source}{}\label{swap_chain_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/swapChain.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/swapChain.h}}
+\mbox{\hyperlink{swap_chain_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utils_8h}{utils.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c}{PGC}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_ac0c55a3fd3fec4bc4ee0fdd6d026903f}{SwapChain}}}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_ac0c55a3fd3fec4bc4ee0fdd6d026903f}{SwapChain}}()\ :\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a98ef5abfe1f700ca0f0dcdbc91129abc}{context}}(nullptr),\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a1f8f8349ec28a0ee50f716bef225260f}{settings}}(nullptr)\ \{\}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_ae2101b42e1b35a873edd3e9bb0cc5b6c}{init}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC::utils::Context}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a98ef5abfe1f700ca0f0dcdbc91129abc}{context}},\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC::utils::Settings}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a1f8f8349ec28a0ee50f716bef225260f}{settings}});}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a68df1d235f8043c72ab03b2645c97de5}{\string~SwapChain}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_ae0eff1bf37e4b4f87431c4060a6bee86}{cleanup}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a71dc7570cb6c903f810841f57dcbe7f8}{awaitRenderingCompletion}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a6b556b9c4d9053b46b9598749d3ed768}{recreate}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a6846f862a3f113e3bffaf2de5fbb9fe5}{create}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a4c7f128a792d602a7e9d791a55d71579}{createImageViews}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ VkSurfaceFormatKHR\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_ac9e805f45a94b40c80e103088470f6f5}{chooseSwapSurfaceFormat}}(\textcolor{keyword}{const}\ std::vector<VkSurfaceFormatKHR>\&\ availableFormats);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ VkPresentModeKHR\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a6327c63363a56b3ad07ea03762c3a316}{chooseSwapPresentMode}}(\textcolor{keyword}{const}\ std::vector<VkPresentModeKHR>\&\ availablePresentModes);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ VkExtent2D\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a60b9fd49d6941d6b8cef997dadd3faf9}{chooseSwapExtent}}(\textcolor{keyword}{const}\ VkSurfaceCapabilitiesKHR\&\ capabilities);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a997057c8be4d1aac9beb88bb6327c0e0}{getImageCount}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details}{PGC::utils::SwapChainSupportDetails}}\ swapChainSupport);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils::Context}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a98ef5abfe1f700ca0f0dcdbc91129abc}{context}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils::Settings}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a1f8f8349ec28a0ee50f716bef225260f}{settings}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}

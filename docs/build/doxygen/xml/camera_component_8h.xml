@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="camera_component_8h" kind="file" language="C++">
+    <compoundname>cameraComponent.h</compoundname>
+    <includedby refid="render_system_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.cpp</includedby>
+    <includedby refid="renderer_8h" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.h</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.cpp</label>
+        <link refid="_prism_engine_8cpp"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.h</label>
+        <link refid="_prism_engine_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h</label>
+        <link refid="camera_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.cpp</label>
+        <link refid="render_system_8cpp"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h</label>
+        <link refid="render_system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.cpp</label>
+        <link refid="renderer_8cpp"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.h</label>
+        <link refid="renderer_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structprism_1_1scene_1_1_look" prot="public">prism::scene::Look</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_camera_component" prot="public">prism::scene::CameraComponent</innerclass>
+    <innernamespace refid="namespaceprism">prism</innernamespace>
+    <innernamespace refid="namespaceprism_1_1scene">prism::scene</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism" kindref="compound">prism</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="namespaceprism_1_1scene" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism_1_1scene" kindref="compound">scene</ref><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="structprism_1_1scene_1_1_look" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1scene_1_1_look" kindref="compound">Look</ref><sp/>{</highlight></codeline>
+<codeline lineno="6" refid="structprism_1_1scene_1_1_look_1a684b68e3cd2118bf8a97b89a163b3498" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_look_1a684b68e3cd2118bf8a97b89a163b3498" kindref="member">x</ref>,<sp/><ref refid="structprism_1_1scene_1_1_look_1a24e121b357bda2c5e58f71c55cbb3cd2" kindref="member">y</ref>,<sp/><ref refid="structprism_1_1scene_1_1_look_1ad48bf86097551f962dd84b2c07b25321" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="structprism_1_1scene_1_1_camera_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1scene_1_1_camera_component" kindref="compound">CameraComponent</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="structprism_1_1scene_1_1_camera_component_1a526eb024a451aeeb264b4b617250d9a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_camera_component_1a526eb024a451aeeb264b4b617250d9a8" kindref="member">isActive</ref>;<sp/></highlight><highlight class="comment">//<sp/>Рендерить<sp/>ли</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1scene_1_1_look" kindref="compound">Look</ref><sp/><ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref><sp/>=<sp/>{<sp/>0.0f,<sp/>0.0f,<sp/>0.0f<sp/>};<sp/></highlight><highlight class="comment">//<sp/>Взгляд</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structprism_1_1scene_1_1_camera_component_1a81a79c9ac6815d97e5738865639124bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_camera_component_1a81a79c9ac6815d97e5738865639124bc" kindref="member">fovy</ref><sp/>=<sp/>45.0f;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Угол<sp/>обзора<sp/>в<sp/>градусах</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="structprism_1_1scene_1_1_camera_component_1a2a20f6f43a213b7c8c79939b24ad6868" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_camera_component_1a2a20f6f43a213b7c8c79939b24ad6868" kindref="member">aspect</ref><sp/>=<sp/>16.f<sp/>/<sp/>9.f;<sp/></highlight><highlight class="comment">//<sp/>Соотношение<sp/>сторон</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="structprism_1_1scene_1_1_camera_component_1a6b41fc4706802499c3a6f4c274dc9f7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_camera_component_1a6b41fc4706802499c3a6f4c274dc9f7e" kindref="member">zNear</ref><sp/>=<sp/>0.1f;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ближняя<sp/>плоскость<sp/>отсечения</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structprism_1_1scene_1_1_camera_component_1a7d58fda77459e28f65b5f47a499931a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_camera_component_1a7d58fda77459e28f65b5f47a499931a5" kindref="member">zFar</ref><sp/>=<sp/>10.0f;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Дальняя<sp/>плоскость<sp/>отсечения</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structprism_1_1scene_1_1_camera_component_1a2fcf04acc5550a83af87e2545e1a857b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_camera_component_1a2fcf04acc5550a83af87e2545e1a857b" kindref="member">useСurrentWindowAspect</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Если<sp/>истино<sp/>то<sp/>aspect<sp/>игнорируется<sp/>и<sp/>соотношение<sp/>камеры<sp/>равно<sp/>соотношению<sp/>окна</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h"/>
+  </compounddef>
+</doxygen>

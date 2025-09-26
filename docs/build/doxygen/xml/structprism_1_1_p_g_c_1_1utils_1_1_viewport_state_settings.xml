@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::ViewportStateSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings_1a018c8e8dc0d9a65ec66ca894deab34ea" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::ViewportStateSettings::viewportCount</definition>
+        <argsstring></argsstring>
+        <name>viewportCount</name>
+        <qualifiedname>prism::PGC::utils::ViewportStateSettings::viewportCount</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="266" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings_1a4a6c86fefccfe944bfc89f9509909dfe" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::ViewportStateSettings::scissorCount</definition>
+        <argsstring></argsstring>
+        <name>scissorCount</name>
+        <qualifiedname>prism::PGC::utils::ViewportStateSettings::scissorCount</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="267" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="265" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="265" bodyend="268"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings_1a4a6c86fefccfe944bfc89f9509909dfe" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ViewportStateSettings</scope><name>scissorCount</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings_1a018c8e8dc0d9a65ec66ca894deab34ea" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ViewportStateSettings</scope><name>viewportCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

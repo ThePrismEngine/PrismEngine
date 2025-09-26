@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="resources_creater_8h" kind="file" language="C++">
+    <compoundname>resourcesCreater.h</compoundname>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">array</includes>
+    <includes refid="utils_8h" local="yes">utils.h</includes>
+    <includes refid="device_wrapper_8h" local="yes">deviceWrapper.h</includes>
+    <includedby refid="prism_graphic_core_8h" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h</includedby>
+    <includedby refid="resources_creater_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.cpp</includedby>
+    <includedby refid="swap_chain_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/swapChain.cpp</includedby>
+    <includedby refid="texture_loader_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="20">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.h</label>
+        <link refid="resources_creater_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SDL.h</label>
+      </node>
+      <node id="3">
+        <label>array</label>
+      </node>
+      <node id="19">
+        <label>cstdint</label>
+      </node>
+      <node id="12">
+        <label>glm.hpp</label>
+      </node>
+      <node id="6">
+        <label>optional</label>
+      </node>
+      <node id="2">
+        <label>stdexcept</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="13">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.cpp</label>
+        <link refid="_prism_engine_8cpp"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.h</label>
+        <link refid="_prism_engine_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp</label>
+        <link refid="prism_graphic_core_8cpp"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h</label>
+        <link refid="prism_graphic_core_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.cpp</label>
+        <link refid="render_system_8cpp"/>
+      </node>
+      <node id="7">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h</label>
+        <link refid="render_system_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.cpp</label>
+        <link refid="renderer_8cpp"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.h</label>
+        <link refid="renderer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.cpp</label>
+        <link refid="resources_creater_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.h</label>
+        <link refid="resources_creater_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/swapChain.cpp</label>
+        <link refid="swap_chain_8cpp"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp</label>
+        <link refid="texture_loader_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_resources_creater" prot="public">prism::PGC::ResourcesCreater</innerclass>
+    <innernamespace refid="namespaceprism">prism</innernamespace>
+    <innernamespace refid="namespaceprism_1_1_p_g_c">prism::PGC</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="device_wrapper_8h" kindref="compound">deviceWrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism" kindref="compound">prism</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism_1_1_p_g_c" kindref="compound">PGC</ref><sp/>{</highlight></codeline>
+<codeline lineno="9" refid="classprism_1_1_p_g_c_1_1_resources_creater" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classprism_1_1_p_g_c_1_1_resources_creater" kindref="compound">ResourcesCreater</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1abd176274158468bb98a309f56b21aba8" kindref="member">createImage</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>uint32_t<sp/>width,<sp/>uint32_t<sp/>height,<sp/>uint32_t<sp/>mipLevels,<sp/>VkSampleCountFlagBits<sp/>numSamples,<sp/>VkFormat<sp/>format,<sp/>VkImageTiling<sp/>tiling,<sp/>VkImageUsageFlags<sp/>usage,<sp/>VkMemoryPropertyFlags<sp/>properties,<sp/>VkImage&amp;<sp/>image,<sp/>VkDeviceMemory&amp;<sp/>imageMemory);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>VkImageView<sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1a47be41c0f55c49f83af5f407b310b49a" kindref="member">createImageView</ref>(VkDevice<sp/>device,<sp/>VkImage<sp/>image,<sp/>VkFormat<sp/>format,<sp/>VkImageAspectFlags<sp/>aspectFlags,<sp/>uint32_t<sp/>mipLevels);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1adcf795e7e2f15fd8efa60674a139fe2c" kindref="member">createFramebuffers</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref>*<sp/>settings);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1ac09e34b5b6c2bcb1edbf3c9e264d1fe6" kindref="member">createColorResources</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref>*<sp/>settings);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1aaff73dce2f951521017bf9cfd7e74267" kindref="member">createDepthResources</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref>*<sp/>settings);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1a50d8fcc21c002432511c9f541354fedc" kindref="member">createTextureSampler</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>VkSampler*<sp/>textureSampler);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.h"/>
+  </compounddef>
+</doxygen>

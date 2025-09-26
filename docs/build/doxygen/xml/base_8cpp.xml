@@ -1,0 +1,618 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="base_8cpp" kind="file" language="C++">
+    <compoundname>base.cpp</compoundname>
+    <includes refid="base_8h" local="yes">base.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/base.cpp</label>
+        <link refid="base_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>deviceRater.h</label>
+        <link refid="device_rater_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>SDL.h</label>
+      </node>
+      <node id="14">
+        <label>SDL2/SDL_log.h</label>
+      </node>
+      <node id="11">
+        <label>SDL_vulkan.h</label>
+      </node>
+      <node id="25">
+        <label>array</label>
+      </node>
+      <node id="30">
+        <label>cstdint</label>
+      </node>
+      <node id="17">
+        <label>fstream</label>
+      </node>
+      <node id="22">
+        <label>glm.hpp</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="16">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>optional</label>
+      </node>
+      <node id="8">
+        <label>set</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="18">
+        <label>unordered_map</label>
+      </node>
+      <node id="9">
+        <label>unordered_set</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="23">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_8h" kindref="compound">base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aabe93e25020c9e6387bb7d8ec9a839db" kindref="member">prism::PGC::base::Base::create</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aae3ea4b54eb2abb5183ab15af7123c73" kindref="member">createInstance</ref>();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a3c28f273f80c69439abe0f067f661692" kindref="member">setupDebugMessenger</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a4ad9dc34bca6ea2629b22af7ee3b7594" kindref="member">createSurface</ref>();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1af4e03b04645178568deb025d985d3faf" kindref="member">pickPhysicalDevice</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a7159217f3f0694baa2c0e5d3da2497e0" kindref="member">createLogicalDevice</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a5e78710df6af2bd95cbf365d6a56dd3a" kindref="member">prism::PGC::base::Base::init</ref>(PGC::utils::Context*<sp/>context,<sp/>PGC::utils::Settings*<sp/>settings)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;context<sp/>=<sp/>context;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;settings<sp/>=<sp/>settings;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>create();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1ac97c049af5147002e8c6399d6eb1479c" kindref="member">prism::PGC::base::Base::~Base</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!context<sp/>||<sp/>!settings)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fad8313c32829b7632ea0145d413618a06" kindref="member">logger::Error::NOT_CALL_CLEANUP_IN_PGC_CORE</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a9c0300069ebded997a9ab608bd18734b" kindref="member">prism::PGC::base::Base::cleanup</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;device<sp/>!=<sp/>VK_NULL_HANDLE)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDeviceWaitIdle(context-&gt;device);<sp/><sp/></highlight><highlight class="comment">//<sp/>Ensure<sp/>all<sp/>operations<sp/>are<sp/>completed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroyDevice(context-&gt;device,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;device<sp/>=<sp/>VK_NULL_HANDLE;<sp/><sp/></highlight><highlight class="comment">//<sp/>Mark<sp/>as<sp/>destroyed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debugMessenger<sp/>!=<sp/>VK_NULL_HANDLE)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1_p_g_c_1aeaf6f35f94c997ce724f2de4a39a1a34" kindref="member">DestroyDebugUtilsMessengerEXT</ref>(context-&gt;instance,<sp/>debugMessenger,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>debugMessenger<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;surface<sp/>!=<sp/>VK_NULL_HANDLE)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroySurfaceKHR(context-&gt;instance,<sp/>context-&gt;surface,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;surface<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;instance<sp/>!=<sp/>VK_NULL_HANDLE)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroyInstance(context-&gt;instance,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;instance<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>context<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>settings<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aeeb68987aa79cbb01f04c14be9942dd4" kindref="member">prism::PGC::base::Base::checkValidationLayerSupport</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>layerCount;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEnumerateInstanceLayerProperties(&amp;layerCount,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkLayerProperties&gt;<sp/>availableLayers(layerCount);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEnumerateInstanceLayerProperties(&amp;layerCount,<sp/>availableLayers.data());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>layerName<sp/>:<sp/>context-&gt;validationLayers)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>layerFound<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>layerProperties<sp/>:<sp/>availableLayers)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(layerName,<sp/>layerProperties.layerName)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layerFound<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!layerFound)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">std::vector&lt;const<sp/>char*&gt;<sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a634d029f5850961ba6819d6334bbd17b" kindref="member">prism::PGC::base::Base::getRequiredExtensions</ref>()</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;const<sp/>char*&gt;<sp/>extensions;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>extensionCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!SDL_Vulkan_GetInstanceExtensions(settings-&gt;window,<sp/>&amp;extensionCount,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989facd5d0e77c82518803520ad29a49bf3b8" kindref="member">logger::Error::SDL_VULKAN_EXTENSIONS_COUNT_FAILED</ref>,<sp/></highlight><highlight class="stringliteral">&quot;prism::PGC::core::Core::getRequiredExtensions()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;const<sp/>char*&gt;<sp/>sdlExtensions(extensionCount,<sp/></highlight><highlight class="stringliteral">&quot;prism::PGC::core::Core::getRequiredExtensions()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!SDL_Vulkan_GetInstanceExtensions(settings-&gt;window,<sp/>&amp;extensionCount,<sp/>sdlExtensions.data()))<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989facd5d0e77c82518803520ad29a49bf3b8" kindref="member">logger::Error::SDL_VULKAN_EXTENSIONS_COUNT_FAILED</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>extensions.insert(extensions.end(),<sp/>sdlExtensions.begin(),<sp/>sdlExtensions.end());</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;enableValidationLayers)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extensions.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>extensions;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a6cd1f74bdaa58779c4f7e017aa0be2f8" kindref="member">prism::PGC::base::Base::populateDebugMessengerCreateInfo</ref>(VkDebugUtilsMessengerCreateInfoEXT&amp;<sp/>createInfo)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.messageSeverity<sp/>=<sp/>settings-&gt;debug.VulkanMessageSeverity;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.messageType<sp/>=<sp/>settings-&gt;debug.VulkanMessageType;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.pfnUserCallback<sp/>=<sp/>debugCallback;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">VKAPI_ATTR<sp/>VkBool32<sp/>VKAPI_CALL<sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a4b5b95811813234f8d15ab948a7944a4" kindref="member">prism::PGC::base::Base::debugCallback</ref>(VkDebugUtilsMessageSeverityFlagBitsEXT<sp/>messageSeverity,<sp/>VkDebugUtilsMessageTypeFlagsEXT<sp/>messageType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDebugUtilsMessengerCallbackDataEXT*<sp/>pCallbackData,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pUserData)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;validation<sp/>layer:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>pCallbackData-&gt;pMessage<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_FALSE;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aae3ea4b54eb2abb5183ab15af7123c73" kindref="member">prism::PGC::base::Base::createInstance</ref>()</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;enableValidationLayers<sp/>&amp;&amp;<sp/>!checkValidationLayerSupport())<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa685d03e7509232a071e84689c6e817cd" kindref="member">logger::Error::VULKAN_VALIDATION_LAYERS_UNAVAILABLE</ref>,<sp/></highlight><highlight class="stringliteral">&quot;prism::PGC::core::Core::createInstance()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>VkApplicationInfo<sp/>appInfo{};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>appInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_APPLICATION_INFO;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>appInfo.pApplicationName<sp/>=<sp/>settings-&gt;app.applicationName;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>appInfo.applicationVersion<sp/>=<sp/>VK_MAKE_VERSION(settings-&gt;app.applicationVersion.MAJOR,<sp/>settings-&gt;app.applicationVersion.MINOR,<sp/>settings-&gt;app.applicationVersion.PATCH);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>appInfo.pEngineName<sp/>=<sp/><ref refid="structprism_1_1_prism_info_1a70a726517453a24b291089a81b114ff3" kindref="member">prism::PrismInfo::NAME</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>appInfo.engineVersion<sp/>=<sp/>VK_MAKE_VERSION(<ref refid="structprism_1_1_prism_version_1a7f380b7d2f046e0d6ad1cc97fed1efee" kindref="member">prism::PrismVersion::MAJOR</ref>,<sp/><ref refid="structprism_1_1_prism_version_1aa84da8412a45feb73d1002eace9c28c4" kindref="member">prism::PrismVersion::MINOR</ref>,<sp/><ref refid="structprism_1_1_prism_version_1af7fec056de4fbedc1da950a49dc2aa3e" kindref="member">prism::PrismVersion::PATCH</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>appInfo.apiVersion<sp/>=<sp/>VK_API_VERSION_1_4;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>VkInstanceCreateInfo<sp/>createInfo{};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.pApplicationInfo<sp/>=<sp/>&amp;appInfo;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>extensions<sp/>=<sp/>getRequiredExtensions();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.enabledExtensionCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(extensions.size());</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.ppEnabledExtensionNames<sp/>=<sp/>extensions.data();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDebugUtilsMessengerCreateInfoEXT<sp/>debugCreateInfo{};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;enableValidationLayers)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.enabledLayerCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(context-&gt;validationLayers.size());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.ppEnabledLayerNames<sp/>=<sp/>context-&gt;validationLayers.data();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>populateDebugMessengerCreateInfo(debugCreateInfo);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.pNext<sp/>=<sp/>(VkDebugUtilsMessengerCreateInfoEXT*)&amp;debugCreateInfo;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.enabledLayerCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.pNext<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateInstance(&amp;createInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;context-&gt;instance)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fac996121b2cdab372dbe567bdf3338409" kindref="member">logger::Error::FAILED_TO_CREATE_VK_INSTANCE</ref>,<sp/></highlight><highlight class="stringliteral">&quot;prism::PGC::core::Core::createInstance()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a3c28f273f80c69439abe0f067f661692" kindref="member">prism::PGC::base::Base::setupDebugMessenger</ref>()</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!context-&gt;enableValidationLayers)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDebugUtilsMessengerCreateInfoEXT<sp/>createInfo;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>populateDebugMessengerCreateInfo(createInfo);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceprism_1_1_p_g_c_1ad693ecf2f5af4ca4af972d2be76e6da6" kindref="member">CreateDebugUtilsMessengerEXT</ref>(context-&gt;instance,<sp/>&amp;createInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;debugMessenger)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa8a698cb421b3e29da20940a7e5a84103" kindref="member">logger::Error::VULKAN_DEBUG_MESSENGER_SETUP_FAILED</ref>,<sp/></highlight><highlight class="stringliteral">&quot;prism::PGC::core::Core::setupDebugMessenger()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1af4e03b04645178568deb025d985d3faf" kindref="member">prism::PGC::base::Base::pickPhysicalDevice</ref>()</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>deviceCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEnumeratePhysicalDevices(context-&gt;instance,<sp/>&amp;deviceCount,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(deviceCount<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa3368d5c98c0566bbab7fde79e49a1d94" kindref="member">logger::Error::VULKAN_NO_GPU_SUPPORT</ref>,<sp/></highlight><highlight class="stringliteral">&quot;prism::PGC::core::Core::pickPhysicalDevice()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkPhysicalDevice&gt;<sp/>devices(deviceCount);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEnumeratePhysicalDevices(context-&gt;instance,<sp/>&amp;deviceCount,<sp/>devices.data());</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>std::multimap&lt;int,<sp/>VkPhysicalDevice&gt;<sp/>candidates;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>DeviceRater<sp/>deviceRater;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>device<sp/>:<sp/>devices)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>score<sp/>=<sp/>deviceRater.rate(device,<sp/>context,<sp/>settings);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>candidates.insert(std::make_pair(score,<sp/>device));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>best<sp/>candidate<sp/>is<sp/>suitable<sp/>at<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(candidates.rbegin()-&gt;first<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;physicalDevice<sp/>=<sp/>candidates.rbegin()-&gt;second;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(settings-&gt;pipeline.multisample.rasterizationSamples)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;msaaSamples<sp/>=<sp/>getMsaaSamples();</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fabdbdbec21fe7a2864315caec4929194f" kindref="member">logger::Error::VULKAN_NO_SUITABLE_GPU</ref>,<sp/></highlight><highlight class="stringliteral">&quot;prism::PGC::core::Core::pickPhysicalDevice()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Вывод<sp/>информации<sp/>о<sp/>выбранном<sp/>устройстве</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPhysicalDeviceProperties<sp/>deviceProps<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a7e777734683993078714a50d4ecf0a6e" kindref="member">DeviceWrapper::getDeviceProperties</ref>(context-&gt;physicalDevice);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;Selected<sp/>Vulkan<sp/>device:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-<sp/>Name:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::string(deviceProps.deviceName));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>type;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(deviceProps.deviceType)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU:<sp/>type<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Integrated<sp/>GPU&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU:<sp/>type<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Discrete<sp/>GPU&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU:<sp/>type<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Virtual<sp/>GPU&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>VK_PHYSICAL_DEVICE_TYPE_CPU:<sp/>type<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CPU&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>type<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Other&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-<sp/>Type:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>type);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-<sp/>API<sp/>Version:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>std::to_string(VK_VERSION_MAJOR(deviceProps.apiVersion))<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>std::to_string(VK_VERSION_MINOR(deviceProps.apiVersion))<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>std::to_string(VK_VERSION_PATCH(deviceProps.apiVersion)));</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-<sp/>Driver<sp/>Version:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(deviceProps.driverVersion));</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-<sp/>Vendor<sp/>ID:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(deviceProps.vendorID));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-<sp/>Device<sp/>ID:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(deviceProps.deviceID));</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">logger::info</ref>(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>-<sp/>Score:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(candidates.rbegin()-&gt;first)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">VkSampleCountFlagBits<sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1af32784fe71c111c6a16d7944380e21f0" kindref="member">prism::PGC::base::Base::getMsaaSamples</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSampleCountFlagBits<sp/>maxCount<sp/>=<sp/>getMaxUsableSampleCount();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkSampleCountFlagBits&gt;<sp/>possibleCounts<sp/>=<sp/>getPossibleCounts(maxCount);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(possibleCounts.empty())<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_1_BIT;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(settings-&gt;pipeline.multisample.strategy)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa23bd02d770fe9f1ea82d40438037cf25" kindref="member">utils::MultisampleSelectionStrategy::MINIMAL</ref>:</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(possibleCounts.size()<sp/>&gt;=<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>possibleCounts.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(possibleCounts[i]<sp/>!=<sp/>VK_SAMPLE_COUNT_1_BIT)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>possibleCounts[i];</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>possibleCounts[0];<sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa9eea90ec596d66e2a1fd8edd09cd61d9" kindref="member">utils::MultisampleSelectionStrategy::MIDDLE</ref>:</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(possibleCounts.size()<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>possibleCounts[0];</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>possibleCounts[possibleCounts.size()<sp/>/<sp/>2];</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fad9ff5583d4cddf516dbd5e1f38b654d1" kindref="member">utils::MultisampleSelectionStrategy::MAXIMAL</ref>:</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>possibleCounts.back();</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa28800c8afb35060c17cefe2f645685ad" kindref="member">utils::MultisampleSelectionStrategy::CUSTOM</ref>:</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(VkSampleCountFlagBits<sp/>possibleCount<sp/>:<sp/>possibleCounts)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(possibleCount<sp/>==<sp/>settings-&gt;pipeline.multisample.rasterizationSamples)<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>possibleCount;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkSampleCountFlagBits<sp/>closest<sp/>=<sp/>possibleCounts[0];</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minDiff<sp/>=<sp/>std::abs(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(closest)<sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(settings-&gt;pipeline.multisample.rasterizationSamples));</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>possibleCounts.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>diff<sp/>=<sp/>std::abs(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(possibleCounts[i])<sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(settings-&gt;pipeline.multisample.rasterizationSamples));</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(diff<sp/>&lt;<sp/>minDiff)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>minDiff<sp/>=<sp/>diff;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>closest<sp/>=<sp/>possibleCounts[i];</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>closest;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_1_BIT;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a4ad9dc34bca6ea2629b22af7ee3b7594" kindref="member">prism::PGC::base::Base::createSurface</ref>()</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!SDL_Vulkan_CreateSurface(settings-&gt;window,<sp/>context-&gt;instance,<sp/>&amp;context-&gt;surface))<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fadd63255ee65e45ee2b61316ab1decf3c" kindref="member">logger::Error::FAILED_TO_CREATE_WINDOW_SURFACE</ref>,<sp/></highlight><highlight class="stringliteral">&quot;WindowVkManager::createSurface&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a7159217f3f0694baa2c0e5d3da2497e0" kindref="member">prism::PGC::base::Base::createLogicalDevice</ref>()</highlight></codeline>
+<codeline lineno="282"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>PGC::utils::QueueFamilyIndices<sp/>indices<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a88c9489702bce265bee70147ed98fcd2" kindref="member">DeviceWrapper::findQueueFamilies</ref>(context-&gt;physicalDevice,<sp/>context-&gt;surface);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkDeviceQueueCreateInfo&gt;<sp/>queueCreateInfos;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>std::set&lt;uint32_t&gt;<sp/>uniqueQueueFamilies<sp/>=<sp/>{<sp/>indices.graphicsFamily.value(),<sp/>indices.presentFamily.value()<sp/>};</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>queuePriority<sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>queueFamily<sp/>:<sp/>uniqueQueueFamilies)<sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDeviceQueueCreateInfo<sp/>queueCreateInfo{};</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queueCreateInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queueCreateInfo.queueFamilyIndex<sp/>=<sp/>queueFamily;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queueCreateInfo.queueCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queueCreateInfo.pQueuePriorities<sp/>=<sp/>&amp;queuePriority;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queueCreateInfos.push_back(queueCreateInfo);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPhysicalDeviceFeatures<sp/>deviceFeatures{};</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>deviceFeatures.samplerAnisotropy<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>deviceFeatures.fillModeNonSolid<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPhysicalDeviceVulkan12Features<sp/>vulkan12Features{};</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>vulkan12Features.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_2_FEATURES;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPhysicalDeviceFeatures2<sp/>physicalFeatures2{};</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>physicalFeatures2.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FEATURES_2;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>physicalFeatures2.pNext<sp/>=<sp/>&amp;vulkan12Features;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>physicalFeatures2.features<sp/>=<sp/>deviceFeatures;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceFeatures2(context-&gt;physicalDevice,<sp/>&amp;physicalFeatures2);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>vulkan12Features.runtimeDescriptorArray<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>vulkan12Features.shaderSampledImageArrayNonUniformIndexing<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>vulkan12Features.descriptorBindingPartiallyBound<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>vulkan12Features.descriptorBindingSampledImageUpdateAfterBind<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>vulkan12Features.descriptorBindingUniformBufferUpdateAfterBind<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceCreateInfo<sp/>createInfo{};</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.pNext<sp/>=<sp/>&amp;vulkan12Features;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.queueCreateInfoCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(queueCreateInfos.size());</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.pQueueCreateInfos<sp/>=<sp/>queueCreateInfos.data();</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.pEnabledFeatures<sp/>=<sp/>&amp;deviceFeatures;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.enabledExtensionCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(context-&gt;deviceExtensions.size());</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfo.ppEnabledExtensionNames<sp/>=<sp/>context-&gt;deviceExtensions.data();</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;enableValidationLayers)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.enabledLayerCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(context-&gt;validationLayers.size());</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.ppEnabledLayerNames<sp/>=<sp/>context-&gt;validationLayers.data();</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.enabledLayerCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateDevice(context-&gt;physicalDevice,<sp/>&amp;createInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;context-&gt;device)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd" kindref="member">logger::logError</ref>(<ref refid="namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989fa3b0899a81586e97eff0745fff0134a6a" kindref="member">logger::Error::VULKAN_LOGICAL_DEVICE_CREATION_FAILED</ref>,<sp/></highlight><highlight class="stringliteral">&quot;prism::PGC::core::Core::createLogicalDevice()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetDeviceQueue(context-&gt;device,<sp/>indices.graphicsFamily.value(),<sp/>0,<sp/>&amp;context-&gt;graphicsQueue);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetDeviceQueue(context-&gt;device,<sp/>indices.presentFamily.value(),<sp/>0,<sp/>&amp;context-&gt;presentQueue);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal">VkSampleCountFlagBits<sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1ac29f5e2a550983d3f2ec7bd9c73863de" kindref="member">prism::PGC::base::Base::getMaxUsableSampleCount</ref>()</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPhysicalDeviceProperties<sp/>physicalDeviceProperties;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceProperties(context-&gt;physicalDevice,<sp/>&amp;physicalDeviceProperties);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSampleCountFlags<sp/>counts<sp/>=<sp/>physicalDeviceProperties.limits.framebufferColorSampleCounts<sp/>&amp;<sp/>physicalDeviceProperties.limits.framebufferDepthSampleCounts;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counts<sp/>&amp;<sp/>VK_SAMPLE_COUNT_64_BIT)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_64_BIT;<sp/>}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counts<sp/>&amp;<sp/>VK_SAMPLE_COUNT_32_BIT)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_32_BIT;<sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counts<sp/>&amp;<sp/>VK_SAMPLE_COUNT_16_BIT)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_16_BIT;<sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counts<sp/>&amp;<sp/>VK_SAMPLE_COUNT_8_BIT)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_8_BIT;<sp/>}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counts<sp/>&amp;<sp/>VK_SAMPLE_COUNT_4_BIT)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_4_BIT;<sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counts<sp/>&amp;<sp/>VK_SAMPLE_COUNT_2_BIT)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_2_BIT;<sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_1_BIT;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal">std::vector&lt;VkSampleCountFlagBits&gt;<sp/><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a9c4f62c73bebb1a8acd7e045f52eb005" kindref="member">prism::PGC::base::Base::getPossibleCounts</ref>(VkSampleCountFlagBits<sp/>maxCount)<sp/>{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkSampleCountFlagBits&gt;<sp/>counts<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_SAMPLE_COUNT_1_BIT,</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_SAMPLE_COUNT_2_BIT,</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_SAMPLE_COUNT_4_BIT,</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_SAMPLE_COUNT_8_BIT,</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_SAMPLE_COUNT_16_BIT,</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_SAMPLE_COUNT_32_BIT,</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_SAMPLE_COUNT_64_BIT</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkSampleCountFlagBits&gt;<sp/>possibleCounts;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(VkSampleCountFlagBits<sp/>count<sp/>:<sp/>counts)</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>&lt;=<sp/>maxCount)<sp/>{</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>possibleCounts.push_back(count);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>possibleCounts;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/base.cpp"/>
+  </compounddef>
+</doxygen>

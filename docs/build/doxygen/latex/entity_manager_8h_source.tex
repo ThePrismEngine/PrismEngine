@@ -1,0 +1,30 @@
+\doxysection{entity\+Manager.\+h}
+\hypertarget{entity_manager_8h_source}{}\label{entity_manager_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h}}
+\mbox{\hyperlink{entity_manager_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity_8h}{entity.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1scene}{scene}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_abe9a531c0cd25477ab10b8cdb0856188}{EntityManager}}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_abe9a531c0cd25477ab10b8cdb0856188}{EntityManager}}()\ :\ \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a0b6d5b122445aff8f48ff5999262aa50}{nextEntityId}}(1)\ \{\}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a0e6fd16fd8313e33f366d3bffb14b8e3}{createEntity}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a64b40ac4717222997d2c577acc020687}{destroyEntity}}(\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ entityId);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_ab5b69633034025889c6126f94cc0fde5}{isEntityValid}}(\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ entityId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a0b6d5b122445aff8f48ff5999262aa50}{nextEntityId}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::queue<Entity>\ \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a97fcaafd355dd916cd3a53e7b4b83c73}{freeList}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}

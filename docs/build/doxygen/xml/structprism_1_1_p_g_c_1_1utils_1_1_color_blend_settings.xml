@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::ColorBlendSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1ab7e492a8019d4f44ee3cfe1b40f2f746" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkPipelineColorBlendAttachmentState &gt;</type>
+        <definition>std::vector&lt;VkPipelineColorBlendAttachmentState&gt; prism::PGC::utils::ColorBlendSettings::attachments</definition>
+        <argsstring></argsstring>
+        <name>attachments</name>
+        <qualifiedname>prism::PGC::utils::ColorBlendSettings::attachments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="235" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1a40932407f280bd6aa68e7a0d74263628" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::ColorBlendSettings::logicOpEnable</definition>
+        <argsstring></argsstring>
+        <name>logicOpEnable</name>
+        <qualifiedname>prism::PGC::utils::ColorBlendSettings::logicOpEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="236" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1aab4d4c4e9585165fdfbad1c842732090" prot="public" static="no" mutable="no">
+        <type>VkLogicOp</type>
+        <definition>VkLogicOp prism::PGC::utils::ColorBlendSettings::logicOp</definition>
+        <argsstring></argsstring>
+        <name>logicOp</name>
+        <qualifiedname>prism::PGC::utils::ColorBlendSettings::logicOp</qualifiedname>
+        <initializer>= VK_LOGIC_OP_COPY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="237" column="11" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1aca3667fb6394ee7ef07da6816c40326d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::ColorBlendSettings::blendConstants[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>blendConstants</name>
+        <qualifiedname>prism::PGC::utils::ColorBlendSettings::blendConstants</qualifiedname>
+        <initializer>= { 0.0f, 0.0f, 0.0f, 0.0f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="238" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="238" bodyend="238"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="234" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="234" bodyend="239"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1ab7e492a8019d4f44ee3cfe1b40f2f746" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ColorBlendSettings</scope><name>attachments</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1aca3667fb6394ee7ef07da6816c40326d" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ColorBlendSettings</scope><name>blendConstants</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1aab4d4c4e9585165fdfbad1c842732090" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ColorBlendSettings</scope><name>logicOp</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_1a40932407f280bd6aa68e7a0d74263628" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ColorBlendSettings</scope><name>logicOpEnable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

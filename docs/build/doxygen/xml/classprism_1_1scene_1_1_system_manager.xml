@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1scene_1_1_system_manager" kind="class" language="C++" prot="public">
+    <compoundname>prism::scene::SystemManager</compoundname>
+    <includes refid="system_manager_8h" local="no">systemManager.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_system_manager_1a7430581dc763a8217472d313a2145a5a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classprism_1_1scene_1_1_i_system" kindref="compound">ISystem</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;ISystem&gt; &gt; prism::scene::SystemManager::systems</definition>
+        <argsstring></argsstring>
+        <name>systems</name>
+        <qualifiedname>prism::scene::SystemManager::systems</qualifiedname>
+        <briefdescription>
+<para>Массив зарегистрированных систем </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" line="44" column="25" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1scene_1_1_system_manager_1a37b3f8b281e8503f6f4d08de1e8a2aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::scene::SystemManager::SystemManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>SystemManager</name>
+        <qualifiedname>prism::scene::SystemManager::SystemManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" line="14" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_system_manager_1a871edb29fd162e17d59b3d36fe3bfae6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de" kindref="member">SystemId</ref></type>
+        <definition>SystemId prism::scene::SystemManager::registerSystem</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>registerSystem</name>
+        <qualifiedname>prism::scene::SystemManager::registerSystem</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Регистрирует новую систему в менеджере. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Тип системы (должен быть производным от <ref refid="classprism_1_1scene_1_1_i_system" kindref="compound">ISystem</ref>). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Типы аргументов для конструктора системы. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Аргументы для передачи конструктору системы. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Идентификатор зарегистрированной системы.</para>
+</simplesect>
+Создает экземпляр системы и добавляет его в список управления </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" line="23" column="22" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_system_manager_1a0810e774cfc31a4cf1c1eb3bac4f0997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::scene::SystemManager::enableSystem</definition>
+        <argsstring>(SystemId systemId)</argsstring>
+        <name>enableSystem</name>
+        <qualifiedname>prism::scene::SystemManager::enableSystem</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de" kindref="member">SystemId</ref></type>
+          <declname>systemId</declname>
+        </param>
+        <briefdescription>
+<para>Включает систему по идентификатору. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>systemId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор системы, которую нужно включить. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" line="30" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_system_manager_1a277d39c230cb33e55636aaa60d844c04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::scene::SystemManager::disableSystem</definition>
+        <argsstring>(SystemId systemId)</argsstring>
+        <name>disableSystem</name>
+        <qualifiedname>prism::scene::SystemManager::disableSystem</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de" kindref="member">SystemId</ref></type>
+          <declname>systemId</declname>
+        </param>
+        <briefdescription>
+<para>Выключает систему по идентификатору. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>systemId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор системы, которую нужно выключить. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" line="34" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.cpp" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_system_manager_1acfa1db8417866bfce1b77d4aa76e1a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::scene::SystemManager::update</definition>
+        <argsstring>(float deltaTime)</argsstring>
+        <name>update</name>
+        <qualifiedname>prism::scene::SystemManager::update</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Обновляет все активные системы. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Время, прошедшее с предыдущего обновления</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Вызывает <ref refid="classprism_1_1scene_1_1_system_manager_1acfa1db8417866bfce1b77d4aa76e1a09" kindref="member">update()</ref> для всех включенных систем в порядке регистрации </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" line="40" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.cpp" bodystart="17" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Менеджер систем для регистрации, включения/выключения и обновления систем. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Управляет коллекцией систем, обновляя их в порядке регистрации. </para>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" line="11" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h" bodystart="12" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classprism_1_1scene_1_1_system_manager_1a277d39c230cb33e55636aaa60d844c04" prot="public" virt="non-virtual"><scope>prism::scene::SystemManager</scope><name>disableSystem</name></member>
+      <member refid="classprism_1_1scene_1_1_system_manager_1a0810e774cfc31a4cf1c1eb3bac4f0997" prot="public" virt="non-virtual"><scope>prism::scene::SystemManager</scope><name>enableSystem</name></member>
+      <member refid="classprism_1_1scene_1_1_system_manager_1a871edb29fd162e17d59b3d36fe3bfae6" prot="public" virt="non-virtual"><scope>prism::scene::SystemManager</scope><name>registerSystem</name></member>
+      <member refid="classprism_1_1scene_1_1_system_manager_1a37b3f8b281e8503f6f4d08de1e8a2aa0" prot="public" virt="non-virtual"><scope>prism::scene::SystemManager</scope><name>SystemManager</name></member>
+      <member refid="classprism_1_1scene_1_1_system_manager_1a7430581dc763a8217472d313a2145a5a" prot="private" virt="non-virtual"><scope>prism::scene::SystemManager</scope><name>systems</name></member>
+      <member refid="classprism_1_1scene_1_1_system_manager_1acfa1db8417866bfce1b77d4aa76e1a09" prot="public" virt="non-virtual"><scope>prism::scene::SystemManager</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,68 @@
+\doxysection{Класс prism\+::PGC\+::Resources\+Creater}
+\hypertarget{classprism_1_1_p_g_c_1_1_resources_creater}{}\label{classprism_1_1_p_g_c_1_1_resources_creater}\index{prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}}
+
+
+{\ttfamily \#include $<$resources\+Creater.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_abd176274158468bb98a309f56b21aba8}{create\+Image}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, uint32\+\_\+t width, uint32\+\_\+t height, uint32\+\_\+t mip\+Levels, Vk\+Sample\+Count\+Flag\+Bits num\+Samples, Vk\+Format format, Vk\+Image\+Tiling tiling, Vk\+Image\+Usage\+Flags usage, Vk\+Memory\+Property\+Flags properties, Vk\+Image \&image, Vk\+Device\+Memory \&image\+Memory)
+\item 
+static Vk\+Image\+View \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_a47be41c0f55c49f83af5f407b310b49a}{create\+Image\+View}} (Vk\+Device device, Vk\+Image image, Vk\+Format format, Vk\+Image\+Aspect\+Flags aspect\+Flags, uint32\+\_\+t mip\+Levels)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_adcf795e7e2f15fd8efa60674a139fe2c}{create\+Framebuffers}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}settings)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_ac09e34b5b6c2bcb1edbf3c9e264d1fe6}{create\+Color\+Resources}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}settings)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_aaff73dce2f951521017bf9cfd7e74267}{create\+Depth\+Resources}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}settings)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_a50d8fcc21c002432511c9f541354fedc}{create\+Texture\+Sampler}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, Vk\+Sampler \texorpdfstring{$\ast$}{*}texture\+Sampler)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_resources_creater_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1_resources_creater_ac09e34b5b6c2bcb1edbf3c9e264d1fe6}\index{prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}!createColorResources@{createColorResources}}
+\index{createColorResources@{createColorResources}!prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}}
+\doxysubsubsection{\texorpdfstring{createColorResources()}{createColorResources()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_resources_creater_ac09e34b5b6c2bcb1edbf3c9e264d1fe6} 
+void prism\+::\+PGC\+::\+Resources\+Creater\+::create\+Color\+Resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}}]{settings}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_resources_creater_aaff73dce2f951521017bf9cfd7e74267}\index{prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}!createDepthResources@{createDepthResources}}
+\index{createDepthResources@{createDepthResources}!prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}}
+\doxysubsubsection{\texorpdfstring{createDepthResources()}{createDepthResources()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_resources_creater_aaff73dce2f951521017bf9cfd7e74267} 
+void prism\+::\+PGC\+::\+Resources\+Creater\+::create\+Depth\+Resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}}]{settings}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_resources_creater_adcf795e7e2f15fd8efa60674a139fe2c}\index{prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}!createFramebuffers@{createFramebuffers}}
+\index{createFramebuffers@{createFramebuffers}!prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}}
+\doxysubsubsection{\texorpdfstring{createFramebuffers()}{createFramebuffers()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_resources_creater_adcf795e7e2f15fd8efa60674a139fe2c} 
+void prism\+::\+PGC\+::\+Resources\+Creater\+::create\+Framebuffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}}]{settings}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_resources_creater_abd176274158468bb98a309f56b21aba8}\index{prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}!createImage@{createImage}}
+\index{createImage@{createImage}!prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}}
+\doxysubsubsection{\texorpdfstring{createImage()}{createImage()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_resources_creater_abd176274158468bb98a309f56b21aba8} 
+void prism\+::\+PGC\+::\+Resources\+Creater\+::create\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{, }\item[{uint32\+\_\+t}]{mip\+Levels}{, }\item[{Vk\+Sample\+Count\+Flag\+Bits}]{num\+Samples}{, }\item[{Vk\+Format}]{format}{, }\item[{Vk\+Image\+Tiling}]{tiling}{, }\item[{Vk\+Image\+Usage\+Flags}]{usage}{, }\item[{Vk\+Memory\+Property\+Flags}]{properties}{, }\item[{Vk\+Image \&}]{image}{, }\item[{Vk\+Device\+Memory \&}]{image\+Memory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_resources_creater_a47be41c0f55c49f83af5f407b310b49a}\index{prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}!createImageView@{createImageView}}
+\index{createImageView@{createImageView}!prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}}
+\doxysubsubsection{\texorpdfstring{createImageView()}{createImageView()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_resources_creater_a47be41c0f55c49f83af5f407b310b49a} 
+Vk\+Image\+View prism\+::\+PGC\+::\+Resources\+Creater\+::create\+Image\+View (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Image}]{image}{, }\item[{Vk\+Format}]{format}{, }\item[{Vk\+Image\+Aspect\+Flags}]{aspect\+Flags}{, }\item[{uint32\+\_\+t}]{mip\+Levels}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_resources_creater_a50d8fcc21c002432511c9f541354fedc}\index{prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}!createTextureSampler@{createTextureSampler}}
+\index{createTextureSampler@{createTextureSampler}!prism::PGC::ResourcesCreater@{prism::PGC::ResourcesCreater}}
+\doxysubsubsection{\texorpdfstring{createTextureSampler()}{createTextureSampler()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_resources_creater_a50d8fcc21c002432511c9f541354fedc} 
+void prism\+::\+PGC\+::\+Resources\+Creater\+::create\+Texture\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{Vk\+Sampler \texorpdfstring{$\ast$}{*}}]{texture\+Sampler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{resources_creater_8h}{resources\+Creater.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{resources_creater_8cpp}{resources\+Creater.\+cpp}}\end{DoxyCompactItemize}

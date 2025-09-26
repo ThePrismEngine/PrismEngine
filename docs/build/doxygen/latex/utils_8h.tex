@@ -1,0 +1,79 @@
+\doxysection{Файл C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/utils.h}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include "{}vulkan/vulkan.\+h"{}}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+{\ttfamily \#include "{}SDL.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}./ubo.\+h"{}}\newline
+{\ttfamily \#include "{}vertex.\+h"{}}\newline
+{\ttfamily \#include "{}texture.\+h"{}}\newline
+{\ttfamily \#include "{}mesh.\+h"{}}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices}{prism\+::\+PGC\+::utils\+::\+Queue\+Family\+Indices}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details}{prism\+::\+PGC\+::utils\+::\+Swap\+Chain\+Support\+Details}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data}{prism\+::\+PGC\+::utils\+::\+Camera\+Data}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{prism\+::\+PGC\+::utils\+::\+Context}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_app_settings}{prism\+::\+PGC\+::utils\+::\+App\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_debug_settings}{prism\+::\+PGC\+::utils\+::\+Debug\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings}{prism\+::\+PGC\+::utils\+::\+Device\+Evaluation\+Weights\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings}{prism\+::\+PGC\+::utils\+::\+Swap\+Chain\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_binding_config}{prism\+::\+PGC\+::utils\+::\+Binding\+Config}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config}{prism\+::\+PGC\+::utils\+::\+Texture\+Binding\+Config}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings}{prism\+::\+PGC\+::utils\+::\+Descriptor\+Set\+Layout\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings}{prism\+::\+PGC\+::utils\+::\+Texture\+Descriptor\+Set\+Layout\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings}{prism\+::\+PGC\+::utils\+::\+Shaders\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings}{prism\+::\+PGC\+::utils\+::\+Rasterization\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings}{prism\+::\+PGC\+::utils\+::\+Multisample\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings}{prism\+::\+PGC\+::utils\+::\+Color\+Blend\+Attachment\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings}{prism\+::\+PGC\+::utils\+::\+Color\+Blend\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings}{prism\+::\+PGC\+::utils\+::\+Dynamic\+State\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings}{prism\+::\+PGC\+::utils\+::\+Depth\+Stencil\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings}{prism\+::\+PGC\+::utils\+::\+Input\+Assembly\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings}{prism\+::\+PGC\+::utils\+::\+Viewport\+State\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings}{prism\+::\+PGC\+::utils\+::\+Pipeline\+Settings}}
+\item 
+struct \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{prism\+::\+PGC\+::utils\+::\+Settings}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Пространства имен}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceprism}{prism}}
+\item 
+namespace \mbox{\hyperlink{namespaceprism_1_1_p_g_c}{prism\+::\+PGC}}
+\item 
+namespace \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils}{prism\+::\+PGC\+::utils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23f}{prism\+::\+PGC\+::utils\+::\+Multisample\+Selection\+Strategy}} \{ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fa23bd02d770fe9f1ea82d40438037cf25}{prism\+::\+PGC\+::utils\+::\+MINIMAL}}
+, \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fa9eea90ec596d66e2a1fd8edd09cd61d9}{prism\+::\+PGC\+::utils\+::\+MIDDLE}}
+, \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fad9ff5583d4cddf516dbd5e1f38b654d1}{prism\+::\+PGC\+::utils\+::\+MAXIMAL}}
+, \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fa28800c8afb35060c17cefe2f645685ad}{prism\+::\+PGC\+::utils\+::\+CUSTOM}}
+ \}
+\end{DoxyCompactItemize}

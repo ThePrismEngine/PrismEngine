@@ -1,0 +1,30 @@
+\doxysection{device\+Wrapper.\+h}
+\hypertarget{device_wrapper_8h_source}{}\label{device_wrapper_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h}}
+\mbox{\hyperlink{device_wrapper_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utils_8h}{utils.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c}{PGC}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper}{DeviceWrapper}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ VkPhysicalDeviceProperties\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a7e777734683993078714a50d4ecf0a6e}{getDeviceProperties}}(VkPhysicalDevice\ device);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_aba678e3d2c055470b13c6c97ea53e973}{getDeviceExtensionProperties}}(VkPhysicalDevice\ device,\ std::vector<VkExtensionProperties>*\ properties);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ VkPhysicalDeviceMemoryProperties\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_af917d5dc002c1e1473bc7401b8e07d0a}{getDeviceMemoryProperties}}(VkPhysicalDevice\ device);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices}{prism::PGC::utils::QueueFamilyIndices}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a88c9489702bce265bee70147ed98fcd2}{findQueueFamilies}}(VkPhysicalDevice\ device,\ VkSurfaceKHR\ surface);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details}{prism::PGC::utils::SwapChainSupportDetails}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_ae57c33d3319be7ebe69a85890c26959d}{querySwapChainSupport}}(VkPhysicalDevice\ device,\ VkSurfaceKHR\ surface);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ VkFormatProperties\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a1d2619db4cf9fff8f2bc31bc50faa072}{getDeviceFormatProperties}}(VkPhysicalDevice\ device,\ VkFormat\ format);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ VkFormat\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a2dca5c9dabfc59451df88f96685ce185}{findDepthFormat}}(VkPhysicalDevice\ physicalDevice);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a63c317f0927d63bd97bb1f94a4e6768c}{findMemoryType}}(VkPhysicalDevice\ device,\ uint32\_t\ typeFilter,\ VkMemoryPropertyFlags\ properties);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ VkFormat\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_ad25c1eaf42cd86e9c678b4da83ca87bb}{findSupportedFormat}}(VkPhysicalDevice\ physicalDevice,\ \textcolor{keyword}{const}\ std::vector<VkFormat>\&\ candidates,\ VkImageTiling\ tiling,\ VkFormatFeatureFlags\ features);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}

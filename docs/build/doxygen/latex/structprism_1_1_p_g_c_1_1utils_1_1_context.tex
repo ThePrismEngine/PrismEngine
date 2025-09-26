@@ -1,0 +1,474 @@
+\doxysection{Структура prism\+::PGC\+::utils\+::Context}
+\hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context}{}\label{structprism_1_1_p_g_c_1_1utils_1_1_context}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+
+
+{\ttfamily \#include $<$utils.\+h$>$}
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Instance \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ac9500f33456f5f1a9971b5563729eaf6}{instance}}
+\item 
+Vk\+Surface\+KHR \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a6e5cc346c3461cbf311815952d38ca83}{surface}}
+\item 
+Vk\+Physical\+Device \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a759203e6822e3ad8a46b29672ef7b19c}{physical\+Device}} = VK\+\_\+\+NULL\+\_\+\+HANDLE
+\item 
+Vk\+Device \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a1044c94f8ccd00b268cd85af72fd11b3}{device}}
+\item 
+Vk\+Queue \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aaf2e5bd3583d87df7d204569157d98cc}{graphics\+Queue}}
+\item 
+Vk\+Queue \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_abad3bde0d4cfc986aa57e410b9f8b7a1}{present\+Queue}}
+\item 
+Vk\+Swapchain\+KHR \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a191f1aaea47b9147fb93301ac11c8f52}{vk\+Swap\+Chain}}
+\item 
+std\+::vector$<$ Vk\+Image\+View $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a61c2506389c5cd06807885a98458e46c}{swap\+Chain\+Image\+Views}}
+\item 
+std\+::vector$<$ Vk\+Framebuffer $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a663b57954f0090efddcdf3aeb2837861}{swap\+Chain\+Framebuffers}}
+\item 
+std\+::vector$<$ Vk\+Image $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a2a15bac8577d170c400b7c32ffdd842d}{swap\+Chain\+Images}}
+\item 
+Vk\+Format \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_afdac47e49cd0ae38d95a93c33cf7ecd2}{swap\+Chain\+Image\+Format}}
+\item 
+Vk\+Extent2D \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a2cfd6b1fa14df88a820c0c4ebd996aaf}{swap\+Chain\+Extent}}
+\item 
+Vk\+Image \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a8d1b459631b7e17b99a2891ab8f37311}{depth\+Image}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a92659cf24ec4ece474f873cb57aa6015}{depth\+Image\+Memory}}
+\item 
+Vk\+Image\+View \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_acef6ba561ba15d0e67809c65068e31b4}{depth\+Image\+View}}
+\item 
+Vk\+Image \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a0a7c084aa2c8a0ce8ac930d8e927857b}{color\+Image}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a733a1313e3fb135660fb1c4b4e18b1e7}{color\+Image\+Memory}}
+\item 
+Vk\+Image\+View \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a94142c5e6869a4e66cc07073d9eead4c}{color\+Image\+View}}
+\item 
+Vk\+Sample\+Count\+Flag\+Bits \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a26c289ae13be8830714d93d3b934ea75}{msaa\+Samples}} = VK\+\_\+\+SAMPLE\+\_\+\+COUNT\+\_\+1\+\_\+\+BIT
+\item 
+Vk\+Render\+Pass \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a58e40fd8040df70886377c59224adb8e}{render\+Pass}}
+\item 
+Vk\+Buffer \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_afd2091a730d8d5f697f75ab96371f9a3}{vertex\+Buffer}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ae9486dffb20bfc761f06ee3e4fe06860}{vertex\+Buffer\+Memory}}
+\item 
+Vk\+Buffer \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_afdd17d23c2221d734bb42e41b3b1de3f}{index\+Buffer}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a53783cccbeaa4774e8f779f00fcd77ee}{index\+Buffer\+Memory}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex}{Vertex}} $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ab6fb5ba2cb7bfe2dee1a0eb01d31ce34}{all\+Vertices}}
+\item 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a7c3c5b7c6f198e9d2eaf48f9bc0b0fdb}{all\+Indices}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_mesh}{prism\+::\+PGC\+::\+Mesh}} $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9142edd2bb4a82ff2b348eac78ab8a8c}{meshes}}
+\item 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_af8e9a687b9a3f5879012a8a0cfa152cf}{free\+Mesh\+Indices}}
+\item 
+bool \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ab33d085a44ff7655f167296bdcf38d58}{mesh\+Buffers\+Dirty}} = false
+\item 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a2be303f40e36da97bc49dc434567820b}{descriptor\+Set\+Layout}}
+\item 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_abd8be7f7b8e01fb62e0900fa0dfc37d5}{pipeline\+Layout}}
+\item 
+Vk\+Pipeline \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a420655923bdbf77125c266a039b5b99b}{graphics\+Pipeline}}
+\item 
+Vk\+Command\+Pool \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a36dc055df91a851fb1dd07e7a6027050}{command\+Pool}}
+\item 
+std\+::vector$<$ Vk\+Command\+Buffer $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a135a182e81a4b833d985372444d4ef2a}{command\+Buffers}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers}{Uniform\+Buffers}} $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a8151c42953061a2010f5b93450c96dc7}{uniform\+Buffers}}
+\item 
+std\+::vector$<$ Vk\+Semaphore $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a65e5acfeb5a3d263007587b61148e82d}{image\+Available\+Semaphores}}
+\item 
+std\+::vector$<$ Vk\+Semaphore $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a0c0a94f856fe6f802eb3229d9170a6fe}{render\+Finished\+Semaphores}}
+\item 
+std\+::vector$<$ Vk\+Fence $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aeff088aa1c0c75e5b9a38645c10a2911}{in\+Flight\+Fences}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ab55fc602f6216a6486a333cdc59139f9}{current\+Frame}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aa193b6790ed1658ad001a280b8c043a4}{image\+Index}}
+\item 
+bool \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aefdb78e08e5847b3d311b923255a5de7}{was\+Rendering\+Active}} = true
+\item 
+Vk\+Descriptor\+Pool \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a18e42b896ee57c92b97a1ab5a3844054}{descriptor\+Pool}}
+\item 
+Vk\+Descriptor\+Pool \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_abbf627893291ec495b05a3150cc1f9ba}{texture\+Descriptor\+Pool}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a0bc0d8cc76d5fa2ca079b6cc03aa82d3}{textures}}
+\item 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a07aeb09f7483de2bc2d9f3fe99830a66}{free\+Texture\+Indices}}
+\item 
+Vk\+Descriptor\+Set \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ae43eb6e117b69646acf9db16e2ac72ce}{texture\+Descriptor\+Set}} = VK\+\_\+\+NULL\+\_\+\+HANDLE
+\item 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a8f459a9f17d6faf584e25a851885221a}{texture\+Descriptor\+Set\+Layout}} = VK\+\_\+\+NULL\+\_\+\+HANDLE
+\item 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data}{Camera\+Data}} \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9b6351ddb73b77efe20d3264c5207e6f}{camera\+Data}}
+\item 
+std\+::vector$<$ Vk\+Descriptor\+Set $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a26b3de428ebddb65d93918e911c037f1}{descriptor\+Sets}}
+\item 
+const int \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9eca9f1f2ce41389b90c17a2477df558}{MAX\+\_\+\+FRAMES\+\_\+\+IN\+\_\+\+FLIGHT}} = 2
+\item 
+const std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aad40d80a4e22067cd51a9a1fa0128f66}{validation\+Layers}}
+\item 
+const std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a2839741dfe5060bef37fb694c51f4c72}{device\+Extensions}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a689375014bda6088bc48fc64077ecaa6}{dynamic\+Alignment}} =0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a3aa659de42727b676c161ea31623bde3}{MAX\+\_\+\+OBJECTS}} =500
+\item 
+bool \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9176cc478987deb4fcc7ef8c26d768cf}{enable\+Validation\+Layers}} = true
+\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a7c3c5b7c6f198e9d2eaf48f9bc0b0fdb}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!allIndices@{allIndices}}
+\index{allIndices@{allIndices}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{allIndices}{allIndices}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a7c3c5b7c6f198e9d2eaf48f9bc0b0fdb} 
+std\+::vector$<$uint32\+\_\+t$>$ prism\+::\+PGC\+::utils\+::\+Context\+::all\+Indices}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_ab6fb5ba2cb7bfe2dee1a0eb01d31ce34}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!allVertices@{allVertices}}
+\index{allVertices@{allVertices}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{allVertices}{allVertices}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_ab6fb5ba2cb7bfe2dee1a0eb01d31ce34} 
+std\+::vector$<$\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex}{Vertex}}$>$ prism\+::\+PGC\+::utils\+::\+Context\+::all\+Vertices}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a9b6351ddb73b77efe20d3264c5207e6f}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!cameraData@{cameraData}}
+\index{cameraData@{cameraData}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{cameraData}{cameraData}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a9b6351ddb73b77efe20d3264c5207e6f} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data}{Camera\+Data}} prism\+::\+PGC\+::utils\+::\+Context\+::camera\+Data}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a0a7c084aa2c8a0ce8ac930d8e927857b}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!colorImage@{colorImage}}
+\index{colorImage@{colorImage}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{colorImage}{colorImage}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a0a7c084aa2c8a0ce8ac930d8e927857b} 
+Vk\+Image prism\+::\+PGC\+::utils\+::\+Context\+::color\+Image}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a733a1313e3fb135660fb1c4b4e18b1e7}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!colorImageMemory@{colorImageMemory}}
+\index{colorImageMemory@{colorImageMemory}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{colorImageMemory}{colorImageMemory}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a733a1313e3fb135660fb1c4b4e18b1e7} 
+Vk\+Device\+Memory prism\+::\+PGC\+::utils\+::\+Context\+::color\+Image\+Memory}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a94142c5e6869a4e66cc07073d9eead4c}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!colorImageView@{colorImageView}}
+\index{colorImageView@{colorImageView}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{colorImageView}{colorImageView}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a94142c5e6869a4e66cc07073d9eead4c} 
+Vk\+Image\+View prism\+::\+PGC\+::utils\+::\+Context\+::color\+Image\+View}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a135a182e81a4b833d985372444d4ef2a}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!commandBuffers@{commandBuffers}}
+\index{commandBuffers@{commandBuffers}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{commandBuffers}{commandBuffers}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a135a182e81a4b833d985372444d4ef2a} 
+std\+::vector$<$Vk\+Command\+Buffer$>$ prism\+::\+PGC\+::utils\+::\+Context\+::command\+Buffers}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a36dc055df91a851fb1dd07e7a6027050}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!commandPool@{commandPool}}
+\index{commandPool@{commandPool}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{commandPool}{commandPool}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a36dc055df91a851fb1dd07e7a6027050} 
+Vk\+Command\+Pool prism\+::\+PGC\+::utils\+::\+Context\+::command\+Pool}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_ab55fc602f6216a6486a333cdc59139f9}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!currentFrame@{currentFrame}}
+\index{currentFrame@{currentFrame}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{currentFrame}{currentFrame}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_ab55fc602f6216a6486a333cdc59139f9} 
+uint32\+\_\+t prism\+::\+PGC\+::utils\+::\+Context\+::current\+Frame = 0}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a8d1b459631b7e17b99a2891ab8f37311}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!depthImage@{depthImage}}
+\index{depthImage@{depthImage}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{depthImage}{depthImage}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a8d1b459631b7e17b99a2891ab8f37311} 
+Vk\+Image prism\+::\+PGC\+::utils\+::\+Context\+::depth\+Image}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a92659cf24ec4ece474f873cb57aa6015}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!depthImageMemory@{depthImageMemory}}
+\index{depthImageMemory@{depthImageMemory}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{depthImageMemory}{depthImageMemory}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a92659cf24ec4ece474f873cb57aa6015} 
+Vk\+Device\+Memory prism\+::\+PGC\+::utils\+::\+Context\+::depth\+Image\+Memory}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_acef6ba561ba15d0e67809c65068e31b4}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!depthImageView@{depthImageView}}
+\index{depthImageView@{depthImageView}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{depthImageView}{depthImageView}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_acef6ba561ba15d0e67809c65068e31b4} 
+Vk\+Image\+View prism\+::\+PGC\+::utils\+::\+Context\+::depth\+Image\+View}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a18e42b896ee57c92b97a1ab5a3844054}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!descriptorPool@{descriptorPool}}
+\index{descriptorPool@{descriptorPool}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{descriptorPool}{descriptorPool}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a18e42b896ee57c92b97a1ab5a3844054} 
+Vk\+Descriptor\+Pool prism\+::\+PGC\+::utils\+::\+Context\+::descriptor\+Pool}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a2be303f40e36da97bc49dc434567820b}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!descriptorSetLayout@{descriptorSetLayout}}
+\index{descriptorSetLayout@{descriptorSetLayout}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{descriptorSetLayout}{descriptorSetLayout}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a2be303f40e36da97bc49dc434567820b} 
+Vk\+Descriptor\+Set\+Layout prism\+::\+PGC\+::utils\+::\+Context\+::descriptor\+Set\+Layout}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a26b3de428ebddb65d93918e911c037f1}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!descriptorSets@{descriptorSets}}
+\index{descriptorSets@{descriptorSets}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{descriptorSets}{descriptorSets}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a26b3de428ebddb65d93918e911c037f1} 
+std\+::vector$<$Vk\+Descriptor\+Set$>$ prism\+::\+PGC\+::utils\+::\+Context\+::descriptor\+Sets}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a1044c94f8ccd00b268cd85af72fd11b3}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!device@{device}}
+\index{device@{device}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a1044c94f8ccd00b268cd85af72fd11b3} 
+Vk\+Device prism\+::\+PGC\+::utils\+::\+Context\+::device}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a2839741dfe5060bef37fb694c51f4c72}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!deviceExtensions@{deviceExtensions}}
+\index{deviceExtensions@{deviceExtensions}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{deviceExtensions}{deviceExtensions}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a2839741dfe5060bef37fb694c51f4c72} 
+const std\+::vector$<$const char\texorpdfstring{$\ast$}{*}$>$ prism\+::\+PGC\+::utils\+::\+Context\+::device\+Extensions}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_KHR\_SWAPCHAIN\_EXTENSION\_NAME,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_EXT\_DESCRIPTOR\_INDEXING\_EXTENSION\_NAME}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a689375014bda6088bc48fc64077ecaa6}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!dynamicAlignment@{dynamicAlignment}}
+\index{dynamicAlignment@{dynamicAlignment}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{dynamicAlignment}{dynamicAlignment}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a689375014bda6088bc48fc64077ecaa6} 
+size\+\_\+t prism\+::\+PGC\+::utils\+::\+Context\+::dynamic\+Alignment =0}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a9176cc478987deb4fcc7ef8c26d768cf}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!enableValidationLayers@{enableValidationLayers}}
+\index{enableValidationLayers@{enableValidationLayers}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{enableValidationLayers}{enableValidationLayers}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a9176cc478987deb4fcc7ef8c26d768cf} 
+bool prism\+::\+PGC\+::utils\+::\+Context\+::enable\+Validation\+Layers = true}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_af8e9a687b9a3f5879012a8a0cfa152cf}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!freeMeshIndices@{freeMeshIndices}}
+\index{freeMeshIndices@{freeMeshIndices}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{freeMeshIndices}{freeMeshIndices}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_af8e9a687b9a3f5879012a8a0cfa152cf} 
+std\+::vector$<$uint32\+\_\+t$>$ prism\+::\+PGC\+::utils\+::\+Context\+::free\+Mesh\+Indices}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a07aeb09f7483de2bc2d9f3fe99830a66}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!freeTextureIndices@{freeTextureIndices}}
+\index{freeTextureIndices@{freeTextureIndices}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{freeTextureIndices}{freeTextureIndices}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a07aeb09f7483de2bc2d9f3fe99830a66} 
+std\+::vector$<$uint32\+\_\+t$>$ prism\+::\+PGC\+::utils\+::\+Context\+::free\+Texture\+Indices}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a420655923bdbf77125c266a039b5b99b}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!graphicsPipeline@{graphicsPipeline}}
+\index{graphicsPipeline@{graphicsPipeline}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{graphicsPipeline}{graphicsPipeline}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a420655923bdbf77125c266a039b5b99b} 
+Vk\+Pipeline prism\+::\+PGC\+::utils\+::\+Context\+::graphics\+Pipeline}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_aaf2e5bd3583d87df7d204569157d98cc}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!graphicsQueue@{graphicsQueue}}
+\index{graphicsQueue@{graphicsQueue}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{graphicsQueue}{graphicsQueue}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_aaf2e5bd3583d87df7d204569157d98cc} 
+Vk\+Queue prism\+::\+PGC\+::utils\+::\+Context\+::graphics\+Queue}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a65e5acfeb5a3d263007587b61148e82d}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!imageAvailableSemaphores@{imageAvailableSemaphores}}
+\index{imageAvailableSemaphores@{imageAvailableSemaphores}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{imageAvailableSemaphores}{imageAvailableSemaphores}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a65e5acfeb5a3d263007587b61148e82d} 
+std\+::vector$<$Vk\+Semaphore$>$ prism\+::\+PGC\+::utils\+::\+Context\+::image\+Available\+Semaphores}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_aa193b6790ed1658ad001a280b8c043a4}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!imageIndex@{imageIndex}}
+\index{imageIndex@{imageIndex}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{imageIndex}{imageIndex}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_aa193b6790ed1658ad001a280b8c043a4} 
+uint32\+\_\+t prism\+::\+PGC\+::utils\+::\+Context\+::image\+Index}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_afdd17d23c2221d734bb42e41b3b1de3f}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!indexBuffer@{indexBuffer}}
+\index{indexBuffer@{indexBuffer}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{indexBuffer}{indexBuffer}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_afdd17d23c2221d734bb42e41b3b1de3f} 
+Vk\+Buffer prism\+::\+PGC\+::utils\+::\+Context\+::index\+Buffer}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a53783cccbeaa4774e8f779f00fcd77ee}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!indexBufferMemory@{indexBufferMemory}}
+\index{indexBufferMemory@{indexBufferMemory}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{indexBufferMemory}{indexBufferMemory}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a53783cccbeaa4774e8f779f00fcd77ee} 
+Vk\+Device\+Memory prism\+::\+PGC\+::utils\+::\+Context\+::index\+Buffer\+Memory}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_aeff088aa1c0c75e5b9a38645c10a2911}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!inFlightFences@{inFlightFences}}
+\index{inFlightFences@{inFlightFences}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{inFlightFences}{inFlightFences}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_aeff088aa1c0c75e5b9a38645c10a2911} 
+std\+::vector$<$Vk\+Fence$>$ prism\+::\+PGC\+::utils\+::\+Context\+::in\+Flight\+Fences}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_ac9500f33456f5f1a9971b5563729eaf6}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!instance@{instance}}
+\index{instance@{instance}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_ac9500f33456f5f1a9971b5563729eaf6} 
+Vk\+Instance prism\+::\+PGC\+::utils\+::\+Context\+::instance}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a9eca9f1f2ce41389b90c17a2477df558}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!MAX\_FRAMES\_IN\_FLIGHT@{MAX\_FRAMES\_IN\_FLIGHT}}
+\index{MAX\_FRAMES\_IN\_FLIGHT@{MAX\_FRAMES\_IN\_FLIGHT}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{MAX\_FRAMES\_IN\_FLIGHT}{MAX\_FRAMES\_IN\_FLIGHT}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a9eca9f1f2ce41389b90c17a2477df558} 
+const int prism\+::\+PGC\+::utils\+::\+Context\+::\+MAX\+\_\+\+FRAMES\+\_\+\+IN\+\_\+\+FLIGHT = 2}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a3aa659de42727b676c161ea31623bde3}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!MAX\_OBJECTS@{MAX\_OBJECTS}}
+\index{MAX\_OBJECTS@{MAX\_OBJECTS}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{MAX\_OBJECTS}{MAX\_OBJECTS}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a3aa659de42727b676c161ea31623bde3} 
+uint32\+\_\+t prism\+::\+PGC\+::utils\+::\+Context\+::\+MAX\+\_\+\+OBJECTS =500}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_ab33d085a44ff7655f167296bdcf38d58}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!meshBuffersDirty@{meshBuffersDirty}}
+\index{meshBuffersDirty@{meshBuffersDirty}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{meshBuffersDirty}{meshBuffersDirty}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_ab33d085a44ff7655f167296bdcf38d58} 
+bool prism\+::\+PGC\+::utils\+::\+Context\+::mesh\+Buffers\+Dirty = false}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a9142edd2bb4a82ff2b348eac78ab8a8c}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!meshes@{meshes}}
+\index{meshes@{meshes}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{meshes}{meshes}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a9142edd2bb4a82ff2b348eac78ab8a8c} 
+std\+::vector$<$\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_mesh}{prism\+::\+PGC\+::\+Mesh}}$>$ prism\+::\+PGC\+::utils\+::\+Context\+::meshes}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a26c289ae13be8830714d93d3b934ea75}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!msaaSamples@{msaaSamples}}
+\index{msaaSamples@{msaaSamples}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{msaaSamples}{msaaSamples}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a26c289ae13be8830714d93d3b934ea75} 
+Vk\+Sample\+Count\+Flag\+Bits prism\+::\+PGC\+::utils\+::\+Context\+::msaa\+Samples = VK\+\_\+\+SAMPLE\+\_\+\+COUNT\+\_\+1\+\_\+\+BIT}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a759203e6822e3ad8a46b29672ef7b19c}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!physicalDevice@{physicalDevice}}
+\index{physicalDevice@{physicalDevice}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{physicalDevice}{physicalDevice}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a759203e6822e3ad8a46b29672ef7b19c} 
+Vk\+Physical\+Device prism\+::\+PGC\+::utils\+::\+Context\+::physical\+Device = VK\+\_\+\+NULL\+\_\+\+HANDLE}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_abd8be7f7b8e01fb62e0900fa0dfc37d5}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!pipelineLayout@{pipelineLayout}}
+\index{pipelineLayout@{pipelineLayout}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{pipelineLayout}{pipelineLayout}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_abd8be7f7b8e01fb62e0900fa0dfc37d5} 
+Vk\+Pipeline\+Layout prism\+::\+PGC\+::utils\+::\+Context\+::pipeline\+Layout}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_abad3bde0d4cfc986aa57e410b9f8b7a1}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!presentQueue@{presentQueue}}
+\index{presentQueue@{presentQueue}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{presentQueue}{presentQueue}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_abad3bde0d4cfc986aa57e410b9f8b7a1} 
+Vk\+Queue prism\+::\+PGC\+::utils\+::\+Context\+::present\+Queue}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a0c0a94f856fe6f802eb3229d9170a6fe}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!renderFinishedSemaphores@{renderFinishedSemaphores}}
+\index{renderFinishedSemaphores@{renderFinishedSemaphores}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{renderFinishedSemaphores}{renderFinishedSemaphores}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a0c0a94f856fe6f802eb3229d9170a6fe} 
+std\+::vector$<$Vk\+Semaphore$>$ prism\+::\+PGC\+::utils\+::\+Context\+::render\+Finished\+Semaphores}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a58e40fd8040df70886377c59224adb8e}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!renderPass@{renderPass}}
+\index{renderPass@{renderPass}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{renderPass}{renderPass}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a58e40fd8040df70886377c59224adb8e} 
+Vk\+Render\+Pass prism\+::\+PGC\+::utils\+::\+Context\+::render\+Pass}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a6e5cc346c3461cbf311815952d38ca83}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!surface@{surface}}
+\index{surface@{surface}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{surface}{surface}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a6e5cc346c3461cbf311815952d38ca83} 
+Vk\+Surface\+KHR prism\+::\+PGC\+::utils\+::\+Context\+::surface}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a2cfd6b1fa14df88a820c0c4ebd996aaf}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!swapChainExtent@{swapChainExtent}}
+\index{swapChainExtent@{swapChainExtent}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{swapChainExtent}{swapChainExtent}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a2cfd6b1fa14df88a820c0c4ebd996aaf} 
+Vk\+Extent2D prism\+::\+PGC\+::utils\+::\+Context\+::swap\+Chain\+Extent}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a663b57954f0090efddcdf3aeb2837861}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!swapChainFramebuffers@{swapChainFramebuffers}}
+\index{swapChainFramebuffers@{swapChainFramebuffers}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{swapChainFramebuffers}{swapChainFramebuffers}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a663b57954f0090efddcdf3aeb2837861} 
+std\+::vector$<$Vk\+Framebuffer$>$ prism\+::\+PGC\+::utils\+::\+Context\+::swap\+Chain\+Framebuffers}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_afdac47e49cd0ae38d95a93c33cf7ecd2}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!swapChainImageFormat@{swapChainImageFormat}}
+\index{swapChainImageFormat@{swapChainImageFormat}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{swapChainImageFormat}{swapChainImageFormat}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_afdac47e49cd0ae38d95a93c33cf7ecd2} 
+Vk\+Format prism\+::\+PGC\+::utils\+::\+Context\+::swap\+Chain\+Image\+Format}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a2a15bac8577d170c400b7c32ffdd842d}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!swapChainImages@{swapChainImages}}
+\index{swapChainImages@{swapChainImages}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{swapChainImages}{swapChainImages}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a2a15bac8577d170c400b7c32ffdd842d} 
+std\+::vector$<$Vk\+Image$>$ prism\+::\+PGC\+::utils\+::\+Context\+::swap\+Chain\+Images}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a61c2506389c5cd06807885a98458e46c}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!swapChainImageViews@{swapChainImageViews}}
+\index{swapChainImageViews@{swapChainImageViews}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{swapChainImageViews}{swapChainImageViews}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a61c2506389c5cd06807885a98458e46c} 
+std\+::vector$<$Vk\+Image\+View$>$ prism\+::\+PGC\+::utils\+::\+Context\+::swap\+Chain\+Image\+Views}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_abbf627893291ec495b05a3150cc1f9ba}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!textureDescriptorPool@{textureDescriptorPool}}
+\index{textureDescriptorPool@{textureDescriptorPool}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{textureDescriptorPool}{textureDescriptorPool}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_abbf627893291ec495b05a3150cc1f9ba} 
+Vk\+Descriptor\+Pool prism\+::\+PGC\+::utils\+::\+Context\+::texture\+Descriptor\+Pool}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_ae43eb6e117b69646acf9db16e2ac72ce}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!textureDescriptorSet@{textureDescriptorSet}}
+\index{textureDescriptorSet@{textureDescriptorSet}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{textureDescriptorSet}{textureDescriptorSet}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_ae43eb6e117b69646acf9db16e2ac72ce} 
+Vk\+Descriptor\+Set prism\+::\+PGC\+::utils\+::\+Context\+::texture\+Descriptor\+Set = VK\+\_\+\+NULL\+\_\+\+HANDLE}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a8f459a9f17d6faf584e25a851885221a}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!textureDescriptorSetLayout@{textureDescriptorSetLayout}}
+\index{textureDescriptorSetLayout@{textureDescriptorSetLayout}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{textureDescriptorSetLayout}{textureDescriptorSetLayout}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a8f459a9f17d6faf584e25a851885221a} 
+Vk\+Descriptor\+Set\+Layout prism\+::\+PGC\+::utils\+::\+Context\+::texture\+Descriptor\+Set\+Layout = VK\+\_\+\+NULL\+\_\+\+HANDLE}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a0bc0d8cc76d5fa2ca079b6cc03aa82d3}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!textures@{textures}}
+\index{textures@{textures}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{textures}{textures}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a0bc0d8cc76d5fa2ca079b6cc03aa82d3} 
+std\+::vector$<$\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}}$>$ prism\+::\+PGC\+::utils\+::\+Context\+::textures}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a8151c42953061a2010f5b93450c96dc7}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!uniformBuffers@{uniformBuffers}}
+\index{uniformBuffers@{uniformBuffers}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{uniformBuffers}{uniformBuffers}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a8151c42953061a2010f5b93450c96dc7} 
+std\+::vector$<$\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers}{Uniform\+Buffers}}$>$ prism\+::\+PGC\+::utils\+::\+Context\+::uniform\+Buffers}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_aad40d80a4e22067cd51a9a1fa0128f66}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!validationLayers@{validationLayers}}
+\index{validationLayers@{validationLayers}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{validationLayers}{validationLayers}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_aad40d80a4e22067cd51a9a1fa0128f66} 
+const std\+::vector$<$const char\texorpdfstring{$\ast$}{*}$>$ prism\+::\+PGC\+::utils\+::\+Context\+::validation\+Layers}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}VK\_LAYER\_KHRONOS\_validation"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_afd2091a730d8d5f697f75ab96371f9a3}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!vertexBuffer@{vertexBuffer}}
+\index{vertexBuffer@{vertexBuffer}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{vertexBuffer}{vertexBuffer}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_afd2091a730d8d5f697f75ab96371f9a3} 
+Vk\+Buffer prism\+::\+PGC\+::utils\+::\+Context\+::vertex\+Buffer}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_ae9486dffb20bfc761f06ee3e4fe06860}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!vertexBufferMemory@{vertexBufferMemory}}
+\index{vertexBufferMemory@{vertexBufferMemory}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{vertexBufferMemory}{vertexBufferMemory}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_ae9486dffb20bfc761f06ee3e4fe06860} 
+Vk\+Device\+Memory prism\+::\+PGC\+::utils\+::\+Context\+::vertex\+Buffer\+Memory}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_a191f1aaea47b9147fb93301ac11c8f52}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!vkSwapChain@{vkSwapChain}}
+\index{vkSwapChain@{vkSwapChain}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{vkSwapChain}{vkSwapChain}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_a191f1aaea47b9147fb93301ac11c8f52} 
+Vk\+Swapchain\+KHR prism\+::\+PGC\+::utils\+::\+Context\+::vk\+Swap\+Chain}
+
+\Hypertarget{structprism_1_1_p_g_c_1_1utils_1_1_context_aefdb78e08e5847b3d311b923255a5de7}\index{prism::PGC::utils::Context@{prism::PGC::utils::Context}!wasRenderingActive@{wasRenderingActive}}
+\index{wasRenderingActive@{wasRenderingActive}!prism::PGC::utils::Context@{prism::PGC::utils::Context}}
+\doxysubsubsection{\texorpdfstring{wasRenderingActive}{wasRenderingActive}}
+{\footnotesize\ttfamily \label{structprism_1_1_p_g_c_1_1utils_1_1_context_aefdb78e08e5847b3d311b923255a5de7} 
+bool prism\+::\+PGC\+::utils\+::\+Context\+::was\+Rendering\+Active = true}
+
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{utils_8h}{utils.\+h}}\end{DoxyCompactItemize}

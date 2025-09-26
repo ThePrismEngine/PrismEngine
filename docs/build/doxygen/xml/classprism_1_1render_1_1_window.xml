@@ -1,0 +1,919 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1render_1_1_window" kind="class" language="C++" prot="public">
+    <compoundname>prism::render::Window</compoundname>
+    <includes refid="_window_8h" local="no">Window.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classprism_1_1render_1_1_window_1a80114ce20353fd9404814dba2fb343bc" prot="public" static="no" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* prism::render::Window::sdlWindow</definition>
+        <argsstring></argsstring>
+        <name>sdlWindow</name>
+        <qualifiedname>prism::render::Window::sdlWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="81" column="24" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1render_1_1_window_1a41165d8c62416df762c8d032abce8c42" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::render::Window::windowResized</definition>
+        <argsstring></argsstring>
+        <name>windowResized</name>
+        <qualifiedname>prism::render::Window::windowResized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="84" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1render_1_1_window_1ad3b0fdd480cc17c7d628bd32f1a2a24c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::render::Window::windowMinimized</definition>
+        <argsstring></argsstring>
+        <name>windowMinimized</name>
+        <qualifiedname>prism::render::Window::windowMinimized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="85" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classprism_1_1render_1_1_window_1a5d62e642468dde7e2ea4d25618ce5b85" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::render::Window::s_sdlInitialized</definition>
+        <argsstring></argsstring>
+        <name>s_sdlInitialized</name>
+        <qualifiedname>prism::render::Window::s_sdlInitialized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="88" column="25" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1render_1_1_window_1af723b1149e1bb2a1cae99bd22466edec" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::render::Window::m_isDestroyed</definition>
+        <argsstring></argsstring>
+        <name>m_isDestroyed</name>
+        <qualifiedname>prism::render::Window::m_isDestroyed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="89" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ad2586f1bbadf4e7fed2e63f6164f96cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::Window</definition>
+        <argsstring>(Window &amp;&amp;)=delete</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::render::Window::Window</qualifiedname>
+        <param>
+          <type><ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="21" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ac8d189427c5ab1b7f7d5a8e6a17c9036" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref> &amp;</type>
+        <definition>Window &amp; prism::render::Window::operator=</definition>
+        <argsstring>(Window &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>prism::render::Window::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="22" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a502990af2c873d6b9dffb2855e55989d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::Window</definition>
+        <argsstring>(const Window &amp;)=delete</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::render::Window::Window</qualifiedname>
+        <param>
+          <type>const <ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="23" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a3df97713b0e4a4aae89f407b7d7976b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref> &amp;</type>
+        <definition>Window &amp; prism::render::Window::operator=</definition>
+        <argsstring>(const Window &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>prism::render::Window::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="24" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a1bfa6743f1cb3ccc2b40d4f2d4d0ec86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::Window</definition>
+        <argsstring>(const char *title, int width, int height)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::render::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="27" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ab348789841debcf3dd69842d1b84f0d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::Window</definition>
+        <argsstring>(const char *title, int width, int height, Uint32 sdlFlags)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::render::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>Uint32</type>
+          <declname>sdlFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="28" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a08a26de82ddbb6dc3ab9e22ffb80e430" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::Window</definition>
+        <argsstring>(const char *title, int x, int y, int width, int height)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::render::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="29" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ac2240db34a7815715b06612b6176a930" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::Window</definition>
+        <argsstring>(const char *title, int width, int height, const std::string &amp;iconPath)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::render::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>iconPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="30" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a04801b7ccc6b21d2f30f9fd522fb4984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::Window</definition>
+        <argsstring>(const char *title, int width, int height, int minWidth, int minHeight, int maxWidth, int maxHeight)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::render::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minHeight</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="34" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1acd645c0704f49907ec4f8a35d22ad300" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::~Window</definition>
+        <argsstring>()</argsstring>
+        <name>~Window</name>
+        <qualifiedname>prism::render::Window::~Window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="38" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a661ca497c04a9cb449ab2fe9fbed3a1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * prism::render::Window::getTitle</definition>
+        <argsstring>() const</argsstring>
+        <name>getTitle</name>
+        <qualifiedname>prism::render::Window::getTitle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="41" column="24" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1acdd4f7425fb12df92ca18ff9db181e12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setTitle</definition>
+        <argsstring>(const char *title)</argsstring>
+        <name>setTitle</name>
+        <qualifiedname>prism::render::Window::setTitle</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="42" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ae5bf309d8ccd12ef502310d2309df22a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int prism::render::Window::getWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getWidth</name>
+        <qualifiedname>prism::render::Window::getWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="43" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ad0be25effa227b7c8863f74eb9c345ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int prism::render::Window::getHeight</definition>
+        <argsstring>()</argsstring>
+        <name>getHeight</name>
+        <qualifiedname>prism::render::Window::getHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="44" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1acad9cf0884d13bb996d161fb741a27cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::getSize</definition>
+        <argsstring>(int *width, int *height)</argsstring>
+        <name>getSize</name>
+        <qualifiedname>prism::render::Window::getSize</qualifiedname>
+        <param>
+          <type>int *</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="45" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1aefafd2342185404f0a3cfc68a47091dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>setWidth</name>
+        <qualifiedname>prism::render::Window::setWidth</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="46" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a73775ef15335e2924e7538e72c499d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setHeight</definition>
+        <argsstring>(int height)</argsstring>
+        <name>setHeight</name>
+        <qualifiedname>prism::render::Window::setHeight</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="47" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a00badb3a468b50736e8f2a94076fad64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setSize</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>setSize</name>
+        <qualifiedname>prism::render::Window::setSize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="48" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1aa9777031fdbe6e2d7decd15d306c5195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setFullscreen</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setFullscreen</name>
+        <qualifiedname>prism::render::Window::setFullscreen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="51" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a1bcc059d6c6728ae0f21e49f277a6856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setBorderless</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setBorderless</name>
+        <qualifiedname>prism::render::Window::setBorderless</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="52" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1afc4b812de25c228decae998c74b72ac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setResizable</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setResizable</name>
+        <qualifiedname>prism::render::Window::setResizable</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="53" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a71bfd120a906b926bcfc2e9df6b27ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setGrabMouse</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setGrabMouse</name>
+        <qualifiedname>prism::render::Window::setGrabMouse</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="54" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1adfc25e1606ec45bc5333cd4cf5b99efe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::render::Window::isFullscreen</definition>
+        <argsstring>() const</argsstring>
+        <name>isFullscreen</name>
+        <qualifiedname>prism::render::Window::isFullscreen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="55" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1aae96df68ff41a0346769969692e0b123" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::render::Window::isBorderless</definition>
+        <argsstring>() const</argsstring>
+        <name>isBorderless</name>
+        <qualifiedname>prism::render::Window::isBorderless</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="56" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a91ee4de644156c2b6c79252eea7431fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::render::Window::isResizable</definition>
+        <argsstring>() const</argsstring>
+        <name>isResizable</name>
+        <qualifiedname>prism::render::Window::isResizable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="57" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1aef916de46513d7c1837dad64c969bbf7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::render::Window::isGrabMouse</definition>
+        <argsstring>() const</argsstring>
+        <name>isGrabMouse</name>
+        <qualifiedname>prism::render::Window::isGrabMouse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="58" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="122" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a9af3ba46d2a2817b54b389b657be7b1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setPosition</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>setPosition</name>
+        <qualifiedname>prism::render::Window::setPosition</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="61" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a3e1d19beae96a7f317bbf2da9f92750c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; int, int &gt;</type>
+        <definition>std::pair&lt; int, int &gt; prism::render::Window::getPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>getPosition</name>
+        <qualifiedname>prism::render::Window::getPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="62" column="23" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="130" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ae3f3021bb43a76b5808bc4bc89007a29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::centerWindow</definition>
+        <argsstring>()</argsstring>
+        <name>centerWindow</name>
+        <qualifiedname>prism::render::Window::centerWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="63" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="136" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1afa2c304374a6e1dcfc81ae06a006873e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setMinSize</definition>
+        <argsstring>(int minWidth, int minHeight)</argsstring>
+        <name>setMinSize</name>
+        <qualifiedname>prism::render::Window::setMinSize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>minWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="64" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="140" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ab90cba28068a5b17b695c6ecf1aea6de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setMaxSize</definition>
+        <argsstring>(int maxWidth, int maxHeight)</argsstring>
+        <name>setMaxSize</name>
+        <qualifiedname>prism::render::Window::setMaxSize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>maxWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="65" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a4418e9f03d9a2529617edb9b43347a4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::render::Window::shouldClose</definition>
+        <argsstring>() const</argsstring>
+        <name>shouldClose</name>
+        <qualifiedname>prism::render::Window::shouldClose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="68" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1aafd2531eb1713aa544d877e4777efd83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::setCloseRequested</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>setCloseRequested</name>
+        <qualifiedname>prism::render::Window::setCloseRequested</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="69" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a87a6c5971d1ccff29f8303818442e35e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::handleEvents</definition>
+        <argsstring>()</argsstring>
+        <name>handleEvents</name>
+        <qualifiedname>prism::render::Window::handleEvents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="70" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="156" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a3e49d69c6a6e7edb12d74203a972553b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>prism::render::Window::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="71" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1ae4a0e367be25a53034ef6e39ef95c9a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <qualifiedname>prism::render::Window::update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="72" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="180" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1af0547d7addea41c1f522c8f242eae970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Window::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>prism::render::Window::destroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="77" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="184" bodyend="190"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a9e9f63bec9bbbcb78a8df282da869a13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref></type>
+        <definition>Window prism::render::Window::CreateCentered</definition>
+        <argsstring>(const char *title, int width, int height)</argsstring>
+        <name>CreateCentered</name>
+        <qualifiedname>prism::render::Window::CreateCentered</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="33" column="27" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1a30911b434e086b05fb34ca559b6c346f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void prism::render::Window::setSDLInitialized</definition>
+        <argsstring>(bool initialized)</argsstring>
+        <name>setSDLInitialized</name>
+        <qualifiedname>prism::render::Window::setSDLInitialized</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>initialized</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="79" column="25" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1render_1_1_window_1aef89add08c54150b7ba429eaacd75ed1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Window::Window</definition>
+        <argsstring>(const char *title, int x, int y, int width, int height, Uint32 sdlFlags)</argsstring>
+        <name>Window</name>
+        <qualifiedname>prism::render::Window::Window</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>Uint32</type>
+          <declname>sdlFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="92" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.cpp" bodystart="39" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" line="19" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/Window.h" bodystart="19" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classprism_1_1render_1_1_window_1ae3f3021bb43a76b5808bc4bc89007a29" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>centerWindow</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a3e49d69c6a6e7edb12d74203a972553b" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>clear</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a9e9f63bec9bbbcb78a8df282da869a13" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>CreateCentered</name></member>
+      <member refid="classprism_1_1render_1_1_window_1af0547d7addea41c1f522c8f242eae970" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>destroy</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ad0be25effa227b7c8863f74eb9c345ed" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>getHeight</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a3e1d19beae96a7f317bbf2da9f92750c" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>getPosition</name></member>
+      <member refid="classprism_1_1render_1_1_window_1acad9cf0884d13bb996d161fb741a27cf" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>getSize</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a661ca497c04a9cb449ab2fe9fbed3a1d" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>getTitle</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ae5bf309d8ccd12ef502310d2309df22a" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>getWidth</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a87a6c5971d1ccff29f8303818442e35e" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>handleEvents</name></member>
+      <member refid="classprism_1_1render_1_1_window_1aae96df68ff41a0346769969692e0b123" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>isBorderless</name></member>
+      <member refid="classprism_1_1render_1_1_window_1adfc25e1606ec45bc5333cd4cf5b99efe" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>isFullscreen</name></member>
+      <member refid="classprism_1_1render_1_1_window_1aef916de46513d7c1837dad64c969bbf7" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>isGrabMouse</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a91ee4de644156c2b6c79252eea7431fe" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>isResizable</name></member>
+      <member refid="classprism_1_1render_1_1_window_1af723b1149e1bb2a1cae99bd22466edec" prot="private" virt="non-virtual"><scope>prism::render::Window</scope><name>m_isDestroyed</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ac8d189427c5ab1b7f7d5a8e6a17c9036" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>operator=</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a3df97713b0e4a4aae89f407b7d7976b9" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>operator=</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a5d62e642468dde7e2ea4d25618ce5b85" prot="private" virt="non-virtual"><scope>prism::render::Window</scope><name>s_sdlInitialized</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a80114ce20353fd9404814dba2fb343bc" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>sdlWindow</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a1bcc059d6c6728ae0f21e49f277a6856" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setBorderless</name></member>
+      <member refid="classprism_1_1render_1_1_window_1aafd2531eb1713aa544d877e4777efd83" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setCloseRequested</name></member>
+      <member refid="classprism_1_1render_1_1_window_1aa9777031fdbe6e2d7decd15d306c5195" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setFullscreen</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a71bfd120a906b926bcfc2e9df6b27ea4" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setGrabMouse</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a73775ef15335e2924e7538e72c499d6b" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setHeight</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ab90cba28068a5b17b695c6ecf1aea6de" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setMaxSize</name></member>
+      <member refid="classprism_1_1render_1_1_window_1afa2c304374a6e1dcfc81ae06a006873e" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setMinSize</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a9af3ba46d2a2817b54b389b657be7b1a" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setPosition</name></member>
+      <member refid="classprism_1_1render_1_1_window_1afc4b812de25c228decae998c74b72ac9" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setResizable</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a30911b434e086b05fb34ca559b6c346f" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setSDLInitialized</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a00badb3a468b50736e8f2a94076fad64" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setSize</name></member>
+      <member refid="classprism_1_1render_1_1_window_1acdd4f7425fb12df92ca18ff9db181e12" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setTitle</name></member>
+      <member refid="classprism_1_1render_1_1_window_1aefafd2342185404f0a3cfc68a47091dc" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>setWidth</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a4418e9f03d9a2529617edb9b43347a4a" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>shouldClose</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ae4a0e367be25a53034ef6e39ef95c9a0" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>update</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ad2586f1bbadf4e7fed2e63f6164f96cd" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a502990af2c873d6b9dffb2855e55989d" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a1bfa6743f1cb3ccc2b40d4f2d4d0ec86" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ab348789841debcf3dd69842d1b84f0d8" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a08a26de82ddbb6dc3ab9e22ffb80e430" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ac2240db34a7815715b06612b6176a930" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a04801b7ccc6b21d2f30f9fd522fb4984" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1render_1_1_window_1aef89add08c54150b7ba429eaacd75ed1" prot="private" virt="non-virtual"><scope>prism::render::Window</scope><name>Window</name></member>
+      <member refid="classprism_1_1render_1_1_window_1ad3b0fdd480cc17c7d628bd32f1a2a24c" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>windowMinimized</name></member>
+      <member refid="classprism_1_1render_1_1_window_1a41165d8c62416df762c8d032abce8c42" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>windowResized</name></member>
+      <member refid="classprism_1_1render_1_1_window_1acd645c0704f49907ec4f8a35d22ad300" prot="public" virt="non-virtual"><scope>prism::render::Window</scope><name>~Window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

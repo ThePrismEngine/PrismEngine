@@ -1,0 +1,837 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1_p_g_c_1_1_prism_graphic_core" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::PrismGraphicCore</compoundname>
+    <includes refid="prism_graphic_core_8h" local="no">prismGraphicCore.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a753fa35096fa05f297bdea70afa5e33c" prot="public" static="no" mutable="no">
+        <type>bool *</type>
+        <definition>bool* prism::PGC::PrismGraphicCore::windowResized</definition>
+        <argsstring></argsstring>
+        <name>windowResized</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::windowResized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="52" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a6f5c118b620526fd87e3bac408aebbbe" prot="public" static="no" mutable="no">
+        <type>bool *</type>
+        <definition>bool* prism::PGC::PrismGraphicCore::windowMinimized</definition>
+        <argsstring></argsstring>
+        <name>windowMinimized</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::windowMinimized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="53" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a55ffc68b57853b631c9b4814f137fe35" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref></type>
+        <definition>PGC::utils::Settings prism::PGC::PrismGraphicCore::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="55" column="34" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a31f1cef5cc83ac1a18edc7d3b89d614e" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref></type>
+        <definition>PGC::utils::Context prism::PGC::PrismGraphicCore::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="56" column="33" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a211f201b28de195923a8c320facf8022" prot="private" static="no" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* prism::PGC::PrismGraphicCore::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="75" column="24" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1aa342c65aa462fff2f176f70709b7b106" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1_p_g_c_1_1base_1_1_base" kindref="compound">PGC::base::Base</ref></type>
+        <definition>PGC::base::Base prism::PGC::PrismGraphicCore::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="77" column="29" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a0dd17cd2a4cc0775631dfe789c82f8ee" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1_p_g_c_1_1_swap_chain" kindref="compound">PGC::SwapChain</ref></type>
+        <definition>PGC::SwapChain prism::PGC::PrismGraphicCore::swapChain</definition>
+        <argsstring></argsstring>
+        <name>swapChain</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::swapChain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="78" column="28" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1af1b76f64293f0292b219dfcf0b432c5a" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1_p_g_c_1_1_render_pass" kindref="compound">PGC::RenderPass</ref></type>
+        <definition>PGC::RenderPass prism::PGC::PrismGraphicCore::renderPass</definition>
+        <argsstring></argsstring>
+        <name>renderPass</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::renderPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="79" column="29" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a87fd93b86567719bdd9dbf5da3071d55" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout" kindref="compound">PGC::DescriptorSetLayout</ref></type>
+        <definition>PGC::DescriptorSetLayout prism::PGC::PrismGraphicCore::descriptorSetLayout</definition>
+        <argsstring></argsstring>
+        <name>descriptorSetLayout</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::descriptorSetLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="80" column="38" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a3ca09132e3ff4a8388a5edae449e0675" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1_p_g_c_1_1_graphics_pipeline" kindref="compound">PGC::GraphicsPipeline</ref></type>
+        <definition>PGC::GraphicsPipeline prism::PGC::PrismGraphicCore::graphicsPipeline</definition>
+        <argsstring></argsstring>
+        <name>graphicsPipeline</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::graphicsPipeline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="81" column="35" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1afc31cffb31e326de0fd0a45c6322e614" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1_p_g_c_1_1_descriptor_set" kindref="compound">PGC::DescriptorSet</ref></type>
+        <definition>PGC::DescriptorSet prism::PGC::PrismGraphicCore::descriptorSet</definition>
+        <argsstring></argsstring>
+        <name>descriptorSet</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::descriptorSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="82" column="32" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1abc11212e7a68ded2bbe1f8d8dc71b56d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::PrismGraphicCore::PrismGraphicCore</definition>
+        <argsstring>()</argsstring>
+        <name>PrismGraphicCore</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::PrismGraphicCore</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="41" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4bacbfbd6c0905dcdc4882be3c371161" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::init</definition>
+        <argsstring>(utils::Settings settings)</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::init</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref></type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="42" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="14" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a3b9e48a05623b6cc0b9ed7320d4e8e91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::drawFrame</definition>
+        <argsstring>()</argsstring>
+        <name>drawFrame</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::drawFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="43" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="36" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4d95481a52b8d64b2d60651032d835ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::startRender</definition>
+        <argsstring>()</argsstring>
+        <name>startRender</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::startRender</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="44" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a6eab6576d07a3820cbdccd5babbf7fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data" kindref="compound">prism::PGC::utils::CameraData</ref> *</type>
+        <definition>prism::PGC::utils::CameraData * prism::PGC::PrismGraphicCore::getCameraDataPtr</definition>
+        <argsstring>()</argsstring>
+        <name>getCameraDataPtr</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::getCameraDataPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="45" column="43" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1acdd1cff2d554d37c035a7b00b307852c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classprism_1_1_p_g_c_1_1_swap_chain" kindref="compound">PGC::SwapChain</ref> *</type>
+        <definition>prism::PGC::SwapChain * prism::PGC::PrismGraphicCore::getSwapChainPtr</definition>
+        <argsstring>()</argsstring>
+        <name>getSwapChainPtr</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::getSwapChainPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="46" column="28" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac7e1e22c259dd2e1793193cbb0a5281f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="48" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="379" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a0e9b7954a1e4b8a8ff173816a7d26e1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::awaitRenderingCompletion</definition>
+        <argsstring>()</argsstring>
+        <name>awaitRenderingCompletion</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::awaitRenderingCompletion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="49" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="453" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a5202b6e55da493f576930f53f0692705" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering</definition>
+        <argsstring>(SDL_Window *window)</argsstring>
+        <name>isWindowReadyForRendering</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::isWindowReadyForRendering</qualifiedname>
+        <param>
+          <type>SDL_Window *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="50" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="84" bodyend="95"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a08b422facb0a4a3dd074a550c1c9d1ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createBase</definition>
+        <argsstring>()</argsstring>
+        <name>createBase</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="58" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a2c3787c4a72e660bb4a40afeb71ea2a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createSwapChain</definition>
+        <argsstring>()</argsstring>
+        <name>createSwapChain</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createSwapChain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="59" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4a8bd71a4ab83fe639f8e5762cb4cffd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createGraphicsPipeline</definition>
+        <argsstring>()</argsstring>
+        <name>createGraphicsPipeline</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createGraphicsPipeline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="60" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ad742d515a20d820fd936dc465828fa93" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createRenderPass</definition>
+        <argsstring>()</argsstring>
+        <name>createRenderPass</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createRenderPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="61" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1af910ed78722649b6f4ccab7f42295df4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createFramebuffers</definition>
+        <argsstring>()</argsstring>
+        <name>createFramebuffers</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createFramebuffers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="62" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a08cc6c55d4e468392534974226fdebf2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createCommandPool</definition>
+        <argsstring>()</argsstring>
+        <name>createCommandPool</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createCommandPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="63" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="118" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a304ed66f116a14a4e1eaabad38148057" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createCommandBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>createCommandBuffer</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createCommandBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="64" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="132" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac80bc9624587f789b972b4d8e3ee1bc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createSyncObjects</definition>
+        <argsstring>()</argsstring>
+        <name>createSyncObjects</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createSyncObjects</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="65" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="147" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4efae367067d6838fa7c22d9e5dff06b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createDescriptorSetLayout</definition>
+        <argsstring>()</argsstring>
+        <name>createDescriptorSetLayout</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createDescriptorSetLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="66" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a56bb80154e887c60badb9cdf18a0e81e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createTextureDescriptorSetLayout</definition>
+        <argsstring>()</argsstring>
+        <name>createTextureDescriptorSetLayout</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createTextureDescriptorSetLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="67" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="175" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1afd85feadb8ae7f635c9324acc57cf442" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createTextureDescriptorSet</definition>
+        <argsstring>()</argsstring>
+        <name>createTextureDescriptorSet</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createTextureDescriptorSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="68" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="203" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ab75d350b460580e73f8c5ef40f17e7e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createUniformBuffers</definition>
+        <argsstring>()</argsstring>
+        <name>createUniformBuffers</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createUniformBuffers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="69" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="215" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a701357ad5c785a9b52ba9a6f6c597a89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createDescriptorPool</definition>
+        <argsstring>()</argsstring>
+        <name>createDescriptorPool</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createDescriptorPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="70" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="220" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac79cf119a7b9d48d34e7ef04d324eb29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createDescriptorSets</definition>
+        <argsstring>()</argsstring>
+        <name>createDescriptorSets</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createDescriptorSets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="71" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a2983dab58a83db9204e14c3da172c640" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createDepthResources</definition>
+        <argsstring>()</argsstring>
+        <name>createDepthResources</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createDepthResources</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="72" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="265" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a9652d07a0152ca7e603ae0e643edac47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::createColorResources</definition>
+        <argsstring>()</argsstring>
+        <name>createColorResources</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::createColorResources</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="73" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="270" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1aecfad4272b514d286ae46e83639f817e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::PrismGraphicCore::generateMipmaps</definition>
+        <argsstring>(VkImage image, VkFormat imageFormat, int32_t texWidth, int32_t texHeight, uint32_t mipLevels)</argsstring>
+        <name>generateMipmaps</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::generateMipmaps</qualifiedname>
+        <param>
+          <type>VkImage</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>imageFormat</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>texWidth</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>texHeight</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mipLevels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="84" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="276" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_prism_graphic_core_1abb197c77af33e20c187d96a6ce87d4dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkSampleCountFlagBits</type>
+        <definition>VkSampleCountFlagBits prism::PGC::PrismGraphicCore::getMaxUsableSampleCount</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxUsableSampleCount</name>
+        <qualifiedname>prism::PGC::PrismGraphicCore::getMaxUsableSampleCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="86" column="35" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp" bodystart="363" bodyend="377"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="26">
+        <label>prism::PGC::DescriptorSet</label>
+        <link refid="classprism_1_1_p_g_c_1_1_descriptor_set"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>prism::PGC::DescriptorSetLayout</label>
+        <link refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>prism::PGC::GraphicsPipeline</label>
+        <link refid="classprism_1_1_p_g_c_1_1_graphics_pipeline"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>prism::PGC::PrismGraphicCore</label>
+        <link refid="classprism_1_1_p_g_c_1_1_prism_graphic_core"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>renderPass</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>descriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>graphicsPipeline</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>descriptorSet</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>prism::PGC::RenderPass</label>
+        <link refid="classprism_1_1_p_g_c_1_1_render_pass"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>prism::PGC::SwapChain</label>
+        <link refid="classprism_1_1_p_g_c_1_1_swap_chain"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>prism::PGC::base::Base</label>
+        <link refid="classprism_1_1_p_g_c_1_1base_1_1_base"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>prism::PGC::utils::AppSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>applicationVersion</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>prism::PGC::utils::CameraData</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data"/>
+      </node>
+      <node id="16">
+        <label>prism::PGC::utils::ColorBlendSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings"/>
+      </node>
+      <node id="19">
+        <label>prism::PGC::utils::Context</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_context"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>cameraData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>prism::PGC::utils::DebugSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings"/>
+      </node>
+      <node id="14">
+        <label>prism::PGC::utils::DepthStencilSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings"/>
+      </node>
+      <node id="8">
+        <label>prism::PGC::utils::DescriptorSetLayoutSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings"/>
+      </node>
+      <node id="5">
+        <label>prism::PGC::utils::DeviceEvaluationWeightsSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings"/>
+      </node>
+      <node id="17">
+        <label>prism::PGC::utils::DynamicStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings"/>
+      </node>
+      <node id="12">
+        <label>prism::PGC::utils::InputAssemblySettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings"/>
+      </node>
+      <node id="15">
+        <label>prism::PGC::utils::MultisampleSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings"/>
+      </node>
+      <node id="10">
+        <label>prism::PGC::utils::PipelineSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>shaders</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>inputAssembly</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>rasterization</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>depthStencil</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>multisample</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>colorBlend</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>dynamicState</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>viewportState</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>prism::PGC::utils::RasterizationSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings"/>
+      </node>
+      <node id="2">
+        <label>prism::PGC::utils::Settings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_settings"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>deviceEvaluationWeights</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>descriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>textureDescriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>pipeline</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>prism::PGC::utils::ShadersSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings"/>
+      </node>
+      <node id="7">
+        <label>prism::PGC::utils::SwapChainSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings"/>
+      </node>
+      <node id="9">
+        <label>prism::PGC::utils::TextureDescriptorSetLayoutSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings"/>
+      </node>
+      <node id="18">
+        <label>prism::PGC::utils::ViewportStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings"/>
+      </node>
+      <node id="4">
+        <label>prism::Version</label>
+        <link refid="structprism_1_1_version"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" line="38" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h" bodystart="38" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a0e9b7954a1e4b8a8ff173816a7d26e1c" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>awaitRenderingCompletion</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1aa342c65aa462fff2f176f70709b7b106" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>base</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac7e1e22c259dd2e1793193cbb0a5281f" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>cleanup</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a31f1cef5cc83ac1a18edc7d3b89d614e" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>context</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a08b422facb0a4a3dd074a550c1c9d1ea" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createBase</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a9652d07a0152ca7e603ae0e643edac47" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createColorResources</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a304ed66f116a14a4e1eaabad38148057" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createCommandBuffer</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a08cc6c55d4e468392534974226fdebf2" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createCommandPool</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a2983dab58a83db9204e14c3da172c640" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createDepthResources</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a701357ad5c785a9b52ba9a6f6c597a89" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createDescriptorPool</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4efae367067d6838fa7c22d9e5dff06b" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createDescriptorSetLayout</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac79cf119a7b9d48d34e7ef04d324eb29" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createDescriptorSets</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1af910ed78722649b6f4ccab7f42295df4" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createFramebuffers</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4a8bd71a4ab83fe639f8e5762cb4cffd" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createGraphicsPipeline</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ad742d515a20d820fd936dc465828fa93" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createRenderPass</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a2c3787c4a72e660bb4a40afeb71ea2a4" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createSwapChain</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ac80bc9624587f789b972b4d8e3ee1bc9" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createSyncObjects</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1afd85feadb8ae7f635c9324acc57cf442" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createTextureDescriptorSet</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a56bb80154e887c60badb9cdf18a0e81e" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createTextureDescriptorSetLayout</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1ab75d350b460580e73f8c5ef40f17e7e8" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>createUniformBuffers</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1afc31cffb31e326de0fd0a45c6322e614" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>descriptorSet</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a87fd93b86567719bdd9dbf5da3071d55" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>descriptorSetLayout</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a3b9e48a05623b6cc0b9ed7320d4e8e91" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>drawFrame</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1aecfad4272b514d286ae46e83639f817e" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>generateMipmaps</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a6eab6576d07a3820cbdccd5babbf7fb8" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>getCameraDataPtr</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1abb197c77af33e20c187d96a6ce87d4dd" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>getMaxUsableSampleCount</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1acdd1cff2d554d37c035a7b00b307852c" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>getSwapChainPtr</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a3ca09132e3ff4a8388a5edae449e0675" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>graphicsPipeline</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4bacbfbd6c0905dcdc4882be3c371161" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>init</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a5202b6e55da493f576930f53f0692705" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>isWindowReadyForRendering</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1abc11212e7a68ded2bbe1f8d8dc71b56d" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>PrismGraphicCore</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1af1b76f64293f0292b219dfcf0b432c5a" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>renderPass</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a55ffc68b57853b631c9b4814f137fe35" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>settings</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a4d95481a52b8d64b2d60651032d835ee" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>startRender</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a0dd17cd2a4cc0775631dfe789c82f8ee" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>swapChain</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a211f201b28de195923a8c320facf8022" prot="private" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>window</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a6f5c118b620526fd87e3bac408aebbbe" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>windowMinimized</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_prism_graphic_core_1a753fa35096fa05f297bdea70afa5e33c" prot="public" virt="non-virtual"><scope>prism::PGC::PrismGraphicCore</scope><name>windowResized</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

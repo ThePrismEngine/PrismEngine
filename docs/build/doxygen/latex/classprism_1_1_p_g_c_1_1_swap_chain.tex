@@ -1,0 +1,148 @@
+\doxysection{Класс prism\+::PGC\+::Swap\+Chain}
+\hypertarget{classprism_1_1_p_g_c_1_1_swap_chain}{}\label{classprism_1_1_p_g_c_1_1_swap_chain}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+
+
+{\ttfamily \#include $<$swap\+Chain.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_ac0c55a3fd3fec4bc4ee0fdd6d026903f}{Swap\+Chain}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a764ee99dcf83f09a01776b378d768a90}{init}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a98ef5abfe1f700ca0f0dcdbc91129abc}{context}}, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a1f8f8349ec28a0ee50f716bef225260f}{settings}})
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a68df1d235f8043c72ab03b2645c97de5}{\texorpdfstring{$\sim$}{\string~}\+Swap\+Chain}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_ae0eff1bf37e4b4f87431c4060a6bee86}{cleanup}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a71dc7570cb6c903f810841f57dcbe7f8}{await\+Rendering\+Completion}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a6b556b9c4d9053b46b9598749d3ed768}{recreate}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a6846f862a3f113e3bffaf2de5fbb9fe5}{create}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a4c7f128a792d602a7e9d791a55d71579}{create\+Image\+Views}} ()
+\item 
+Vk\+Surface\+Format\+KHR \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_ac9e805f45a94b40c80e103088470f6f5}{choose\+Swap\+Surface\+Format}} (const std\+::vector$<$ Vk\+Surface\+Format\+KHR $>$ \&available\+Formats)
+\item 
+Vk\+Present\+Mode\+KHR \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a6327c63363a56b3ad07ea03762c3a316}{choose\+Swap\+Present\+Mode}} (const std\+::vector$<$ Vk\+Present\+Mode\+KHR $>$ \&available\+Present\+Modes)
+\item 
+Vk\+Extent2D \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a60b9fd49d6941d6b8cef997dadd3faf9}{choose\+Swap\+Extent}} (const Vk\+Surface\+Capabilities\+KHR \&capabilities)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a997057c8be4d1aac9beb88bb6327c0e0}{get\+Image\+Count}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details}{PGC\+::utils\+::\+Swap\+Chain\+Support\+Details}} swap\+Chain\+Support)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a98ef5abfe1f700ca0f0dcdbc91129abc}{context}}
+\item 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain_a1f8f8349ec28a0ee50f716bef225260f}{settings}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_ac0c55a3fd3fec4bc4ee0fdd6d026903f}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!SwapChain@{SwapChain}}
+\index{SwapChain@{SwapChain}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{SwapChain()}{SwapChain()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_ac0c55a3fd3fec4bc4ee0fdd6d026903f} 
+prism\+::\+PGC\+::\+Swap\+Chain\+::\+Swap\+Chain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a68df1d235f8043c72ab03b2645c97de5}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!````~SwapChain@{\texorpdfstring{$\sim$}{\string~}SwapChain}}
+\index{````~SwapChain@{\texorpdfstring{$\sim$}{\string~}SwapChain}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SwapChain()}{\string~SwapChain()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a68df1d235f8043c72ab03b2645c97de5} 
+prism\+::\+PGC\+::\+Swap\+Chain\+::\texorpdfstring{$\sim$}{\string~}\+Swap\+Chain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a71dc7570cb6c903f810841f57dcbe7f8}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!awaitRenderingCompletion@{awaitRenderingCompletion}}
+\index{awaitRenderingCompletion@{awaitRenderingCompletion}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{awaitRenderingCompletion()}{awaitRenderingCompletion()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a71dc7570cb6c903f810841f57dcbe7f8} 
+void prism\+::\+PGC\+::\+Swap\+Chain\+::await\+Rendering\+Completion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a60b9fd49d6941d6b8cef997dadd3faf9}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!chooseSwapExtent@{chooseSwapExtent}}
+\index{chooseSwapExtent@{chooseSwapExtent}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{chooseSwapExtent()}{chooseSwapExtent()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a60b9fd49d6941d6b8cef997dadd3faf9} 
+Vk\+Extent2D prism\+::\+PGC\+::\+Swap\+Chain\+::choose\+Swap\+Extent (\begin{DoxyParamCaption}\item[{const Vk\+Surface\+Capabilities\+KHR \&}]{capabilities}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a6327c63363a56b3ad07ea03762c3a316}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!chooseSwapPresentMode@{chooseSwapPresentMode}}
+\index{chooseSwapPresentMode@{chooseSwapPresentMode}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{chooseSwapPresentMode()}{chooseSwapPresentMode()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a6327c63363a56b3ad07ea03762c3a316} 
+Vk\+Present\+Mode\+KHR prism\+::\+PGC\+::\+Swap\+Chain\+::choose\+Swap\+Present\+Mode (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Vk\+Present\+Mode\+KHR $>$ \&}]{available\+Present\+Modes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_ac9e805f45a94b40c80e103088470f6f5}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!chooseSwapSurfaceFormat@{chooseSwapSurfaceFormat}}
+\index{chooseSwapSurfaceFormat@{chooseSwapSurfaceFormat}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{chooseSwapSurfaceFormat()}{chooseSwapSurfaceFormat()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_ac9e805f45a94b40c80e103088470f6f5} 
+Vk\+Surface\+Format\+KHR prism\+::\+PGC\+::\+Swap\+Chain\+::choose\+Swap\+Surface\+Format (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Vk\+Surface\+Format\+KHR $>$ \&}]{available\+Formats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_ae0eff1bf37e4b4f87431c4060a6bee86}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_ae0eff1bf37e4b4f87431c4060a6bee86} 
+void prism\+::\+PGC\+::\+Swap\+Chain\+::cleanup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a6846f862a3f113e3bffaf2de5fbb9fe5}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!create@{create}}
+\index{create@{create}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a6846f862a3f113e3bffaf2de5fbb9fe5} 
+void prism\+::\+PGC\+::\+Swap\+Chain\+::create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a4c7f128a792d602a7e9d791a55d71579}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!createImageViews@{createImageViews}}
+\index{createImageViews@{createImageViews}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{createImageViews()}{createImageViews()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a4c7f128a792d602a7e9d791a55d71579} 
+void prism\+::\+PGC\+::\+Swap\+Chain\+::create\+Image\+Views (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a997057c8be4d1aac9beb88bb6327c0e0}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!getImageCount@{getImageCount}}
+\index{getImageCount@{getImageCount}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{getImageCount()}{getImageCount()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a997057c8be4d1aac9beb88bb6327c0e0} 
+uint32\+\_\+t prism\+::\+PGC\+::\+Swap\+Chain\+::get\+Image\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details}{PGC\+::utils\+::\+Swap\+Chain\+Support\+Details}}}]{swap\+Chain\+Support}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a764ee99dcf83f09a01776b378d768a90}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!init@{init}}
+\index{init@{init}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a764ee99dcf83f09a01776b378d768a90} 
+void prism\+::\+PGC\+::\+Swap\+Chain\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}}]{settings}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a6b556b9c4d9053b46b9598749d3ed768}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!recreate@{recreate}}
+\index{recreate@{recreate}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{recreate()}{recreate()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a6b556b9c4d9053b46b9598749d3ed768} 
+void prism\+::\+PGC\+::\+Swap\+Chain\+::recreate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a98ef5abfe1f700ca0f0dcdbc91129abc}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!context@{context}}
+\index{context@{context}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a98ef5abfe1f700ca0f0dcdbc91129abc} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}}\texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::\+Swap\+Chain\+::context\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_swap_chain_a1f8f8349ec28a0ee50f716bef225260f}\index{prism::PGC::SwapChain@{prism::PGC::SwapChain}!settings@{settings}}
+\index{settings@{settings}!prism::PGC::SwapChain@{prism::PGC::SwapChain}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_swap_chain_a1f8f8349ec28a0ee50f716bef225260f} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}}\texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::\+Swap\+Chain\+::settings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{swap_chain_8h}{swap\+Chain.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{swap_chain_8cpp}{swap\+Chain.\+cpp}}\end{DoxyCompactItemize}

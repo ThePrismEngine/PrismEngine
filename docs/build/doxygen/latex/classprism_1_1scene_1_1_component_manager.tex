@@ -1,0 +1,254 @@
+\doxysection{Класс prism\+::scene\+::Component\+Manager}
+\hypertarget{classprism_1_1scene_1_1_component_manager}{}\label{classprism_1_1scene_1_1_component_manager}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+
+
+Менеджер для управления компонентами сущностей  
+
+
+
+
+{\ttfamily \#include $<$component\+Manager.\+h$>$}
+
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{Component\+Storage}}
+\begin{DoxyCompactList}\small\item\em Конкретная реализация хранилища для типа компонента \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage}{IComponent\+Storage}}
+\begin{DoxyCompactList}\small\item\em Базовый интерфейс хранилища компонентов \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6c739470f713ecd5abb532ac163b6926}{Component\+Manager}} ()=default
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a7ee343b770cd5a1a67fd68d50bec2ca0}{add\+Component}} (\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} entity\+Id, T component)
+\begin{DoxyCompactList}\small\item\em Добавляет компонент к сущности \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\bool \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a9e173149b5cb23f208ade28e5ee34f4d}{remove\+Component}} (\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} entity\+Id)
+\begin{DoxyCompactList}\small\item\em Удаляет компонент у сущности \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a14aed5f1bd821d92fd91577a63cdad7f}{get\+Component}} (\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} entity\+Id)
+\begin{DoxyCompactList}\small\item\em Получает компонент сущности \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\const std\+::set$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} $>$ \& \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_ad91853d37150f5c4add892dc7fa6fcea}{get\+Entities\+With}} () const
+\begin{DoxyCompactList}\small\item\em Получает все сущности, имеющие компонент указанного типа \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::set$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} $>$ \& \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_acffef2c762094de4bd7ca08593f8139d}{get\+Entities\+With}} ()
+\item 
+{\footnotesize template$<$typename... Component\+Types$>$ }\\std\+::set$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} $>$ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_af84b9831cf557c0d8beb0f43ea85782c}{get\+Entities\+With\+All}} () const
+\begin{DoxyCompactList}\small\item\em Получает все сущности, имеющие все указанные типы компонентов \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a207f9e235e87280a6b072f4a03d0b91b}{remove\+All\+Components}} (\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} entity\+Id)
+\begin{DoxyCompactList}\small\item\em Удаляет все компоненты у сущности \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\\mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{Component\+Storage}}$<$ T $>$ \& \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a89b0e0805d4739180f8c826aff31aed2}{get\+Component\+Storage}} ()
+\begin{DoxyCompactList}\small\item\em Получает хранилище для конкретного типа компонента \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::type\+\_\+index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage}{IComponent\+Storage}} $>$ $>$ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6a1a60608eac94caea1b144d2697b5fd}{component\+Storages}}
+\begin{DoxyCompactList}\small\item\em Карта хранилищ компонентов по типу \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::type\+\_\+index, std\+::unique\+\_\+ptr$<$ std\+::set$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} $>$ $>$ $>$ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}{entities\+With\+Component\+Sets}}
+\begin{DoxyCompactList}\small\item\em Карта множеств сущностей по типу компонента \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Менеджер для управления компонентами сущностей 
+
+Обеспечивает хранение, добавление, удаление и поиск компонентов 
+
+\label{doc-constructors}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_a6c739470f713ecd5abb532ac163b6926}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!ComponentManager@{ComponentManager}}
+\index{ComponentManager@{ComponentManager}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{ComponentManager()}{ComponentManager()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_a6c739470f713ecd5abb532ac163b6926} 
+prism\+::scene\+::\+Component\+Manager\+::\+Component\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_a7ee343b770cd5a1a67fd68d50bec2ca0}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_a7ee343b770cd5a1a67fd68d50bec2ca0} 
+template$<$typename T$>$ \\
+bool prism\+::scene\+::\+Component\+Manager\+::add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}}]{entity\+Id}{, }\item[{T}]{component}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Добавляет компонент к сущности 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em T} & Тип компонента \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Аргументы}
+{\em entity\+Id} & Идентификатор сущности \\
+\hline
+{\em component} & Компонент для добавления \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если компонент успешно добавлен, false в противном случае
+\end{DoxyReturn}
+Создает копию компонента и связывает его с сущностью \Hypertarget{classprism_1_1scene_1_1_component_manager_a14aed5f1bd821d92fd91577a63cdad7f}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_a14aed5f1bd821d92fd91577a63cdad7f} 
+template$<$typename T$>$ \\
+T \texorpdfstring{$\ast$}{*} prism\+::scene\+::\+Component\+Manager\+::get\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}}]{entity\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получает компонент сущности 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em T} & Тип компонента \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Аргументы}
+{\em entity\+Id} & Идентификатор сущности \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Указатель на компонент или nullptr если компонент не найден 
+\end{DoxyReturn}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_a89b0e0805d4739180f8c826aff31aed2}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!getComponentStorage@{getComponentStorage}}
+\index{getComponentStorage@{getComponentStorage}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{getComponentStorage()}{getComponentStorage()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_a89b0e0805d4739180f8c826aff31aed2} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{Component\+Storage}}$<$ T $>$ \& prism\+::scene\+::\+Component\+Manager\+::get\+Component\+Storage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Получает хранилище для конкретного типа компонента 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em T} & Тип компонента \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Возвращает}
+Ссылка на хранилище компонентов типа T 
+\end{DoxyReturn}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_acffef2c762094de4bd7ca08593f8139d}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!getEntitiesWith@{getEntitiesWith}}
+\index{getEntitiesWith@{getEntitiesWith}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{getEntitiesWith()}{getEntitiesWith()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_acffef2c762094de4bd7ca08593f8139d} 
+template$<$typename T$>$ \\
+std\+::set$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} $>$ \& prism\+::scene\+::\+Component\+Manager\+::get\+Entities\+With (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classprism_1_1scene_1_1_component_manager_ad91853d37150f5c4add892dc7fa6fcea}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!getEntitiesWith@{getEntitiesWith}}
+\index{getEntitiesWith@{getEntitiesWith}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{getEntitiesWith()}{getEntitiesWith()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_ad91853d37150f5c4add892dc7fa6fcea} 
+template$<$typename T$>$ \\
+const std\+::set$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} $>$ \& prism\+::scene\+::\+Component\+Manager\+::get\+Entities\+With (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получает все сущности, имеющие компонент указанного типа 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em T} & Тип компонента \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Возвращает}
+Константная ссылка на множество сущностей с компонентом 
+\end{DoxyReturn}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_af84b9831cf557c0d8beb0f43ea85782c}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!getEntitiesWithAll@{getEntitiesWithAll}}
+\index{getEntitiesWithAll@{getEntitiesWithAll}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{getEntitiesWithAll()}{getEntitiesWithAll()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_af84b9831cf557c0d8beb0f43ea85782c} 
+template$<$typename... Component\+Types$>$ \\
+std\+::set$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} $>$ prism\+::scene\+::\+Component\+Manager\+::get\+Entities\+With\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получает все сущности, имеющие все указанные типы компонентов 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em Component\+Types} & Типы компонентов для поиска \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Возвращает}
+Множество сущностей, содержащих все запрошенные компоненты
+\end{DoxyReturn}
+Выполняет пересечение множеств сущностей для каждого типа компонента \Hypertarget{classprism_1_1scene_1_1_component_manager_a207f9e235e87280a6b072f4a03d0b91b}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!removeAllComponents@{removeAllComponents}}
+\index{removeAllComponents@{removeAllComponents}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{removeAllComponents()}{removeAllComponents()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_a207f9e235e87280a6b072f4a03d0b91b} 
+void prism\+::scene\+::\+Component\+Manager\+::remove\+All\+Components (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}}]{entity\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Удаляет все компоненты у сущности 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em entity\+Id} & Идентификатор сущности \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_a9e173149b5cb23f208ade28e5ee34f4d}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!removeComponent@{removeComponent}}
+\index{removeComponent@{removeComponent}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{removeComponent()}{removeComponent()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_a9e173149b5cb23f208ade28e5ee34f4d} 
+template$<$typename T$>$ \\
+bool prism\+::scene\+::\+Component\+Manager\+::remove\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}}]{entity\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Удаляет компонент у сущности 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em T} & Тип компонента \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Аргументы}
+{\em entity\+Id} & Идентификатор сущности \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если компонент существовал и был удален, false в противном случае 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{classprism_1_1scene_1_1_component_manager_a6a1a60608eac94caea1b144d2697b5fd}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!componentStorages@{componentStorages}}
+\index{componentStorages@{componentStorages}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{componentStorages}{componentStorages}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_a6a1a60608eac94caea1b144d2697b5fd} 
+std\+::unordered\+\_\+map$<$std\+::type\+\_\+index, std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage}{IComponent\+Storage}}$>$ $>$ prism\+::scene\+::\+Component\+Manager\+::component\+Storages\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Карта хранилищ компонентов по типу 
+
+\Hypertarget{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}\index{prism::scene::ComponentManager@{prism::scene::ComponentManager}!entitiesWithComponentSets@{entitiesWithComponentSets}}
+\index{entitiesWithComponentSets@{entitiesWithComponentSets}!prism::scene::ComponentManager@{prism::scene::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{entitiesWithComponentSets}{entitiesWithComponentSets}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f} 
+std\+::unordered\+\_\+map$<$std\+::type\+\_\+index, std\+::unique\+\_\+ptr$<$std\+::set$<$\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}$>$ $>$ $>$ prism\+::scene\+::\+Component\+Manager\+::entities\+With\+Component\+Sets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Карта множеств сущностей по типу компонента 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{component_manager_8h}{component\+Manager.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{component_manager_8cpp}{component\+Manager.\+cpp}}\end{DoxyCompactItemize}

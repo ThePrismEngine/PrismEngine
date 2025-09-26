@@ -1,0 +1,130 @@
+\doxysection{РљР»Р°СЃСЃ prism\+::scene\+::Entity\+Manager}
+\hypertarget{classprism_1_1scene_1_1_entity_manager}{}\label{classprism_1_1scene_1_1_entity_manager}\index{prism::scene::EntityManager@{prism::scene::EntityManager}}
+
+
+Менеджер для создания и управления сущностями  
+
+
+
+
+{\ttfamily \#include $<$entity\+Manager.\+h$>$}
+
+\doxysubsubsection*{РћС‚РєСЂС‹С‚С‹Рµ С‡Р»РµРЅС‹}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_abe9a531c0cd25477ab10b8cdb0856188}{Entity\+Manager}} ()
+\item 
+\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a0e6fd16fd8313e33f366d3bffb14b8e3}{create\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Создает новую сущность. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a64b40ac4717222997d2c577acc020687}{destroy\+Entity}} (\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} entity\+Id)
+\begin{DoxyCompactList}\small\item\em Удаляет сущность и освобождает ее ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_ab5b69633034025889c6126f94cc0fde5}{is\+Entity\+Valid}} (\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} entity\+Id) const
+\begin{DoxyCompactList}\small\item\em Проверяет валидность идентификатора сущности \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Р—Р°РєСЂС‹С‚С‹Рµ РґР°РЅРЅС‹Рµ}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a0b6d5b122445aff8f48ff5999262aa50}{next\+Entity\+Id}}
+\begin{DoxyCompactList}\small\item\em Следующий доступный идентификатор сущности \end{DoxyCompactList}\item 
+std\+::queue$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} $>$ \mbox{\hyperlink{classprism_1_1scene_1_1_entity_manager_a97fcaafd355dd916cd3a53e7b4b83c73}{free\+List}}
+\begin{DoxyCompactList}\small\item\em Очередь свободных идентификаторов для повторного использования \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
+Менеджер для создания и управления сущностями 
+
+Обеспечивает создание, удаление и валидацию сущностей с использованием пула идентификаторов 
+
+\label{doc-constructors}
+\Hypertarget{classprism_1_1scene_1_1_entity_manager_doc-constructors}
+\doxysubsection{РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ(С‹)}
+\Hypertarget{classprism_1_1scene_1_1_entity_manager_abe9a531c0cd25477ab10b8cdb0856188}\index{prism::scene::EntityManager@{prism::scene::EntityManager}!EntityManager@{EntityManager}}
+\index{EntityManager@{EntityManager}!prism::scene::EntityManager@{prism::scene::EntityManager}}
+\doxysubsubsection{\texorpdfstring{EntityManager()}{EntityManager()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_entity_manager_abe9a531c0cd25477ab10b8cdb0856188} 
+prism\+::scene\+::\+Entity\+Manager\+::\+Entity\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1scene_1_1_entity_manager_doc-func-members}
+\doxysubsection{РњРµС‚РѕРґС‹}
+\Hypertarget{classprism_1_1scene_1_1_entity_manager_a0e6fd16fd8313e33f366d3bffb14b8e3}\index{prism::scene::EntityManager@{prism::scene::EntityManager}!createEntity@{createEntity}}
+\index{createEntity@{createEntity}!prism::scene::EntityManager@{prism::scene::EntityManager}}
+\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_entity_manager_a0e6fd16fd8313e33f366d3bffb14b8e3} 
+\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{prism\+::scene\+::\+Entity}} prism\+::scene\+::\+Entity\+Manager\+::create\+Entity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Создает новую сущность. 
+
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
+Идентификатор созданной сущности
+\end{DoxyReturn}
+Использует свободные ID из пула при наличии, иначе генерирует новый \Hypertarget{classprism_1_1scene_1_1_entity_manager_a64b40ac4717222997d2c577acc020687}\index{prism::scene::EntityManager@{prism::scene::EntityManager}!destroyEntity@{destroyEntity}}
+\index{destroyEntity@{destroyEntity}!prism::scene::EntityManager@{prism::scene::EntityManager}}
+\doxysubsubsection{\texorpdfstring{destroyEntity()}{destroyEntity()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_entity_manager_a64b40ac4717222997d2c577acc020687} 
+bool prism\+::scene\+::\+Entity\+Manager\+::destroy\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}}]{entity\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Удаляет сущность и освобождает ее ID. 
+
+
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
+{\em entity\+Id} & Идентификатор сущности для удаления \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
+true если сущность успешно удалена, false если ID невалиден
+\end{DoxyReturn}
+Освобожденный ID помещается в пул для повторного использования \Hypertarget{classprism_1_1scene_1_1_entity_manager_ab5b69633034025889c6126f94cc0fde5}\index{prism::scene::EntityManager@{prism::scene::EntityManager}!isEntityValid@{isEntityValid}}
+\index{isEntityValid@{isEntityValid}!prism::scene::EntityManager@{prism::scene::EntityManager}}
+\doxysubsubsection{\texorpdfstring{isEntityValid()}{isEntityValid()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_entity_manager_ab5b69633034025889c6126f94cc0fde5} 
+bool prism\+::scene\+::\+Entity\+Manager\+::is\+Entity\+Valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}}]{entity\+Id}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверяет валидность идентификатора сущности 
+
+
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
+{\em entity\+Id} & Идентификатор сущности для проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
+true если сущность существует и валидна, false в противном случае 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{classprism_1_1scene_1_1_entity_manager_doc-variable-members}
+\doxysubsection{Р”Р°РЅРЅС‹Рµ РєР»Р°СЃСЃР°}
+\Hypertarget{classprism_1_1scene_1_1_entity_manager_a97fcaafd355dd916cd3a53e7b4b83c73}\index{prism::scene::EntityManager@{prism::scene::EntityManager}!freeList@{freeList}}
+\index{freeList@{freeList}!prism::scene::EntityManager@{prism::scene::EntityManager}}
+\doxysubsubsection{\texorpdfstring{freeList}{freeList}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_entity_manager_a97fcaafd355dd916cd3a53e7b4b83c73} 
+std\+::queue$<$\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}$>$ prism\+::scene\+::\+Entity\+Manager\+::free\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Очередь свободных идентификаторов для повторного использования 
+
+\Hypertarget{classprism_1_1scene_1_1_entity_manager_a0b6d5b122445aff8f48ff5999262aa50}\index{prism::scene::EntityManager@{prism::scene::EntityManager}!nextEntityId@{nextEntityId}}
+\index{nextEntityId@{nextEntityId}!prism::scene::EntityManager@{prism::scene::EntityManager}}
+\doxysubsubsection{\texorpdfstring{nextEntityId}{nextEntityId}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_entity_manager_a0b6d5b122445aff8f48ff5999262aa50} 
+\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} prism\+::scene\+::\+Entity\+Manager\+::next\+Entity\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Следующий доступный идентификатор сущности 
+
+
+
+РћР±СЉСЏРІР»РµРЅРёСЏ Рё РѕРїРёСЃР°РЅРёСЏ С‡Р»РµРЅРѕРІ РєР»Р°СЃСЃРѕРІ РЅР°С…РѕРґСЏС‚СЃСЏ РІ С„Р°Р№Р»Р°С…\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{entity_manager_8h}{entity\+Manager.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{entity_manager_8cpp}{entity\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1scene_1_1_scale" kind="struct" language="C++" prot="public">
+    <compoundname>prism::scene::Scale</compoundname>
+    <includes refid="transform_component_8h" local="no">transformComponent.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_scale_1abe9e8b15c7b3d6df7cd86c12d569cd65" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Scale::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>prism::scene::Scale::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" line="14" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_scale_1aaa1fe28e3b8d794464e9ed28fa5141c8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Scale::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>prism::scene::Scale::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" line="14" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_scale_1a24bd28cde4bc109a597b0e3648e97990" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Scale::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>prism::scene::Scale::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" line="14" column="11" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" line="13" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" bodystart="13" bodyend="15"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_scale_1abe9e8b15c7b3d6df7cd86c12d569cd65" prot="public" virt="non-virtual"><scope>prism::scene::Scale</scope><name>x</name></member>
+      <member refid="structprism_1_1scene_1_1_scale_1aaa1fe28e3b8d794464e9ed28fa5141c8" prot="public" virt="non-virtual"><scope>prism::scene::Scale</scope><name>y</name></member>
+      <member refid="structprism_1_1scene_1_1_scale_1a24bd28cde4bc109a597b0e3648e97990" prot="public" virt="non-virtual"><scope>prism::scene::Scale</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

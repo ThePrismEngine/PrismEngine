@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1_hardware_score" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::HardwareScore</compoundname>
+    <includes refid="device_rater_8h" local="no">deviceRater.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1a99d406af4ecb587232a42d1f59f10148" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::HardwareScore::vramGB</definition>
+        <argsstring></argsstring>
+        <name>vramGB</name>
+        <qualifiedname>prism::PGC::HardwareScore::vramGB</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="24" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1a99abc3e23446d45f657a21e729878bec" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::HardwareScore::shaderCores</definition>
+        <argsstring></argsstring>
+        <name>shaderCores</name>
+        <qualifiedname>prism::PGC::HardwareScore::shaderCores</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="25" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1a47b0ca7a52afff0440ce752419f3ae1a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::HardwareScore::clockSpeedGHz</definition>
+        <argsstring></argsstring>
+        <name>clockSpeedGHz</name>
+        <qualifiedname>prism::PGC::HardwareScore::clockSpeedGHz</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="26" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1acf817bbcb053be409cbb6ac575cf118a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::HardwareScore::textureUnits</definition>
+        <argsstring></argsstring>
+        <name>textureUnits</name>
+        <qualifiedname>prism::PGC::HardwareScore::textureUnits</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="27" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1afd04a2c3cc10249ea64c8a408faf3bfa" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float prism::PGC::HardwareScore::VRAM_WEIGHT</definition>
+        <argsstring></argsstring>
+        <name>VRAM_WEIGHT</name>
+        <qualifiedname>prism::PGC::HardwareScore::VRAM_WEIGHT</qualifiedname>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="30" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1a7a34d8960aadbe566e96332f29d90fa1" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float prism::PGC::HardwareScore::SHADER_CORES_WEIGHT</definition>
+        <argsstring></argsstring>
+        <name>SHADER_CORES_WEIGHT</name>
+        <qualifiedname>prism::PGC::HardwareScore::SHADER_CORES_WEIGHT</qualifiedname>
+        <initializer>= 0.3f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="31" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1a08a7433f80715523c1ad93b6b0e08892" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float prism::PGC::HardwareScore::CLOCK_SPEED_WEIGHT</definition>
+        <argsstring></argsstring>
+        <name>CLOCK_SPEED_WEIGHT</name>
+        <qualifiedname>prism::PGC::HardwareScore::CLOCK_SPEED_WEIGHT</qualifiedname>
+        <initializer>= 0.2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="32" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1ab293d1a7c561d7d2e19a293f0efa83ad" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float prism::PGC::HardwareScore::REFERENCE_VRAM_GB</definition>
+        <argsstring></argsstring>
+        <name>REFERENCE_VRAM_GB</name>
+        <qualifiedname>prism::PGC::HardwareScore::REFERENCE_VRAM_GB</qualifiedname>
+        <initializer>= 16.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="35" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1abf658d642232678048f74a2cb4da4485" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float prism::PGC::HardwareScore::REFERENCE_SHADER_CORES</definition>
+        <argsstring></argsstring>
+        <name>REFERENCE_SHADER_CORES</name>
+        <qualifiedname>prism::PGC::HardwareScore::REFERENCE_SHADER_CORES</qualifiedname>
+        <initializer>= 10.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="36" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_hardware_score_1a7b5f0ee2f5ddd9230db931255b42faf9" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float prism::PGC::HardwareScore::REFERENCE_CLOCK_SPEED_GHZ</definition>
+        <argsstring></argsstring>
+        <name>REFERENCE_CLOCK_SPEED_GHZ</name>
+        <qualifiedname>prism::PGC::HardwareScore::REFERENCE_CLOCK_SPEED_GHZ</qualifiedname>
+        <initializer>= 3.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="37" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="23" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="23" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a08a7433f80715523c1ad93b6b0e08892" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>CLOCK_SPEED_WEIGHT</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a47b0ca7a52afff0440ce752419f3ae1a" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>clockSpeedGHz</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a7b5f0ee2f5ddd9230db931255b42faf9" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>REFERENCE_CLOCK_SPEED_GHZ</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1abf658d642232678048f74a2cb4da4485" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>REFERENCE_SHADER_CORES</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1ab293d1a7c561d7d2e19a293f0efa83ad" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>REFERENCE_VRAM_GB</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a7a34d8960aadbe566e96332f29d90fa1" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>SHADER_CORES_WEIGHT</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a99abc3e23446d45f657a21e729878bec" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>shaderCores</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1acf817bbcb053be409cbb6ac575cf118a" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>textureUnits</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1afd04a2c3cc10249ea64c8a408faf3bfa" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>VRAM_WEIGHT</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_hardware_score_1a99d406af4ecb587232a42d1f59f10148" prot="public" virt="non-virtual"><scope>prism::PGC::HardwareScore</scope><name>vramGB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

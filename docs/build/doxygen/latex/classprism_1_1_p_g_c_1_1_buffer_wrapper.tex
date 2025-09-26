@@ -1,0 +1,92 @@
+\doxysection{Класс prism\+::PGC\+::Buffer\+Wrapper}
+\hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper}{}\label{classprism_1_1_p_g_c_1_1_buffer_wrapper}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+
+
+{\ttfamily \#include $<$buffer\+Wrapper.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_ab3ae57aaee4d3ebec53c2fd36d6f44a6}{create\+Buffer}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}Context, Vk\+Device\+Size size, Vk\+Buffer\+Usage\+Flags usage, Vk\+Memory\+Property\+Flags properties, Vk\+Buffer \&buffer, Vk\+Device\+Memory \&buffer\+Memory)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_ae2b3ed3cddadc027dbcf687357b92dad}{copy\+Buffer}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, Vk\+Buffer src\+Buffer, Vk\+Buffer dst\+Buffer, Vk\+Device\+Size size)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_a99cf311cd95b3c2a94ea37886b2e7681}{end\+Single\+Time\+Commands}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, Vk\+Command\+Buffer command\+Buffer)
+\item 
+static Vk\+Command\+Buffer \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_a476d6d005e1b9e7a19ef8d95efc25006}{begin\+Single\+Time\+Commands}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_a41720d6455629660a265368b4c450552}{transition\+Image\+Layout}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, Vk\+Image image, Vk\+Format format, Vk\+Image\+Layout old\+Layout, Vk\+Image\+Layout new\+Layout, uint32\+\_\+t mip\+Levels)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_a5029074ed5969712c8a7b1bf9928bae6}{copy\+Buffer\+To\+Image}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, Vk\+Buffer buffer, Vk\+Image image, uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_a9ef9f5cb858ca4a25e773b5d62e2a0de}{create\+Vertex\+Buffer}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_a021d6dd30688e704d4ad191bbcaaea40}{create\+Index\+Buffer}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_buffer_wrapper_ab005ab379cc8b35a7b07abafc602e118}{create\+Uniform\+Buffers}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_a476d6d005e1b9e7a19ef8d95efc25006}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!beginSingleTimeCommands@{beginSingleTimeCommands}}
+\index{beginSingleTimeCommands@{beginSingleTimeCommands}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{beginSingleTimeCommands()}{beginSingleTimeCommands()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_a476d6d005e1b9e7a19ef8d95efc25006} 
+Vk\+Command\+Buffer prism\+::\+PGC\+::\+Buffer\+Wrapper\+::begin\+Single\+Time\+Commands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_ae2b3ed3cddadc027dbcf687357b92dad}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!copyBuffer@{copyBuffer}}
+\index{copyBuffer@{copyBuffer}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{copyBuffer()}{copyBuffer()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_ae2b3ed3cddadc027dbcf687357b92dad} 
+void prism\+::\+PGC\+::\+Buffer\+Wrapper\+::copy\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{Vk\+Buffer}]{src\+Buffer}{, }\item[{Vk\+Buffer}]{dst\+Buffer}{, }\item[{Vk\+Device\+Size}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_a5029074ed5969712c8a7b1bf9928bae6}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!copyBufferToImage@{copyBufferToImage}}
+\index{copyBufferToImage@{copyBufferToImage}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{copyBufferToImage()}{copyBufferToImage()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_a5029074ed5969712c8a7b1bf9928bae6} 
+void prism\+::\+PGC\+::\+Buffer\+Wrapper\+::copy\+Buffer\+To\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{Vk\+Buffer}]{buffer}{, }\item[{Vk\+Image}]{image}{, }\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_ab3ae57aaee4d3ebec53c2fd36d6f44a6}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!createBuffer@{createBuffer}}
+\index{createBuffer@{createBuffer}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{createBuffer()}{createBuffer()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_ab3ae57aaee4d3ebec53c2fd36d6f44a6} 
+void prism\+::\+PGC\+::\+Buffer\+Wrapper\+::create\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{Context}{, }\item[{Vk\+Device\+Size}]{size}{, }\item[{Vk\+Buffer\+Usage\+Flags}]{usage}{, }\item[{Vk\+Memory\+Property\+Flags}]{properties}{, }\item[{Vk\+Buffer \&}]{buffer}{, }\item[{Vk\+Device\+Memory \&}]{buffer\+Memory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_a021d6dd30688e704d4ad191bbcaaea40}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!createIndexBuffer@{createIndexBuffer}}
+\index{createIndexBuffer@{createIndexBuffer}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{createIndexBuffer()}{createIndexBuffer()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_a021d6dd30688e704d4ad191bbcaaea40} 
+void prism\+::\+PGC\+::\+Buffer\+Wrapper\+::create\+Index\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_ab005ab379cc8b35a7b07abafc602e118}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!createUniformBuffers@{createUniformBuffers}}
+\index{createUniformBuffers@{createUniformBuffers}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{createUniformBuffers()}{createUniformBuffers()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_ab005ab379cc8b35a7b07abafc602e118} 
+void prism\+::\+PGC\+::\+Buffer\+Wrapper\+::create\+Uniform\+Buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_a9ef9f5cb858ca4a25e773b5d62e2a0de}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!createVertexBuffer@{createVertexBuffer}}
+\index{createVertexBuffer@{createVertexBuffer}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{createVertexBuffer()}{createVertexBuffer()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_a9ef9f5cb858ca4a25e773b5d62e2a0de} 
+void prism\+::\+PGC\+::\+Buffer\+Wrapper\+::create\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_a99cf311cd95b3c2a94ea37886b2e7681}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!endSingleTimeCommands@{endSingleTimeCommands}}
+\index{endSingleTimeCommands@{endSingleTimeCommands}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{endSingleTimeCommands()}{endSingleTimeCommands()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_a99cf311cd95b3c2a94ea37886b2e7681} 
+void prism\+::\+PGC\+::\+Buffer\+Wrapper\+::end\+Single\+Time\+Commands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{Vk\+Command\+Buffer}]{command\+Buffer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_buffer_wrapper_a41720d6455629660a265368b4c450552}\index{prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}!transitionImageLayout@{transitionImageLayout}}
+\index{transitionImageLayout@{transitionImageLayout}!prism::PGC::BufferWrapper@{prism::PGC::BufferWrapper}}
+\doxysubsubsection{\texorpdfstring{transitionImageLayout()}{transitionImageLayout()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_buffer_wrapper_a41720d6455629660a265368b4c450552} 
+void prism\+::\+PGC\+::\+Buffer\+Wrapper\+::transition\+Image\+Layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{Vk\+Image}]{image}{, }\item[{Vk\+Format}]{format}{, }\item[{Vk\+Image\+Layout}]{old\+Layout}{, }\item[{Vk\+Image\+Layout}]{new\+Layout}{, }\item[{uint32\+\_\+t}]{mip\+Levels}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{buffer_wrapper_8h}{buffer\+Wrapper.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{buffer_wrapper_8cpp}{buffer\+Wrapper.\+cpp}}\end{DoxyCompactItemize}

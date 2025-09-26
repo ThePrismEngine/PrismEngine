@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1_camera_u_b_o" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::CameraUBO</compoundname>
+    <includes refid="ubo_8h" local="no">ubo.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a2d2efb8863870ffc74838e792e4fed34" prot="public" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 prism::PGC::CameraUBO::view</definition>
+        <argsstring></argsstring>
+        <name>view</name>
+        <qualifiedname>prism::PGC::CameraUBO::view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" line="14" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a76a06e39169e1ce5bb6f5e8a947204df" prot="public" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 prism::PGC::CameraUBO::proj</definition>
+        <argsstring></argsstring>
+        <name>proj</name>
+        <qualifiedname>prism::PGC::CameraUBO::proj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" line="15" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a043fbbaf809ef7076c046abec302139a" prot="public" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 prism::PGC::CameraUBO::viewProj</definition>
+        <argsstring></argsstring>
+        <name>viewProj</name>
+        <qualifiedname>prism::PGC::CameraUBO::viewProj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" line="16" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a4086fc90287a22a756b8543a9763764d" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 prism::PGC::CameraUBO::cameraPos</definition>
+        <argsstring></argsstring>
+        <name>cameraPos</name>
+        <qualifiedname>prism::PGC::CameraUBO::cameraPos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" line="17" column="19" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" line="13" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h" bodystart="13" bodyend="18"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a4086fc90287a22a756b8543a9763764d" prot="public" virt="non-virtual"><scope>prism::PGC::CameraUBO</scope><name>cameraPos</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a76a06e39169e1ce5bb6f5e8a947204df" prot="public" virt="non-virtual"><scope>prism::PGC::CameraUBO</scope><name>proj</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a2d2efb8863870ffc74838e792e4fed34" prot="public" virt="non-virtual"><scope>prism::PGC::CameraUBO</scope><name>view</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a043fbbaf809ef7076c046abec302139a" prot="public" virt="non-virtual"><scope>prism::PGC::CameraUBO</scope><name>viewProj</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

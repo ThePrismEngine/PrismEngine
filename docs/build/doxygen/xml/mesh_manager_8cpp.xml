@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="mesh_manager_8cpp" kind="file" language="C++">
+    <compoundname>meshManager.cpp</compoundname>
+    <includes refid="mesh_manager_8h" local="yes">meshManager.h</includes>
+    <includes refid="mesh_loader_8h" local="yes">meshLoader.h</includes>
+    <includes refid="buffer_wrapper_8h" local="yes">bufferWrapper.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="22">
+        <label>bufferWrapper.h</label>
+        <link refid="buffer_wrapper_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>meshLoader.h</label>
+        <link refid="mesh_loader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshManager.cpp</label>
+        <link refid="mesh_manager_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>meshManager.h</label>
+        <link refid="mesh_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SDL.h</label>
+      </node>
+      <node id="16">
+        <label>array</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="13">
+        <label>glm.hpp</label>
+      </node>
+      <node id="7">
+        <label>optional</label>
+      </node>
+      <node id="18">
+        <label>stdexcept</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="14">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mesh_manager_8h" kindref="compound">meshManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mesh_loader_8h" kindref="compound">meshLoader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_wrapper_8h" kindref="compound">bufferWrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><ref refid="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" kindref="member">prism::Mesh</ref><sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1ad8e196abefb40df09e4261e052006594" kindref="member">prism::PGC::MeshManager::addMesh</ref>(utils::Context*<sp/>context,<sp/>std::string<sp/>texturePath)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>prism::PGC::MeshData<sp/>mesh<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_loader_1a75216c52a3c93d04d6c74a2ed03c15ef" kindref="member">MeshLoader::load</ref>(texturePath);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//if<sp/>(vertices.empty()<sp/>||<sp/>indices.empty())<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>return<sp/>INVALID_MESH_ID;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" kindref="member">Mesh</ref><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>.vertexOffset<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(context-&gt;allVertices.size());</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>.vertexCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(mesh.<ref refid="structprism_1_1_p_g_c_1_1_mesh_data_1a4bc43f340a4e404e00b2cf8d589daaa8" kindref="member">vertices</ref>.size());</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>.indexOffset<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(context-&gt;allIndices.size());</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>.indexCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(mesh.<ref refid="structprism_1_1_p_g_c_1_1_mesh_data_1ab796f684d17a6f311a68ee8c7b92a508" kindref="member">indices</ref>.size());</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;allVertices.insert(context-&gt;allVertices.end(),<sp/>mesh.<ref refid="structprism_1_1_p_g_c_1_1_mesh_data_1a4bc43f340a4e404e00b2cf8d589daaa8" kindref="member">vertices</ref>.begin(),<sp/>mesh.<ref refid="structprism_1_1_p_g_c_1_1_mesh_data_1a4bc43f340a4e404e00b2cf8d589daaa8" kindref="member">vertices</ref>.end());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;allIndices.insert(context-&gt;allIndices.end(),<sp/>mesh.<ref refid="structprism_1_1_p_g_c_1_1_mesh_data_1ab796f684d17a6f311a68ee8c7b92a508" kindref="member">indices</ref>.begin(),<sp/>mesh.<ref refid="structprism_1_1_p_g_c_1_1_mesh_data_1ab796f684d17a6f311a68ee8c7b92a508" kindref="member">indices</ref>.end());</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" kindref="member">prism::Mesh</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a2f792d6e9147bde63a6dc87e8a27f6d2" kindref="member">getNextAvailableIndex</ref>(context);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&gt;=<sp/>context-&gt;meshes.size())<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;meshes.push_back(info);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;meshes[id]<sp/>=<sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;meshBuffersDirty<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a3a85932f084ad97b08bbd3e5d041fdb6" kindref="member">prism::PGC::MeshManager::update</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!context-&gt;meshBuffersDirty)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Освобождаем<sp/>старые<sp/>буферы<sp/>если<sp/>они<sp/>существуют</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;vertexBuffer<sp/>!=<sp/>VK_NULL_HANDLE)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroyBuffer(context-&gt;device,<sp/>context-&gt;vertexBuffer,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkFreeMemory(context-&gt;device,<sp/>context-&gt;vertexBufferMemory,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(context-&gt;indexBuffer<sp/>!=<sp/>VK_NULL_HANDLE)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroyBuffer(context-&gt;device,<sp/>context-&gt;indexBuffer,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkFreeMemory(context-&gt;device,<sp/>context-&gt;indexBufferMemory,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Создаем<sp/>новые<sp/>буферы<sp/>с<sp/>актуальными<sp/>данными</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!context-&gt;allVertices.empty())<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a9ef9f5cb858ca4a25e773b5d62e2a0de" kindref="member">BufferWrapper::createVertexBuffer</ref>(context);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!context-&gt;allIndices.empty())<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a021d6dd30688e704d4ad191bbcaaea40" kindref="member">BufferWrapper::createIndexBuffer</ref>(context);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;meshBuffersDirty<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1ab14cf34dcf9571afa71cea03bf548c94" kindref="member">prism::PGC::MeshManager::clear</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;meshes.clear();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;allVertices.clear();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;allIndices.clear();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;freeMeshIndices.clear();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;meshBuffersDirty<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">prism::PGC::Mesh&amp;<sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a89e892d582f289d16d39636bc441d013" kindref="member">prism::PGC::MeshManager::getMeshInfo</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/><ref refid="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" kindref="member">prism::Mesh</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1_p_g_c_1_1_mesh" kindref="compound">Mesh</ref><sp/>emptyInfo<sp/>=<sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(id<sp/>&lt;<sp/>context-&gt;meshes.size())<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>context-&gt;meshes[id];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>emptyInfo;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">uint32_t<sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a2f792d6e9147bde63a6dc87e8a27f6d2" kindref="member">prism::PGC::MeshManager::getNextAvailableIndex</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!context-&gt;freeMeshIndices.empty())<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>index<sp/>=<sp/>context-&gt;freeMeshIndices.back();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;freeMeshIndices.pop_back();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>index;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(context-&gt;meshes.size());</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshManager.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1scene_1_1_component_manager" kind="class" language="C++" prot="public">
+    <compoundname>prism::scene::ComponentManager</compoundname>
+    <includes refid="component_manager_8h" local="no">componentManager.h</includes>
+    <innerclass refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage" prot="private">prism::scene::ComponentManager::ComponentStorage</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage" prot="private">prism::scene::ComponentManager::IComponentStorage</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_component_manager_1a6a1a60608eac94caea1b144d2697b5fd" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::type_index, std::unique_ptr&lt; <ref refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage" kindref="compound">IComponentStorage</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::type_index, std::unique_ptr&lt;IComponentStorage&gt; &gt; prism::scene::ComponentManager::componentStorages</definition>
+        <argsstring></argsstring>
+        <name>componentStorages</name>
+        <qualifiedname>prism::scene::ComponentManager::componentStorages</qualifiedname>
+        <briefdescription>
+<para>Карта хранилищ компонентов по типу </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="159" column="32" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_component_manager_1a5273dbd0f3a9fdb9ab9de36d0b53012f" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::type_index, std::unique_ptr&lt; std::set&lt; <ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref> &gt; &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::type_index, std::unique_ptr&lt;std::set&lt;Entity&gt; &gt; &gt; prism::scene::ComponentManager::entitiesWithComponentSets</definition>
+        <argsstring></argsstring>
+        <name>entitiesWithComponentSets</name>
+        <qualifiedname>prism::scene::ComponentManager::entitiesWithComponentSets</qualifiedname>
+        <briefdescription>
+<para>Карта множеств сущностей по типу компонента </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="162" column="32" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1a6c739470f713ecd5abb532ac163b6926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::scene::ComponentManager::ComponentManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>ComponentManager</name>
+        <qualifiedname>prism::scene::ComponentManager::ComponentManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="17" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1a7ee343b770cd5a1a67fd68d50bec2ca0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool prism::scene::ComponentManager::addComponent</definition>
+        <argsstring>(Entity entityId, T component)</argsstring>
+        <name>addComponent</name>
+        <qualifiedname>prism::scene::ComponentManager::addComponent</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+          <declname>entityId</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Добавляет компонент к сущности </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Тип компонента </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор сущности </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Компонент для добавления </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true если компонент успешно добавлен, false в противном случае</para>
+</simplesect>
+Создает копию компонента и связывает его с сущностью </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="26" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1a9e173149b5cb23f208ade28e5ee34f4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool prism::scene::ComponentManager::removeComponent</definition>
+        <argsstring>(Entity entityId)</argsstring>
+        <name>removeComponent</name>
+        <qualifiedname>prism::scene::ComponentManager::removeComponent</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+          <declname>entityId</declname>
+        </param>
+        <briefdescription>
+<para>Удаляет компонент у сущности </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Тип компонента </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор сущности </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true если компонент существовал и был удален, false в противном случае </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="38" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="38" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1a14aed5f1bd821d92fd91577a63cdad7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T * prism::scene::ComponentManager::getComponent</definition>
+        <argsstring>(Entity entityId)</argsstring>
+        <name>getComponent</name>
+        <qualifiedname>prism::scene::ComponentManager::getComponent</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+          <declname>entityId</declname>
+        </param>
+        <briefdescription>
+<para>Получает компонент сущности </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Тип компонента </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор сущности </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Указатель на компонент или nullptr если компонент не найден </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="53" column="15" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1ad91853d37150f5c4add892dc7fa6fcea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>const std::set&lt; <ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref> &gt; &amp;</type>
+        <definition>const std::set&lt; Entity &gt; &amp; prism::scene::ComponentManager::getEntitiesWith</definition>
+        <argsstring>() const</argsstring>
+        <name>getEntitiesWith</name>
+        <qualifiedname>prism::scene::ComponentManager::getEntitiesWith</qualifiedname>
+        <briefdescription>
+<para>Получает все сущности, имеющие компонент указанного типа </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Тип компонента </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Константная ссылка на множество сущностей с компонентом </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="64" column="28" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="64" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1acffef2c762094de4bd7ca08593f8139d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::set&lt; <ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref> &gt; &amp;</type>
+        <definition>std::set&lt; Entity &gt; &amp; prism::scene::ComponentManager::getEntitiesWith</definition>
+        <argsstring>()</argsstring>
+        <name>getEntitiesWith</name>
+        <qualifiedname>prism::scene::ComponentManager::getEntitiesWith</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="73" column="22" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="73" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1af84b9831cf557c0d8beb0f43ea85782c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>ComponentTypes</declname>
+            <defname>ComponentTypes</defname>
+          </param>
+        </templateparamlist>
+        <type>std::set&lt; <ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref> &gt;</type>
+        <definition>std::set&lt; Entity &gt; prism::scene::ComponentManager::getEntitiesWithAll</definition>
+        <argsstring>() const</argsstring>
+        <name>getEntitiesWithAll</name>
+        <qualifiedname>prism::scene::ComponentManager::getEntitiesWithAll</qualifiedname>
+        <briefdescription>
+<para>Получает все сущности, имеющие все указанные типы компонентов </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ComponentTypes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Типы компонентов для поиска </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Множество сущностей, содержащих все запрошенные компоненты</para>
+</simplesect>
+Выполняет пересечение множеств сущностей для каждого типа компонента </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="86" column="22" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="86" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1a207f9e235e87280a6b072f4a03d0b91b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::scene::ComponentManager::removeAllComponents</definition>
+        <argsstring>(Entity entityId)</argsstring>
+        <name>removeAllComponents</name>
+        <qualifiedname>prism::scene::ComponentManager::removeAllComponents</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+          <declname>entityId</declname>
+        </param>
+        <briefdescription>
+<para>Удаляет все компоненты у сущности </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор сущности </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="122" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.cpp" bodystart="3" bodyend="12"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1scene_1_1_component_manager_1a89b0e0805d4739180f8c826aff31aed2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage" kindref="compound">ComponentStorage</ref>&lt; T &gt; &amp;</type>
+        <definition>ComponentStorage&lt; T &gt; &amp; prism::scene::ComponentManager::getComponentStorage</definition>
+        <argsstring>()</argsstring>
+        <name>getComponentStorage</name>
+        <qualifiedname>prism::scene::ComponentManager::getComponentStorage</qualifiedname>
+        <briefdescription>
+<para>Получает хранилище для конкретного типа компонента </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Тип компонента </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ссылка на хранилище компонентов типа T </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="150" column="30" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="150" bodyend="156"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Менеджер для управления компонентами сущностей </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Обеспечивает хранение, добавление, удаление и поиск компонентов </para>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="14" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="15" bodyend="163"/>
+    <listofallmembers>
+      <member refid="classprism_1_1scene_1_1_component_manager_1a7ee343b770cd5a1a67fd68d50bec2ca0" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>addComponent</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1a6c739470f713ecd5abb532ac163b6926" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>ComponentManager</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1a6a1a60608eac94caea1b144d2697b5fd" prot="private" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>componentStorages</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1a5273dbd0f3a9fdb9ab9de36d0b53012f" prot="private" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>entitiesWithComponentSets</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1a14aed5f1bd821d92fd91577a63cdad7f" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>getComponent</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1a89b0e0805d4739180f8c826aff31aed2" prot="private" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>getComponentStorage</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1ad91853d37150f5c4add892dc7fa6fcea" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>getEntitiesWith</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1acffef2c762094de4bd7ca08593f8139d" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>getEntitiesWith</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1af84b9831cf557c0d8beb0f43ea85782c" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>getEntitiesWithAll</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1a207f9e235e87280a6b072f4a03d0b91b" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>removeAllComponents</name></member>
+      <member refid="classprism_1_1scene_1_1_component_manager_1a9e173149b5cb23f208ade28e5ee34f4d" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager</scope><name>removeComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

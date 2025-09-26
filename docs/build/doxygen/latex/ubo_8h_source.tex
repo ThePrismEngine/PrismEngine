@@ -1,0 +1,36 @@
+\doxysection{ubo.\+h}
+\hypertarget{ubo_8h_source}{}\label{ubo_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/ubo.h}}
+\mbox{\hyperlink{ubo_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}glm.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan\_core.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c}{PGC}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_object_u_b_o}{ObjectUBO}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{alignas}(16)\ glm::mat4\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_object_u_b_o_a116be138b0d14867cc65ed71ba14679f}{model}};}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{alignas}(16)\ glm::mat4\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_object_u_b_o_ad31ca5726b7ebe6df52fb0a52e43766e}{normals}};}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_camera_u_b_o}{CameraUBO}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{alignas}(16)\ glm::mat4\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_camera_u_b_o_a2d2efb8863870ffc74838e792e4fed34}{view}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{alignas}(16)\ glm::mat4\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_camera_u_b_o_a76a06e39169e1ce5bb6f5e8a947204df}{proj}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{alignas}(16)\ glm::mat4\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_camera_u_b_o_a043fbbaf809ef7076c046abec302139a}{viewProj}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{alignas}(16)\ glm::vec3\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_camera_u_b_o_a4086fc90287a22a756b8543a9763764d}{cameraPos}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers}{UniformBuffers}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ VkBuffer\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers_ae28940e1bd6c86448eaf0fdc9a6d32b5}{camera}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ VkDeviceMemory\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers_a1547b44dc337c2b7a1c7c08b055e74ba}{cameraMemory}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers_aaa836b6e43906acf9d68af4e52eefc14}{cameraMapped}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ VkBuffer\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers_ada37f01ba2a25fd49a0bba2e7df446a7}{object}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ VkDeviceMemory\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers_a131612e5d7939c23ec5161aaf97d4b78}{objectMemory}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_uniform_buffers_a0b6df00b37a6636c0726ba3a62efc9ed}{objectMapped}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}

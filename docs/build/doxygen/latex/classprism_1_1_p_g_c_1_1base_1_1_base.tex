@@ -1,0 +1,199 @@
+\doxysection{Класс prism\+::PGC\+::base\+::Base}
+\hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base}{}\label{classprism_1_1_p_g_c_1_1base_1_1_base}\index{prism::PGC::base::Base@{prism::PGC::base::Base}}
+
+
+{\ttfamily \#include $<$base.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a8e779fa1c21f0cf85c6266b414450200}{Base}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a5e78710df6af2bd95cbf365d6a56dd3a}{init}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a6792acb9ae7b492590b48d6ec4a115a5}{context}}, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a879e0eca305bc4d05ee0dd5f68946c9d}{settings}})
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_ac97c049af5147002e8c6399d6eb1479c}{\texorpdfstring{$\sim$}{\string~}\+Base}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a9c0300069ebded997a9ab608bd18734b}{cleanup}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_aabe93e25020c9e6387bb7d8ec9a839db}{create}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_aae3ea4b54eb2abb5183ab15af7123c73}{create\+Instance}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a3c28f273f80c69439abe0f067f661692}{setup\+Debug\+Messenger}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_af4e03b04645178568deb025d985d3faf}{pick\+Physical\+Device}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a4ad9dc34bca6ea2629b22af7ee3b7594}{create\+Surface}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a7159217f3f0694baa2c0e5d3da2497e0}{create\+Logical\+Device}} ()
+\item 
+bool \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_aeeb68987aa79cbb01f04c14be9942dd4}{check\+Validation\+Layer\+Support}} ()
+\item 
+std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a634d029f5850961ba6819d6334bbd17b}{get\+Required\+Extensions}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a6cd1f74bdaa58779c4f7e017aa0be2f8}{populate\+Debug\+Messenger\+Create\+Info}} (Vk\+Debug\+Utils\+Messenger\+Create\+Info\+EXT \&create\+Info)
+\item 
+Vk\+Sample\+Count\+Flag\+Bits \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_ac29f5e2a550983d3f2ec7bd9c73863de}{get\+Max\+Usable\+Sample\+Count}} ()
+\item 
+std\+::vector$<$ Vk\+Sample\+Count\+Flag\+Bits $>$ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a9c4f62c73bebb1a8acd7e045f52eb005}{get\+Possible\+Counts}} (Vk\+Sample\+Count\+Flag\+Bits max\+Count)
+\item 
+Vk\+Sample\+Count\+Flag\+Bits \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_af32784fe71c111c6a16d7944380e21f0}{get\+Msaa\+Samples}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static VKAPI\+\_\+\+ATTR Vk\+Bool32 VKAPI\+\_\+\+CALL \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a4b5b95811813234f8d15ab948a7944a4}{debug\+Callback}} (Vk\+Debug\+Utils\+Message\+Severity\+Flag\+Bits\+EXT message\+Severity, Vk\+Debug\+Utils\+Message\+Type\+Flags\+EXT message\+Type, const Vk\+Debug\+Utils\+Messenger\+Callback\+Data\+EXT \texorpdfstring{$\ast$}{*}p\+Callback\+Data, void \texorpdfstring{$\ast$}{*}p\+User\+Data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a6792acb9ae7b492590b48d6ec4a115a5}{context}}
+\item 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_a879e0eca305bc4d05ee0dd5f68946c9d}{settings}}
+\item 
+Vk\+Debug\+Utils\+Messenger\+EXT \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base_ab7493519804d682d5e38803b9fafe339}{debug\+Messenger}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a8e779fa1c21f0cf85c6266b414450200}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!Base@{Base}}
+\index{Base@{Base}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{Base()}{Base()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a8e779fa1c21f0cf85c6266b414450200} 
+prism\+::\+PGC\+::base\+::\+Base\+::\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_ac97c049af5147002e8c6399d6eb1479c}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!````~Base@{\texorpdfstring{$\sim$}{\string~}Base}}
+\index{````~Base@{\texorpdfstring{$\sim$}{\string~}Base}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Base()}{\string~Base()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_ac97c049af5147002e8c6399d6eb1479c} 
+prism\+::\+PGC\+::base\+::\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_aeeb68987aa79cbb01f04c14be9942dd4}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!checkValidationLayerSupport@{checkValidationLayerSupport}}
+\index{checkValidationLayerSupport@{checkValidationLayerSupport}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{checkValidationLayerSupport()}{checkValidationLayerSupport()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_aeeb68987aa79cbb01f04c14be9942dd4} 
+bool prism\+::\+PGC\+::base\+::\+Base\+::check\+Validation\+Layer\+Support (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a9c0300069ebded997a9ab608bd18734b}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a9c0300069ebded997a9ab608bd18734b} 
+void prism\+::\+PGC\+::base\+::\+Base\+::cleanup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_aabe93e25020c9e6387bb7d8ec9a839db}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!create@{create}}
+\index{create@{create}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_aabe93e25020c9e6387bb7d8ec9a839db} 
+void prism\+::\+PGC\+::base\+::\+Base\+::create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_aae3ea4b54eb2abb5183ab15af7123c73}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!createInstance@{createInstance}}
+\index{createInstance@{createInstance}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{createInstance()}{createInstance()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_aae3ea4b54eb2abb5183ab15af7123c73} 
+void prism\+::\+PGC\+::base\+::\+Base\+::create\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a7159217f3f0694baa2c0e5d3da2497e0}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!createLogicalDevice@{createLogicalDevice}}
+\index{createLogicalDevice@{createLogicalDevice}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{createLogicalDevice()}{createLogicalDevice()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a7159217f3f0694baa2c0e5d3da2497e0} 
+void prism\+::\+PGC\+::base\+::\+Base\+::create\+Logical\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a4ad9dc34bca6ea2629b22af7ee3b7594}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!createSurface@{createSurface}}
+\index{createSurface@{createSurface}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{createSurface()}{createSurface()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a4ad9dc34bca6ea2629b22af7ee3b7594} 
+void prism\+::\+PGC\+::base\+::\+Base\+::create\+Surface (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a4b5b95811813234f8d15ab948a7944a4}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!debugCallback@{debugCallback}}
+\index{debugCallback@{debugCallback}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{debugCallback()}{debugCallback()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a4b5b95811813234f8d15ab948a7944a4} 
+VKAPI\+\_\+\+ATTR Vk\+Bool32 VKAPI\+\_\+\+CALL prism\+::\+PGC\+::base\+::\+Base\+::debug\+Callback (\begin{DoxyParamCaption}\item[{Vk\+Debug\+Utils\+Message\+Severity\+Flag\+Bits\+EXT}]{message\+Severity}{, }\item[{Vk\+Debug\+Utils\+Message\+Type\+Flags\+EXT}]{message\+Type}{, }\item[{const Vk\+Debug\+Utils\+Messenger\+Callback\+Data\+EXT \texorpdfstring{$\ast$}{*}}]{p\+Callback\+Data}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+User\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_ac29f5e2a550983d3f2ec7bd9c73863de}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!getMaxUsableSampleCount@{getMaxUsableSampleCount}}
+\index{getMaxUsableSampleCount@{getMaxUsableSampleCount}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{getMaxUsableSampleCount()}{getMaxUsableSampleCount()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_ac29f5e2a550983d3f2ec7bd9c73863de} 
+Vk\+Sample\+Count\+Flag\+Bits prism\+::\+PGC\+::base\+::\+Base\+::get\+Max\+Usable\+Sample\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_af32784fe71c111c6a16d7944380e21f0}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!getMsaaSamples@{getMsaaSamples}}
+\index{getMsaaSamples@{getMsaaSamples}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{getMsaaSamples()}{getMsaaSamples()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_af32784fe71c111c6a16d7944380e21f0} 
+Vk\+Sample\+Count\+Flag\+Bits prism\+::\+PGC\+::base\+::\+Base\+::get\+Msaa\+Samples (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a9c4f62c73bebb1a8acd7e045f52eb005}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!getPossibleCounts@{getPossibleCounts}}
+\index{getPossibleCounts@{getPossibleCounts}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{getPossibleCounts()}{getPossibleCounts()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a9c4f62c73bebb1a8acd7e045f52eb005} 
+std\+::vector$<$ Vk\+Sample\+Count\+Flag\+Bits $>$ prism\+::\+PGC\+::base\+::\+Base\+::get\+Possible\+Counts (\begin{DoxyParamCaption}\item[{Vk\+Sample\+Count\+Flag\+Bits}]{max\+Count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a634d029f5850961ba6819d6334bbd17b}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!getRequiredExtensions@{getRequiredExtensions}}
+\index{getRequiredExtensions@{getRequiredExtensions}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{getRequiredExtensions()}{getRequiredExtensions()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a634d029f5850961ba6819d6334bbd17b} 
+std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ prism\+::\+PGC\+::base\+::\+Base\+::get\+Required\+Extensions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a5e78710df6af2bd95cbf365d6a56dd3a}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!init@{init}}
+\index{init@{init}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a5e78710df6af2bd95cbf365d6a56dd3a} 
+void prism\+::\+PGC\+::base\+::\+Base\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}}]{settings}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_af4e03b04645178568deb025d985d3faf}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!pickPhysicalDevice@{pickPhysicalDevice}}
+\index{pickPhysicalDevice@{pickPhysicalDevice}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{pickPhysicalDevice()}{pickPhysicalDevice()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_af4e03b04645178568deb025d985d3faf} 
+void prism\+::\+PGC\+::base\+::\+Base\+::pick\+Physical\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a6cd1f74bdaa58779c4f7e017aa0be2f8}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!populateDebugMessengerCreateInfo@{populateDebugMessengerCreateInfo}}
+\index{populateDebugMessengerCreateInfo@{populateDebugMessengerCreateInfo}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{populateDebugMessengerCreateInfo()}{populateDebugMessengerCreateInfo()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a6cd1f74bdaa58779c4f7e017aa0be2f8} 
+void prism\+::\+PGC\+::base\+::\+Base\+::populate\+Debug\+Messenger\+Create\+Info (\begin{DoxyParamCaption}\item[{Vk\+Debug\+Utils\+Messenger\+Create\+Info\+EXT \&}]{create\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a3c28f273f80c69439abe0f067f661692}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!setupDebugMessenger@{setupDebugMessenger}}
+\index{setupDebugMessenger@{setupDebugMessenger}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{setupDebugMessenger()}{setupDebugMessenger()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a3c28f273f80c69439abe0f067f661692} 
+void prism\+::\+PGC\+::base\+::\+Base\+::setup\+Debug\+Messenger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a6792acb9ae7b492590b48d6ec4a115a5}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!context@{context}}
+\index{context@{context}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a6792acb9ae7b492590b48d6ec4a115a5} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}}\texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::base\+::\+Base\+::context\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_ab7493519804d682d5e38803b9fafe339}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!debugMessenger@{debugMessenger}}
+\index{debugMessenger@{debugMessenger}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{debugMessenger}{debugMessenger}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_ab7493519804d682d5e38803b9fafe339} 
+Vk\+Debug\+Utils\+Messenger\+EXT prism\+::\+PGC\+::base\+::\+Base\+::debug\+Messenger\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1base_1_1_base_a879e0eca305bc4d05ee0dd5f68946c9d}\index{prism::PGC::base::Base@{prism::PGC::base::Base}!settings@{settings}}
+\index{settings@{settings}!prism::PGC::base::Base@{prism::PGC::base::Base}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1base_1_1_base_a879e0eca305bc4d05ee0dd5f68946c9d} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}}\texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::base\+::\+Base\+::settings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{base_8h}{base.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{base_8cpp}{base.\+cpp}}\end{DoxyCompactItemize}

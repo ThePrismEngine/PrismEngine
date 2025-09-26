@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1scene_1_1_transform_component" kind="struct" language="C++" prot="public">
+    <compoundname>prism::scene::TransformComponent</compoundname>
+    <includes refid="transform_component_8h" local="no">transformComponent.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1scene_1_1_position" kindref="compound">Position</ref></type>
+        <definition>Position prism::scene::TransformComponent::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>prism::scene::TransformComponent::pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" line="19" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_transform_component_1afe6bbe02710e5c9704ecdfa0f5629932" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1scene_1_1_rotation" kindref="compound">Rotation</ref></type>
+        <definition>Rotation prism::scene::TransformComponent::rot</definition>
+        <argsstring></argsstring>
+        <name>rot</name>
+        <qualifiedname>prism::scene::TransformComponent::rot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" line="20" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_transform_component_1a3270258dd47f2b1caa104acac83edbd7" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1scene_1_1_scale" kindref="compound">Scale</ref></type>
+        <definition>Scale prism::scene::TransformComponent::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>prism::scene::TransformComponent::scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" line="21" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>prism::scene::Position</label>
+        <link refid="structprism_1_1scene_1_1_position"/>
+      </node>
+      <node id="3">
+        <label>prism::scene::Rotation</label>
+        <link refid="structprism_1_1scene_1_1_rotation"/>
+      </node>
+      <node id="4">
+        <label>prism::scene::Scale</label>
+        <link refid="structprism_1_1scene_1_1_scale"/>
+      </node>
+      <node id="1">
+        <label>prism::scene::TransformComponent</label>
+        <link refid="structprism_1_1scene_1_1_transform_component"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>pos</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>rot</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>scale</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" line="17" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/transformComponent.h" bodystart="18" bodyend="22"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" prot="public" virt="non-virtual"><scope>prism::scene::TransformComponent</scope><name>pos</name></member>
+      <member refid="structprism_1_1scene_1_1_transform_component_1afe6bbe02710e5c9704ecdfa0f5629932" prot="public" virt="non-virtual"><scope>prism::scene::TransformComponent</scope><name>rot</name></member>
+      <member refid="structprism_1_1scene_1_1_transform_component_1a3270258dd47f2b1caa104acac83edbd7" prot="public" virt="non-virtual"><scope>prism::scene::TransformComponent</scope><name>scale</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

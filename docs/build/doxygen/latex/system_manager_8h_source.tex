@@ -1,0 +1,37 @@
+\doxysection{system\+Manager.\+h}
+\hypertarget{system_manager_8h_source}{}\label{system_manager_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/systemManager.h}}
+\mbox{\hyperlink{system_manager_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{system_8h}{system.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1scene}{scene}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a37b3f8b281e8503f6f4d08de1e8a2aa0}{SystemManager}}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a37b3f8b281e8503f6f4d08de1e8a2aa0}{SystemManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1scene_a26a27fa2da7635c84c4d875e8cdac5de}{SystemId}}\ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a871edb29fd162e17d59b3d36fe3bfae6}{registerSystem}}(Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a7430581dc763a8217472d313a2145a5a}{systems}}.push\_back(std::make\_unique<T>(std::forward<Args>(args)...));}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a7430581dc763a8217472d313a2145a5a}{systems}}.size()\ -\/\ 1;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a0810e774cfc31a4cf1c1eb3bac4f0997}{enableSystem}}(\mbox{\hyperlink{namespaceprism_1_1scene_a26a27fa2da7635c84c4d875e8cdac5de}{SystemId}}\ systemId);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a277d39c230cb33e55636aaa60d844c04}{disableSystem}}(\mbox{\hyperlink{namespaceprism_1_1scene_a26a27fa2da7635c84c4d875e8cdac5de}{SystemId}}\ systemId);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_acfa1db8417866bfce1b77d4aa76e1a09}{update}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<ISystem>>\ \mbox{\hyperlink{classprism_1_1scene_1_1_system_manager_a7430581dc763a8217472d313a2145a5a}{systems}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}

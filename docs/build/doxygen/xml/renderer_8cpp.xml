@@ -1,0 +1,848 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="renderer_8cpp" kind="file" language="C++">
+    <compoundname>renderer.cpp</compoundname>
+    <includes refid="renderer_8h" local="yes">renderer.h</includes>
+    <includes refid="mesh_manager_8h" local="yes">meshManager.h</includes>
+    <includes refid="texture_manager_8h" local="yes">textureManager.h</includes>
+    <includes local="no">gtc/quaternion.hpp</includes>
+    <incdepgraph>
+      <node id="18">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="50">
+        <label>Window.h</label>
+        <link refid="_window_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>bufferWrapper.h</label>
+        <link refid="buffer_wrapper_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>cameraComponent.h</label>
+        <link refid="camera_component_8h"/>
+      </node>
+      <node id="48">
+        <label>descriptorSet.h</label>
+        <link refid="descriptor_set_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>descriptorSetLayout.h</label>
+        <link refid="descriptor_set_layout_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>deviceChecker.h</label>
+        <link refid="device_checker_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>deviceRater.h</label>
+        <link refid="device_rater_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>fmath.h</label>
+        <link refid="fmath_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>graphicsPipeline.h</label>
+        <link refid="graphics_pipeline_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>meshComponent.h</label>
+        <link refid="mesh_component_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>meshManager.h</label>
+        <link refid="mesh_manager_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>prismGraphicCore.h</label>
+        <link refid="prism_graphic_core_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>renderPass.h</label>
+        <link refid="render_pass_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.cpp</label>
+        <link refid="renderer_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>renderer.h</label>
+        <link refid="renderer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>resourcesCreater.h</label>
+        <link refid="resources_creater_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>shaderStagesLoader.h</label>
+        <link refid="shader_stages_loader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>swapChain.h</label>
+        <link refid="swap_chain_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>textureComponent.h</label>
+        <link refid="texture_component_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>textureManager.h</label>
+        <link refid="texture_manager_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>transformComponent.h</label>
+        <link refid="transform_component_8h"/>
+      </node>
+      <node id="35">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SDL.h</label>
+      </node>
+      <node id="20">
+        <label>SDL2/SDL_log.h</label>
+      </node>
+      <node id="11">
+        <label>SDL_vulkan.h</label>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="25">
+        <label>array</label>
+      </node>
+      <node id="17">
+        <label>chrono</label>
+      </node>
+      <node id="30">
+        <label>corecrt_math_defines.h</label>
+      </node>
+      <node id="38">
+        <label>cstdint</label>
+      </node>
+      <node id="21">
+        <label>fstream</label>
+      </node>
+      <node id="28">
+        <label>glm.hpp</label>
+      </node>
+      <node id="31">
+        <label>gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="58">
+        <label>gtc/quaternion.hpp</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="12">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>optional</label>
+      </node>
+      <node id="13">
+        <label>set</label>
+      </node>
+      <node id="9">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>unordered_map</label>
+      </node>
+      <node id="33">
+        <label>unordered_set</label>
+      </node>
+      <node id="10">
+        <label>utility</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="24">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="renderer_8h" kindref="compound">renderer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mesh_manager_8h" kindref="compound">meshManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="texture_manager_8h" kindref="compound">textureManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtc/quaternion.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a224455fc4449d00731733f10c5f251d2" kindref="member">prism::render::Renderer::linkWindow</ref>(Window*<sp/>window)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" kindref="member">window</ref><sp/>=<sp/><ref refid="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" kindref="member">window</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="classprism_1_1render_1_1_renderer_1a8a00f1ca3f3749a416a659571f48d449" kindref="member">prism::render::Renderer::~Renderer</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1af0a1b4efcfc3e10305aa63d853211969" kindref="member">prism::render::Renderer::init</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.windowResized<sp/>=<sp/>&amp;window-&gt;windowResized;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.windowMinimized<sp/>=<sp/>&amp;window-&gt;windowMinimized;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.context.textures.push_back(PGC::Texture{});</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.init(this-&gt;settings);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a49701f3b045b5b337965b23dab0e4c1b" kindref="member">prism::render::Renderer::isRenderingActive</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pgc.isWindowReadyForRendering(this-&gt;window-&gt;sdlWindow))<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pgc.context.wasRenderingActive)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>awaitRenderingCompletion();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.wasRenderingActive<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_PumpEvents();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Delay(10);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.context.wasRenderingActive<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a5f9fa3afbeab8957d89e39a01df6e4ee" kindref="member">prism::render::Renderer::beginFrame</ref>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>vkWaitForFences(pgc.context.device,<sp/>1,<sp/>&amp;pgc.context.inFlightFences[pgc.context.currentFrame],<sp/>VK_TRUE,<sp/>UINT64_MAX);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>VkResult<sp/>result<sp/>=<sp/>vkAcquireNextImageKHR(pgc.context.device,<sp/>pgc.context.vkSwapChain,<sp/>UINT64_MAX,<sp/>pgc.context.imageAvailableSemaphores[pgc.context.currentFrame],<sp/>VK_NULL_HANDLE,<sp/>&amp;pgc.context.imageIndex);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>VK_ERROR_OUT_OF_DATE_KHR)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.getSwapChainPtr()-&gt;recreate();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>VK_SUCCESS<sp/>&amp;&amp;<sp/>result<sp/>!=<sp/>VK_SUBOPTIMAL_KHR)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>acquire<sp/>swap<sp/>chain<sp/>image!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ada03788c5ed3af510750bd0a8594a414" kindref="member">prism::render::Renderer::endFrame</ref>()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSubmitInfo<sp/>submitInfo{};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_SUBMIT_INFO;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSemaphore<sp/>waitSemaphores[]<sp/>=<sp/>{<sp/>pgc.context.imageAvailableSemaphores[pgc.context.currentFrame]<sp/>};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineStageFlags<sp/>waitStages[]<sp/>=<sp/>{<sp/>VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT<sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.waitSemaphoreCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.pWaitSemaphores<sp/>=<sp/>waitSemaphores;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.pWaitDstStageMask<sp/>=<sp/>waitStages;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.commandBufferCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.pCommandBuffers<sp/>=<sp/>&amp;pgc.context.commandBuffers[pgc.context.currentFrame];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSemaphore<sp/>signalSemaphores[]<sp/>=<sp/>{<sp/>pgc.context.renderFinishedSemaphores[pgc.context.currentFrame]<sp/>};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.signalSemaphoreCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.pSignalSemaphores<sp/>=<sp/>signalSemaphores;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkQueueSubmit(pgc.context.graphicsQueue,<sp/>1,<sp/>&amp;submitInfo,<sp/>pgc.context.inFlightFences[pgc.context.currentFrame])<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>submit<sp/>draw<sp/>command<sp/>buffer!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPresentInfoKHR<sp/>presentInfo{};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>presentInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>presentInfo.waitSemaphoreCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>presentInfo.pWaitSemaphores<sp/>=<sp/>signalSemaphores;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSwapchainKHR<sp/>swapChains[]<sp/>=<sp/>{<sp/>pgc.context.vkSwapChain<sp/>};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>presentInfo.swapchainCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>presentInfo.pSwapchains<sp/>=<sp/>swapChains;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>presentInfo.pImageIndices<sp/>=<sp/>&amp;pgc.context.imageIndex;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>VkResult<sp/>result<sp/>=<sp/>vkQueuePresentKHR(pgc.context.presentQueue,<sp/>&amp;presentInfo);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>VK_ERROR_OUT_OF_DATE_KHR<sp/>||<sp/>result<sp/>==<sp/>VK_SUBOPTIMAL_KHR<sp/>||<sp/>*pgc.windowResized)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pgc.windowResized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.getSwapChainPtr()-&gt;recreate();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>present<sp/>swap<sp/>chain<sp/>image!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.context.currentFrame<sp/>=<sp/>(pgc.context.currentFrame<sp/>+<sp/>1)<sp/>%<sp/>pgc.context.MAX_FRAMES_IN_FLIGHT;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ad8fd91a24b9288dde8a38e2751b800c8" kindref="member">prism::render::Renderer::beginRender</ref>()</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>vkResetFences(pgc.context.device,<sp/>1,<sp/>&amp;pgc.context.inFlightFences[pgc.context.currentFrame]);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>vkResetCommandBuffer(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/></highlight><highlight class="comment">/*VkCommandBufferResetFlagBits*/</highlight><highlight class="normal"><sp/>0);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>VkCommandBufferBeginInfo<sp/>beginInfo{};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>beginInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>beginInfo.flags<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>Optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>beginInfo.pInheritanceInfo<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkBeginCommandBuffer(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/>&amp;beginInfo)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>begin<sp/>recording<sp/>command<sp/>buffer!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>VkRenderPassBeginInfo<sp/>renderPassInfo{};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.renderPass<sp/>=<sp/>pgc.context.renderPass;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.framebuffer<sp/>=<sp/>pgc.context.swapChainFramebuffers[pgc.context.imageIndex];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.renderArea.offset<sp/>=<sp/>{<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.renderArea.extent<sp/>=<sp/>pgc.context.swapChainExtent;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;VkClearValue,<sp/>2&gt;<sp/>clearValues{};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>clearValues[0].color<sp/>=<sp/>{<sp/>{0.0f,<sp/>0.0f,<sp/>0.0f,<sp/>1.0f}<sp/>};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>clearValues[1].depthStencil<sp/>=<sp/>{<sp/>1.0f,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.clearValueCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(clearValues.size());</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.pClearValues<sp/>=<sp/>clearValues.data();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdBeginRenderPass(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/>&amp;renderPassInfo,<sp/>VK_SUBPASS_CONTENTS_INLINE);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a1010ac870bd190aca9d3120364d3edad" kindref="member">prism::render::Renderer::endRender</ref>()</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdEndRenderPass(pgc.context.commandBuffers[pgc.context.currentFrame]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkEndCommandBuffer(pgc.context.commandBuffers[pgc.context.currentFrame])<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>record<sp/>command<sp/>buffer!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ae3c9523889cbd7f3004e31f906a6f2ff" kindref="member">prism::render::Renderer::updateCamera</ref>(prism::scene::TransformComponent*<sp/>transform,<sp/>prism::scene::CameraComponent*<sp/>camera)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>prism::PGC::utils::CameraData*<sp/>cameraData<sp/>=<sp/>pgc.getCameraDataPtr();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Правильное<sp/>преобразование<sp/>координат:<sp/>X→X,<sp/>Y→Z,<sp/>Z→-Y<sp/>(для<sp/>Vulkan)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraData-&gt;<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1aa86ddf6f4e2fe3f72e06c15be1c1dc8c" kindref="member">pos</ref><sp/>=<sp/>{<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1afb72c8ab2012525655084db905487feb" kindref="member">x</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1a15659c51a61528ab6335c24f7727b44c" kindref="member">y</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1a806e7290cbafa395e9ce83511540d4d4" kindref="member">z</ref><sp/>};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraData-&gt;<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a517cc84de8e2e6420d0ffcf38a744a4d" kindref="member">look</ref><sp/>=<sp/>{<sp/>camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref>.<ref refid="structprism_1_1scene_1_1_look_1a684b68e3cd2118bf8a97b89a163b3498" kindref="member">x</ref>,<sp/>camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref>.<ref refid="structprism_1_1scene_1_1_look_1a24e121b357bda2c5e58f71c55cbb3cd2" kindref="member">y</ref>,<sp/>camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref>.<ref refid="structprism_1_1scene_1_1_look_1ad48bf86097551f962dd84b2c07b25321" kindref="member">z</ref><sp/>};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraData-&gt;<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1ac97568451475afc1ed61acfdb42d1368" kindref="member">fovy</ref><sp/>=<sp/>camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a81a79c9ac6815d97e5738865639124bc" kindref="member">fovy</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraData-&gt;<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a7a931e6d6c78bb75d05966bd4c825479" kindref="member">aspect</ref><sp/>=<sp/>camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a2a20f6f43a213b7c8c79939b24ad6868" kindref="member">aspect</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraData-&gt;<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a54614513275959cfb8064bbec8e14e25" kindref="member">zFar</ref><sp/>=<sp/>camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a7d58fda77459e28f65b5f47a499931a5" kindref="member">zFar</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraData-&gt;<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a0184dc6de3c9bdd30f81ba871ec1da72" kindref="member">zNear</ref><sp/>=<sp/>camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a6b41fc4706802499c3a6f4c274dc9f7e" kindref="member">zNear</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraData-&gt;<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1add1b529f72e631b7824a6ef8e448ec8e" kindref="member">useСurrentWindowAspect</ref><sp/>=<sp/>camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a2fcf04acc5550a83af87e2545e1a857b" kindref="member">useСurrentWindowAspect</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>prism::PGC::CameraUBO<sp/>cameraUbo{};</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Вычисляем<sp/>точку,<sp/>куда<sp/>смотрит<sp/>камера,<sp/>на<sp/>основе<sp/>углов</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec3<sp/>direction;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>direction.x<sp/>=<sp/>cos(glm::radians(camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref>.<ref refid="structprism_1_1scene_1_1_look_1a684b68e3cd2118bf8a97b89a163b3498" kindref="member">x</ref>))<sp/>*<sp/>cos(glm::radians(camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref>.<ref refid="structprism_1_1scene_1_1_look_1a24e121b357bda2c5e58f71c55cbb3cd2" kindref="member">y</ref>));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>direction.y<sp/>=<sp/>sin(glm::radians(camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref>.<ref refid="structprism_1_1scene_1_1_look_1a24e121b357bda2c5e58f71c55cbb3cd2" kindref="member">y</ref>));</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>direction.z<sp/>=<sp/>sin(glm::radians(camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref>.<ref refid="structprism_1_1scene_1_1_look_1a684b68e3cd2118bf8a97b89a163b3498" kindref="member">x</ref>))<sp/>*<sp/>cos(glm::radians(camera-&gt;<ref refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" kindref="member">look</ref>.<ref refid="structprism_1_1scene_1_1_look_1a24e121b357bda2c5e58f71c55cbb3cd2" kindref="member">y</ref>));</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>direction<sp/>=<sp/>glm::normalize(direction);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec3<sp/>cameraPos<sp/>=<sp/>{<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1afb72c8ab2012525655084db905487feb" kindref="member">x</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1a15659c51a61528ab6335c24f7727b44c" kindref="member">y</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1a806e7290cbafa395e9ce83511540d4d4" kindref="member">z</ref><sp/>};</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec3<sp/>cameraTarget<sp/>=<sp/>cameraPos<sp/>+<sp/>direction;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraUbo.<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a2d2efb8863870ffc74838e792e4fed34" kindref="member">view</ref><sp/>=<sp/>glm::lookAt(</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraPos,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraTarget,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3(0.0f,<sp/>1.0f,<sp/>0.0f)<sp/><sp/></highlight><highlight class="comment">//<sp/>Up<sp/>vector<sp/>(Y<sp/>вверх)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pgc.context.cameraData.useСurrentWindowAspect)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraUbo.<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a76a06e39169e1ce5bb6f5e8a947204df" kindref="member">proj</ref><sp/>=<sp/>glm::perspective(</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::radians(pgc.context.cameraData.fovy),</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.swapChainExtent.width<sp/>/<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)pgc.context.swapChainExtent.height,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.cameraData.zNear,<sp/>pgc.context.cameraData.zFar</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraUbo.<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a76a06e39169e1ce5bb6f5e8a947204df" kindref="member">proj</ref><sp/>=<sp/>glm::perspective(</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::radians(pgc.context.cameraData.fovy),</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.cameraData.aspect,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.cameraData.zNear,<sp/>pgc.context.cameraData.zFar</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraUbo.<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a76a06e39169e1ce5bb6f5e8a947204df" kindref="member">proj</ref>[1][1]<sp/>*=<sp/>-1;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraUbo.<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a043fbbaf809ef7076c046abec302139a" kindref="member">viewProj</ref><sp/>=<sp/>cameraUbo.<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a76a06e39169e1ce5bb6f5e8a947204df" kindref="member">proj</ref><sp/>*<sp/>cameraUbo.<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a2d2efb8863870ffc74838e792e4fed34" kindref="member">view</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraUbo.<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o_1a4086fc90287a22a756b8543a9763764d" kindref="member">cameraPos</ref><sp/>=<sp/>cameraPos;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(pgc.context.uniformBuffers[pgc.context.currentFrame].cameraMapped,<sp/>&amp;cameraUbo,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(cameraUbo));</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ae5c8a2b18d84b4f9e48569e1cfad008f" kindref="member">prism::render::Renderer::updateObjectTransform</ref>(prism::scene::TransformComponent*<sp/>transform,<sp/>uint32_t<sp/>transformId)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>prism::PGC::ObjectUBO<sp/>objectUbo{};</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kindref="member">model</ref><sp/>=<sp/>glm::mat4(1.0f);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Порядок:<sp/>сначала<sp/>масштаб,<sp/>потом<sp/>вращение,<sp/>потом<sp/>перенос</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kindref="member">model</ref><sp/>=<sp/>glm::translate(objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kindref="member">model</ref>,<sp/>glm::vec3(transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1afb72c8ab2012525655084db905487feb" kindref="member">x</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1a15659c51a61528ab6335c24f7727b44c" kindref="member">y</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>.<ref refid="structprism_1_1scene_1_1_position_1a806e7290cbafa395e9ce83511540d4d4" kindref="member">z</ref>));<sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kindref="member">model</ref><sp/>=<sp/>objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kindref="member">model</ref><sp/>*<sp/>glm::mat4_cast(glm::quat(glm::radians(glm::vec3{transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1afe6bbe02710e5c9704ecdfa0f5629932" kindref="member">rot</ref>.<ref refid="structprism_1_1scene_1_1_rotation_1a966ba7232e2bb99137f21f40ec80f905" kindref="member">x</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1afe6bbe02710e5c9704ecdfa0f5629932" kindref="member">rot</ref>.<ref refid="structprism_1_1scene_1_1_rotation_1a0ec26ecffa1e208df5182fd853aa257b" kindref="member">y</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1afe6bbe02710e5c9704ecdfa0f5629932" kindref="member">rot</ref>.<ref refid="structprism_1_1scene_1_1_rotation_1a8c014c7202933c73dbcdec818fc80682" kindref="member">z</ref>})));</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kindref="member">model</ref><sp/>=<sp/>glm::scale(objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kindref="member">model</ref>,<sp/>glm::vec3(transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1a3270258dd47f2b1caa104acac83edbd7" kindref="member">scale</ref>.<ref refid="structprism_1_1scene_1_1_scale_1abe9e8b15c7b3d6df7cd86c12d569cd65" kindref="member">x</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1a3270258dd47f2b1caa104acac83edbd7" kindref="member">scale</ref>.<ref refid="structprism_1_1scene_1_1_scale_1aaa1fe28e3b8d794464e9ed28fa5141c8" kindref="member">y</ref>,<sp/>transform-&gt;<ref refid="structprism_1_1scene_1_1_transform_component_1a3270258dd47f2b1caa104acac83edbd7" kindref="member">scale</ref>.<ref refid="structprism_1_1scene_1_1_scale_1a24bd28cde4bc109a597b0e3648e97990" kindref="member">z</ref>));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1ad31ca5726b7ebe6df52fb0a52e43766e" kindref="member">normals</ref><sp/>=<sp/>glm::transpose(glm::inverse(objectUbo.<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o_1a116be138b0d14867cc65ed71ba14679f" kindref="member">model</ref>));</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/>transformId<sp/>*<sp/>pgc.context.dynamicAlignment;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)pgc.context.uniformBuffers[pgc.context.currentFrame].objectMapped<sp/>+<sp/>offset,<sp/>&amp;objectUbo,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(objectUbo));</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a2319cee54bb56ef9f049c9524223a419" kindref="member">prism::render::Renderer::bindDefault</ref>()</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdBindPipeline(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/>VK_PIPELINE_BIND_POINT_GRAPHICS,<sp/>pgc.context.graphicsPipeline);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>VkViewport<sp/>viewport{};</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>viewport.x<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>viewport.y<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>viewport.width<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pgc.context.swapChainExtent.width);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>viewport.height<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pgc.context.swapChainExtent.height);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>viewport.minDepth<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>viewport.maxDepth<sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdSetViewport(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/>0,<sp/>1,<sp/>&amp;viewport);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>VkRect2D<sp/>scissor{};</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>scissor.offset<sp/>=<sp/>{<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>scissor.extent<sp/>=<sp/>pgc.context.swapChainExtent;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdSetScissor(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/>0,<sp/>1,<sp/>&amp;scissor);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>VkBuffer<sp/>vertexBuffers[]<sp/>=<sp/>{<sp/>pgc.context.vertexBuffer<sp/>};</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>offsets[]<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdBindVertexBuffers(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/>0,<sp/>1,<sp/>vertexBuffers,<sp/>offsets);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdBindIndexBuffer(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/>pgc.context.indexBuffer,<sp/>0,<sp/>VK_INDEX_TYPE_UINT32);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdBindDescriptorSets(pgc.context.commandBuffers[pgc.context.currentFrame],</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_PIPELINE_BIND_POINT_GRAPHICS,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.pipelineLayout,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/></highlight><highlight class="comment">//<sp/>set<sp/>=<sp/>1<sp/>для<sp/>текстур</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;pgc.context.textureDescriptorSet,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a06bef0391485c39b34decc3473a657a5" kindref="member">prism::render::Renderer::bindTransform</ref>(uint32_t<sp/>transformId)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>dynamicOffset<sp/>=<sp/>transformId<sp/>*<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pgc.context.dynamicAlignment);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdBindDescriptorSets(pgc.context.commandBuffers[pgc.context.currentFrame],</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_PIPELINE_BIND_POINT_GRAPHICS,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.pipelineLayout,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>set<sp/>=<sp/>0<sp/>для<sp/>ubo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;pgc.context.descriptorSets[pgc.context.currentFrame],</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/>&amp;dynamicOffset);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a0014026cfe386d9d7f70defdb8a29f79" kindref="member">prism::render::Renderer::pushTextureId</ref>(uint32_t<sp/>textureId)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>prism::PGC::PushConstants<sp/>pushConstants{};</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>pushConstants.<ref refid="structprism_1_1_p_g_c_1_1_push_constants_1a502b60b68472518e700e6c13fdae73ec" kindref="member">textureIndex</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(textureId);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdPushConstants(</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.commandBuffers[pgc.context.currentFrame],</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pgc.context.pipelineLayout,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_SHADER_STAGE_FRAGMENT_BIT,<sp/></highlight><highlight class="comment">//<sp/>Указываем,<sp/>что<sp/>push-константы<sp/>используются<sp/>во<sp/>фрагментном<sp/>шейдере</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(prism::PGC::PushConstants),</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;pushConstants</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a3c6bf3adf404d1224ffb83deff4cf0f8" kindref="member">prism::render::Renderer::drawMesh</ref>(uint32_t<sp/>meshId)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>PGC::Mesh&amp;<sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref><sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a89e892d582f289d16d39636bc441d013" kindref="member">prism::PGC::MeshManager::getMeshInfo</ref>(&amp;pgc.context,<sp/>meshId);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdDrawIndexed(pgc.context.commandBuffers[pgc.context.currentFrame],<sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>.indexCount,<sp/>1,<sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>.indexOffset,<sp/><ref refid="namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c" kindref="member">info</ref>.vertexOffset,<sp/>0);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal">prism::scene::TextureComponent<sp/><ref refid="classprism_1_1render_1_1_renderer_1ad20e7753bb504469d2282c78dec45ecf" kindref="member">prism::render::Renderer::addTexture</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>texturePath)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_manager_1a99cb333148b984410c83e39ce8555de8" kindref="member">PGC::TextureManager::addTexture</ref>(&amp;pgc.context,<sp/>texturePath)<sp/>};</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a2f02e729d87dfad12ba907e1b4edd6b3" kindref="member">prism::render::Renderer::removeTexture</ref>(scene::TextureComponent<sp/>texture)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_texture_manager_1a22ff57981f36d1bd6ca1fd08f5270e22" kindref="member">PGC::TextureManager::removeTexture</ref>(&amp;pgc.context,<sp/>texture.texture);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal">prism::scene::MeshComponent<sp/><ref refid="classprism_1_1render_1_1_renderer_1a68a37c4196f2dbca4f2493a6e6e1b37f" kindref="member">prism::render::Renderer::addMesh</ref>(std::string<sp/>texturePath)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1ad8e196abefb40df09e4261e052006594" kindref="member">PGC::MeshManager::addMesh</ref>(&amp;pgc.context,<sp/>texturePath)};</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a1c81fafddd77b32e87f84802b637fd72" kindref="member">prism::render::Renderer::updateMeshes</ref>()</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a3a85932f084ad97b08bbd3e5d041fdb6" kindref="member">PGC::MeshManager::update</ref>(&amp;pgc.context);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a3e3c570ac1677ba5231e4a39796c6d04" kindref="member">prism::render::Renderer::clearMeshes</ref>()</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_manager_1ab14cf34dcf9571afa71cea03bf548c94" kindref="member">PGC::MeshManager::clear</ref>(&amp;pgc.context);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a516f6fe9573a01de252ad9d947b7820e" kindref="member">prism::render::Renderer::awaitRenderingCompletion</ref>()</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.awaitRenderingCompletion();</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1a8aee301e8ea80c2376240e672060f283" kindref="member">prism::render::Renderer::destroy</ref>()</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.awaitRenderingCompletion();</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>pgc.cleanup();</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1render_1_1_renderer_1ad08f303f7b275e225e6ae60624f05ea6" kindref="member">prism::render::Renderer::setDefaultSettings</ref>()</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>settings.app.applicationName<sp/>=<sp/>SDL_GetWindowTitle(window-&gt;sdlWindow);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>settings.app.applicationVersion<sp/>=<sp/>{<sp/>1,<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>settings.window<sp/>=<sp/>window-&gt;sdlWindow;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineColorBlendAttachmentState<sp/>colorBlendAttachment{};</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlendAttachment.colorWriteMask<sp/>=<sp/>VK_COLOR_COMPONENT_R_BIT<sp/>|<sp/>VK_COLOR_COMPONENT_G_BIT<sp/>|<sp/>VK_COLOR_COMPONENT_B_BIT<sp/>|<sp/>VK_COLOR_COMPONENT_A_BIT;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlendAttachment.blendEnable<sp/>=<sp/>VK_FALSE;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>settings.pipeline.colorBlend.attachments.push_back(colorBlendAttachment);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>settings.descriptorSetLayout<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Camera<sp/>UBO<sp/>(binding<sp/>=<sp/>0,<sp/>vertex<sp/>stage)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{0,<sp/>VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,<sp/>1,<sp/>VK_SHADER_STAGE_VERTEX_BIT},</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Object<sp/>UBO<sp/>(binding<sp/>=<sp/>1,<sp/>vertex<sp/>stage)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{1,<sp/>VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC,<sp/>1,<sp/>VK_SHADER_STAGE_VERTEX_BIT}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>settings.textureDescriptorSetLayout<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{0,<sp/>VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER,<sp/>settings.MAX_TEXTURES,<sp/>VK_SHADER_STAGE_FRAGMENT_BIT,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT_EXT<sp/>|<sp/>VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT_EXT}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT_EXT</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.cpp"/>
+  </compounddef>
+</doxygen>

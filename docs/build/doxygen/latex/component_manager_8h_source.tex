@@ -1,0 +1,135 @@
+\doxysection{component\+Manager.\+h}
+\hypertarget{component_manager_8h_source}{}\label{component_manager_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h}}
+\mbox{\hyperlink{component_manager_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity_8h}{entity.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <typeindex>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iterator>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1scene}{scene}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6c739470f713ecd5abb532ac163b6926}{ComponentManager}}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6c739470f713ecd5abb532ac163b6926}{ComponentManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a7ee343b770cd5a1a67fd68d50bec2ca0}{addComponent}}(\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ entityId,\ T\ component)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ storage\ =\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a89b0e0805d4739180f8c826aff31aed2}{getComponentStorage<T>}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ storage.components[entityId]\ =\ std::make\_shared<T>(component);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_ad91853d37150f5c4add892dc7fa6fcea}{getEntitiesWith<T>}}().insert(entityId);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a9e173149b5cb23f208ade28e5ee34f4d}{removeComponent}}(\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ entityId)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ storage\ =\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a89b0e0805d4739180f8c826aff31aed2}{getComponentStorage<T>}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ storage.components.find(entityId);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ storage.components.end())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ storage.components.erase(it);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_ad91853d37150f5c4add892dc7fa6fcea}{getEntitiesWith<T>}}().erase(entityId);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ T*\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a14aed5f1bd821d92fd91577a63cdad7f}{getComponent}}(\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ entityId)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ storage\ =\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a89b0e0805d4739180f8c826aff31aed2}{getComponentStorage<T>}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ storage.components.find(entityId);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ storage.components.end())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ it-\/>second.get();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::set<Entity>\&\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_ad91853d37150f5c4add892dc7fa6fcea}{getEntitiesWith}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::set<Entity>\ emptySet;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ typeIndex\ =\ std::type\_index(\textcolor{keyword}{typeid}(T));}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}{entitiesWithComponentSets}}.find(typeIndex);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}{entitiesWithComponentSets}}.end())\ \textcolor{keywordflow}{return}\ emptySet;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *it-\/>second;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ std::set<Entity>\&\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_acffef2c762094de4bd7ca08593f8139d}{getEntitiesWith}}()\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ typeIndex\ =\ std::type\_index(\textcolor{keyword}{typeid}(T));}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}{entitiesWithComponentSets}}.find(typeIndex)\ ==\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}{entitiesWithComponentSets}}.end())\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}{entitiesWithComponentSets}}[typeIndex]\ =\ std::make\_unique<std::set<Entity>>();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}{entitiesWithComponentSets}}[typeIndex];}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ ComponentTypes>}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ std::set<Entity>\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_af84b9831cf557c0d8beb0f43ea85782c}{getEntitiesWithAll}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (\textcolor{keyword}{sizeof}...(ComponentTypes)\ ==\ 0)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::set<Entity>();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Получаем\ множества\ для\ каждого\ типа\ компонентов}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<const\ std::set<Entity>*>\ sets;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (sets.push\_back(\&\mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_ad91853d37150f5c4add892dc7fa6fcea}{getEntitiesWith<ComponentTypes>}}()),\ ...);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Находим\ наименьшее\ множество\ для\ оптимизации}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ smallestIt\ =\ std::min\_element(sets.begin(),\ sets.end(),}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [](\textcolor{keyword}{const}\ std::set<Entity>*\ a,\ \textcolor{keyword}{const}\ std::set<Entity>*\ b)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ a-\/>size()\ <\ b-\/>size();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::set<Entity>\ result\ =\ **smallestIt;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Пересекаем\ с\ остальными\ множествами}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ entitySetPtr\ :\ sets)\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entitySetPtr\ ==\ *smallestIt)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::set<Entity>\ temp;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::set\_intersection(}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.begin(),\ result.end(),}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entitySetPtr-\/>begin(),\ entitySetPtr-\/>end(),}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::inserter(temp,\ temp.begin())}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ std::move(temp);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a207f9e235e87280a6b072f4a03d0b91b}{removeAllComponents}}(\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ entityId);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage}{IComponentStorage}}\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_a8add7a07bcb46a0b1f43750bbf18afe7}{\string~IComponentStorage}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_a7a9a568a38454a2e123626f54c03355e}{removeEntity}}(\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ entityId)\ =\ 0;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{ComponentStorage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage}{IComponentStorage}}\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<Entity,\ std::shared\_ptr<T>>\ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a52394866052b0bb7f1c31b1320cce844}{components}};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a34a31deec21993564366818b26628db4}{removeEntity}}(\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}\ entityId)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a52394866052b0bb7f1c31b1320cce844}{components}}.erase(entityId);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{ComponentStorage<T>}}\&\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a89b0e0805d4739180f8c826aff31aed2}{getComponentStorage}}()\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ typeIndex\ =\ std::type\_index(\textcolor{keyword}{typeid}(T));}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6a1a60608eac94caea1b144d2697b5fd}{componentStorages}}.find(typeIndex)\ ==\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6a1a60608eac94caea1b144d2697b5fd}{componentStorages}}.end())\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6a1a60608eac94caea1b144d2697b5fd}{componentStorages}}[typeIndex]\ =\ std::make\_unique<ComponentStorage<T>>();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{ComponentStorage<T>}}\&\textcolor{keyword}{>}(*\mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6a1a60608eac94caea1b144d2697b5fd}{componentStorages}}[typeIndex]);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<std::type\_index,\ std::unique\_ptr<IComponentStorage>>\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a6a1a60608eac94caea1b144d2697b5fd}{componentStorages}};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<std::type\_index,\ std::unique\_ptr<std::set<Entity>>>\ \mbox{\hyperlink{classprism_1_1scene_1_1_component_manager_a5273dbd0f3a9fdb9ab9de36d0b53012f}{entitiesWithComponentSets}};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \}}
+
+\end{DoxyCode}

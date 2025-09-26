@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_binding_config" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::BindingConfig</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1ae555473cde6c981aa71529d4d5298061" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::BindingConfig::binding</definition>
+        <argsstring></argsstring>
+        <name>binding</name>
+        <qualifiedname>prism::PGC::utils::BindingConfig::binding</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="168" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a397d16e41518ebeeef32622045f1c4cc" prot="public" static="no" mutable="no">
+        <type>VkDescriptorType</type>
+        <definition>VkDescriptorType prism::PGC::utils::BindingConfig::descriptorType</definition>
+        <argsstring></argsstring>
+        <name>descriptorType</name>
+        <qualifiedname>prism::PGC::utils::BindingConfig::descriptorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="169" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a0076a98392481b25610091f7983dab89" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::BindingConfig::descriptorCount</definition>
+        <argsstring></argsstring>
+        <name>descriptorCount</name>
+        <qualifiedname>prism::PGC::utils::BindingConfig::descriptorCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="170" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a61dbb8eada8a03d5a939333174457616" prot="public" static="no" mutable="no">
+        <type>VkShaderStageFlags</type>
+        <definition>VkShaderStageFlags prism::PGC::utils::BindingConfig::stageFlags</definition>
+        <argsstring></argsstring>
+        <name>stageFlags</name>
+        <qualifiedname>prism::PGC::utils::BindingConfig::stageFlags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="171" column="20" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a76ff6b1b02f190221df95233e56cdebd" prot="public" static="no" mutable="no">
+        <type>const VkSampler *</type>
+        <definition>const VkSampler* prism::PGC::utils::BindingConfig::immutableSamplers</definition>
+        <argsstring></argsstring>
+        <name>immutableSamplers</name>
+        <qualifiedname>prism::PGC::utils::BindingConfig::immutableSamplers</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="172" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="167" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="167" bodyend="173"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1ae555473cde6c981aa71529d4d5298061" prot="public" virt="non-virtual"><scope>prism::PGC::utils::BindingConfig</scope><name>binding</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a0076a98392481b25610091f7983dab89" prot="public" virt="non-virtual"><scope>prism::PGC::utils::BindingConfig</scope><name>descriptorCount</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a397d16e41518ebeeef32622045f1c4cc" prot="public" virt="non-virtual"><scope>prism::PGC::utils::BindingConfig</scope><name>descriptorType</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a76ff6b1b02f190221df95233e56cdebd" prot="public" virt="non-virtual"><scope>prism::PGC::utils::BindingConfig</scope><name>immutableSamplers</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config_1a61dbb8eada8a03d5a939333174457616" prot="public" virt="non-virtual"><scope>prism::PGC::utils::BindingConfig</scope><name>stageFlags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

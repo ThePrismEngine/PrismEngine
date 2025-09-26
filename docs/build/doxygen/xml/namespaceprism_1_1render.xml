@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="namespaceprism_1_1render" kind="namespace" language="C++">
+    <compoundname>prism::render</compoundname>
+    <innerclass refid="classprism_1_1render_1_1_renderer" prot="public">prism::render::Renderer</innerclass>
+    <innerclass refid="classprism_1_1render_1_1_window" prot="public">prism::render::Window</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.h" line="10" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_app_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::AppSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_app_settings_1aef32a03b41818b8f91b2948ba33051cf" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* prism::PGC::utils::AppSettings::applicationName</definition>
+        <argsstring></argsstring>
+        <name>applicationName</name>
+        <qualifiedname>prism::PGC::utils::AppSettings::applicationName</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="137" column="12" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_app_settings_1a454e942ece8c969ada980cc36cd9f384" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_version" kindref="compound">prism::Version</ref></type>
+        <definition>prism::Version prism::PGC::utils::AppSettings::applicationVersion</definition>
+        <argsstring></argsstring>
+        <name>applicationVersion</name>
+        <qualifiedname>prism::PGC::utils::AppSettings::applicationVersion</qualifiedname>
+        <initializer>= { 1, 0, 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="138" column="16" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="138" bodyend="138"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>prism::PGC::utils::AppSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>applicationVersion</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>prism::Version</label>
+        <link refid="structprism_1_1_version"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="135" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="136" bodyend="139"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings_1aef32a03b41818b8f91b2948ba33051cf" prot="public" virt="non-virtual"><scope>prism::PGC::utils::AppSettings</scope><name>applicationName</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings_1a454e942ece8c969ada980cc36cd9f384" prot="public" virt="non-virtual"><scope>prism::PGC::utils::AppSettings</scope><name>applicationVersion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

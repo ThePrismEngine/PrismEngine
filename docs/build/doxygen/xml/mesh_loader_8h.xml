@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="mesh_loader_8h" kind="file" language="C++">
+    <compoundname>meshLoader.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="vertex_8h" local="yes">vertex.h</includes>
+    <includedby refid="mesh_loader_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.cpp</includedby>
+    <includedby refid="mesh_manager_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshManager.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.h</label>
+        <link refid="mesh_loader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SDL.h</label>
+      </node>
+      <node id="5">
+        <label>array</label>
+      </node>
+      <node id="10">
+        <label>glm.hpp</label>
+      </node>
+      <node id="7">
+        <label>stdexcept</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.cpp</label>
+        <link refid="mesh_loader_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.h</label>
+        <link refid="mesh_loader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshManager.cpp</label>
+        <link refid="mesh_manager_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_mesh_data" prot="public">prism::PGC::MeshData</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_mesh_loader" prot="public">prism::PGC::MeshLoader</innerclass>
+    <innernamespace refid="namespaceprism">prism</innernamespace>
+    <innernamespace refid="namespaceprism_1_1_p_g_c">prism::PGC</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vertex_8h" kindref="compound">vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism" kindref="compound">prism</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism_1_1_p_g_c" kindref="compound">PGC</ref><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="structprism_1_1_p_g_c_1_1_mesh_data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1_p_g_c_1_1_mesh_data" kindref="compound">MeshData</ref><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="structprism_1_1_p_g_c_1_1_mesh_data_1a4bc43f340a4e404e00b2cf8d589daaa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Vertex&gt;<sp/><ref refid="structprism_1_1_p_g_c_1_1_mesh_data_1a4bc43f340a4e404e00b2cf8d589daaa8" kindref="member">vertices</ref>;</highlight></codeline>
+<codeline lineno="9" refid="structprism_1_1_p_g_c_1_1_mesh_data_1ab796f684d17a6f311a68ee8c7b92a508" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;uint32_t&gt;<sp/><ref refid="structprism_1_1_p_g_c_1_1_mesh_data_1ab796f684d17a6f311a68ee8c7b92a508" kindref="member">indices</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classprism_1_1_p_g_c_1_1_mesh_loader" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classprism_1_1_p_g_c_1_1_mesh_loader" kindref="compound">MeshLoader</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1_p_g_c_1_1_mesh_data" kindref="compound">MeshData</ref><sp/><ref refid="classprism_1_1_p_g_c_1_1_mesh_loader_1a75216c52a3c93d04d6c74a2ed03c15ef" kindref="member">load</ref>(std::string<sp/>texturePath);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.h"/>
+  </compounddef>
+</doxygen>

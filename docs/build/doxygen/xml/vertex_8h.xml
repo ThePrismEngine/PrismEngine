@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="vertex_8h" kind="file" language="C++">
+    <compoundname>vertex.h</compoundname>
+    <includes local="no">vulkan/vulkan_core.h</includes>
+    <includes local="no">array</includes>
+    <includes refid="matrix_8h" local="yes">matrix.h</includes>
+    <includes local="yes">glm.hpp</includes>
+    <includedby refid="graphics_pipeline_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/graphicsPipeline.cpp</includedby>
+    <includedby refid="mesh_loader_8h" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.h</includedby>
+    <includedby refid="prism_graphic_core_8h" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h</includedby>
+    <includedby refid="utils_8h" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h</includedby>
+    <includedby refid="vertex_8cpp" local="yes">C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SDL.h</label>
+      </node>
+      <node id="3">
+        <label>array</label>
+      </node>
+      <node id="8">
+        <label>glm.hpp</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="2">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.cpp</label>
+        <link refid="_prism_engine_8cpp"/>
+      </node>
+      <node id="7">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/PrismEngine.h</label>
+        <link refid="_prism_engine_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/base.cpp</label>
+        <link refid="base_8cpp"/>
+      </node>
+      <node id="15">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/base.h</label>
+        <link refid="base_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/bufferWrapper.cpp</label>
+        <link refid="buffer_wrapper_8cpp"/>
+      </node>
+      <node id="18">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/bufferWrapper.h</label>
+        <link refid="buffer_wrapper_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/descriptorSet.cpp</label>
+        <link refid="descriptor_set_8cpp"/>
+      </node>
+      <node id="21">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/descriptorSet.h</label>
+        <link refid="descriptor_set_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/descriptorSetLayout.cpp</label>
+        <link refid="descriptor_set_layout_8cpp"/>
+      </node>
+      <node id="23">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/descriptorSetLayout.h</label>
+        <link refid="descriptor_set_layout_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.cpp</label>
+        <link refid="device_checker_8cpp"/>
+      </node>
+      <node id="26">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceChecker.h</label>
+        <link refid="device_checker_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.cpp</label>
+        <link refid="device_rater_8cpp"/>
+      </node>
+      <node id="28">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h</label>
+        <link refid="device_rater_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp</label>
+        <link refid="device_wrapper_8cpp"/>
+      </node>
+      <node id="29">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/graphicsPipeline.cpp</label>
+        <link refid="graphics_pipeline_8cpp"/>
+      </node>
+      <node id="35">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/graphicsPipeline.h</label>
+        <link refid="graphics_pipeline_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.cpp</label>
+        <link refid="mesh_loader_8cpp"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshLoader.h</label>
+        <link refid="mesh_loader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshManager.cpp</label>
+        <link refid="mesh_manager_8cpp"/>
+      </node>
+      <node id="36">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/meshManager.h</label>
+        <link refid="mesh_manager_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.cpp</label>
+        <link refid="prism_graphic_core_8cpp"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h</label>
+        <link refid="prism_graphic_core_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderPass.cpp</label>
+        <link refid="render_pass_8cpp"/>
+      </node>
+      <node id="31">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderPass.h</label>
+        <link refid="render_pass_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.cpp</label>
+        <link refid="render_system_8cpp"/>
+      </node>
+      <node id="11">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderSystem.h</label>
+        <link refid="render_system_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.cpp</label>
+        <link refid="renderer_8cpp"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderer.h</label>
+        <link refid="renderer_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.cpp</label>
+        <link refid="resources_creater_8cpp"/>
+      </node>
+      <node id="33">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.h</label>
+        <link refid="resources_creater_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/shaderStagesLoader.cpp</label>
+        <link refid="shader_stages_loader_8cpp"/>
+      </node>
+      <node id="37">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/shaderStagesLoader.h</label>
+        <link refid="shader_stages_loader_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/swapChain.cpp</label>
+        <link refid="swap_chain_8cpp"/>
+      </node>
+      <node id="39">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/swapChain.h</label>
+        <link refid="swap_chain_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp</label>
+        <link refid="texture_loader_8cpp"/>
+      </node>
+      <node id="40">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h</label>
+        <link refid="texture_loader_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureManager.cpp</label>
+        <link refid="texture_manager_8cpp"/>
+      </node>
+      <node id="42">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureManager.h</label>
+        <link refid="texture_manager_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.cpp</label>
+        <link refid="vertex_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_color" prot="public">prism::PGC::Color</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_vertex" prot="public">prism::PGC::Vertex</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_vertex_hasher" prot="public">prism::PGC::VertexHasher</innerclass>
+    <innernamespace refid="namespaceprism">prism</innernamespace>
+    <innernamespace refid="namespaceprism_1_1_p_g_c">prism::PGC</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="matrix_8h" kindref="compound">matrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;glm.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism" kindref="compound">prism</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism_1_1_p_g_c" kindref="compound">PGC</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="structprism_1_1_p_g_c_1_1_color" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1_p_g_c_1_1_color" kindref="compound">Color</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="structprism_1_1_p_g_c_1_1_color_1a11a7b1253206c9cef355efda689cc0c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1_p_g_c_1_1_color_1adfccfbc55af6496c5b3b615dc38e36b5" kindref="member">r</ref>,<sp/><ref refid="structprism_1_1_p_g_c_1_1_color_1a4dcec896309c575542f3efc71cbd41ea" kindref="member">g</ref>,<sp/><ref refid="structprism_1_1_p_g_c_1_1_color_1a11a7b1253206c9cef355efda689cc0c4" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="15" refid="structprism_1_1_p_g_c_1_1_vertex" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1_p_g_c_1_1_vertex" kindref="compound">Vertex</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="structprism_1_1_p_g_c_1_1_vertex_1a8c0755ee0ac49e5cedcc9b0ff0d26d0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3<sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_1a8c0755ee0ac49e5cedcc9b0ff0d26d0c" kindref="member">pos</ref>;</highlight></codeline>
+<codeline lineno="18" refid="structprism_1_1_p_g_c_1_1_vertex_1a5690bce120d7610a29dc609c59e6d21f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3<sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_1a5690bce120d7610a29dc609c59e6d21f" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structprism_1_1_p_g_c_1_1_vertex_1a1ea019b9a4af597d776b4eb1f472f5d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec2<sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_1a1ea019b9a4af597d776b4eb1f472f5d4" kindref="member">texCoord</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>VkVertexInputBindingDescription<sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_1a6702e1cd9936929ddaa711d0258d1a07" kindref="member">getBindingDescription</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::array&lt;VkVertexInputAttributeDescription,<sp/>3&gt;<sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_1a96daf3ba818593f35e48a0eda00c2094" kindref="member">getAttributeDescriptions</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_1a63cc3df4f485c079a90d64920ce928c6" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex" kindref="compound">Vertex</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Отдельный<sp/>функтор<sp/>для<sp/>хеширования</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structprism_1_1_p_g_c_1_1_vertex_hasher" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1_p_g_c_1_1_vertex_hasher" kindref="compound">VertexHasher</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_hasher_1ab3d56c10d33af778a849c8c4bf705388" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex" kindref="compound">Vertex</ref>&amp;<sp/>v)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h"/>
+  </compounddef>
+</doxygen>

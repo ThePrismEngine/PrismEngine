@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1scene_1_1_camera_component" kind="struct" language="C++" prot="public">
+    <compoundname>prism::scene::CameraComponent</compoundname>
+    <includes refid="camera_component_8h" local="no">cameraComponent.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_camera_component_1a526eb024a451aeeb264b4b617250d9a8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::scene::CameraComponent::isActive</definition>
+        <argsstring></argsstring>
+        <name>isActive</name>
+        <qualifiedname>prism::scene::CameraComponent::isActive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="11" column="6" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1scene_1_1_look" kindref="compound">Look</ref></type>
+        <definition>Look prism::scene::CameraComponent::look</definition>
+        <argsstring></argsstring>
+        <name>look</name>
+        <qualifiedname>prism::scene::CameraComponent::look</qualifiedname>
+        <initializer>= { 0.0f, 0.0f, 0.0f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="12" column="6" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_camera_component_1a81a79c9ac6815d97e5738865639124bc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::CameraComponent::fovy</definition>
+        <argsstring></argsstring>
+        <name>fovy</name>
+        <qualifiedname>prism::scene::CameraComponent::fovy</qualifiedname>
+        <initializer>= 45.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="14" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_camera_component_1a2a20f6f43a213b7c8c79939b24ad6868" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::CameraComponent::aspect</definition>
+        <argsstring></argsstring>
+        <name>aspect</name>
+        <qualifiedname>prism::scene::CameraComponent::aspect</qualifiedname>
+        <initializer>= 16.f / 9.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="15" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_camera_component_1a6b41fc4706802499c3a6f4c274dc9f7e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::CameraComponent::zNear</definition>
+        <argsstring></argsstring>
+        <name>zNear</name>
+        <qualifiedname>prism::scene::CameraComponent::zNear</qualifiedname>
+        <initializer>= 0.1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="16" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_camera_component_1a7d58fda77459e28f65b5f47a499931a5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::CameraComponent::zFar</definition>
+        <argsstring></argsstring>
+        <name>zFar</name>
+        <qualifiedname>prism::scene::CameraComponent::zFar</qualifiedname>
+        <initializer>= 10.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="17" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_camera_component_1a2fcf04acc5550a83af87e2545e1a857b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::scene::CameraComponent::useСurrentWindowAspect</definition>
+        <argsstring></argsstring>
+        <name>useСurrentWindowAspect</name>
+        <qualifiedname>prism::scene::CameraComponent::useСurrentWindowAspect</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="19" column="6" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>prism::scene::CameraComponent</label>
+        <link refid="structprism_1_1scene_1_1_camera_component"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>look</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>prism::scene::Look</label>
+        <link refid="structprism_1_1scene_1_1_look"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="9" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="10" bodyend="20"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_camera_component_1a2a20f6f43a213b7c8c79939b24ad6868" prot="public" virt="non-virtual"><scope>prism::scene::CameraComponent</scope><name>aspect</name></member>
+      <member refid="structprism_1_1scene_1_1_camera_component_1a81a79c9ac6815d97e5738865639124bc" prot="public" virt="non-virtual"><scope>prism::scene::CameraComponent</scope><name>fovy</name></member>
+      <member refid="structprism_1_1scene_1_1_camera_component_1a526eb024a451aeeb264b4b617250d9a8" prot="public" virt="non-virtual"><scope>prism::scene::CameraComponent</scope><name>isActive</name></member>
+      <member refid="structprism_1_1scene_1_1_camera_component_1a9ee3767dd608e3169013009029b7d658" prot="public" virt="non-virtual"><scope>prism::scene::CameraComponent</scope><name>look</name></member>
+      <member refid="structprism_1_1scene_1_1_camera_component_1a2fcf04acc5550a83af87e2545e1a857b" prot="public" virt="non-virtual"><scope>prism::scene::CameraComponent</scope><name>useСurrentWindowAspect</name></member>
+      <member refid="structprism_1_1scene_1_1_camera_component_1a7d58fda77459e28f65b5f47a499931a5" prot="public" virt="non-virtual"><scope>prism::scene::CameraComponent</scope><name>zFar</name></member>
+      <member refid="structprism_1_1scene_1_1_camera_component_1a6b41fc4706802499c3a6f4c274dc9f7e" prot="public" virt="non-virtual"><scope>prism::scene::CameraComponent</scope><name>zNear</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

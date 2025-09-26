@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::SwapChainSupportDetails</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1ab2a212d23e373c47b37c34943a96b527" prot="public" static="no" mutable="no">
+        <type>VkSurfaceCapabilitiesKHR</type>
+        <definition>VkSurfaceCapabilitiesKHR prism::PGC::utils::SwapChainSupportDetails::capabilities</definition>
+        <argsstring></argsstring>
+        <name>capabilities</name>
+        <qualifiedname>prism::PGC::utils::SwapChainSupportDetails::capabilities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="26" column="26" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1a8e05aa62743e059398b488cc12bd5a29" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkSurfaceFormatKHR &gt;</type>
+        <definition>std::vector&lt;VkSurfaceFormatKHR&gt; prism::PGC::utils::SwapChainSupportDetails::formats</definition>
+        <argsstring></argsstring>
+        <name>formats</name>
+        <qualifiedname>prism::PGC::utils::SwapChainSupportDetails::formats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="27" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1a8f89077c7917504ab55a93b8f2bf76db" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkPresentModeKHR &gt;</type>
+        <definition>std::vector&lt;VkPresentModeKHR&gt; prism::PGC::utils::SwapChainSupportDetails::presentModes</definition>
+        <argsstring></argsstring>
+        <name>presentModes</name>
+        <qualifiedname>prism::PGC::utils::SwapChainSupportDetails::presentModes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="28" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="25" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="25" bodyend="29"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1ab2a212d23e373c47b37c34943a96b527" prot="public" virt="non-virtual"><scope>prism::PGC::utils::SwapChainSupportDetails</scope><name>capabilities</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1a8e05aa62743e059398b488cc12bd5a29" prot="public" virt="non-virtual"><scope>prism::PGC::utils::SwapChainSupportDetails</scope><name>formats</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_1a8f89077c7917504ab55a93b8f2bf76db" prot="public" virt="non-virtual"><scope>prism::PGC::utils::SwapChainSupportDetails</scope><name>presentModes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

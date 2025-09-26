@@ -1,0 +1,343 @@
+\doxysection{Класс prism\+::PGC\+::Prism\+Graphic\+Core}
+\hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core}{}\label{classprism_1_1_p_g_c_1_1_prism_graphic_core}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+
+
+{\ttfamily \#include $<$prism\+Graphic\+Core.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_abc11212e7a68ded2bbe1f8d8dc71b56d}{Prism\+Graphic\+Core}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4bacbfbd6c0905dcdc4882be3c371161}{init}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a55ffc68b57853b631c9b4814f137fe35}{settings}})
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a3b9e48a05623b6cc0b9ed7320d4e8e91}{draw\+Frame}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4d95481a52b8d64b2d60651032d835ee}{start\+Render}} ()
+\item 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data}{prism\+::\+PGC\+::utils\+::\+Camera\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a6eab6576d07a3820cbdccd5babbf7fb8}{get\+Camera\+Data\+Ptr}} ()
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain}{PGC\+::\+Swap\+Chain}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_acdd1cff2d554d37c035a7b00b307852c}{get\+Swap\+Chain\+Ptr}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac7e1e22c259dd2e1793193cbb0a5281f}{cleanup}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a0e9b7954a1e4b8a8ff173816a7d26e1c}{await\+Rendering\+Completion}} ()
+\item 
+bool \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a5202b6e55da493f576930f53f0692705}{is\+Window\+Ready\+For\+Rendering}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a211f201b28de195923a8c320facf8022}{window}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a753fa35096fa05f297bdea70afa5e33c}{window\+Resized}}
+\item 
+bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a6f5c118b620526fd87e3bac408aebbbe}{window\+Minimized}}
+\item 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a55ffc68b57853b631c9b4814f137fe35}{settings}}
+\item 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a31f1cef5cc83ac1a18edc7d3b89d614e}{context}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a08b422facb0a4a3dd074a550c1c9d1ea}{create\+Base}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a2c3787c4a72e660bb4a40afeb71ea2a4}{create\+Swap\+Chain}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4a8bd71a4ab83fe639f8e5762cb4cffd}{create\+Graphics\+Pipeline}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ad742d515a20d820fd936dc465828fa93}{create\+Render\+Pass}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_af910ed78722649b6f4ccab7f42295df4}{create\+Framebuffers}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a08cc6c55d4e468392534974226fdebf2}{create\+Command\+Pool}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a304ed66f116a14a4e1eaabad38148057}{create\+Command\+Buffer}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac80bc9624587f789b972b4d8e3ee1bc9}{create\+Sync\+Objects}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4efae367067d6838fa7c22d9e5dff06b}{create\+Descriptor\+Set\+Layout}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a56bb80154e887c60badb9cdf18a0e81e}{create\+Texture\+Descriptor\+Set\+Layout}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_afd85feadb8ae7f635c9324acc57cf442}{create\+Texture\+Descriptor\+Set}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ab75d350b460580e73f8c5ef40f17e7e8}{create\+Uniform\+Buffers}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a701357ad5c785a9b52ba9a6f6c597a89}{create\+Descriptor\+Pool}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac79cf119a7b9d48d34e7ef04d324eb29}{create\+Descriptor\+Sets}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a2983dab58a83db9204e14c3da172c640}{create\+Depth\+Resources}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a9652d07a0152ca7e603ae0e643edac47}{create\+Color\+Resources}} ()
+\item 
+void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_aecfad4272b514d286ae46e83639f817e}{generate\+Mipmaps}} (Vk\+Image image, Vk\+Format image\+Format, int32\+\_\+t tex\+Width, int32\+\_\+t tex\+Height, uint32\+\_\+t mip\+Levels)
+\item 
+Vk\+Sample\+Count\+Flag\+Bits \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_abb197c77af33e20c187d96a6ce87d4dd}{get\+Max\+Usable\+Sample\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a211f201b28de195923a8c320facf8022}{window}}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base}{PGC\+::base\+::\+Base}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_aa342c65aa462fff2f176f70709b7b106}{base}}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain}{PGC\+::\+Swap\+Chain}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a0dd17cd2a4cc0775631dfe789c82f8ee}{swap\+Chain}}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_render_pass}{PGC\+::\+Render\+Pass}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_af1b76f64293f0292b219dfcf0b432c5a}{render\+Pass}}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout}{PGC\+::\+Descriptor\+Set\+Layout}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a87fd93b86567719bdd9dbf5da3071d55}{descriptor\+Set\+Layout}}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_graphics_pipeline}{PGC\+::\+Graphics\+Pipeline}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a3ca09132e3ff4a8388a5edae449e0675}{graphics\+Pipeline}}
+\item 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set}{PGC\+::\+Descriptor\+Set}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_afc31cffb31e326de0fd0a45c6322e614}{descriptor\+Set}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_abc11212e7a68ded2bbe1f8d8dc71b56d}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!PrismGraphicCore@{PrismGraphicCore}}
+\index{PrismGraphicCore@{PrismGraphicCore}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{PrismGraphicCore()}{PrismGraphicCore()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_abc11212e7a68ded2bbe1f8d8dc71b56d} 
+prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::\+Prism\+Graphic\+Core (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a0e9b7954a1e4b8a8ff173816a7d26e1c}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!awaitRenderingCompletion@{awaitRenderingCompletion}}
+\index{awaitRenderingCompletion@{awaitRenderingCompletion}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{awaitRenderingCompletion()}{awaitRenderingCompletion()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a0e9b7954a1e4b8a8ff173816a7d26e1c} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::await\+Rendering\+Completion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac7e1e22c259dd2e1793193cbb0a5281f}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac7e1e22c259dd2e1793193cbb0a5281f} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::cleanup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a08b422facb0a4a3dd074a550c1c9d1ea}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createBase@{createBase}}
+\index{createBase@{createBase}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createBase()}{createBase()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a08b422facb0a4a3dd074a550c1c9d1ea} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a9652d07a0152ca7e603ae0e643edac47}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createColorResources@{createColorResources}}
+\index{createColorResources@{createColorResources}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createColorResources()}{createColorResources()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a9652d07a0152ca7e603ae0e643edac47} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Color\+Resources (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a304ed66f116a14a4e1eaabad38148057}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createCommandBuffer@{createCommandBuffer}}
+\index{createCommandBuffer@{createCommandBuffer}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createCommandBuffer()}{createCommandBuffer()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a304ed66f116a14a4e1eaabad38148057} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Command\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a08cc6c55d4e468392534974226fdebf2}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createCommandPool@{createCommandPool}}
+\index{createCommandPool@{createCommandPool}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createCommandPool()}{createCommandPool()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a08cc6c55d4e468392534974226fdebf2} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Command\+Pool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a2983dab58a83db9204e14c3da172c640}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createDepthResources@{createDepthResources}}
+\index{createDepthResources@{createDepthResources}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createDepthResources()}{createDepthResources()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a2983dab58a83db9204e14c3da172c640} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Depth\+Resources (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a701357ad5c785a9b52ba9a6f6c597a89}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createDescriptorPool@{createDescriptorPool}}
+\index{createDescriptorPool@{createDescriptorPool}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createDescriptorPool()}{createDescriptorPool()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a701357ad5c785a9b52ba9a6f6c597a89} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Descriptor\+Pool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4efae367067d6838fa7c22d9e5dff06b}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createDescriptorSetLayout@{createDescriptorSetLayout}}
+\index{createDescriptorSetLayout@{createDescriptorSetLayout}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createDescriptorSetLayout()}{createDescriptorSetLayout()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4efae367067d6838fa7c22d9e5dff06b} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac79cf119a7b9d48d34e7ef04d324eb29}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createDescriptorSets@{createDescriptorSets}}
+\index{createDescriptorSets@{createDescriptorSets}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createDescriptorSets()}{createDescriptorSets()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac79cf119a7b9d48d34e7ef04d324eb29} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Descriptor\+Sets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_af910ed78722649b6f4ccab7f42295df4}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createFramebuffers@{createFramebuffers}}
+\index{createFramebuffers@{createFramebuffers}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createFramebuffers()}{createFramebuffers()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_af910ed78722649b6f4ccab7f42295df4} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Framebuffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4a8bd71a4ab83fe639f8e5762cb4cffd}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createGraphicsPipeline@{createGraphicsPipeline}}
+\index{createGraphicsPipeline@{createGraphicsPipeline}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createGraphicsPipeline()}{createGraphicsPipeline()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4a8bd71a4ab83fe639f8e5762cb4cffd} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Graphics\+Pipeline (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_ad742d515a20d820fd936dc465828fa93}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createRenderPass@{createRenderPass}}
+\index{createRenderPass@{createRenderPass}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createRenderPass()}{createRenderPass()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_ad742d515a20d820fd936dc465828fa93} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Render\+Pass (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a2c3787c4a72e660bb4a40afeb71ea2a4}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createSwapChain@{createSwapChain}}
+\index{createSwapChain@{createSwapChain}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createSwapChain()}{createSwapChain()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a2c3787c4a72e660bb4a40afeb71ea2a4} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Swap\+Chain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac80bc9624587f789b972b4d8e3ee1bc9}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createSyncObjects@{createSyncObjects}}
+\index{createSyncObjects@{createSyncObjects}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createSyncObjects()}{createSyncObjects()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac80bc9624587f789b972b4d8e3ee1bc9} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Sync\+Objects (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_afd85feadb8ae7f635c9324acc57cf442}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createTextureDescriptorSet@{createTextureDescriptorSet}}
+\index{createTextureDescriptorSet@{createTextureDescriptorSet}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createTextureDescriptorSet()}{createTextureDescriptorSet()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_afd85feadb8ae7f635c9324acc57cf442} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Texture\+Descriptor\+Set (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a56bb80154e887c60badb9cdf18a0e81e}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createTextureDescriptorSetLayout@{createTextureDescriptorSetLayout}}
+\index{createTextureDescriptorSetLayout@{createTextureDescriptorSetLayout}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createTextureDescriptorSetLayout()}{createTextureDescriptorSetLayout()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a56bb80154e887c60badb9cdf18a0e81e} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Texture\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_ab75d350b460580e73f8c5ef40f17e7e8}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!createUniformBuffers@{createUniformBuffers}}
+\index{createUniformBuffers@{createUniformBuffers}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{createUniformBuffers()}{createUniformBuffers()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_ab75d350b460580e73f8c5ef40f17e7e8} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::create\+Uniform\+Buffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a3b9e48a05623b6cc0b9ed7320d4e8e91}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!drawFrame@{drawFrame}}
+\index{drawFrame@{drawFrame}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{drawFrame()}{drawFrame()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a3b9e48a05623b6cc0b9ed7320d4e8e91} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::draw\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_aecfad4272b514d286ae46e83639f817e}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!generateMipmaps@{generateMipmaps}}
+\index{generateMipmaps@{generateMipmaps}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{generateMipmaps()}{generateMipmaps()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_aecfad4272b514d286ae46e83639f817e} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::generate\+Mipmaps (\begin{DoxyParamCaption}\item[{Vk\+Image}]{image}{, }\item[{Vk\+Format}]{image\+Format}{, }\item[{int32\+\_\+t}]{tex\+Width}{, }\item[{int32\+\_\+t}]{tex\+Height}{, }\item[{uint32\+\_\+t}]{mip\+Levels}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a6eab6576d07a3820cbdccd5babbf7fb8}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!getCameraDataPtr@{getCameraDataPtr}}
+\index{getCameraDataPtr@{getCameraDataPtr}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{getCameraDataPtr()}{getCameraDataPtr()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a6eab6576d07a3820cbdccd5babbf7fb8} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data}{prism\+::\+PGC\+::utils\+::\+Camera\+Data}} \texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::get\+Camera\+Data\+Ptr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_abb197c77af33e20c187d96a6ce87d4dd}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!getMaxUsableSampleCount@{getMaxUsableSampleCount}}
+\index{getMaxUsableSampleCount@{getMaxUsableSampleCount}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{getMaxUsableSampleCount()}{getMaxUsableSampleCount()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_abb197c77af33e20c187d96a6ce87d4dd} 
+Vk\+Sample\+Count\+Flag\+Bits prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::get\+Max\+Usable\+Sample\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_acdd1cff2d554d37c035a7b00b307852c}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!getSwapChainPtr@{getSwapChainPtr}}
+\index{getSwapChainPtr@{getSwapChainPtr}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{getSwapChainPtr()}{getSwapChainPtr()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_acdd1cff2d554d37c035a7b00b307852c} 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain}{prism\+::\+PGC\+::\+Swap\+Chain}} \texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::get\+Swap\+Chain\+Ptr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4bacbfbd6c0905dcdc4882be3c371161}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!init@{init}}
+\index{init@{init}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4bacbfbd6c0905dcdc4882be3c371161} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}}}]{settings}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a5202b6e55da493f576930f53f0692705}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!isWindowReadyForRendering@{isWindowReadyForRendering}}
+\index{isWindowReadyForRendering@{isWindowReadyForRendering}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{isWindowReadyForRendering()}{isWindowReadyForRendering()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a5202b6e55da493f576930f53f0692705} 
+bool prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::is\+Window\+Ready\+For\+Rendering (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4d95481a52b8d64b2d60651032d835ee}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!startRender@{startRender}}
+\index{startRender@{startRender}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{startRender()}{startRender()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4d95481a52b8d64b2d60651032d835ee} 
+void prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::start\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_aa342c65aa462fff2f176f70709b7b106}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!base@{base}}
+\index{base@{base}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_aa342c65aa462fff2f176f70709b7b106} 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base}{PGC\+::base\+::\+Base}} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::base\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a31f1cef5cc83ac1a18edc7d3b89d614e}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!context@{context}}
+\index{context@{context}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a31f1cef5cc83ac1a18edc7d3b89d614e} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::context}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_afc31cffb31e326de0fd0a45c6322e614}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!descriptorSet@{descriptorSet}}
+\index{descriptorSet@{descriptorSet}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{descriptorSet}{descriptorSet}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_afc31cffb31e326de0fd0a45c6322e614} 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set}{PGC\+::\+Descriptor\+Set}} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::descriptor\+Set\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a87fd93b86567719bdd9dbf5da3071d55}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!descriptorSetLayout@{descriptorSetLayout}}
+\index{descriptorSetLayout@{descriptorSetLayout}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{descriptorSetLayout}{descriptorSetLayout}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a87fd93b86567719bdd9dbf5da3071d55} 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout}{PGC\+::\+Descriptor\+Set\+Layout}} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::descriptor\+Set\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a3ca09132e3ff4a8388a5edae449e0675}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!graphicsPipeline@{graphicsPipeline}}
+\index{graphicsPipeline@{graphicsPipeline}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{graphicsPipeline}{graphicsPipeline}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a3ca09132e3ff4a8388a5edae449e0675} 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_graphics_pipeline}{PGC\+::\+Graphics\+Pipeline}} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::graphics\+Pipeline\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_af1b76f64293f0292b219dfcf0b432c5a}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!renderPass@{renderPass}}
+\index{renderPass@{renderPass}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{renderPass}{renderPass}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_af1b76f64293f0292b219dfcf0b432c5a} 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_render_pass}{PGC\+::\+Render\+Pass}} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::render\+Pass\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a55ffc68b57853b631c9b4814f137fe35}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!settings@{settings}}
+\index{settings@{settings}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a55ffc68b57853b631c9b4814f137fe35} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC\+::utils\+::\+Settings}} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::settings}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a0dd17cd2a4cc0775631dfe789c82f8ee}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!swapChain@{swapChain}}
+\index{swapChain@{swapChain}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{swapChain}{swapChain}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a0dd17cd2a4cc0775631dfe789c82f8ee} 
+\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain}{PGC\+::\+Swap\+Chain}} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::swap\+Chain\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a211f201b28de195923a8c320facf8022}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!window@{window}}
+\index{window@{window}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a211f201b28de195923a8c320facf8022} 
+SDL\+\_\+\+Window\texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a6f5c118b620526fd87e3bac408aebbbe}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!windowMinimized@{windowMinimized}}
+\index{windowMinimized@{windowMinimized}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{windowMinimized}{windowMinimized}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a6f5c118b620526fd87e3bac408aebbbe} 
+bool\texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::window\+Minimized}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_prism_graphic_core_a753fa35096fa05f297bdea70afa5e33c}\index{prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}!windowResized@{windowResized}}
+\index{windowResized@{windowResized}!prism::PGC::PrismGraphicCore@{prism::PGC::PrismGraphicCore}}
+\doxysubsubsection{\texorpdfstring{windowResized}{windowResized}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_prism_graphic_core_a753fa35096fa05f297bdea70afa5e33c} 
+bool\texorpdfstring{$\ast$}{*} prism\+::\+PGC\+::\+Prism\+Graphic\+Core\+::window\+Resized}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{prism_graphic_core_8h}{prism\+Graphic\+Core.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{prism_graphic_core_8cpp}{prism\+Graphic\+Core.\+cpp}}\end{DoxyCompactItemize}

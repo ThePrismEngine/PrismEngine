@@ -1,0 +1,39 @@
+\doxysection{vertex.\+h}
+\hypertarget{vertex_8h_source}{}\label{vertex_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h}}
+\mbox{\hyperlink{vertex_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan\_core.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{matrix_8h}{matrix.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}glm.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c}{PGC}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_color}{Color}}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_color_adfccfbc55af6496c5b3b615dc38e36b5}{r}},\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_color_a4dcec896309c575542f3efc71cbd41ea}{g}},\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_color_a11a7b1253206c9cef355efda689cc0c4}{b}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex}{Vertex}}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex_a8c0755ee0ac49e5cedcc9b0ff0d26d0c}{pos}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex_a5690bce120d7610a29dc609c59e6d21f}{color}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec2\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex_a1ea019b9a4af597d776b4eb1f472f5d4}{texCoord}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ VkVertexInputBindingDescription\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex_a6702e1cd9936929ddaa711d0258d1a07}{getBindingDescription}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::array<VkVertexInputAttributeDescription,\ 3>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex_a96daf3ba818593f35e48a0eda00c2094}{getAttributeDescriptions}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex_a63cc3df4f485c079a90d64920ce928c6}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex}{Vertex}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Отдельный\ функтор\ для\ хеширования}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex_hasher}{VertexHasher}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex_hasher_ab3d56c10d33af778a849c8c4bf705388}{operator()}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_vertex}{Vertex}}\&\ v)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}

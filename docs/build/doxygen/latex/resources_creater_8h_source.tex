@@ -1,0 +1,29 @@
+\doxysection{resources\+Creater.\+h}
+\hypertarget{resources_creater_8h_source}{}\label{resources_creater_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.h}}
+\mbox{\hyperlink{resources_creater_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utils_8h}{utils.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{device_wrapper_8h}{deviceWrapper.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c}{PGC}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater}{ResourcesCreater}}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_abd176274158468bb98a309f56b21aba8}{createImage}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils::Context}}*\ context,\ uint32\_t\ width,\ uint32\_t\ height,\ uint32\_t\ mipLevels,\ VkSampleCountFlagBits\ numSamples,\ VkFormat\ format,\ VkImageTiling\ tiling,\ VkImageUsageFlags\ usage,\ VkMemoryPropertyFlags\ properties,\ VkImage\&\ image,\ VkDeviceMemory\&\ imageMemory);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ VkImageView\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_a47be41c0f55c49f83af5f407b310b49a}{createImageView}}(VkDevice\ device,\ VkImage\ image,\ VkFormat\ format,\ VkImageAspectFlags\ aspectFlags,\ uint32\_t\ mipLevels);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_adcf795e7e2f15fd8efa60674a139fe2c}{createFramebuffers}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils::Context}}*\ context,\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils::Settings}}*\ settings);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_ac09e34b5b6c2bcb1edbf3c9e264d1fe6}{createColorResources}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils::Context}}*\ context,\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils::Settings}}*\ settings);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_aaff73dce2f951521017bf9cfd7e74267}{createDepthResources}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils::Context}}*\ context,\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils::Settings}}*\ settings);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_resources_creater_a50d8fcc21c002432511c9f541354fedc}{createTextureSampler}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils::Context}}*\ context,\ VkSampler*\ textureSampler);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00023\ }
+
+\end{DoxyCode}

@@ -1,0 +1,304 @@
+\doxysection{utils.\+h}
+\hypertarget{utils_8h_source}{}\label{utils_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h}}
+\mbox{\hyperlink{utils_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}vulkan/vulkan.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ubo_8h}{./ubo.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vertex_8h}{vertex.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{texture_8h}{texture.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mesh_8h}{mesh.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c}{PGC}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils}{utils}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices}{QueueFamilyIndices}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_a5480668afadb23064e60828cfef73027}{graphicsFamily}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_a1ecf2fab3b0c6b1272d8787aa875b2f9}{presentFamily}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_a907a87fbe64c801fee96e6d0c0242b69}{isComplete}}()\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_a5480668afadb23064e60828cfef73027}{graphicsFamily}}.has\_value()\ \&\&\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices_a1ecf2fab3b0c6b1272d8787aa875b2f9}{presentFamily}}.has\_value();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details}{SwapChainSupportDetails}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSurfaceCapabilitiesKHR\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_ab2a212d23e373c47b37c34943a96b527}{capabilities}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkSurfaceFormatKHR>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_a8e05aa62743e059398b488cc12bd5a29}{formats}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkPresentModeKHR>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details_a8f89077c7917504ab55a93b8f2bf76db}{presentModes}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data}{CameraData}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data_aa86ddf6f4e2fe3f72e06c15be1c1dc8c}{pos}}\ =\ \{\ 2.0f,\ 2.0f,\ 2.0f\ \};\ \ \textcolor{comment}{//\ Позиция}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data_a517cc84de8e2e6420d0ffcf38a744a4d}{look}}\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};\ \textcolor{comment}{//\ Взгляд}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data_a8f2580ffda7ef1cfd8c90670b0eca73f}{up}}\ =\ \{\ 0.0f,\ 0.0f,\ 1.0f\ \};\ \ \ \textcolor{comment}{//\ Вектор\ вверх}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data_ac97568451475afc1ed61acfdb42d1368}{fovy}}\ =\ 45.0f;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Угол\ обзора\ в\ градусах}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data_a7a931e6d6c78bb75d05966bd4c825479}{aspect}}\ =\ 16.f\ /\ 9.f;\ \textcolor{comment}{//\ Соотношение\ сторон}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data_a0184dc6de3c9bdd30f81ba871ec1da72}{zNear}}\ =\ 0.1f;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ближняя\ плоскость\ отсечения}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data_a54614513275959cfb8064bbec8e14e25}{zFar}}\ =\ 10.0f;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Дальняя\ плоскость\ отсечения}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data_add1b529f72e631b7824a6ef8e448ec8e}{useСurrentWindowAspect}}\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Если\ истино\ то\ aspect\ игнорируется\ и\ соотношение\ камеры\ равно\ соотношению\ окна}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{Context}}\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkInstance\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ac9500f33456f5f1a9971b5563729eaf6}{instance}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSurfaceKHR\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a6e5cc346c3461cbf311815952d38ca83}{surface}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkPhysicalDevice\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a759203e6822e3ad8a46b29672ef7b19c}{physicalDevice}}\ =\ VK\_NULL\_HANDLE;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDevice\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a1044c94f8ccd00b268cd85af72fd11b3}{device}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkQueue\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aaf2e5bd3583d87df7d204569157d98cc}{graphicsQueue}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkQueue\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_abad3bde0d4cfc986aa57e410b9f8b7a1}{presentQueue}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSwapchainKHR\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a191f1aaea47b9147fb93301ac11c8f52}{vkSwapChain}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkImageView>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a61c2506389c5cd06807885a98458e46c}{swapChainImageViews}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkFramebuffer>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a663b57954f0090efddcdf3aeb2837861}{swapChainFramebuffers}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkImage>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a2a15bac8577d170c400b7c32ffdd842d}{swapChainImages}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkFormat\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_afdac47e49cd0ae38d95a93c33cf7ecd2}{swapChainImageFormat}};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkExtent2D\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a2cfd6b1fa14df88a820c0c4ebd996aaf}{swapChainExtent}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImage\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a8d1b459631b7e17b99a2891ab8f37311}{depthImage}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDeviceMemory\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a92659cf24ec4ece474f873cb57aa6015}{depthImageMemory}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageView\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_acef6ba561ba15d0e67809c65068e31b4}{depthImageView}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImage\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a0a7c084aa2c8a0ce8ac930d8e927857b}{colorImage}};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDeviceMemory\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a733a1313e3fb135660fb1c4b4e18b1e7}{colorImageMemory}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageView\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a94142c5e6869a4e66cc07073d9eead4c}{colorImageView}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSampleCountFlagBits\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a26c289ae13be8830714d93d3b934ea75}{msaaSamples}}\ =\ VK\_SAMPLE\_COUNT\_1\_BIT;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkRenderPass\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a58e40fd8040df70886377c59224adb8e}{renderPass}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBuffer\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_afd2091a730d8d5f697f75ab96371f9a3}{vertexBuffer}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDeviceMemory\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ae9486dffb20bfc761f06ee3e4fe06860}{vertexBufferMemory}};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBuffer\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_afdd17d23c2221d734bb42e41b3b1de3f}{indexBuffer}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDeviceMemory\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a53783cccbeaa4774e8f779f00fcd77ee}{indexBufferMemory}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Vertex>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ab6fb5ba2cb7bfe2dee1a0eb01d31ce34}{allVertices}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint32\_t>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a7c3c5b7c6f198e9d2eaf48f9bc0b0fdb}{allIndices}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<prism::PGC::Mesh>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9142edd2bb4a82ff2b348eac78ab8a8c}{meshes}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint32\_t>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_af8e9a687b9a3f5879012a8a0cfa152cf}{freeMeshIndices}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ab33d085a44ff7655f167296bdcf38d58}{meshBuffersDirty}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a2be303f40e36da97bc49dc434567820b}{descriptorSetLayout}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkPipelineLayout\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_abd8be7f7b8e01fb62e0900fa0dfc37d5}{pipelineLayout}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkPipeline\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a420655923bdbf77125c266a039b5b99b}{graphicsPipeline}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkCommandPool\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a36dc055df91a851fb1dd07e7a6027050}{commandPool}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkCommandBuffer>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a135a182e81a4b833d985372444d4ef2a}{commandBuffers}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<UniformBuffers>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a8151c42953061a2010f5b93450c96dc7}{uniformBuffers}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkSemaphore>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a65e5acfeb5a3d263007587b61148e82d}{imageAvailableSemaphores}};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkSemaphore>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a0c0a94f856fe6f802eb3229d9170a6fe}{renderFinishedSemaphores}};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkFence>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aeff088aa1c0c75e5b9a38645c10a2911}{inFlightFences}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ab55fc602f6216a6486a333cdc59139f9}{currentFrame}}\ =\ 0;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aa193b6790ed1658ad001a280b8c043a4}{imageIndex}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aefdb78e08e5847b3d311b923255a5de7}{wasRenderingActive}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorPool\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a18e42b896ee57c92b97a1ab5a3844054}{descriptorPool}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorPool\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_abbf627893291ec495b05a3150cc1f9ba}{textureDescriptorPool}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Текстуры\ и\ управление\ ими}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<PGC::Texture>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a0bc0d8cc76d5fa2ca079b6cc03aa82d3}{textures}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint32\_t>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a07aeb09f7483de2bc2d9f3fe99830a66}{freeTextureIndices}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorSet\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_ae43eb6e117b69646acf9db16e2ac72ce}{textureDescriptorSet}}\ =\ VK\_NULL\_HANDLE;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a8f459a9f17d6faf584e25a851885221a}{textureDescriptorSetLayout}}\ =\ VK\_NULL\_HANDLE;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data}{CameraData}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9b6351ddb73b77efe20d3264c5207e6f}{cameraData}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkDescriptorSet>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a26b3de428ebddb65d93918e911c037f1}{descriptorSets}};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9eca9f1f2ce41389b90c17a2477df558}{MAX\_FRAMES\_IN\_FLIGHT}}\ =\ 2;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<const\ char*>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_aad40d80a4e22067cd51a9a1fa0128f66}{validationLayers}}\ =\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}VK\_LAYER\_KHRONOS\_validation"{}}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<const\ char*>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a2839741dfe5060bef37fb694c51f4c72}{deviceExtensions}}\ =\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_KHR\_SWAPCHAIN\_EXTENSION\_NAME,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_EXT\_DESCRIPTOR\_INDEXING\_EXTENSION\_NAME}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a689375014bda6088bc48fc64077ecaa6}{dynamicAlignment}}=0;\ \ \ \ \ \ \textcolor{comment}{//\ Выровненный\ размер\ ObjectUBO}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a3aa659de42727b676c161ea31623bde3}{MAX\_OBJECTS}}=500;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Максимальное\ количество\ объектов}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#ifdef\ NDEBUG}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9176cc478987deb4fcc7ef8c26d768cf}{enableValidationLayers}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context_a9176cc478987deb4fcc7ef8c26d768cf}{enableValidationLayers}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_app_settings}{AppSettings}}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_app_settings_aef32a03b41818b8f91b2948ba33051cf}{applicationName}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_version}{prism::Version}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_app_settings_a454e942ece8c969ada980cc36cd9f384}{applicationVersion}}\ =\ \{\ 1,\ 0,\ 0\ \};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_debug_settings}{DebugSettings}}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDebugUtilsMessageSeverityFlagsEXT\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_ab0b1d1bd47de0825f3cb8fd975a22c53}{VulkanMessageSeverity}}\ =\ VK\_DEBUG\_UTILS\_MESSAGE\_SEVERITY\_VERBOSE\_BIT\_EXT\ |\ VK\_DEBUG\_UTILS\_MESSAGE\_SEVERITY\_WARNING\_BIT\_EXT\ |\ VK\_DEBUG\_UTILS\_MESSAGE\_SEVERITY\_ERROR\_BIT\_EXT;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDebugUtilsMessageTypeFlagsEXT\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_a389dc5fd711a81a8b6d7c824f6c32d9c}{VulkanMessageType}}\ =\ VK\_DEBUG\_UTILS\_MESSAGE\_TYPE\_GENERAL\_BIT\_EXT\ |\ VK\_DEBUG\_UTILS\_MESSAGE\_TYPE\_VALIDATION\_BIT\_EXT\ |\ VK\_DEBUG\_UTILS\_MESSAGE\_TYPE\_PERFORMANCE\_BIT\_EXT;}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#ifdef\ NDEBUG}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_a1e88cda59742d0f0c3977b39de86a3f6}{debugDeviceSelection}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_a1e88cda59742d0f0c3977b39de86a3f6}{debugDeviceSelection}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings}{DeviceEvaluationWeightsSettings}}\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_ace387992ce0ab450076cd433e2fcf7a5}{wType}}\ =\ 0.3;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_ad274fafa7043eda5f92e0141c142de31}{wFeatures}}\ =\ 0.25;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_a0b50de64fa7d4092209b5abd68f8370a}{wHardware}}\ =\ 0.35;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_af0f6ff098849e7dde893ba853dbff1fb}{wApi}}\ =\ 0.1;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings}{SwapChainSettings}}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_ac5d98e72da506aaca6e810eb8d399031}{enableVSync}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_ad40e001a8d72883714cf2f42d040c931}{enableTripleBuffering}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkFormat\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings_ab0598478739d07238a00a713bae97855}{preferredFormat}}\ =\ VK\_FORMAT\_B8G8R8A8\_SRGB;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Конфигурация\ для\ одного\ биндинга}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_binding_config}{BindingConfig}}\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_binding_config_ae555473cde6c981aa71529d4d5298061}{binding}};}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorType\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_binding_config_a397d16e41518ebeeef32622045f1c4cc}{descriptorType}};}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_binding_config_a0076a98392481b25610091f7983dab89}{descriptorCount}};}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkShaderStageFlags\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_binding_config_a61dbb8eada8a03d5a939333174457616}{stageFlags}};}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ VkSampler*\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_binding_config_a76ff6b1b02f190221df95233e56cdebd}{immutableSamplers}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config}{TextureBindingConfig}}\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_af458042a128c12776264fdc3943762e5}{binding}};}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorType\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_addf06858738ae8a93f371080154aae01}{descriptorType}};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_a4d45da354c745af5f6ea053d7c6e3599}{descriptorCount}};}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkShaderStageFlags\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_a4ab91494879f8f753f9c8c767d47ea8a}{stageFlags}};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ VkSampler*\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_ac067231afaf9c20103a9a79d9377bee8}{immutableSamplers}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorBindingFlagsEXT\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_a9a0cf6db540b27482ffda6b68e759e46}{bindingFlags}};}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings}{DescriptorSetLayoutSettings}}\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<BindingConfig>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings_a1243f1fc1e4a434e592d1dbebaf912a3}{bindings}};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorSetLayoutCreateFlags\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings_ab89f22dc01c3183cb8f2f9ad4ad0fad4}{flags}}\ =\ 0;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings}{TextureDescriptorSetLayoutSettings}}\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<TextureBindingConfig>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings_a8709305cc9ed75c8dddde3e29206b9a8}{bindings}};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorSetLayoutCreateFlags\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings_a31c28e1ec60386811d895c4f638c53b7}{flags}}\ =\ 0;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings}{ShadersSettings}}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_aac49878cd2a35c48f30187868a386798}{vertexShaderFilename}};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_aaa93e7752a945b925a34a41f14d79545}{fragmentShaderFilename}};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_a909f2bfcbfef2a782db5d468abc9fab4}{shadersDirectory}};}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings}{RasterizationSettings}}\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkPolygonMode\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_a2bcefa37a2c02866aa211cc2a3bbc6cc}{polygonMode}}\ =\ VK\_POLYGON\_MODE\_FILL;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_a25b167d3ed958b55a93bdf21c3e6ba1b}{lineWidth}}\ =\ 1.0f;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkCullModeFlags\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_a9fffcb91bd6ba955bfed9f82b2b9cebd}{cullMode}}\ =\ VK\_CULL\_MODE\_BACK\_BIT;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkFrontFace\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_a47e5208647172a1cab75dbf5d797fb89}{frontFace}}\ =\ VK\_FRONT\_FACE\_COUNTER\_CLOCKWISE;}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_adff42ee68718b965e677060d9cf48314}{depthClampEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_a150300b8301848c26ed08c9dbd7c1484}{rasterizerDiscardEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_a26d76a381e5b29f11f874a4ae436e52d}{depthBiasEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23f}{MultisampleSelectionStrategy}}\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fa23bd02d770fe9f1ea82d40438037cf25}{MINIMAL}},\ \ \textcolor{comment}{//\ Минимальный\ уровень\ после\ 1x(обычно\ 2x)}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fa9eea90ec596d66e2a1fd8edd09cd61d9}{MIDDLE}},\ \ \ \textcolor{comment}{//\ Среднее\ значение\ из\ доступных}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fad9ff5583d4cddf516dbd5e1f38b654d1}{MAXIMAL}},\ \ \textcolor{comment}{//\ Максимальное\ значение}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fa28800c8afb35060c17cefe2f645685ad}{CUSTOM}},\ \ \ \textcolor{comment}{//\ Значение\ из\ цели\ или\ максимально\ приближенное}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ADAPTIVE,\ //\ Оценка\ по\ баллам\ устройства}}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings}{MultisampleSettings}}\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_af1f0466234a5d978e76840738216c796}{sampleShadingEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSampleCountFlagBits\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_a216c5c2bbe8523649e5c1306d7ea5369}{rasterizationSamples}}\ =\ VK\_SAMPLE\_COUNT\_1\_BIT;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23f}{MultisampleSelectionStrategy}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings_a1e28bb769fba57542e2a8aef08b8a74b}{strategy}}\ =\ \mbox{\hyperlink{namespaceprism_1_1_p_g_c_1_1utils_a7193030eda5a2fa42e3caceda991e23fad9ff5583d4cddf516dbd5e1f38b654d1}{MultisampleSelectionStrategy::MAXIMAL}};}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings}{ColorBlendAttachmentSettings}}\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings_ad9944069aee5486883dc44065998a23e}{blendEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkColorComponentFlags\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings_ad69d032b418c3f936ea0fee90c1edc12}{colorWriteMask}}\ =}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_COLOR\_COMPONENT\_R\_BIT\ |}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_COLOR\_COMPONENT\_G\_BIT\ |}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_COLOR\_COMPONENT\_B\_BIT\ |}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_COLOR\_COMPONENT\_A\_BIT;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings}{ColorBlendSettings}}\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkPipelineColorBlendAttachmentState>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_ab7e492a8019d4f44ee3cfe1b40f2f746}{attachments}};}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_a40932407f280bd6aa68e7a0d74263628}{logicOpEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkLogicOp\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_aab4d4c4e9585165fdfbad1c842732090}{logicOp}}\ =\ VK\_LOGIC\_OP\_COPY;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings_aca3667fb6394ee7ef07da6816c40326d}{blendConstants}}[4]\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings}{DynamicStateSettings}}\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<VkDynamicState>\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings_a15cd1bfd4e7b651cd818bdba94814795}{dynamicStates}}\ =\ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_DYNAMIC\_STATE\_VIEWPORT,}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_DYNAMIC\_STATE\_SCISSOR}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings}{DepthStencilSettings}}\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_a94862f8c4518a86a773860b0b5d5a9e8}{depthTestEnable}}\ =\ VK\_TRUE;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_a6a06e07e1f40081595f1d5d5a3d84cb2}{depthWriteEnable}}\ =\ VK\_TRUE;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkCompareOp\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_ad800cb83732af9af3c330f7c8c870ab2}{depthCompareOp}}\ =\ VK\_COMPARE\_OP\_LESS;}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_ad7a4ce1b896097d7a3d4edb467c52e55}{depthBoundsTestEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_a9d00adc23945edc546dd28483034d1fc}{minDepthBounds}}\ =\ 0.0f;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_a2fcf658a19cc7e299cd6f2dd20d62156}{maxDepthBounds}}\ =\ 1.0f;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_ad741569ede58e6cd31a46e9108cd5922}{stencilTestEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkStencilOpState\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_aa0c0f9cbde327799a4638ea19643d2d8}{front}}\ =\ \{\};}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkStencilOpState\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_a6ee3cedb24a450ee5bee931dc312f34a}{back}}\ =\ \{\};}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings}{InputAssemblySettings}}\ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkPrimitiveTopology\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings_a2f0903faf4051d39f3e328aa7ceaf211}{topology}}\ =\ VK\_PRIMITIVE\_TOPOLOGY\_TRIANGLE\_LIST;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBool32\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings_ab91323523e515b1758ba9c2b71430900}{primitiveRestartEnable}}\ =\ VK\_FALSE;}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings}{ViewportStateSettings}}\ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings_a018c8e8dc0d9a65ec66ca894deab34ea}{viewportCount}}\ =\ 1;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings_a4a6c86fefccfe944bfc89f9509909dfe}{scissorCount}}\ =\ 1;}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings}{PipelineSettings}}\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings}{ShadersSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_a8f9153fa0a40311ad06128de7c8862f2}{shaders}}\ =\ \{\ \textcolor{stringliteral}{"{}vert.spv"{}},\ \textcolor{stringliteral}{"{}frag.spv"{}},\ \textcolor{stringliteral}{"{}shaders/"{}}\ \};;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings}{InputAssemblySettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_afd7becb2aa421bfe5777e089e6c667e3}{inputAssembly}};}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings}{RasterizationSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_afc61024c0a725c2cced455b60af8f9ae}{rasterization}};}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings}{DepthStencilSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_aeeac69a126a55b076000a777386883df}{depthStencil}};}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings}{MultisampleSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_aa2b9bad54f0092b4b4fc6b99f80e38a2}{multisample}};}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings}{ColorBlendSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_aa7c5ebf2679b7ca18b3708827b0c79ff}{colorBlend}};}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings}{DynamicStateSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_aa3bca2e1a268849820f771f08bb4b3e6}{dynamicState}};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings}{ViewportStateSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_a7d3e6d581354d2b23101d1b15a25310c}{viewportState}};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{Settings}}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_app_settings}{AppSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_ab96d332c46dd421181cf6197c4f869c6}{app}};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings}{DeviceEvaluationWeightsSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_acb67f2bf38a2a718053640b5e10ff493}{deviceEvaluationWeights}};}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_debug_settings}{DebugSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_a224a5453ec0fdb5ef9b637c3325a6751}{debug}};}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings}{SwapChainSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_ac56aa93ce0a90eaef74ab718dcd16261}{swapChain}};}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings}{DescriptorSetLayoutSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_ac07b6da9b6764928661eef70e95bdae4}{descriptorSetLayout}};}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings}{TextureDescriptorSetLayoutSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_a142299b238747c830ea085dd0f2ec05d}{textureDescriptorSetLayout}};}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_a8150b0a86cc235973fe641cdb260d7cc}{MAX\_TEXTURES}}\ =\ 350;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings}{PipelineSettings}}\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_ab0edf9cb2b267c3647781c2a12de0eb2}{pipeline}};}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_Window*\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings_a762e8813dbc05670d0b2802986ef46f6}{window}};}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \}}
+\DoxyCodeLine{00298\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1_device_score" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::DeviceScore</compoundname>
+    <includes refid="device_rater_8h" local="no">deviceRater.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_device_score_1a8c3c9d1f5091a5007a1b52539174d07c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prism::PGC::DeviceScore::typeScore</definition>
+        <argsstring></argsstring>
+        <name>typeScore</name>
+        <qualifiedname>prism::PGC::DeviceScore::typeScore</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="8" column="5" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_device_score_1aecb9f00308efee2aebacc93628f02492" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prism::PGC::DeviceScore::featureScore</definition>
+        <argsstring></argsstring>
+        <name>featureScore</name>
+        <qualifiedname>prism::PGC::DeviceScore::featureScore</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="9" column="5" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_device_score_1a6eb475d2250a8c0b53d18e2482efdfc1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prism::PGC::DeviceScore::hardwareScore</definition>
+        <argsstring></argsstring>
+        <name>hardwareScore</name>
+        <qualifiedname>prism::PGC::DeviceScore::hardwareScore</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="10" column="5" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_device_score_1a8e476bc99003b15dc0c15c54320dd5e1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prism::PGC::DeviceScore::apiScore</definition>
+        <argsstring></argsstring>
+        <name>apiScore</name>
+        <qualifiedname>prism::PGC::DeviceScore::apiScore</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="11" column="5" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" line="7" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceRater.h" bodystart="7" bodyend="12"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_device_score_1a8e476bc99003b15dc0c15c54320dd5e1" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceScore</scope><name>apiScore</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_device_score_1aecb9f00308efee2aebacc93628f02492" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceScore</scope><name>featureScore</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_device_score_1a6eb475d2250a8c0b53d18e2482efdfc1" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceScore</scope><name>hardwareScore</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_device_score_1a8c3c9d1f5091a5007a1b52539174d07c" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceScore</scope><name>typeScore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

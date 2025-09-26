@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1scene_1_1_i_system" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>prism::scene::ISystem</compoundname>
+    <derivedcompoundref refid="classprism_1_1scene_1_1_render_system" prot="public" virt="non-virtual">prism::scene::RenderSystem</derivedcompoundref>
+    <includes refid="system_8h" local="no">system.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_i_system_1a7c2ea1d298dac0b99b6a83af5ae26b93" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::scene::ISystem::enabled</definition>
+        <argsstring></argsstring>
+        <name>enabled</name>
+        <qualifiedname>prism::scene::ISystem::enabled</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Флаг активности системы. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Если true - система обновляется, если false - пропускается </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/system.h" line="24" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/system.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1scene_1_1_i_system_1a3a7fc6382464d9b1fc94f95eb4dda159" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual prism::scene::ISystem::~ISystem</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ISystem</name>
+        <qualifiedname>prism::scene::ISystem::~ISystem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/system.h" line="15" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_i_system_1a406b867d27b268665a6cc8d82c740f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void prism::scene::ISystem::update</definition>
+        <argsstring>(float deltaTime)=0</argsstring>
+        <name>update</name>
+        <qualifiedname>prism::scene::ISystem::update</qualifiedname>
+        <reimplementedby refid="classprism_1_1scene_1_1_render_system_1ae28dd1ba57114dfacf9ce65f8aeff5a9">update</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Обновление состояния системы. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Время, прошедшее с предыдущего обновления (в секундах)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Вызывается каждый кадр для обновления логики системы </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/system.h" line="20" column="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Базовый интерфейс для всех систем </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Системы должны наследоваться от этого интерфейса и реализовывать метод update </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>prism::scene::ISystem</label>
+        <link refid="classprism_1_1scene_1_1_i_system"/>
+      </node>
+      <node id="2">
+        <label>prism::scene::RenderSystem</label>
+        <link refid="classprism_1_1scene_1_1_render_system"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/system.h" line="13" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/system.h" bodystart="13" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classprism_1_1scene_1_1_i_system_1a7c2ea1d298dac0b99b6a83af5ae26b93" prot="public" virt="non-virtual"><scope>prism::scene::ISystem</scope><name>enabled</name></member>
+      <member refid="classprism_1_1scene_1_1_i_system_1a406b867d27b268665a6cc8d82c740f68" prot="public" virt="pure-virtual"><scope>prism::scene::ISystem</scope><name>update</name></member>
+      <member refid="classprism_1_1scene_1_1_i_system_1a3a7fc6382464d9b1fc94f95eb4dda159" prot="public" virt="virtual"><scope>prism::scene::ISystem</scope><name>~ISystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

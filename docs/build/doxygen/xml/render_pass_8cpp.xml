@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="render_pass_8cpp" kind="file" language="C++">
+    <compoundname>renderPass.cpp</compoundname>
+    <includes refid="render_pass_8h" local="yes">renderPass.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="21">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderPass.cpp</label>
+        <link refid="render_pass_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>renderPass.h</label>
+        <link refid="render_pass_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SDL.h</label>
+      </node>
+      <node id="14">
+        <label>array</label>
+      </node>
+      <node id="20">
+        <label>cstdint</label>
+      </node>
+      <node id="11">
+        <label>glm.hpp</label>
+      </node>
+      <node id="5">
+        <label>optional</label>
+      </node>
+      <node id="16">
+        <label>stdexcept</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="12">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="render_pass_8h" kindref="compound">renderPass.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_render_pass_1af0d0d398d9204187958caa20fc6c34f0" kindref="member">prism::PGC::RenderPass::init</ref>(PGC::utils::Context*<sp/>context,<sp/>PGC::utils::Settings*<sp/>settings)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classprism_1_1_p_g_c_1_1_render_pass_1abecd79ef9a97d01ebb2297d1f13a6e38" kindref="member">context</ref><sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_render_pass_1abecd79ef9a97d01ebb2297d1f13a6e38" kindref="member">context</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classprism_1_1_p_g_c_1_1_render_pass_1a66832325b511ff98d5a1bbb51f86b1ae" kindref="member">settings</ref><sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_render_pass_1a66832325b511ff98d5a1bbb51f86b1ae" kindref="member">settings</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_render_pass_1a2efa53e0315254e7dfed30b6853dcb72" kindref="member">create</ref>();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="classprism_1_1_p_g_c_1_1_render_pass_1acd98ae0b9087cec40ae4b05a0feeae81" kindref="member">prism::PGC::RenderPass::~RenderPass</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_render_pass_1ae73147d80f1695b95d5e54f70d1cfea0" kindref="member">prism::PGC::RenderPass::cleanup</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyRenderPass(context-&gt;device,<sp/>context-&gt;renderPass,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_render_pass_1a2efa53e0315254e7dfed30b6853dcb72" kindref="member">prism::PGC::RenderPass::create</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>VkAttachmentDescription<sp/>depthAttachment{};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachment.format<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a2dca5c9dabfc59451df88f96685ce185" kindref="member">DeviceWrapper::findDepthFormat</ref>(context-&gt;physicalDevice);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachment.samples<sp/>=<sp/>context-&gt;msaaSamples;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachment.loadOp<sp/>=<sp/>VK_ATTACHMENT_LOAD_OP_CLEAR;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachment.storeOp<sp/>=<sp/>VK_ATTACHMENT_STORE_OP_DONT_CARE;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachment.stencilLoadOp<sp/>=<sp/>VK_ATTACHMENT_LOAD_OP_DONT_CARE;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachment.stencilStoreOp<sp/>=<sp/>VK_ATTACHMENT_STORE_OP_DONT_CARE;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachment.initialLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_UNDEFINED;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachment.finalLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>VkAttachmentDescription<sp/>colorAttachmentResolve{};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolve.format<sp/>=<sp/>context-&gt;swapChainImageFormat;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolve.samples<sp/>=<sp/>VK_SAMPLE_COUNT_1_BIT;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolve.loadOp<sp/>=<sp/>VK_ATTACHMENT_LOAD_OP_DONT_CARE;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolve.storeOp<sp/>=<sp/>VK_ATTACHMENT_STORE_OP_STORE;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolve.stencilLoadOp<sp/>=<sp/>VK_ATTACHMENT_LOAD_OP_DONT_CARE;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolve.stencilStoreOp<sp/>=<sp/>VK_ATTACHMENT_STORE_OP_DONT_CARE;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolve.initialLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_UNDEFINED;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolve.finalLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>VkAttachmentReference<sp/>colorAttachmentResolveRef{};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolveRef.attachment<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentResolveRef.layout<sp/>=<sp/>VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>VkAttachmentReference<sp/>depthAttachmentRef{};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachmentRef.attachment<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>depthAttachmentRef.layout<sp/>=<sp/>VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>VkAttachmentDescription<sp/>colorAttachment{};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachment.format<sp/>=<sp/>context-&gt;swapChainImageFormat;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachment.samples<sp/>=<sp/>context-&gt;msaaSamples;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachment.loadOp<sp/>=<sp/>VK_ATTACHMENT_LOAD_OP_CLEAR;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachment.storeOp<sp/>=<sp/>VK_ATTACHMENT_STORE_OP_STORE;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachment.stencilLoadOp<sp/>=<sp/>VK_ATTACHMENT_LOAD_OP_DONT_CARE;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachment.stencilStoreOp<sp/>=<sp/>VK_ATTACHMENT_STORE_OP_DONT_CARE;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachment.initialLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_UNDEFINED;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachment.finalLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>VkAttachmentReference<sp/>colorAttachmentRef{};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentRef.attachment<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>colorAttachmentRef.layout<sp/>=<sp/>VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSubpassDescription<sp/>subpass{};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>subpass.pipelineBindPoint<sp/>=<sp/>VK_PIPELINE_BIND_POINT_GRAPHICS;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>subpass.colorAttachmentCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>subpass.pColorAttachments<sp/>=<sp/>&amp;colorAttachmentRef;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>subpass.pDepthStencilAttachment<sp/>=<sp/>&amp;depthAttachmentRef;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>subpass.pResolveAttachments<sp/>=<sp/>&amp;colorAttachmentResolveRef;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSubpassDependency<sp/>dependency{};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>dependency.srcSubpass<sp/>=<sp/>VK_SUBPASS_EXTERNAL;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>dependency.dstSubpass<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>dependency.srcStageMask<sp/>=<sp/>VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT<sp/>|<sp/>VK_PIPELINE_STAGE_LATE_FRAGMENT_TESTS_BIT;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>dependency.srcAccessMask<sp/>=<sp/>VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT<sp/>|<sp/>VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>dependency.dstStageMask<sp/>=<sp/>VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT<sp/>|<sp/>VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>dependency.dstAccessMask<sp/>=<sp/>VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT<sp/>|<sp/>VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;VkAttachmentDescription,<sp/>3&gt;<sp/>attachments<sp/>=<sp/>{<sp/>colorAttachment,<sp/>depthAttachment,<sp/>colorAttachmentResolve<sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>VkRenderPassCreateInfo<sp/>renderPassInfo{};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.attachmentCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(attachments.size());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.pAttachments<sp/>=<sp/>attachments.data();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.subpassCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.pSubpasses<sp/>=<sp/>&amp;subpass;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.dependencyCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>renderPassInfo.pDependencies<sp/>=<sp/>&amp;dependency;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateRenderPass(context-&gt;device,<sp/>&amp;renderPassInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;context-&gt;renderPass)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>render<sp/>pass!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/renderPass.cpp"/>
+  </compounddef>
+</doxygen>

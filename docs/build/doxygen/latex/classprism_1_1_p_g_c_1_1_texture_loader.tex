@@ -1,0 +1,71 @@
+\doxysection{Класс prism\+::PGC\+::Texture\+Loader}
+\hypertarget{classprism_1_1_p_g_c_1_1_texture_loader}{}\label{classprism_1_1_p_g_c_1_1_texture_loader}\index{prism::PGC::TextureLoader@{prism::PGC::TextureLoader}}
+
+
+{\ttfamily \#include $<$texture\+Loader.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{prism\+::\+PGC\+::\+Texture}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_texture_loader_abfd63994cc54d8df2c61533a802fb782}{load}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, std\+::string texture\+Path)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_texture_loader_a522f5a31968bebe09ba3d113f16db9dc}{cleanup}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} \texorpdfstring{$\ast$}{*}texture)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_texture_loader_a5bb7d9078725b4ba9815e786f1c90883}{create\+Texture\+Image}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} \texorpdfstring{$\ast$}{*}texture)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_texture_loader_aaf14dc47d4371346e84b87a901b3e92f}{create\+Texture\+Image\+View}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} \texorpdfstring{$\ast$}{*}texture)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_texture_loader_a7d0d544cbd13df616f5615ae82a17366}{create\+Texture\+Sampler}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} \texorpdfstring{$\ast$}{*}texture)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_texture_loader_ae9fc1ba2404bbe90b1e56eaa9d4fbf94}{generate\+Mipmaps}} (\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, Vk\+Image image, Vk\+Format image\+Format, int32\+\_\+t tex\+Width, int32\+\_\+t tex\+Height, uint32\+\_\+t mip\+Levels)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_texture_loader_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1_texture_loader_a522f5a31968bebe09ba3d113f16db9dc}\index{prism::PGC::TextureLoader@{prism::PGC::TextureLoader}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!prism::PGC::TextureLoader@{prism::PGC::TextureLoader}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_texture_loader_a522f5a31968bebe09ba3d113f16db9dc} 
+void prism\+::\+PGC\+::\+Texture\+Loader\+::cleanup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} \texorpdfstring{$\ast$}{*}}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_texture_loader_a5bb7d9078725b4ba9815e786f1c90883}\index{prism::PGC::TextureLoader@{prism::PGC::TextureLoader}!createTextureImage@{createTextureImage}}
+\index{createTextureImage@{createTextureImage}!prism::PGC::TextureLoader@{prism::PGC::TextureLoader}}
+\doxysubsubsection{\texorpdfstring{createTextureImage()}{createTextureImage()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_texture_loader_a5bb7d9078725b4ba9815e786f1c90883} 
+void prism\+::\+PGC\+::\+Texture\+Loader\+::create\+Texture\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} \texorpdfstring{$\ast$}{*}}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_texture_loader_aaf14dc47d4371346e84b87a901b3e92f}\index{prism::PGC::TextureLoader@{prism::PGC::TextureLoader}!createTextureImageView@{createTextureImageView}}
+\index{createTextureImageView@{createTextureImageView}!prism::PGC::TextureLoader@{prism::PGC::TextureLoader}}
+\doxysubsubsection{\texorpdfstring{createTextureImageView()}{createTextureImageView()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_texture_loader_aaf14dc47d4371346e84b87a901b3e92f} 
+void prism\+::\+PGC\+::\+Texture\+Loader\+::create\+Texture\+Image\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} \texorpdfstring{$\ast$}{*}}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_texture_loader_a7d0d544cbd13df616f5615ae82a17366}\index{prism::PGC::TextureLoader@{prism::PGC::TextureLoader}!createTextureSampler@{createTextureSampler}}
+\index{createTextureSampler@{createTextureSampler}!prism::PGC::TextureLoader@{prism::PGC::TextureLoader}}
+\doxysubsubsection{\texorpdfstring{createTextureSampler()}{createTextureSampler()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_texture_loader_a7d0d544cbd13df616f5615ae82a17366} 
+void prism\+::\+PGC\+::\+Texture\+Loader\+::create\+Texture\+Sampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{PGC\+::\+Texture}} \texorpdfstring{$\ast$}{*}}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_texture_loader_ae9fc1ba2404bbe90b1e56eaa9d4fbf94}\index{prism::PGC::TextureLoader@{prism::PGC::TextureLoader}!generateMipmaps@{generateMipmaps}}
+\index{generateMipmaps@{generateMipmaps}!prism::PGC::TextureLoader@{prism::PGC::TextureLoader}}
+\doxysubsubsection{\texorpdfstring{generateMipmaps()}{generateMipmaps()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_texture_loader_ae9fc1ba2404bbe90b1e56eaa9d4fbf94} 
+void prism\+::\+PGC\+::\+Texture\+Loader\+::generate\+Mipmaps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{Vk\+Image}]{image}{, }\item[{Vk\+Format}]{image\+Format}{, }\item[{int32\+\_\+t}]{tex\+Width}{, }\item[{int32\+\_\+t}]{tex\+Height}{, }\item[{uint32\+\_\+t}]{mip\+Levels}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_texture_loader_abfd63994cc54d8df2c61533a802fb782}\index{prism::PGC::TextureLoader@{prism::PGC::TextureLoader}!load@{load}}
+\index{load@{load}!prism::PGC::TextureLoader@{prism::PGC::TextureLoader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_texture_loader_abfd63994cc54d8df2c61533a802fb782} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_texture}{prism\+::\+PGC\+::\+Texture}} prism\+::\+PGC\+::\+Texture\+Loader\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{std\+::string}]{texture\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{texture_loader_8h}{texture\+Loader.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{texture_loader_8cpp}{texture\+Loader.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="resources_creater_8cpp" kind="file" language="C++">
+    <compoundname>resourcesCreater.cpp</compoundname>
+    <includes refid="resources_creater_8h" local="yes">resourcesCreater.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="21">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.cpp</label>
+        <link refid="resources_creater_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>resourcesCreater.h</label>
+        <link refid="resources_creater_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SDL.h</label>
+      </node>
+      <node id="4">
+        <label>array</label>
+      </node>
+      <node id="20">
+        <label>cstdint</label>
+      </node>
+      <node id="13">
+        <label>glm.hpp</label>
+      </node>
+      <node id="7">
+        <label>optional</label>
+      </node>
+      <node id="3">
+        <label>stdexcept</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="14">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="resources_creater_8h" kindref="compound">resourcesCreater.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1abd176274158468bb98a309f56b21aba8" kindref="member">prism::PGC::ResourcesCreater::createImage</ref>(utils::Context*<sp/>context,<sp/>uint32_t<sp/>width,<sp/>uint32_t<sp/>height,<sp/>uint32_t<sp/>mipLevels,<sp/>VkSampleCountFlagBits<sp/>numSamples,<sp/>VkFormat<sp/>format,<sp/>VkImageTiling<sp/>tiling,<sp/>VkImageUsageFlags<sp/>usage,<sp/>VkMemoryPropertyFlags<sp/>properties,<sp/>VkImage&amp;<sp/>image,<sp/>VkDeviceMemory&amp;<sp/>imageMemory)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>VkImageCreateInfo<sp/>imageInfo{};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.imageType<sp/>=<sp/>VK_IMAGE_TYPE_2D;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.extent.width<sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.extent.height<sp/>=<sp/>height;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.extent.depth<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.mipLevels<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.arrayLayers<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.format<sp/>=<sp/>format;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.tiling<sp/>=<sp/>tiling;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.initialLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_UNDEFINED;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.usage<sp/>=<sp/>usage;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.samples<sp/>=<sp/>numSamples;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.sharingMode<sp/>=<sp/>VK_SHARING_MODE_EXCLUSIVE;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>imageInfo.mipLevels<sp/>=<sp/>mipLevels;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateImage(context-&gt;device,<sp/>&amp;imageInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;image)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>image!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>VkMemoryRequirements<sp/>memRequirements;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetImageMemoryRequirements(context-&gt;device,<sp/>image,<sp/>&amp;memRequirements);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>VkMemoryAllocateInfo<sp/>allocInfo{};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.allocationSize<sp/>=<sp/>memRequirements.size;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.memoryTypeIndex<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a63c317f0927d63bd97bb1f94a4e6768c" kindref="member">DeviceWrapper::findMemoryType</ref>(context-&gt;physicalDevice,<sp/>memRequirements.memoryTypeBits,<sp/>properties);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkAllocateMemory(context-&gt;device,<sp/>&amp;allocInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;imageMemory)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>allocate<sp/>image<sp/>memory!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>vkBindImageMemory(context-&gt;device,<sp/>image,<sp/>imageMemory,<sp/>0);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">VkImageView<sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1a47be41c0f55c49f83af5f407b310b49a" kindref="member">prism::PGC::ResourcesCreater::createImageView</ref>(VkDevice<sp/>device,<sp/>VkImage<sp/>image,<sp/>VkFormat<sp/>format,<sp/>VkImageAspectFlags<sp/>aspectFlags,<sp/>uint32_t<sp/>mipLevels)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>VkImageViewCreateInfo<sp/>viewInfo{};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.image<sp/>=<sp/>image;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.viewType<sp/>=<sp/>VK_IMAGE_VIEW_TYPE_2D;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.format<sp/>=<sp/>format;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.subresourceRange.aspectMask<sp/>=<sp/>aspectFlags;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.subresourceRange.baseMipLevel<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.subresourceRange.levelCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.subresourceRange.baseArrayLayer<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.subresourceRange.layerCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>viewInfo.subresourceRange.levelCount<sp/>=<sp/>mipLevels;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>VkImageView<sp/>imageView;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateImageView(device,<sp/>&amp;viewInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;imageView)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>image<sp/>view!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>imageView;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1adcf795e7e2f15fd8efa60674a139fe2c" kindref="member">prism::PGC::ResourcesCreater::createFramebuffers</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref>*<sp/>settings)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;swapChainFramebuffers.resize(context-&gt;swapChainImageViews.size());</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>context-&gt;swapChainImageViews.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::array&lt;VkImageView,<sp/>3&gt;<sp/>attachments<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;colorImageView,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;depthImageView,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;swapChainImageViews[i]</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkFramebufferCreateInfo<sp/>framebufferInfo{};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>framebufferInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>framebufferInfo.renderPass<sp/>=<sp/>context-&gt;renderPass;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>framebufferInfo.attachmentCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(attachments.size());</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>framebufferInfo.pAttachments<sp/>=<sp/>attachments.data();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>framebufferInfo.width<sp/>=<sp/>context-&gt;swapChainExtent.width;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>framebufferInfo.height<sp/>=<sp/>context-&gt;swapChainExtent.height;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>framebufferInfo.layers<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateFramebuffer(context-&gt;device,<sp/>&amp;framebufferInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;context-&gt;swapChainFramebuffers[i])<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>framebuffer!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1ac09e34b5b6c2bcb1edbf3c9e264d1fe6" kindref="member">prism::PGC::ResourcesCreater::createColorResources</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref>*<sp/>settings)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>VkFormat<sp/>colorFormat<sp/>=<sp/>context-&gt;swapChainImageFormat;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>createImage(context,<sp/>context-&gt;swapChainExtent.width,<sp/>context-&gt;swapChainExtent.height,<sp/>1,<sp/>context-&gt;msaaSamples,<sp/>colorFormat,<sp/>VK_IMAGE_TILING_OPTIMAL,<sp/>VK_IMAGE_USAGE_TRANSIENT_ATTACHMENT_BIT<sp/>|<sp/>VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT,<sp/>VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,<sp/>context-&gt;colorImage,<sp/>context-&gt;colorImageMemory);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;colorImageView<sp/>=<sp/>createImageView(context-&gt;device<sp/>,context-&gt;colorImage,<sp/>colorFormat,<sp/>VK_IMAGE_ASPECT_COLOR_BIT,<sp/>1);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1aaff73dce2f951521017bf9cfd7e74267" kindref="member">prism::PGC::ResourcesCreater::createDepthResources</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref>*<sp/>settings)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>VkFormat<sp/>depthFormat<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a2dca5c9dabfc59451df88f96685ce185" kindref="member">PGC::DeviceWrapper::findDepthFormat</ref>(context-&gt;physicalDevice);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1abd176274158468bb98a309f56b21aba8" kindref="member">PGC::ResourcesCreater::createImage</ref>(context,<sp/>context-&gt;swapChainExtent.width,<sp/>context-&gt;swapChainExtent.height,<sp/>1,<sp/>context-&gt;msaaSamples,<sp/>depthFormat,<sp/>VK_IMAGE_TILING_OPTIMAL,<sp/>VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT,<sp/>VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,<sp/>context-&gt;depthImage,<sp/>context-&gt;depthImageMemory);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;depthImageView<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1a47be41c0f55c49f83af5f407b310b49a" kindref="member">PGC::ResourcesCreater::createImageView</ref>(context-&gt;device,<sp/>context-&gt;depthImage,<sp/>depthFormat,<sp/>VK_IMAGE_ASPECT_DEPTH_BIT,<sp/>1);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_resources_creater_1a50d8fcc21c002432511c9f541354fedc" kindref="member">prism::PGC::ResourcesCreater::createTextureSampler</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>VkSampler*<sp/>textureSampler)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPhysicalDeviceProperties<sp/>properties{};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceProperties(context-&gt;physicalDevice,<sp/>&amp;properties);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSamplerCreateInfo<sp/>samplerInfo{};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.magFilter<sp/>=<sp/>VK_FILTER_LINEAR;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.minFilter<sp/>=<sp/>VK_FILTER_LINEAR;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.addressModeU<sp/>=<sp/>VK_SAMPLER_ADDRESS_MODE_REPEAT;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.addressModeV<sp/>=<sp/>VK_SAMPLER_ADDRESS_MODE_REPEAT;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.addressModeW<sp/>=<sp/>VK_SAMPLER_ADDRESS_MODE_REPEAT;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.anisotropyEnable<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.maxAnisotropy<sp/>=<sp/>properties.limits.maxSamplerAnisotropy;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.borderColor<sp/>=<sp/>VK_BORDER_COLOR_INT_OPAQUE_BLACK;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.unnormalizedCoordinates<sp/>=<sp/>VK_FALSE;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.compareEnable<sp/>=<sp/>VK_FALSE;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.compareOp<sp/>=<sp/>VK_COMPARE_OP_ALWAYS;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.mipmapMode<sp/>=<sp/>VK_SAMPLER_MIPMAP_MODE_LINEAR;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.minLod<sp/>=<sp/>0.0f;<sp/></highlight><highlight class="comment">//<sp/>Необязательно</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.maxLod<sp/>=<sp/>VK_LOD_CLAMP_NONE;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>samplerInfo.mipLodBias<sp/>=<sp/>0.0f;<sp/></highlight><highlight class="comment">//<sp/>Необязательно</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateSampler(context-&gt;device,<sp/>&amp;samplerInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>textureSampler)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>texture<sp/>sampler!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/resourcesCreater.cpp"/>
+  </compounddef>
+</doxygen>

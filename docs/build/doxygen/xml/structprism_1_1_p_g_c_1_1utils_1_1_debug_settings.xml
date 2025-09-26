@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::DebugSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1ab0b1d1bd47de0825f3cb8fd975a22c53" prot="public" static="no" mutable="no">
+        <type>VkDebugUtilsMessageSeverityFlagsEXT</type>
+        <definition>VkDebugUtilsMessageSeverityFlagsEXT prism::PGC::utils::DebugSettings::VulkanMessageSeverity</definition>
+        <argsstring></argsstring>
+        <name>VulkanMessageSeverity</name>
+        <qualifiedname>prism::PGC::utils::DebugSettings::VulkanMessageSeverity</qualifiedname>
+        <initializer>= VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="143" column="37" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1a389dc5fd711a81a8b6d7c824f6c32d9c" prot="public" static="no" mutable="no">
+        <type>VkDebugUtilsMessageTypeFlagsEXT</type>
+        <definition>VkDebugUtilsMessageTypeFlagsEXT prism::PGC::utils::DebugSettings::VulkanMessageType</definition>
+        <argsstring></argsstring>
+        <name>VulkanMessageType</name>
+        <qualifiedname>prism::PGC::utils::DebugSettings::VulkanMessageType</qualifiedname>
+        <initializer>= VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="144" column="33" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1a1e88cda59742d0f0c3977b39de86a3f6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::PGC::utils::DebugSettings::debugDeviceSelection</definition>
+        <argsstring></argsstring>
+        <name>debugDeviceSelection</name>
+        <qualifiedname>prism::PGC::utils::DebugSettings::debugDeviceSelection</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="148" column="6" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="141" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="142" bodyend="150"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1a1e88cda59742d0f0c3977b39de86a3f6" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DebugSettings</scope><name>debugDeviceSelection</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1ab0b1d1bd47de0825f3cb8fd975a22c53" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DebugSettings</scope><name>VulkanMessageSeverity</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings_1a389dc5fd711a81a8b6d7c824f6c32d9c" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DebugSettings</scope><name>VulkanMessageType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

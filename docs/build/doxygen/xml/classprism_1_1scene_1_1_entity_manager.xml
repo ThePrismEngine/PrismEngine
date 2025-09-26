@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1scene_1_1_entity_manager" kind="class" language="C++" prot="public">
+    <compoundname>prism::scene::EntityManager</compoundname>
+    <includes refid="entity_manager_8h" local="no">entityManager.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_entity_manager_1a0b6d5b122445aff8f48ff5999262aa50" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+        <definition>Entity prism::scene::EntityManager::nextEntityId</definition>
+        <argsstring></argsstring>
+        <name>nextEntityId</name>
+        <qualifiedname>prism::scene::EntityManager::nextEntityId</qualifiedname>
+        <briefdescription>
+<para>Следующий доступный идентификатор сущности </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" line="32" column="20" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_entity_manager_1a97fcaafd355dd916cd3a53e7b4b83c73" prot="private" static="no" mutable="no">
+        <type>std::queue&lt; <ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref> &gt;</type>
+        <definition>std::queue&lt;Entity&gt; prism::scene::EntityManager::freeList</definition>
+        <argsstring></argsstring>
+        <name>freeList</name>
+        <qualifiedname>prism::scene::EntityManager::freeList</qualifiedname>
+        <briefdescription>
+<para>Очередь свободных идентификаторов для повторного использования </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" line="35" column="24" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1scene_1_1_entity_manager_1abe9a531c0cd25477ab10b8cdb0856188" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::scene::EntityManager::EntityManager</definition>
+        <argsstring>()</argsstring>
+        <name>EntityManager</name>
+        <qualifiedname>prism::scene::EntityManager::EntityManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" line="12" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_entity_manager_1a0e6fd16fd8313e33f366d3bffb14b8e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+        <definition>prism::scene::Entity prism::scene::EntityManager::createEntity</definition>
+        <argsstring>()</argsstring>
+        <name>createEntity</name>
+        <qualifiedname>prism::scene::EntityManager::createEntity</qualifiedname>
+        <briefdescription>
+<para>Создает новую сущность. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Идентификатор созданной сущности</para>
+</simplesect>
+Использует свободные ID из пула при наличии, иначе генерирует новый </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" line="17" column="20" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.cpp" bodystart="4" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_entity_manager_1a64b40ac4717222997d2c577acc020687" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::scene::EntityManager::destroyEntity</definition>
+        <argsstring>(Entity entityId)</argsstring>
+        <name>destroyEntity</name>
+        <qualifiedname>prism::scene::EntityManager::destroyEntity</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+          <declname>entityId</declname>
+        </param>
+        <briefdescription>
+<para>Удаляет сущность и освобождает ее ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор сущности для удаления </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true если сущность успешно удалена, false если ID невалиден</para>
+</simplesect>
+Освобожденный ID помещается в пул для повторного использования </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" line="23" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.cpp" bodystart="14" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_entity_manager_1ab5b69633034025889c6126f94cc0fde5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::scene::EntityManager::isEntityValid</definition>
+        <argsstring>(Entity entityId) const</argsstring>
+        <name>isEntityValid</name>
+        <qualifiedname>prism::scene::EntityManager::isEntityValid</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+          <declname>entityId</declname>
+        </param>
+        <briefdescription>
+<para>Проверяет валидность идентификатора сущности </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор сущности для проверки </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true если сущность существует и валидна, false в противном случае </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" line="28" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Менеджер для создания и управления сущностями </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Обеспечивает создание, удаление и валидацию сущностей с использованием пула идентификаторов </para>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" line="9" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/entityManager.h" bodystart="10" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classprism_1_1scene_1_1_entity_manager_1a0e6fd16fd8313e33f366d3bffb14b8e3" prot="public" virt="non-virtual"><scope>prism::scene::EntityManager</scope><name>createEntity</name></member>
+      <member refid="classprism_1_1scene_1_1_entity_manager_1a64b40ac4717222997d2c577acc020687" prot="public" virt="non-virtual"><scope>prism::scene::EntityManager</scope><name>destroyEntity</name></member>
+      <member refid="classprism_1_1scene_1_1_entity_manager_1abe9a531c0cd25477ab10b8cdb0856188" prot="public" virt="non-virtual"><scope>prism::scene::EntityManager</scope><name>EntityManager</name></member>
+      <member refid="classprism_1_1scene_1_1_entity_manager_1a97fcaafd355dd916cd3a53e7b4b83c73" prot="private" virt="non-virtual"><scope>prism::scene::EntityManager</scope><name>freeList</name></member>
+      <member refid="classprism_1_1scene_1_1_entity_manager_1ab5b69633034025889c6126f94cc0fde5" prot="public" virt="non-virtual"><scope>prism::scene::EntityManager</scope><name>isEntityValid</name></member>
+      <member refid="classprism_1_1scene_1_1_entity_manager_1a0b6d5b122445aff8f48ff5999262aa50" prot="private" virt="non-virtual"><scope>prism::scene::EntityManager</scope><name>nextEntityId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

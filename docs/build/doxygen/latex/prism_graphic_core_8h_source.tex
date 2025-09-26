@@ -1,0 +1,96 @@
+\doxysection{prism\+Graphic\+Core.\+h}
+\hypertarget{prism_graphic_core_8h_source}{}\label{prism_graphic_core_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/prismGraphicCore.h}}
+\mbox{\hyperlink{prism_graphic_core_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <utility>}\ \textcolor{comment}{//\ для\ std::pair}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SDL\_vulkan.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{logger.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vertex_8h}{vertex.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fmath_8h}{fmath.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ GLM\_FORCE\_RADIANS}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ GLM\_FORCE\_DEPTH\_ZERO\_TO\_ONE}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <glm.hpp>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{base_8h}{base.h}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{device_wrapper_8h}{deviceWrapper.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{device_checker_8h}{deviceChecker.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{swap_chain_8h}{swapChain.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utils_8h}{utils.h}}"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{render_pass_8h}{renderPass.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{descriptor_set_layout_8h}{descriptorSetLayout.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graphics_pipeline_8h}{graphicsPipeline.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{buffer_wrapper_8h}{bufferWrapper.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{descriptor_set_8h}{descriptorSet.h}}"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resources_creater_8h}{resourcesCreater.h}}"{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{namespace\ }PGC\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_abc11212e7a68ded2bbe1f8d8dc71b56d}{PrismGraphicCore}}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===\ Деструктор\ и\ контрруктор\ ===}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_abc11212e7a68ded2bbe1f8d8dc71b56d}{PrismGraphicCore}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_ae2101b42e1b35a873edd3e9bb0cc5b6c}{init}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils::Settings}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a55ffc68b57853b631c9b4814f137fe35}{settings}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a3b9e48a05623b6cc0b9ed7320d4e8e91}{drawFrame}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4d95481a52b8d64b2d60651032d835ee}{startRender}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_camera_data}{prism::PGC::utils::CameraData}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a6eab6576d07a3820cbdccd5babbf7fb8}{getCameraDataPtr}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain}{PGC::SwapChain}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_acdd1cff2d554d37c035a7b00b307852c}{getSwapChainPtr}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac7e1e22c259dd2e1793193cbb0a5281f}{cleanup}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a0e9b7954a1e4b8a8ff173816a7d26e1c}{awaitRenderingCompletion}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a5202b6e55da493f576930f53f0692705}{isWindowReadyForRendering}}(SDL\_Window*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a211f201b28de195923a8c320facf8022}{window}});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a753fa35096fa05f297bdea70afa5e33c}{windowResized}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a6f5c118b620526fd87e3bac408aebbbe}{windowMinimized}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC::utils::Settings}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a55ffc68b57853b631c9b4814f137fe35}{settings}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC::utils::Context}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a31f1cef5cc83ac1a18edc7d3b89d614e}{context}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a08b422facb0a4a3dd074a550c1c9d1ea}{createBase}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a2c3787c4a72e660bb4a40afeb71ea2a4}{createSwapChain}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4a8bd71a4ab83fe639f8e5762cb4cffd}{createGraphicsPipeline}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ad742d515a20d820fd936dc465828fa93}{createRenderPass}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_af910ed78722649b6f4ccab7f42295df4}{createFramebuffers}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a08cc6c55d4e468392534974226fdebf2}{createCommandPool}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a304ed66f116a14a4e1eaabad38148057}{createCommandBuffer}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac80bc9624587f789b972b4d8e3ee1bc9}{createSyncObjects}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a4efae367067d6838fa7c22d9e5dff06b}{createDescriptorSetLayout}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a56bb80154e887c60badb9cdf18a0e81e}{createTextureDescriptorSetLayout}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_afd85feadb8ae7f635c9324acc57cf442}{createTextureDescriptorSet}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ab75d350b460580e73f8c5ef40f17e7e8}{createUniformBuffers}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a701357ad5c785a9b52ba9a6f6c597a89}{createDescriptorPool}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_ac79cf119a7b9d48d34e7ef04d324eb29}{createDescriptorSets}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a2983dab58a83db9204e14c3da172c640}{createDepthResources}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a9652d07a0152ca7e603ae0e643edac47}{createColorResources}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_Window*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a211f201b28de195923a8c320facf8022}{window}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1base_1_1_base}{PGC::base::Base}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_aa342c65aa462fff2f176f70709b7b106}{base}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_swap_chain}{PGC::SwapChain}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a0dd17cd2a4cc0775631dfe789c82f8ee}{swapChain}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_render_pass}{PGC::RenderPass}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_af1b76f64293f0292b219dfcf0b432c5a}{renderPass}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout}{PGC::DescriptorSetLayout}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a87fd93b86567719bdd9dbf5da3071d55}{descriptorSetLayout}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_graphics_pipeline}{PGC::GraphicsPipeline}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_a3ca09132e3ff4a8388a5edae449e0675}{graphicsPipeline}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set}{PGC::DescriptorSet}}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_afc31cffb31e326de0fd0a45c6322e614}{descriptorSet}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_aecfad4272b514d286ae46e83639f817e}{generateMipmaps}}(VkImage\ image,\ VkFormat\ imageFormat,\ int32\_t\ texWidth,\ int32\_t\ texHeight,\ uint32\_t\ mipLevels);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ VkSampleCountFlagBits\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_prism_graphic_core_abb197c77af33e20c187d96a6ce87d4dd}{getMaxUsableSampleCount}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ render}}
+\DoxyCodeLine{00090\ \}\ \textcolor{comment}{//\ namespace\ prism}}
+
+\end{DoxyCode}

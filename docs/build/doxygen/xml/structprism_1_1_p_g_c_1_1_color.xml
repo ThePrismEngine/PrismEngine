@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1_color" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::Color</compoundname>
+    <includes refid="vertex_8h" local="no">vertex.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_color_1adfccfbc55af6496c5b3b615dc38e36b5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::Color::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <qualifiedname>prism::PGC::Color::r</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" line="13" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_color_1a4dcec896309c575542f3efc71cbd41ea" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::Color::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <qualifiedname>prism::PGC::Color::g</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" line="13" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_color_1a11a7b1253206c9cef355efda689cc0c4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::Color::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <qualifiedname>prism::PGC::Color::b</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" line="13" column="11" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" line="11" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" bodystart="12" bodyend="14"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_color_1a11a7b1253206c9cef355efda689cc0c4" prot="public" virt="non-virtual"><scope>prism::PGC::Color</scope><name>b</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_color_1a4dcec896309c575542f3efc71cbd41ea" prot="public" virt="non-virtual"><scope>prism::PGC::Color</scope><name>g</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_color_1adfccfbc55af6496c5b3b615dc38e36b5" prot="public" virt="non-virtual"><scope>prism::PGC::Color</scope><name>r</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

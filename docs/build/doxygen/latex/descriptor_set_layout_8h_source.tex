@@ -1,0 +1,28 @@
+\doxysection{descriptor\+Set\+Layout.\+h}
+\hypertarget{descriptor_set_layout_8h_source}{}\label{descriptor_set_layout_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/descriptorSetLayout.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/descriptorSetLayout.h}}
+\mbox{\hyperlink{descriptor_set_layout_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utils_8h}{utils.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism_1_1_p_g_c}{PGC}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_a6cb0751d3e85d87706ede028081afc92}{DescriptorSetLayout}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_a6cb0751d3e85d87706ede028081afc92}{DescriptorSetLayout}}()\ :\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_ac53e238dc92ec4a9b8111f855c342130}{context}}(nullptr),\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_ab1b10567cc554a5107bb56e7e5eba054}{settings}}(nullptr)\ \{\}}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_ae2101b42e1b35a873edd3e9bb0cc5b6c}{init}}(\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC::utils::Context}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_ac53e238dc92ec4a9b8111f855c342130}{context}},\ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC::utils::Settings}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_ab1b10567cc554a5107bb56e7e5eba054}{settings}});}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_a1f8418373647d69552a094d23e8d6b1a}{\string~DescriptorSetLayout}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_a11eb78f66ecbcc518ac1d9db39fe1a7f}{cleanup}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_a06a81014bc8ee086e624c908038a4515}{create}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ VkDescriptorSetLayoutBinding\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_a58ec7507feb2ccf58890ce1eae5eb21a}{createDescriptorSetLayoutBinding}}(uint32\_t\ binding,\ VkDescriptorType\ descriptorType,\ uint32\_t\ descriptorCount,\ VkShaderStageFlags\ stageFlags,\ \textcolor{keyword}{const}\ VkSampler*\ immutableSamplers);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC::utils::Context}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_ac53e238dc92ec4a9b8111f855c342130}{context}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{PGC::utils::Settings}}*\ \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_descriptor_set_layout_ab1b10567cc554a5107bb56e7e5eba054}{settings}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}

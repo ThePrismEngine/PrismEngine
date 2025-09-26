@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::DepthStencilSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a94862f8c4518a86a773860b0b5d5a9e8" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::DepthStencilSettings::depthTestEnable</definition>
+        <argsstring></argsstring>
+        <name>depthTestEnable</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::depthTestEnable</qualifiedname>
+        <initializer>= VK_TRUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="249" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a6a06e07e1f40081595f1d5d5a3d84cb2" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::DepthStencilSettings::depthWriteEnable</definition>
+        <argsstring></argsstring>
+        <name>depthWriteEnable</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::depthWriteEnable</qualifiedname>
+        <initializer>= VK_TRUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="250" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad800cb83732af9af3c330f7c8c870ab2" prot="public" static="no" mutable="no">
+        <type>VkCompareOp</type>
+        <definition>VkCompareOp prism::PGC::utils::DepthStencilSettings::depthCompareOp</definition>
+        <argsstring></argsstring>
+        <name>depthCompareOp</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::depthCompareOp</qualifiedname>
+        <initializer>= VK_COMPARE_OP_LESS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="251" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad7a4ce1b896097d7a3d4edb467c52e55" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::DepthStencilSettings::depthBoundsTestEnable</definition>
+        <argsstring></argsstring>
+        <name>depthBoundsTestEnable</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::depthBoundsTestEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="252" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a9d00adc23945edc546dd28483034d1fc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::DepthStencilSettings::minDepthBounds</definition>
+        <argsstring></argsstring>
+        <name>minDepthBounds</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::minDepthBounds</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="253" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a2fcf658a19cc7e299cd6f2dd20d62156" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::DepthStencilSettings::maxDepthBounds</definition>
+        <argsstring></argsstring>
+        <name>maxDepthBounds</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::maxDepthBounds</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="254" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad741569ede58e6cd31a46e9108cd5922" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::DepthStencilSettings::stencilTestEnable</definition>
+        <argsstring></argsstring>
+        <name>stencilTestEnable</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::stencilTestEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="255" column="10" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1aa0c0f9cbde327799a4638ea19643d2d8" prot="public" static="no" mutable="no">
+        <type>VkStencilOpState</type>
+        <definition>VkStencilOpState prism::PGC::utils::DepthStencilSettings::front</definition>
+        <argsstring></argsstring>
+        <name>front</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::front</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="256" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="256" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a6ee3cedb24a450ee5bee931dc312f34a" prot="public" static="no" mutable="no">
+        <type>VkStencilOpState</type>
+        <definition>VkStencilOpState prism::PGC::utils::DepthStencilSettings::back</definition>
+        <argsstring></argsstring>
+        <name>back</name>
+        <qualifiedname>prism::PGC::utils::DepthStencilSettings::back</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="257" column="18" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="257" bodyend="257"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" line="248" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/utils.h" bodystart="248" bodyend="258"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a6ee3cedb24a450ee5bee931dc312f34a" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>back</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad7a4ce1b896097d7a3d4edb467c52e55" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>depthBoundsTestEnable</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad800cb83732af9af3c330f7c8c870ab2" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>depthCompareOp</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a94862f8c4518a86a773860b0b5d5a9e8" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>depthTestEnable</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a6a06e07e1f40081595f1d5d5a3d84cb2" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>depthWriteEnable</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1aa0c0f9cbde327799a4638ea19643d2d8" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>front</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a2fcf658a19cc7e299cd6f2dd20d62156" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>maxDepthBounds</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1a9d00adc23945edc546dd28483034d1fc" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>minDepthBounds</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings_1ad741569ede58e6cd31a46e9108cd5922" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DepthStencilSettings</scope><name>stencilTestEnable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage" kind="struct" language="C++" prot="private" abstract="yes">
+    <compoundname>prism::scene::ComponentManager::IComponentStorage</compoundname>
+    <derivedcompoundref refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage" prot="public" virt="non-virtual">prism::scene::ComponentManager::ComponentStorage&lt; T &gt;</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_1a8add7a07bcb46a0b1f43750bbf18afe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual prism::scene::ComponentManager::IComponentStorage::~IComponentStorage</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IComponentStorage</name>
+        <qualifiedname>prism::scene::ComponentManager::IComponentStorage::~IComponentStorage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="127" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_1a7a9a568a38454a2e123626f54c03355e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void prism::scene::ComponentManager::IComponentStorage::removeEntity</definition>
+        <argsstring>(Entity entityId)=0</argsstring>
+        <name>removeEntity</name>
+        <qualifiedname>prism::scene::ComponentManager::IComponentStorage::removeEntity</qualifiedname>
+        <reimplementedby refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage_1a34a31deec21993564366818b26628db4">removeEntity</reimplementedby>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+          <declname>entityId</declname>
+        </param>
+        <briefdescription>
+<para>Удаляет все компоненты сущности из хранилища </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Идентификатор сущности </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="131" column="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Базовый интерфейс хранилища компонентов </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>prism::scene::ComponentManager::ComponentStorage&lt; T &gt;</label>
+        <link refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>prism::scene::ComponentManager::IComponentStorage</label>
+        <link refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" line="126" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/componentManager.h" bodystart="126" bodyend="132"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_1a7a9a568a38454a2e123626f54c03355e" prot="public" virt="pure-virtual"><scope>prism::scene::ComponentManager::IComponentStorage</scope><name>removeEntity</name></member>
+      <member refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_1a8add7a07bcb46a0b1f43750bbf18afe7" prot="public" virt="virtual"><scope>prism::scene::ComponentManager::IComponentStorage</scope><name>~IComponentStorage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

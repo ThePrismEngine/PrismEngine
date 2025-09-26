@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="buffer_wrapper_8cpp" kind="file" language="C++">
+    <compoundname>bufferWrapper.cpp</compoundname>
+    <includes refid="buffer_wrapper_8h" local="yes">bufferWrapper.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/bufferWrapper.cpp</label>
+        <link refid="buffer_wrapper_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bufferWrapper.h</label>
+        <link refid="buffer_wrapper_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>deviceWrapper.h</label>
+        <link refid="device_wrapper_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SDL.h</label>
+      </node>
+      <node id="15">
+        <label>array</label>
+      </node>
+      <node id="20">
+        <label>cstdint</label>
+      </node>
+      <node id="12">
+        <label>glm.hpp</label>
+      </node>
+      <node id="7">
+        <label>optional</label>
+      </node>
+      <node id="3">
+        <label>stdexcept</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="13">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_wrapper_8h" kindref="compound">bufferWrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kindref="member">prism::PGC::BufferWrapper::createBuffer</ref>(utils::Context*<sp/>context,<sp/>VkDeviceSize<sp/>size,<sp/>VkBufferUsageFlags<sp/>usage,<sp/>VkMemoryPropertyFlags<sp/>properties,<sp/>VkBuffer&amp;<sp/>buffer,<sp/>VkDeviceMemory&amp;<sp/>bufferMemory)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>VkBufferCreateInfo<sp/>bufferInfo{};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferInfo.size<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferInfo.usage<sp/>=<sp/>usage;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferInfo.sharingMode<sp/>=<sp/>VK_SHARING_MODE_EXCLUSIVE;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateBuffer(context-&gt;device,<sp/>&amp;bufferInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;buffer)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>buffer!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>VkMemoryRequirements<sp/>memRequirements;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetBufferMemoryRequirements(context-&gt;device,<sp/>buffer,<sp/>&amp;memRequirements);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>VkMemoryAllocateInfo<sp/>allocInfo{};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.allocationSize<sp/>=<sp/>memRequirements.size;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.memoryTypeIndex<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a63c317f0927d63bd97bb1f94a4e6768c" kindref="member">PGC::DeviceWrapper::findMemoryType</ref>(context-&gt;physicalDevice,<sp/>memRequirements.memoryTypeBits,<sp/>properties);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkAllocateMemory(context-&gt;device,<sp/>&amp;allocInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;bufferMemory)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>allocate<sp/>buffer<sp/>memory!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>vkBindBufferMemory(context-&gt;device,<sp/>buffer,<sp/>bufferMemory,<sp/>0);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ae2b3ed3cddadc027dbcf687357b92dad" kindref="member">prism::PGC::BufferWrapper::copyBuffer</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>VkBuffer<sp/>srcBuffer,<sp/>VkBuffer<sp/>dstBuffer,<sp/>VkDeviceSize<sp/>size)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>VkCommandBuffer<sp/>commandBuffer<sp/>=<sp/>beginSingleTimeCommands(context);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>VkBufferCopy<sp/>copyRegion{};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>copyRegion.size<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdCopyBuffer(commandBuffer,<sp/>srcBuffer,<sp/>dstBuffer,<sp/>1,<sp/>&amp;copyRegion);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>endSingleTimeCommands(context,<sp/>commandBuffer);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a99cf311cd95b3c2a94ea37886b2e7681" kindref="member">prism::PGC::BufferWrapper::endSingleTimeCommands</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>VkCommandBuffer<sp/>commandBuffer)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEndCommandBuffer(commandBuffer);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSubmitInfo<sp/>submitInfo{};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_SUBMIT_INFO;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.commandBufferCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>submitInfo.pCommandBuffers<sp/>=<sp/>&amp;commandBuffer;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>vkQueueSubmit(context-&gt;graphicsQueue,<sp/>1,<sp/>&amp;submitInfo,<sp/>VK_NULL_HANDLE);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>vkQueueWaitIdle(context-&gt;graphicsQueue);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>vkFreeCommandBuffers(context-&gt;device,<sp/>context-&gt;commandPool,<sp/>1,<sp/>&amp;commandBuffer);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">VkCommandBuffer<sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a476d6d005e1b9e7a19ef8d95efc25006" kindref="member">prism::PGC::BufferWrapper::beginSingleTimeCommands</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>VkCommandBufferAllocateInfo<sp/>allocInfo{};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.level<sp/>=<sp/>VK_COMMAND_BUFFER_LEVEL_PRIMARY;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.commandPool<sp/>=<sp/>context-&gt;commandPool;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>allocInfo.commandBufferCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>VkCommandBuffer<sp/>commandBuffer;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>vkAllocateCommandBuffers(context-&gt;device,<sp/>&amp;allocInfo,<sp/>&amp;commandBuffer);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>VkCommandBufferBeginInfo<sp/>beginInfo{};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>beginInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>beginInfo.flags<sp/>=<sp/>VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>vkBeginCommandBuffer(commandBuffer,<sp/>&amp;beginInfo);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>commandBuffer;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a41720d6455629660a265368b4c450552" kindref="member">prism::PGC::BufferWrapper::transitionImageLayout</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>VkImage<sp/>image,<sp/>VkFormat<sp/>format,<sp/>VkImageLayout<sp/>oldLayout,<sp/>VkImageLayout<sp/>newLayout,<sp/>uint32_t<sp/>mipLevels)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>VkCommandBuffer<sp/>commandBuffer<sp/>=<sp/>beginSingleTimeCommands(context);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>VkImageMemoryBarrier<sp/>barrier{};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.oldLayout<sp/>=<sp/>oldLayout;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.newLayout<sp/>=<sp/>newLayout;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.srcQueueFamilyIndex<sp/>=<sp/>VK_QUEUE_FAMILY_IGNORED;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.dstQueueFamilyIndex<sp/>=<sp/>VK_QUEUE_FAMILY_IGNORED;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.image<sp/>=<sp/>image;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.aspectMask<sp/>=<sp/>VK_IMAGE_ASPECT_COLOR_BIT;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.baseMipLevel<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.levelCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.baseArrayLayer<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.layerCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>barrier.subresourceRange.levelCount<sp/>=<sp/>mipLevels;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineStageFlags<sp/>sourceStage;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineStageFlags<sp/>destinationStage;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(oldLayout<sp/>==<sp/>VK_IMAGE_LAYOUT_UNDEFINED<sp/>&amp;&amp;<sp/>newLayout<sp/>==<sp/>VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.srcAccessMask<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.dstAccessMask<sp/>=<sp/>VK_ACCESS_TRANSFER_WRITE_BIT;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sourceStage<sp/>=<sp/>VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destinationStage<sp/>=<sp/>VK_PIPELINE_STAGE_TRANSFER_BIT;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(oldLayout<sp/>==<sp/>VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL<sp/>&amp;&amp;<sp/>newLayout<sp/>==<sp/>VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.srcAccessMask<sp/>=<sp/>VK_ACCESS_TRANSFER_WRITE_BIT;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barrier.dstAccessMask<sp/>=<sp/>VK_ACCESS_SHADER_READ_BIT;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sourceStage<sp/>=<sp/>VK_PIPELINE_STAGE_TRANSFER_BIT;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destinationStage<sp/>=<sp/>VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::invalid_argument(</highlight><highlight class="stringliteral">&quot;unsupported<sp/>layout<sp/>transition!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdPipelineBarrier(</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>commandBuffer,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sourceStage,<sp/>destinationStage,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/>&amp;barrier</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>endSingleTimeCommands(context,<sp/>commandBuffer);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a5029074ed5969712c8a7b1bf9928bae6" kindref="member">prism::PGC::BufferWrapper::copyBufferToImage</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context,<sp/>VkBuffer<sp/>buffer,<sp/>VkImage<sp/>image,<sp/>uint32_t<sp/>width,<sp/>uint32_t<sp/>height)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>VkCommandBuffer<sp/>commandBuffer<sp/>=<sp/>beginSingleTimeCommands(context);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>VkBufferImageCopy<sp/>region{};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>region.bufferOffset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>region.bufferRowLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>region.bufferImageHeight<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>region.imageSubresource.aspectMask<sp/>=<sp/>VK_IMAGE_ASPECT_COLOR_BIT;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>region.imageSubresource.mipLevel<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>region.imageSubresource.baseArrayLayer<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>region.imageSubresource.layerCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>region.imageOffset<sp/>=<sp/>{<sp/>0,<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>region.imageExtent<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>width,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>height,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdCopyBufferToImage(commandBuffer,<sp/>buffer,<sp/>image,<sp/>VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,<sp/>1,<sp/>&amp;region);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>endSingleTimeCommands(context,<sp/>commandBuffer);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a9ef9f5cb858ca4a25e773b5d62e2a0de" kindref="member">prism::PGC::BufferWrapper::createVertexBuffer</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>bufferSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(context-&gt;allVertices[0])<sp/>*<sp/>context-&gt;allVertices.size();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>VkBuffer<sp/>stagingBuffer;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceMemory<sp/>stagingBufferMemory;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kindref="member">PGC::BufferWrapper::createBuffer</ref>(context,<sp/>bufferSize,<sp/>VK_BUFFER_USAGE_TRANSFER_SRC_BIT,<sp/>VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT<sp/>|<sp/>VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,<sp/>stagingBuffer,<sp/>stagingBufferMemory);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>vkMapMemory(context-&gt;device,<sp/>stagingBufferMemory,<sp/>0,<sp/>bufferSize,<sp/>0,<sp/>&amp;data);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(data,<sp/>context-&gt;allVertices.data(),<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)bufferSize);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>vkUnmapMemory(context-&gt;device,<sp/>stagingBufferMemory);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kindref="member">PGC::BufferWrapper::createBuffer</ref>(context,<sp/>bufferSize,<sp/>VK_BUFFER_USAGE_TRANSFER_DST_BIT<sp/>|<sp/>VK_BUFFER_USAGE_VERTEX_BUFFER_BIT,<sp/>VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,<sp/>context-&gt;vertexBuffer,<sp/>context-&gt;vertexBufferMemory);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>copyBuffer(context,<sp/>stagingBuffer,<sp/>context-&gt;vertexBuffer,<sp/>bufferSize);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyBuffer(context-&gt;device,<sp/>stagingBuffer,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>vkFreeMemory(context-&gt;device,<sp/>stagingBufferMemory,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a021d6dd30688e704d4ad191bbcaaea40" kindref="member">prism::PGC::BufferWrapper::createIndexBuffer</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>bufferSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(context-&gt;allIndices[0])<sp/>*<sp/>context-&gt;allIndices.size();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>VkBuffer<sp/>stagingBuffer;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceMemory<sp/>stagingBufferMemory;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kindref="member">PGC::BufferWrapper::createBuffer</ref>(context,<sp/>bufferSize,<sp/>VK_BUFFER_USAGE_TRANSFER_SRC_BIT,<sp/>VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT<sp/>|<sp/>VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,<sp/>stagingBuffer,<sp/>stagingBufferMemory);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>vkMapMemory(context-&gt;device,<sp/>stagingBufferMemory,<sp/>0,<sp/>bufferSize,<sp/>0,<sp/>&amp;data);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(data,<sp/>context-&gt;allIndices.data(),<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)bufferSize);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>vkUnmapMemory(context-&gt;device,<sp/>stagingBufferMemory);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kindref="member">PGC::BufferWrapper::createBuffer</ref>(context,<sp/>bufferSize,<sp/>VK_BUFFER_USAGE_TRANSFER_DST_BIT<sp/>|<sp/>VK_BUFFER_USAGE_INDEX_BUFFER_BIT,<sp/>VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,<sp/>context-&gt;indexBuffer,<sp/>context-&gt;indexBufferMemory);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>copyBuffer(context,<sp/>stagingBuffer,<sp/>context-&gt;indexBuffer,<sp/>bufferSize);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyBuffer(context-&gt;device,<sp/>stagingBuffer,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>vkFreeMemory(context-&gt;device,<sp/>stagingBufferMemory,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab005ab379cc8b35a7b07abafc602e118" kindref="member">prism::PGC::BufferWrapper::createUniformBuffers</ref>(<ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref>*<sp/>context)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;uniformBuffers.resize(context-&gt;MAX_FRAMES_IN_FLIGHT);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>cameraBufferSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structprism_1_1_p_g_c_1_1_camera_u_b_o" kindref="compound">CameraUBO</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>minUboAlignment<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a7e777734683993078714a50d4ecf0a6e" kindref="member">DeviceWrapper::getDeviceProperties</ref>(context-&gt;physicalDevice).limits.minUniformBufferOffsetAlignment;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>objectUBOSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structprism_1_1_p_g_c_1_1_object_u_b_o" kindref="compound">ObjectUBO</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>context-&gt;dynamicAlignment<sp/>=<sp/>objectUBOSize;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(minUboAlignment<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;dynamicAlignment<sp/>=<sp/>(objectUBOSize<sp/>+<sp/>minUboAlignment<sp/>-<sp/>1)<sp/>&amp;<sp/>~(minUboAlignment<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>objectBufferSize<sp/>=<sp/>context-&gt;dynamicAlignment<sp/>*<sp/>context-&gt;MAX_OBJECTS;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>context-&gt;MAX_FRAMES_IN_FLIGHT;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kindref="member">PGC::BufferWrapper::createBuffer</ref>(context,<sp/>cameraBufferSize,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT<sp/>|<sp/>VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;uniformBuffers[i].camera,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;uniformBuffers[i].cameraMemory);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkMapMemory(context-&gt;device,<sp/>context-&gt;uniformBuffers[i].cameraMemory,<sp/>0,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraBufferSize,<sp/>0,<sp/>&amp;context-&gt;uniformBuffers[i].cameraMapped);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" kindref="member">PGC::BufferWrapper::createBuffer</ref>(context,<sp/>objectBufferSize,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT<sp/>|<sp/>VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;uniformBuffers[i].object,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context-&gt;uniformBuffers[i].objectMemory);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkMapMemory(context-&gt;device,<sp/>context-&gt;uniformBuffers[i].objectMemory,<sp/>0,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>objectBufferSize,<sp/>0,<sp/>&amp;context-&gt;uniformBuffers[i].objectMapped);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Инициализируем<sp/>нулями<sp/>динамический<sp/>буфер</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>context-&gt;MAX_FRAMES_IN_FLIGHT;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(context-&gt;uniformBuffers[i].objectMapped,<sp/>0,<sp/>objectBufferSize);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/bufferWrapper.cpp"/>
+  </compounddef>
+</doxygen>

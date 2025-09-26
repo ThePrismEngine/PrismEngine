@@ -1,0 +1,16 @@
+\doxysection{init.\+h}
+\hypertarget{init_8h_source}{}\label{init_8h_source}\index{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/init.h@{C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/init.h}}
+\mbox{\hyperlink{init_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceprism}{prism}}\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceprism_a0894323454f28ab68c93aa1039a08672}{isInit}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceprism_ae2101b42e1b35a873edd3e9bb0cc5b6c}{init}}()\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ SDL\_Init(SDL\_INIT\_EVERYTHING);}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceprism_a0894323454f28ab68c93aa1039a08672}{isInit}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00009\ \ \ \ \ \}}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}

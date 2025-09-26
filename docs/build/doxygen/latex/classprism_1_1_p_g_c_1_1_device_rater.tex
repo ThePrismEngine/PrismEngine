@@ -1,0 +1,90 @@
+\doxysection{Класс prism\+::PGC\+::Device\+Rater}
+\hypertarget{classprism_1_1_p_g_c_1_1_device_rater}{}\label{classprism_1_1_p_g_c_1_1_device_rater}\index{prism::PGC::DeviceRater@{prism::PGC::DeviceRater}}
+
+
+{\ttfamily \#include $<$device\+Rater.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_rater_a75ec84388186457666beb97111f8a8d6}{rate}} (Vk\+Physical\+Device device, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}settings)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_rater_af19dd6c0a960f9206b58d320514a7d0e}{get\+Device\+Type\+Score}} (Vk\+Physical\+Device device)
+\item 
+int \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_rater_a699b466cde759c7b2d95218bdbd7e15c}{get\+Device\+Feature\+Score}} (Vk\+Physical\+Device device)
+\item 
+int \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_rater_a65e32202617923a7d73f7ee29a8d8b08}{get\+Device\+Hardware\+Score}} (Vk\+Physical\+Device device)
+\item 
+int \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_rater_ad36db9dc1f623d8835ad19bd456053c2}{get\+Device\+Api\+Score}} (Vk\+Physical\+Device device)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structprism_1_1_p_g_c_1_1_feature_scores}{Feature\+Scores}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_rater_a8400fc54676f3b03713f80a3ddd8e428}{calculate\+Feature\+Score}} (Vk\+Physical\+Device device)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_rater_afcaf74e7371b669c7c3719d599fcc913}{debug\+Device\+Selection}} = false
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_a8400fc54676f3b03713f80a3ddd8e428}\index{prism::PGC::DeviceRater@{prism::PGC::DeviceRater}!calculateFeatureScore@{calculateFeatureScore}}
+\index{calculateFeatureScore@{calculateFeatureScore}!prism::PGC::DeviceRater@{prism::PGC::DeviceRater}}
+\doxysubsubsection{\texorpdfstring{calculateFeatureScore()}{calculateFeatureScore()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_rater_a8400fc54676f3b03713f80a3ddd8e428} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1_feature_scores}{prism\+::\+PGC\+::\+Feature\+Scores}} prism\+::\+PGC\+::\+Device\+Rater\+::calculate\+Feature\+Score (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_ad36db9dc1f623d8835ad19bd456053c2}\index{prism::PGC::DeviceRater@{prism::PGC::DeviceRater}!getDeviceApiScore@{getDeviceApiScore}}
+\index{getDeviceApiScore@{getDeviceApiScore}!prism::PGC::DeviceRater@{prism::PGC::DeviceRater}}
+\doxysubsubsection{\texorpdfstring{getDeviceApiScore()}{getDeviceApiScore()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_rater_ad36db9dc1f623d8835ad19bd456053c2} 
+int prism\+::\+PGC\+::\+Device\+Rater\+::get\+Device\+Api\+Score (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_a699b466cde759c7b2d95218bdbd7e15c}\index{prism::PGC::DeviceRater@{prism::PGC::DeviceRater}!getDeviceFeatureScore@{getDeviceFeatureScore}}
+\index{getDeviceFeatureScore@{getDeviceFeatureScore}!prism::PGC::DeviceRater@{prism::PGC::DeviceRater}}
+\doxysubsubsection{\texorpdfstring{getDeviceFeatureScore()}{getDeviceFeatureScore()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_rater_a699b466cde759c7b2d95218bdbd7e15c} 
+int prism\+::\+PGC\+::\+Device\+Rater\+::get\+Device\+Feature\+Score (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_a65e32202617923a7d73f7ee29a8d8b08}\index{prism::PGC::DeviceRater@{prism::PGC::DeviceRater}!getDeviceHardwareScore@{getDeviceHardwareScore}}
+\index{getDeviceHardwareScore@{getDeviceHardwareScore}!prism::PGC::DeviceRater@{prism::PGC::DeviceRater}}
+\doxysubsubsection{\texorpdfstring{getDeviceHardwareScore()}{getDeviceHardwareScore()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_rater_a65e32202617923a7d73f7ee29a8d8b08} 
+int prism\+::\+PGC\+::\+Device\+Rater\+::get\+Device\+Hardware\+Score (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_af19dd6c0a960f9206b58d320514a7d0e}\index{prism::PGC::DeviceRater@{prism::PGC::DeviceRater}!getDeviceTypeScore@{getDeviceTypeScore}}
+\index{getDeviceTypeScore@{getDeviceTypeScore}!prism::PGC::DeviceRater@{prism::PGC::DeviceRater}}
+\doxysubsubsection{\texorpdfstring{getDeviceTypeScore()}{getDeviceTypeScore()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_rater_af19dd6c0a960f9206b58d320514a7d0e} 
+int prism\+::\+PGC\+::\+Device\+Rater\+::get\+Device\+Type\+Score (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_a75ec84388186457666beb97111f8a8d6}\index{prism::PGC::DeviceRater@{prism::PGC::DeviceRater}!rate@{rate}}
+\index{rate@{rate}!prism::PGC::DeviceRater@{prism::PGC::DeviceRater}}
+\doxysubsubsection{\texorpdfstring{rate()}{rate()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_rater_a75ec84388186457666beb97111f8a8d6} 
+int prism\+::\+PGC\+::\+Device\+Rater\+::rate (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_context}{PGC\+::utils\+::\+Context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_settings}{utils\+::\+Settings}} \texorpdfstring{$\ast$}{*}}]{settings}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_rater_afcaf74e7371b669c7c3719d599fcc913}\index{prism::PGC::DeviceRater@{prism::PGC::DeviceRater}!debugDeviceSelection@{debugDeviceSelection}}
+\index{debugDeviceSelection@{debugDeviceSelection}!prism::PGC::DeviceRater@{prism::PGC::DeviceRater}}
+\doxysubsubsection{\texorpdfstring{debugDeviceSelection}{debugDeviceSelection}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_rater_afcaf74e7371b669c7c3719d599fcc913} 
+bool prism\+::\+PGC\+::\+Device\+Rater\+::debug\+Device\+Selection = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{device_rater_8h}{device\+Rater.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{device_rater_8cpp}{device\+Rater.\+cpp}}\end{DoxyCompactItemize}

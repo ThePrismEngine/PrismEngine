@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1_p_g_c_1_1_texture_loader" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::TextureLoader</compoundname>
+    <includes refid="texture_loader_8h" local="no">textureLoader.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_texture_loader_1abfd63994cc54d8df2c61533a802fb782" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1_p_g_c_1_1_texture" kindref="compound">prism::PGC::Texture</ref></type>
+        <definition>prism::PGC::Texture prism::PGC::TextureLoader::load</definition>
+        <argsstring>(utils::Context *context, std::string texturePath)</argsstring>
+        <name>load</name>
+        <qualifiedname>prism::PGC::TextureLoader::load</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>texturePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h" line="11" column="28" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp" bodystart="8" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_texture_loader_1a522f5a31968bebe09ba3d113f16db9dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::TextureLoader::cleanup</definition>
+        <argsstring>(utils::Context *context, PGC::Texture *texture)</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>prism::PGC::TextureLoader::cleanup</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_texture" kindref="compound">PGC::Texture</ref> *</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h" line="12" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp" bodystart="18" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_texture_loader_1a5bb7d9078725b4ba9815e786f1c90883" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::TextureLoader::createTextureImage</definition>
+        <argsstring>(utils::Context *context, PGC::Texture *texture)</argsstring>
+        <name>createTextureImage</name>
+        <qualifiedname>prism::PGC::TextureLoader::createTextureImage</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_texture" kindref="compound">PGC::Texture</ref> *</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h" line="14" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp" bodystart="34" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_texture_loader_1aaf14dc47d4371346e84b87a901b3e92f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::TextureLoader::createTextureImageView</definition>
+        <argsstring>(utils::Context *context, PGC::Texture *texture)</argsstring>
+        <name>createTextureImageView</name>
+        <qualifiedname>prism::PGC::TextureLoader::createTextureImageView</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_texture" kindref="compound">PGC::Texture</ref> *</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h" line="15" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_texture_loader_1a7d0d544cbd13df616f5615ae82a17366" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::TextureLoader::createTextureSampler</definition>
+        <argsstring>(utils::Context *context, PGC::Texture *texture)</argsstring>
+        <name>createTextureSampler</name>
+        <qualifiedname>prism::PGC::TextureLoader::createTextureSampler</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_texture" kindref="compound">PGC::Texture</ref> *</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h" line="16" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_texture_loader_1ae9fc1ba2404bbe90b1e56eaa9d4fbf94" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::TextureLoader::generateMipmaps</definition>
+        <argsstring>(utils::Context *context, VkImage image, VkFormat imageFormat, int32_t texWidth, int32_t texHeight, uint32_t mipLevels)</argsstring>
+        <name>generateMipmaps</name>
+        <qualifiedname>prism::PGC::TextureLoader::generateMipmaps</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>VkImage</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>imageFormat</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>texWidth</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>texHeight</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mipLevels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h" line="17" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.cpp" bodystart="81" bodyend="166"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h" line="8" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/textureLoader.h" bodystart="9" bodyend="18"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1a522f5a31968bebe09ba3d113f16db9dc" prot="public" virt="non-virtual"><scope>prism::PGC::TextureLoader</scope><name>cleanup</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1a5bb7d9078725b4ba9815e786f1c90883" prot="private" virt="non-virtual"><scope>prism::PGC::TextureLoader</scope><name>createTextureImage</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1aaf14dc47d4371346e84b87a901b3e92f" prot="private" virt="non-virtual"><scope>prism::PGC::TextureLoader</scope><name>createTextureImageView</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1a7d0d544cbd13df616f5615ae82a17366" prot="private" virt="non-virtual"><scope>prism::PGC::TextureLoader</scope><name>createTextureSampler</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1ae9fc1ba2404bbe90b1e56eaa9d4fbf94" prot="private" virt="non-virtual"><scope>prism::PGC::TextureLoader</scope><name>generateMipmaps</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_texture_loader_1abfd63994cc54d8df2c61533a802fb782" prot="public" virt="non-virtual"><scope>prism::PGC::TextureLoader</scope><name>load</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

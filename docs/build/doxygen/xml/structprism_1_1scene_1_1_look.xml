@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1scene_1_1_look" kind="struct" language="C++" prot="public">
+    <compoundname>prism::scene::Look</compoundname>
+    <includes refid="camera_component_8h" local="no">cameraComponent.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_look_1a684b68e3cd2118bf8a97b89a163b3498" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Look::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>prism::scene::Look::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="6" column="7" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_look_1a24e121b357bda2c5e58f71c55cbb3cd2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Look::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>prism::scene::Look::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="6" column="9" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_look_1ad48bf86097551f962dd84b2c07b25321" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Look::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>prism::scene::Look::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="6" column="11" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" line="5" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/cameraComponent.h" bodystart="5" bodyend="7"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_look_1a684b68e3cd2118bf8a97b89a163b3498" prot="public" virt="non-virtual"><scope>prism::scene::Look</scope><name>x</name></member>
+      <member refid="structprism_1_1scene_1_1_look_1a24e121b357bda2c5e58f71c55cbb3cd2" prot="public" virt="non-virtual"><scope>prism::scene::Look</scope><name>y</name></member>
+      <member refid="structprism_1_1scene_1_1_look_1ad48bf86097551f962dd84b2c07b25321" prot="public" virt="non-virtual"><scope>prism::scene::Look</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

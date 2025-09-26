@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="structprism_1_1_p_g_c_1_1_vertex_hasher" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::VertexHasher</compoundname>
+    <includes refid="vertex_8h" local="no">vertex.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structprism_1_1_p_g_c_1_1_vertex_hasher_1ab3d56c10d33af778a849c8c4bf705388" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t prism::PGC::VertexHasher::operator()</definition>
+        <argsstring>(const Vertex &amp;v) const noexcept</argsstring>
+        <name>operator()</name>
+        <qualifiedname>prism::PGC::VertexHasher::operator()</qualifiedname>
+        <param>
+          <type>const <ref refid="structprism_1_1_p_g_c_1_1_vertex" kindref="compound">Vertex</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" line="30" column="8" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.cpp" bodystart="42" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" line="29" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/vertex.h" bodystart="29" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_vertex_hasher_1ab3d56c10d33af778a849c8c4bf705388" prot="public" virt="non-virtual"><scope>prism::PGC::VertexHasher</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

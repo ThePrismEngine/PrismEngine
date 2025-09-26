@@ -1,0 +1,92 @@
+\doxysection{Класс prism\+::PGC\+::Device\+Wrapper}
+\hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper}{}\label{classprism_1_1_p_g_c_1_1_device_wrapper}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+
+
+{\ttfamily \#include $<$device\+Wrapper.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static Vk\+Physical\+Device\+Properties \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a7e777734683993078714a50d4ecf0a6e}{get\+Device\+Properties}} (Vk\+Physical\+Device device)
+\item 
+static void \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_aba678e3d2c055470b13c6c97ea53e973}{get\+Device\+Extension\+Properties}} (Vk\+Physical\+Device device, std\+::vector$<$ Vk\+Extension\+Properties $>$ \texorpdfstring{$\ast$}{*}properties)
+\item 
+static Vk\+Physical\+Device\+Memory\+Properties \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_af917d5dc002c1e1473bc7401b8e07d0a}{get\+Device\+Memory\+Properties}} (Vk\+Physical\+Device device)
+\item 
+static \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices}{prism\+::\+PGC\+::utils\+::\+Queue\+Family\+Indices}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a88c9489702bce265bee70147ed98fcd2}{find\+Queue\+Families}} (Vk\+Physical\+Device device, Vk\+Surface\+KHR surface)
+\item 
+static \mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details}{prism\+::\+PGC\+::utils\+::\+Swap\+Chain\+Support\+Details}} \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_ae57c33d3319be7ebe69a85890c26959d}{query\+Swap\+Chain\+Support}} (Vk\+Physical\+Device device, Vk\+Surface\+KHR surface)
+\item 
+static Vk\+Format\+Properties \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a1d2619db4cf9fff8f2bc31bc50faa072}{get\+Device\+Format\+Properties}} (Vk\+Physical\+Device device, Vk\+Format format)
+\item 
+static Vk\+Format \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a2dca5c9dabfc59451df88f96685ce185}{find\+Depth\+Format}} (Vk\+Physical\+Device physical\+Device)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_a63c317f0927d63bd97bb1f94a4e6768c}{find\+Memory\+Type}} (Vk\+Physical\+Device device, uint32\+\_\+t type\+Filter, Vk\+Memory\+Property\+Flags properties)
+\item 
+static Vk\+Format \mbox{\hyperlink{classprism_1_1_p_g_c_1_1_device_wrapper_ad25c1eaf42cd86e9c678b4da83ca87bb}{find\+Supported\+Format}} (Vk\+Physical\+Device physical\+Device, const std\+::vector$<$ Vk\+Format $>$ \&candidates, Vk\+Image\+Tiling tiling, Vk\+Format\+Feature\+Flags features)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_a2dca5c9dabfc59451df88f96685ce185}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!findDepthFormat@{findDepthFormat}}
+\index{findDepthFormat@{findDepthFormat}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{findDepthFormat()}{findDepthFormat()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_a2dca5c9dabfc59451df88f96685ce185} 
+Vk\+Format prism\+::\+PGC\+::\+Device\+Wrapper\+::find\+Depth\+Format (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{physical\+Device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_a63c317f0927d63bd97bb1f94a4e6768c}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!findMemoryType@{findMemoryType}}
+\index{findMemoryType@{findMemoryType}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{findMemoryType()}{findMemoryType()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_a63c317f0927d63bd97bb1f94a4e6768c} 
+uint32\+\_\+t prism\+::\+PGC\+::\+Device\+Wrapper\+::find\+Memory\+Type (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{, }\item[{uint32\+\_\+t}]{type\+Filter}{, }\item[{Vk\+Memory\+Property\+Flags}]{properties}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_a88c9489702bce265bee70147ed98fcd2}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!findQueueFamilies@{findQueueFamilies}}
+\index{findQueueFamilies@{findQueueFamilies}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{findQueueFamilies()}{findQueueFamilies()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_a88c9489702bce265bee70147ed98fcd2} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices}{prism\+::\+PGC\+::utils\+::\+Queue\+Family\+Indices}} prism\+::\+PGC\+::\+Device\+Wrapper\+::find\+Queue\+Families (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{, }\item[{Vk\+Surface\+KHR}]{surface}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_ad25c1eaf42cd86e9c678b4da83ca87bb}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!findSupportedFormat@{findSupportedFormat}}
+\index{findSupportedFormat@{findSupportedFormat}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{findSupportedFormat()}{findSupportedFormat()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_ad25c1eaf42cd86e9c678b4da83ca87bb} 
+Vk\+Format prism\+::\+PGC\+::\+Device\+Wrapper\+::find\+Supported\+Format (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{physical\+Device}{, }\item[{const std\+::vector$<$ Vk\+Format $>$ \&}]{candidates}{, }\item[{Vk\+Image\+Tiling}]{tiling}{, }\item[{Vk\+Format\+Feature\+Flags}]{features}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_aba678e3d2c055470b13c6c97ea53e973}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!getDeviceExtensionProperties@{getDeviceExtensionProperties}}
+\index{getDeviceExtensionProperties@{getDeviceExtensionProperties}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{getDeviceExtensionProperties()}{getDeviceExtensionProperties()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_aba678e3d2c055470b13c6c97ea53e973} 
+void prism\+::\+PGC\+::\+Device\+Wrapper\+::get\+Device\+Extension\+Properties (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{, }\item[{std\+::vector$<$ Vk\+Extension\+Properties $>$ \texorpdfstring{$\ast$}{*}}]{properties}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_a1d2619db4cf9fff8f2bc31bc50faa072}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!getDeviceFormatProperties@{getDeviceFormatProperties}}
+\index{getDeviceFormatProperties@{getDeviceFormatProperties}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{getDeviceFormatProperties()}{getDeviceFormatProperties()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_a1d2619db4cf9fff8f2bc31bc50faa072} 
+Vk\+Format\+Properties prism\+::\+PGC\+::\+Device\+Wrapper\+::get\+Device\+Format\+Properties (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{, }\item[{Vk\+Format}]{format}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_af917d5dc002c1e1473bc7401b8e07d0a}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!getDeviceMemoryProperties@{getDeviceMemoryProperties}}
+\index{getDeviceMemoryProperties@{getDeviceMemoryProperties}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{getDeviceMemoryProperties()}{getDeviceMemoryProperties()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_af917d5dc002c1e1473bc7401b8e07d0a} 
+Vk\+Physical\+Device\+Memory\+Properties prism\+::\+PGC\+::\+Device\+Wrapper\+::get\+Device\+Memory\+Properties (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_a7e777734683993078714a50d4ecf0a6e}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!getDeviceProperties@{getDeviceProperties}}
+\index{getDeviceProperties@{getDeviceProperties}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{getDeviceProperties()}{getDeviceProperties()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_a7e777734683993078714a50d4ecf0a6e} 
+Vk\+Physical\+Device\+Properties prism\+::\+PGC\+::\+Device\+Wrapper\+::get\+Device\+Properties (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classprism_1_1_p_g_c_1_1_device_wrapper_ae57c33d3319be7ebe69a85890c26959d}\index{prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}!querySwapChainSupport@{querySwapChainSupport}}
+\index{querySwapChainSupport@{querySwapChainSupport}!prism::PGC::DeviceWrapper@{prism::PGC::DeviceWrapper}}
+\doxysubsubsection{\texorpdfstring{querySwapChainSupport()}{querySwapChainSupport()}}
+{\footnotesize\ttfamily \label{classprism_1_1_p_g_c_1_1_device_wrapper_ae57c33d3319be7ebe69a85890c26959d} 
+\mbox{\hyperlink{structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details}{prism\+::\+PGC\+::utils\+::\+Swap\+Chain\+Support\+Details}} prism\+::\+PGC\+::\+Device\+Wrapper\+::query\+Swap\+Chain\+Support (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{, }\item[{Vk\+Surface\+KHR}]{surface}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{device_wrapper_8h}{device\+Wrapper.\+h}}\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{device_wrapper_8cpp}{device\+Wrapper.\+cpp}}\end{DoxyCompactItemize}

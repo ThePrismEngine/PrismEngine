@@ -1,0 +1,86 @@
+\doxysection{Шаблон структуры prism\+::scene\+::Component\+Manager\+::Component\+Storage\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{}\label{structprism_1_1scene_1_1_component_manager_1_1_component_storage}\index{prism::scene::ComponentManager::ComponentStorage$<$ T $>$@{prism::scene::ComponentManager::ComponentStorage$<$ T $>$}}
+
+
+Конкретная реализация хранилища для типа компонента  
+
+
+Граф наследования\+:prism\+::scene\+::Component\+Manager\+::Component\+Storage\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structprism_1_1scene_1_1_component_manager_1_1_component_storage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a34a31deec21993564366818b26628db4}{remove\+Entity}} (\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}} entity\+Id) override
+\begin{DoxyCompactList}\small\item\em Удаляет все компоненты сущности из хранилища \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage}{prism\+::scene\+::\+Component\+Manager\+::\+IComponent\+Storage}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_a8add7a07bcb46a0b1f43750bbf18afe7}{\texorpdfstring{$\sim$}{\string~}\+IComponent\+Storage}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}, std\+::shared\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a52394866052b0bb7f1c31b1320cce844}{components}}
+\begin{DoxyCompactList}\small\item\em Карта сущность -\/\texorpdfstring{$>$}{>} компонент \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+\subsubsection*{template$<$typename T$>$\newline
+struct prism\+::scene\+::\+Component\+Manager\+::\+Component\+Storage$<$ T $>$}
+Конкретная реализация хранилища для типа компонента 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em T} & Тип компонента \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-func-members}
+\Hypertarget{structprism_1_1scene_1_1_component_manager_1_1_component_storage_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a34a31deec21993564366818b26628db4}\index{prism::scene::ComponentManager::ComponentStorage$<$ T $>$@{prism::scene::ComponentManager::ComponentStorage$<$ T $>$}!removeEntity@{removeEntity}}
+\index{removeEntity@{removeEntity}!prism::scene::ComponentManager::ComponentStorage$<$ T $>$@{prism::scene::ComponentManager::ComponentStorage$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeEntity()}{removeEntity()}}
+{\footnotesize\ttfamily \label{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a34a31deec21993564366818b26628db4} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{prism\+::scene\+::\+Component\+Manager\+::\+Component\+Storage}}$<$ T $>$\+::remove\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}}]{entity\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Удаляет все компоненты сущности из хранилища 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em entity\+Id} & Идентификатор сущности \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_a7a9a568a38454a2e123626f54c03355e}{prism\+::scene\+::\+Component\+Manager\+::\+IComponent\+Storage}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structprism_1_1scene_1_1_component_manager_1_1_component_storage_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a52394866052b0bb7f1c31b1320cce844}\index{prism::scene::ComponentManager::ComponentStorage$<$ T $>$@{prism::scene::ComponentManager::ComponentStorage$<$ T $>$}!components@{components}}
+\index{components@{components}!prism::scene::ComponentManager::ComponentStorage$<$ T $>$@{prism::scene::ComponentManager::ComponentStorage$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily \label{structprism_1_1scene_1_1_component_manager_1_1_component_storage_a52394866052b0bb7f1c31b1320cce844} 
+template$<$typename T$>$ \\
+std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceprism_1_1scene_a62570b404abdde9cb614b75c6f162ed9}{Entity}}, std\+::shared\+\_\+ptr$<$T$>$ $>$ \mbox{\hyperlink{structprism_1_1scene_1_1_component_manager_1_1_component_storage}{prism\+::scene\+::\+Component\+Manager\+::\+Component\+Storage}}$<$ T $>$\+::components}
+
+
+
+Карта сущность -\/\texorpdfstring{$>$}{>} компонент 
+
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{component_manager_8h}{component\+Manager.\+h}}\end{DoxyCompactItemize}

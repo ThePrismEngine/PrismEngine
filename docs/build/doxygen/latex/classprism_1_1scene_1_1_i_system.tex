@@ -1,0 +1,89 @@
+\doxysection{РљР»Р°СЃСЃ prism\+::scene\+::ISystem}
+\hypertarget{classprism_1_1scene_1_1_i_system}{}\label{classprism_1_1scene_1_1_i_system}\index{prism::scene::ISystem@{prism::scene::ISystem}}
+
+
+Базовый интерфейс для всех систем  
+
+
+
+
+{\ttfamily \#include $<$system.\+h$>$}
+
+Р“СЂР°С„ РЅР°СЃР»РµРґРѕРІР°РЅРёСЏ\+:prism\+::scene\+::ISystem\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classprism_1_1scene_1_1_i_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{РћС‚РєСЂС‹С‚С‹Рµ С‡Р»РµРЅС‹}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classprism_1_1scene_1_1_i_system_a3a7fc6382464d9b1fc94f95eb4dda159}{\texorpdfstring{$\sim$}{\string~}\+ISystem}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classprism_1_1scene_1_1_i_system_a406b867d27b268665a6cc8d82c740f68}{update}} (float delta\+Time)=0
+\begin{DoxyCompactList}\small\item\em Обновление состояния системы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{РћС‚РєСЂС‹С‚С‹Рµ Р°С‚СЂРёР±СѓС‚С‹}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classprism_1_1scene_1_1_i_system_a7c2ea1d298dac0b99b6a83af5ae26b93}{enabled}} = true
+\begin{DoxyCompactList}\small\item\em Флаг активности системы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
+Базовый интерфейс для всех систем 
+
+Системы должны наследоваться от этого интерфейса и реализовывать метод update 
+
+\label{doc-constructors}
+\Hypertarget{classprism_1_1scene_1_1_i_system_doc-constructors}
+\doxysubsection{РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ(С‹)}
+\Hypertarget{classprism_1_1scene_1_1_i_system_a3a7fc6382464d9b1fc94f95eb4dda159}\index{prism::scene::ISystem@{prism::scene::ISystem}!````~ISystem@{\texorpdfstring{$\sim$}{\string~}ISystem}}
+\index{````~ISystem@{\texorpdfstring{$\sim$}{\string~}ISystem}!prism::scene::ISystem@{prism::scene::ISystem}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ISystem()}{\string~ISystem()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_i_system_a3a7fc6382464d9b1fc94f95eb4dda159} 
+virtual prism\+::scene\+::\+ISystem\+::\texorpdfstring{$\sim$}{\string~}\+ISystem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classprism_1_1scene_1_1_i_system_doc-func-members}
+\doxysubsection{РњРµС‚РѕРґС‹}
+\Hypertarget{classprism_1_1scene_1_1_i_system_a406b867d27b268665a6cc8d82c740f68}\index{prism::scene::ISystem@{prism::scene::ISystem}!update@{update}}
+\index{update@{update}!prism::scene::ISystem@{prism::scene::ISystem}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_i_system_a406b867d27b268665a6cc8d82c740f68} 
+virtual void prism\+::scene\+::\+ISystem\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Обновление состояния системы. 
+
+
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
+{\em delta\+Time} & Время, прошедшее с предыдущего обновления (в секундах)\\
+\hline
+\end{DoxyParams}
+Вызывается каждый кадр для обновления логики системы 
+
+Р—Р°РјРµС‰Р°РµС‚СЃСЏ РІ \mbox{\hyperlink{classprism_1_1scene_1_1_render_system_ae28dd1ba57114dfacf9ce65f8aeff5a9}{prism\+::scene\+::\+Render\+System}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classprism_1_1scene_1_1_i_system_doc-variable-members}
+\doxysubsection{Р”Р°РЅРЅС‹Рµ РєР»Р°СЃСЃР°}
+\Hypertarget{classprism_1_1scene_1_1_i_system_a7c2ea1d298dac0b99b6a83af5ae26b93}\index{prism::scene::ISystem@{prism::scene::ISystem}!enabled@{enabled}}
+\index{enabled@{enabled}!prism::scene::ISystem@{prism::scene::ISystem}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily \label{classprism_1_1scene_1_1_i_system_a7c2ea1d298dac0b99b6a83af5ae26b93} 
+bool prism\+::scene\+::\+ISystem\+::enabled = true}
+
+
+
+Флаг активности системы. 
+
+Если true -\/ система обновляется, если false -\/ пропускается 
+
+РћР±СЉСЏРІР»РµРЅРёСЏ Рё РѕРїРёСЃР°РЅРёСЏ С‡Р»РµРЅРѕРІ РєР»Р°СЃСЃР° РЅР°С…РѕРґСЏС‚СЃСЏ РІ С„Р°Р№Р»Рµ\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Admin/\+Desktop/\+Prism\+Engine/\+Prism\+Engine/src/\mbox{\hyperlink{system_8h}{system.\+h}}\end{DoxyCompactItemize}

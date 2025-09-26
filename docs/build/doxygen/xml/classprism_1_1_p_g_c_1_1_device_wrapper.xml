@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="ru">
+  <compounddef id="classprism_1_1_p_g_c_1_1_device_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::DeviceWrapper</compoundname>
+    <includes refid="device_wrapper_8h" local="no">deviceWrapper.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1a7e777734683993078714a50d4ecf0a6e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPhysicalDeviceProperties</type>
+        <definition>VkPhysicalDeviceProperties prism::PGC::DeviceWrapper::getDeviceProperties</definition>
+        <argsstring>(VkPhysicalDevice device)</argsstring>
+        <name>getDeviceProperties</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::getDeviceProperties</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="13" column="35" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1aba678e3d2c055470b13c6c97ea53e973" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::DeviceWrapper::getDeviceExtensionProperties</definition>
+        <argsstring>(VkPhysicalDevice device, std::vector&lt; VkExtensionProperties &gt; *properties)</argsstring>
+        <name>getDeviceExtensionProperties</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::getDeviceExtensionProperties</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; VkExtensionProperties &gt; *</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="14" column="13" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="10" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1af917d5dc002c1e1473bc7401b8e07d0a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPhysicalDeviceMemoryProperties</type>
+        <definition>VkPhysicalDeviceMemoryProperties prism::PGC::DeviceWrapper::getDeviceMemoryProperties</definition>
+        <argsstring>(VkPhysicalDevice device)</argsstring>
+        <name>getDeviceMemoryProperties</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::getDeviceMemoryProperties</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="15" column="41" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1a88c9489702bce265bee70147ed98fcd2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices" kindref="compound">prism::PGC::utils::QueueFamilyIndices</ref></type>
+        <definition>prism::PGC::utils::QueueFamilyIndices prism::PGC::DeviceWrapper::findQueueFamilies</definition>
+        <argsstring>(VkPhysicalDevice device, VkSurfaceKHR surface)</argsstring>
+        <name>findQueueFamilies</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::findQueueFamilies</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VkSurfaceKHR</type>
+          <declname>surface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="16" column="46" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="25" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1ae57c33d3319be7ebe69a85890c26959d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details" kindref="compound">prism::PGC::utils::SwapChainSupportDetails</ref></type>
+        <definition>prism::PGC::utils::SwapChainSupportDetails prism::PGC::DeviceWrapper::querySwapChainSupport</definition>
+        <argsstring>(VkPhysicalDevice device, VkSurfaceKHR surface)</argsstring>
+        <name>querySwapChainSupport</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::querySwapChainSupport</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VkSurfaceKHR</type>
+          <declname>surface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="17" column="51" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="58" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1a1d2619db4cf9fff8f2bc31bc50faa072" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkFormatProperties</type>
+        <definition>VkFormatProperties prism::PGC::DeviceWrapper::getDeviceFormatProperties</definition>
+        <argsstring>(VkPhysicalDevice device, VkFormat format)</argsstring>
+        <name>getDeviceFormatProperties</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::getDeviceFormatProperties</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="18" column="27" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="82" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1a2dca5c9dabfc59451df88f96685ce185" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkFormat</type>
+        <definition>VkFormat prism::PGC::DeviceWrapper::findDepthFormat</definition>
+        <argsstring>(VkPhysicalDevice physicalDevice)</argsstring>
+        <name>findDepthFormat</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::findDepthFormat</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>physicalDevice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="19" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="89" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1a63c317f0927d63bd97bb1f94a4e6768c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::DeviceWrapper::findMemoryType</definition>
+        <argsstring>(VkPhysicalDevice device, uint32_t typeFilter, VkMemoryPropertyFlags properties)</argsstring>
+        <name>findMemoryType</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::findMemoryType</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>typeFilter</declname>
+        </param>
+        <param>
+          <type>VkMemoryPropertyFlags</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="20" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="98" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_device_wrapper_1ad25c1eaf42cd86e9c678b4da83ca87bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkFormat</type>
+        <definition>VkFormat prism::PGC::DeviceWrapper::findSupportedFormat</definition>
+        <argsstring>(VkPhysicalDevice physicalDevice, const std::vector&lt; VkFormat &gt; &amp;candidates, VkImageTiling tiling, VkFormatFeatureFlags features)</argsstring>
+        <name>findSupportedFormat</name>
+        <qualifiedname>prism::PGC::DeviceWrapper::findSupportedFormat</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>physicalDevice</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; VkFormat &gt; &amp;</type>
+          <declname>candidates</declname>
+        </param>
+        <param>
+          <type>VkImageTiling</type>
+          <declname>tiling</declname>
+        </param>
+        <param>
+          <type>VkFormatFeatureFlags</type>
+          <declname>features</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="21" column="17" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.cpp" bodystart="112" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" line="11" column="1" bodyfile="C:/Users/Admin/Desktop/PrismEngine/PrismEngine/src/deviceWrapper.h" bodystart="11" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a2dca5c9dabfc59451df88f96685ce185" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>findDepthFormat</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a63c317f0927d63bd97bb1f94a4e6768c" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>findMemoryType</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a88c9489702bce265bee70147ed98fcd2" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>findQueueFamilies</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1ad25c1eaf42cd86e9c678b4da83ca87bb" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>findSupportedFormat</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1aba678e3d2c055470b13c6c97ea53e973" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>getDeviceExtensionProperties</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a1d2619db4cf9fff8f2bc31bc50faa072" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>getDeviceFormatProperties</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1af917d5dc002c1e1473bc7401b8e07d0a" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>getDeviceMemoryProperties</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1a7e777734683993078714a50d4ecf0a6e" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>getDeviceProperties</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_device_wrapper_1ae57c33d3319be7ebe69a85890c26959d" prot="public" virt="non-virtual"><scope>prism::PGC::DeviceWrapper</scope><name>querySwapChainSupport</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
