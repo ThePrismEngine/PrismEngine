@@ -1,6 +1,7 @@
 #include "renderer.h"
 #include "meshManager.h"
 #include "textureManager.h"
+#include <gtc/quaternion.hpp>
 
 
 void prism::render::Renderer::linkWindow(Window* window)
@@ -196,16 +197,9 @@ void prism::render::Renderer::updateObjectTransform(prism::scene::TransformCompo
 	objectUbo.model = glm::mat4(1.0f);
 
 	// Порядок: сначала масштаб, потом вращение, потом перенос
-
-	objectUbo.model = glm::translate(objectUbo.model,
-		glm::vec3(transform->pos.x, transform->pos.y, transform->pos.z));
-
-	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.y), glm::vec3(0.0f, 1.0f, 0.0f)); // Y
-	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.x), glm::vec3(1.0f, 0.0f, 0.0f)); // X
-	objectUbo.model = glm::rotate(objectUbo.model, glm::radians(transform->rot.z), glm::vec3(0.0f, 0.0f, 1.0f)); // Z
-	
-	objectUbo.model = glm::scale(objectUbo.model,
-		glm::vec3(transform->scale.x, transform->scale.y, transform->scale.z));
+	objectUbo.model = glm::translate(objectUbo.model, glm::vec3(transform->pos.x, transform->pos.y, transform->pos.z));	
+	objectUbo.model = objectUbo.model * glm::mat4_cast(glm::quat(glm::radians(glm::vec3{transform->rot.x, transform->rot.y, transform->rot.z})));
+	objectUbo.model = glm::scale(objectUbo.model, glm::vec3(transform->scale.x, transform->scale.y, transform->scale.z));
 
 	objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
 
