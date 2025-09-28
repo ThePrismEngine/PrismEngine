@@ -16,12 +16,13 @@
    :maxdepth: 1
    :caption: Компоненты:
 
-   modules/math
-   modules/core
-   modules/render
-   modules/ui
-   modules/physics
+   modules/ecs/index
+   modules/pgc
    modules/logger
+   modules/math
+   modules/ppc
+   modules/pcc
+   modules/ui
 
 Для разработчиков
 ----------------
