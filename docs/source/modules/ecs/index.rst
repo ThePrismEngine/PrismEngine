@@ -1,10 +1,12 @@
 ECS Module (Entity-Component-System)
 ====================================
 
+.. _ecs-index:
+
 .. toctree::
    :maxdepth: 2
    :caption: Публичное API (для пользователей):
-   
+
    public/overview
    public/quickstart
    public/api_reference
@@ -13,7 +15,7 @@ ECS Module (Entity-Component-System)
 .. toctree::
    :maxdepth: 2
    :caption: Внутренняя реализация (для разработчиков):
-   
+
    internal/architecture
    internal/managers
    internal/performance
@@ -26,7 +28,7 @@ ECS Module (Entity-Component-System)
 Основные концепции:
 
 - **Сущности (Entities)** - идентификаторы игровых объектов
-- **Компоненты (Components)** - данные сущностей  
+- **Компоненты (Components)** - данные сущностей
 - **Системы (Systems)** - логика обработки компонентов
 
 Быстрые ссылки:
