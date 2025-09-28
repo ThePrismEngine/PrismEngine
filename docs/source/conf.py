@@ -14,6 +14,7 @@ extensions = [
     "exhale",           # Автогенерация C++ API
     "sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
+    "sphinx.ext.graphviz",
 ]
 
 # -- Breathe настройки ----------------------------------------------
