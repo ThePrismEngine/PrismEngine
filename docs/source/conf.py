@@ -33,7 +33,7 @@ exhale_args = {
     "createTreeView":        True,
     "exhaleExecutesDoxygen": True,
     "exhaleDoxygenStdin": """
-        INPUT            = ../../src
+        INPUT            = ../../PrismEngine/src
         EXTRACT_ALL      = YES
         GENERATE_XML     = YES
         RECURSIVE        = YES
