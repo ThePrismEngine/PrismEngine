@@ -2966,7 +2966,7 @@ MSCFILE_DIRS           =
 
 
 PROJECT_NAME      = PrismEngine
-INPUT            = ../src
+# INPUT            = ../src
 RECURSIVE        = YES
 EXTRACT_ALL      = YES
 EXTRACT_PRIVATE = YES
@@ -2977,7 +2977,7 @@ QUIET            = YES
 INPUT_ENCODING         = UTF-8
 OUTPUT_LANGUAGE       = Russian
 DOXYFILE_ENCODING     = UTF-8
-INPUT                  = ../src
+INPUT                  = ../PrismEngine/src
 RECURSIVE              = YES
 EXTRACT_ALL            = YES
 GENERATE_XML           = YES
