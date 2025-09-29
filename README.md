@@ -10,7 +10,7 @@
 
 <div align="center">
   <img alt="GitHub top language" src="https://shields.foxteam.ru/github/languages/top/Aleksei-Kutuzov/PrismEngine?style=plastic">
-  <img alt="GitHub License" src="https://shields.foxteam.ru/github/license/Aleksei-Kutuzov/PrismEngine?style=plastic">
+  <img alt="GitHub License" src="https://shields.foxteam.ru/github/license/Aleksei-Kutuzov/PrismEngine">
   <img alt="GitHub Release" src="https://shields.foxteam.ru/github/v/release/Aleksei-Kutuzov/PrismEngine">
   <img src="https://img.shields.io/github/stars/Aleksei-Kutuzov/PrismEngine.svg?labelColor=003694&color=ffffff" alt="Stars">
   <img src="https://img.shields.io/github/issues/Aleksei-Kutuzov/PrismEngine.svg?labelColor=003694&color=ffffff" alt="Issues">
