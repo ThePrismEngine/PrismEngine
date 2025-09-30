@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="transform_component_8h" kind="file" language="C++">
+    <compoundname>transformComponent.h</compoundname>
+    <includedby refid="render_system_8cpp" local="yes">PrismEngine/src/renderSystem.cpp</includedby>
+    <includedby refid="renderer_8h" local="yes">PrismEngine/src/renderer.h</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>PrismEngine/src/PrismEngine.cpp</label>
+        <link refid="_prism_engine_8cpp"/>
+      </node>
+      <node id="4">
+        <label>PrismEngine/src/PrismEngine.h</label>
+        <link refid="_prism_engine_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PrismEngine/src/renderSystem.cpp</label>
+        <link refid="render_system_8cpp"/>
+      </node>
+      <node id="6">
+        <label>PrismEngine/src/renderSystem.h</label>
+        <link refid="render_system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PrismEngine/src/renderer.cpp</label>
+        <link refid="renderer_8cpp"/>
+      </node>
+      <node id="3">
+        <label>PrismEngine/src/renderer.h</label>
+        <link refid="renderer_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PrismEngine/src/transformComponent.h</label>
+        <link refid="transform_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structprism_1_1scene_1_1_position" prot="public">prism::scene::Position</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_rotation" prot="public">prism::scene::Rotation</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_scale" prot="public">prism::scene::Scale</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_transform_component" prot="public">prism::scene::TransformComponent</innerclass>
+    <innernamespace refid="namespaceprism">prism</innernamespace>
+    <innernamespace refid="namespaceprism_1_1scene">prism::scene</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism" kindref="compound">prism</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceprism_1_1scene" kindref="compound">scene</ref><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="structprism_1_1scene_1_1_position" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1scene_1_1_position" kindref="compound">Position</ref><sp/>{</highlight></codeline>
+<codeline lineno="6" refid="structprism_1_1scene_1_1_position_1afb72c8ab2012525655084db905487feb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_position_1afb72c8ab2012525655084db905487feb" kindref="member">x</ref>,<sp/><ref refid="structprism_1_1scene_1_1_position_1a15659c51a61528ab6335c24f7727b44c" kindref="member">y</ref>,<sp/><ref refid="structprism_1_1scene_1_1_position_1a806e7290cbafa395e9ce83511540d4d4" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="structprism_1_1scene_1_1_rotation" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1scene_1_1_rotation" kindref="compound">Rotation</ref><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="structprism_1_1scene_1_1_rotation_1a966ba7232e2bb99137f21f40ec80f905" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_rotation_1a966ba7232e2bb99137f21f40ec80f905" kindref="member">x</ref>,<sp/><ref refid="structprism_1_1scene_1_1_rotation_1a0ec26ecffa1e208df5182fd853aa257b" kindref="member">y</ref>,<sp/><ref refid="structprism_1_1scene_1_1_rotation_1a8c014c7202933c73dbcdec818fc80682" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="structprism_1_1scene_1_1_scale" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1scene_1_1_scale" kindref="compound">Scale</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="structprism_1_1scene_1_1_scale_1abe9e8b15c7b3d6df7cd86c12d569cd65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structprism_1_1scene_1_1_scale_1abe9e8b15c7b3d6df7cd86c12d569cd65" kindref="member">x</ref>,<sp/><ref refid="structprism_1_1scene_1_1_scale_1aaa1fe28e3b8d794464e9ed28fa5141c8" kindref="member">y</ref>,<sp/><ref refid="structprism_1_1scene_1_1_scale_1a24bd28cde4bc109a597b0e3648e97990" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structprism_1_1scene_1_1_transform_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprism_1_1scene_1_1_transform_component" kindref="compound">TransformComponent</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1scene_1_1_position" kindref="compound">Position</ref><sp/><ref refid="structprism_1_1scene_1_1_transform_component_1acbfda0d7dfe2f1241a34515d819037b2" kindref="member">pos</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structprism_1_1scene_1_1_transform_component_1afe6bbe02710e5c9704ecdfa0f5629932" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1scene_1_1_rotation" kindref="compound">Rotation</ref><sp/><ref refid="structprism_1_1scene_1_1_transform_component_1afe6bbe02710e5c9704ecdfa0f5629932" kindref="member">rot</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structprism_1_1scene_1_1_transform_component_1a3270258dd47f2b1caa104acac83edbd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structprism_1_1scene_1_1_scale" kindref="compound">Scale</ref><sp/><ref refid="structprism_1_1scene_1_1_transform_component_1a3270258dd47f2b1caa104acac83edbd7" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="PrismEngine/src/transformComponent.h"/>
+  </compounddef>
+</doxygen>

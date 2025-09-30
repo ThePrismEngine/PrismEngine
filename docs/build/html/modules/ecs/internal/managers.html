@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Внутренние менеджеры ECS &mdash; PrismEngine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Производительность ECS" href="performance.html" />
+    <link rel="prev" title="Внутренняя архитектура ECS" href="architecture.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            PrismEngine
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Основное:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">О проекте PrismEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Быстрый старт</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Компоненты:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ECS Module (Entity-Component-System)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../public/overview.html">Публичное API ECS модуля</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../public/quickstart.html">Быстрое начало работы с ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../public/api_reference.html">Справочник публичного API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">Внутренняя архитектура ECS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Внутренние менеджеры ECS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#entitymanager">EntityManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene13EntityManagerE"><code class="docutils literal notranslate"><span class="pre">prism::scene::EntityManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#componentmanager">ComponentManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene16ComponentManagerE"><code class="docutils literal notranslate"><span class="pre">prism::scene::ComponentManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#systemmanager">SystemManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene13SystemManagerE"><code class="docutils literal notranslate"><span class="pre">prism::scene::SystemManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Оптимизации</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html">Производительность ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#id1">Обзор</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pgc.html">Графическое ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../logger.html">Модуль логирования</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../math.html">Модуль математики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ppc.html">Физический движок</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pcc.html">Вычислительное ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ui.html">Пользовательский интерфейс</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Разработка:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/contributing.html">Участие в разработке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/code_style.html">Стандарты кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/build_guide.html">Руководство по сборке</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">PrismEngine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">ECS Module (Entity-Component-System)</a></li>
+      <li class="breadcrumb-item active">Внутренние менеджеры ECS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/modules/ecs/internal/managers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ecs">
+<h1>Внутренние менеджеры ECS<a class="headerlink" href="#ecs" title="Link to this heading"></a></h1>
+<section id="entitymanager">
+<span id="ecs-internal-managers"></span><h2>EntityManager<a class="headerlink" href="#entitymanager" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13EntityManagerE">
+<span id="_CPPv3N5prism5scene13EntityManagerE"></span><span id="_CPPv2N5prism5scene13EntityManagerE"></span><span id="prism::scene::EntityManager"></span><span class="target" id="classprism_1_1scene_1_1_entity_manager"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EntityManager</span></span></span><br /></dt>
+<dd><p>Менеджер для создания и управления сущностями </p>
+<p>Обеспечивает создание, удаление и валидацию сущностей с использованием пула идентификаторов </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13EntityManager12createEntityEv">
+<span id="_CPPv3N5prism5scene13EntityManager12createEntityEv"></span><span id="_CPPv2N5prism5scene13EntityManager12createEntityEv"></span><span id="prism::scene::EntityManager::createEntity"></span><span class="target" id="classprism_1_1scene_1_1_entity_manager_1a0e6fd16fd8313e33f366d3bffb14b8e3"></span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createEntity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Создает новую сущность </p>
+<p>
+Использует свободные ID из пула при наличии, иначе генерирует новый </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Идентификатор созданной сущности</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13EntityManager13destroyEntityE6Entity">
+<span id="_CPPv3N5prism5scene13EntityManager13destroyEntityE6Entity"></span><span id="_CPPv2N5prism5scene13EntityManager13destroyEntityE6Entity"></span><span id="prism::scene::EntityManager::destroyEntity__Entity"></span><span class="target" id="classprism_1_1scene_1_1_entity_manager_1a64b40ac4717222997d2c577acc020687"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">destroyEntity</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">entityId</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Удаляет сущность и освобождает ее ID. </p>
+<p>
+Освобожденный ID помещается в пул для повторного использования </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>entityId</strong> – Идентификатор сущности для удаления </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true если сущность успешно удалена, false если ID невалиден</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5prism5scene13EntityManager13isEntityValidE6Entity">
+<span id="_CPPv3NK5prism5scene13EntityManager13isEntityValidE6Entity"></span><span id="_CPPv2NK5prism5scene13EntityManager13isEntityValidE6Entity"></span><span id="prism::scene::EntityManager::isEntityValid__EntityC"></span><span class="target" id="classprism_1_1scene_1_1_entity_manager_1ab5b69633034025889c6126f94cc0fde5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isEntityValid</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">entityId</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
+<dd><p>Проверяет валидность идентификатора сущности </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>entityId</strong> – Идентификатор сущности для проверки </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true если сущность существует и валидна, false в противном случае </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13EntityManager12nextEntityIdE">
+<span id="_CPPv3N5prism5scene13EntityManager12nextEntityIdE"></span><span id="_CPPv2N5prism5scene13EntityManager12nextEntityIdE"></span><span id="prism::scene::EntityManager::nextEntityId__Entity"></span><span class="target" id="classprism_1_1scene_1_1_entity_manager_1a0b6d5b122445aff8f48ff5999262aa50"></span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nextEntityId</span></span></span><a class="headerlink" href="#_CPPv4N5prism5scene13EntityManager12nextEntityIdE" title="Link to this definition"></a><br /></dt>
+<dd><p>Следующий доступный идентификатор сущности </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13EntityManager8freeListE">
+<span id="_CPPv3N5prism5scene13EntityManager8freeListE"></span><span id="_CPPv2N5prism5scene13EntityManager8freeListE"></span><span id="prism::scene::EntityManager::freeList__std::queue:Entity:"></span><span class="target" id="classprism_1_1scene_1_1_entity_manager_1a97fcaafd355dd916cd3a53e7b4b83c73"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">freeList</span></span></span><a class="headerlink" href="#_CPPv4N5prism5scene13EntityManager8freeListE" title="Link to this definition"></a><br /></dt>
+<dd><p>Очередь свободных идентификаторов для повторного использования </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="componentmanager">
+<h2>ComponentManager<a class="headerlink" href="#componentmanager" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene16ComponentManagerE">
+<span id="_CPPv3N5prism5scene16ComponentManagerE"></span><span id="_CPPv2N5prism5scene16ComponentManagerE"></span><span id="prism::scene::ComponentManager"></span><span class="target" id="classprism_1_1scene_1_1_component_manager"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComponentManager</span></span></span><br /></dt>
+<dd><p>Менеджер для управления компонентами сущностей </p>
+<p>Обеспечивает хранение, добавление, удаление и поиск компонентов </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5prism5scene16ComponentManager12addComponentEb6Entity1T">
+<span id="_CPPv3I0EN5prism5scene16ComponentManager12addComponentE6Entity1T"></span><span id="_CPPv2I0EN5prism5scene16ComponentManager12addComponentE6Entity1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classprism_1_1scene_1_1_component_manager_1a7ee343b770cd5a1a67fd68d50bec2ca0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addComponent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">entityId</span></span>, <a class="reference internal" href="../../../api/classprism_1_1scene_1_1_component_manager.html#_CPPv4I0EN5prism5scene16ComponentManager12addComponentEb6Entity1T" title="prism::scene::ComponentManager::addComponent::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">component</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Добавляет компонент к сущности </p>
+<p>
+Создает копию компонента и связывает его с сущностью </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>T</strong> – Тип компонента </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>entityId</strong> – Идентификатор сущности </p></li>
+<li><p><strong>component</strong> – Компонент для добавления </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true если компонент успешно добавлен, false в противном случае</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5prism5scene16ComponentManager15removeComponentEb6Entity">
+<span id="_CPPv3I0EN5prism5scene16ComponentManager15removeComponentE6Entity"></span><span id="_CPPv2I0EN5prism5scene16ComponentManager15removeComponentE6Entity"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classprism_1_1scene_1_1_component_manager_1a9e173149b5cb23f208ade28e5ee34f4d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeComponent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">entityId</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Удаляет компонент у сущности </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>T</strong> – Тип компонента </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>entityId</strong> – Идентификатор сущности </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true если компонент существовал и был удален, false в противном случае </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5prism5scene16ComponentManager12getComponentEP1T6Entity">
+<span id="_CPPv3I0EN5prism5scene16ComponentManager12getComponentE6Entity"></span><span id="_CPPv2I0EN5prism5scene16ComponentManager12getComponentE6Entity"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classprism_1_1scene_1_1_component_manager_1a14aed5f1bd821d92fd91577a63cdad7f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="../../../api/classprism_1_1scene_1_1_component_manager.html#_CPPv4I0EN5prism5scene16ComponentManager12getComponentEP1T6Entity" title="prism::scene::ComponentManager::getComponent::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getComponent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">entityId</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Получает компонент сущности </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>T</strong> – Тип компонента </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>entityId</strong> – Идентификатор сущности </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Указатель на компонент или nullptr если компонент не найден </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK5prism5scene16ComponentManager15getEntitiesWithERKNSt3setI6EntityEEv">
+<span id="_CPPv3I0ENK5prism5scene16ComponentManager15getEntitiesWithEv"></span><span id="_CPPv2I0ENK5prism5scene16ComponentManager15getEntitiesWithEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classprism_1_1scene_1_1_component_manager_1ad91853d37150f5c4add892dc7fa6fcea"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getEntitiesWith</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
+<dd><p>Получает все сущности, имеющие компонент указанного типа </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>T</strong> – Тип компонента </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Константная ссылка на множество сущностей с компонентом </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IDpENK5prism5scene16ComponentManager18getEntitiesWithAllENSt3setI6EntityEEv">
+<span id="_CPPv3IDpENK5prism5scene16ComponentManager18getEntitiesWithAllEv"></span><span id="_CPPv2IDpENK5prism5scene16ComponentManager18getEntitiesWithAllEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">ComponentTypes</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classprism_1_1scene_1_1_component_manager_1af84b9831cf557c0d8beb0f43ea85782c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEntitiesWithAll</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
+<dd><p>Получает все сущности, имеющие все указанные типы компонентов </p>
+<p>
+Выполняет пересечение множеств сущностей для каждого типа компонента </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ComponentTypes</strong> – Типы компонентов для поиска </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Множество сущностей, содержащих все запрошенные компоненты</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene16ComponentManager19removeAllComponentsE6Entity">
+<span id="_CPPv3N5prism5scene16ComponentManager19removeAllComponentsE6Entity"></span><span id="_CPPv2N5prism5scene16ComponentManager19removeAllComponentsE6Entity"></span><span id="prism::scene::ComponentManager::removeAllComponents__Entity"></span><span class="target" id="classprism_1_1scene_1_1_component_manager_1a207f9e235e87280a6b072f4a03d0b91b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeAllComponents</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">entityId</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Удаляет все компоненты у сущности </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>entityId</strong> – Идентификатор сущности </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5prism5scene16ComponentManager19getComponentStorageER16ComponentStorageI1TEv">
+<span id="_CPPv3I0EN5prism5scene16ComponentManager19getComponentStorageEv"></span><span id="_CPPv2I0EN5prism5scene16ComponentManager19getComponentStorageEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classprism_1_1scene_1_1_component_manager_1a89b0e0805d4739180f8c826aff31aed2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="../../../api/structprism_1_1scene_1_1_component_manager_1_1_component_storage.html#_CPPv4I0EN5prism5scene16ComponentManager16ComponentStorageE" title="prism::scene::ComponentManager::ComponentStorage"><span class="n"><span class="pre">ComponentStorage</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5prism5scene16ComponentManager19getComponentStorageER16ComponentStorageI1TEv" title="prism::scene::ComponentManager::getComponentStorage::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getComponentStorage</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN5prism5scene16ComponentManager19getComponentStorageER16ComponentStorageI1TEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Получает хранилище для конкретного типа компонента </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>T</strong> – Тип компонента </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Ссылка на хранилище компонентов типа T </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene16ComponentManager17componentStoragesE">
+<span id="_CPPv3N5prism5scene16ComponentManager17componentStoragesE"></span><span id="_CPPv2N5prism5scene16ComponentManager17componentStoragesE"></span><span id="prism::scene::ComponentManager::componentStorages__std::unordered_map:std::type_index.std::unique_ptr:IComponentStorage::"></span><span class="target" id="classprism_1_1scene_1_1_component_manager_1a6a1a60608eac94caea1b144d2697b5fd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type_index</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../api/structprism_1_1scene_1_1_component_manager_1_1_i_component_storage.html#_CPPv4N5prism5scene16ComponentManager17IComponentStorageE" title="prism::scene::ComponentManager::IComponentStorage"><span class="n"><span class="pre">IComponentStorage</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">componentStorages</span></span></span><a class="headerlink" href="#_CPPv4N5prism5scene16ComponentManager17componentStoragesE" title="Link to this definition"></a><br /></dt>
+<dd><p>Карта хранилищ компонентов по типу </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene16ComponentManager25entitiesWithComponentSetsE">
+<span id="_CPPv3N5prism5scene16ComponentManager25entitiesWithComponentSetsE"></span><span id="_CPPv2N5prism5scene16ComponentManager25entitiesWithComponentSetsE"></span><span id="prism::scene::ComponentManager::entitiesWithComponentSets__std::unordered_map:std::type_index.std::unique_ptr:std::set:Entity:::"></span><span class="target" id="classprism_1_1scene_1_1_component_manager_1a5273dbd0f3a9fdb9ab9de36d0b53012f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type_index</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">entitiesWithComponentSets</span></span></span><a class="headerlink" href="#_CPPv4N5prism5scene16ComponentManager25entitiesWithComponentSetsE" title="Link to this definition"></a><br /></dt>
+<dd><p>Карта множеств сущностей по типу компонента </p>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5prism5scene16ComponentManager16ComponentStorageE">
+<span id="_CPPv3I0EN5prism5scene16ComponentManager16ComponentStorageE"></span><span id="_CPPv2I0EN5prism5scene16ComponentManager16ComponentStorageE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structprism_1_1scene_1_1_component_manager_1_1_component_storage"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComponentStorage</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">scene</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../../api/classprism_1_1scene_1_1_component_manager.html#_CPPv4N5prism5scene16ComponentManagerE" title="prism::scene::ComponentManager"><span class="n"><span class="pre">ComponentManager</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../../api/structprism_1_1scene_1_1_component_manager_1_1_i_component_storage.html#_CPPv4N5prism5scene16ComponentManager17IComponentStorageE" title="prism::scene::ComponentManager::IComponentStorage"><span class="n"><span class="pre">IComponentStorage</span></span></a><br /></dt>
+<dd><p>Конкретная реализация хранилища для типа компонента </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>T</strong> – Тип компонента </p>
+</dd>
+</dl>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene16ComponentManager16ComponentStorage10componentsE">
+<span id="_CPPv3N5prism5scene16ComponentManager16ComponentStorage10componentsE"></span><span id="_CPPv2N5prism5scene16ComponentManager16ComponentStorage10componentsE"></span><span id="prism::scene::ComponentManager::ComponentStorage::components__std::unordered_map:Entity.std::shared_ptr:T::"></span><span class="target" id="structprism_1_1scene_1_1_component_manager_1_1_component_storage_1a52394866052b0bb7f1c31b1320cce844"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../api/structprism_1_1scene_1_1_component_manager_1_1_component_storage.html#_CPPv4I0EN5prism5scene16ComponentManager16ComponentStorageE" title="prism::scene::ComponentManager::ComponentStorage::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">components</span></span></span><br /></dt>
+<dd><p>Карта сущность -&gt; компонент </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene16ComponentManager17IComponentStorageE">
+<span id="_CPPv3N5prism5scene16ComponentManager17IComponentStorageE"></span><span id="_CPPv2N5prism5scene16ComponentManager17IComponentStorageE"></span><span id="prism::scene::ComponentManager::IComponentStorage"></span><span class="target" id="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IComponentStorage</span></span></span><br /></dt>
+<dd><p>Базовый интерфейс хранилища компонентов </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene16ComponentManager17IComponentStorage12removeEntityE6Entity">
+<span id="_CPPv3N5prism5scene16ComponentManager17IComponentStorage12removeEntityE6Entity"></span><span id="_CPPv2N5prism5scene16ComponentManager17IComponentStorage12removeEntityE6Entity"></span><span id="prism::scene::ComponentManager::IComponentStorage::removeEntity__Entity"></span><span class="target" id="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_1a7a9a568a38454a2e123626f54c03355e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeEntity</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html#_CPPv4N5prism5scene6EntityE" title="prism::scene::Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">entityId</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
+<dd><p>Удаляет все компоненты сущности из хранилища </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>entityId</strong> – Идентификатор сущности </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="systemmanager">
+<h2>SystemManager<a class="headerlink" href="#systemmanager" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13SystemManagerE">
+<span id="_CPPv3N5prism5scene13SystemManagerE"></span><span id="_CPPv2N5prism5scene13SystemManagerE"></span><span id="prism::scene::SystemManager"></span><span class="target" id="classprism_1_1scene_1_1_system_manager"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SystemManager</span></span></span><br /></dt>
+<dd><p>Менеджер систем для регистрации, включения/выключения и обновления систем. </p>
+<p>Управляет коллекцией систем, обновляя их в порядке регистрации. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0DpEN5prism5scene13SystemManager14registerSystemE8SystemIdDpRR4Args">
+<span id="_CPPv3I0DpEN5prism5scene13SystemManager14registerSystemEDpRR4Args"></span><span id="_CPPv2I0DpEN5prism5scene13SystemManager14registerSystemEDpRR4Args"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classprism_1_1scene_1_1_system_manager_1a871edb29fd162e17d59b3d36fe3bfae6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de.html#_CPPv4N5prism5scene8SystemIdE" title="prism::scene::SystemId"><span class="n"><span class="pre">SystemId</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">registerSystem</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/classprism_1_1scene_1_1_system_manager.html#_CPPv4I0DpEN5prism5scene13SystemManager14registerSystemE8SystemIdDpRR4Args" title="prism::scene::SystemManager::registerSystem::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Регистрирует новую систему в менеджере. </p>
+<p>
+Создает экземпляр системы и добавляет его в список управления </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> – Тип системы (должен быть производным от <a class="reference internal" href="../public/api_reference.html#classprism_1_1scene_1_1_i_system"><span class="std std-ref">ISystem</span></a>). </p></li>
+<li><p><strong>Args</strong> – Типы аргументов для конструктора системы. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>args</strong> – Аргументы для передачи конструктору системы. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Идентификатор зарегистрированной системы.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13SystemManager12enableSystemE8SystemId">
+<span id="_CPPv3N5prism5scene13SystemManager12enableSystemE8SystemId"></span><span id="_CPPv2N5prism5scene13SystemManager12enableSystemE8SystemId"></span><span id="prism::scene::SystemManager::enableSystem__SystemId"></span><span class="target" id="classprism_1_1scene_1_1_system_manager_1a0810e774cfc31a4cf1c1eb3bac4f0997"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableSystem</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de.html#_CPPv4N5prism5scene8SystemIdE" title="prism::scene::SystemId"><span class="n"><span class="pre">SystemId</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">systemId</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Включает систему по идентификатору. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>systemId</strong> – Идентификатор системы, которую нужно включить. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13SystemManager13disableSystemE8SystemId">
+<span id="_CPPv3N5prism5scene13SystemManager13disableSystemE8SystemId"></span><span id="_CPPv2N5prism5scene13SystemManager13disableSystemE8SystemId"></span><span id="prism::scene::SystemManager::disableSystem__SystemId"></span><span class="target" id="classprism_1_1scene_1_1_system_manager_1a277d39c230cb33e55636aaa60d844c04"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disableSystem</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../../../api/typedef_namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de.html#_CPPv4N5prism5scene8SystemIdE" title="prism::scene::SystemId"><span class="n"><span class="pre">SystemId</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">systemId</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Выключает систему по идентификатору. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>systemId</strong> – Идентификатор системы, которую нужно выключить. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13SystemManager6updateEf">
+<span id="_CPPv3N5prism5scene13SystemManager6updateEf"></span><span id="_CPPv2N5prism5scene13SystemManager6updateEf"></span><span id="prism::scene::SystemManager::update__float"></span><span class="target" id="classprism_1_1scene_1_1_system_manager_1acfa1db8417866bfce1b77d4aa76e1a09"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">deltaTime</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Обновляет все активные системы </p>
+<p>
+Вызывает <a class="reference internal" href="#classprism_1_1scene_1_1_system_manager_1acfa1db8417866bfce1b77d4aa76e1a09"><span class="std std-ref">update()</span></a> для всех включенных систем в порядке регистрации </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>deltaTime</strong> – Время, прошедшее с предыдущего обновления</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13SystemManager7systemsE">
+<span id="_CPPv3N5prism5scene13SystemManager7systemsE"></span><span id="_CPPv2N5prism5scene13SystemManager7systemsE"></span><span id="prism::scene::SystemManager::systems__std::vector:std::unique_ptr:ISystem::"></span><span class="target" id="classprism_1_1scene_1_1_system_manager_1a7430581dc763a8217472d313a2145a5a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../../api/classprism_1_1scene_1_1_i_system.html#_CPPv4N5prism5scene7ISystemE" title="prism::scene::ISystem"><span class="n"><span class="pre">ISystem</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">systems</span></span></span><a class="headerlink" href="#_CPPv4N5prism5scene13SystemManager7systemsE" title="Link to this definition"></a><br /></dt>
+<dd><p>Массив зарегистрированных систем </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id1">
+<h2>Оптимизации<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Пул сущностей</strong> - переиспользование ID</p></li>
+<li><p><strong>Раздельное хранение</strong> - компоненты по типам</p></li>
+<li><p><strong>Быстрый поиск</strong> - индексация сущностей по компонентам</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="architecture.html" class="btn btn-neutral float-left" title="Внутренняя архитектура ECS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="performance.html" class="btn btn-neutral float-right" title="Производительность ECS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Alexei Kutuzov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

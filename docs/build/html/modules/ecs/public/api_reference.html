@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Справочник публичного API &mdash; PrismEngine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="examples.html" />
+    <link rel="prev" title="Быстрое начало работы с ECS" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            PrismEngine
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Основное:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">О проекте PrismEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Быстрый старт</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Компоненты:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ECS Module (Entity-Component-System)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Публичное API ECS модуля</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html">Быстрое начало работы с ECS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Справочник публичного API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scene">Класс Scene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Стандартные компоненты:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene18TransformComponentE"><code class="docutils literal notranslate"><span class="pre">prism::scene::TransformComponent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene15CameraComponentE"><code class="docutils literal notranslate"><span class="pre">prism::scene::CameraComponent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene13MeshComponentE"><code class="docutils literal notranslate"><span class="pre">prism::scene::MeshComponent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene16TextureComponentE"><code class="docutils literal notranslate"><span class="pre">prism::scene::TextureComponent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Системы</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene7ISystemE"><code class="docutils literal notranslate"><span class="pre">prism::scene::ISystem</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism5scene12RenderSystemE"><code class="docutils literal notranslate"><span class="pre">prism::scene::RenderSystem</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../internal/architecture.html">Внутренняя архитектура ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal/managers.html">Внутренние менеджеры ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal/performance.html">Производительность ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#id1">Обзор</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pgc.html">Графическое ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../logger.html">Модуль логирования</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../math.html">Модуль математики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ppc.html">Физический движок</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pcc.html">Вычислительное ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ui.html">Пользовательский интерфейс</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Разработка:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/contributing.html">Участие в разработке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/code_style.html">Стандарты кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/build_guide.html">Руководство по сборке</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">PrismEngine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">ECS Module (Entity-Component-System)</a></li>
+      <li class="breadcrumb-item active">Справочник публичного API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/modules/ecs/public/api_reference.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>Справочник публичного API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<section id="scene">
+<span id="ecs-public-api"></span><h2>Класс Scene<a class="headerlink" href="#scene" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “prism::scene::Scene” in doxygen xml output for project “PrismEngine” from directory: C:\Users\Admin\Desktop\PrismEngine\PrismEngine\docs\build\xml</p>
+</div>
+</section>
+<section id="id1">
+<h2>Стандартные компоненты:<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene18TransformComponentE">
+<span id="_CPPv3N5prism5scene18TransformComponentE"></span><span id="_CPPv2N5prism5scene18TransformComponentE"></span><span id="prism::scene::TransformComponent"></span><span class="target" id="structprism_1_1scene_1_1_transform_component"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TransformComponent</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene15CameraComponentE">
+<span id="_CPPv3N5prism5scene15CameraComponentE"></span><span id="_CPPv2N5prism5scene15CameraComponentE"></span><span id="prism::scene::CameraComponent"></span><span class="target" id="structprism_1_1scene_1_1_camera_component"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CameraComponent</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene13MeshComponentE">
+<span id="_CPPv3N5prism5scene13MeshComponentE"></span><span id="_CPPv2N5prism5scene13MeshComponentE"></span><span id="prism::scene::MeshComponent"></span><span class="target" id="structprism_1_1scene_1_1_mesh_component"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshComponent</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene16TextureComponentE">
+<span id="_CPPv3N5prism5scene16TextureComponentE"></span><span id="_CPPv2N5prism5scene16TextureComponentE"></span><span id="prism::scene::TextureComponent"></span><span class="target" id="structprism_1_1scene_1_1_texture_component"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TextureComponent</span></span></span><br /></dt>
+<dd></dd></dl>
+
+</section>
+<section id="id2">
+<h2>Системы<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene7ISystemE">
+<span id="_CPPv3N5prism5scene7ISystemE"></span><span id="_CPPv2N5prism5scene7ISystemE"></span><span id="prism::scene::ISystem"></span><span class="target" id="classprism_1_1scene_1_1_i_system"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ISystem</span></span></span><br /></dt>
+<dd><p>Базовый интерфейс для всех систем </p>
+<p>Системы должны наследоваться от этого интерфейса и реализовывать метод update </p>
+<p>Subclassed by <a class="reference internal" href="#classprism_1_1scene_1_1_render_system"><span class="std std-ref">prism::scene::RenderSystem</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene7ISystem6updateEf">
+<span id="_CPPv3N5prism5scene7ISystem6updateEf"></span><span id="_CPPv2N5prism5scene7ISystem6updateEf"></span><span id="prism::scene::ISystem::update__float"></span><span class="target" id="classprism_1_1scene_1_1_i_system_1a406b867d27b268665a6cc8d82c740f68"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">deltaTime</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
+<dd><p>Обновление состояния системы </p>
+<p>
+Вызывается каждый кадр для обновления логики системы </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>deltaTime</strong> – Время, прошедшее с предыдущего обновления (в секундах)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene7ISystem7enabledE">
+<span id="_CPPv3N5prism5scene7ISystem7enabledE"></span><span id="_CPPv2N5prism5scene7ISystem7enabledE"></span><span id="prism::scene::ISystem::enabled__b"></span><span class="target" id="classprism_1_1scene_1_1_i_system_1a7c2ea1d298dac0b99b6a83af5ae26b93"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enabled</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><br /></dt>
+<dd><p>Флаг активности системы. </p>
+<p>Если true - система обновляется, если false - пропускается </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<p>Стандартные системы:</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene12RenderSystemE">
+<span id="_CPPv3N5prism5scene12RenderSystemE"></span><span id="_CPPv2N5prism5scene12RenderSystemE"></span><span id="prism::scene::RenderSystem"></span><span class="target" id="classprism_1_1scene_1_1_render_system"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RenderSystem</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">scene</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../../api/classprism_1_1scene_1_1_i_system.html#_CPPv4N5prism5scene7ISystemE" title="prism::scene::ISystem"><span class="n"><span class="pre">ISystem</span></span></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism5scene12RenderSystem6updateEf">
+<span id="_CPPv3N5prism5scene12RenderSystem6updateEf"></span><span id="_CPPv2N5prism5scene12RenderSystem6updateEf"></span><span id="prism::scene::RenderSystem::update__float"></span><span class="target" id="classprism_1_1scene_1_1_render_system_1ae28dd1ba57114dfacf9ce65f8aeff5a9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">deltaTime</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
+<dd><p>Обновление состояния системы </p>
+<p>
+Вызывается каждый кадр для обновления логики системы </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>deltaTime</strong> – Время, прошедшее с предыдущего обновления (в секундах)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Быстрое начало работы с ECS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Alexei Kutuzov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

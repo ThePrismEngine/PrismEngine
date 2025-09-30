@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_score_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::ScoreWrapper</compoundname>
+    <includes refid="device_rater_8h" local="no">deviceRater.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_score_wrapper_1a9ebdeaaa783828a4fce76d2c2ac5933b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::ScoreWrapper::print</definition>
+        <argsstring>(DeviceScore score)</argsstring>
+        <name>print</name>
+        <qualifiedname>prism::PGC::ScoreWrapper::print</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_device_score" kindref="compound">DeviceScore</ref></type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="42" column="13" bodyfile="PrismEngine/src/deviceRater.cpp" bodystart="205" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_score_wrapper_1ace22ae1047307f29e9621a5b376ee921" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::ScoreWrapper::print</definition>
+        <argsstring>(FeatureScores score)</argsstring>
+        <name>print</name>
+        <qualifiedname>prism::PGC::ScoreWrapper::print</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_feature_scores" kindref="compound">FeatureScores</ref></type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="43" column="13" bodyfile="PrismEngine/src/deviceRater.cpp" bodystart="215" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_score_wrapper_1a76015895dcb2aa5b08fb4bc840bf4ce1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::ScoreWrapper::print</definition>
+        <argsstring>(HardwareScore score)</argsstring>
+        <name>print</name>
+        <qualifiedname>prism::PGC::ScoreWrapper::print</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_hardware_score" kindref="compound">HardwareScore</ref></type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="44" column="13" bodyfile="PrismEngine/src/deviceRater.cpp" bodystart="225" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_score_wrapper_1a08ca1dda43fb009894cdef7e1c3700d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int prism::PGC::ScoreWrapper::getTotal</definition>
+        <argsstring>(DeviceScore score)</argsstring>
+        <name>getTotal</name>
+        <qualifiedname>prism::PGC::ScoreWrapper::getTotal</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_device_score" kindref="compound">DeviceScore</ref></type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="46" column="12" bodyfile="PrismEngine/src/deviceRater.cpp" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_score_wrapper_1a182c182d4bad85cd50bde7b69804e29c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int prism::PGC::ScoreWrapper::getTotal</definition>
+        <argsstring>(FeatureScores score)</argsstring>
+        <name>getTotal</name>
+        <qualifiedname>prism::PGC::ScoreWrapper::getTotal</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_feature_scores" kindref="compound">FeatureScores</ref></type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="47" column="12" bodyfile="PrismEngine/src/deviceRater.cpp" bodystart="240" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_score_wrapper_1adcae936064607442dbf6821d767597c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int prism::PGC::ScoreWrapper::getTotal</definition>
+        <argsstring>(HardwareScore score)</argsstring>
+        <name>getTotal</name>
+        <qualifiedname>prism::PGC::ScoreWrapper::getTotal</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1_hardware_score" kindref="compound">HardwareScore</ref></type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="48" column="12" bodyfile="PrismEngine/src/deviceRater.cpp" bodystart="245" bodyend="258"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/deviceRater.h" line="40" column="1" bodyfile="PrismEngine/src/deviceRater.h" bodystart="40" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1a08ca1dda43fb009894cdef7e1c3700d1" prot="public" virt="non-virtual"><scope>prism::PGC::ScoreWrapper</scope><name>getTotal</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1a182c182d4bad85cd50bde7b69804e29c" prot="public" virt="non-virtual"><scope>prism::PGC::ScoreWrapper</scope><name>getTotal</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1adcae936064607442dbf6821d767597c9" prot="public" virt="non-virtual"><scope>prism::PGC::ScoreWrapper</scope><name>getTotal</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1a9ebdeaaa783828a4fce76d2c2ac5933b" prot="public" virt="non-virtual"><scope>prism::PGC::ScoreWrapper</scope><name>print</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1ace22ae1047307f29e9621a5b376ee921" prot="public" virt="non-virtual"><scope>prism::PGC::ScoreWrapper</scope><name>print</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_score_wrapper_1a76015895dcb2aa5b08fb4bc840bf4ce1" prot="public" virt="non-virtual"><scope>prism::PGC::ScoreWrapper</scope><name>print</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

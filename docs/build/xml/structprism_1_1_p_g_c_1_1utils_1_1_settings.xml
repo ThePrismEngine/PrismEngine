@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::Settings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ab96d332c46dd421181cf6197c4f869c6" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings" kindref="compound">AppSettings</ref></type>
+        <definition>AppSettings prism::PGC::utils::Settings::app</definition>
+        <argsstring></argsstring>
+        <name>app</name>
+        <qualifiedname>prism::PGC::utils::Settings::app</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="283" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1acb67f2bf38a2a718053640b5e10ff493" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings" kindref="compound">DeviceEvaluationWeightsSettings</ref></type>
+        <definition>DeviceEvaluationWeightsSettings prism::PGC::utils::Settings::deviceEvaluationWeights</definition>
+        <argsstring></argsstring>
+        <name>deviceEvaluationWeights</name>
+        <qualifiedname>prism::PGC::utils::Settings::deviceEvaluationWeights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="284" column="33" bodyfile="PrismEngine/src/utils.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a224a5453ec0fdb5ef9b637c3325a6751" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings" kindref="compound">DebugSettings</ref></type>
+        <definition>DebugSettings prism::PGC::utils::Settings::debug</definition>
+        <argsstring></argsstring>
+        <name>debug</name>
+        <qualifiedname>prism::PGC::utils::Settings::debug</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="285" column="15" bodyfile="PrismEngine/src/utils.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ac56aa93ce0a90eaef74ab718dcd16261" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings" kindref="compound">SwapChainSettings</ref></type>
+        <definition>SwapChainSettings prism::PGC::utils::Settings::swapChain</definition>
+        <argsstring></argsstring>
+        <name>swapChain</name>
+        <qualifiedname>prism::PGC::utils::Settings::swapChain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="286" column="19" bodyfile="PrismEngine/src/utils.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ac07b6da9b6764928661eef70e95bdae4" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings" kindref="compound">DescriptorSetLayoutSettings</ref></type>
+        <definition>DescriptorSetLayoutSettings prism::PGC::utils::Settings::descriptorSetLayout</definition>
+        <argsstring></argsstring>
+        <name>descriptorSetLayout</name>
+        <qualifiedname>prism::PGC::utils::Settings::descriptorSetLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="287" column="29" bodyfile="PrismEngine/src/utils.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a142299b238747c830ea085dd0f2ec05d" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings" kindref="compound">TextureDescriptorSetLayoutSettings</ref></type>
+        <definition>TextureDescriptorSetLayoutSettings prism::PGC::utils::Settings::textureDescriptorSetLayout</definition>
+        <argsstring></argsstring>
+        <name>textureDescriptorSetLayout</name>
+        <qualifiedname>prism::PGC::utils::Settings::textureDescriptorSetLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="288" column="36" bodyfile="PrismEngine/src/utils.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a8150b0a86cc235973fe641cdb260d7cc" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::Settings::MAX_TEXTURES</definition>
+        <argsstring></argsstring>
+        <name>MAX_TEXTURES</name>
+        <qualifiedname>prism::PGC::utils::Settings::MAX_TEXTURES</qualifiedname>
+        <initializer>= 350</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="290" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ab0edf9cb2b267c3647781c2a12de0eb2" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings" kindref="compound">PipelineSettings</ref></type>
+        <definition>PipelineSettings prism::PGC::utils::Settings::pipeline</definition>
+        <argsstring></argsstring>
+        <name>pipeline</name>
+        <qualifiedname>prism::PGC::utils::Settings::pipeline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="292" column="18" bodyfile="PrismEngine/src/utils.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a762e8813dbc05670d0b2802986ef46f6" prot="public" static="no" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* prism::PGC::utils::Settings::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <qualifiedname>prism::PGC::utils::Settings::window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="294" column="12" bodyfile="PrismEngine/src/utils.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>prism::PGC::utils::AppSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>applicationVersion</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>prism::PGC::utils::ColorBlendSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings"/>
+      </node>
+      <node id="5">
+        <label>prism::PGC::utils::DebugSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings"/>
+      </node>
+      <node id="13">
+        <label>prism::PGC::utils::DepthStencilSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings"/>
+      </node>
+      <node id="7">
+        <label>prism::PGC::utils::DescriptorSetLayoutSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings"/>
+      </node>
+      <node id="4">
+        <label>prism::PGC::utils::DeviceEvaluationWeightsSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings"/>
+      </node>
+      <node id="16">
+        <label>prism::PGC::utils::DynamicStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings"/>
+      </node>
+      <node id="11">
+        <label>prism::PGC::utils::InputAssemblySettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings"/>
+      </node>
+      <node id="14">
+        <label>prism::PGC::utils::MultisampleSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings"/>
+      </node>
+      <node id="9">
+        <label>prism::PGC::utils::PipelineSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>shaders</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>inputAssembly</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>rasterization</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>depthStencil</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>multisample</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>colorBlend</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>dynamicState</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>viewportState</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>prism::PGC::utils::RasterizationSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings"/>
+      </node>
+      <node id="1">
+        <label>prism::PGC::utils::Settings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_settings"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>deviceEvaluationWeights</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>descriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>textureDescriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>pipeline</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>prism::PGC::utils::ShadersSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings"/>
+      </node>
+      <node id="6">
+        <label>prism::PGC::utils::SwapChainSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings"/>
+      </node>
+      <node id="8">
+        <label>prism::PGC::utils::TextureDescriptorSetLayoutSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings"/>
+      </node>
+      <node id="17">
+        <label>prism::PGC::utils::ViewportStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings"/>
+      </node>
+      <node id="3">
+        <label>prism::Version</label>
+        <link refid="structprism_1_1_version"/>
+      </node>
+    </collaborationgraph>
+    <location file="PrismEngine/src/utils.h" line="281" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="282" bodyend="295"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ab96d332c46dd421181cf6197c4f869c6" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>app</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a224a5453ec0fdb5ef9b637c3325a6751" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>debug</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ac07b6da9b6764928661eef70e95bdae4" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>descriptorSetLayout</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1acb67f2bf38a2a718053640b5e10ff493" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>deviceEvaluationWeights</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a8150b0a86cc235973fe641cdb260d7cc" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>MAX_TEXTURES</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ab0edf9cb2b267c3647781c2a12de0eb2" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>pipeline</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1ac56aa93ce0a90eaef74ab718dcd16261" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>swapChain</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a142299b238747c830ea085dd0f2ec05d" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>textureDescriptorSetLayout</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_settings_1a762e8813dbc05670d0b2802986ef46f6" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Settings</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

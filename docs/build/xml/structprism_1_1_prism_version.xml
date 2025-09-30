@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_prism_version" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PrismVersion</compoundname>
+    <includes refid="_config_8h" local="no">Config.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structprism_1_1_prism_version_1a7f380b7d2f046e0d6ad1cc97fed1efee" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int prism::PrismVersion::MAJOR</definition>
+        <argsstring></argsstring>
+        <name>MAJOR</name>
+        <qualifiedname>prism::PrismVersion::MAJOR</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/Config.h" line="13" column="30" bodyfile="PrismEngine/src/Config.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_prism_version_1aa84da8412a45feb73d1002eace9c28c4" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int prism::PrismVersion::MINOR</definition>
+        <argsstring></argsstring>
+        <name>MINOR</name>
+        <qualifiedname>prism::PrismVersion::MINOR</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/Config.h" line="14" column="30" bodyfile="PrismEngine/src/Config.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_prism_version_1af7fec056de4fbedc1da950a49dc2aa3e" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int prism::PrismVersion::PATCH</definition>
+        <argsstring></argsstring>
+        <name>PATCH</name>
+        <qualifiedname>prism::PrismVersion::PATCH</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/Config.h" line="15" column="30" bodyfile="PrismEngine/src/Config.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_prism_version_1ac7814c37b5420af63dbf7341cf2c1541" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* prism::PrismVersion::STRING</definition>
+        <argsstring></argsstring>
+        <name>STRING</name>
+        <qualifiedname>prism::PrismVersion::STRING</qualifiedname>
+        <initializer>= &quot;0.1.0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/Config.h" line="16" column="37" bodyfile="PrismEngine/src/Config.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/Config.h" line="12" column="5" bodyfile="PrismEngine/src/Config.h" bodystart="12" bodyend="17"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_prism_version_1a7f380b7d2f046e0d6ad1cc97fed1efee" prot="public" virt="non-virtual"><scope>prism::PrismVersion</scope><name>MAJOR</name></member>
+      <member refid="structprism_1_1_prism_version_1aa84da8412a45feb73d1002eace9c28c4" prot="public" virt="non-virtual"><scope>prism::PrismVersion</scope><name>MINOR</name></member>
+      <member refid="structprism_1_1_prism_version_1af7fec056de4fbedc1da950a49dc2aa3e" prot="public" virt="non-virtual"><scope>prism::PrismVersion</scope><name>PATCH</name></member>
+      <member refid="structprism_1_1_prism_version_1ac7814c37b5420af63dbf7341cf2c1541" prot="public" virt="non-virtual"><scope>prism::PrismVersion</scope><name>STRING</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

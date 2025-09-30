@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::InputAssemblySettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings_1a2f0903faf4051d39f3e328aa7ceaf211" prot="public" static="no" mutable="no">
+        <type>VkPrimitiveTopology</type>
+        <definition>VkPrimitiveTopology prism::PGC::utils::InputAssemblySettings::topology</definition>
+        <argsstring></argsstring>
+        <name>topology</name>
+        <qualifiedname>prism::PGC::utils::InputAssemblySettings::topology</qualifiedname>
+        <initializer>= VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="261" column="21" bodyfile="PrismEngine/src/utils.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings_1ab91323523e515b1758ba9c2b71430900" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::InputAssemblySettings::primitiveRestartEnable</definition>
+        <argsstring></argsstring>
+        <name>primitiveRestartEnable</name>
+        <qualifiedname>prism::PGC::utils::InputAssemblySettings::primitiveRestartEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="262" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="260" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="260" bodyend="263"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings_1ab91323523e515b1758ba9c2b71430900" prot="public" virt="non-virtual"><scope>prism::PGC::utils::InputAssemblySettings</scope><name>primitiveRestartEnable</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings_1a2f0903faf4051d39f3e328aa7ceaf211" prot="public" virt="non-virtual"><scope>prism::PGC::utils::InputAssemblySettings</scope><name>topology</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

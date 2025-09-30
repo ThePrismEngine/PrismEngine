@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1scene_1_1_render_system" kind="class" language="C++" prot="public">
+    <compoundname>prism::scene::RenderSystem</compoundname>
+    <basecompoundref refid="classprism_1_1scene_1_1_i_system" prot="public" virt="non-virtual">prism::scene::ISystem</basecompoundref>
+    <includes refid="render_system_8h" local="no">renderSystem.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_render_system_1af402945bb406756be8c8a4fd44121186" prot="private" static="no" mutable="no">
+        <type>prism::scene::Scene *</type>
+        <definition>prism::scene::Scene* prism::scene::RenderSystem::scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <qualifiedname>prism::scene::RenderSystem::scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderSystem.h" line="14" column="33" bodyfile="PrismEngine/src/renderSystem.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1scene_1_1_render_system_1a3f32342110a0239f8f2e342426901196" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1render_1_1_renderer" kindref="compound">prism::render::Renderer</ref> *</type>
+        <definition>prism::render::Renderer* prism::scene::RenderSystem::renderer</definition>
+        <argsstring></argsstring>
+        <name>renderer</name>
+        <qualifiedname>prism::scene::RenderSystem::renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderSystem.h" line="15" column="37" bodyfile="PrismEngine/src/renderSystem.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1scene_1_1_render_system_1a45fef494fc5d3564ab0a83fa7ac9ef2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::scene::RenderSystem::RenderSystem</definition>
+        <argsstring>(Scene *scene, render::Renderer *renderer)</argsstring>
+        <name>RenderSystem</name>
+        <qualifiedname>prism::scene::RenderSystem::RenderSystem</qualifiedname>
+        <param>
+          <type>Scene *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type><ref refid="classprism_1_1render_1_1_renderer" kindref="compound">render::Renderer</ref> *</type>
+          <declname>renderer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderSystem.h" line="10" column="13" bodyfile="PrismEngine/src/renderSystem.h" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1scene_1_1_render_system_1ae28dd1ba57114dfacf9ce65f8aeff5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void prism::scene::RenderSystem::update</definition>
+        <argsstring>(float deltaTime) override</argsstring>
+        <name>update</name>
+        <qualifiedname>prism::scene::RenderSystem::update</qualifiedname>
+        <reimplements refid="classprism_1_1scene_1_1_i_system_1a406b867d27b268665a6cc8d82c740f68">update</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Обновление состояния системы </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Время, прошедшее с предыдущего обновления (в секундах)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Вызывается каждый кадр для обновления логики системы </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderSystem.h" line="11" column="18" bodyfile="PrismEngine/src/renderSystem.cpp" bodystart="7" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>prism::scene::ISystem</label>
+        <link refid="classprism_1_1scene_1_1_i_system"/>
+      </node>
+      <node id="1">
+        <label>prism::scene::RenderSystem</label>
+        <link refid="classprism_1_1scene_1_1_render_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>prism::scene::ISystem</label>
+        <link refid="classprism_1_1scene_1_1_i_system"/>
+      </node>
+      <node id="1">
+        <label>prism::scene::RenderSystem</label>
+        <link refid="classprism_1_1scene_1_1_render_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="PrismEngine/src/renderSystem.h" line="8" column="9" bodyfile="PrismEngine/src/renderSystem.h" bodystart="8" bodyend="16"/>
+    <listofallmembers>
+      <member refid="classprism_1_1scene_1_1_i_system_1a7c2ea1d298dac0b99b6a83af5ae26b93" prot="public" virt="non-virtual"><scope>prism::scene::RenderSystem</scope><name>enabled</name></member>
+      <member refid="classprism_1_1scene_1_1_render_system_1a3f32342110a0239f8f2e342426901196" prot="private" virt="non-virtual"><scope>prism::scene::RenderSystem</scope><name>renderer</name></member>
+      <member refid="classprism_1_1scene_1_1_render_system_1a45fef494fc5d3564ab0a83fa7ac9ef2e" prot="public" virt="non-virtual"><scope>prism::scene::RenderSystem</scope><name>RenderSystem</name></member>
+      <member refid="classprism_1_1scene_1_1_render_system_1af402945bb406756be8c8a4fd44121186" prot="private" virt="non-virtual"><scope>prism::scene::RenderSystem</scope><name>scene</name></member>
+      <member refid="classprism_1_1scene_1_1_render_system_1ae28dd1ba57114dfacf9ce65f8aeff5a9" prot="public" virt="virtual"><scope>prism::scene::RenderSystem</scope><name>update</name></member>
+      <member refid="classprism_1_1scene_1_1_i_system_1a3a7fc6382464d9b1fc94f95eb4dda159" prot="public" virt="virtual"><scope>prism::scene::RenderSystem</scope><name>~ISystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Быстрое начало работы с ECS &mdash; PrismEngine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../../../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Справочник публичного API" href="api_reference.html" />
+    <link rel="prev" title="Публичное API ECS модуля" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            PrismEngine
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Основное:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">О проекте PrismEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Быстрый старт</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Компоненты:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ECS Module (Entity-Component-System)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Публичное API ECS модуля</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Быстрое начало работы с ECS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ecs-quickstart">Создание первой сцены</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Создание системы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Обновление сцены</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html">Справочник публичного API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal/architecture.html">Внутренняя архитектура ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal/managers.html">Внутренние менеджеры ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal/performance.html">Производительность ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#id1">Обзор</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pgc.html">Графическое ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../logger.html">Модуль логирования</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../math.html">Модуль математики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ppc.html">Физический движок</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pcc.html">Вычислительное ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ui.html">Пользовательский интерфейс</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Разработка:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/contributing.html">Участие в разработке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/code_style.html">Стандарты кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/build_guide.html">Руководство по сборке</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">PrismEngine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">ECS Module (Entity-Component-System)</a></li>
+      <li class="breadcrumb-item active">Быстрое начало работы с ECS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/modules/ecs/public/quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ecs">
+<h1>Быстрое начало работы с ECS<a class="headerlink" href="#ecs" title="Link to this heading"></a></h1>
+<section id="ecs-quickstart">
+<span id="id1"></span><h2>Создание первой сцены<a class="headerlink" href="#ecs-quickstart" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;prism/scene.h&gt;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">// 1. Создаем сцену</span>
+<span class="linenos"> 4</span><span class="n">prism</span><span class="o">::</span><span class="n">scene</span><span class="o">::</span><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1">// 2. Создаем сущность игрока</span>
+<span class="linenos"> 7</span><span class="k">auto</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">createEntity</span><span class="p">();</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1">// 3. Добавляем компоненты</span>
+<span class="linenos">10</span><span class="n">scene</span><span class="p">.</span><span class="n">addComponent</span><span class="o">&lt;</span><span class="n">Transform</span><span class="o">&gt;</span><span class="p">(</span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="n">Transform</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span>
+<span class="linenos">11</span><span class="n">scene</span><span class="p">.</span><span class="n">addComponent</span><span class="o">&lt;</span><span class="n">Renderable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="n">Renderable</span><span class="p">{</span><span class="s">&quot;player.obj&quot;</span><span class="p">});</span>
+<span class="linenos">12</span><span class="n">scene</span><span class="p">.</span><span class="n">addComponent</span><span class="o">&lt;</span><span class="n">Health</span><span class="o">&gt;</span><span class="p">(</span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="n">Health</span><span class="p">{</span><span class="mi">100</span><span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Создание системы<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MovementSystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">prism</span><span class="o">::</span><span class="n">scene</span><span class="o">::</span><span class="n">ISystem</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">update</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">entities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="o">-&gt;</span><span class="n">getEntitiesWith</span><span class="o">&lt;</span><span class="n">Transform</span><span class="p">,</span><span class="w"> </span><span class="n">Velocity</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">entities</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="o">-&gt;</span><span class="n">getComponent</span><span class="o">&lt;</span><span class="n">Transform</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
+<span class="w">            </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="o">-&gt;</span><span class="n">getComponent</span><span class="o">&lt;</span><span class="n">Velocity</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
+<span class="w">            </span><span class="n">transform</span><span class="o">-&gt;</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">velocity</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// Регистрируем систему</span>
+<span class="n">scene</span><span class="p">.</span><span class="n">registerSystem</span><span class="o">&lt;</span><span class="n">MovementSystem</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>Обновление сцены<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">gameLoop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">running</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDeltaTime</span><span class="p">();</span>
+<span class="w">        </span><span class="n">scene</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">deltaTime</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Публичное API ECS модуля" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api_reference.html" class="btn btn-neutral float-right" title="Справочник публичного API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Alexei Kutuzov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::ShadersSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1aac49878cd2a35c48f30187868a386798" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string prism::PGC::utils::ShadersSettings::vertexShaderFilename</definition>
+        <argsstring></argsstring>
+        <name>vertexShaderFilename</name>
+        <qualifiedname>prism::PGC::utils::ShadersSettings::vertexShaderFilename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="196" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1aaa93e7752a945b925a34a41f14d79545" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string prism::PGC::utils::ShadersSettings::fragmentShaderFilename</definition>
+        <argsstring></argsstring>
+        <name>fragmentShaderFilename</name>
+        <qualifiedname>prism::PGC::utils::ShadersSettings::fragmentShaderFilename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="197" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1a909f2bfcbfef2a782db5d468abc9fab4" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string prism::PGC::utils::ShadersSettings::shadersDirectory</definition>
+        <argsstring></argsstring>
+        <name>shadersDirectory</name>
+        <qualifiedname>prism::PGC::utils::ShadersSettings::shadersDirectory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="198" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="194" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="195" bodyend="199"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1aaa93e7752a945b925a34a41f14d79545" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ShadersSettings</scope><name>fragmentShaderFilename</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1a909f2bfcbfef2a782db5d468abc9fab4" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ShadersSettings</scope><name>shadersDirectory</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings_1aac49878cd2a35c48f30187868a386798" prot="public" virt="non-virtual"><scope>prism::PGC::utils::ShadersSettings</scope><name>vertexShaderFilename</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

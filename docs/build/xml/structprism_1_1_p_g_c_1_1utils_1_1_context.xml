@@ -1,0 +1,872 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_context" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::Context</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ac9500f33456f5f1a9971b5563729eaf6" prot="public" static="no" mutable="no">
+        <type>VkInstance</type>
+        <definition>VkInstance prism::PGC::utils::Context::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <qualifiedname>prism::PGC::utils::Context::instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="47" column="12" bodyfile="PrismEngine/src/utils.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a6e5cc346c3461cbf311815952d38ca83" prot="public" static="no" mutable="no">
+        <type>VkSurfaceKHR</type>
+        <definition>VkSurfaceKHR prism::PGC::utils::Context::surface</definition>
+        <argsstring></argsstring>
+        <name>surface</name>
+        <qualifiedname>prism::PGC::utils::Context::surface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="48" column="14" bodyfile="PrismEngine/src/utils.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a759203e6822e3ad8a46b29672ef7b19c" prot="public" static="no" mutable="no">
+        <type>VkPhysicalDevice</type>
+        <definition>VkPhysicalDevice prism::PGC::utils::Context::physicalDevice</definition>
+        <argsstring></argsstring>
+        <name>physicalDevice</name>
+        <qualifiedname>prism::PGC::utils::Context::physicalDevice</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="49" column="18" bodyfile="PrismEngine/src/utils.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a1044c94f8ccd00b268cd85af72fd11b3" prot="public" static="no" mutable="no">
+        <type>VkDevice</type>
+        <definition>VkDevice prism::PGC::utils::Context::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>prism::PGC::utils::Context::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="50" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aaf2e5bd3583d87df7d204569157d98cc" prot="public" static="no" mutable="no">
+        <type>VkQueue</type>
+        <definition>VkQueue prism::PGC::utils::Context::graphicsQueue</definition>
+        <argsstring></argsstring>
+        <name>graphicsQueue</name>
+        <qualifiedname>prism::PGC::utils::Context::graphicsQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="51" column="9" bodyfile="PrismEngine/src/utils.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1abad3bde0d4cfc986aa57e410b9f8b7a1" prot="public" static="no" mutable="no">
+        <type>VkQueue</type>
+        <definition>VkQueue prism::PGC::utils::Context::presentQueue</definition>
+        <argsstring></argsstring>
+        <name>presentQueue</name>
+        <qualifiedname>prism::PGC::utils::Context::presentQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="52" column="9" bodyfile="PrismEngine/src/utils.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a191f1aaea47b9147fb93301ac11c8f52" prot="public" static="no" mutable="no">
+        <type>VkSwapchainKHR</type>
+        <definition>VkSwapchainKHR prism::PGC::utils::Context::vkSwapChain</definition>
+        <argsstring></argsstring>
+        <name>vkSwapChain</name>
+        <qualifiedname>prism::PGC::utils::Context::vkSwapChain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="54" column="16" bodyfile="PrismEngine/src/utils.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a61c2506389c5cd06807885a98458e46c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkImageView &gt;</type>
+        <definition>std::vector&lt;VkImageView&gt; prism::PGC::utils::Context::swapChainImageViews</definition>
+        <argsstring></argsstring>
+        <name>swapChainImageViews</name>
+        <qualifiedname>prism::PGC::utils::Context::swapChainImageViews</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="55" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a663b57954f0090efddcdf3aeb2837861" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkFramebuffer &gt;</type>
+        <definition>std::vector&lt;VkFramebuffer&gt; prism::PGC::utils::Context::swapChainFramebuffers</definition>
+        <argsstring></argsstring>
+        <name>swapChainFramebuffers</name>
+        <qualifiedname>prism::PGC::utils::Context::swapChainFramebuffers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="56" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2a15bac8577d170c400b7c32ffdd842d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkImage &gt;</type>
+        <definition>std::vector&lt;VkImage&gt; prism::PGC::utils::Context::swapChainImages</definition>
+        <argsstring></argsstring>
+        <name>swapChainImages</name>
+        <qualifiedname>prism::PGC::utils::Context::swapChainImages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="57" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1afdac47e49cd0ae38d95a93c33cf7ecd2" prot="public" static="no" mutable="no">
+        <type>VkFormat</type>
+        <definition>VkFormat prism::PGC::utils::Context::swapChainImageFormat</definition>
+        <argsstring></argsstring>
+        <name>swapChainImageFormat</name>
+        <qualifiedname>prism::PGC::utils::Context::swapChainImageFormat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="58" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2cfd6b1fa14df88a820c0c4ebd996aaf" prot="public" static="no" mutable="no">
+        <type>VkExtent2D</type>
+        <definition>VkExtent2D prism::PGC::utils::Context::swapChainExtent</definition>
+        <argsstring></argsstring>
+        <name>swapChainExtent</name>
+        <qualifiedname>prism::PGC::utils::Context::swapChainExtent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="59" column="12" bodyfile="PrismEngine/src/utils.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8d1b459631b7e17b99a2891ab8f37311" prot="public" static="no" mutable="no">
+        <type>VkImage</type>
+        <definition>VkImage prism::PGC::utils::Context::depthImage</definition>
+        <argsstring></argsstring>
+        <name>depthImage</name>
+        <qualifiedname>prism::PGC::utils::Context::depthImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="61" column="9" bodyfile="PrismEngine/src/utils.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a92659cf24ec4ece474f873cb57aa6015" prot="public" static="no" mutable="no">
+        <type>VkDeviceMemory</type>
+        <definition>VkDeviceMemory prism::PGC::utils::Context::depthImageMemory</definition>
+        <argsstring></argsstring>
+        <name>depthImageMemory</name>
+        <qualifiedname>prism::PGC::utils::Context::depthImageMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="62" column="16" bodyfile="PrismEngine/src/utils.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1acef6ba561ba15d0e67809c65068e31b4" prot="public" static="no" mutable="no">
+        <type>VkImageView</type>
+        <definition>VkImageView prism::PGC::utils::Context::depthImageView</definition>
+        <argsstring></argsstring>
+        <name>depthImageView</name>
+        <qualifiedname>prism::PGC::utils::Context::depthImageView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="63" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0a7c084aa2c8a0ce8ac930d8e927857b" prot="public" static="no" mutable="no">
+        <type>VkImage</type>
+        <definition>VkImage prism::PGC::utils::Context::colorImage</definition>
+        <argsstring></argsstring>
+        <name>colorImage</name>
+        <qualifiedname>prism::PGC::utils::Context::colorImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="65" column="9" bodyfile="PrismEngine/src/utils.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a733a1313e3fb135660fb1c4b4e18b1e7" prot="public" static="no" mutable="no">
+        <type>VkDeviceMemory</type>
+        <definition>VkDeviceMemory prism::PGC::utils::Context::colorImageMemory</definition>
+        <argsstring></argsstring>
+        <name>colorImageMemory</name>
+        <qualifiedname>prism::PGC::utils::Context::colorImageMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="66" column="16" bodyfile="PrismEngine/src/utils.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a94142c5e6869a4e66cc07073d9eead4c" prot="public" static="no" mutable="no">
+        <type>VkImageView</type>
+        <definition>VkImageView prism::PGC::utils::Context::colorImageView</definition>
+        <argsstring></argsstring>
+        <name>colorImageView</name>
+        <qualifiedname>prism::PGC::utils::Context::colorImageView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="67" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a26c289ae13be8830714d93d3b934ea75" prot="public" static="no" mutable="no">
+        <type>VkSampleCountFlagBits</type>
+        <definition>VkSampleCountFlagBits prism::PGC::utils::Context::msaaSamples</definition>
+        <argsstring></argsstring>
+        <name>msaaSamples</name>
+        <qualifiedname>prism::PGC::utils::Context::msaaSamples</qualifiedname>
+        <initializer>= VK_SAMPLE_COUNT_1_BIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="69" column="23" bodyfile="PrismEngine/src/utils.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a58e40fd8040df70886377c59224adb8e" prot="public" static="no" mutable="no">
+        <type>VkRenderPass</type>
+        <definition>VkRenderPass prism::PGC::utils::Context::renderPass</definition>
+        <argsstring></argsstring>
+        <name>renderPass</name>
+        <qualifiedname>prism::PGC::utils::Context::renderPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="70" column="14" bodyfile="PrismEngine/src/utils.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1afd2091a730d8d5f697f75ab96371f9a3" prot="public" static="no" mutable="no">
+        <type>VkBuffer</type>
+        <definition>VkBuffer prism::PGC::utils::Context::vertexBuffer</definition>
+        <argsstring></argsstring>
+        <name>vertexBuffer</name>
+        <qualifiedname>prism::PGC::utils::Context::vertexBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="72" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ae9486dffb20bfc761f06ee3e4fe06860" prot="public" static="no" mutable="no">
+        <type>VkDeviceMemory</type>
+        <definition>VkDeviceMemory prism::PGC::utils::Context::vertexBufferMemory</definition>
+        <argsstring></argsstring>
+        <name>vertexBufferMemory</name>
+        <qualifiedname>prism::PGC::utils::Context::vertexBufferMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="73" column="16" bodyfile="PrismEngine/src/utils.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1afdd17d23c2221d734bb42e41b3b1de3f" prot="public" static="no" mutable="no">
+        <type>VkBuffer</type>
+        <definition>VkBuffer prism::PGC::utils::Context::indexBuffer</definition>
+        <argsstring></argsstring>
+        <name>indexBuffer</name>
+        <qualifiedname>prism::PGC::utils::Context::indexBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="74" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a53783cccbeaa4774e8f779f00fcd77ee" prot="public" static="no" mutable="no">
+        <type>VkDeviceMemory</type>
+        <definition>VkDeviceMemory prism::PGC::utils::Context::indexBufferMemory</definition>
+        <argsstring></argsstring>
+        <name>indexBufferMemory</name>
+        <qualifiedname>prism::PGC::utils::Context::indexBufferMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="75" column="16" bodyfile="PrismEngine/src/utils.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab6fb5ba2cb7bfe2dee1a0eb01d31ce34" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structprism_1_1_p_g_c_1_1_vertex" kindref="compound">Vertex</ref> &gt;</type>
+        <definition>std::vector&lt;Vertex&gt; prism::PGC::utils::Context::allVertices</definition>
+        <argsstring></argsstring>
+        <name>allVertices</name>
+        <qualifiedname>prism::PGC::utils::Context::allVertices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="77" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a7c3c5b7c6f198e9d2eaf48f9bc0b0fdb" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint32_t &gt;</type>
+        <definition>std::vector&lt;uint32_t&gt; prism::PGC::utils::Context::allIndices</definition>
+        <argsstring></argsstring>
+        <name>allIndices</name>
+        <qualifiedname>prism::PGC::utils::Context::allIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="78" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9142edd2bb4a82ff2b348eac78ab8a8c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structprism_1_1_p_g_c_1_1_mesh" kindref="compound">prism::PGC::Mesh</ref> &gt;</type>
+        <definition>std::vector&lt;prism::PGC::Mesh&gt; prism::PGC::utils::Context::meshes</definition>
+        <argsstring></argsstring>
+        <name>meshes</name>
+        <qualifiedname>prism::PGC::utils::Context::meshes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="79" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1af8e9a687b9a3f5879012a8a0cfa152cf" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint32_t &gt;</type>
+        <definition>std::vector&lt;uint32_t&gt; prism::PGC::utils::Context::freeMeshIndices</definition>
+        <argsstring></argsstring>
+        <name>freeMeshIndices</name>
+        <qualifiedname>prism::PGC::utils::Context::freeMeshIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="80" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab33d085a44ff7655f167296bdcf38d58" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::PGC::utils::Context::meshBuffersDirty</definition>
+        <argsstring></argsstring>
+        <name>meshBuffersDirty</name>
+        <qualifiedname>prism::PGC::utils::Context::meshBuffersDirty</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="81" column="6" bodyfile="PrismEngine/src/utils.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2be303f40e36da97bc49dc434567820b" prot="public" static="no" mutable="no">
+        <type>VkDescriptorSetLayout</type>
+        <definition>VkDescriptorSetLayout prism::PGC::utils::Context::descriptorSetLayout</definition>
+        <argsstring></argsstring>
+        <name>descriptorSetLayout</name>
+        <qualifiedname>prism::PGC::utils::Context::descriptorSetLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="83" column="23" bodyfile="PrismEngine/src/utils.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1abd8be7f7b8e01fb62e0900fa0dfc37d5" prot="public" static="no" mutable="no">
+        <type>VkPipelineLayout</type>
+        <definition>VkPipelineLayout prism::PGC::utils::Context::pipelineLayout</definition>
+        <argsstring></argsstring>
+        <name>pipelineLayout</name>
+        <qualifiedname>prism::PGC::utils::Context::pipelineLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="85" column="18" bodyfile="PrismEngine/src/utils.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a420655923bdbf77125c266a039b5b99b" prot="public" static="no" mutable="no">
+        <type>VkPipeline</type>
+        <definition>VkPipeline prism::PGC::utils::Context::graphicsPipeline</definition>
+        <argsstring></argsstring>
+        <name>graphicsPipeline</name>
+        <qualifiedname>prism::PGC::utils::Context::graphicsPipeline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="86" column="12" bodyfile="PrismEngine/src/utils.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a36dc055df91a851fb1dd07e7a6027050" prot="public" static="no" mutable="no">
+        <type>VkCommandPool</type>
+        <definition>VkCommandPool prism::PGC::utils::Context::commandPool</definition>
+        <argsstring></argsstring>
+        <name>commandPool</name>
+        <qualifiedname>prism::PGC::utils::Context::commandPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="88" column="15" bodyfile="PrismEngine/src/utils.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a135a182e81a4b833d985372444d4ef2a" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkCommandBuffer &gt;</type>
+        <definition>std::vector&lt;VkCommandBuffer&gt; prism::PGC::utils::Context::commandBuffers</definition>
+        <argsstring></argsstring>
+        <name>commandBuffers</name>
+        <qualifiedname>prism::PGC::utils::Context::commandBuffers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="89" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8151c42953061a2010f5b93450c96dc7" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structprism_1_1_p_g_c_1_1_uniform_buffers" kindref="compound">UniformBuffers</ref> &gt;</type>
+        <definition>std::vector&lt;UniformBuffers&gt; prism::PGC::utils::Context::uniformBuffers</definition>
+        <argsstring></argsstring>
+        <name>uniformBuffers</name>
+        <qualifiedname>prism::PGC::utils::Context::uniformBuffers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="91" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a65e5acfeb5a3d263007587b61148e82d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkSemaphore &gt;</type>
+        <definition>std::vector&lt;VkSemaphore&gt; prism::PGC::utils::Context::imageAvailableSemaphores</definition>
+        <argsstring></argsstring>
+        <name>imageAvailableSemaphores</name>
+        <qualifiedname>prism::PGC::utils::Context::imageAvailableSemaphores</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="93" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0c0a94f856fe6f802eb3229d9170a6fe" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkSemaphore &gt;</type>
+        <definition>std::vector&lt;VkSemaphore&gt; prism::PGC::utils::Context::renderFinishedSemaphores</definition>
+        <argsstring></argsstring>
+        <name>renderFinishedSemaphores</name>
+        <qualifiedname>prism::PGC::utils::Context::renderFinishedSemaphores</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="94" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aeff088aa1c0c75e5b9a38645c10a2911" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkFence &gt;</type>
+        <definition>std::vector&lt;VkFence&gt; prism::PGC::utils::Context::inFlightFences</definition>
+        <argsstring></argsstring>
+        <name>inFlightFences</name>
+        <qualifiedname>prism::PGC::utils::Context::inFlightFences</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="95" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab55fc602f6216a6486a333cdc59139f9" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::Context::currentFrame</definition>
+        <argsstring></argsstring>
+        <name>currentFrame</name>
+        <qualifiedname>prism::PGC::utils::Context::currentFrame</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="97" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aa193b6790ed1658ad001a280b8c043a4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::Context::imageIndex</definition>
+        <argsstring></argsstring>
+        <name>imageIndex</name>
+        <qualifiedname>prism::PGC::utils::Context::imageIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="98" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aefdb78e08e5847b3d311b923255a5de7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::PGC::utils::Context::wasRenderingActive</definition>
+        <argsstring></argsstring>
+        <name>wasRenderingActive</name>
+        <qualifiedname>prism::PGC::utils::Context::wasRenderingActive</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="99" column="6" bodyfile="PrismEngine/src/utils.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a18e42b896ee57c92b97a1ab5a3844054" prot="public" static="no" mutable="no">
+        <type>VkDescriptorPool</type>
+        <definition>VkDescriptorPool prism::PGC::utils::Context::descriptorPool</definition>
+        <argsstring></argsstring>
+        <name>descriptorPool</name>
+        <qualifiedname>prism::PGC::utils::Context::descriptorPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="101" column="18" bodyfile="PrismEngine/src/utils.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1abbf627893291ec495b05a3150cc1f9ba" prot="public" static="no" mutable="no">
+        <type>VkDescriptorPool</type>
+        <definition>VkDescriptorPool prism::PGC::utils::Context::textureDescriptorPool</definition>
+        <argsstring></argsstring>
+        <name>textureDescriptorPool</name>
+        <qualifiedname>prism::PGC::utils::Context::textureDescriptorPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="102" column="18" bodyfile="PrismEngine/src/utils.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0bc0d8cc76d5fa2ca079b6cc03aa82d3" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structprism_1_1_p_g_c_1_1_texture" kindref="compound">PGC::Texture</ref> &gt;</type>
+        <definition>std::vector&lt;PGC::Texture&gt; prism::PGC::utils::Context::textures</definition>
+        <argsstring></argsstring>
+        <name>textures</name>
+        <qualifiedname>prism::PGC::utils::Context::textures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="105" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a07aeb09f7483de2bc2d9f3fe99830a66" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint32_t &gt;</type>
+        <definition>std::vector&lt;uint32_t&gt; prism::PGC::utils::Context::freeTextureIndices</definition>
+        <argsstring></argsstring>
+        <name>freeTextureIndices</name>
+        <qualifiedname>prism::PGC::utils::Context::freeTextureIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="106" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ae43eb6e117b69646acf9db16e2ac72ce" prot="public" static="no" mutable="no">
+        <type>VkDescriptorSet</type>
+        <definition>VkDescriptorSet prism::PGC::utils::Context::textureDescriptorSet</definition>
+        <argsstring></argsstring>
+        <name>textureDescriptorSet</name>
+        <qualifiedname>prism::PGC::utils::Context::textureDescriptorSet</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="107" column="17" bodyfile="PrismEngine/src/utils.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8f459a9f17d6faf584e25a851885221a" prot="public" static="no" mutable="no">
+        <type>VkDescriptorSetLayout</type>
+        <definition>VkDescriptorSetLayout prism::PGC::utils::Context::textureDescriptorSetLayout</definition>
+        <argsstring></argsstring>
+        <name>textureDescriptorSetLayout</name>
+        <qualifiedname>prism::PGC::utils::Context::textureDescriptorSetLayout</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="108" column="23" bodyfile="PrismEngine/src/utils.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9b6351ddb73b77efe20d3264c5207e6f" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data" kindref="compound">CameraData</ref></type>
+        <definition>CameraData prism::PGC::utils::Context::cameraData</definition>
+        <argsstring></argsstring>
+        <name>cameraData</name>
+        <qualifiedname>prism::PGC::utils::Context::cameraData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="110" column="12" bodyfile="PrismEngine/src/utils.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a26b3de428ebddb65d93918e911c037f1" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkDescriptorSet &gt;</type>
+        <definition>std::vector&lt;VkDescriptorSet&gt; prism::PGC::utils::Context::descriptorSets</definition>
+        <argsstring></argsstring>
+        <name>descriptorSets</name>
+        <qualifiedname>prism::PGC::utils::Context::descriptorSets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="112" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9eca9f1f2ce41389b90c17a2477df558" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int prism::PGC::utils::Context::MAX_FRAMES_IN_FLIGHT</definition>
+        <argsstring></argsstring>
+        <name>MAX_FRAMES_IN_FLIGHT</name>
+        <qualifiedname>prism::PGC::utils::Context::MAX_FRAMES_IN_FLIGHT</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="114" column="11" bodyfile="PrismEngine/src/utils.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aad40d80a4e22067cd51a9a1fa0128f66" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; const char * &gt;</type>
+        <definition>const std::vector&lt;const char*&gt; prism::PGC::utils::Context::validationLayers</definition>
+        <argsstring></argsstring>
+        <name>validationLayers</name>
+        <qualifiedname>prism::PGC::utils::Context::validationLayers</qualifiedname>
+        <initializer>= {
+					&quot;VK_LAYER_KHRONOS_validation&quot;
+				}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="116" column="19" bodyfile="PrismEngine/src/utils.h" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2839741dfe5060bef37fb694c51f4c72" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; const char * &gt;</type>
+        <definition>const std::vector&lt;const char*&gt; prism::PGC::utils::Context::deviceExtensions</definition>
+        <argsstring></argsstring>
+        <name>deviceExtensions</name>
+        <qualifiedname>prism::PGC::utils::Context::deviceExtensions</qualifiedname>
+        <initializer>= {
+					VK_KHR_SWAPCHAIN_EXTENSION_NAME,
+					VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME
+				}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="120" column="19" bodyfile="PrismEngine/src/utils.h" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a689375014bda6088bc48fc64077ecaa6" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t prism::PGC::utils::Context::dynamicAlignment</definition>
+        <argsstring></argsstring>
+        <name>dynamicAlignment</name>
+        <qualifiedname>prism::PGC::utils::Context::dynamicAlignment</qualifiedname>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="125" column="8" bodyfile="PrismEngine/src/utils.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a3aa659de42727b676c161ea31623bde3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::Context::MAX_OBJECTS</definition>
+        <argsstring></argsstring>
+        <name>MAX_OBJECTS</name>
+        <qualifiedname>prism::PGC::utils::Context::MAX_OBJECTS</qualifiedname>
+        <initializer>=500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="126" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9176cc478987deb4fcc7ef8c26d768cf" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::PGC::utils::Context::enableValidationLayers</definition>
+        <argsstring></argsstring>
+        <name>enableValidationLayers</name>
+        <qualifiedname>prism::PGC::utils::Context::enableValidationLayers</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="131" column="6" bodyfile="PrismEngine/src/utils.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>prism::PGC::utils::CameraData</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data"/>
+      </node>
+      <node id="1">
+        <label>prism::PGC::utils::Context</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>cameraData</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="PrismEngine/src/utils.h" line="46" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="46" bodyend="133"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a7c3c5b7c6f198e9d2eaf48f9bc0b0fdb" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>allIndices</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab6fb5ba2cb7bfe2dee1a0eb01d31ce34" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>allVertices</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9b6351ddb73b77efe20d3264c5207e6f" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>cameraData</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0a7c084aa2c8a0ce8ac930d8e927857b" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>colorImage</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a733a1313e3fb135660fb1c4b4e18b1e7" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>colorImageMemory</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a94142c5e6869a4e66cc07073d9eead4c" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>colorImageView</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a135a182e81a4b833d985372444d4ef2a" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>commandBuffers</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a36dc055df91a851fb1dd07e7a6027050" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>commandPool</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab55fc602f6216a6486a333cdc59139f9" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>currentFrame</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8d1b459631b7e17b99a2891ab8f37311" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>depthImage</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a92659cf24ec4ece474f873cb57aa6015" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>depthImageMemory</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1acef6ba561ba15d0e67809c65068e31b4" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>depthImageView</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a18e42b896ee57c92b97a1ab5a3844054" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>descriptorPool</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2be303f40e36da97bc49dc434567820b" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>descriptorSetLayout</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a26b3de428ebddb65d93918e911c037f1" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>descriptorSets</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a1044c94f8ccd00b268cd85af72fd11b3" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>device</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2839741dfe5060bef37fb694c51f4c72" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>deviceExtensions</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a689375014bda6088bc48fc64077ecaa6" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>dynamicAlignment</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9176cc478987deb4fcc7ef8c26d768cf" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>enableValidationLayers</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1af8e9a687b9a3f5879012a8a0cfa152cf" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>freeMeshIndices</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a07aeb09f7483de2bc2d9f3fe99830a66" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>freeTextureIndices</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a420655923bdbf77125c266a039b5b99b" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>graphicsPipeline</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aaf2e5bd3583d87df7d204569157d98cc" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>graphicsQueue</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a65e5acfeb5a3d263007587b61148e82d" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>imageAvailableSemaphores</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aa193b6790ed1658ad001a280b8c043a4" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>imageIndex</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1afdd17d23c2221d734bb42e41b3b1de3f" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>indexBuffer</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a53783cccbeaa4774e8f779f00fcd77ee" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>indexBufferMemory</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aeff088aa1c0c75e5b9a38645c10a2911" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>inFlightFences</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ac9500f33456f5f1a9971b5563729eaf6" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>instance</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9eca9f1f2ce41389b90c17a2477df558" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>MAX_FRAMES_IN_FLIGHT</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a3aa659de42727b676c161ea31623bde3" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>MAX_OBJECTS</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab33d085a44ff7655f167296bdcf38d58" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>meshBuffersDirty</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9142edd2bb4a82ff2b348eac78ab8a8c" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>meshes</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a26c289ae13be8830714d93d3b934ea75" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>msaaSamples</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a759203e6822e3ad8a46b29672ef7b19c" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>physicalDevice</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1abd8be7f7b8e01fb62e0900fa0dfc37d5" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>pipelineLayout</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1abad3bde0d4cfc986aa57e410b9f8b7a1" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>presentQueue</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0c0a94f856fe6f802eb3229d9170a6fe" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>renderFinishedSemaphores</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a58e40fd8040df70886377c59224adb8e" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>renderPass</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a6e5cc346c3461cbf311815952d38ca83" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>surface</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2cfd6b1fa14df88a820c0c4ebd996aaf" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>swapChainExtent</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a663b57954f0090efddcdf3aeb2837861" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>swapChainFramebuffers</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1afdac47e49cd0ae38d95a93c33cf7ecd2" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>swapChainImageFormat</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2a15bac8577d170c400b7c32ffdd842d" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>swapChainImages</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a61c2506389c5cd06807885a98458e46c" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>swapChainImageViews</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1abbf627893291ec495b05a3150cc1f9ba" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>textureDescriptorPool</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ae43eb6e117b69646acf9db16e2ac72ce" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>textureDescriptorSet</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8f459a9f17d6faf584e25a851885221a" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>textureDescriptorSetLayout</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0bc0d8cc76d5fa2ca079b6cc03aa82d3" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>textures</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8151c42953061a2010f5b93450c96dc7" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>uniformBuffers</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aad40d80a4e22067cd51a9a1fa0128f66" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>validationLayers</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1afd2091a730d8d5f697f75ab96371f9a3" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>vertexBuffer</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1ae9486dffb20bfc761f06ee3e4fe06860" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>vertexBufferMemory</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1a191f1aaea47b9147fb93301ac11c8f52" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>vkSwapChain</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_context_1aefdb78e08e5847b3d311b923255a5de7" prot="public" virt="non-virtual"><scope>prism::PGC::utils::Context</scope><name>wasRenderingActive</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

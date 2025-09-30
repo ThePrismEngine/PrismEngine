@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespaceprism_1_1scene" kind="namespace" language="C++">
+    <compoundname>prism::scene</compoundname>
+    <innerclass refid="structprism_1_1scene_1_1_camera_component" prot="public">prism::scene::CameraComponent</innerclass>
+    <innerclass refid="classprism_1_1scene_1_1_component_manager" prot="public">prism::scene::ComponentManager</innerclass>
+    <innerclass refid="classprism_1_1scene_1_1_entity_manager" prot="public">prism::scene::EntityManager</innerclass>
+    <innerclass refid="classprism_1_1scene_1_1_i_system" prot="public">prism::scene::ISystem</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_look" prot="public">prism::scene::Look</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_mesh_component" prot="public">prism::scene::MeshComponent</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_position" prot="public">prism::scene::Position</innerclass>
+    <innerclass refid="classprism_1_1scene_1_1_render_system" prot="public">prism::scene::RenderSystem</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_rotation" prot="public">prism::scene::Rotation</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_scale" prot="public">prism::scene::Scale</innerclass>
+    <innerclass refid="classprism_1_1scene_1_1_system_manager" prot="public">prism::scene::SystemManager</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_texture_component" prot="public">prism::scene::TextureComponent</innerclass>
+    <innerclass refid="structprism_1_1scene_1_1_transform_component" prot="public">prism::scene::TransformComponent</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceprism_1_1scene_1a6233cae67fb5dbba2836694cdc18a810" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t prism::scene::ComponentType</definition>
+        <argsstring></argsstring>
+        <name>ComponentType</name>
+        <qualifiedname>prism::scene::ComponentType</qualifiedname>
+        <briefdescription>
+<para>Тип компонента </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Уникальный идентификатор типа компонента в системе </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/component.h" line="8" column="18" bodyfile="PrismEngine/src/component.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t prism::scene::Entity</definition>
+        <argsstring></argsstring>
+        <name>Entity</name>
+        <qualifiedname>prism::scene::Entity</qualifiedname>
+        <briefdescription>
+<para>Идентификатор сущности </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Уникальный числовой идентификатор для обращения к сущности в системе </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/entity.h" line="8" column="18" bodyfile="PrismEngine/src/entity.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t prism::scene::SystemId</definition>
+        <argsstring></argsstring>
+        <name>SystemId</name>
+        <qualifiedname>prism::scene::SystemId</qualifiedname>
+        <briefdescription>
+<para>Идентификатор системы </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Уникальный числовой идентификатор для обращения к системе </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/system.h" line="5" column="26" bodyfile="PrismEngine/src/system.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceprism_1_1scene_1ad63c2c31072dfa1cb1b74b5c51557299" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceprism_1_1scene_1a6233cae67fb5dbba2836694cdc18a810" kindref="member">ComponentType</ref></type>
+        <definition>const ComponentType prism::scene::INVALID_COMPONENT_TYPE</definition>
+        <argsstring></argsstring>
+        <name>INVALID_COMPONENT_TYPE</name>
+        <qualifiedname>prism::scene::INVALID_COMPONENT_TYPE</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Неверный тип компонента </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Используется для обозначения отсутствующего или невалидного типа компонента </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/component.h" line="12" column="21" bodyfile="PrismEngine/src/component.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprism_1_1scene_1a3949544449808fa9981f4ac8cc49537b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+        <definition>const Entity prism::scene::INVALID_ENTITY_ID</definition>
+        <argsstring></argsstring>
+        <name>INVALID_ENTITY_ID</name>
+        <qualifiedname>prism::scene::INVALID_ENTITY_ID</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Неверный идентификатор сущности </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Используется для обозначения отсутствующей или невалидной сущности </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/entity.h" line="12" column="14" bodyfile="PrismEngine/src/entity.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprism_1_1scene_1a4ce677c2eee0379c21cce541c0bc9752" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de" kindref="member">SystemId</ref></type>
+        <definition>const SystemId prism::scene::INVALID_SYSTEM_ID</definition>
+        <argsstring></argsstring>
+        <name>INVALID_SYSTEM_ID</name>
+        <qualifiedname>prism::scene::INVALID_SYSTEM_ID</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Неверный идентификатор системы </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Используется для обозначения отсутствующей или невалидной системы </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/system.h" line="9" column="24" bodyfile="PrismEngine/src/system.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/cameraComponent.h" line="4" column="1"/>
+  </compounddef>
+</doxygen>

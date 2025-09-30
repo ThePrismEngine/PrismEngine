@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1_vertex" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::Vertex</compoundname>
+    <includes refid="vertex_8h" local="no">vertex.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_vertex_1a8c0755ee0ac49e5cedcc9b0ff0d26d0c" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 prism::PGC::Vertex::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>prism::PGC::Vertex::pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/vertex.h" line="17" column="11" bodyfile="PrismEngine/src/vertex.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_vertex_1a5690bce120d7610a29dc609c59e6d21f" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 prism::PGC::Vertex::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>prism::PGC::Vertex::color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/vertex.h" line="18" column="11" bodyfile="PrismEngine/src/vertex.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_vertex_1a1ea019b9a4af597d776b4eb1f472f5d4" prot="public" static="no" mutable="no">
+        <type>glm::vec2</type>
+        <definition>glm::vec2 prism::PGC::Vertex::texCoord</definition>
+        <argsstring></argsstring>
+        <name>texCoord</name>
+        <qualifiedname>prism::PGC::Vertex::texCoord</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/vertex.h" line="19" column="11" bodyfile="PrismEngine/src/vertex.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structprism_1_1_p_g_c_1_1_vertex_1a6702e1cd9936929ddaa711d0258d1a07" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkVertexInputBindingDescription</type>
+        <definition>VkVertexInputBindingDescription prism::PGC::Vertex::getBindingDescription</definition>
+        <argsstring>()</argsstring>
+        <name>getBindingDescription</name>
+        <qualifiedname>prism::PGC::Vertex::getBindingDescription</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/vertex.h" line="21" column="40" bodyfile="PrismEngine/src/vertex.cpp" bodystart="4" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="structprism_1_1_p_g_c_1_1_vertex_1a96daf3ba818593f35e48a0eda00c2094" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::array&lt; VkVertexInputAttributeDescription, 3 &gt;</type>
+        <definition>std::array&lt; VkVertexInputAttributeDescription, 3 &gt; prism::PGC::Vertex::getAttributeDescriptions</definition>
+        <argsstring>()</argsstring>
+        <name>getAttributeDescriptions</name>
+        <qualifiedname>prism::PGC::Vertex::getAttributeDescriptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/vertex.h" line="23" column="19" bodyfile="PrismEngine/src/vertex.cpp" bodystart="15" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structprism_1_1_p_g_c_1_1_vertex_1a63cc3df4f485c079a90d64920ce928c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::PGC::Vertex::operator==</definition>
+        <argsstring>(const Vertex &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>prism::PGC::Vertex::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="structprism_1_1_p_g_c_1_1_vertex" kindref="compound">Vertex</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/vertex.h" line="25" column="6" bodyfile="PrismEngine/src/vertex.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/vertex.h" line="15" column="1" bodyfile="PrismEngine/src/vertex.h" bodystart="16" bodyend="26"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_vertex_1a5690bce120d7610a29dc609c59e6d21f" prot="public" virt="non-virtual"><scope>prism::PGC::Vertex</scope><name>color</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_vertex_1a96daf3ba818593f35e48a0eda00c2094" prot="public" virt="non-virtual"><scope>prism::PGC::Vertex</scope><name>getAttributeDescriptions</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_vertex_1a6702e1cd9936929ddaa711d0258d1a07" prot="public" virt="non-virtual"><scope>prism::PGC::Vertex</scope><name>getBindingDescription</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_vertex_1a63cc3df4f485c079a90d64920ce928c6" prot="public" virt="non-virtual"><scope>prism::PGC::Vertex</scope><name>operator==</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_vertex_1a8c0755ee0ac49e5cedcc9b0ff0d26d0c" prot="public" virt="non-virtual"><scope>prism::PGC::Vertex</scope><name>pos</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_vertex_1a1ea019b9a4af597d776b4eb1f472f5d4" prot="public" virt="non-virtual"><scope>prism::PGC::Vertex</scope><name>texCoord</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

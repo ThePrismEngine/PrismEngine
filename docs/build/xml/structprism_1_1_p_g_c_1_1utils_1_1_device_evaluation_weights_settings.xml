@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::DeviceEvaluationWeightsSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1ace387992ce0ab450076cd433e2fcf7a5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::DeviceEvaluationWeightsSettings::wType</definition>
+        <argsstring></argsstring>
+        <name>wType</name>
+        <qualifiedname>prism::PGC::utils::DeviceEvaluationWeightsSettings::wType</qualifiedname>
+        <initializer>= 0.3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="153" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1ad274fafa7043eda5f92e0141c142de31" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::DeviceEvaluationWeightsSettings::wFeatures</definition>
+        <argsstring></argsstring>
+        <name>wFeatures</name>
+        <qualifiedname>prism::PGC::utils::DeviceEvaluationWeightsSettings::wFeatures</qualifiedname>
+        <initializer>= 0.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="154" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1a0b50de64fa7d4092209b5abd68f8370a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::DeviceEvaluationWeightsSettings::wHardware</definition>
+        <argsstring></argsstring>
+        <name>wHardware</name>
+        <qualifiedname>prism::PGC::utils::DeviceEvaluationWeightsSettings::wHardware</qualifiedname>
+        <initializer>= 0.35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="155" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1af0f6ff098849e7dde893ba853dbff1fb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::DeviceEvaluationWeightsSettings::wApi</definition>
+        <argsstring></argsstring>
+        <name>wApi</name>
+        <qualifiedname>prism::PGC::utils::DeviceEvaluationWeightsSettings::wApi</qualifiedname>
+        <initializer>= 0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="156" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="152" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="152" bodyend="157"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1af0f6ff098849e7dde893ba853dbff1fb" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DeviceEvaluationWeightsSettings</scope><name>wApi</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1ad274fafa7043eda5f92e0141c142de31" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DeviceEvaluationWeightsSettings</scope><name>wFeatures</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1a0b50de64fa7d4092209b5abd68f8370a" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DeviceEvaluationWeightsSettings</scope><name>wHardware</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings_1ace387992ce0ab450076cd433e2fcf7a5" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DeviceEvaluationWeightsSettings</scope><name>wType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

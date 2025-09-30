@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1scene_1_1_position" kind="struct" language="C++" prot="public">
+    <compoundname>prism::scene::Position</compoundname>
+    <includes refid="transform_component_8h" local="no">transformComponent.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_position_1afb72c8ab2012525655084db905487feb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Position::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>prism::scene::Position::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/transformComponent.h" line="6" column="7" bodyfile="PrismEngine/src/transformComponent.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_position_1a15659c51a61528ab6335c24f7727b44c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Position::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>prism::scene::Position::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/transformComponent.h" line="6" column="9" bodyfile="PrismEngine/src/transformComponent.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_position_1a806e7290cbafa395e9ce83511540d4d4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::scene::Position::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>prism::scene::Position::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/transformComponent.h" line="6" column="11" bodyfile="PrismEngine/src/transformComponent.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/transformComponent.h" line="5" column="1" bodyfile="PrismEngine/src/transformComponent.h" bodystart="5" bodyend="7"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_position_1afb72c8ab2012525655084db905487feb" prot="public" virt="non-virtual"><scope>prism::scene::Position</scope><name>x</name></member>
+      <member refid="structprism_1_1scene_1_1_position_1a15659c51a61528ab6335c24f7727b44c" prot="public" virt="non-virtual"><scope>prism::scene::Position</scope><name>y</name></member>
+      <member refid="structprism_1_1scene_1_1_position_1a806e7290cbafa395e9ce83511540d4d4" prot="public" virt="non-virtual"><scope>prism::scene::Position</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

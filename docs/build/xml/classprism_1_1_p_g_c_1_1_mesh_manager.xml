@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_mesh_manager" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::MeshManager</compoundname>
+    <includes refid="mesh_manager_8h" local="no">meshManager.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_mesh_manager_1ad8e196abefb40df09e4261e052006594" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" kindref="member">prism::Mesh</ref></type>
+        <definition>prism::Mesh prism::PGC::MeshManager::addMesh</definition>
+        <argsstring>(utils::Context *context, std::string texturePath)</argsstring>
+        <name>addMesh</name>
+        <qualifiedname>prism::PGC::MeshManager::addMesh</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>texturePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/meshManager.h" line="11" column="20" bodyfile="PrismEngine/src/meshManager.cpp" bodystart="5" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_mesh_manager_1a3a85932f084ad97b08bbd3e5d041fdb6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::MeshManager::update</definition>
+        <argsstring>(utils::Context *context)</argsstring>
+        <name>update</name>
+        <qualifiedname>prism::PGC::MeshManager::update</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/meshManager.h" line="12" column="13" bodyfile="PrismEngine/src/meshManager.cpp" bodystart="34" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_mesh_manager_1ab14cf34dcf9571afa71cea03bf548c94" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::MeshManager::clear</definition>
+        <argsstring>(utils::Context *context)</argsstring>
+        <name>clear</name>
+        <qualifiedname>prism::PGC::MeshManager::clear</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/meshManager.h" line="13" column="13" bodyfile="PrismEngine/src/meshManager.cpp" bodystart="59" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_mesh_manager_1a89e892d582f289d16d39636bc441d013" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1_p_g_c_1_1_mesh" kindref="compound">prism::PGC::Mesh</ref> &amp;</type>
+        <definition>prism::PGC::Mesh &amp; prism::PGC::MeshManager::getMeshInfo</definition>
+        <argsstring>(utils::Context *context, prism::Mesh id)</argsstring>
+        <name>getMeshInfo</name>
+        <qualifiedname>prism::PGC::MeshManager::getMeshInfo</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" kindref="member">prism::Mesh</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/meshManager.h" line="14" column="25" bodyfile="PrismEngine/src/meshManager.cpp" bodystart="69" bodyend="78"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_mesh_manager_1a2f792d6e9147bde63a6dc87e8a27f6d2" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::MeshManager::getNextAvailableIndex</definition>
+        <argsstring>(utils::Context *context)</argsstring>
+        <name>getNextAvailableIndex</name>
+        <qualifiedname>prism::PGC::MeshManager::getNextAvailableIndex</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/meshManager.h" line="16" column="17" bodyfile="PrismEngine/src/meshManager.cpp" bodystart="80" bodyend="89"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/meshManager.h" line="8" column="1" bodyfile="PrismEngine/src/meshManager.h" bodystart="9" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1ad8e196abefb40df09e4261e052006594" prot="public" virt="non-virtual"><scope>prism::PGC::MeshManager</scope><name>addMesh</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1ab14cf34dcf9571afa71cea03bf548c94" prot="public" virt="non-virtual"><scope>prism::PGC::MeshManager</scope><name>clear</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a89e892d582f289d16d39636bc441d013" prot="public" virt="non-virtual"><scope>prism::PGC::MeshManager</scope><name>getMeshInfo</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a2f792d6e9147bde63a6dc87e8a27f6d2" prot="private" virt="non-virtual"><scope>prism::PGC::MeshManager</scope><name>getNextAvailableIndex</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_mesh_manager_1a3a85932f084ad97b08bbd3e5d041fdb6" prot="public" virt="non-virtual"><scope>prism::PGC::MeshManager</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

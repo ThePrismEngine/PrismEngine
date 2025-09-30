@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1render_1_1_renderer" kind="class" language="C++" prot="public">
+    <compoundname>prism::render::Renderer</compoundname>
+    <includes refid="renderer_8h" local="no">renderer.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classprism_1_1render_1_1_renderer_1a243e7686f4b67abe3c7d2d1a43392952" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref></type>
+        <definition>PGC::utils::Settings prism::render::Renderer::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>prism::render::Renderer::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="41" column="22" bodyfile="PrismEngine/src/renderer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1render_1_1_renderer_1a26709f59d44783b8537214152f0b4acd" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1_p_g_c_1_1_prism_graphic_core" kindref="compound">PGC::PrismGraphicCore</ref></type>
+        <definition>PGC::PrismGraphicCore prism::render::Renderer::pgc</definition>
+        <argsstring></argsstring>
+        <name>pgc</name>
+        <qualifiedname>prism::render::Renderer::pgc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="44" column="23" bodyfile="PrismEngine/src/renderer.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" prot="private" static="no" mutable="no">
+        <type><ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref> *</type>
+        <definition>Window* prism::render::Renderer::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <qualifiedname>prism::render::Renderer::window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="45" column="8" bodyfile="PrismEngine/src/renderer.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1ae498da6a0eb0d42b865d4e94d34d1ae8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Renderer::Renderer</definition>
+        <argsstring>()</argsstring>
+        <name>Renderer</name>
+        <qualifiedname>prism::render::Renderer::Renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="14" column="1" bodyfile="PrismEngine/src/renderer.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a224455fc4449d00731733f10c5f251d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::linkWindow</definition>
+        <argsstring>(Window *window)</argsstring>
+        <name>linkWindow</name>
+        <qualifiedname>prism::render::Renderer::linkWindow</qualifiedname>
+        <param>
+          <type><ref refid="classprism_1_1render_1_1_window" kindref="compound">Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="15" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1ad08f303f7b275e225e6ae60624f05ea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::setDefaultSettings</definition>
+        <argsstring>()</argsstring>
+        <name>setDefaultSettings</name>
+        <qualifiedname>prism::render::Renderer::setDefaultSettings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="16" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="312" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1af0a1b4efcfc3e10305aa63d853211969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::render::Renderer::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="17" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a8a00f1ca3f3749a416a659571f48d449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::render::Renderer::~Renderer</definition>
+        <argsstring>()</argsstring>
+        <name>~Renderer</name>
+        <qualifiedname>prism::render::Renderer::~Renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="18" column="1" bodyfile="PrismEngine/src/renderer.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a49701f3b045b5b337965b23dab0e4c1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::render::Renderer::isRenderingActive</definition>
+        <argsstring>()</argsstring>
+        <name>isRenderingActive</name>
+        <qualifiedname>prism::render::Renderer::isRenderingActive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="20" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="24" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a5f9fa3afbeab8957d89e39a01df6e4ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::beginFrame</definition>
+        <argsstring>()</argsstring>
+        <name>beginFrame</name>
+        <qualifiedname>prism::render::Renderer::beginFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="21" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="39" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1ad8fd91a24b9288dde8a38e2751b800c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::beginRender</definition>
+        <argsstring>()</argsstring>
+        <name>beginRender</name>
+        <qualifiedname>prism::render::Renderer::beginRender</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="22" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="99" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a1010ac870bd190aca9d3120364d3edad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::endRender</definition>
+        <argsstring>()</argsstring>
+        <name>endRender</name>
+        <qualifiedname>prism::render::Renderer::endRender</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="23" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="132" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1ada03788c5ed3af510750bd0a8594a414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::endFrame</definition>
+        <argsstring>()</argsstring>
+        <name>endFrame</name>
+        <qualifiedname>prism::render::Renderer::endFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="24" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="53" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1ae3c9523889cbd7f3004e31f906a6f2ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::updateCamera</definition>
+        <argsstring>(prism::scene::TransformComponent *transform, prism::scene::CameraComponent *camera)</argsstring>
+        <name>updateCamera</name>
+        <qualifiedname>prism::render::Renderer::updateCamera</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1scene_1_1_transform_component" kindref="compound">prism::scene::TransformComponent</ref> *</type>
+          <declname>transform</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1scene_1_1_camera_component" kindref="compound">prism::scene::CameraComponent</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="25" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="141" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1ae5c8a2b18d84b4f9e48569e1cfad008f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::updateObjectTransform</definition>
+        <argsstring>(prism::scene::TransformComponent *transform, uint32_t transformId)</argsstring>
+        <name>updateObjectTransform</name>
+        <qualifiedname>prism::render::Renderer::updateObjectTransform</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1scene_1_1_transform_component" kindref="compound">prism::scene::TransformComponent</ref> *</type>
+          <declname>transform</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>transformId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="26" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="194" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a2319cee54bb56ef9f049c9524223a419" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::bindDefault</definition>
+        <argsstring>()</argsstring>
+        <name>bindDefault</name>
+        <qualifiedname>prism::render::Renderer::bindDefault</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="27" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="210" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a06bef0391485c39b34decc3473a657a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::bindTransform</definition>
+        <argsstring>(uint32_t transformId)</argsstring>
+        <name>bindTransform</name>
+        <qualifiedname>prism::render::Renderer::bindTransform</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>transformId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="28" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="243" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a0014026cfe386d9d7f70defdb8a29f79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::pushTextureId</definition>
+        <argsstring>(uint32_t textureId)</argsstring>
+        <name>pushTextureId</name>
+        <qualifiedname>prism::render::Renderer::pushTextureId</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>textureId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="29" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="256" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a3c6bf3adf404d1224ffb83deff4cf0f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::drawMesh</definition>
+        <argsstring>(uint32_t meshId)</argsstring>
+        <name>drawMesh</name>
+        <qualifiedname>prism::render::Renderer::drawMesh</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>meshId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="30" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="270" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1ad20e7753bb504469d2282c78dec45ecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1scene_1_1_texture_component" kindref="compound">scene::TextureComponent</ref></type>
+        <definition>prism::scene::TextureComponent prism::render::Renderer::addTexture</definition>
+        <argsstring>(const std::string &amp;texturePath)</argsstring>
+        <name>addTexture</name>
+        <qualifiedname>prism::render::Renderer::addTexture</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>texturePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="31" column="25" bodyfile="PrismEngine/src/renderer.cpp" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a2f02e729d87dfad12ba907e1b4edd6b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::removeTexture</definition>
+        <argsstring>(scene::TextureComponent texture)</argsstring>
+        <name>removeTexture</name>
+        <qualifiedname>prism::render::Renderer::removeTexture</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1scene_1_1_texture_component" kindref="compound">scene::TextureComponent</ref></type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="32" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a68a37c4196f2dbca4f2493a6e6e1b37f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structprism_1_1scene_1_1_mesh_component" kindref="compound">scene::MeshComponent</ref></type>
+        <definition>prism::scene::MeshComponent prism::render::Renderer::addMesh</definition>
+        <argsstring>(std::string texturePath)</argsstring>
+        <name>addMesh</name>
+        <qualifiedname>prism::render::Renderer::addMesh</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>texturePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="34" column="22" bodyfile="PrismEngine/src/renderer.cpp" bodystart="286" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a1c81fafddd77b32e87f84802b637fd72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::updateMeshes</definition>
+        <argsstring>()</argsstring>
+        <name>updateMeshes</name>
+        <qualifiedname>prism::render::Renderer::updateMeshes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="35" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="291" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a3e3c570ac1677ba5231e4a39796c6d04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::clearMeshes</definition>
+        <argsstring>()</argsstring>
+        <name>clearMeshes</name>
+        <qualifiedname>prism::render::Renderer::clearMeshes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="36" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="296" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a516f6fe9573a01de252ad9d947b7820e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::awaitRenderingCompletion</definition>
+        <argsstring>()</argsstring>
+        <name>awaitRenderingCompletion</name>
+        <qualifiedname>prism::render::Renderer::awaitRenderingCompletion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="38" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1render_1_1_renderer_1a8aee301e8ea80c2376240e672060f283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::render::Renderer::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>prism::render::Renderer::destroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderer.h" line="39" column="6" bodyfile="PrismEngine/src/renderer.cpp" bodystart="306" bodyend="310"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>prism::PGC::utils::AppSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>applicationVersion</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>prism::PGC::utils::ColorBlendSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings"/>
+      </node>
+      <node id="6">
+        <label>prism::PGC::utils::DebugSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings"/>
+      </node>
+      <node id="14">
+        <label>prism::PGC::utils::DepthStencilSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings"/>
+      </node>
+      <node id="8">
+        <label>prism::PGC::utils::DescriptorSetLayoutSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings"/>
+      </node>
+      <node id="5">
+        <label>prism::PGC::utils::DeviceEvaluationWeightsSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings"/>
+      </node>
+      <node id="17">
+        <label>prism::PGC::utils::DynamicStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings"/>
+      </node>
+      <node id="12">
+        <label>prism::PGC::utils::InputAssemblySettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings"/>
+      </node>
+      <node id="15">
+        <label>prism::PGC::utils::MultisampleSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings"/>
+      </node>
+      <node id="10">
+        <label>prism::PGC::utils::PipelineSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>shaders</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>inputAssembly</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>rasterization</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>depthStencil</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>multisample</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>colorBlend</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>dynamicState</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>viewportState</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>prism::PGC::utils::RasterizationSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings"/>
+      </node>
+      <node id="2">
+        <label>prism::PGC::utils::Settings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_settings"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>deviceEvaluationWeights</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>descriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>textureDescriptorSetLayout</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>pipeline</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>prism::PGC::utils::ShadersSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings"/>
+      </node>
+      <node id="7">
+        <label>prism::PGC::utils::SwapChainSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings"/>
+      </node>
+      <node id="9">
+        <label>prism::PGC::utils::TextureDescriptorSetLayoutSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings"/>
+      </node>
+      <node id="18">
+        <label>prism::PGC::utils::ViewportStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings"/>
+      </node>
+      <node id="4">
+        <label>prism::Version</label>
+        <link refid="structprism_1_1_version"/>
+      </node>
+      <node id="1">
+        <label>prism::render::Renderer</label>
+        <link refid="classprism_1_1render_1_1_renderer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="PrismEngine/src/renderer.h" line="11" column="4" bodyfile="PrismEngine/src/renderer.h" bodystart="12" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classprism_1_1render_1_1_renderer_1a68a37c4196f2dbca4f2493a6e6e1b37f" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>addMesh</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1ad20e7753bb504469d2282c78dec45ecf" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>addTexture</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a516f6fe9573a01de252ad9d947b7820e" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>awaitRenderingCompletion</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a5f9fa3afbeab8957d89e39a01df6e4ee" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>beginFrame</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1ad8fd91a24b9288dde8a38e2751b800c8" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>beginRender</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a2319cee54bb56ef9f049c9524223a419" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>bindDefault</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a06bef0391485c39b34decc3473a657a5" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>bindTransform</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a3e3c570ac1677ba5231e4a39796c6d04" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>clearMeshes</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a8aee301e8ea80c2376240e672060f283" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>destroy</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a3c6bf3adf404d1224ffb83deff4cf0f8" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>drawMesh</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1ada03788c5ed3af510750bd0a8594a414" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>endFrame</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a1010ac870bd190aca9d3120364d3edad" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>endRender</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1af0a1b4efcfc3e10305aa63d853211969" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>init</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a49701f3b045b5b337965b23dab0e4c1b" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>isRenderingActive</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a224455fc4449d00731733f10c5f251d2" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>linkWindow</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a26709f59d44783b8537214152f0b4acd" prot="private" virt="non-virtual"><scope>prism::render::Renderer</scope><name>pgc</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a0014026cfe386d9d7f70defdb8a29f79" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>pushTextureId</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a2f02e729d87dfad12ba907e1b4edd6b3" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>removeTexture</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1ae498da6a0eb0d42b865d4e94d34d1ae8" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>Renderer</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1ad08f303f7b275e225e6ae60624f05ea6" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>setDefaultSettings</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a243e7686f4b67abe3c7d2d1a43392952" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>settings</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1ae3c9523889cbd7f3004e31f906a6f2ff" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>updateCamera</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a1c81fafddd77b32e87f84802b637fd72" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>updateMeshes</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1ae5c8a2b18d84b4f9e48569e1cfad008f" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>updateObjectTransform</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a5b6557d4067d2f974c857960256a1aff" prot="private" virt="non-virtual"><scope>prism::render::Renderer</scope><name>window</name></member>
+      <member refid="classprism_1_1render_1_1_renderer_1a8a00f1ca3f3749a416a659571f48d449" prot="public" virt="non-virtual"><scope>prism::render::Renderer</scope><name>~Renderer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

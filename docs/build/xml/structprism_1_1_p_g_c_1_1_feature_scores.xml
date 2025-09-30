@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1_feature_scores" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::FeatureScores</compoundname>
+    <includes refid="device_rater_8h" local="no">deviceRater.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_feature_scores_1a3895e76537d9b5ce027266d4413571d5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::FeatureScores::swapchain</definition>
+        <argsstring></argsstring>
+        <name>swapchain</name>
+        <qualifiedname>prism::PGC::FeatureScores::swapchain</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="15" column="7" bodyfile="PrismEngine/src/deviceRater.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_feature_scores_1a6a931c45ec12f10775b2dec48e244ad1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::FeatureScores::raytracing</definition>
+        <argsstring></argsstring>
+        <name>raytracing</name>
+        <qualifiedname>prism::PGC::FeatureScores::raytracing</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="16" column="7" bodyfile="PrismEngine/src/deviceRater.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_feature_scores_1a29e93c73a52926a3d4cd9d5140c4686e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::FeatureScores::upscaling</definition>
+        <argsstring></argsstring>
+        <name>upscaling</name>
+        <qualifiedname>prism::PGC::FeatureScores::upscaling</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="17" column="7" bodyfile="PrismEngine/src/deviceRater.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_feature_scores_1af449d8d5b0f2d3de15a4ec585106cab6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::FeatureScores::advancedFeatures</definition>
+        <argsstring></argsstring>
+        <name>advancedFeatures</name>
+        <qualifiedname>prism::PGC::FeatureScores::advancedFeatures</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/deviceRater.h" line="18" column="7" bodyfile="PrismEngine/src/deviceRater.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/deviceRater.h" line="14" column="1" bodyfile="PrismEngine/src/deviceRater.h" bodystart="14" bodyend="21"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_feature_scores_1af449d8d5b0f2d3de15a4ec585106cab6" prot="public" virt="non-virtual"><scope>prism::PGC::FeatureScores</scope><name>advancedFeatures</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_feature_scores_1a6a931c45ec12f10775b2dec48e244ad1" prot="public" virt="non-virtual"><scope>prism::PGC::FeatureScores</scope><name>raytracing</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_feature_scores_1a3895e76537d9b5ce027266d4413571d5" prot="public" virt="non-virtual"><scope>prism::PGC::FeatureScores</scope><name>swapchain</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_feature_scores_1a29e93c73a52926a3d4cd9d5140c4686e" prot="public" virt="non-virtual"><scope>prism::PGC::FeatureScores</scope><name>upscaling</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

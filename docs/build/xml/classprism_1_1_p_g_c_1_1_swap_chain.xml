@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_swap_chain" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::SwapChain</compoundname>
+    <includes refid="swap_chain_8h" local="no">swapChain.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_swap_chain_1a98ef5abfe1f700ca0f0dcdbc91129abc" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+        <definition>utils::Context* prism::PGC::SwapChain::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>prism::PGC::SwapChain::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="25" column="16" bodyfile="PrismEngine/src/swapChain.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_swap_chain_1a1f8f8349ec28a0ee50f716bef225260f" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref> *</type>
+        <definition>utils::Settings* prism::PGC::SwapChain::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>prism::PGC::SwapChain::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="26" column="17" bodyfile="PrismEngine/src/swapChain.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1ac0c55a3fd3fec4bc4ee0fdd6d026903f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::SwapChain::SwapChain</definition>
+        <argsstring>()</argsstring>
+        <name>SwapChain</name>
+        <qualifiedname>prism::PGC::SwapChain::SwapChain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="9" column="1" bodyfile="PrismEngine/src/swapChain.h" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a764ee99dcf83f09a01776b378d768a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::SwapChain::init</definition>
+        <argsstring>(PGC::utils::Context *context, PGC::utils::Settings *settings)</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::PGC::SwapChain::init</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="10" column="6" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="9" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a68df1d235f8043c72ab03b2645c97de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::SwapChain::~SwapChain</definition>
+        <argsstring>()</argsstring>
+        <name>~SwapChain</name>
+        <qualifiedname>prism::PGC::SwapChain::~SwapChain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="11" column="1" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1ae0eff1bf37e4b4f87431c4060a6bee86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::SwapChain::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>prism::PGC::SwapChain::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="12" column="6" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="21" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a71dc7570cb6c903f810841f57dcbe7f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::SwapChain::awaitRenderingCompletion</definition>
+        <argsstring>()</argsstring>
+        <name>awaitRenderingCompletion</name>
+        <qualifiedname>prism::PGC::SwapChain::awaitRenderingCompletion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="13" column="6" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a6b556b9c4d9053b46b9598749d3ed768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::SwapChain::recreate</definition>
+        <argsstring>()</argsstring>
+        <name>recreate</name>
+        <qualifiedname>prism::PGC::SwapChain::recreate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="14" column="6" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="47" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a6846f862a3f113e3bffaf2de5fbb9fe5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::SwapChain::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>prism::PGC::SwapChain::create</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="17" column="6" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="63" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a4c7f128a792d602a7e9d791a55d71579" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::SwapChain::createImageViews</definition>
+        <argsstring>()</argsstring>
+        <name>createImageViews</name>
+        <qualifiedname>prism::PGC::SwapChain::createImageViews</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="18" column="6" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="125" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1ac9e805f45a94b40c80e103088470f6f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkSurfaceFormatKHR</type>
+        <definition>VkSurfaceFormatKHR prism::PGC::SwapChain::chooseSwapSurfaceFormat</definition>
+        <argsstring>(const std::vector&lt; VkSurfaceFormatKHR &gt; &amp;availableFormats)</argsstring>
+        <name>chooseSwapSurfaceFormat</name>
+        <qualifiedname>prism::PGC::SwapChain::chooseSwapSurfaceFormat</qualifiedname>
+        <param>
+          <type>const std::vector&lt; VkSurfaceFormatKHR &gt; &amp;</type>
+          <declname>availableFormats</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="20" column="20" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="135" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a6327c63363a56b3ad07ea03762c3a316" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPresentModeKHR</type>
+        <definition>VkPresentModeKHR prism::PGC::SwapChain::chooseSwapPresentMode</definition>
+        <argsstring>(const std::vector&lt; VkPresentModeKHR &gt; &amp;availablePresentModes)</argsstring>
+        <name>chooseSwapPresentMode</name>
+        <qualifiedname>prism::PGC::SwapChain::chooseSwapPresentMode</qualifiedname>
+        <param>
+          <type>const std::vector&lt; VkPresentModeKHR &gt; &amp;</type>
+          <declname>availablePresentModes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="21" column="18" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="146" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a60b9fd49d6941d6b8cef997dadd3faf9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkExtent2D</type>
+        <definition>VkExtent2D prism::PGC::SwapChain::chooseSwapExtent</definition>
+        <argsstring>(const VkSurfaceCapabilitiesKHR &amp;capabilities)</argsstring>
+        <name>chooseSwapExtent</name>
+        <qualifiedname>prism::PGC::SwapChain::chooseSwapExtent</qualifiedname>
+        <param>
+          <type>const VkSurfaceCapabilitiesKHR &amp;</type>
+          <declname>capabilities</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="22" column="12" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="158" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_swap_chain_1a997057c8be4d1aac9beb88bb6327c0e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::SwapChain::getImageCount</definition>
+        <argsstring>(PGC::utils::SwapChainSupportDetails swapChainSupport)</argsstring>
+        <name>getImageCount</name>
+        <qualifiedname>prism::PGC::SwapChain::getImageCount</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details" kindref="compound">PGC::utils::SwapChainSupportDetails</ref></type>
+          <declname>swapChainSupport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/swapChain.h" line="23" column="10" bodyfile="PrismEngine/src/swapChain.cpp" bodystart="179" bodyend="187"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/swapChain.h" line="6" column="1" bodyfile="PrismEngine/src/swapChain.h" bodystart="7" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a71dc7570cb6c903f810841f57dcbe7f8" prot="public" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>awaitRenderingCompletion</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a60b9fd49d6941d6b8cef997dadd3faf9" prot="private" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>chooseSwapExtent</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a6327c63363a56b3ad07ea03762c3a316" prot="private" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>chooseSwapPresentMode</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1ac9e805f45a94b40c80e103088470f6f5" prot="private" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>chooseSwapSurfaceFormat</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1ae0eff1bf37e4b4f87431c4060a6bee86" prot="public" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>cleanup</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a98ef5abfe1f700ca0f0dcdbc91129abc" prot="private" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>context</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a6846f862a3f113e3bffaf2de5fbb9fe5" prot="private" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>create</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a4c7f128a792d602a7e9d791a55d71579" prot="private" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>createImageViews</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a997057c8be4d1aac9beb88bb6327c0e0" prot="private" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>getImageCount</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a764ee99dcf83f09a01776b378d768a90" prot="public" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>init</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a6b556b9c4d9053b46b9598749d3ed768" prot="public" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>recreate</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a1f8f8349ec28a0ee50f716bef225260f" prot="private" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>settings</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1ac0c55a3fd3fec4bc4ee0fdd6d026903f" prot="public" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>SwapChain</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_swap_chain_1a68df1d235f8043c72ab03b2645c97de5" prot="public" virt="non-virtual"><scope>prism::PGC::SwapChain</scope><name>~SwapChain</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespaceprism_1_1_p_g_c_1_1utils" kind="namespace" language="C++">
+    <compoundname>prism::PGC::utils</compoundname>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_app_settings" prot="public">prism::PGC::utils::AppSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config" prot="public">prism::PGC::utils::BindingConfig</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data" prot="public">prism::PGC::utils::CameraData</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings" prot="public">prism::PGC::utils::ColorBlendAttachmentSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings" prot="public">prism::PGC::utils::ColorBlendSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_context" prot="public">prism::PGC::utils::Context</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings" prot="public">prism::PGC::utils::DebugSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings" prot="public">prism::PGC::utils::DepthStencilSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings" prot="public">prism::PGC::utils::DescriptorSetLayoutSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings" prot="public">prism::PGC::utils::DeviceEvaluationWeightsSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings" prot="public">prism::PGC::utils::DynamicStateSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings" prot="public">prism::PGC::utils::InputAssemblySettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings" prot="public">prism::PGC::utils::MultisampleSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings" prot="public">prism::PGC::utils::PipelineSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices" prot="public">prism::PGC::utils::QueueFamilyIndices</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings" prot="public">prism::PGC::utils::RasterizationSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" prot="public">prism::PGC::utils::Settings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings" prot="public">prism::PGC::utils::ShadersSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings" prot="public">prism::PGC::utils::SwapChainSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details" prot="public">prism::PGC::utils::SwapChainSupportDetails</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config" prot="public">prism::PGC::utils::TextureBindingConfig</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings" prot="public">prism::PGC::utils::TextureDescriptorSetLayoutSettings</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings" prot="public">prism::PGC::utils::ViewportStateSettings</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>MultisampleSelectionStrategy</name>
+        <qualifiedname>prism::PGC::utils::MultisampleSelectionStrategy</qualifiedname>
+        <enumvalue id="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa23bd02d770fe9f1ea82d40438037cf25" prot="public">
+          <name>MINIMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa9eea90ec596d66e2a1fd8edd09cd61d9" prot="public">
+          <name>MIDDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fad9ff5583d4cddf516dbd5e1f38b654d1" prot="public">
+          <name>MAXIMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23fa28800c8afb35060c17cefe2f645685ad" prot="public">
+          <name>CUSTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="211" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="211" bodyend="217"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="15" column="1"/>
+  </compounddef>
+</doxygen>

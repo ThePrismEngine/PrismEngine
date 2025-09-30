@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::DescriptorSetLayoutSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings_1a1243f1fc1e4a434e592d1dbebaf912a3" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structprism_1_1_p_g_c_1_1utils_1_1_binding_config" kindref="compound">BindingConfig</ref> &gt;</type>
+        <definition>std::vector&lt;BindingConfig&gt; prism::PGC::utils::DescriptorSetLayoutSettings::bindings</definition>
+        <argsstring></argsstring>
+        <name>bindings</name>
+        <qualifiedname>prism::PGC::utils::DescriptorSetLayoutSettings::bindings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="185" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings_1ab89f22dc01c3183cb8f2f9ad4ad0fad4" prot="public" static="no" mutable="no">
+        <type>VkDescriptorSetLayoutCreateFlags</type>
+        <definition>VkDescriptorSetLayoutCreateFlags prism::PGC::utils::DescriptorSetLayoutSettings::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <qualifiedname>prism::PGC::utils::DescriptorSetLayoutSettings::flags</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="186" column="34" bodyfile="PrismEngine/src/utils.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="184" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="184" bodyend="187"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings_1a1243f1fc1e4a434e592d1dbebaf912a3" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DescriptorSetLayoutSettings</scope><name>bindings</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings_1ab89f22dc01c3183cb8f2f9ad4ad0fad4" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DescriptorSetLayoutSettings</scope><name>flags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

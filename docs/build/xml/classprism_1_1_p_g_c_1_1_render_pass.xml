@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_render_pass" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::RenderPass</compoundname>
+    <includes refid="render_pass_8h" local="no">renderPass.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_render_pass_1abecd79ef9a97d01ebb2297d1f13a6e38" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+        <definition>utils::Context* prism::PGC::RenderPass::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>prism::PGC::RenderPass::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderPass.h" line="17" column="16" bodyfile="PrismEngine/src/renderPass.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_render_pass_1a66832325b511ff98d5a1bbb51f86b1ae" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref> *</type>
+        <definition>utils::Settings* prism::PGC::RenderPass::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>prism::PGC::RenderPass::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderPass.h" line="18" column="17" bodyfile="PrismEngine/src/renderPass.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_render_pass_1acfea0341a6453f15f667191f9a260953" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::RenderPass::RenderPass</definition>
+        <argsstring>()</argsstring>
+        <name>RenderPass</name>
+        <qualifiedname>prism::PGC::RenderPass::RenderPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderPass.h" line="10" column="1" bodyfile="PrismEngine/src/renderPass.h" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_render_pass_1af0d0d398d9204187958caa20fc6c34f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::RenderPass::init</definition>
+        <argsstring>(PGC::utils::Context *context, PGC::utils::Settings *settings)</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::PGC::RenderPass::init</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderPass.h" line="11" column="6" bodyfile="PrismEngine/src/renderPass.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_render_pass_1acd98ae0b9087cec40ae4b05a0feeae81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::RenderPass::~RenderPass</definition>
+        <argsstring>()</argsstring>
+        <name>~RenderPass</name>
+        <qualifiedname>prism::PGC::RenderPass::~RenderPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderPass.h" line="12" column="1" bodyfile="PrismEngine/src/renderPass.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_render_pass_1ae73147d80f1695b95d5e54f70d1cfea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::RenderPass::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>prism::PGC::RenderPass::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderPass.h" line="13" column="6" bodyfile="PrismEngine/src/renderPass.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_render_pass_1a2efa53e0315254e7dfed30b6853dcb72" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::RenderPass::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>prism::PGC::RenderPass::create</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/renderPass.h" line="15" column="6" bodyfile="PrismEngine/src/renderPass.cpp" bodystart="19" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/renderPass.h" line="8" column="1" bodyfile="PrismEngine/src/renderPass.h" bodystart="8" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_render_pass_1ae73147d80f1695b95d5e54f70d1cfea0" prot="public" virt="non-virtual"><scope>prism::PGC::RenderPass</scope><name>cleanup</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_render_pass_1abecd79ef9a97d01ebb2297d1f13a6e38" prot="private" virt="non-virtual"><scope>prism::PGC::RenderPass</scope><name>context</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_render_pass_1a2efa53e0315254e7dfed30b6853dcb72" prot="private" virt="non-virtual"><scope>prism::PGC::RenderPass</scope><name>create</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_render_pass_1af0d0d398d9204187958caa20fc6c34f0" prot="public" virt="non-virtual"><scope>prism::PGC::RenderPass</scope><name>init</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_render_pass_1acfea0341a6453f15f667191f9a260953" prot="public" virt="non-virtual"><scope>prism::PGC::RenderPass</scope><name>RenderPass</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_render_pass_1a66832325b511ff98d5a1bbb51f86b1ae" prot="private" virt="non-virtual"><scope>prism::PGC::RenderPass</scope><name>settings</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_render_pass_1acd98ae0b9087cec40ae4b05a0feeae81" prot="public" virt="non-virtual"><scope>prism::PGC::RenderPass</scope><name>~RenderPass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

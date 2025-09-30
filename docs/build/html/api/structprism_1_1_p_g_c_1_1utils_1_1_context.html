@@ -1,0 +1,799 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct Context &mdash; PrismEngine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct DebugSettings" href="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings.html" />
+    <link rel="prev" title="Struct ColorBlendSettings" href="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PrismEngine
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Основное:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О проекте PrismEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Быстрый старт</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_buffer_wrapper.html">Class BufferWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_descriptor_set.html">Class DescriptorSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_descriptor_set_layout.html">Class DescriptorSetLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_device_checker.html">Class DeviceChecker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_device_rater.html">Class DeviceRater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_device_wrapper.html">Class DeviceWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_graphics_pipeline.html">Class GraphicsPipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_mesh_loader.html">Class MeshLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_mesh_manager.html">Class MeshManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_prism_graphic_core.html">Class PrismGraphicCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_render_pass.html">Class RenderPass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_resources_creater.html">Class ResourcesCreater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_score_wrapper.html">Class ScoreWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_shader_stages_loader.html">Class ShaderStagesLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_swap_chain.html">Class SwapChain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_texture_loader.html">Class TextureLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_texture_manager.html">Class TextureManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1base_1_1_base.html">Class Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1render_1_1_renderer.html">Class Renderer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1render_1_1_window.html">Class Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_component_manager.html">Class ComponentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_entity_manager.html">Class EntityManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_i_system.html">Class ISystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_render_system.html">Class RenderSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_system_manager.html">Class SystemManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1view_1_1_window.html">Class Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_prism_graphic_core_8cpp_1af14fac7fbc250522a78849d58d5b0811.html">Define TINYOBJLOADER_IMPLEMENTATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_prism_graphic_core_8h_1a816ab7d5c2ce1f0a01216042837beb93.html">Define GLM_FORCE_RADIANS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_prism_graphic_core_8h_1aa53e0967978ad7a8792f6961156ec968.html">Define GLM_FORCE_DEPTH_ZERO_TO_ONE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_texture_loader_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78.html">Define STB_IMAGE_IMPLEMENTATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_C__Users_Admin_source_repos_PrismEngine_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_PrismEngine.html">Directory PrismEngine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_PrismEngine_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23f.html">Enum MultisampleSelectionStrategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f.html">Enum Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856.html">Enum Level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp.html">File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.html">File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_base.cpp.html">File base.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_base.h.html">File base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_bufferWrapper.cpp.html">File bufferWrapper.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_bufferWrapper.h.html">File bufferWrapper.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_cameraComponent.h.html">File cameraComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_component.h.html">File component.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_componentManager.cpp.html">File componentManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_componentManager.h.html">File componentManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_descriptorSet.cpp.html">File descriptorSet.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_descriptorSet.h.html">File descriptorSet.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_descriptorSetLayout.cpp.html">File descriptorSetLayout.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_descriptorSetLayout.h.html">File descriptorSetLayout.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceChecker.cpp.html">File deviceChecker.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceChecker.h.html">File deviceChecker.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceRater.cpp.html">File deviceRater.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceRater.h.html">File deviceRater.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceWrapper.cpp.html">File deviceWrapper.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceWrapper.h.html">File deviceWrapper.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_entity.h.html">File entity.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_entityManager.cpp.html">File entityManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_entityManager.h.html">File entityManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_graphicsPipeline.cpp.html">File graphicsPipeline.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_graphicsPipeline.h.html">File graphicsPipeline.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_init.h.html">File init.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_logger.cpp.html">File logger.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_logger.h.html">File logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_mesh.h.html">File mesh.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshComponent.h.html">File meshComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshLoader.cpp.html">File meshLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshLoader.h.html">File meshLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshManager.cpp.html">File meshManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshManager.h.html">File meshManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_prismGraphicCore.cpp.html">File prismGraphicCore.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_prismGraphicCore.h.html">File prismGraphicCore.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderPass.cpp.html">File renderPass.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderPass.h.html">File renderPass.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderSystem.cpp.html">File renderSystem.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderSystem.h.html">File renderSystem.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderer.cpp.html">File renderer.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderer.h.html">File renderer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_resourcesCreater.cpp.html">File resourcesCreater.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_resourcesCreater.h.html">File resourcesCreater.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_scene.cpp.html">File scene.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_scene.h.html">File scene.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_shaderStagesLoader.cpp.html">File shaderStagesLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_shaderStagesLoader.h.html">File shaderStagesLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_swapChain.cpp.html">File swapChain.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_swapChain.h.html">File swapChain.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_system.h.html">File system.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_systemManager.cpp.html">File systemManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_systemManager.h.html">File systemManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_texture.h.html">File texture.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureComponent.h.html">File textureComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureLoader.cpp.html">File textureLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureLoader.h.html">File textureLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureManager.cpp.html">File textureManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureManager.h.html">File textureManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_transformComponent.h.html">File transformComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_ubo.h.html">File ubo.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_utils.h.html">File utils.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_vertex.cpp.html">File vertex.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_vertex.h.html">File vertex.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_WindowVkManager.cpp.html">File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_WindowVkManager.h.html">File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_logger.cpp.html">File logger.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_logger.h.html">File logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1_p_g_c_1ad693ecf2f5af4ca4af972d2be76e6da6.html">Function prism::PGC::CreateDebugUtilsMessengerEXT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1_p_g_c_1aeaf6f35f94c997ce724f2de4a39a1a34.html">Function prism::PGC::DestroyDebugUtilsMessengerEXT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a011c76bbfb6104919163e337e828a26e.html">Function prism::logger::log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a0f5071ef54b1884256b312cec14e910d.html">Function prism::logger::setOutputFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a3ce9ded53e563d7894a199406899a18c.html">Function prism::logger::debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1.html">Function prism::logger::getLastError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a44ab0bc2022efc1dbfe3234031cac93e.html">Function prism::logger::setLevel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c.html">Function prism::logger::info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a7e98e993d5b16cdd4d5d39c6f2797967.html">Function prism::logger::clearLastError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a95789fad40cdbf5ca47baef4c355c1e1.html">Function prism::logger::warning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a95da0e71a7281fed4c011c2dd58ba1af.html">Function prism::logger::hasLastError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1aa50f2608949bcbf87806915fb04c4abc.html">Function prism::logger::checkLastErrorType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1ab7af2a1862659afcddc003e975de9734.html">Function prism::logger::critical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1ae5db974c5397849b8fc4230c9147906d.html">Function prism::logger::error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1aea6335133a1d9d4d190d24737b4d12cc.html">Function prism::logger::setOutputConsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd.html">Function prism::logger::logError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1af4a740cd72b4f7684f4466728cf548d3.html">Function prism::logger::verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a1677733d560794b1e46fd1dcfd7b4f7a.html">Function prism::math::Matrix_QuickInverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96.html">Function prism::math::Matrix_MultiplyMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d.html">Function prism::math::Vector_IntersectPlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6.html">Function prism::math::Vector_CrossProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f.html">Function prism::math::Vector_DotProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446.html">Function prism::math::degToRad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7.html">Function prism::math::Matrix_QuickInverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c.html">Function prism::init</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html">PrismEngine API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism.html">Namespace prism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__PGC.html">Namespace prism::PGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__PGC__base.html">Namespace prism::PGC::base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__PGC__utils.html">Namespace prism::PGC::utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__logger.html">Namespace prism::logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__logger__%40106337165161253157316040066034246044172002275261.html">Namespace prism::logger::&#64;106337165161253157316040066034246044172002275261</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__logger__%40106344202271071202303101115105003232377004322176.html">Namespace prism::logger::&#64;106344202271071202303101115105003232377004322176</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__math.html">Namespace prism::math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__render.html">Namespace prism::render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__scene.html">Namespace prism::scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__view.html">Namespace prism::view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp.html">Program Listing for File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.html">Program Listing for File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_base.cpp.html">Program Listing for File base.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_base.h.html">Program Listing for File base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_bufferWrapper.cpp.html">Program Listing for File bufferWrapper.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_bufferWrapper.h.html">Program Listing for File bufferWrapper.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_cameraComponent.h.html">Program Listing for File cameraComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_component.h.html">Program Listing for File component.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_componentManager.cpp.html">Program Listing for File componentManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_componentManager.h.html">Program Listing for File componentManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_descriptorSet.cpp.html">Program Listing for File descriptorSet.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_descriptorSet.h.html">Program Listing for File descriptorSet.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_descriptorSetLayout.cpp.html">Program Listing for File descriptorSetLayout.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_descriptorSetLayout.h.html">Program Listing for File descriptorSetLayout.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceChecker.cpp.html">Program Listing for File deviceChecker.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceChecker.h.html">Program Listing for File deviceChecker.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceRater.cpp.html">Program Listing for File deviceRater.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceRater.h.html">Program Listing for File deviceRater.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceWrapper.cpp.html">Program Listing for File deviceWrapper.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceWrapper.h.html">Program Listing for File deviceWrapper.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_entity.h.html">Program Listing for File entity.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_entityManager.cpp.html">Program Listing for File entityManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_entityManager.h.html">Program Listing for File entityManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_graphicsPipeline.cpp.html">Program Listing for File graphicsPipeline.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_graphicsPipeline.h.html">Program Listing for File graphicsPipeline.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_init.h.html">Program Listing for File init.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_logger.cpp.html">Program Listing for File logger.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_logger.h.html">Program Listing for File logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_mesh.h.html">Program Listing for File mesh.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshComponent.h.html">Program Listing for File meshComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshLoader.cpp.html">Program Listing for File meshLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshLoader.h.html">Program Listing for File meshLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshManager.cpp.html">Program Listing for File meshManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshManager.h.html">Program Listing for File meshManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_prismGraphicCore.cpp.html">Program Listing for File prismGraphicCore.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_prismGraphicCore.h.html">Program Listing for File prismGraphicCore.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderPass.cpp.html">Program Listing for File renderPass.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderPass.h.html">Program Listing for File renderPass.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderSystem.cpp.html">Program Listing for File renderSystem.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderSystem.h.html">Program Listing for File renderSystem.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderer.cpp.html">Program Listing for File renderer.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderer.h.html">Program Listing for File renderer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_resourcesCreater.cpp.html">Program Listing for File resourcesCreater.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_resourcesCreater.h.html">Program Listing for File resourcesCreater.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_scene.cpp.html">Program Listing for File scene.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_scene.h.html">Program Listing for File scene.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_shaderStagesLoader.cpp.html">Program Listing for File shaderStagesLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_shaderStagesLoader.h.html">Program Listing for File shaderStagesLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_swapChain.cpp.html">Program Listing for File swapChain.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_swapChain.h.html">Program Listing for File swapChain.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_system.h.html">Program Listing for File system.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_systemManager.cpp.html">Program Listing for File systemManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_systemManager.h.html">Program Listing for File systemManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_texture.h.html">Program Listing for File texture.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureComponent.h.html">Program Listing for File textureComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureLoader.cpp.html">Program Listing for File textureLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureLoader.h.html">Program Listing for File textureLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureManager.cpp.html">Program Listing for File textureManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureManager.h.html">Program Listing for File textureManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_transformComponent.h.html">Program Listing for File transformComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_ubo.h.html">Program Listing for File ubo.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_utils.h.html">Program Listing for File utils.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_vertex.cpp.html">Program Listing for File vertex.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_vertex.h.html">Program Listing for File vertex.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_WindowVkManager.cpp.html">Program Listing for File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_WindowVkManager.h.html">Program Listing for File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_logger.cpp.html">Program Listing for File logger.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_logger.h.html">Program Listing for File logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_camera_u_b_o.html">Struct CameraUBO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_color.html">Struct Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_device_score.html">Struct DeviceScore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_feature_scores.html">Struct FeatureScores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_hardware_score.html">Struct HardwareScore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_mesh.html">Struct Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_mesh_data.html">Struct MeshData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_object_u_b_o.html">Struct ObjectUBO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_push_constants.html">Struct PushConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_texture.html">Struct Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_uniform_buffers.html">Struct UniformBuffers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_vertex.html">Struct Vertex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_vertex_hasher.html">Struct VertexHasher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_app_settings.html">Struct AppSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_binding_config.html">Struct BindingConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_camera_data.html">Struct CameraData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings.html">Struct ColorBlendAttachmentSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings.html">Struct ColorBlendSettings</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Struct Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5prism3PGC5utils7ContextE"><code class="docutils literal notranslate"><span class="pre">prism::PGC::utils::Context</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings.html">Struct DebugSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings.html">Struct DepthStencilSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings.html">Struct DescriptorSetLayoutSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings.html">Struct DeviceEvaluationWeightsSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings.html">Struct DynamicStateSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings.html">Struct InputAssemblySettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings.html">Struct MultisampleSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings.html">Struct PipelineSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices.html">Struct QueueFamilyIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings.html">Struct RasterizationSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_settings.html">Struct Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings.html">Struct ShadersSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings.html">Struct SwapChainSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details.html">Struct SwapChainSupportDetails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config.html">Struct TextureBindingConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings.html">Struct TextureDescriptorSetLayoutSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings.html">Struct ViewportStateSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_prism_info.html">Struct PrismInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_prism_version.html">Struct PrismVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_version.html">Struct Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1math_1_1_matrix4_x4.html">Struct Matrix4X4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1math_1_1_vector3d.html">Struct Vector3d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_camera_component.html">Struct CameraComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_component_manager_1_1_component_storage.html">Template Struct ComponentManager::ComponentStorage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage.html">Struct ComponentManager::IComponentStorage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_look.html">Struct Look</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_mesh_component.html">Struct MeshComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_position.html">Struct Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_rotation.html">Struct Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_scale.html">Struct Scale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_texture_component.html">Struct TextureComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_transform_component.html">Struct TransformComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1view_1_1_queue_family_indices.html">Struct QueueFamilyIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de.html">Typedef prism::scene::SystemId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1_1scene_1a6233cae67fb5dbba2836694cdc18a810.html">Typedef prism::scene::ComponentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html">Typedef prism::scene::Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1a0bb25671f356c934c5602ac140b29a3d.html">Typedef prism::Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1a4eb58886ec719d71730e862aee4d4385.html">Typedef prism::Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unabridged_orphan.html">Full API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1scene_1a3949544449808fa9981f4ac8cc49537b.html">Variable prism::scene::INVALID_ENTITY_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1scene_1a4ce677c2eee0379c21cce541c0bc9752.html">Variable prism::scene::INVALID_SYSTEM_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1scene_1ad63c2c31072dfa1cb1b74b5c51557299.html">Variable prism::scene::INVALID_COMPONENT_TYPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1view_1a5e08683d7e148199c9e82e1382ca3f97.html">Variable prism::view::validationLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441.html">Variable prism::view::deviceExtensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1a0894323454f28ab68c93aa1039a08672.html">Variable prism::isInit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1ab88df87c3fd3b1403a69f7b6e8cb6128.html">Variable prism::INVALID_TEXTURE</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Компоненты:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ecs/index.html">ECS Module (Entity-Component-System)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/pgc.html">Графическое ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/logger.html">Модуль логирования</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/math.html">Модуль математики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ppc.html">Физический движок</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/pcc.html">Вычислительное ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ui.html">Пользовательский интерфейс</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Разработка:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Участие в разработке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/code_style.html">Стандарты кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/build_guide.html">Руководство по сборке</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PrismEngine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">PrismEngine API</a></li>
+      <li class="breadcrumb-item active">Struct Context</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/structprism_1_1_p_g_c_1_1utils_1_1_context.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-context">
+<span id="exhale-struct-structprism-1-1-p-g-c-1-1utils-1-1-context"></span><h1>Struct Context<a class="headerlink" href="#struct-context" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_PrismEngine_src_utils.h.html#file-prismengine-src-utils-h"><span class="std std-ref">File utils.h</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7ContextE">
+<span id="_CPPv3N5prism3PGC5utils7ContextE"></span><span id="_CPPv2N5prism3PGC5utils7ContextE"></span><span id="prism::PGC::utils::Context"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Context</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7ContextE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context8instanceE">
+<span id="_CPPv3N5prism3PGC5utils7Context8instanceE"></span><span id="_CPPv2N5prism3PGC5utils7Context8instanceE"></span><span id="prism::PGC::utils::Context::instance__VkInstance"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ac9500f33456f5f1a9971b5563729eaf6"></span><span class="n"><span class="pre">VkInstance</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">instance</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context8instanceE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context7surfaceE">
+<span id="_CPPv3N5prism3PGC5utils7Context7surfaceE"></span><span id="_CPPv2N5prism3PGC5utils7Context7surfaceE"></span><span id="prism::PGC::utils::Context::surface__VkSurfaceKHR"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a6e5cc346c3461cbf311815952d38ca83"></span><span class="n"><span class="pre">VkSurfaceKHR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">surface</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context7surfaceE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14physicalDeviceE">
+<span id="_CPPv3N5prism3PGC5utils7Context14physicalDeviceE"></span><span id="_CPPv2N5prism3PGC5utils7Context14physicalDeviceE"></span><span id="prism::PGC::utils::Context::physicalDevice__VkPhysicalDevice"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a759203e6822e3ad8a46b29672ef7b19c"></span><span class="n"><span class="pre">VkPhysicalDevice</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">physicalDevice</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">VK_NULL_HANDLE</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14physicalDeviceE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context6deviceE">
+<span id="_CPPv3N5prism3PGC5utils7Context6deviceE"></span><span id="_CPPv2N5prism3PGC5utils7Context6deviceE"></span><span id="prism::PGC::utils::Context::device__VkDevice"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a1044c94f8ccd00b268cd85af72fd11b3"></span><span class="n"><span class="pre">VkDevice</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">device</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context6deviceE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context13graphicsQueueE">
+<span id="_CPPv3N5prism3PGC5utils7Context13graphicsQueueE"></span><span id="_CPPv2N5prism3PGC5utils7Context13graphicsQueueE"></span><span id="prism::PGC::utils::Context::graphicsQueue__VkQueue"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aaf2e5bd3583d87df7d204569157d98cc"></span><span class="n"><span class="pre">VkQueue</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">graphicsQueue</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context13graphicsQueueE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context12presentQueueE">
+<span id="_CPPv3N5prism3PGC5utils7Context12presentQueueE"></span><span id="_CPPv2N5prism3PGC5utils7Context12presentQueueE"></span><span id="prism::PGC::utils::Context::presentQueue__VkQueue"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1abad3bde0d4cfc986aa57e410b9f8b7a1"></span><span class="n"><span class="pre">VkQueue</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">presentQueue</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context12presentQueueE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context11vkSwapChainE">
+<span id="_CPPv3N5prism3PGC5utils7Context11vkSwapChainE"></span><span id="_CPPv2N5prism3PGC5utils7Context11vkSwapChainE"></span><span id="prism::PGC::utils::Context::vkSwapChain__VkSwapchainKHR"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a191f1aaea47b9147fb93301ac11c8f52"></span><span class="n"><span class="pre">VkSwapchainKHR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vkSwapChain</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context11vkSwapChainE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context19swapChainImageViewsE">
+<span id="_CPPv3N5prism3PGC5utils7Context19swapChainImageViewsE"></span><span id="_CPPv2N5prism3PGC5utils7Context19swapChainImageViewsE"></span><span id="prism::PGC::utils::Context::swapChainImageViews__std::vector:VkImageView:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a61c2506389c5cd06807885a98458e46c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">VkImageView</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">swapChainImageViews</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context19swapChainImageViewsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context21swapChainFramebuffersE">
+<span id="_CPPv3N5prism3PGC5utils7Context21swapChainFramebuffersE"></span><span id="_CPPv2N5prism3PGC5utils7Context21swapChainFramebuffersE"></span><span id="prism::PGC::utils::Context::swapChainFramebuffers__std::vector:VkFramebuffer:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a663b57954f0090efddcdf3aeb2837861"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">VkFramebuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">swapChainFramebuffers</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context21swapChainFramebuffersE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context15swapChainImagesE">
+<span id="_CPPv3N5prism3PGC5utils7Context15swapChainImagesE"></span><span id="_CPPv2N5prism3PGC5utils7Context15swapChainImagesE"></span><span id="prism::PGC::utils::Context::swapChainImages__std::vector:VkImage:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2a15bac8577d170c400b7c32ffdd842d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">VkImage</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">swapChainImages</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context15swapChainImagesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context20swapChainImageFormatE">
+<span id="_CPPv3N5prism3PGC5utils7Context20swapChainImageFormatE"></span><span id="_CPPv2N5prism3PGC5utils7Context20swapChainImageFormatE"></span><span id="prism::PGC::utils::Context::swapChainImageFormat__VkFormat"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1afdac47e49cd0ae38d95a93c33cf7ecd2"></span><span class="n"><span class="pre">VkFormat</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">swapChainImageFormat</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context20swapChainImageFormatE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context15swapChainExtentE">
+<span id="_CPPv3N5prism3PGC5utils7Context15swapChainExtentE"></span><span id="_CPPv2N5prism3PGC5utils7Context15swapChainExtentE"></span><span id="prism::PGC::utils::Context::swapChainExtent__VkExtent2D"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2cfd6b1fa14df88a820c0c4ebd996aaf"></span><span class="n"><span class="pre">VkExtent2D</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">swapChainExtent</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context15swapChainExtentE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context10depthImageE">
+<span id="_CPPv3N5prism3PGC5utils7Context10depthImageE"></span><span id="_CPPv2N5prism3PGC5utils7Context10depthImageE"></span><span id="prism::PGC::utils::Context::depthImage__VkImage"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8d1b459631b7e17b99a2891ab8f37311"></span><span class="n"><span class="pre">VkImage</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">depthImage</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context10depthImageE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context16depthImageMemoryE">
+<span id="_CPPv3N5prism3PGC5utils7Context16depthImageMemoryE"></span><span id="_CPPv2N5prism3PGC5utils7Context16depthImageMemoryE"></span><span id="prism::PGC::utils::Context::depthImageMemory__VkDeviceMemory"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a92659cf24ec4ece474f873cb57aa6015"></span><span class="n"><span class="pre">VkDeviceMemory</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">depthImageMemory</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context16depthImageMemoryE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14depthImageViewE">
+<span id="_CPPv3N5prism3PGC5utils7Context14depthImageViewE"></span><span id="_CPPv2N5prism3PGC5utils7Context14depthImageViewE"></span><span id="prism::PGC::utils::Context::depthImageView__VkImageView"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1acef6ba561ba15d0e67809c65068e31b4"></span><span class="n"><span class="pre">VkImageView</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">depthImageView</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14depthImageViewE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context10colorImageE">
+<span id="_CPPv3N5prism3PGC5utils7Context10colorImageE"></span><span id="_CPPv2N5prism3PGC5utils7Context10colorImageE"></span><span id="prism::PGC::utils::Context::colorImage__VkImage"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0a7c084aa2c8a0ce8ac930d8e927857b"></span><span class="n"><span class="pre">VkImage</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">colorImage</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context10colorImageE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context16colorImageMemoryE">
+<span id="_CPPv3N5prism3PGC5utils7Context16colorImageMemoryE"></span><span id="_CPPv2N5prism3PGC5utils7Context16colorImageMemoryE"></span><span id="prism::PGC::utils::Context::colorImageMemory__VkDeviceMemory"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a733a1313e3fb135660fb1c4b4e18b1e7"></span><span class="n"><span class="pre">VkDeviceMemory</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">colorImageMemory</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context16colorImageMemoryE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14colorImageViewE">
+<span id="_CPPv3N5prism3PGC5utils7Context14colorImageViewE"></span><span id="_CPPv2N5prism3PGC5utils7Context14colorImageViewE"></span><span id="prism::PGC::utils::Context::colorImageView__VkImageView"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a94142c5e6869a4e66cc07073d9eead4c"></span><span class="n"><span class="pre">VkImageView</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">colorImageView</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14colorImageViewE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context11msaaSamplesE">
+<span id="_CPPv3N5prism3PGC5utils7Context11msaaSamplesE"></span><span id="_CPPv2N5prism3PGC5utils7Context11msaaSamplesE"></span><span id="prism::PGC::utils::Context::msaaSamples__VkSampleCountFlagBits"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a26c289ae13be8830714d93d3b934ea75"></span><span class="n"><span class="pre">VkSampleCountFlagBits</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">msaaSamples</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">VK_SAMPLE_COUNT_1_BIT</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context11msaaSamplesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context10renderPassE">
+<span id="_CPPv3N5prism3PGC5utils7Context10renderPassE"></span><span id="_CPPv2N5prism3PGC5utils7Context10renderPassE"></span><span id="prism::PGC::utils::Context::renderPass__VkRenderPass"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a58e40fd8040df70886377c59224adb8e"></span><span class="n"><span class="pre">VkRenderPass</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">renderPass</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context10renderPassE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context12vertexBufferE">
+<span id="_CPPv3N5prism3PGC5utils7Context12vertexBufferE"></span><span id="_CPPv2N5prism3PGC5utils7Context12vertexBufferE"></span><span id="prism::PGC::utils::Context::vertexBuffer__VkBuffer"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1afd2091a730d8d5f697f75ab96371f9a3"></span><span class="n"><span class="pre">VkBuffer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vertexBuffer</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context12vertexBufferE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context18vertexBufferMemoryE">
+<span id="_CPPv3N5prism3PGC5utils7Context18vertexBufferMemoryE"></span><span id="_CPPv2N5prism3PGC5utils7Context18vertexBufferMemoryE"></span><span id="prism::PGC::utils::Context::vertexBufferMemory__VkDeviceMemory"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ae9486dffb20bfc761f06ee3e4fe06860"></span><span class="n"><span class="pre">VkDeviceMemory</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vertexBufferMemory</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context18vertexBufferMemoryE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context11indexBufferE">
+<span id="_CPPv3N5prism3PGC5utils7Context11indexBufferE"></span><span id="_CPPv2N5prism3PGC5utils7Context11indexBufferE"></span><span id="prism::PGC::utils::Context::indexBuffer__VkBuffer"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1afdd17d23c2221d734bb42e41b3b1de3f"></span><span class="n"><span class="pre">VkBuffer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">indexBuffer</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context11indexBufferE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context17indexBufferMemoryE">
+<span id="_CPPv3N5prism3PGC5utils7Context17indexBufferMemoryE"></span><span id="_CPPv2N5prism3PGC5utils7Context17indexBufferMemoryE"></span><span id="prism::PGC::utils::Context::indexBufferMemory__VkDeviceMemory"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a53783cccbeaa4774e8f779f00fcd77ee"></span><span class="n"><span class="pre">VkDeviceMemory</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">indexBufferMemory</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context17indexBufferMemoryE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context11allVerticesE">
+<span id="_CPPv3N5prism3PGC5utils7Context11allVerticesE"></span><span id="_CPPv2N5prism3PGC5utils7Context11allVerticesE"></span><span id="prism::PGC::utils::Context::allVertices__std::vector:Vertex:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab6fb5ba2cb7bfe2dee1a0eb01d31ce34"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structprism_1_1_p_g_c_1_1_vertex.html#_CPPv4N5prism3PGC6VertexE" title="prism::PGC::Vertex"><span class="n"><span class="pre">Vertex</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">allVertices</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context11allVerticesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context10allIndicesE">
+<span id="_CPPv3N5prism3PGC5utils7Context10allIndicesE"></span><span id="_CPPv2N5prism3PGC5utils7Context10allIndicesE"></span><span id="prism::PGC::utils::Context::allIndices__std::vector:uint32_t:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a7c3c5b7c6f198e9d2eaf48f9bc0b0fdb"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">allIndices</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context10allIndicesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context6meshesE">
+<span id="_CPPv3N5prism3PGC5utils7Context6meshesE"></span><span id="_CPPv2N5prism3PGC5utils7Context6meshesE"></span><span id="prism::PGC::utils::Context::meshes__std::vector:prism::PGC::Mesh:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9142edd2bb4a82ff2b348eac78ab8a8c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">prism</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PGC</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structprism_1_1_p_g_c_1_1_mesh.html#_CPPv4N5prism3PGC4MeshE" title="prism::PGC::Mesh"><span class="n"><span class="pre">Mesh</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meshes</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context6meshesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context15freeMeshIndicesE">
+<span id="_CPPv3N5prism3PGC5utils7Context15freeMeshIndicesE"></span><span id="_CPPv2N5prism3PGC5utils7Context15freeMeshIndicesE"></span><span id="prism::PGC::utils::Context::freeMeshIndices__std::vector:uint32_t:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1af8e9a687b9a3f5879012a8a0cfa152cf"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">freeMeshIndices</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context15freeMeshIndicesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context16meshBuffersDirtyE">
+<span id="_CPPv3N5prism3PGC5utils7Context16meshBuffersDirtyE"></span><span id="_CPPv2N5prism3PGC5utils7Context16meshBuffersDirtyE"></span><span id="prism::PGC::utils::Context::meshBuffersDirty__b"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab33d085a44ff7655f167296bdcf38d58"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meshBuffersDirty</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context16meshBuffersDirtyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context19descriptorSetLayoutE">
+<span id="_CPPv3N5prism3PGC5utils7Context19descriptorSetLayoutE"></span><span id="_CPPv2N5prism3PGC5utils7Context19descriptorSetLayoutE"></span><span id="prism::PGC::utils::Context::descriptorSetLayout__VkDescriptorSetLayout"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2be303f40e36da97bc49dc434567820b"></span><span class="n"><span class="pre">VkDescriptorSetLayout</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">descriptorSetLayout</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context19descriptorSetLayoutE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14pipelineLayoutE">
+<span id="_CPPv3N5prism3PGC5utils7Context14pipelineLayoutE"></span><span id="_CPPv2N5prism3PGC5utils7Context14pipelineLayoutE"></span><span id="prism::PGC::utils::Context::pipelineLayout__VkPipelineLayout"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1abd8be7f7b8e01fb62e0900fa0dfc37d5"></span><span class="n"><span class="pre">VkPipelineLayout</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pipelineLayout</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14pipelineLayoutE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context16graphicsPipelineE">
+<span id="_CPPv3N5prism3PGC5utils7Context16graphicsPipelineE"></span><span id="_CPPv2N5prism3PGC5utils7Context16graphicsPipelineE"></span><span id="prism::PGC::utils::Context::graphicsPipeline__VkPipeline"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a420655923bdbf77125c266a039b5b99b"></span><span class="n"><span class="pre">VkPipeline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">graphicsPipeline</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context16graphicsPipelineE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context11commandPoolE">
+<span id="_CPPv3N5prism3PGC5utils7Context11commandPoolE"></span><span id="_CPPv2N5prism3PGC5utils7Context11commandPoolE"></span><span id="prism::PGC::utils::Context::commandPool__VkCommandPool"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a36dc055df91a851fb1dd07e7a6027050"></span><span class="n"><span class="pre">VkCommandPool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commandPool</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context11commandPoolE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14commandBuffersE">
+<span id="_CPPv3N5prism3PGC5utils7Context14commandBuffersE"></span><span id="_CPPv2N5prism3PGC5utils7Context14commandBuffersE"></span><span id="prism::PGC::utils::Context::commandBuffers__std::vector:VkCommandBuffer:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a135a182e81a4b833d985372444d4ef2a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">VkCommandBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commandBuffers</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14commandBuffersE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14uniformBuffersE">
+<span id="_CPPv3N5prism3PGC5utils7Context14uniformBuffersE"></span><span id="_CPPv2N5prism3PGC5utils7Context14uniformBuffersE"></span><span id="prism::PGC::utils::Context::uniformBuffers__std::vector:UniformBuffers:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8151c42953061a2010f5b93450c96dc7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structprism_1_1_p_g_c_1_1_uniform_buffers.html#_CPPv4N5prism3PGC14UniformBuffersE" title="prism::PGC::UniformBuffers"><span class="n"><span class="pre">UniformBuffers</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">uniformBuffers</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14uniformBuffersE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context24imageAvailableSemaphoresE">
+<span id="_CPPv3N5prism3PGC5utils7Context24imageAvailableSemaphoresE"></span><span id="_CPPv2N5prism3PGC5utils7Context24imageAvailableSemaphoresE"></span><span id="prism::PGC::utils::Context::imageAvailableSemaphores__std::vector:VkSemaphore:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a65e5acfeb5a3d263007587b61148e82d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">VkSemaphore</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">imageAvailableSemaphores</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context24imageAvailableSemaphoresE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context24renderFinishedSemaphoresE">
+<span id="_CPPv3N5prism3PGC5utils7Context24renderFinishedSemaphoresE"></span><span id="_CPPv2N5prism3PGC5utils7Context24renderFinishedSemaphoresE"></span><span id="prism::PGC::utils::Context::renderFinishedSemaphores__std::vector:VkSemaphore:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0c0a94f856fe6f802eb3229d9170a6fe"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">VkSemaphore</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">renderFinishedSemaphores</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context24renderFinishedSemaphoresE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14inFlightFencesE">
+<span id="_CPPv3N5prism3PGC5utils7Context14inFlightFencesE"></span><span id="_CPPv2N5prism3PGC5utils7Context14inFlightFencesE"></span><span id="prism::PGC::utils::Context::inFlightFences__std::vector:VkFence:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aeff088aa1c0c75e5b9a38645c10a2911"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">VkFence</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">inFlightFences</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14inFlightFencesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context12currentFrameE">
+<span id="_CPPv3N5prism3PGC5utils7Context12currentFrameE"></span><span id="_CPPv2N5prism3PGC5utils7Context12currentFrameE"></span><span id="prism::PGC::utils::Context::currentFrame__uint32_t"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ab55fc602f6216a6486a333cdc59139f9"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentFrame</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context12currentFrameE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context10imageIndexE">
+<span id="_CPPv3N5prism3PGC5utils7Context10imageIndexE"></span><span id="_CPPv2N5prism3PGC5utils7Context10imageIndexE"></span><span id="prism::PGC::utils::Context::imageIndex__uint32_t"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aa193b6790ed1658ad001a280b8c043a4"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">imageIndex</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context10imageIndexE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context18wasRenderingActiveE">
+<span id="_CPPv3N5prism3PGC5utils7Context18wasRenderingActiveE"></span><span id="_CPPv2N5prism3PGC5utils7Context18wasRenderingActiveE"></span><span id="prism::PGC::utils::Context::wasRenderingActive__b"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aefdb78e08e5847b3d311b923255a5de7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wasRenderingActive</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context18wasRenderingActiveE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14descriptorPoolE">
+<span id="_CPPv3N5prism3PGC5utils7Context14descriptorPoolE"></span><span id="_CPPv2N5prism3PGC5utils7Context14descriptorPoolE"></span><span id="prism::PGC::utils::Context::descriptorPool__VkDescriptorPool"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a18e42b896ee57c92b97a1ab5a3844054"></span><span class="n"><span class="pre">VkDescriptorPool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">descriptorPool</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14descriptorPoolE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context21textureDescriptorPoolE">
+<span id="_CPPv3N5prism3PGC5utils7Context21textureDescriptorPoolE"></span><span id="_CPPv2N5prism3PGC5utils7Context21textureDescriptorPoolE"></span><span id="prism::PGC::utils::Context::textureDescriptorPool__VkDescriptorPool"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1abbf627893291ec495b05a3150cc1f9ba"></span><span class="n"><span class="pre">VkDescriptorPool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">textureDescriptorPool</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context21textureDescriptorPoolE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context8texturesE">
+<span id="_CPPv3N5prism3PGC5utils7Context8texturesE"></span><span id="_CPPv2N5prism3PGC5utils7Context8texturesE"></span><span id="prism::PGC::utils::Context::textures__std::vector:PGC::Texture:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a0bc0d8cc76d5fa2ca079b6cc03aa82d3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">PGC</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structprism_1_1_p_g_c_1_1_texture.html#_CPPv4N5prism3PGC7TextureE" title="prism::PGC::Texture"><span class="n"><span class="pre">Texture</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">textures</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context8texturesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context18freeTextureIndicesE">
+<span id="_CPPv3N5prism3PGC5utils7Context18freeTextureIndicesE"></span><span id="_CPPv2N5prism3PGC5utils7Context18freeTextureIndicesE"></span><span id="prism::PGC::utils::Context::freeTextureIndices__std::vector:uint32_t:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a07aeb09f7483de2bc2d9f3fe99830a66"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">freeTextureIndices</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context18freeTextureIndicesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context20textureDescriptorSetE">
+<span id="_CPPv3N5prism3PGC5utils7Context20textureDescriptorSetE"></span><span id="_CPPv2N5prism3PGC5utils7Context20textureDescriptorSetE"></span><span id="prism::PGC::utils::Context::textureDescriptorSet__VkDescriptorSet"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1ae43eb6e117b69646acf9db16e2ac72ce"></span><span class="n"><span class="pre">VkDescriptorSet</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">textureDescriptorSet</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">VK_NULL_HANDLE</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context20textureDescriptorSetE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context26textureDescriptorSetLayoutE">
+<span id="_CPPv3N5prism3PGC5utils7Context26textureDescriptorSetLayoutE"></span><span id="_CPPv2N5prism3PGC5utils7Context26textureDescriptorSetLayoutE"></span><span id="prism::PGC::utils::Context::textureDescriptorSetLayout__VkDescriptorSetLayout"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a8f459a9f17d6faf584e25a851885221a"></span><span class="n"><span class="pre">VkDescriptorSetLayout</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">textureDescriptorSetLayout</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">VK_NULL_HANDLE</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context26textureDescriptorSetLayoutE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context10cameraDataE">
+<span id="_CPPv3N5prism3PGC5utils7Context10cameraDataE"></span><span id="_CPPv2N5prism3PGC5utils7Context10cameraDataE"></span><span id="prism::PGC::utils::Context::cameraData__CameraData"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9b6351ddb73b77efe20d3264c5207e6f"></span><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_camera_data.html#_CPPv4N5prism3PGC5utils10CameraDataE" title="prism::PGC::utils::CameraData"><span class="n"><span class="pre">CameraData</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cameraData</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context10cameraDataE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context14descriptorSetsE">
+<span id="_CPPv3N5prism3PGC5utils7Context14descriptorSetsE"></span><span id="_CPPv2N5prism3PGC5utils7Context14descriptorSetsE"></span><span id="prism::PGC::utils::Context::descriptorSets__std::vector:VkDescriptorSet:"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a26b3de428ebddb65d93918e911c037f1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">VkDescriptorSet</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">descriptorSets</span></span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context14descriptorSetsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context20MAX_FRAMES_IN_FLIGHTE">
+<span id="_CPPv3N5prism3PGC5utils7Context20MAX_FRAMES_IN_FLIGHTE"></span><span id="_CPPv2N5prism3PGC5utils7Context20MAX_FRAMES_IN_FLIGHTE"></span><span id="prism::PGC::utils::Context::MAX_FRAMES_IN_FLIGHT__iC"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9eca9f1f2ce41389b90c17a2477df558"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAX_FRAMES_IN_FLIGHT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context20MAX_FRAMES_IN_FLIGHTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context16validationLayersE">
+<span id="_CPPv3N5prism3PGC5utils7Context16validationLayersE"></span><span id="_CPPv2N5prism3PGC5utils7Context16validationLayersE"></span><span id="prism::PGC::utils::Context::validationLayers__std::vector:cCP:C"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1aad40d80a4e22067cd51a9a1fa0128f66"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validationLayers</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;VK_LAYER_KHRONOS_validation&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context16validationLayersE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context16deviceExtensionsE">
+<span id="_CPPv3N5prism3PGC5utils7Context16deviceExtensionsE"></span><span id="_CPPv2N5prism3PGC5utils7Context16deviceExtensionsE"></span><span id="prism::PGC::utils::Context::deviceExtensions__std::vector:cCP:C"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a2839741dfe5060bef37fb694c51f4c72"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deviceExtensions</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="n"><span class="pre">VK_KHR_SWAPCHAIN_EXTENSION_NAME</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context16deviceExtensionsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context16dynamicAlignmentE">
+<span id="_CPPv3N5prism3PGC5utils7Context16dynamicAlignmentE"></span><span id="_CPPv2N5prism3PGC5utils7Context16dynamicAlignmentE"></span><span id="prism::PGC::utils::Context::dynamicAlignment__s"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a689375014bda6088bc48fc64077ecaa6"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dynamicAlignment</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context16dynamicAlignmentE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context11MAX_OBJECTSE">
+<span id="_CPPv3N5prism3PGC5utils7Context11MAX_OBJECTSE"></span><span id="_CPPv2N5prism3PGC5utils7Context11MAX_OBJECTSE"></span><span id="prism::PGC::utils::Context::MAX_OBJECTS__uint32_t"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a3aa659de42727b676c161ea31623bde3"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAX_OBJECTS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">500</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context11MAX_OBJECTSE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5prism3PGC5utils7Context22enableValidationLayersE">
+<span id="_CPPv3N5prism3PGC5utils7Context22enableValidationLayersE"></span><span id="_CPPv2N5prism3PGC5utils7Context22enableValidationLayersE"></span><span id="prism::PGC::utils::Context::enableValidationLayers__b"></span><span class="target" id="structprism_1_1_p_g_c_1_1utils_1_1_context_1a9176cc478987deb4fcc7ef8c26d768cf"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableValidationLayers</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N5prism3PGC5utils7Context22enableValidationLayersE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings.html" class="btn btn-neutral float-left" title="Struct ColorBlendSettings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings.html" class="btn btn-neutral float-right" title="Struct DebugSettings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Alexei Kutuzov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

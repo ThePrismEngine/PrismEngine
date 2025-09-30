@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::TextureBindingConfig</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1af458042a128c12776264fdc3943762e5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::TextureBindingConfig::binding</definition>
+        <argsstring></argsstring>
+        <name>binding</name>
+        <qualifiedname>prism::PGC::utils::TextureBindingConfig::binding</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="176" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1addf06858738ae8a93f371080154aae01" prot="public" static="no" mutable="no">
+        <type>VkDescriptorType</type>
+        <definition>VkDescriptorType prism::PGC::utils::TextureBindingConfig::descriptorType</definition>
+        <argsstring></argsstring>
+        <name>descriptorType</name>
+        <qualifiedname>prism::PGC::utils::TextureBindingConfig::descriptorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="177" column="18" bodyfile="PrismEngine/src/utils.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a4d45da354c745af5f6ea053d7c6e3599" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::utils::TextureBindingConfig::descriptorCount</definition>
+        <argsstring></argsstring>
+        <name>descriptorCount</name>
+        <qualifiedname>prism::PGC::utils::TextureBindingConfig::descriptorCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="178" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a4ab91494879f8f753f9c8c767d47ea8a" prot="public" static="no" mutable="no">
+        <type>VkShaderStageFlags</type>
+        <definition>VkShaderStageFlags prism::PGC::utils::TextureBindingConfig::stageFlags</definition>
+        <argsstring></argsstring>
+        <name>stageFlags</name>
+        <qualifiedname>prism::PGC::utils::TextureBindingConfig::stageFlags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="179" column="20" bodyfile="PrismEngine/src/utils.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1ac067231afaf9c20103a9a79d9377bee8" prot="public" static="no" mutable="no">
+        <type>const VkSampler *</type>
+        <definition>const VkSampler* prism::PGC::utils::TextureBindingConfig::immutableSamplers</definition>
+        <argsstring></argsstring>
+        <name>immutableSamplers</name>
+        <qualifiedname>prism::PGC::utils::TextureBindingConfig::immutableSamplers</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="180" column="17" bodyfile="PrismEngine/src/utils.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a9a0cf6db540b27482ffda6b68e759e46" prot="public" static="no" mutable="no">
+        <type>VkDescriptorBindingFlagsEXT</type>
+        <definition>VkDescriptorBindingFlagsEXT prism::PGC::utils::TextureBindingConfig::bindingFlags</definition>
+        <argsstring></argsstring>
+        <name>bindingFlags</name>
+        <qualifiedname>prism::PGC::utils::TextureBindingConfig::bindingFlags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="181" column="29" bodyfile="PrismEngine/src/utils.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="175" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="175" bodyend="182"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1af458042a128c12776264fdc3943762e5" prot="public" virt="non-virtual"><scope>prism::PGC::utils::TextureBindingConfig</scope><name>binding</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a9a0cf6db540b27482ffda6b68e759e46" prot="public" virt="non-virtual"><scope>prism::PGC::utils::TextureBindingConfig</scope><name>bindingFlags</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a4d45da354c745af5f6ea053d7c6e3599" prot="public" virt="non-virtual"><scope>prism::PGC::utils::TextureBindingConfig</scope><name>descriptorCount</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1addf06858738ae8a93f371080154aae01" prot="public" virt="non-virtual"><scope>prism::PGC::utils::TextureBindingConfig</scope><name>descriptorType</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1ac067231afaf9c20103a9a79d9377bee8" prot="public" virt="non-virtual"><scope>prism::PGC::utils::TextureBindingConfig</scope><name>immutableSamplers</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config_1a4ab91494879f8f753f9c8c767d47ea8a" prot="public" virt="non-virtual"><scope>prism::PGC::utils::TextureBindingConfig</scope><name>stageFlags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::DynamicStateSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings_1a15cd1bfd4e7b651cd818bdba94814795" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkDynamicState &gt;</type>
+        <definition>std::vector&lt;VkDynamicState&gt; prism::PGC::utils::DynamicStateSettings::dynamicStates</definition>
+        <argsstring></argsstring>
+        <name>dynamicStates</name>
+        <qualifiedname>prism::PGC::utils::DynamicStateSettings::dynamicStates</qualifiedname>
+        <initializer>= {
+					VK_DYNAMIC_STATE_VIEWPORT,
+					VK_DYNAMIC_STATE_SCISSOR
+				}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="242" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="242" bodyend="245"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="241" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="241" bodyend="246"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings_1a15cd1bfd4e7b651cd818bdba94814795" prot="public" virt="non-virtual"><scope>prism::PGC::utils::DynamicStateSettings</scope><name>dynamicStates</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

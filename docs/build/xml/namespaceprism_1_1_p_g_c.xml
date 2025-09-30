@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespaceprism_1_1_p_g_c" kind="namespace" language="C++">
+    <compoundname>prism::PGC</compoundname>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_buffer_wrapper" prot="public">prism::PGC::BufferWrapper</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_camera_u_b_o" prot="public">prism::PGC::CameraUBO</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_color" prot="public">prism::PGC::Color</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_descriptor_set" prot="public">prism::PGC::DescriptorSet</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout" prot="public">prism::PGC::DescriptorSetLayout</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_device_checker" prot="public">prism::PGC::DeviceChecker</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_device_rater" prot="public">prism::PGC::DeviceRater</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_device_score" prot="public">prism::PGC::DeviceScore</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_device_wrapper" prot="public">prism::PGC::DeviceWrapper</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_feature_scores" prot="public">prism::PGC::FeatureScores</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_graphics_pipeline" prot="public">prism::PGC::GraphicsPipeline</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_hardware_score" prot="public">prism::PGC::HardwareScore</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_mesh" prot="public">prism::PGC::Mesh</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_mesh_data" prot="public">prism::PGC::MeshData</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_mesh_loader" prot="public">prism::PGC::MeshLoader</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_mesh_manager" prot="public">prism::PGC::MeshManager</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_object_u_b_o" prot="public">prism::PGC::ObjectUBO</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_prism_graphic_core" prot="public">prism::PGC::PrismGraphicCore</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_push_constants" prot="public">prism::PGC::PushConstants</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_render_pass" prot="public">prism::PGC::RenderPass</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_resources_creater" prot="public">prism::PGC::ResourcesCreater</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_score_wrapper" prot="public">prism::PGC::ScoreWrapper</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_shader_stages_loader" prot="public">prism::PGC::ShaderStagesLoader</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_swap_chain" prot="public">prism::PGC::SwapChain</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_texture" prot="public">prism::PGC::Texture</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_texture_loader" prot="public">prism::PGC::TextureLoader</innerclass>
+    <innerclass refid="classprism_1_1_p_g_c_1_1_texture_manager" prot="public">prism::PGC::TextureManager</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_uniform_buffers" prot="public">prism::PGC::UniformBuffers</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_vertex" prot="public">prism::PGC::Vertex</innerclass>
+    <innerclass refid="structprism_1_1_p_g_c_1_1_vertex_hasher" prot="public">prism::PGC::VertexHasher</innerclass>
+    <innernamespace refid="namespaceprism_1_1_p_g_c_1_1base">prism::PGC::base</innernamespace>
+    <innernamespace refid="namespaceprism_1_1_p_g_c_1_1utils">prism::PGC::utils</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceprism_1_1_p_g_c_1ad693ecf2f5af4ca4af972d2be76e6da6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkResult</type>
+        <definition>VkResult prism::PGC::CreateDebugUtilsMessengerEXT</definition>
+        <argsstring>(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkDebugUtilsMessengerEXT *pDebugMessenger)</argsstring>
+        <name>CreateDebugUtilsMessengerEXT</name>
+        <qualifiedname>prism::PGC::CreateDebugUtilsMessengerEXT</qualifiedname>
+        <param>
+          <type>VkInstance</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>const VkDebugUtilsMessengerCreateInfoEXT *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type>VkDebugUtilsMessengerEXT *</type>
+          <declname>pDebugMessenger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="20" column="17" bodyfile="PrismEngine/src/base.h" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceprism_1_1_p_g_c_1aeaf6f35f94c997ce724f2de4a39a1a34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::DestroyDebugUtilsMessengerEXT</definition>
+        <argsstring>(VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger, const VkAllocationCallbacks *pAllocator)</argsstring>
+        <name>DestroyDebugUtilsMessengerEXT</name>
+        <qualifiedname>prism::PGC::DestroyDebugUtilsMessengerEXT</qualifiedname>
+        <param>
+          <type>VkInstance</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>VkDebugUtilsMessengerEXT</type>
+          <declname>debugMessenger</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="30" column="13" bodyfile="PrismEngine/src/base.h" bodystart="30" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/base.h" line="19" column="1"/>
+  </compounddef>
+</doxygen>

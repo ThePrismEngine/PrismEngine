@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_graphics_pipeline" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::GraphicsPipeline</compoundname>
+    <includes refid="graphics_pipeline_8h" local="no">graphicsPipeline.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a6694572e421cfe1b3db505c08fa4d2e8" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+        <definition>PGC::utils::Context* prism::PGC::GraphicsPipeline::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>prism::PGC::GraphicsPipeline::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/graphicsPipeline.h" line="21" column="21" bodyfile="PrismEngine/src/graphicsPipeline.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_graphics_pipeline_1ab8e3cd026c62a088ae05f964e6079e22" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+        <definition>PGC::utils::Settings* prism::PGC::GraphicsPipeline::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>prism::PGC::GraphicsPipeline::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/graphicsPipeline.h" line="22" column="22" bodyfile="PrismEngine/src/graphicsPipeline.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a840fb51b60a2ea2247a701975c97764f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::GraphicsPipeline::GraphicsPipeline</definition>
+        <argsstring>()</argsstring>
+        <name>GraphicsPipeline</name>
+        <qualifiedname>prism::PGC::GraphicsPipeline::GraphicsPipeline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/graphicsPipeline.h" line="14" column="1" bodyfile="PrismEngine/src/graphicsPipeline.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_graphics_pipeline_1abab77003ea1268010cae9d8e3c2f9287" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::GraphicsPipeline::init</definition>
+        <argsstring>(PGC::utils::Context *context, PGC::utils::Settings *settings)</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::PGC::GraphicsPipeline::init</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/graphicsPipeline.h" line="15" column="6" bodyfile="PrismEngine/src/graphicsPipeline.cpp" bodystart="4" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a957f0d03c241b419ff96efd7c3f0e1e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::GraphicsPipeline::~GraphicsPipeline</definition>
+        <argsstring>()</argsstring>
+        <name>~GraphicsPipeline</name>
+        <qualifiedname>prism::PGC::GraphicsPipeline::~GraphicsPipeline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/graphicsPipeline.h" line="16" column="1" bodyfile="PrismEngine/src/graphicsPipeline.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a6caad12b0bb9718a053f60c5ffe565e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::GraphicsPipeline::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>prism::PGC::GraphicsPipeline::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/graphicsPipeline.h" line="17" column="6" bodyfile="PrismEngine/src/graphicsPipeline.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_graphics_pipeline_1aaf543d56e4e21cf052c2c222415d4ecb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::GraphicsPipeline::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>prism::PGC::GraphicsPipeline::create</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/graphicsPipeline.h" line="19" column="6" bodyfile="PrismEngine/src/graphicsPipeline.cpp" bodystart="21" bodyend="134"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/graphicsPipeline.h" line="12" column="1" bodyfile="PrismEngine/src/graphicsPipeline.h" bodystart="12" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a6caad12b0bb9718a053f60c5ffe565e8" prot="public" virt="non-virtual"><scope>prism::PGC::GraphicsPipeline</scope><name>cleanup</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a6694572e421cfe1b3db505c08fa4d2e8" prot="private" virt="non-virtual"><scope>prism::PGC::GraphicsPipeline</scope><name>context</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1aaf543d56e4e21cf052c2c222415d4ecb" prot="private" virt="non-virtual"><scope>prism::PGC::GraphicsPipeline</scope><name>create</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a840fb51b60a2ea2247a701975c97764f" prot="public" virt="non-virtual"><scope>prism::PGC::GraphicsPipeline</scope><name>GraphicsPipeline</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1abab77003ea1268010cae9d8e3c2f9287" prot="public" virt="non-virtual"><scope>prism::PGC::GraphicsPipeline</scope><name>init</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1ab8e3cd026c62a088ae05f964e6079e22" prot="private" virt="non-virtual"><scope>prism::PGC::GraphicsPipeline</scope><name>settings</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a957f0d03c241b419ff96efd7c3f0e1e4" prot="public" virt="non-virtual"><scope>prism::PGC::GraphicsPipeline</scope><name>~GraphicsPipeline</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="graphics_pipeline_8cpp" kind="file" language="C++">
+    <compoundname>graphicsPipeline.cpp</compoundname>
+    <includes refid="graphics_pipeline_8h" local="yes">graphicsPipeline.h</includes>
+    <includes refid="vertex_8h" local="yes">vertex.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>config.h</label>
+        <link refid="_config_8h"/>
+      </node>
+      <node id="1">
+        <label>PrismEngine/src/graphicsPipeline.cpp</label>
+        <link refid="graphics_pipeline_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>graphicsPipeline.h</label>
+        <link refid="graphics_pipeline_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>mesh.h</label>
+        <link refid="mesh_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>shaderStagesLoader.h</label>
+        <link refid="shader_stages_loader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>./ubo.h</label>
+        <link refid="ubo_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vertex.h</label>
+        <link refid="vertex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SDL.h</label>
+      </node>
+      <node id="3">
+        <label>array</label>
+      </node>
+      <node id="20">
+        <label>cstdint</label>
+      </node>
+      <node id="12">
+        <label>glm.hpp</label>
+      </node>
+      <node id="6">
+        <label>optional</label>
+      </node>
+      <node id="16">
+        <label>stdexcept</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>vulkan/vulkan.h</label>
+      </node>
+      <node id="13">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="graphics_pipeline_8h" kindref="compound">graphicsPipeline.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vertex_8h" kindref="compound">vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1abab77003ea1268010cae9d8e3c2f9287" kindref="member">prism::PGC::GraphicsPipeline::init</ref>(PGC::utils::Context*<sp/>context,<sp/>PGC::utils::Settings*<sp/>settings)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;context<sp/>=<sp/>context;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;settings<sp/>=<sp/>settings;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>create();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a957f0d03c241b419ff96efd7c3f0e1e4" kindref="member">prism::PGC::GraphicsPipeline::~GraphicsPipeline</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classprism_1_1_p_g_c_1_1_graphics_pipeline_1a6caad12b0bb9718a053f60c5ffe565e8" kindref="member">prism::PGC::GraphicsPipeline::cleanup</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyPipeline(context-&gt;device,<sp/>context-&gt;graphicsPipeline,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyPipelineLayout(context-&gt;device,<sp/>context-&gt;pipelineLayout,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>prism::PGC::GraphicsPipeline::create()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;VkPipelineShaderStageCreateInfo,<sp/>2&gt;<sp/>stageArray<sp/>=<sp/><ref refid="classprism_1_1_p_g_c_1_1_shader_stages_loader_1aa721677c5e3813655eececa0aa18f8ee" kindref="member">ShaderStagesLoader::load</ref>(context,<sp/>settings);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineShaderStageCreateInfo<sp/>shaderStages[]<sp/>=<sp/>{<sp/>stageArray[0],<sp/>stageArray[1]<sp/>};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineVertexInputStateCreateInfo<sp/>vertexInputInfo{};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>vertexInputInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindingDescription<sp/>=<sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_1a6702e1cd9936929ddaa711d0258d1a07" kindref="member">Vertex::getBindingDescription</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>attributeDescriptions<sp/>=<sp/><ref refid="structprism_1_1_p_g_c_1_1_vertex_1a96daf3ba818593f35e48a0eda00c2094" kindref="member">Vertex::getAttributeDescriptions</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>vertexInputInfo.vertexBindingDescriptionCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>vertexInputInfo.vertexAttributeDescriptionCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(attributeDescriptions.size());</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>vertexInputInfo.pVertexBindingDescriptions<sp/>=<sp/>&amp;bindingDescription;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>vertexInputInfo.pVertexAttributeDescriptions<sp/>=<sp/>attributeDescriptions.data();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineInputAssemblyStateCreateInfo<sp/>inputAssembly{};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>inputAssembly.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>inputAssembly.topology<sp/>=<sp/>settings-&gt;pipeline.inputAssembly.topology;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>inputAssembly.primitiveRestartEnable<sp/>=<sp/>settings-&gt;pipeline.inputAssembly.primitiveRestartEnable;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineViewportStateCreateInfo<sp/>viewportState{};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>viewportState.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>viewportState.viewportCount<sp/>=<sp/>settings-&gt;pipeline.viewportState.viewportCount;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>viewportState.scissorCount<sp/>=<sp/>settings-&gt;pipeline.viewportState.scissorCount;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineRasterizationStateCreateInfo<sp/>rasterizer{};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>rasterizer.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>rasterizer.depthClampEnable<sp/>=<sp/>settings-&gt;pipeline.rasterization.depthClampEnable;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>rasterizer.rasterizerDiscardEnable<sp/>=<sp/>settings-&gt;pipeline.rasterization.rasterizerDiscardEnable;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>rasterizer.polygonMode<sp/>=<sp/>settings-&gt;pipeline.rasterization.polygonMode;<sp/></highlight><highlight class="comment">//VK_POLYGON_MODE_LINE;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>rasterizer.lineWidth<sp/>=<sp/>settings-&gt;pipeline.rasterization.lineWidth;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>rasterizer.cullMode<sp/>=<sp/>settings-&gt;pipeline.rasterization.cullMode;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>rasterizer.frontFace<sp/>=<sp/>settings-&gt;pipeline.rasterization.frontFace;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>rasterizer.depthBiasEnable<sp/>=<sp/>settings-&gt;pipeline.rasterization.depthBiasEnable;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineDepthStencilStateCreateInfo<sp/>depthStencil{};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.depthTestEnable<sp/>=<sp/>settings-&gt;pipeline.depthStencil.depthTestEnable;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.depthWriteEnable<sp/>=<sp/>settings-&gt;pipeline.depthStencil.depthWriteEnable;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.depthCompareOp<sp/>=<sp/>settings-&gt;pipeline.depthStencil.depthCompareOp;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.depthBoundsTestEnable<sp/>=<sp/>settings-&gt;pipeline.depthStencil.depthBoundsTestEnable;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.minDepthBounds<sp/>=<sp/>settings-&gt;pipeline.depthStencil.minDepthBounds;<sp/></highlight><highlight class="comment">//<sp/>Optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.maxDepthBounds<sp/>=<sp/>settings-&gt;pipeline.depthStencil.maxDepthBounds;<sp/></highlight><highlight class="comment">//<sp/>Optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.stencilTestEnable<sp/>=<sp/>settings-&gt;pipeline.depthStencil.stencilTestEnable;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.front<sp/>=<sp/>settings-&gt;pipeline.depthStencil.front;<sp/></highlight><highlight class="comment">//<sp/>Optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>depthStencil.back<sp/>=<sp/>settings-&gt;pipeline.depthStencil.back;<sp/></highlight><highlight class="comment">//<sp/>Optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineMultisampleStateCreateInfo<sp/>multisampling{};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>multisampling.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>multisampling.sampleShadingEnable<sp/>=<sp/>settings-&gt;pipeline.multisample.sampleShadingEnable;<sp/></highlight><highlight class="comment">//<sp/>I_P</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>multisampling.rasterizationSamples<sp/>=<sp/>context-&gt;msaaSamples;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineColorBlendStateCreateInfo<sp/>colorBlending{};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.logicOpEnable<sp/>=<sp/>settings-&gt;pipeline.colorBlend.logicOpEnable;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.logicOp<sp/>=<sp/>settings-&gt;pipeline.colorBlend.logicOp;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.attachmentCount<sp/>=<sp/>settings-&gt;pipeline.colorBlend.attachments.size();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.pAttachments<sp/>=<sp/>settings-&gt;pipeline.colorBlend.attachments.data();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.blendConstants[0]<sp/>=<sp/>settings-&gt;pipeline.colorBlend.blendConstants[0];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.blendConstants[1]<sp/>=<sp/>settings-&gt;pipeline.colorBlend.blendConstants[1];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.blendConstants[2]<sp/>=<sp/>settings-&gt;pipeline.colorBlend.blendConstants[2];</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>colorBlending.blendConstants[3]<sp/>=<sp/>settings-&gt;pipeline.colorBlend.blendConstants[3];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineDynamicStateCreateInfo<sp/>dynamicState{};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>dynamicState.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>dynamicState.dynamicStateCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(settings-&gt;pipeline.dynamicState.dynamicStates.size());</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>dynamicState.pDynamicStates<sp/>=<sp/>settings-&gt;pipeline.dynamicState.dynamicStates.data();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPushConstantRange<sp/>pushConstantRange{};<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>pushConstantRange.stageFlags<sp/>=<sp/>VK_SHADER_STAGE_FRAGMENT_BIT;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>pushConstantRange.offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>pushConstantRange.size<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structprism_1_1_p_g_c_1_1_push_constants" kindref="compound">PushConstants</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkDescriptorSetLayout&gt;<sp/>setLayouts<sp/>=<sp/>{<sp/>context-&gt;descriptorSetLayout,<sp/>context-&gt;textureDescriptorSetLayout<sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPipelineLayoutCreateInfo<sp/>pipelineLayoutInfo{};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineLayoutInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineLayoutInfo.setLayoutCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(setLayouts.size());</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineLayoutInfo.pSetLayouts<sp/>=<sp/>setLayouts.data();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineLayoutInfo.pushConstantRangeCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineLayoutInfo.pPushConstantRanges<sp/>=<sp/>&amp;pushConstantRange;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreatePipelineLayout(context-&gt;device,<sp/>&amp;pipelineLayoutInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;context-&gt;pipelineLayout)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>pipeline<sp/>layout!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>VkGraphicsPipelineCreateInfo<sp/>pipelineInfo{};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.stageCount<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pStages<sp/>=<sp/>shaderStages;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pVertexInputState<sp/>=<sp/>&amp;vertexInputInfo;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pInputAssemblyState<sp/>=<sp/>&amp;inputAssembly;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pViewportState<sp/>=<sp/>&amp;viewportState;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pRasterizationState<sp/>=<sp/>&amp;rasterizer;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pMultisampleState<sp/>=<sp/>&amp;multisampling;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pColorBlendState<sp/>=<sp/>&amp;colorBlending;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pDynamicState<sp/>=<sp/>&amp;dynamicState;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.layout<sp/>=<sp/>context-&gt;pipelineLayout;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.renderPass<sp/>=<sp/>context-&gt;renderPass;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.subpass<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.basePipelineHandle<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>pipelineInfo.pDepthStencilState<sp/>=<sp/>&amp;depthStencil;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateGraphicsPipelines(context-&gt;device,<sp/>VK_NULL_HANDLE,<sp/>1,<sp/>&amp;pipelineInfo,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;context-&gt;graphicsPipeline)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>graphics<sp/>pipeline!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyShaderModule(context-&gt;device,<sp/>stageArray[0].module,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyShaderModule(context-&gt;device,<sp/>stageArray[1].module,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="PrismEngine/src/graphicsPipeline.cpp"/>
+  </compounddef>
+</doxygen>

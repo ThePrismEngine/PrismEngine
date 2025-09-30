@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_buffer_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::BufferWrapper</compoundname>
+    <includes refid="buffer_wrapper_8h" local="no">bufferWrapper.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::BufferWrapper::createBuffer</definition>
+        <argsstring>(utils::Context *Context, VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer &amp;buffer, VkDeviceMemory &amp;bufferMemory)</argsstring>
+        <name>createBuffer</name>
+        <qualifiedname>prism::PGC::BufferWrapper::createBuffer</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>Context</declname>
+        </param>
+        <param>
+          <type>VkDeviceSize</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>VkBufferUsageFlags</type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type>VkMemoryPropertyFlags</type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type>VkBuffer &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>VkDeviceMemory &amp;</type>
+          <declname>bufferMemory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="12" column="13" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="3" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ae2b3ed3cddadc027dbcf687357b92dad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::BufferWrapper::copyBuffer</definition>
+        <argsstring>(utils::Context *context, VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size)</argsstring>
+        <name>copyBuffer</name>
+        <qualifiedname>prism::PGC::BufferWrapper::copyBuffer</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>VkBuffer</type>
+          <declname>srcBuffer</declname>
+        </param>
+        <param>
+          <type>VkBuffer</type>
+          <declname>dstBuffer</declname>
+        </param>
+        <param>
+          <type>VkDeviceSize</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="13" column="13" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="30" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a99cf311cd95b3c2a94ea37886b2e7681" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::BufferWrapper::endSingleTimeCommands</definition>
+        <argsstring>(utils::Context *context, VkCommandBuffer commandBuffer)</argsstring>
+        <name>endSingleTimeCommands</name>
+        <qualifiedname>prism::PGC::BufferWrapper::endSingleTimeCommands</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="14" column="13" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="41" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a476d6d005e1b9e7a19ef8d95efc25006" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkCommandBuffer</type>
+        <definition>VkCommandBuffer prism::PGC::BufferWrapper::beginSingleTimeCommands</definition>
+        <argsstring>(utils::Context *context)</argsstring>
+        <name>beginSingleTimeCommands</name>
+        <qualifiedname>prism::PGC::BufferWrapper::beginSingleTimeCommands</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="15" column="24" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="56" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a41720d6455629660a265368b4c450552" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::BufferWrapper::transitionImageLayout</definition>
+        <argsstring>(utils::Context *context, VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout, uint32_t mipLevels)</argsstring>
+        <name>transitionImageLayout</name>
+        <qualifiedname>prism::PGC::BufferWrapper::transitionImageLayout</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>VkImage</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>oldLayout</declname>
+        </param>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>newLayout</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mipLevels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="16" column="13" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="76" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a5029074ed5969712c8a7b1bf9928bae6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::BufferWrapper::copyBufferToImage</definition>
+        <argsstring>(utils::Context *context, VkBuffer buffer, VkImage image, uint32_t width, uint32_t height)</argsstring>
+        <name>copyBufferToImage</name>
+        <qualifiedname>prism::PGC::BufferWrapper::copyBufferToImage</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>VkBuffer</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>VkImage</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="17" column="13" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="127" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a9ef9f5cb858ca4a25e773b5d62e2a0de" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::BufferWrapper::createVertexBuffer</definition>
+        <argsstring>(utils::Context *context)</argsstring>
+        <name>createVertexBuffer</name>
+        <qualifiedname>prism::PGC::BufferWrapper::createVertexBuffer</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="18" column="13" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="151" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a021d6dd30688e704d4ad191bbcaaea40" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::BufferWrapper::createIndexBuffer</definition>
+        <argsstring>(utils::Context *context)</argsstring>
+        <name>createIndexBuffer</name>
+        <qualifiedname>prism::PGC::BufferWrapper::createIndexBuffer</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="19" column="13" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="172" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab005ab379cc8b35a7b07abafc602e118" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::BufferWrapper::createUniformBuffers</definition>
+        <argsstring>(utils::Context *context)</argsstring>
+        <name>createUniformBuffers</name>
+        <qualifiedname>prism::PGC::BufferWrapper::createUniformBuffers</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/bufferWrapper.h" line="20" column="13" bodyfile="PrismEngine/src/bufferWrapper.cpp" bodystart="193" bodyend="234"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/bufferWrapper.h" line="9" column="1" bodyfile="PrismEngine/src/bufferWrapper.h" bodystart="10" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a476d6d005e1b9e7a19ef8d95efc25006" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>beginSingleTimeCommands</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ae2b3ed3cddadc027dbcf687357b92dad" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>copyBuffer</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a5029074ed5969712c8a7b1bf9928bae6" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>copyBufferToImage</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab3ae57aaee4d3ebec53c2fd36d6f44a6" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>createBuffer</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a021d6dd30688e704d4ad191bbcaaea40" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>createIndexBuffer</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1ab005ab379cc8b35a7b07abafc602e118" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>createUniformBuffers</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a9ef9f5cb858ca4a25e773b5d62e2a0de" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>createVertexBuffer</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a99cf311cd95b3c2a94ea37886b2e7681" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>endSingleTimeCommands</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_buffer_wrapper_1a41720d6455629660a265368b4c450552" prot="public" virt="non-virtual"><scope>prism::PGC::BufferWrapper</scope><name>transitionImageLayout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

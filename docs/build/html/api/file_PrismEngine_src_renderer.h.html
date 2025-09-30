@@ -1,0 +1,632 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File renderer.h &mdash; PrismEngine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists\css\tree_view.css?v=a885cde7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists\js\CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists\js\apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Program Listing for File renderer.h" href="program_listing_file_PrismEngine_src_renderer.h.html" />
+    <link rel="prev" title="Program Listing for File renderer.cpp" href="program_listing_file_PrismEngine_src_renderer.cpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PrismEngine
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Основное:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О проекте PrismEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Быстрый старт</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_buffer_wrapper.html">Class BufferWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_descriptor_set.html">Class DescriptorSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_descriptor_set_layout.html">Class DescriptorSetLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_device_checker.html">Class DeviceChecker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_device_rater.html">Class DeviceRater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_device_wrapper.html">Class DeviceWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_graphics_pipeline.html">Class GraphicsPipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_mesh_loader.html">Class MeshLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_mesh_manager.html">Class MeshManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_prism_graphic_core.html">Class PrismGraphicCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_render_pass.html">Class RenderPass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_resources_creater.html">Class ResourcesCreater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_score_wrapper.html">Class ScoreWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_shader_stages_loader.html">Class ShaderStagesLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_swap_chain.html">Class SwapChain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_texture_loader.html">Class TextureLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1_texture_manager.html">Class TextureManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1_p_g_c_1_1base_1_1_base.html">Class Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1render_1_1_renderer.html">Class Renderer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1render_1_1_window.html">Class Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_component_manager.html">Class ComponentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_entity_manager.html">Class EntityManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_i_system.html">Class ISystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_render_system.html">Class RenderSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1scene_1_1_system_manager.html">Class SystemManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classprism_1_1view_1_1_window.html">Class Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_prism_graphic_core_8cpp_1af14fac7fbc250522a78849d58d5b0811.html">Define TINYOBJLOADER_IMPLEMENTATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_prism_graphic_core_8h_1a816ab7d5c2ce1f0a01216042837beb93.html">Define GLM_FORCE_RADIANS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_prism_graphic_core_8h_1aa53e0967978ad7a8792f6961156ec968.html">Define GLM_FORCE_DEPTH_ZERO_TO_ONE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_texture_loader_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78.html">Define STB_IMAGE_IMPLEMENTATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_C__Users_Admin_source_repos_PrismEngine_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_PrismEngine.html">Directory PrismEngine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_PrismEngine_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html">Directory src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceprism_1_1_p_g_c_1_1utils_1a7193030eda5a2fa42e3caceda991e23f.html">Enum MultisampleSelectionStrategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceprism_1_1logger_1a3e930b50cf4b43b8d9e75a260feb989f.html">Enum Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceprism_1_1logger_1abd51414545b3b1a07bc3b2161cf69856.html">Enum Level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp.html">File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.html">File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_C__Users_Admin_source_repos_PrismEngine_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_base.cpp.html">File base.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_base.h.html">File base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_bufferWrapper.cpp.html">File bufferWrapper.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_bufferWrapper.h.html">File bufferWrapper.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_cameraComponent.h.html">File cameraComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_component.h.html">File component.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_componentManager.cpp.html">File componentManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_componentManager.h.html">File componentManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_descriptorSet.cpp.html">File descriptorSet.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_descriptorSet.h.html">File descriptorSet.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_descriptorSetLayout.cpp.html">File descriptorSetLayout.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_descriptorSetLayout.h.html">File descriptorSetLayout.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceChecker.cpp.html">File deviceChecker.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceChecker.h.html">File deviceChecker.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceRater.cpp.html">File deviceRater.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceRater.h.html">File deviceRater.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceWrapper.cpp.html">File deviceWrapper.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_deviceWrapper.h.html">File deviceWrapper.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_entity.h.html">File entity.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_entityManager.cpp.html">File entityManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_entityManager.h.html">File entityManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_graphicsPipeline.cpp.html">File graphicsPipeline.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_graphicsPipeline.h.html">File graphicsPipeline.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_init.h.html">File init.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_logger.cpp.html">File logger.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_logger.h.html">File logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_mesh.h.html">File mesh.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshComponent.h.html">File meshComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshLoader.cpp.html">File meshLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshLoader.h.html">File meshLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshManager.cpp.html">File meshManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_meshManager.h.html">File meshManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_prismGraphicCore.cpp.html">File prismGraphicCore.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_prismGraphicCore.h.html">File prismGraphicCore.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderPass.cpp.html">File renderPass.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderPass.h.html">File renderPass.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderSystem.cpp.html">File renderSystem.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderSystem.h.html">File renderSystem.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_renderer.cpp.html">File renderer.cpp</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">File renderer.h</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#definition-prismengine-src-renderer-h">Definition (<code class="docutils literal notranslate"><span class="pre">PrismEngine\src\renderer.h</span></code>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderer.h.html">Program Listing for File renderer.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#includes">Includes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#included-by">Included By</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_resourcesCreater.cpp.html">File resourcesCreater.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_resourcesCreater.h.html">File resourcesCreater.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_scene.cpp.html">File scene.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_scene.h.html">File scene.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_shaderStagesLoader.cpp.html">File shaderStagesLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_shaderStagesLoader.h.html">File shaderStagesLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_swapChain.cpp.html">File swapChain.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_swapChain.h.html">File swapChain.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_system.h.html">File system.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_systemManager.cpp.html">File systemManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_systemManager.h.html">File systemManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_texture.h.html">File texture.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureComponent.h.html">File textureComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureLoader.cpp.html">File textureLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureLoader.h.html">File textureLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureManager.cpp.html">File textureManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_textureManager.h.html">File textureManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_transformComponent.h.html">File transformComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_ubo.h.html">File ubo.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_utils.h.html">File utils.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_vertex.cpp.html">File vertex.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_PrismEngine_src_vertex.h.html">File vertex.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Window.h.html">File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_WindowVkManager.cpp.html">File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_WindowVkManager.h.html">File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_logger.cpp.html">File logger.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_logger.h.html">File logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1_p_g_c_1ad693ecf2f5af4ca4af972d2be76e6da6.html">Function prism::PGC::CreateDebugUtilsMessengerEXT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1_p_g_c_1aeaf6f35f94c997ce724f2de4a39a1a34.html">Function prism::PGC::DestroyDebugUtilsMessengerEXT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a011c76bbfb6104919163e337e828a26e.html">Function prism::logger::log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a0f5071ef54b1884256b312cec14e910d.html">Function prism::logger::setOutputFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a3ce9ded53e563d7894a199406899a18c.html">Function prism::logger::debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a4009b1213765d57c2690fb9297c6bea1.html">Function prism::logger::getLastError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a44ab0bc2022efc1dbfe3234031cac93e.html">Function prism::logger::setLevel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a53c114bd789848844092ce408a10a38c.html">Function prism::logger::info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a7e98e993d5b16cdd4d5d39c6f2797967.html">Function prism::logger::clearLastError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a95789fad40cdbf5ca47baef4c355c1e1.html">Function prism::logger::warning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1a95da0e71a7281fed4c011c2dd58ba1af.html">Function prism::logger::hasLastError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1aa50f2608949bcbf87806915fb04c4abc.html">Function prism::logger::checkLastErrorType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1ab7af2a1862659afcddc003e975de9734.html">Function prism::logger::critical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1ae5db974c5397849b8fc4230c9147906d.html">Function prism::logger::error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1aea6335133a1d9d4d190d24737b4d12cc.html">Function prism::logger::setOutputConsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1af1807bb00385d1c5c4ad487f5869e9bd.html">Function prism::logger::logError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1logger_1af4a740cd72b4f7684f4466728cf548d3.html">Function prism::logger::verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a1677733d560794b1e46fd1dcfd7b4f7a.html">Function prism::math::Matrix_QuickInverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a1ee2a21c4aa09e48c35adb5e4bf81f96.html">Function prism::math::Matrix_MultiplyMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a5dabeebe5cc305b68b078008764e2b5d.html">Function prism::math::Vector_IntersectPlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a656054ef093536949e61ac4a4f1f0ea6.html">Function prism::math::Vector_CrossProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a66cc48e6731c348a983b096ab80b5b6f.html">Function prism::math::Vector_DotProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a6ac57e1dc64feb10d5df6e1a3d173446.html">Function prism::math::degToRad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1_1math_1a95812488fd848a4471b0d983c78a07f7.html">Function prism::math::Matrix_QuickInverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceprism_1ae2101b42e1b35a873edd3e9bb0cc5b6c.html">Function prism::init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html">PrismEngine API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism.html">Namespace prism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__PGC.html">Namespace prism::PGC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__PGC__base.html">Namespace prism::PGC::base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__PGC__utils.html">Namespace prism::PGC::utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__logger.html">Namespace prism::logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__logger__%40106337165161253157316040066034246044172002275261.html">Namespace prism::logger::&#64;106337165161253157316040066034246044172002275261</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__logger__%40106344202271071202303101115105003232377004322176.html">Namespace prism::logger::&#64;106344202271071202303101115105003232377004322176</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__math.html">Namespace prism::math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__render.html">Namespace prism::render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__scene.html">Namespace prism::scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_prism__view.html">Namespace prism::view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.cpp.html">Program Listing for File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_WindowVkManager.h.html">Program Listing for File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_C__Users_Admin_source_repos_PrismEngine_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_base.cpp.html">Program Listing for File base.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_base.h.html">Program Listing for File base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_bufferWrapper.cpp.html">Program Listing for File bufferWrapper.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_bufferWrapper.h.html">Program Listing for File bufferWrapper.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_cameraComponent.h.html">Program Listing for File cameraComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_component.h.html">Program Listing for File component.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_componentManager.cpp.html">Program Listing for File componentManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_componentManager.h.html">Program Listing for File componentManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_descriptorSet.cpp.html">Program Listing for File descriptorSet.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_descriptorSet.h.html">Program Listing for File descriptorSet.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_descriptorSetLayout.cpp.html">Program Listing for File descriptorSetLayout.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_descriptorSetLayout.h.html">Program Listing for File descriptorSetLayout.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceChecker.cpp.html">Program Listing for File deviceChecker.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceChecker.h.html">Program Listing for File deviceChecker.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceRater.cpp.html">Program Listing for File deviceRater.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceRater.h.html">Program Listing for File deviceRater.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceWrapper.cpp.html">Program Listing for File deviceWrapper.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_deviceWrapper.h.html">Program Listing for File deviceWrapper.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_entity.h.html">Program Listing for File entity.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_entityManager.cpp.html">Program Listing for File entityManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_entityManager.h.html">Program Listing for File entityManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_graphicsPipeline.cpp.html">Program Listing for File graphicsPipeline.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_graphicsPipeline.h.html">Program Listing for File graphicsPipeline.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_init.h.html">Program Listing for File init.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_logger.cpp.html">Program Listing for File logger.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_logger.h.html">Program Listing for File logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_mesh.h.html">Program Listing for File mesh.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshComponent.h.html">Program Listing for File meshComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshLoader.cpp.html">Program Listing for File meshLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshLoader.h.html">Program Listing for File meshLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshManager.cpp.html">Program Listing for File meshManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_meshManager.h.html">Program Listing for File meshManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_prismGraphicCore.cpp.html">Program Listing for File prismGraphicCore.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_prismGraphicCore.h.html">Program Listing for File prismGraphicCore.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderPass.cpp.html">Program Listing for File renderPass.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderPass.h.html">Program Listing for File renderPass.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderSystem.cpp.html">Program Listing for File renderSystem.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderSystem.h.html">Program Listing for File renderSystem.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderer.cpp.html">Program Listing for File renderer.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderer.h.html">Program Listing for File renderer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_resourcesCreater.cpp.html">Program Listing for File resourcesCreater.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_resourcesCreater.h.html">Program Listing for File resourcesCreater.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_scene.cpp.html">Program Listing for File scene.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_scene.h.html">Program Listing for File scene.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_shaderStagesLoader.cpp.html">Program Listing for File shaderStagesLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_shaderStagesLoader.h.html">Program Listing for File shaderStagesLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_swapChain.cpp.html">Program Listing for File swapChain.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_swapChain.h.html">Program Listing for File swapChain.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_system.h.html">Program Listing for File system.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_systemManager.cpp.html">Program Listing for File systemManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_systemManager.h.html">Program Listing for File systemManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_texture.h.html">Program Listing for File texture.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureComponent.h.html">Program Listing for File textureComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureLoader.cpp.html">Program Listing for File textureLoader.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureLoader.h.html">Program Listing for File textureLoader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureManager.cpp.html">Program Listing for File textureManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_textureManager.h.html">Program Listing for File textureManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_transformComponent.h.html">Program Listing for File transformComponent.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_ubo.h.html">Program Listing for File ubo.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_utils.h.html">Program Listing for File utils.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_vertex.cpp.html">Program Listing for File vertex.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_PrismEngine_src_vertex.h.html">Program Listing for File vertex.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Config.h.html">Program Listing for File Config.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Frame.cpp.html">Program Listing for File Frame.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Frame.h.html">Program Listing for File Frame.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_PrismEngine.cpp.html">Program Listing for File PrismEngine.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_PrismEngine.h.html">Program Listing for File PrismEngine.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Window.cpp.html">Program Listing for File Window.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_Window.h.html">Program Listing for File Window.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_WindowVkManager.cpp.html">Program Listing for File WindowVkManager.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_WindowVkManager.h.html">Program Listing for File WindowVkManager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_fmath.cpp.html">Program Listing for File fmath.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_fmath.h.html">Program Listing for File fmath.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_logger.cpp.html">Program Listing for File logger.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_logger.h.html">Program Listing for File logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_matrix.cpp.html">Program Listing for File matrix.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_matrix.h.html">Program Listing for File matrix.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_vector.cpp.html">Program Listing for File vector.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="program_listing_file_src_vector.h.html">Program Listing for File vector.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_camera_u_b_o.html">Struct CameraUBO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_color.html">Struct Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_device_score.html">Struct DeviceScore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_feature_scores.html">Struct FeatureScores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_hardware_score.html">Struct HardwareScore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_mesh.html">Struct Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_mesh_data.html">Struct MeshData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_object_u_b_o.html">Struct ObjectUBO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_push_constants.html">Struct PushConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_texture.html">Struct Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_uniform_buffers.html">Struct UniformBuffers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_vertex.html">Struct Vertex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1_vertex_hasher.html">Struct VertexHasher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_app_settings.html">Struct AppSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_binding_config.html">Struct BindingConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_camera_data.html">Struct CameraData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_attachment_settings.html">Struct ColorBlendAttachmentSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings.html">Struct ColorBlendSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_context.html">Struct Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_debug_settings.html">Struct DebugSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings.html">Struct DepthStencilSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_descriptor_set_layout_settings.html">Struct DescriptorSetLayoutSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_device_evaluation_weights_settings.html">Struct DeviceEvaluationWeightsSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings.html">Struct DynamicStateSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings.html">Struct InputAssemblySettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings.html">Struct MultisampleSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings.html">Struct PipelineSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_queue_family_indices.html">Struct QueueFamilyIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings.html">Struct RasterizationSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_settings.html">Struct Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings.html">Struct ShadersSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_settings.html">Struct SwapChainSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_swap_chain_support_details.html">Struct SwapChainSupportDetails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_texture_binding_config.html">Struct TextureBindingConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_texture_descriptor_set_layout_settings.html">Struct TextureDescriptorSetLayoutSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings.html">Struct ViewportStateSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_prism_info.html">Struct PrismInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_prism_version.html">Struct PrismVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1_version.html">Struct Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1math_1_1_matrix4_x4.html">Struct Matrix4X4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1math_1_1_vector3d.html">Struct Vector3d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_camera_component.html">Struct CameraComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_component_manager_1_1_component_storage.html">Template Struct ComponentManager::ComponentStorage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage.html">Struct ComponentManager::IComponentStorage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_look.html">Struct Look</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_mesh_component.html">Struct MeshComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_position.html">Struct Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_rotation.html">Struct Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_scale.html">Struct Scale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_texture_component.html">Struct TextureComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1scene_1_1_transform_component.html">Struct TransformComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structprism_1_1view_1_1_queue_family_indices.html">Struct QueueFamilyIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1_1scene_1a26a27fa2da7635c84c4d875e8cdac5de.html">Typedef prism::scene::SystemId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1_1scene_1a6233cae67fb5dbba2836694cdc18a810.html">Typedef prism::scene::ComponentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9.html">Typedef prism::scene::Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1a0bb25671f356c934c5602ac140b29a3d.html">Typedef prism::Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_namespaceprism_1a4eb58886ec719d71730e862aee4d4385.html">Typedef prism::Mesh</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="unabridged_orphan.html">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="unabridged_orphan.html#directories">Directories</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="unabridged_orphan.html#files">Files</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_base.cpp.html">File base.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_base.h.html">File base.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_bufferWrapper.cpp.html">File bufferWrapper.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_bufferWrapper.h.html">File bufferWrapper.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_cameraComponent.h.html">File cameraComponent.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_component.h.html">File component.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_componentManager.cpp.html">File componentManager.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_componentManager.h.html">File componentManager.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_Config.h.html">File Config.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_descriptorSet.cpp.html">File descriptorSet.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_descriptorSet.h.html">File descriptorSet.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_descriptorSetLayout.cpp.html">File descriptorSetLayout.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_descriptorSetLayout.h.html">File descriptorSetLayout.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_deviceChecker.cpp.html">File deviceChecker.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_deviceChecker.h.html">File deviceChecker.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_deviceRater.cpp.html">File deviceRater.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_deviceRater.h.html">File deviceRater.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_deviceWrapper.cpp.html">File deviceWrapper.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_deviceWrapper.h.html">File deviceWrapper.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_entity.h.html">File entity.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_entityManager.cpp.html">File entityManager.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_entityManager.h.html">File entityManager.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_fmath.cpp.html">File fmath.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_fmath.h.html">File fmath.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_Frame.cpp.html">File Frame.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_Frame.h.html">File Frame.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_graphicsPipeline.cpp.html">File graphicsPipeline.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_graphicsPipeline.h.html">File graphicsPipeline.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_init.h.html">File init.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_logger.cpp.html">File logger.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_logger.h.html">File logger.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_matrix.cpp.html">File matrix.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_matrix.h.html">File matrix.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_mesh.h.html">File mesh.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_meshComponent.h.html">File meshComponent.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_meshLoader.cpp.html">File meshLoader.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_meshLoader.h.html">File meshLoader.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_meshManager.cpp.html">File meshManager.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_meshManager.h.html">File meshManager.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_PrismEngine.cpp.html">File PrismEngine.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_PrismEngine.h.html">File PrismEngine.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_prismGraphicCore.cpp.html">File prismGraphicCore.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_prismGraphicCore.h.html">File prismGraphicCore.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_renderer.cpp.html">File renderer.cpp</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">File renderer.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_renderPass.cpp.html">File renderPass.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_renderPass.h.html">File renderPass.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_renderSystem.cpp.html">File renderSystem.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_renderSystem.h.html">File renderSystem.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_resourcesCreater.cpp.html">File resourcesCreater.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_resourcesCreater.h.html">File resourcesCreater.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_scene.cpp.html">File scene.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_scene.h.html">File scene.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_shaderStagesLoader.cpp.html">File shaderStagesLoader.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_shaderStagesLoader.h.html">File shaderStagesLoader.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_swapChain.cpp.html">File swapChain.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_swapChain.h.html">File swapChain.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_system.h.html">File system.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_systemManager.cpp.html">File systemManager.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_systemManager.h.html">File systemManager.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_texture.h.html">File texture.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_textureComponent.h.html">File textureComponent.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_textureLoader.cpp.html">File textureLoader.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_textureLoader.h.html">File textureLoader.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_textureManager.cpp.html">File textureManager.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_textureManager.h.html">File textureManager.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_transformComponent.h.html">File transformComponent.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_ubo.h.html">File ubo.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_utils.h.html">File utils.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_vector.cpp.html">File vector.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_vector.h.html">File vector.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_vertex.cpp.html">File vertex.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_vertex.h.html">File vertex.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_Window.cpp.html">File Window.cpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_PrismEngine_src_Window.h.html">File Window.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1scene_1a3949544449808fa9981f4ac8cc49537b.html">Variable prism::scene::INVALID_ENTITY_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1scene_1a4ce677c2eee0379c21cce541c0bc9752.html">Variable prism::scene::INVALID_SYSTEM_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1scene_1ad63c2c31072dfa1cb1b74b5c51557299.html">Variable prism::scene::INVALID_COMPONENT_TYPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1view_1a5e08683d7e148199c9e82e1382ca3f97.html">Variable prism::view::validationLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1_1view_1aad0a33fb229c69df767196676a0bb441.html">Variable prism::view::deviceExtensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1a0894323454f28ab68c93aa1039a08672.html">Variable prism::isInit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceprism_1ab88df87c3fd3b1403a69f7b6e8cb6128.html">Variable prism::INVALID_TEXTURE</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Компоненты:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ecs/index.html">ECS Module (Entity-Component-System)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/pgc.html">Графическое ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/logger.html">Модуль логирования</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/math.html">Модуль математики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ppc.html">Физический движок</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/pcc.html">Вычислительное ядро</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ui.html">Пользовательский интерфейс</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Разработка:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Участие в разработке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/code_style.html">Стандарты кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/build_guide.html">Руководство по сборке</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PrismEngine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+      <li class="breadcrumb-item active">File renderer.h</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/file_PrismEngine_src_renderer.h.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-renderer-h">
+<span id="file-prismengine-src-renderer-h"></span><h1>File renderer.h<a class="headerlink" href="#file-renderer-h" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="dir_PrismEngine_src.html#dir-prismengine-src"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">PrismEngine\src</span></code>)</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-prismengine-src-renderer-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">PrismEngine\src\renderer.h</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id5">Classes</a></p></li>
+</ul>
+</nav>
+<section id="definition-prismengine-src-renderer-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">PrismEngine\src\renderer.h</span></code>)<a class="headerlink" href="#definition-prismengine-src-renderer-h" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_PrismEngine_src_renderer.h.html">Program Listing for File renderer.h</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Window.h</span></code> (<a class="reference internal" href="file_PrismEngine_src_Window.h.html#file-prismengine-src-window-h"><span class="std std-ref">File Window.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cameraComponent.h</span></code> (<a class="reference internal" href="file_PrismEngine_src_cameraComponent.h.html#file-prismengine-src-cameracomponent-h"><span class="std std-ref">File cameraComponent.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">meshComponent.h</span></code> (<a class="reference internal" href="file_PrismEngine_src_meshComponent.h.html#file-prismengine-src-meshcomponent-h"><span class="std std-ref">File meshComponent.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prismGraphicCore.h</span></code> (<a class="reference internal" href="file_PrismEngine_src_prismGraphicCore.h.html#file-prismengine-src-prismgraphiccore-h"><span class="std std-ref">File prismGraphicCore.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textureComponent.h</span></code> (<a class="reference internal" href="file_PrismEngine_src_textureComponent.h.html#file-prismengine-src-texturecomponent-h"><span class="std std-ref">File textureComponent.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transformComponent.h</span></code> (<a class="reference internal" href="file_PrismEngine_src_transformComponent.h.html#file-prismengine-src-transformcomponent-h"><span class="std std-ref">File transformComponent.h</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_PrismEngine_src_PrismEngine.h.html#file-prismengine-src-prismengine-h"><span class="std std-ref">File PrismEngine.h</span></a></p></li>
+<li><p><a class="reference internal" href="file_PrismEngine_src_renderSystem.h.html#file-prismengine-src-rendersystem-h"><span class="std std-ref">File renderSystem.h</span></a></p></li>
+<li><p><a class="reference internal" href="file_PrismEngine_src_renderer.cpp.html#file-prismengine-src-renderer-cpp"><span class="std std-ref">File renderer.cpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_prism.html#namespace-prism"><span class="std std-ref">Namespace prism</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_prism__render.html#namespace-prism-render"><span class="std std-ref">Namespace prism::render</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="classprism_1_1render_1_1_renderer.html#exhale-class-classprism-1-1render-1-1-renderer"><span class="std std-ref">Class Renderer</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="program_listing_file_PrismEngine_src_renderer.cpp.html" class="btn btn-neutral float-left" title="Program Listing for File renderer.cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="program_listing_file_PrismEngine_src_renderer.h.html" class="btn btn-neutral float-right" title="Program Listing for File renderer.h" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Alexei Kutuzov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1_uniform_buffers" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::UniformBuffers</compoundname>
+    <includes refid="ubo_8h" local="no">ubo.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_uniform_buffers_1ae28940e1bd6c86448eaf0fdc9a6d32b5" prot="public" static="no" mutable="no">
+        <type>VkBuffer</type>
+        <definition>VkBuffer prism::PGC::UniformBuffers::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <qualifiedname>prism::PGC::UniformBuffers::camera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/ubo.h" line="21" column="10" bodyfile="PrismEngine/src/ubo.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_uniform_buffers_1a1547b44dc337c2b7a1c7c08b055e74ba" prot="public" static="no" mutable="no">
+        <type>VkDeviceMemory</type>
+        <definition>VkDeviceMemory prism::PGC::UniformBuffers::cameraMemory</definition>
+        <argsstring></argsstring>
+        <name>cameraMemory</name>
+        <qualifiedname>prism::PGC::UniformBuffers::cameraMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/ubo.h" line="22" column="16" bodyfile="PrismEngine/src/ubo.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_uniform_buffers_1aaa836b6e43906acf9d68af4e52eefc14" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* prism::PGC::UniformBuffers::cameraMapped</definition>
+        <argsstring></argsstring>
+        <name>cameraMapped</name>
+        <qualifiedname>prism::PGC::UniformBuffers::cameraMapped</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/ubo.h" line="23" column="6" bodyfile="PrismEngine/src/ubo.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_uniform_buffers_1ada37f01ba2a25fd49a0bba2e7df446a7" prot="public" static="no" mutable="no">
+        <type>VkBuffer</type>
+        <definition>VkBuffer prism::PGC::UniformBuffers::object</definition>
+        <argsstring></argsstring>
+        <name>object</name>
+        <qualifiedname>prism::PGC::UniformBuffers::object</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/ubo.h" line="25" column="10" bodyfile="PrismEngine/src/ubo.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_uniform_buffers_1a131612e5d7939c23ec5161aaf97d4b78" prot="public" static="no" mutable="no">
+        <type>VkDeviceMemory</type>
+        <definition>VkDeviceMemory prism::PGC::UniformBuffers::objectMemory</definition>
+        <argsstring></argsstring>
+        <name>objectMemory</name>
+        <qualifiedname>prism::PGC::UniformBuffers::objectMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/ubo.h" line="26" column="16" bodyfile="PrismEngine/src/ubo.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_uniform_buffers_1a0b6df00b37a6636c0726ba3a62efc9ed" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* prism::PGC::UniformBuffers::objectMapped</definition>
+        <argsstring></argsstring>
+        <name>objectMapped</name>
+        <qualifiedname>prism::PGC::UniformBuffers::objectMapped</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/ubo.h" line="27" column="6" bodyfile="PrismEngine/src/ubo.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/ubo.h" line="20" column="1" bodyfile="PrismEngine/src/ubo.h" bodystart="20" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1ae28940e1bd6c86448eaf0fdc9a6d32b5" prot="public" virt="non-virtual"><scope>prism::PGC::UniformBuffers</scope><name>camera</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1aaa836b6e43906acf9d68af4e52eefc14" prot="public" virt="non-virtual"><scope>prism::PGC::UniformBuffers</scope><name>cameraMapped</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1a1547b44dc337c2b7a1c7c08b055e74ba" prot="public" virt="non-virtual"><scope>prism::PGC::UniformBuffers</scope><name>cameraMemory</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1ada37f01ba2a25fd49a0bba2e7df446a7" prot="public" virt="non-virtual"><scope>prism::PGC::UniformBuffers</scope><name>object</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1a0b6df00b37a6636c0726ba3a62efc9ed" prot="public" virt="non-virtual"><scope>prism::PGC::UniformBuffers</scope><name>objectMapped</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_uniform_buffers_1a131612e5d7939c23ec5161aaf97d4b78" prot="public" virt="non-virtual"><scope>prism::PGC::UniformBuffers</scope><name>objectMemory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

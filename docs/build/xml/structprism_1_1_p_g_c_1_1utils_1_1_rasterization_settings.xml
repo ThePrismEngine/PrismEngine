@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::RasterizationSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a2bcefa37a2c02866aa211cc2a3bbc6cc" prot="public" static="no" mutable="no">
+        <type>VkPolygonMode</type>
+        <definition>VkPolygonMode prism::PGC::utils::RasterizationSettings::polygonMode</definition>
+        <argsstring></argsstring>
+        <name>polygonMode</name>
+        <qualifiedname>prism::PGC::utils::RasterizationSettings::polygonMode</qualifiedname>
+        <initializer>= VK_POLYGON_MODE_FILL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="202" column="15" bodyfile="PrismEngine/src/utils.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a25b167d3ed958b55a93bdf21c3e6ba1b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::RasterizationSettings::lineWidth</definition>
+        <argsstring></argsstring>
+        <name>lineWidth</name>
+        <qualifiedname>prism::PGC::utils::RasterizationSettings::lineWidth</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="203" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a9fffcb91bd6ba955bfed9f82b2b9cebd" prot="public" static="no" mutable="no">
+        <type>VkCullModeFlags</type>
+        <definition>VkCullModeFlags prism::PGC::utils::RasterizationSettings::cullMode</definition>
+        <argsstring></argsstring>
+        <name>cullMode</name>
+        <qualifiedname>prism::PGC::utils::RasterizationSettings::cullMode</qualifiedname>
+        <initializer>= VK_CULL_MODE_BACK_BIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="204" column="17" bodyfile="PrismEngine/src/utils.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a47e5208647172a1cab75dbf5d797fb89" prot="public" static="no" mutable="no">
+        <type>VkFrontFace</type>
+        <definition>VkFrontFace prism::PGC::utils::RasterizationSettings::frontFace</definition>
+        <argsstring></argsstring>
+        <name>frontFace</name>
+        <qualifiedname>prism::PGC::utils::RasterizationSettings::frontFace</qualifiedname>
+        <initializer>= VK_FRONT_FACE_COUNTER_CLOCKWISE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="205" column="13" bodyfile="PrismEngine/src/utils.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1adff42ee68718b965e677060d9cf48314" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::RasterizationSettings::depthClampEnable</definition>
+        <argsstring></argsstring>
+        <name>depthClampEnable</name>
+        <qualifiedname>prism::PGC::utils::RasterizationSettings::depthClampEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="206" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a150300b8301848c26ed08c9dbd7c1484" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::RasterizationSettings::rasterizerDiscardEnable</definition>
+        <argsstring></argsstring>
+        <name>rasterizerDiscardEnable</name>
+        <qualifiedname>prism::PGC::utils::RasterizationSettings::rasterizerDiscardEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="207" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a26d76a381e5b29f11f874a4ae436e52d" prot="public" static="no" mutable="no">
+        <type>VkBool32</type>
+        <definition>VkBool32 prism::PGC::utils::RasterizationSettings::depthBiasEnable</definition>
+        <argsstring></argsstring>
+        <name>depthBiasEnable</name>
+        <qualifiedname>prism::PGC::utils::RasterizationSettings::depthBiasEnable</qualifiedname>
+        <initializer>= VK_FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="208" column="10" bodyfile="PrismEngine/src/utils.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="201" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="201" bodyend="209"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a9fffcb91bd6ba955bfed9f82b2b9cebd" prot="public" virt="non-virtual"><scope>prism::PGC::utils::RasterizationSettings</scope><name>cullMode</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a26d76a381e5b29f11f874a4ae436e52d" prot="public" virt="non-virtual"><scope>prism::PGC::utils::RasterizationSettings</scope><name>depthBiasEnable</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1adff42ee68718b965e677060d9cf48314" prot="public" virt="non-virtual"><scope>prism::PGC::utils::RasterizationSettings</scope><name>depthClampEnable</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a47e5208647172a1cab75dbf5d797fb89" prot="public" virt="non-virtual"><scope>prism::PGC::utils::RasterizationSettings</scope><name>frontFace</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a25b167d3ed958b55a93bdf21c3e6ba1b" prot="public" virt="non-virtual"><scope>prism::PGC::utils::RasterizationSettings</scope><name>lineWidth</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a2bcefa37a2c02866aa211cc2a3bbc6cc" prot="public" virt="non-virtual"><scope>prism::PGC::utils::RasterizationSettings</scope><name>polygonMode</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings_1a150300b8301848c26ed08c9dbd7c1484" prot="public" virt="non-virtual"><scope>prism::PGC::utils::RasterizationSettings</scope><name>rasterizerDiscardEnable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

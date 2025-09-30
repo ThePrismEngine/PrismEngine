@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespaceprism_1_1_p_g_c_1_1base" kind="namespace" language="C++">
+    <compoundname>prism::PGC::base</compoundname>
+    <innerclass refid="classprism_1_1_p_g_c_1_1base_1_1_base" prot="public">prism::PGC::base::Base</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/base.h" line="37" column="1"/>
+  </compounddef>
+</doxygen>

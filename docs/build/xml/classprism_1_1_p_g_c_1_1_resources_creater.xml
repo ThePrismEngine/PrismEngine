@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_resources_creater" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::ResourcesCreater</compoundname>
+    <includes refid="resources_creater_8h" local="no">resourcesCreater.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_resources_creater_1abd176274158468bb98a309f56b21aba8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::ResourcesCreater::createImage</definition>
+        <argsstring>(utils::Context *context, uint32_t width, uint32_t height, uint32_t mipLevels, VkSampleCountFlagBits numSamples, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkMemoryPropertyFlags properties, VkImage &amp;image, VkDeviceMemory &amp;imageMemory)</argsstring>
+        <name>createImage</name>
+        <qualifiedname>prism::PGC::ResourcesCreater::createImage</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mipLevels</declname>
+        </param>
+        <param>
+          <type>VkSampleCountFlagBits</type>
+          <declname>numSamples</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>VkImageTiling</type>
+          <declname>tiling</declname>
+        </param>
+        <param>
+          <type>VkImageUsageFlags</type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type>VkMemoryPropertyFlags</type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type>VkImage &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>VkDeviceMemory &amp;</type>
+          <declname>imageMemory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/resourcesCreater.h" line="12" column="13" bodyfile="PrismEngine/src/resourcesCreater.cpp" bodystart="3" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_resources_creater_1a47be41c0f55c49f83af5f407b310b49a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkImageView</type>
+        <definition>VkImageView prism::PGC::ResourcesCreater::createImageView</definition>
+        <argsstring>(VkDevice device, VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels)</argsstring>
+        <name>createImageView</name>
+        <qualifiedname>prism::PGC::ResourcesCreater::createImageView</qualifiedname>
+        <param>
+          <type>VkDevice</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VkImage</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>VkImageAspectFlags</type>
+          <declname>aspectFlags</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mipLevels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/resourcesCreater.h" line="13" column="20" bodyfile="PrismEngine/src/resourcesCreater.cpp" bodystart="40" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_resources_creater_1adcf795e7e2f15fd8efa60674a139fe2c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::ResourcesCreater::createFramebuffers</definition>
+        <argsstring>(utils::Context *context, utils::Settings *settings)</argsstring>
+        <name>createFramebuffers</name>
+        <qualifiedname>prism::PGC::ResourcesCreater::createFramebuffers</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/resourcesCreater.h" line="14" column="13" bodyfile="PrismEngine/src/resourcesCreater.cpp" bodystart="63" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_resources_creater_1ac09e34b5b6c2bcb1edbf3c9e264d1fe6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::ResourcesCreater::createColorResources</definition>
+        <argsstring>(utils::Context *context, utils::Settings *settings)</argsstring>
+        <name>createColorResources</name>
+        <qualifiedname>prism::PGC::ResourcesCreater::createColorResources</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/resourcesCreater.h" line="15" column="13" bodyfile="PrismEngine/src/resourcesCreater.cpp" bodystart="89" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_resources_creater_1aaff73dce2f951521017bf9cfd7e74267" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::ResourcesCreater::createDepthResources</definition>
+        <argsstring>(utils::Context *context, utils::Settings *settings)</argsstring>
+        <name>createDepthResources</name>
+        <qualifiedname>prism::PGC::ResourcesCreater::createDepthResources</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/resourcesCreater.h" line="16" column="25" bodyfile="PrismEngine/src/resourcesCreater.cpp" bodystart="98" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_resources_creater_1a50d8fcc21c002432511c9f541354fedc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::ResourcesCreater::createTextureSampler</definition>
+        <argsstring>(utils::Context *context, VkSampler *textureSampler)</argsstring>
+        <name>createTextureSampler</name>
+        <qualifiedname>prism::PGC::ResourcesCreater::createTextureSampler</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>VkSampler *</type>
+          <declname>textureSampler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/resourcesCreater.h" line="17" column="13" bodyfile="PrismEngine/src/resourcesCreater.cpp" bodystart="106" bodyend="132"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/resourcesCreater.h" line="9" column="1" bodyfile="PrismEngine/src/resourcesCreater.h" bodystart="10" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1ac09e34b5b6c2bcb1edbf3c9e264d1fe6" prot="public" virt="non-virtual"><scope>prism::PGC::ResourcesCreater</scope><name>createColorResources</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1aaff73dce2f951521017bf9cfd7e74267" prot="public" virt="non-virtual"><scope>prism::PGC::ResourcesCreater</scope><name>createDepthResources</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1adcf795e7e2f15fd8efa60674a139fe2c" prot="public" virt="non-virtual"><scope>prism::PGC::ResourcesCreater</scope><name>createFramebuffers</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1abd176274158468bb98a309f56b21aba8" prot="public" virt="non-virtual"><scope>prism::PGC::ResourcesCreater</scope><name>createImage</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1a47be41c0f55c49f83af5f407b310b49a" prot="public" virt="non-virtual"><scope>prism::PGC::ResourcesCreater</scope><name>createImageView</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_resources_creater_1a50d8fcc21c002432511c9f541354fedc" prot="public" virt="non-virtual"><scope>prism::PGC::ResourcesCreater</scope><name>createTextureSampler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

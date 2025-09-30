@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1scene_1_1_mesh_component" kind="struct" language="C++" prot="public">
+    <compoundname>prism::scene::MeshComponent</compoundname>
+    <includes refid="mesh_component_8h" local="no">meshComponent.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_mesh_component_1ab7affeb7aa3a9b6c19b3549641eb98b9" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceprism_1a4eb58886ec719d71730e862aee4d4385" kindref="member">Mesh</ref></type>
+        <definition>Mesh prism::scene::MeshComponent::mesh</definition>
+        <argsstring></argsstring>
+        <name>mesh</name>
+        <qualifiedname>prism::scene::MeshComponent::mesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/meshComponent.h" line="8" column="6" bodyfile="PrismEngine/src/meshComponent.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/meshComponent.h" line="6" column="1" bodyfile="PrismEngine/src/meshComponent.h" bodystart="7" bodyend="9"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_mesh_component_1ab7affeb7aa3a9b6c19b3549641eb98b9" prot="public" virt="non-virtual"><scope>prism::scene::MeshComponent</scope><name>mesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

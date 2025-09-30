@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1_mesh_data" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::MeshData</compoundname>
+    <includes refid="mesh_loader_8h" local="no">meshLoader.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_mesh_data_1a4bc43f340a4e404e00b2cf8d589daaa8" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structprism_1_1_p_g_c_1_1_vertex" kindref="compound">Vertex</ref> &gt;</type>
+        <definition>std::vector&lt;Vertex&gt; prism::PGC::MeshData::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <qualifiedname>prism::PGC::MeshData::vertices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/meshLoader.h" line="8" column="13" bodyfile="PrismEngine/src/meshLoader.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_mesh_data_1ab796f684d17a6f311a68ee8c7b92a508" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint32_t &gt;</type>
+        <definition>std::vector&lt;uint32_t&gt; prism::PGC::MeshData::indices</definition>
+        <argsstring></argsstring>
+        <name>indices</name>
+        <qualifiedname>prism::PGC::MeshData::indices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/meshLoader.h" line="9" column="13" bodyfile="PrismEngine/src/meshLoader.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/meshLoader.h" line="7" column="1" bodyfile="PrismEngine/src/meshLoader.h" bodystart="7" bodyend="10"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_mesh_data_1ab796f684d17a6f311a68ee8c7b92a508" prot="public" virt="non-virtual"><scope>prism::PGC::MeshData</scope><name>indices</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_mesh_data_1a4bc43f340a4e404e00b2cf8d589daaa8" prot="public" virt="non-virtual"><scope>prism::PGC::MeshData</scope><name>vertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

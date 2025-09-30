@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1_texture" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::Texture</compoundname>
+    <includes refid="texture_8h" local="no">texture.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1ae2ea89d2703e9867baf39038cbe8bbea" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string prism::PGC::Texture::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>prism::PGC::Texture::path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="15" column="13" bodyfile="PrismEngine/src/texture.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1a7d476368920ebb232a5f4e94e3ff55ae" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::Texture::mipLevels</definition>
+        <argsstring></argsstring>
+        <name>mipLevels</name>
+        <qualifiedname>prism::PGC::Texture::mipLevels</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="16" column="10" bodyfile="PrismEngine/src/texture.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1abd40ed204816dfcc65c523f153604bad" prot="public" static="no" mutable="no">
+        <type>VkImage</type>
+        <definition>VkImage prism::PGC::Texture::image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <qualifiedname>prism::PGC::Texture::image</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="18" column="9" bodyfile="PrismEngine/src/texture.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1add3c672745e73859d33150e7c4c4eda5" prot="public" static="no" mutable="no">
+        <type>VkImageView</type>
+        <definition>VkImageView prism::PGC::Texture::imageView</definition>
+        <argsstring></argsstring>
+        <name>imageView</name>
+        <qualifiedname>prism::PGC::Texture::imageView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="19" column="13" bodyfile="PrismEngine/src/texture.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1ad08bf531d52c02d1f38df4dace4af33b" prot="public" static="no" mutable="no">
+        <type>VkDeviceMemory</type>
+        <definition>VkDeviceMemory prism::PGC::Texture::imageMemory</definition>
+        <argsstring></argsstring>
+        <name>imageMemory</name>
+        <qualifiedname>prism::PGC::Texture::imageMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="20" column="16" bodyfile="PrismEngine/src/texture.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1a61bcd37ea4a3370e511be1ff20f1ebfd" prot="public" static="no" mutable="no">
+        <type>VkSampler</type>
+        <definition>VkSampler prism::PGC::Texture::sampler</definition>
+        <argsstring></argsstring>
+        <name>sampler</name>
+        <qualifiedname>prism::PGC::Texture::sampler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="21" column="11" bodyfile="PrismEngine/src/texture.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1a2e1bfede8b7c3bdbddfa469b451f52f9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prism::PGC::Texture::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>prism::PGC::Texture::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="23" column="5" bodyfile="PrismEngine/src/texture.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1a7fa75c86eb665bc42d2f0e5dd8bacfed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prism::PGC::Texture::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>prism::PGC::Texture::height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="23" column="11" bodyfile="PrismEngine/src/texture.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1a91d71b52858a94f75d7f25a198b22c29" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prism::PGC::Texture::channels</definition>
+        <argsstring></argsstring>
+        <name>channels</name>
+        <qualifiedname>prism::PGC::Texture::channels</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="23" column="18" bodyfile="PrismEngine/src/texture.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1_texture_1a001aa2bc27b0950c7a40d65065cbd75c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prism::PGC::Texture::bindlessIndex</definition>
+        <argsstring></argsstring>
+        <name>bindlessIndex</name>
+        <qualifiedname>prism::PGC::Texture::bindlessIndex</qualifiedname>
+        <initializer>= UINT32_MAX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/texture.h" line="25" column="10" bodyfile="PrismEngine/src/texture.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/texture.h" line="13" column="1" bodyfile="PrismEngine/src/texture.h" bodystart="14" bodyend="26"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1a001aa2bc27b0950c7a40d65065cbd75c" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>bindlessIndex</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1a91d71b52858a94f75d7f25a198b22c29" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>channels</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1a7fa75c86eb665bc42d2f0e5dd8bacfed" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>height</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1abd40ed204816dfcc65c523f153604bad" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>image</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1ad08bf531d52c02d1f38df4dace4af33b" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>imageMemory</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1add3c672745e73859d33150e7c4c4eda5" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>imageView</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1a7d476368920ebb232a5f4e94e3ff55ae" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>mipLevels</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1ae2ea89d2703e9867baf39038cbe8bbea" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>path</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1a61bcd37ea4a3370e511be1ff20f1ebfd" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>sampler</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1_texture_1a2e1bfede8b7c3bdbddfa469b451f52f9" prot="public" virt="non-virtual"><scope>prism::PGC::Texture</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

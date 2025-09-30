@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_descriptor_set_layout" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::DescriptorSetLayout</compoundname>
+    <includes refid="descriptor_set_layout_8h" local="no">descriptorSetLayout.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1ac53e238dc92ec4a9b8111f855c342130" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+        <definition>PGC::utils::Context* prism::PGC::DescriptorSetLayout::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>prism::PGC::DescriptorSetLayout::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSetLayout.h" line="18" column="21" bodyfile="PrismEngine/src/descriptorSetLayout.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1ab1b10567cc554a5107bb56e7e5eba054" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+        <definition>PGC::utils::Settings* prism::PGC::DescriptorSetLayout::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>prism::PGC::DescriptorSetLayout::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSetLayout.h" line="19" column="22" bodyfile="PrismEngine/src/descriptorSetLayout.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a6cb0751d3e85d87706ede028081afc92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::DescriptorSetLayout::DescriptorSetLayout</definition>
+        <argsstring>()</argsstring>
+        <name>DescriptorSetLayout</name>
+        <qualifiedname>prism::PGC::DescriptorSetLayout::DescriptorSetLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSetLayout.h" line="10" column="1" bodyfile="PrismEngine/src/descriptorSetLayout.h" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a02dd1bc56941b0571f22eb4cb35b3a22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::DescriptorSetLayout::init</definition>
+        <argsstring>(PGC::utils::Context *context, PGC::utils::Settings *settings)</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::PGC::DescriptorSetLayout::init</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSetLayout.h" line="11" column="6" bodyfile="PrismEngine/src/descriptorSetLayout.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a1f8418373647d69552a094d23e8d6b1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::DescriptorSetLayout::~DescriptorSetLayout</definition>
+        <argsstring>()</argsstring>
+        <name>~DescriptorSetLayout</name>
+        <qualifiedname>prism::PGC::DescriptorSetLayout::~DescriptorSetLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSetLayout.h" line="12" column="1" bodyfile="PrismEngine/src/descriptorSetLayout.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a11eb78f66ecbcc518ac1d9db39fe1a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::DescriptorSetLayout::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>prism::PGC::DescriptorSetLayout::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSetLayout.h" line="13" column="6" bodyfile="PrismEngine/src/descriptorSetLayout.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a06a81014bc8ee086e624c908038a4515" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::DescriptorSetLayout::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>prism::PGC::DescriptorSetLayout::create</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSetLayout.h" line="15" column="6" bodyfile="PrismEngine/src/descriptorSetLayout.cpp" bodystart="19" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a58ec7507feb2ccf58890ce1eae5eb21a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkDescriptorSetLayoutBinding</type>
+        <definition>VkDescriptorSetLayoutBinding prism::PGC::DescriptorSetLayout::createDescriptorSetLayoutBinding</definition>
+        <argsstring>(uint32_t binding, VkDescriptorType descriptorType, uint32_t descriptorCount, VkShaderStageFlags stageFlags, const VkSampler *immutableSamplers)</argsstring>
+        <name>createDescriptorSetLayoutBinding</name>
+        <qualifiedname>prism::PGC::DescriptorSetLayout::createDescriptorSetLayoutBinding</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>binding</declname>
+        </param>
+        <param>
+          <type>VkDescriptorType</type>
+          <declname>descriptorType</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>descriptorCount</declname>
+        </param>
+        <param>
+          <type>VkShaderStageFlags</type>
+          <declname>stageFlags</declname>
+        </param>
+        <param>
+          <type>const VkSampler *</type>
+          <declname>immutableSamplers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSetLayout.h" line="16" column="30" bodyfile="PrismEngine/src/descriptorSetLayout.cpp" bodystart="56" bodyend="65"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/descriptorSetLayout.h" line="8" column="1" bodyfile="PrismEngine/src/descriptorSetLayout.h" bodystart="8" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a11eb78f66ecbcc518ac1d9db39fe1a7f" prot="public" virt="non-virtual"><scope>prism::PGC::DescriptorSetLayout</scope><name>cleanup</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1ac53e238dc92ec4a9b8111f855c342130" prot="private" virt="non-virtual"><scope>prism::PGC::DescriptorSetLayout</scope><name>context</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a06a81014bc8ee086e624c908038a4515" prot="private" virt="non-virtual"><scope>prism::PGC::DescriptorSetLayout</scope><name>create</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a58ec7507feb2ccf58890ce1eae5eb21a" prot="private" virt="non-virtual"><scope>prism::PGC::DescriptorSetLayout</scope><name>createDescriptorSetLayoutBinding</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a6cb0751d3e85d87706ede028081afc92" prot="public" virt="non-virtual"><scope>prism::PGC::DescriptorSetLayout</scope><name>DescriptorSetLayout</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a02dd1bc56941b0571f22eb4cb35b3a22" prot="public" virt="non-virtual"><scope>prism::PGC::DescriptorSetLayout</scope><name>init</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1ab1b10567cc554a5107bb56e7e5eba054" prot="private" virt="non-virtual"><scope>prism::PGC::DescriptorSetLayout</scope><name>settings</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_layout_1a1f8418373647d69552a094d23e8d6b1a" prot="public" virt="non-virtual"><scope>prism::PGC::DescriptorSetLayout</scope><name>~DescriptorSetLayout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

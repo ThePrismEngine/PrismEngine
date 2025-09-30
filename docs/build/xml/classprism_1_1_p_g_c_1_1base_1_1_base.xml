@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1base_1_1_base" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::base::Base</compoundname>
+    <includes refid="base_8h" local="no">base.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a6792acb9ae7b492590b48d6ec4a115a5" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+        <definition>PGC::utils::Context* prism::PGC::base::Base::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>prism::PGC::base::Base::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="55" column="21" bodyfile="PrismEngine/src/base.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a879e0eca305bc4d05ee0dd5f68946c9d" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+        <definition>PGC::utils::Settings* prism::PGC::base::Base::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>prism::PGC::base::Base::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="56" column="22" bodyfile="PrismEngine/src/base.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1base_1_1_base_1ab7493519804d682d5e38803b9fafe339" prot="private" static="no" mutable="no">
+        <type>VkDebugUtilsMessengerEXT</type>
+        <definition>VkDebugUtilsMessengerEXT prism::PGC::base::Base::debugMessenger</definition>
+        <argsstring></argsstring>
+        <name>debugMessenger</name>
+        <qualifiedname>prism::PGC::base::Base::debugMessenger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="69" column="26" bodyfile="PrismEngine/src/base.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a8e779fa1c21f0cf85c6266b414450200" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::base::Base::Base</definition>
+        <argsstring>()</argsstring>
+        <name>Base</name>
+        <qualifiedname>prism::PGC::base::Base::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="42" column="1" bodyfile="PrismEngine/src/base.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a5e78710df6af2bd95cbf365d6a56dd3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::init</definition>
+        <argsstring>(PGC::utils::Context *context, PGC::utils::Settings *settings)</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::PGC::base::Base::init</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="43" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="12" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1ac97c049af5147002e8c6399d6eb1479c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::base::Base::~Base</definition>
+        <argsstring>()</argsstring>
+        <name>~Base</name>
+        <qualifiedname>prism::PGC::base::Base::~Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="44" column="1" bodyfile="PrismEngine/src/base.cpp" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a9c0300069ebded997a9ab608bd18734b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>prism::PGC::base::Base::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="45" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="26" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1aabe93e25020c9e6387bb7d8ec9a839db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>prism::PGC::base::Base::create</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="47" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="3" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1aae3ea4b54eb2abb5183ab15af7123c73" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::createInstance</definition>
+        <argsstring>()</argsstring>
+        <name>createInstance</name>
+        <qualifiedname>prism::PGC::base::Base::createInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="49" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="116" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a3c28f273f80c69439abe0f067f661692" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::setupDebugMessenger</definition>
+        <argsstring>()</argsstring>
+        <name>setupDebugMessenger</name>
+        <qualifiedname>prism::PGC::base::Base::setupDebugMessenger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="50" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="157" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1af4e03b04645178568deb025d985d3faf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::pickPhysicalDevice</definition>
+        <argsstring>()</argsstring>
+        <name>pickPhysicalDevice</name>
+        <qualifiedname>prism::PGC::base::Base::pickPhysicalDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="51" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="169" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a4ad9dc34bca6ea2629b22af7ee3b7594" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::createSurface</definition>
+        <argsstring>()</argsstring>
+        <name>createSurface</name>
+        <qualifiedname>prism::PGC::base::Base::createSurface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="52" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="274" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a7159217f3f0694baa2c0e5d3da2497e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::createLogicalDevice</definition>
+        <argsstring>()</argsstring>
+        <name>createLogicalDevice</name>
+        <qualifiedname>prism::PGC::base::Base::createLogicalDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="53" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="281" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1aeeb68987aa79cbb01f04c14be9942dd4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool prism::PGC::base::Base::checkValidationLayerSupport</definition>
+        <argsstring>()</argsstring>
+        <name>checkValidationLayerSupport</name>
+        <qualifiedname>prism::PGC::base::Base::checkValidationLayerSupport</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="59" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="51" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a634d029f5850961ba6819d6334bbd17b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; const char * &gt;</type>
+        <definition>std::vector&lt; const char * &gt; prism::PGC::base::Base::getRequiredExtensions</definition>
+        <argsstring>()</argsstring>
+        <name>getRequiredExtensions</name>
+        <qualifiedname>prism::PGC::base::Base::getRequiredExtensions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="60" column="13" bodyfile="PrismEngine/src/base.cpp" bodystart="77" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a6cd1f74bdaa58779c4f7e017aa0be2f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::base::Base::populateDebugMessengerCreateInfo</definition>
+        <argsstring>(VkDebugUtilsMessengerCreateInfoEXT &amp;createInfo)</argsstring>
+        <name>populateDebugMessengerCreateInfo</name>
+        <qualifiedname>prism::PGC::base::Base::populateDebugMessengerCreateInfo</qualifiedname>
+        <param>
+          <type>VkDebugUtilsMessengerCreateInfoEXT &amp;</type>
+          <declname>createInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="61" column="6" bodyfile="PrismEngine/src/base.cpp" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1ac29f5e2a550983d3f2ec7bd9c73863de" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkSampleCountFlagBits</type>
+        <definition>VkSampleCountFlagBits prism::PGC::base::Base::getMaxUsableSampleCount</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxUsableSampleCount</name>
+        <qualifiedname>prism::PGC::base::Base::getMaxUsableSampleCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="64" column="23" bodyfile="PrismEngine/src/base.cpp" bodystart="348" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a9c4f62c73bebb1a8acd7e045f52eb005" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; VkSampleCountFlagBits &gt;</type>
+        <definition>std::vector&lt; VkSampleCountFlagBits &gt; prism::PGC::base::Base::getPossibleCounts</definition>
+        <argsstring>(VkSampleCountFlagBits maxCount)</argsstring>
+        <name>getPossibleCounts</name>
+        <qualifiedname>prism::PGC::base::Base::getPossibleCounts</qualifiedname>
+        <param>
+          <type>VkSampleCountFlagBits</type>
+          <declname>maxCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="66" column="13" bodyfile="PrismEngine/src/base.cpp" bodystart="364" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1af32784fe71c111c6a16d7944380e21f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkSampleCountFlagBits</type>
+        <definition>VkSampleCountFlagBits prism::PGC::base::Base::getMsaaSamples</definition>
+        <argsstring>()</argsstring>
+        <name>getMsaaSamples</name>
+        <qualifiedname>prism::PGC::base::Base::getMsaaSamples</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="67" column="23" bodyfile="PrismEngine/src/base.cpp" bodystart="222" bodyend="272"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1base_1_1_base_1a4b5b95811813234f8d15ab948a7944a4" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VKAPI_ATTR VkBool32 VKAPI_CALL</type>
+        <definition>VKAPI_ATTR VkBool32 VKAPI_CALL prism::PGC::base::Base::debugCallback</definition>
+        <argsstring>(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT *pCallbackData, void *pUserData)</argsstring>
+        <name>debugCallback</name>
+        <qualifiedname>prism::PGC::base::Base::debugCallback</qualifiedname>
+        <param>
+          <type>VkDebugUtilsMessageSeverityFlagBitsEXT</type>
+          <declname>messageSeverity</declname>
+        </param>
+        <param>
+          <type>VkDebugUtilsMessageTypeFlagsEXT</type>
+          <declname>messageType</declname>
+        </param>
+        <param>
+          <type>const VkDebugUtilsMessengerCallbackDataEXT *</type>
+          <declname>pCallbackData</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/base.h" line="62" column="39" bodyfile="PrismEngine/src/base.cpp" bodystart="109" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/base.h" line="39" column="1" bodyfile="PrismEngine/src/base.h" bodystart="40" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a8e779fa1c21f0cf85c6266b414450200" prot="public" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>Base</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aeeb68987aa79cbb01f04c14be9942dd4" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>checkValidationLayerSupport</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a9c0300069ebded997a9ab608bd18734b" prot="public" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>cleanup</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a6792acb9ae7b492590b48d6ec4a115a5" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>context</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aabe93e25020c9e6387bb7d8ec9a839db" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>create</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1aae3ea4b54eb2abb5183ab15af7123c73" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>createInstance</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a7159217f3f0694baa2c0e5d3da2497e0" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>createLogicalDevice</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a4ad9dc34bca6ea2629b22af7ee3b7594" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>createSurface</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a4b5b95811813234f8d15ab948a7944a4" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>debugCallback</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1ab7493519804d682d5e38803b9fafe339" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>debugMessenger</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1ac29f5e2a550983d3f2ec7bd9c73863de" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>getMaxUsableSampleCount</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1af32784fe71c111c6a16d7944380e21f0" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>getMsaaSamples</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a9c4f62c73bebb1a8acd7e045f52eb005" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>getPossibleCounts</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a634d029f5850961ba6819d6334bbd17b" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>getRequiredExtensions</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a5e78710df6af2bd95cbf365d6a56dd3a" prot="public" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>init</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1af4e03b04645178568deb025d985d3faf" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>pickPhysicalDevice</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a6cd1f74bdaa58779c4f7e017aa0be2f8" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>populateDebugMessengerCreateInfo</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a879e0eca305bc4d05ee0dd5f68946c9d" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>settings</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1a3c28f273f80c69439abe0f067f661692" prot="private" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>setupDebugMessenger</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1base_1_1_base_1ac97c049af5147002e8c6399d6eb1479c" prot="public" virt="non-virtual"><scope>prism::PGC::base::Base</scope><name>~Base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

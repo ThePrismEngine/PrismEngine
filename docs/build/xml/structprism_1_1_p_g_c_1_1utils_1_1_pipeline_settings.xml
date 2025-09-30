@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::PipelineSettings</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1a8f9153fa0a40311ad06128de7c8862f2" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings" kindref="compound">ShadersSettings</ref></type>
+        <definition>ShadersSettings prism::PGC::utils::PipelineSettings::shaders</definition>
+        <argsstring></argsstring>
+        <name>shaders</name>
+        <qualifiedname>prism::PGC::utils::PipelineSettings::shaders</qualifiedname>
+        <initializer>= { &quot;vert.spv&quot;, &quot;frag.spv&quot;, &quot;shaders/&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="271" column="17" bodyfile="PrismEngine/src/utils.h" bodystart="271" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1afd7becb2aa421bfe5777e089e6c667e3" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings" kindref="compound">InputAssemblySettings</ref></type>
+        <definition>InputAssemblySettings prism::PGC::utils::PipelineSettings::inputAssembly</definition>
+        <argsstring></argsstring>
+        <name>inputAssembly</name>
+        <qualifiedname>prism::PGC::utils::PipelineSettings::inputAssembly</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="272" column="23" bodyfile="PrismEngine/src/utils.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1afc61024c0a725c2cced455b60af8f9ae" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings" kindref="compound">RasterizationSettings</ref></type>
+        <definition>RasterizationSettings prism::PGC::utils::PipelineSettings::rasterization</definition>
+        <argsstring></argsstring>
+        <name>rasterization</name>
+        <qualifiedname>prism::PGC::utils::PipelineSettings::rasterization</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="273" column="23" bodyfile="PrismEngine/src/utils.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aeeac69a126a55b076000a777386883df" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings" kindref="compound">DepthStencilSettings</ref></type>
+        <definition>DepthStencilSettings prism::PGC::utils::PipelineSettings::depthStencil</definition>
+        <argsstring></argsstring>
+        <name>depthStencil</name>
+        <qualifiedname>prism::PGC::utils::PipelineSettings::depthStencil</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="274" column="22" bodyfile="PrismEngine/src/utils.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa2b9bad54f0092b4b4fc6b99f80e38a2" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings" kindref="compound">MultisampleSettings</ref></type>
+        <definition>MultisampleSettings prism::PGC::utils::PipelineSettings::multisample</definition>
+        <argsstring></argsstring>
+        <name>multisample</name>
+        <qualifiedname>prism::PGC::utils::PipelineSettings::multisample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="275" column="21" bodyfile="PrismEngine/src/utils.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa7c5ebf2679b7ca18b3708827b0c79ff" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings" kindref="compound">ColorBlendSettings</ref></type>
+        <definition>ColorBlendSettings prism::PGC::utils::PipelineSettings::colorBlend</definition>
+        <argsstring></argsstring>
+        <name>colorBlend</name>
+        <qualifiedname>prism::PGC::utils::PipelineSettings::colorBlend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="276" column="20" bodyfile="PrismEngine/src/utils.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa3bca2e1a268849820f771f08bb4b3e6" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings" kindref="compound">DynamicStateSettings</ref></type>
+        <definition>DynamicStateSettings prism::PGC::utils::PipelineSettings::dynamicState</definition>
+        <argsstring></argsstring>
+        <name>dynamicState</name>
+        <qualifiedname>prism::PGC::utils::PipelineSettings::dynamicState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="277" column="22" bodyfile="PrismEngine/src/utils.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1a7d3e6d581354d2b23101d1b15a25310c" prot="public" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings" kindref="compound">ViewportStateSettings</ref></type>
+        <definition>ViewportStateSettings prism::PGC::utils::PipelineSettings::viewportState</definition>
+        <argsstring></argsstring>
+        <name>viewportState</name>
+        <qualifiedname>prism::PGC::utils::PipelineSettings::viewportState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="278" column="23" bodyfile="PrismEngine/src/utils.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>prism::PGC::utils::ColorBlendSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_color_blend_settings"/>
+      </node>
+      <node id="5">
+        <label>prism::PGC::utils::DepthStencilSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_depth_stencil_settings"/>
+      </node>
+      <node id="8">
+        <label>prism::PGC::utils::DynamicStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_dynamic_state_settings"/>
+      </node>
+      <node id="3">
+        <label>prism::PGC::utils::InputAssemblySettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_input_assembly_settings"/>
+      </node>
+      <node id="6">
+        <label>prism::PGC::utils::MultisampleSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_multisample_settings"/>
+      </node>
+      <node id="1">
+        <label>prism::PGC::utils::PipelineSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>shaders</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>inputAssembly</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>rasterization</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>depthStencil</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>multisample</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>colorBlend</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>dynamicState</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>viewportState</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>prism::PGC::utils::RasterizationSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_rasterization_settings"/>
+      </node>
+      <node id="2">
+        <label>prism::PGC::utils::ShadersSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_shaders_settings"/>
+      </node>
+      <node id="9">
+        <label>prism::PGC::utils::ViewportStateSettings</label>
+        <link refid="structprism_1_1_p_g_c_1_1utils_1_1_viewport_state_settings"/>
+      </node>
+    </collaborationgraph>
+    <location file="PrismEngine/src/utils.h" line="270" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="270" bodyend="279"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa7c5ebf2679b7ca18b3708827b0c79ff" prot="public" virt="non-virtual"><scope>prism::PGC::utils::PipelineSettings</scope><name>colorBlend</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aeeac69a126a55b076000a777386883df" prot="public" virt="non-virtual"><scope>prism::PGC::utils::PipelineSettings</scope><name>depthStencil</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa3bca2e1a268849820f771f08bb4b3e6" prot="public" virt="non-virtual"><scope>prism::PGC::utils::PipelineSettings</scope><name>dynamicState</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1afd7becb2aa421bfe5777e089e6c667e3" prot="public" virt="non-virtual"><scope>prism::PGC::utils::PipelineSettings</scope><name>inputAssembly</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1aa2b9bad54f0092b4b4fc6b99f80e38a2" prot="public" virt="non-virtual"><scope>prism::PGC::utils::PipelineSettings</scope><name>multisample</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1afc61024c0a725c2cced455b60af8f9ae" prot="public" virt="non-virtual"><scope>prism::PGC::utils::PipelineSettings</scope><name>rasterization</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1a8f9153fa0a40311ad06128de7c8862f2" prot="public" virt="non-virtual"><scope>prism::PGC::utils::PipelineSettings</scope><name>shaders</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_pipeline_settings_1a7d3e6d581354d2b23101d1b15a25310c" prot="public" virt="non-virtual"><scope>prism::PGC::utils::PipelineSettings</scope><name>viewportState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1scene_1_1_component_manager_1_1_component_storage" kind="struct" language="C++" prot="private">
+    <compoundname>prism::scene::ComponentManager::ComponentStorage</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">prism::scene::ComponentManager::IComponentStorage</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1scene_1_1_component_manager_1_1_component_storage_1a52394866052b0bb7f1c31b1320cce844" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref>, std::shared_ptr&lt; T &gt; &gt;</type>
+        <definition>std::unordered_map&lt;Entity, std::shared_ptr&lt;T&gt; &gt; prism::scene::ComponentManager::ComponentStorage&lt; T &gt;::components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <qualifiedname>prism::scene::ComponentManager::ComponentStorage::components</qualifiedname>
+        <briefdescription>
+<para>Карта сущность -&gt; компонент </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/componentManager.h" line="139" column="36" bodyfile="PrismEngine/src/componentManager.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structprism_1_1scene_1_1_component_manager_1_1_component_storage_1a34a31deec21993564366818b26628db4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::scene::ComponentManager::ComponentStorage&lt; T &gt;::removeEntity</definition>
+        <argsstring>(Entity entityId) override</argsstring>
+        <name>removeEntity</name>
+        <qualifiedname>prism::scene::ComponentManager::ComponentStorage::removeEntity</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprism_1_1scene_1a62570b404abdde9cb614b75c6f162ed9" kindref="member">Entity</ref></type>
+          <declname>entityId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/componentManager.h" line="141" column="22" bodyfile="PrismEngine/src/componentManager.h" bodystart="141" bodyend="143"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Конкретная реализация хранилища для типа компонента </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Тип компонента </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>prism::scene::ComponentManager::ComponentStorage&lt; T &gt;</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>prism::scene::ComponentManager::IComponentStorage</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>prism::scene::ComponentManager::ComponentStorage&lt; T &gt;</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>prism::scene::ComponentManager::IComponentStorage</label>
+      </node>
+    </collaborationgraph>
+    <location file="PrismEngine/src/componentManager.h" line="137" column="13" bodyfile="PrismEngine/src/componentManager.h" bodystart="137" bodyend="144"/>
+    <listofallmembers>
+      <member refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage_1a52394866052b0bb7f1c31b1320cce844" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager::ComponentStorage</scope><name>components</name></member>
+      <member refid="structprism_1_1scene_1_1_component_manager_1_1_component_storage_1a34a31deec21993564366818b26628db4" prot="public" virt="non-virtual"><scope>prism::scene::ComponentManager::ComponentStorage</scope><name>removeEntity</name></member>
+      <member refid="structprism_1_1scene_1_1_component_manager_1_1_i_component_storage_1a8add7a07bcb46a0b1f43750bbf18afe7" prot="public" virt="virtual"><scope>prism::scene::ComponentManager::ComponentStorage</scope><name>~IComponentStorage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data" kind="struct" language="C++" prot="public">
+    <compoundname>prism::PGC::utils::CameraData</compoundname>
+    <includes refid="utils_8h" local="no">utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1aa86ddf6f4e2fe3f72e06c15be1c1dc8c" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 prism::PGC::utils::CameraData::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>prism::PGC::utils::CameraData::pos</qualifiedname>
+        <initializer>= { 2.0f, 2.0f, 2.0f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="33" column="11" bodyfile="PrismEngine/src/utils.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a517cc84de8e2e6420d0ffcf38a744a4d" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 prism::PGC::utils::CameraData::look</definition>
+        <argsstring></argsstring>
+        <name>look</name>
+        <qualifiedname>prism::PGC::utils::CameraData::look</qualifiedname>
+        <initializer>= { 0.0f, 0.0f, 0.0f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="34" column="11" bodyfile="PrismEngine/src/utils.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a8f2580ffda7ef1cfd8c90670b0eca73f" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 prism::PGC::utils::CameraData::up</definition>
+        <argsstring></argsstring>
+        <name>up</name>
+        <qualifiedname>prism::PGC::utils::CameraData::up</qualifiedname>
+        <initializer>= { 0.0f, 0.0f, 1.0f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="35" column="11" bodyfile="PrismEngine/src/utils.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1ac97568451475afc1ed61acfdb42d1368" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::CameraData::fovy</definition>
+        <argsstring></argsstring>
+        <name>fovy</name>
+        <qualifiedname>prism::PGC::utils::CameraData::fovy</qualifiedname>
+        <initializer>= 45.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="37" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a7a931e6d6c78bb75d05966bd4c825479" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::CameraData::aspect</definition>
+        <argsstring></argsstring>
+        <name>aspect</name>
+        <qualifiedname>prism::PGC::utils::CameraData::aspect</qualifiedname>
+        <initializer>= 16.f / 9.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="38" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a0184dc6de3c9bdd30f81ba871ec1da72" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::CameraData::zNear</definition>
+        <argsstring></argsstring>
+        <name>zNear</name>
+        <qualifiedname>prism::PGC::utils::CameraData::zNear</qualifiedname>
+        <initializer>= 0.1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="39" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a54614513275959cfb8064bbec8e14e25" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prism::PGC::utils::CameraData::zFar</definition>
+        <argsstring></argsstring>
+        <name>zFar</name>
+        <qualifiedname>prism::PGC::utils::CameraData::zFar</qualifiedname>
+        <initializer>= 10.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="40" column="7" bodyfile="PrismEngine/src/utils.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1add1b529f72e631b7824a6ef8e448ec8e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool prism::PGC::utils::CameraData::useСurrentWindowAspect</definition>
+        <argsstring></argsstring>
+        <name>useСurrentWindowAspect</name>
+        <qualifiedname>prism::PGC::utils::CameraData::useСurrentWindowAspect</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/utils.h" line="42" column="6" bodyfile="PrismEngine/src/utils.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/utils.h" line="32" column="1" bodyfile="PrismEngine/src/utils.h" bodystart="32" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a7a931e6d6c78bb75d05966bd4c825479" prot="public" virt="non-virtual"><scope>prism::PGC::utils::CameraData</scope><name>aspect</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1ac97568451475afc1ed61acfdb42d1368" prot="public" virt="non-virtual"><scope>prism::PGC::utils::CameraData</scope><name>fovy</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a517cc84de8e2e6420d0ffcf38a744a4d" prot="public" virt="non-virtual"><scope>prism::PGC::utils::CameraData</scope><name>look</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1aa86ddf6f4e2fe3f72e06c15be1c1dc8c" prot="public" virt="non-virtual"><scope>prism::PGC::utils::CameraData</scope><name>pos</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a8f2580ffda7ef1cfd8c90670b0eca73f" prot="public" virt="non-virtual"><scope>prism::PGC::utils::CameraData</scope><name>up</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1add1b529f72e631b7824a6ef8e448ec8e" prot="public" virt="non-virtual"><scope>prism::PGC::utils::CameraData</scope><name>useСurrentWindowAspect</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a54614513275959cfb8064bbec8e14e25" prot="public" virt="non-virtual"><scope>prism::PGC::utils::CameraData</scope><name>zFar</name></member>
+      <member refid="structprism_1_1_p_g_c_1_1utils_1_1_camera_data_1a0184dc6de3c9bdd30f81ba871ec1da72" prot="public" virt="non-virtual"><scope>prism::PGC::utils::CameraData</scope><name>zNear</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

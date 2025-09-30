@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classprism_1_1_p_g_c_1_1_descriptor_set" kind="class" language="C++" prot="public">
+    <compoundname>prism::PGC::DescriptorSet</compoundname>
+    <includes refid="descriptor_set_8h" local="no">descriptorSet.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_descriptor_set_1a4c2de1f38154c6203d53628cf6de0017" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+        <definition>PGC::utils::Context* prism::PGC::DescriptorSet::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>prism::PGC::DescriptorSet::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSet.h" line="15" column="21" bodyfile="PrismEngine/src/descriptorSet.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classprism_1_1_p_g_c_1_1_descriptor_set_1ac53524a47e476cb30f450fc9d7d28522" prot="private" static="no" mutable="no">
+        <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+        <definition>PGC::utils::Settings* prism::PGC::DescriptorSet::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>prism::PGC::DescriptorSet::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSet.h" line="16" column="22" bodyfile="PrismEngine/src/descriptorSet.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_1af02c958c53d395cfca76d7ce79ed0241" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::DescriptorSet::DescriptorSet</definition>
+        <argsstring>()</argsstring>
+        <name>DescriptorSet</name>
+        <qualifiedname>prism::PGC::DescriptorSet::DescriptorSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSet.h" line="8" column="1" bodyfile="PrismEngine/src/descriptorSet.h" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_1a81252e1b0c4a45d64560d45889a1f80f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::DescriptorSet::init</definition>
+        <argsstring>(PGC::utils::Context *context, PGC::utils::Settings *settings)</argsstring>
+        <name>init</name>
+        <qualifiedname>prism::PGC::DescriptorSet::init</qualifiedname>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_context" kindref="compound">PGC::utils::Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="structprism_1_1_p_g_c_1_1utils_1_1_settings" kindref="compound">PGC::utils::Settings</ref> *</type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSet.h" line="9" column="6" bodyfile="PrismEngine/src/descriptorSet.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_1aa5652a469f821ecc3c22b7f38868230e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prism::PGC::DescriptorSet::~DescriptorSet</definition>
+        <argsstring>()</argsstring>
+        <name>~DescriptorSet</name>
+        <qualifiedname>prism::PGC::DescriptorSet::~DescriptorSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSet.h" line="10" column="1" bodyfile="PrismEngine/src/descriptorSet.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_1a0c97cb4460cfd61722507c4cbd3840ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::DescriptorSet::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>prism::PGC::DescriptorSet::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSet.h" line="11" column="6" bodyfile="PrismEngine/src/descriptorSet.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classprism_1_1_p_g_c_1_1_descriptor_set_1a4e560c4b7c5a19a2c17878517cbf5364" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prism::PGC::DescriptorSet::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>prism::PGC::DescriptorSet::create</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PrismEngine/src/descriptorSet.h" line="13" column="6" bodyfile="PrismEngine/src/descriptorSet.cpp" bodystart="20" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PrismEngine/src/descriptorSet.h" line="6" column="1" bodyfile="PrismEngine/src/descriptorSet.h" bodystart="6" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1a0c97cb4460cfd61722507c4cbd3840ea" prot="public" virt="non-virtual"><scope>prism::PGC::DescriptorSet</scope><name>cleanup</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1a4c2de1f38154c6203d53628cf6de0017" prot="private" virt="non-virtual"><scope>prism::PGC::DescriptorSet</scope><name>context</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1a4e560c4b7c5a19a2c17878517cbf5364" prot="private" virt="non-virtual"><scope>prism::PGC::DescriptorSet</scope><name>create</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1af02c958c53d395cfca76d7ce79ed0241" prot="public" virt="non-virtual"><scope>prism::PGC::DescriptorSet</scope><name>DescriptorSet</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1a81252e1b0c4a45d64560d45889a1f80f" prot="public" virt="non-virtual"><scope>prism::PGC::DescriptorSet</scope><name>init</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1ac53524a47e476cb30f450fc9d7d28522" prot="private" virt="non-virtual"><scope>prism::PGC::DescriptorSet</scope><name>settings</name></member>
+      <member refid="classprism_1_1_p_g_c_1_1_descriptor_set_1aa5652a469f821ecc3c22b7f38868230e" prot="public" virt="non-virtual"><scope>prism::PGC::DescriptorSet</scope><name>~DescriptorSet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
