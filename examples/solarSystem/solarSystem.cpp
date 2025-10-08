@@ -151,7 +151,7 @@ Entity createPlanet(Scene& scene, prism::render::Renderer& renderer, std::string
 }
 
 
-int demo2() {
+int solarSystem() {
     prism::init();
 
     Scene scene;
