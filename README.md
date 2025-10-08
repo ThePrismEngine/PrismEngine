@@ -47,8 +47,15 @@
 
 ## Демо 🎮
 [//]: # (Здесь добавьте GIF/видео/скриншоты вашего движка в действии)
-![Demo Scene](https://via.placeholder.com/800x450.png?text=PrismEngine+Demo)
-*Пример работы движка: PBR рендеринг, динамическое освещение, пост-обработка*
+https://github.com/user-attachments/assets/d153e012-1fbf-4f62-b505-313e55c0f07d
+
+
+https://github.com/user-attachments/assets/b5c92e47-465f-4e2d-ab8b-ab3288a1e632
+
+
+https://github.com/user-attachments/assets/c30ba312-af53-4857-9309-8171540570ec
+
+
 
 
 ## Особенности ✨
