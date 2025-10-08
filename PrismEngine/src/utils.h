@@ -125,10 +125,10 @@ namespace prism {
 				size_t dynamicAlignment=0;      // Выровненный размер ObjectUBO
 				uint32_t MAX_OBJECTS=500;         // Максимальное количество объектов
 
-#ifdef NDEBUG
-				bool enableValidationLayers = false;
-#else
+#ifdef _DEBUG
 				bool enableValidationLayers = true;
+#else
+				bool enableValidationLayers = false;
 #endif
 			};
 
@@ -142,10 +142,10 @@ namespace prism {
 			{
 				VkDebugUtilsMessageSeverityFlagsEXT VulkanMessageSeverity = VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT;
 				VkDebugUtilsMessageTypeFlagsEXT VulkanMessageType = VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT;
-#ifdef NDEBUG
-				bool debugDeviceSelection = false;
-#else
+#ifdef _DEBUG
 				bool debugDeviceSelection = true;
+#else
+				bool debugDeviceSelection = false;
 #endif
 			};
 

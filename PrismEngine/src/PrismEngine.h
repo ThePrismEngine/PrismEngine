@@ -1,4 +1,5 @@
 #pragma once
+#undef main
 
 #include "vector.h"
 #include "matrix.h"
@@ -14,3 +15,6 @@
 #include "componentManager.h"
 #include "systemManager.h"
 #include "scene.h"
+
+#include "stComponents.h"
+#include "stSystems.h"

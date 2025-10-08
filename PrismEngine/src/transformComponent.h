@@ -3,15 +3,15 @@
 namespace prism {
 	namespace scene {
 		struct Position {
-			float x, y, z;
+			float x=0, y=0, z=0;
 		};
 
 		struct Rotation {
-			float x, y, z;
+			float x=0, y=0, z=0;
 		};
 
 		struct Scale {
-			float x, y, z;
+			float x=1, y=1, z=1;
 		};
 
 		struct TransformComponent

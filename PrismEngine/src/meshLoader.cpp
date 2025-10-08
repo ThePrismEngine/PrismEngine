@@ -26,10 +26,12 @@ prism::PGC::MeshData prism::PGC::MeshLoader::load(std::string texturePath)
                 attrib.vertices[3 * index.vertex_index + 2]
             };
 
-            vertex.texCoord = {
-                attrib.texcoords[2 * index.texcoord_index + 0],
-                1.0f - attrib.texcoords[2 * index.texcoord_index + 1]
-            };
+            if (index.texcoord_index != -1) {
+                vertex.texCoord = {
+                    attrib.texcoords[2 * index.texcoord_index + 0],
+                    1.0f - attrib.texcoords[2 * index.texcoord_index + 1]
+                };
+            }
 
             vertex.color = { attrib.colors[3 * index.vertex_index + 0],
                              attrib.colors[3 * index.vertex_index + 1],
