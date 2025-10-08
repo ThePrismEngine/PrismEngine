@@ -75,11 +75,12 @@ void createNeonCubeCircle(Scene& scene, const MeshComponent& mesh,
     }
 }
 
-void createSkybox(Scene& scene, MeshComponent mesh) {
-    Entity skybox = scene.createEntity();
+void createBackground(Scene& scene, prism::render::Renderer& renderer, MeshComponent mesh, TextureComponent texture) {
+    Entity back = scene.createEntity();
 
-    scene.addComponent(skybox, mesh);
-    scene.addComponent(skybox, TransformComponent{});
+    scene.addComponent(back, mesh);
+    scene.addComponent(back, texture);
+    scene.addComponent(back, TransformComponent{ {0, -50, 0}, {0, 90, 0}, {75, 1, 65} });
 }
 
 int dancingNeonCubesDemo() {
@@ -87,6 +88,7 @@ int dancingNeonCubesDemo() {
 
     Scene scene;
     prism::render::Window window("Dancing NeonCubes - Geometric Ballet", WINDOW_WIDTH, WINDOW_HEIGHT);
+    window.setResizable(true);
     prism::render::Renderer renderer;
 
     // Настройка рендерера
@@ -97,9 +99,10 @@ int dancingNeonCubesDemo() {
     
     // Загрузка ресурсов
     MeshComponent cubeMesh = renderer.addMesh(EXAMPLE_NAME + "/models/neoncube.obj");
-    MeshComponent skyboxMesh = renderer.addMesh(EXAMPLE_NAME + "/models/skybox.obj");
+    MeshComponent planeMesh = renderer.addMesh(EXAMPLE_NAME + "/models/plane.obj");
     renderer.updateMeshes();
     TextureComponent cubeTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/neoncube.png");
+    TextureComponent backTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/back.jpeg");
 
     // Системы
     scene.registerSystem<RenderSystem>(&scene, &renderer);
@@ -121,7 +124,7 @@ int dancingNeonCubesDemo() {
     createNeonCubeCircle(scene, cubeMesh, cubeTexture, 12, 4.0f);
 
     // Создаем скайбокс
-    createSkybox(scene, skyboxMesh);
+    createBackground(scene, renderer, planeMesh, backTexture);
 
     std::cout << "=== Dancing Neon Cubes - Geometric Ballet ===" << std::endl;
     std::cout << "Watch the cubes dance in harmonic patterns!" << std::endl;

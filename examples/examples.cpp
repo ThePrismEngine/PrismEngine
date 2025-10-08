@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
     case 2:
         return dancingNeonCubesDemo();
     case 3:
-        return demo2();
+        return solarSystemDemo();
     default:
         std::cout << "Invalid choice." << std::endl;
         return 1;
