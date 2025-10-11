@@ -20,6 +20,5 @@ PrismEngine/
 *.exe
 *.lib
 *.exp
-*.obj
 *.sln.docstates
 
