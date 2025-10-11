@@ -74,23 +74,45 @@ https://github.com/user-attachments/assets/c30ba312-af53-4857-9309-8171540570ec
 - C++17 компилятор
 - Vulkan SDK 1.3+
 
-### Установка 📥 **//TODO CMAKE**
+## Установка 📥 
+
+### Готовые бинарники 📦
 
 #### Windows 🪟
 
-1. Navigate to the latest release of the repo
-2. Under assets, download the `release_for_windows.zip`
+1. Скачайте PrismEngine-Windows-x64.zip из последнего релиза
+2. Разархивируйте в удобное место
+3. Добавьте библиотеку в ваш проект (CMake/MSVS) 
 
-#### MacOS 🍎
+#### Linux 🐧/MacOS 🍎
 
-1. Navigate to the latest release of the repo
-2. Under assets, download the `release_for_mac.zip`
+1. Скачайте PrismEngine-Linux-x64.tar.gz из последнего релиза
+2. Разархивируйте в удобное место
+3. Добавьте в проект CMake
+```cmake 
+include_directories(path/to/PrismEngine/include)
+target_link_libraries(your_project path/to/PrismEngine/lib/libPrismEngine.a)
+```
 
-#### Linux 🐧
+### Сборка из исходников 🔨
 
-1. Navigate to the latest release of the repo
-2. Under assets, download the `release_for_linux.zip`
+#### Windows с Visual Studio 🪟:
+```bash
+git clone https://github.com/Aleksei-Kutuzov/PrismEngine.git
+cd PrismEngine
+mkdir build && cd build
+cmake .. -G "Visual Studio 17 2022" -A x64
+cmake --build . --config Release
+```
 
+#### Linux 🐧/MacOS 🍎:
+```bash
+git clone https://github.com/Aleksei-Kutuzov/PrismEngine.git
+cd PrismEngine
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make PrismEngine # если с примерами то -j$(nproc) вместо PrismEngine
+```
 
 ## Использование 🛠️
 
