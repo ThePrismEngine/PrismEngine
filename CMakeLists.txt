@@ -20,25 +20,33 @@ endif()
 # Включение папок в IDE
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-# Настройка путей для зависимостей
+# Настройка путей для зависимостей - ОТНОСИТЕЛЬНЫЕ ПУТИ
 set(VULKAN_SDK_PATH "$ENV{VULKAN_SDK}")
 if(NOT VULKAN_SDK_PATH)
-    set(VULKAN_SDK_PATH "C:/VulkanSDK/1.4.309.0")
+    if(WIN32)
+        set(VULKAN_SDK_PATH "C:/VulkanSDK/1.4.309.0")
+    else()
+        set(VULKAN_SDK_PATH "/usr")
+    endif()
 endif()
 
+# Относительные пути к библиотекам в папке libs
 set(SDL2_PATH "${CMAKE_SOURCE_DIR}/libs/SDL2-2.30.9")
 set(GLM_PATH "${CMAKE_SOURCE_DIR}/libs/glm")
 set(STB_IMAGE_PATH "${CMAKE_SOURCE_DIR}/libs/stb_image")
 set(TINYOBJLOADER_PATH "${CMAKE_SOURCE_DIR}/libs/tinyobjloader")
 
 # Проверка существования путей
-if(NOT EXISTS ${SDL2_PATH})
+if(NOT EXISTS ${SDL2_PATH} AND WIN32)
     message(WARNING "SDL2 not found at: ${SDL2_PATH}")
 endif()
 
-if(NOT EXISTS ${VULKAN_SDK_PATH})
+if(NOT EXISTS ${VULKAN_SDK_PATH} AND WIN32)
     message(WARNING "Vulkan SDK not found at: ${VULKAN_SDK_PATH}")
 endif()
+
+message(STATUS "Building for: ${CMAKE_SYSTEM_NAME}")
+message(STATUS "Vulkan SDK path: ${VULKAN_SDK_PATH}")
 
 # Поддиректории
 add_subdirectory(PrismEngine)

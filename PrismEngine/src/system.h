@@ -1,3 +1,6 @@
+#pragma once
+#include <cstdint>
+
 namespace prism {
     namespace scene {
         /// @brief Идентификатор системы

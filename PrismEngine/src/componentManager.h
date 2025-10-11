@@ -6,6 +6,7 @@
 #include <memory>
 #include <algorithm>
 #include <iterator>
+#include <vector>
 
 namespace prism {
     namespace scene {
