@@ -83,9 +83,9 @@ std::vector<const char*> prism::PGC::base::Base::getRequiredExtensions()
         logger::logError(logger::Error::SDL_VULKAN_EXTENSIONS_COUNT_FAILED, "prism::PGC::core::Core::getRequiredExtensions()");
     }
 
-    std::vector<const char*> sdlExtensions(extensionCount, "prism::PGC::core::Core::getRequiredExtensions()");
+    std::vector<const char*> sdlExtensions(extensionCount);
     if (!SDL_Vulkan_GetInstanceExtensions(settings->window, &extensionCount, sdlExtensions.data())) {
-        logger::logError(logger::Error::SDL_VULKAN_EXTENSIONS_COUNT_FAILED);
+        logger::logError(logger::Error::SDL_VULKAN_EXTENSIONS_COUNT_FAILED, "prism::PGC::core::Core::getRequiredExtensions()");
     }
 
     extensions.insert(extensions.end(), sdlExtensions.begin(), sdlExtensions.end());
@@ -135,11 +135,11 @@ void prism::PGC::base::Base::createInstance()
     createInfo.enabledExtensionCount = static_cast<uint32_t>(extensions.size());
     createInfo.ppEnabledExtensionNames = extensions.data();
 
-    VkDebugUtilsMessengerCreateInfoEXT debugCreateInfo{};
     if (context->enableValidationLayers) {
         createInfo.enabledLayerCount = static_cast<uint32_t>(context->validationLayers.size());
         createInfo.ppEnabledLayerNames = context->validationLayers.data();
 
+        VkDebugUtilsMessengerCreateInfoEXT debugCreateInfo{};
         populateDebugMessengerCreateInfo(debugCreateInfo);
         createInfo.pNext = (VkDebugUtilsMessengerCreateInfoEXT*)&debugCreateInfo;
     }

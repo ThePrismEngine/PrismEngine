@@ -69,10 +69,10 @@ namespace prism {
 				VkSampleCountFlagBits msaaSamples = VK_SAMPLE_COUNT_1_BIT;
 				VkRenderPass renderPass;
 
-				VkBuffer vertexBuffer;
-				VkDeviceMemory vertexBufferMemory;
-				VkBuffer indexBuffer;
-				VkDeviceMemory indexBufferMemory;
+				VkBuffer vertexBuffer = VK_NULL_HANDLE;
+				VkDeviceMemory vertexBufferMemory = VK_NULL_HANDLE;
+				VkBuffer indexBuffer = VK_NULL_HANDLE;
+				VkDeviceMemory indexBufferMemory = VK_NULL_HANDLE;
 
 				std::vector<Vertex> allVertices;
 				std::vector<uint32_t> allIndices;

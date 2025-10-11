@@ -38,13 +38,23 @@ void prism::PGC::MeshManager::update(utils::Context* context)
     // Освобождаем старые буферы если они существуют
     if (context->vertexBuffer != VK_NULL_HANDLE) {
         vkDestroyBuffer(context->device, context->vertexBuffer, nullptr);
-        vkFreeMemory(context->device, context->vertexBufferMemory, nullptr);
-    }
-    if (context->indexBuffer != VK_NULL_HANDLE) {
-        vkDestroyBuffer(context->device, context->indexBuffer, nullptr);
-        vkFreeMemory(context->device, context->indexBufferMemory, nullptr);
+        context->vertexBuffer = VK_NULL_HANDLE;
     }
 
+    if (context->vertexBufferMemory != VK_NULL_HANDLE) {
+        vkFreeMemory(context->device, context->vertexBufferMemory, nullptr);
+        context->vertexBufferMemory = VK_NULL_HANDLE;
+    }
+
+    if (context->indexBuffer != VK_NULL_HANDLE) {
+        vkDestroyBuffer(context->device, context->indexBuffer, nullptr);
+        context->indexBuffer = VK_NULL_HANDLE;
+    }
+    if (context->indexBufferMemory != VK_NULL_HANDLE) {
+        vkFreeMemory(context->device, context->indexBufferMemory, nullptr);
+        context->indexBufferMemory = VK_NULL_HANDLE;
+    }
+    
     // Создаем новые буферы с актуальными данными
     if (!context->allVertices.empty()) {
         BufferWrapper::createVertexBuffer(context);
