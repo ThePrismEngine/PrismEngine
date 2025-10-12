@@ -373,4 +373,4 @@ int main() {
 Этот проект лицензирован под MIT License - смотрите [LICENSE](LICENSE) файл для деталей.
 
 ## Телеграмм канал проекта
-[![Telegram](https://img.shields.io/badge/Join%20to%20telegram%official%20channel-2CA5E0?logo=telegram&logoColor=white)](https://t.me/PrismEngine)
+[![Telegram](https://img.shields.io/badge/Join%20to%20telegram%20official%20channel-2CA5E0?logo=telegram&logoColor=white)](https://t.me/PrismEngine)
