@@ -14,11 +14,16 @@ void prism::scene::SystemManager::disableSystem(SystemId systemId)
 	}
 }
 
-void prism::scene::SystemManager::update(float deltaTime)
+void prism::scene::SystemManager::update()
 {
 	for (auto& system : systems) {
 		if (system->enabled) {
-			system->update(deltaTime);
+			if (!system->started) {
+				system->start();
+				system->started = true;
+			}
+			
+			system->update();
 		}
 	}
 }

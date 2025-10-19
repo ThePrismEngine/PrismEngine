@@ -33,11 +33,13 @@ namespace prism {
             /// @param systemId Идентификатор системы, которую нужно выключить.
             void disableSystem(SystemId systemId);
 
-            
-            /// @brief Обновляет все активные системы
-            /// @param deltaTime Время, прошедшее с предыдущего обновления
-            /// @details Вызывает update() для всех включенных систем в порядке регистрации
-            void update(float deltaTime);
+            /// @brief Обновляет все активные системы, при первом бызове еще и вызывает start()
+            /// @details Вызывает: 
+            /// 1) start() в системах с неактивным started.
+            /// 2) update() каждый вызыв. 
+            /// для всех включенных систем в порядке регистрации
+            /// @see prism::scene::ISystem::update
+            void update();
 
         private:
             /// @brief Массив зарегистрированных систем
