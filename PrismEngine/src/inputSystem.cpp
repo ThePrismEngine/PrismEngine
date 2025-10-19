@@ -11,10 +11,10 @@ void prism::scene::InputSystem::start()
 void prism::scene::InputSystem::update()
 {
     if (scene->hasResource<InputResource>()) {
-        // Ñíà÷àëà îáíîâëÿåì ñîñòîÿíèÿ
+        // Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ð¾Ð±Ð½Ð¾Ð²Ð»ÑÐµÐ¼ ÑÐ¾ÑÑ‚Ð¾ÑÐ½Ð¸Ñ
         scene->getResource<InputResource>()->updateKeyStates();
 
-        // Çàòåì ïðîâåðÿåì "çàëèïøèå" êëàâèøè
+        // Ð—Ð°Ñ‚ÐµÐ¼ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼ "Ð·Ð°Ð»Ð¸Ð¿ÑˆÐ¸Ðµ" ÐºÐ»Ð°Ð²Ð¸ÑˆÐ¸
         scene->getResource<InputResource>()->resetStuckKeys();
     }
 
