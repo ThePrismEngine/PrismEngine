@@ -10,6 +10,14 @@
    :members:
    :undoc-members:
 
+Стандартные ресурсы:
+-----------------------
+..  doxygenstruct:: prism::scene::InputResource
+    :members:
+	
+..  doxygenstruct:: prism::scene::TimeResource
+    :members:
+
 Стандартные компоненты:
 -----------------------
 
@@ -34,4 +42,10 @@
 Стандартные системы:
 
 .. doxygenclass:: prism::scene::RenderSystem
+   :members:
+   
+.. doxygenclass:: prism::scene::InputSystem
+   :members:
+   
+.. doxygenclass:: prism::scene::TimeSystem
    :members:

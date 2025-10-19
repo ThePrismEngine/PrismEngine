@@ -6,7 +6,7 @@
 Обзор
 -----
 
-Внутренняя реализация ECS модуля состоит из трех основных менеджеров:
+Внутренняя реализация ECS модуля состоит из четырех основных менеджеров:
 
 .. graphviz::
    :caption: Архитектура ECS
@@ -18,10 +18,12 @@
        Scene -> EntityManager;
        Scene -> ComponentManager;
        Scene -> SystemManager;
+	   Scene -> ResourceManager
        
        EntityManager -> FreeList;
        ComponentManager -> ComponentStorages;
        SystemManager -> SystemList;
+	   ResourceManager -> ResourceMap
    }
 
 Взаимодействие компонентов
@@ -33,3 +35,5 @@
    scene.createEntity() → EntityManager.createEntity()
    scene.addComponent() → ComponentManager.addComponent()
    scene.update() → SystemManager.update() → ISystem.update()
+   scene.update() → SystemManager.start() → ISystem.start()
+   scene.setResource() → ResourceManager.setResource()

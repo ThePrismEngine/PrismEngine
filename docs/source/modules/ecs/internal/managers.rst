@@ -24,6 +24,14 @@ SystemManager
    :members:
    :private-members:
 
+ResourceManager
+---------------
+
+.. doxygenclass:: prism::scene::ResourceManager
+   :members:
+   :private-members:
+
+
 Оптимизации
 -----------
 

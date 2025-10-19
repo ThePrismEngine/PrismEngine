@@ -22,6 +22,12 @@
    scene.addComponent<Renderable>(player, Renderable{"player.obj"});
    scene.addComponent<Health>(player, Health{100});
 
+Добавляем стандартный ресурс TimeResource и его систему TimeSystem
+---------------
+.. code-block:: cpp
+	scene.setResource<TimeResource>(TimeResource{});
+	scene.registerSystem<TimeSystem>(&scene);	    
+
 Создание системы
 ----------------
 
@@ -29,12 +35,12 @@
    
    class MovementSystem : public prism::scene::ISystem {
    public:
-       void update(float deltaTime) override {
+       void update() override {
            auto entities = scene->getEntitiesWith<Transform, Velocity>();
            for (auto entity : entities) {
                auto* transform = scene->getComponent<Transform>(entity);
                auto* velocity = scene->getComponent<Velocity>(entity);
-               transform->position.x += velocity->x * deltaTime;
+               transform->position.x += velocity->x * scene->getResource<TimeResource>()->deltaTime;
            }
        }
    };
@@ -49,7 +55,6 @@
    
    void gameLoop() {
        while (running) {
-           float deltaTime = getDeltaTime();
-           scene.update(deltaTime);
+           scene.update();
        }
    }
