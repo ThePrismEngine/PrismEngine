@@ -10,14 +10,14 @@ namespace prism {
     };
     
     struct PrismVersion {
-        static constexpr int MAJOR = 0;
+        static constexpr int MAJOR = 1;
         static constexpr int MINOR = 1;
         static constexpr int PATCH = 0;
-        static constexpr const char* STRING = "0.1.0";
+        static constexpr const char* STRING = "1.1.0";
     };
 
     struct PrismInfo {
         static constexpr const char* NAME = "PrismEngine";
-        static constexpr const char* DESCRIPTION = "lightweight Vulkan Engine";
+        static constexpr const char* DESCRIPTION = "modern real-time 3D engine on Vulkan with ECS API";
     };
 }

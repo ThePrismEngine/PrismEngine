@@ -1,4 +1,7 @@
 #include "PrismEngine.h"
+#include <timeResource.h>
+#include <inputResource.h>
+#include <inputSystem.h>
 
 const std::string EXAMPLE_NAME = "solarSystem";
 const int WINDOW_WIDTH = 1200;
@@ -31,7 +34,7 @@ class PlanetarySystem : public ISystem {
 public:
     PlanetarySystem(Scene* scene) : scene(scene) {}
 
-    void update(float deltaTime) override {
+    void update() override {
         auto entities = scene->getEntitiesWithAll<TransformComponent, PlanetaryBodyComponent>();
 
         for (auto entity : entities) {
@@ -39,10 +42,10 @@ public:
             PlanetaryBodyComponent* planetary = scene->getComponent<PlanetaryBodyComponent>(entity);
 
             // Вращение вокруг собственной оси
-            transform->rot.y += planetary->rotationSpeed * deltaTime;
+            transform->rot.y += planetary->rotationSpeed * scene->getResource<TimeResource>()->deltaTime;
 
             // Движение по орбите
-            planetary->orbitAngle += planetary->orbitalSpeed * deltaTime;
+            planetary->orbitAngle += planetary->orbitalSpeed * scene->getResource<TimeResource>()->deltaTime;
 
                 // Вычисляем позицию на круговой орбите
             float rad = glm::radians(planetary->orbitAngle);
@@ -57,13 +60,16 @@ private:
 
 class FlyCameraSystem : public ISystem {
 public:
-    FlyCameraSystem(Scene* scene) : scene(scene) {
+    FlyCameraSystem(Scene* scene) : scene(scene) {}
+
+    // Вызовется при первом кадре 
+    void start() override {
         SDL_SetRelativeMouseMode(SDL_TRUE);
     }
-
-    void update(float deltaTime) override {
-        const Uint8* keyboardState = SDL_GetKeyboardState(NULL);
+    
+    void update() override {
         auto entities = scene->getEntitiesWithAll<TransformComponent, CameraComponent>();
+        InputResource* input = scene->getResource<InputResource>();
 
         for (auto entity : entities) {
             TransformComponent* transform = scene->getComponent<TransformComponent>(entity);
@@ -83,8 +89,8 @@ public:
             if (camera->look.y < -89.0f) camera->look.y = -89.0f;
 
             // Движение относительно камеры
-            float speed = 5.0f * deltaTime;
-            if (keyboardState[SDL_SCANCODE_LCTRL]) speed *= 3.0f;
+            float speed = 5.0f * scene->getResource<TimeResource>()->unscaledDeltaTime;
+            if (input->getKeyState(KeyCode::LeftControl) == HELD) speed *= 3.0f;
 
             // Вычисляем направление камеры
             glm::vec3 front;
@@ -95,27 +101,29 @@ public:
 
             glm::vec3 right = glm::normalize(glm::cross(front, glm::vec3(0.0f, 1.0f, 0.0f)));
 
-            // Движение - применяем к правильным координатам
-            if (keyboardState[SDL_SCANCODE_W]) {
-                transform->pos.x += front.x * speed;
-                transform->pos.y += front.y * speed;
-                transform->pos.z += front.z * speed;
+            if (scene->hasResource<InputResource>()) {
+                // Движение - применяем к правильным координатам
+                if (input->getKeyState(KeyCode::W) == HELD) {
+                    transform->pos.x += front.x * speed;
+                    transform->pos.y += front.y * speed;
+                    transform->pos.z += front.z * speed;
+                }
+                if (input->getKeyState(KeyCode::S) == HELD) {
+                    transform->pos.x -= front.x * speed;
+                    transform->pos.y -= front.y * speed;
+                    transform->pos.z -= front.z * speed;
+                }
+                if (input->getKeyState(KeyCode::A) == HELD) {
+                    transform->pos.x -= right.x * speed;
+                    transform->pos.z -= right.z * speed;
+                }
+                if (input->getKeyState(KeyCode::D) == HELD) {
+                    transform->pos.x += right.x * speed;
+                    transform->pos.z += right.z * speed;
+                }
+                if (input->getKeyState(KeyCode::Space) == HELD) transform->pos.y += speed;
+                if (input->getKeyState(KeyCode::LeftShift) == HELD) transform->pos.y -= speed;
             }
-            if (keyboardState[SDL_SCANCODE_S]) {
-                transform->pos.x -= front.x * speed;
-                transform->pos.y -= front.y * speed;
-                transform->pos.z -= front.z * speed;
-            }
-            if (keyboardState[SDL_SCANCODE_A]) {
-                transform->pos.x -= right.x * speed;
-                transform->pos.z -= right.z * speed;
-            }
-            if (keyboardState[SDL_SCANCODE_D]) {
-                transform->pos.x += right.x * speed;
-                transform->pos.z += right.z * speed;
-            }
-            if (keyboardState[SDL_SCANCODE_SPACE]) transform->pos.y += speed;
-            if (keyboardState[SDL_SCANCODE_LSHIFT]) transform->pos.y -= speed;
         }
     }
 
@@ -184,7 +192,13 @@ int solarSystemDemo() {
 
     renderer.updateMeshes();
 
+    // ресурсы
+    scene.setResource<TimeResource>(TimeResource{});
+    scene.setResource<InputResource>(InputResource{});
+
     // Системы
+    scene.registerSystem<TimeSystem>(&scene);
+    scene.registerSystem<InputSystem>(&scene);
     scene.registerSystem<RenderSystem>(&scene, &renderer);
     scene.registerSystem<FlyCameraSystem>(&scene);
     scene.registerSystem<PlanetarySystem>(&scene);
@@ -202,14 +216,11 @@ int solarSystemDemo() {
     // Создаем скайбокс
     createSkybox(scene, skyboxMesh, skyboxTexture);
 
-    auto lastTime = std::chrono::high_resolution_clock::now();
     while (!window.shouldClose()) {
+        scene.update();
+
         window.handleEvents();
 
-        float deltaTime = std::chrono::duration<float>(std::chrono::high_resolution_clock::now() - lastTime).count();
-        lastTime = std::chrono::high_resolution_clock::now();
-
-        scene.update(deltaTime);
         SDL_Delay(16);
     }
 

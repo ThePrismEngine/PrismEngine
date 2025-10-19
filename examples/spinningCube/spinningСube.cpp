@@ -6,6 +6,7 @@
 #include <meshComponent.h>
 #include <textureComponent.h>
 #include "../examples.h"
+#include <timeResource.h>
 
 #undef main
 
@@ -18,7 +19,7 @@ public:
         SDL_SetRelativeMouseMode(SDL_TRUE);
     }
 
-    void update(float deltaTime) override {
+    void update() override {
         const Uint8* keyboardState = SDL_GetKeyboardState(NULL);
         auto entities = scene->getEntitiesWithAll<TransformComponent, CameraComponent>();
 
@@ -40,7 +41,7 @@ public:
             if (camera->look.y < -89.0f) camera->look.y = -89.0f;
 
             // Движение относительно камеры
-            float speed = 5.0f * deltaTime;
+            float speed = 5.0f * scene->getResource<TimeResource>()->deltaTime;
             if (keyboardState[SDL_SCANCODE_LCTRL]) speed *= 3.0f;
 
             // Вычисляем направление камеры
@@ -84,7 +85,7 @@ class ObjectRotationSystem : public ISystem {
 public:
     ObjectRotationSystem(Scene* scene, float* time) : scene(scene), time(time) {}
 
-    void update(float deltaTime) override {
+    void update() override {
         auto entities = scene->getEntitiesWithAll<TransformComponent, MeshComponent>();
         for (auto entity : entities) {
             TransformComponent* transform = scene->getComponent<TransformComponent>(entity);
@@ -173,7 +174,7 @@ int demo1() {
         float deltaTime = std::chrono::duration<float>(currentTime - lastTime).count();
         lastTime = currentTime;
         time++;
-        scene.update(deltaTime);
+        scene.update();
         SDL_Delay(10);
     }
 

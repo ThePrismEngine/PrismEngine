@@ -1,4 +1,5 @@
 #include "PrismEngine.h"
+#include <timeResource.h>
 
 const std::string EXAMPLE_NAME = "dancingNeonCubes";
 const int WINDOW_WIDTH = 1200;
@@ -13,10 +14,12 @@ typedef bool NeonCybe;
  */
 class DancingNeonCubesSystem : public ISystem {
 public:
-    DancingNeonCubesSystem(Scene* scene) : scene(scene), time(0.0f) {}
+    DancingNeonCubesSystem(Scene* scene) : scene(scene) {}
 
-    void update(float deltaTime) override {
-        time += deltaTime;
+    void update() override {
+        double_t time = scene->getResource<TimeResource>()->time;
+        double_t deltaTime = scene->getResource<TimeResource>()->deltaTime;
+         
 
         auto entities = scene->getEntitiesWithAll<NeonCybe, TransformComponent, MeshComponent>();
         int entityCount = entities.size();
@@ -47,7 +50,6 @@ public:
 
 private:
     Scene* scene;
-    float time;
 };
 
 /**
@@ -104,7 +106,12 @@ int dancingNeonCubesDemo() {
     TextureComponent cubeTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/neoncube.png");
     TextureComponent backTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/back.jpeg");
 
+    // Добавляем ресурс времени
+    scene.setResource<TimeResource>(TimeResource{});
+    
     // Системы
+    scene.registerSystem<TimeSystem>(&scene);  // система обновления времени
+    
     scene.registerSystem<RenderSystem>(&scene, &renderer);
     scene.registerSystem<DancingNeonCubesSystem>(&scene);
 
@@ -130,15 +137,11 @@ int dancingNeonCubesDemo() {
     std::cout << "Watch the cubes dance in harmonic patterns!" << std::endl;
     std::cout << "Each cube has its own unique movement and rotation" << std::endl;
 
-    auto lastTime = std::chrono::high_resolution_clock::now();
     while (!window.shouldClose()) {
         window.handleEvents();
-
-        float deltaTime = std::chrono::duration<float>(
-            std::chrono::high_resolution_clock::now() - lastTime).count();
-        lastTime = std::chrono::high_resolution_clock::now();
-
-        scene.update(deltaTime);
+ 
+        scene.update();
+       
         SDL_Delay(16);
     }
 

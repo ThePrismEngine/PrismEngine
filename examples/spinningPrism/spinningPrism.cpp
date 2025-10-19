@@ -1,4 +1,6 @@
 #include "PrismEngine.h"
+#include <timeResource.h>
+#include <inputSystem.h>
 
 // Константы для удобства изменения параметров
 const std::string EXAMPLE_NAME = "spinningPrism";
@@ -16,15 +18,31 @@ class RotationSystem : public ISystem {
 public:
     RotationSystem(Scene* scene) : scene(scene) {}
 
-    void update(float deltaTime) override {
+    void update() override {
         // Получаем все сущности, которые имеют и Transform и Mesh компоненты
         auto rotatingObjects = scene->getEntitiesWithAll<TransformComponent, MeshComponent>();
 
         // Для каждого объекта добавляем вращение вокруг оси Y
         for (auto entity : rotatingObjects) {
             TransformComponent* transform = scene->getComponent<TransformComponent>(entity);
-            transform->rot.y += ROTATION_SPEED * deltaTime;
+            transform->rot.y += ROTATION_SPEED * scene->getResource<TimeResource>()->deltaTime;
         }
+        
+        if (scene->hasResource<InputResource>()) {
+            if (scene->getResource<InputResource>()->getMouseState(MouseCode::Left) == DOWN) {
+                SDL_Log("DOWN");
+            }
+            if (scene->getResource<InputResource>()->getMouseState(MouseCode::Left) == PASSIVE) {
+                SDL_Log("PASSIVE");
+            }
+            if (scene->getResource<InputResource>()->getMouseState(MouseCode::Left) == UP) {
+                SDL_Log("UP");
+            }
+            if (scene->getResource<InputResource>()->getMouseState(MouseCode::Left) == HELD) {
+                SDL_Log("HELD");
+            }
+        }
+        
     }
 
 private:
@@ -102,7 +120,16 @@ int spinningPrismDemo() {
     // Обновляем меши в рендерере (применяем загруженные ресурсы)
     renderer.updateMeshes();
 
-    // ========== ШАГ 3: НАСТРОЙКА СИСТЕМ ==========
+    // ========== ШАГ 3: НАСТРОЙКА СИСТЕМ И РЕСУРСОВ ==========
+    
+    // Добавляем ресурс времени
+    scene.setResource<TimeResource>(TimeResource{});
+
+    scene.setResource<InputResource>(InputResource{});
+    scene.registerSystem<InputSystem>(&scene);
+
+    // Добавляем систему обновления времени
+    scene.registerSystem<TimeSystem>(&scene);
 
     // Регистрируем систему рендеринга (отвечает за отрисовку)
     scene.registerSystem<RenderSystem>(&scene, &renderer);
@@ -157,24 +184,16 @@ int spinningPrismDemo() {
     std::cout << "Close the exit window" << std::endl;
 
     // ========== ШАГ 7: ГЛАВНЫЙ ЦИКЛ ПРИЛОЖЕНИЯ ==========
-
-    auto lastTime = std::chrono::high_resolution_clock::now();
-
     // Главный цикл - выполняется пока окно не закрыто
     while (!window.shouldClose()) {
-        // Обрабатываем события (нажатия клавиш, движение мыши и т.д.)
+        // Обновляем сцену (вызываем все системы)
+        scene.update();
+        
+        // Обрабатываем события окна
         window.handleEvents();
 
-        // Вычисляем время, прошедшее с последнего кадра
-        auto currentTime = std::chrono::high_resolution_clock::now();
-        float deltaTime = std::chrono::duration<float>(currentTime - lastTime).count();
-        lastTime = currentTime;
-
-        // Обновляем сцену (вызываем все системы)
-        scene.update(deltaTime);
-
         // Небольшая задержка для снижения нагрузки на CPU
-        SDL_Delay(16); // ~60 кадров в секунду
+        SDL_Delay(15); // ~60 кадров в секунду
     }
 
     // ========== ШАГ 8: КОРРЕКТНОЕ ЗАВЕРШЕНИЕ ==========
