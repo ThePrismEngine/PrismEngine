@@ -457,7 +457,12 @@ namespace prism {
                 }
             }
 
+            /// @brief Вычисляет смещение мыши по X с предыдущего кадра
+            /// @return Разница между текущей и предыдущей позицией мыши по X
             double getMouseDeltaX() const { return mouseX - mouseXPrevious; }
+
+            /// @brief Вычисляет смещение мыши по Y с предыдущего кадра
+            /// @return Разница между текущей и предыдущей позицией мыши по Y
             double getMouseDeltaY() const { return mouseY - mouseYPrevious; }
         }; 
     }
