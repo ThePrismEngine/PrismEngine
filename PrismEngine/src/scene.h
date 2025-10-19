@@ -10,6 +10,7 @@
 #include "entityManager.h"
 #include "componentManager.h"
 #include "systemManager.h"
+#include "resourceManager.h"
 
 
 namespace prism {
@@ -44,10 +45,9 @@ namespace prism {
             void disableSystem(SystemId systemId);
             
             /// @brief Обновляет все активные системы сцены
-            /// @param deltaTime Время, прошедшее с предыдущего обновления
             /// @see prism::scene::SystemManager::update
-            void update(float deltaTime) {
-                systemManager.update(deltaTime);
+            void update() {
+                systemManager.update();
             }
 
             // шаблонные методы определены здесь в .h (по-другому не компилится)
@@ -112,10 +112,124 @@ namespace prism {
                 return systemManager.registerSystem<T>(std::forward<Args>(args)...);
             };
 
+            /// @brief Устанавливает или заменяет глобальный ресурс на сцене
+            /// @tparam T Тип ресурса
+            /// @param resource Объект ресурса для установки
+            /// @details Ресурсы представляют собой глобальные данные, доступные всем системам.
+            /// Каждый тип ресурса может существовать только в одном экземпляре на сцене.
+            /// 
+            /// Пример:
+            /// @code
+            /// // Установка стандартных ресурсов
+            /// scene.setResource<Time>(Time{});
+            /// scene.setResource<Input>(Input{});
+            /// scene.setResource<Config>(Config{1920, 1080, "My Game"});
+            /// 
+            /// // Замена ресурса
+            /// scene.setResource<Config>(loadConfigFromFile("settings.cfg"));
+            /// @endcode
+            /// 
+            /// @see prism::scene::ResourceManager::set
+            template<typename T>
+            void setResource(T resource) {
+                resourceManager.set<T>(resource);
+            }
+
+            /// @brief Получает глобальный ресурс сцены
+            /// @tparam T Тип запрашиваемого ресурса
+            /// @return Указатель на ресурс или nullptr если ресурс не найден
+            /// @details Обеспечивает доступ к глобальным данным сцены. Возвращаемый
+            /// указатель можно использовать для модификации ресурса.
+            /// 
+            /// Пример:
+            /// @code
+            /// // В системе времени
+            /// if (auto* time = scene.getResource<Time>()) {
+            ///     time->update(deltaTime);
+            /// }
+            /// 
+            /// // В системе ввода
+            /// if (auto* input = scene.getResource<Input>()) {
+            ///     if (input->isKeyPressed(KEY_SPACE)) {
+            ///         jump();
+            ///     }
+            /// }
+            /// @endcode
+            /// 
+            /// @see prism::scene::ResourceManager::get
+            template<typename T>
+            T* getResource() {
+                return resourceManager.get<T>();
+            }
+
+            /// @brief Получает константный глобальный ресурс сцены
+            /// @tparam T Тип запрашиваемого ресурса
+            /// @return Константный указатель на ресурс или nullptr если ресурс не найден
+            /// @details Предназначен для безопасного доступа только для чтения к глобальным
+            /// ресурсам сцены. Используется в константных контекстах.
+            /// 
+            /// Пример:
+            /// @code
+            /// // В константном методе рендеринга
+            /// void render(const Scene& scene) {
+            ///     if (const auto* config = scene.getResource<Config>()) {
+            ///         setResolution(config->width, config->height);
+            ///     }
+            /// }
+            /// @endcode
+            /// 
+            /// @see prism::scene::ResourceManager::get
+            template<typename T>
+            const T* getResource() const {
+                return resourceManager.get<T>();
+            }
+
+            /// @brief Проверяет наличие глобального ресурса на сцене
+            /// @tparam T Тип проверяемого ресурса
+            /// @return true если ресурс существует, false в противном случае
+            /// @details Быстрая проверка существования ресурса без его загрузки.
+            /// 
+            /// Пример:
+            /// @code
+            /// // Ленивая инициализация ресурса
+            /// if (!scene.hasResource<Audio>()) {
+            ///     scene.setResource<Audio>(Audio{});
+            ///     scene.getResource<Audio>()->initialize();
+            /// }
+            /// @endcode
+            /// 
+            /// @see prism::scene::ResourceManager::has
+            template<typename T>
+            bool hasResource() const {
+                return resourceManager.has<T>();
+            }
+
+            /// @brief Удаляет глобальный ресурс со сцены
+            /// @tparam T Тип удаляемого ресурса
+            /// @return true если ресурс был удален, false если ресурс не существовал
+            /// @details Освобождает память, занимаемую ресурсом. Последующие вызовы
+            /// getResource() для этого типа вернут nullptr.
+            /// 
+            /// Пример:
+            /// @code
+            /// // Удаление временного ресурса
+            /// scene.removeResource<DebugOverlay>();
+            /// 
+            /// // Удаление при перезагрузке
+            /// scene.removeResource<Config>();
+            /// scene.setResource<Config>(loadNewConfig());
+            /// @endcode
+            /// 
+            /// @see prism::scene::ResourceManager::remove
+            template<typename T>
+            bool removeResource() {
+                return resourceManager.remove<T>();
+            }
         private:
-            EntityManager entityManager;
-            ComponentManager componentManager;
-            SystemManager systemManager;
+            EntityManager entityManager;      /// Менеджер сущностей
+            ComponentManager componentManager;/// Менеджер компонентов
+            SystemManager systemManager;      /// Менеджер систем
+            ResourceManager resourceManager;  /// Менеджер ресурсов
         };
     }
 }
