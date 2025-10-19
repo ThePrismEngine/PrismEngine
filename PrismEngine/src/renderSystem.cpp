@@ -4,7 +4,7 @@
 #include "meshComponent.h"
 #include "textureComponent.h"
 
-void prism::scene::RenderSystem::update(float deltaTime)
+void prism::scene::RenderSystem::update()
 {
     if (renderer->isRenderingActive()) {
         renderer->beginFrame();

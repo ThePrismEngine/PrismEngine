@@ -8,7 +8,7 @@ namespace prism {
         class RenderSystem : public ISystem {
         public:
             RenderSystem(Scene* scene, render::Renderer* renderer) : scene(scene), renderer(renderer) {}
-            void update(float deltaTime) override;
+            void update() override;
 
         private:
             prism::scene::Scene* scene;

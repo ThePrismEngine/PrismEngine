@@ -154,6 +154,7 @@ namespace prism {
         }
 
         void Window::handleEvents() {
+            std::vector<SDL_Event> temp_buffer;
             SDL_Event event;
             while (SDL_PollEvent(&event)) {
                 if (event.type == SDL_QUIT) {
@@ -170,6 +171,14 @@ namespace prism {
                         windowMinimized = false;
                     }
                 }
+                else
+                {
+                    temp_buffer.push_back(event);
+                }
+            }
+
+            for (const auto& e : temp_buffer) {
+                SDL_PushEvent(const_cast<SDL_Event*>(&e));
             }
         }
 
