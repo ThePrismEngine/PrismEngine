@@ -25,6 +25,7 @@
 Добавляем стандартный ресурс TimeResource и его систему TimeSystem
 ---------------
 .. code-block:: cpp
+
 	scene.setResource<TimeResource>(TimeResource{});
 	scene.registerSystem<TimeSystem>(&scene);	    
 

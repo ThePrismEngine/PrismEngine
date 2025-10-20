@@ -27,22 +27,6 @@ public:
             TransformComponent* transform = scene->getComponent<TransformComponent>(entity);
             transform->rot.y += ROTATION_SPEED * scene->getResource<TimeResource>()->deltaTime;
         }
-        
-        if (scene->hasResource<InputResource>()) {
-            if (scene->getResource<InputResource>()->getMouseState(MouseCode::Left) == DOWN) {
-                SDL_Log("DOWN");
-            }
-            if (scene->getResource<InputResource>()->getMouseState(MouseCode::Left) == PASSIVE) {
-                SDL_Log("PASSIVE");
-            }
-            if (scene->getResource<InputResource>()->getMouseState(MouseCode::Left) == UP) {
-                SDL_Log("UP");
-            }
-            if (scene->getResource<InputResource>()->getMouseState(MouseCode::Left) == HELD) {
-                SDL_Log("HELD");
-            }
-        }
-        
     }
 
 private:

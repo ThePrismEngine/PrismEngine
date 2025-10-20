@@ -149,7 +149,7 @@ void prism::render::Renderer::updateCamera(prism::scene::TransformComponent* tra
 	cameraData->aspect = camera->aspect;
 	cameraData->zFar = camera->zFar;
 	cameraData->zNear = camera->zNear;
-	cameraData->useСurrentWindowAspect = camera->useСurrentWindowAspect;
+	cameraData->useСurrentWindowAspect = camera->useCurrentWindowAspect;
 
 	prism::PGC::CameraUBO cameraUbo{};
 
