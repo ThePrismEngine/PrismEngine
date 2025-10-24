@@ -146,7 +146,6 @@
     <ClCompile Include="dancingNeonCubes\dancingNeonCubes.cpp" />
     <ClCompile Include="examples.cpp" />
     <ClCompile Include="solarSystem\solarSystem.cpp" />
-    <ClCompile Include="spinningCube\spinningСube.cpp" />
     <ClCompile Include="spinningPrism\spinningPrism.cpp" />
   </ItemGroup>
   <ItemGroup>

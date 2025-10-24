@@ -2,6 +2,5 @@
 
 
 int dancingNeonCubesDemo();
-int demo1();
 int spinningPrismDemo();
 int solarSystemDemo();

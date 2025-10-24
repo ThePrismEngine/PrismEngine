@@ -10,14 +10,8 @@
     <Filter Include="solarSystem">
       <UniqueIdentifier>{a4dea194-48dd-43a5-9f98-01cb32374078}</UniqueIdentifier>
     </Filter>
-    <Filter Include="spinningСube">
-      <UniqueIdentifier>{cac627e7-786e-4095-a3bb-42f10a407a96}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="spinningCube\spinningСube.cpp">
-      <Filter>spinningСube</Filter>
-    </ClCompile>
     <ClCompile Include="examples.cpp" />
     <ClCompile Include="spinningPrism\spinningPrism.cpp">
       <Filter>spinningPrism</Filter>

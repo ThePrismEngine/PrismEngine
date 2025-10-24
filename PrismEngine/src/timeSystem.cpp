@@ -4,12 +4,12 @@
 
 void prism::scene::TimeSystem::start()
 {
-    lastTime = std::chrono::high_resolution_clock::now();
+    lastTime = std::chrono::steady_clock::now();
 }
 
 void prism::scene::TimeSystem::update()
 {
-    auto currentTime = std::chrono::high_resolution_clock::now();
+    auto currentTime = std::chrono::steady_clock::now();
     double_t deltaTime = std::chrono::duration<double_t>(currentTime - lastTime).count();
     lastTime = currentTime;
 

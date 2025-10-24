@@ -2,7 +2,6 @@
 set(EXAMPLES_SOURCES
     examples.cpp
     examples.h
-    spinningCube/spinningСube.cpp
     spinningPrism/spinningPrism.cpp
     solarSystem/solarSystem.cpp
     dancingNeonCubes/dancingNeonCubes.cpp

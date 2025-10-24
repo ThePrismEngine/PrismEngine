@@ -7,11 +7,14 @@ int main(int argc, char* argv[]) {
     // Если есть аргумент командной строки, используем его
     if (argc > 1) {
         std::string demoName = argv[1];
-        if (demoName == "demo1") {
+        if (demoName == "spinningPrismDemo") {
+            return spinningPrismDemo();
+        }
+        else if (demoName == "dancingNeonCubesDemo") {
             return dancingNeonCubesDemo();
         }
-        else if (demoName == "demo2") {
-            return demo1();
+        else if (demoName == "solarSystemDemo") {
+            return solarSystemDemo();
         }
         else {
             std::cout << "Unknown demo: " << demoName << std::endl;
