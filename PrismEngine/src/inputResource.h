@@ -34,7 +34,9 @@ namespace prism {
             // Символьные клавиши
             Comma, Period, Semicolon, Apostrophe, Slash, Backslash, LeftBracket, RightBracket, Minus, Equal, Grave, World1, World2,
 
-            COUNT  // Общее количество поддерживаемых клавиш
+            COUNT,  // Общее количество поддерживаемых клавиш
+
+            Unknown // Неизвестная клавиша
         };
 
         /// @brief Преобразует SDL scancode в внутренний код клавиши
@@ -170,6 +172,7 @@ namespace prism {
             case SDL_SCANCODE_GRAVE: return KeyCode::Grave;
             case SDL_SCANCODE_INTERNATIONAL1: return KeyCode::World1;
             case SDL_SCANCODE_INTERNATIONAL2: return KeyCode::World2;
+            default: return KeyCode::Unknown;
             }
         }
 
@@ -306,6 +309,8 @@ namespace prism {
             case KeyCode::Grave: return SDL_SCANCODE_GRAVE;
             case KeyCode::World1: return SDL_SCANCODE_INTERNATIONAL1;
             case KeyCode::World2: return SDL_SCANCODE_INTERNATIONAL2;
+
+            case KeyCode::Unknown: return SDL_SCANCODE_UNKNOWN;
             }
         }
 
