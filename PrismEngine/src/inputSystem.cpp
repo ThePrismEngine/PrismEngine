@@ -48,15 +48,20 @@ void prism::scene::InputSystem::processKeyboardEvent(SDL_Event event)
 {
     if (scene->hasResource<InputResource>()) {
         SDL_Scancode scancode = event.key.keysym.scancode;
+        KeyCode keyCode = sdlScancodeToKeyCode(scancode);
+
+        if (keyCode == KeyCode::Unknown) {
+            return;
+        }
 
         switch (event.type) {
         case SDL_KEYDOWN:
             if (event.key.repeat == 0) {
-                scene->getResource<InputResource>()->enableKey(sdlScancodeToKeyCode(scancode));
+                scene->getResource<InputResource>()->enableKey(keyCode);
             }
             break;
         case SDL_KEYUP:
-            scene->getResource<InputResource>()->disableKey(sdlScancodeToKeyCode(scancode));
+            scene->getResource<InputResource>()->disableKey(keyCode);
             break;
         default:
             break;

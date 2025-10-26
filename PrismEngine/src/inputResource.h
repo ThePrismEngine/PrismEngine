@@ -310,7 +310,9 @@ namespace prism {
             case KeyCode::World1: return SDL_SCANCODE_INTERNATIONAL1;
             case KeyCode::World2: return SDL_SCANCODE_INTERNATIONAL2;
 
-            case KeyCode::Unknown: return SDL_SCANCODE_UNKNOWN;
+            case KeyCode::Unknown:
+            default:
+                return SDL_SCANCODE_UNKNOWN;
             }
         }
 
@@ -418,6 +420,10 @@ namespace prism {
                     if (keys[i] == CodeState::HELD) {
                         const Uint8* currentKeyState = SDL_GetKeyboardState(NULL);
                         SDL_Scancode scancode = keyCodeToSdlScancode(static_cast<KeyCode>(i));
+
+                        if (scancode == SDL_SCANCODE_UNKNOWN) {
+                            continue;
+                        }
 
                         if (!currentKeyState[scancode]) {
                             keys[i] = CodeState::PASSIVE;
