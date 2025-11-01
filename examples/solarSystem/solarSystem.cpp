@@ -163,11 +163,11 @@ int solarSystemDemo() {
     prism::init();
 
     Scene scene;
-    prism::render::Window window("The solar system model", WINDOW_WIDTH, WINDOW_HEIGHT);
+    scene.setResource<WindowResource>(WindowResource::CreateCentered( "The solar system model", WINDOW_WIDTH, WINDOW_HEIGHT ));
     prism::render::Renderer renderer;
 
     // Настройка рендерера
-    renderer.linkWindow(&window);
+    renderer.linkWindow(scene.getResource<WindowResource>());
     renderer.setDefaultSettings();
     renderer.settings.pipeline.shaders = { "vert.spv", "frag.spv", EXAMPLE_NAME + "/shaders/" };
     renderer.init();
@@ -216,11 +216,9 @@ int solarSystemDemo() {
     // Создаем скайбокс
     createSkybox(scene, skyboxMesh, skyboxTexture);
 
-    while (!window.shouldClose()) {
+    while (!scene.getResource<WindowResource>()->isClose()) {
         scene.update();
-
-        window.handleEvents();
-
+        
         SDL_Delay(16);
     }
 

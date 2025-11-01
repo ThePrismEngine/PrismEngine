@@ -1,5 +1,6 @@
 #include "PrismEngine.h"
 #include <timeResource.h>
+#include <inputSystem.h>
 
 const std::string EXAMPLE_NAME = "dancingNeonCubes";
 const int WINDOW_WIDTH = 1200;
@@ -89,12 +90,13 @@ int dancingNeonCubesDemo() {
     prism::init();
 
     Scene scene;
-    prism::render::Window window("Dancing NeonCubes - Geometric Ballet", WINDOW_WIDTH, WINDOW_HEIGHT);
+    WindowResource window = WindowResource::CreateCentered("Dancing NeonCubes - Geometric Ballet", WINDOW_WIDTH, WINDOW_HEIGHT);
     window.setResizable(true);
+    scene.setResource<WindowResource>(window);
     prism::render::Renderer renderer;
 
     // Настройка рендерера
-    renderer.linkWindow(&window);
+    renderer.linkWindow(scene.getResource<WindowResource>());
     renderer.setDefaultSettings();
     renderer.settings.pipeline.shaders = { "vert.spv", "frag.spv", EXAMPLE_NAME + "/shaders/" };
     renderer.init();
@@ -108,10 +110,11 @@ int dancingNeonCubesDemo() {
 
     // Добавляем ресурс времени
     scene.setResource<TimeResource>(TimeResource{});
+    scene.setResource<InputResource>(InputResource{});
     
     // Системы
     scene.registerSystem<TimeSystem>(&scene);  // система обновления времени
-    
+    scene.registerSystem<InputSystem>(&scene);
     scene.registerSystem<RenderSystem>(&scene, &renderer);
     scene.registerSystem<DancingNeonCubesSystem>(&scene);
 
@@ -137,9 +140,7 @@ int dancingNeonCubesDemo() {
     std::cout << "Watch the cubes dance in harmonic patterns!" << std::endl;
     std::cout << "Each cube has its own unique movement and rotation" << std::endl;
 
-    while (!window.shouldClose()) {
-        window.handleEvents();
- 
+    while (!scene.getResource<WindowResource>()->isClose()) {
         scene.update();
        
         SDL_Delay(16);

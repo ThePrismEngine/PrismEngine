@@ -1,6 +1,7 @@
 #include "PrismEngine.h"
 #include <timeResource.h>
 #include <inputSystem.h>
+#include <windowResource.h>
 
 // Константы для удобства изменения параметров
 const std::string EXAMPLE_NAME = "spinningPrism";
@@ -77,12 +78,13 @@ int spinningPrismDemo() {
     // Создаем сцену для хранения всех объектов
     Scene scene;
 
-    // Создаем окно для отображения 3D графики
-    prism::render::Window window("Spinning Prism Demo", WINDOW_WIDTH, WINDOW_HEIGHT);
+    // Создаем ресурс окна для отображения 3D графики
+    WindowResource window = WindowResource::CreateCentered("The solar system model", WINDOW_WIDTH, WINDOW_HEIGHT);
+    scene.setResource<WindowResource>(window);
 
     // Создаем и настраиваем рендерер
     prism::render::Renderer renderer;
-    renderer.linkWindow(&window);
+    renderer.linkWindow(scene.getResource<WindowResource>());
     renderer.setDefaultSettings();
 
     // Указываем пути к шейдерам (программы для видеокарты)
@@ -110,7 +112,7 @@ int spinningPrismDemo() {
     scene.setResource<TimeResource>(TimeResource{});
 
     scene.setResource<InputResource>(InputResource{});
-    scene.registerSystem<InputSystem>(&scene);
+    scene.registerSystem<InputSystem>(&scene); // Нужна для обновления состояний окна и ввода
 
     // Добавляем систему обновления времени
     scene.registerSystem<TimeSystem>(&scene);
@@ -167,14 +169,13 @@ int spinningPrismDemo() {
         << ROTATION_SPEED << " degrees per second" << std::endl;
     std::cout << "Close the exit window" << std::endl;
 
+
+
     // ========== ШАГ 7: ГЛАВНЫЙ ЦИКЛ ПРИЛОЖЕНИЯ ==========
     // Главный цикл - выполняется пока окно не закрыто
-    while (!window.shouldClose()) {
+    while (!scene.getResource<WindowResource>()->isClose()) {
         // Обновляем сцену (вызываем все системы)
         scene.update();
-        
-        // Обрабатываем события окна
-        window.handleEvents();
 
         // Небольшая задержка для снижения нагрузки на CPU
         SDL_Delay(15); // ~60 кадров в секунду
