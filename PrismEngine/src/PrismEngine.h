@@ -8,8 +8,8 @@
 #include "logger.h"
 
 #include "prismGraphicCore.h"
-#include "Window.h"
 #include "renderer.h"
+#include "init.h"
 
 #include "entityManager.h"
 #include "componentManager.h"

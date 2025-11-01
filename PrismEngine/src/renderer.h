@@ -1,10 +1,10 @@
 #pragma once
 #include "prismGraphicCore.h"
-#include "Window.h"
 #include "transformComponent.h"
 #include "cameraComponent.h"
 #include "textureComponent.h"
 #include "meshComponent.h"
+#include "windowResource.h"
 
 namespace prism {
 	namespace render {
@@ -12,7 +12,7 @@ namespace prism {
 	    {
 		public:
 			Renderer() : window(nullptr) {};
-			void linkWindow(Window* window);
+			void linkWindow(prism::scene::WindowResource* window);
 			void setDefaultSettings();
 			void init();
 			~Renderer();
@@ -42,7 +42,7 @@ namespace prism {
 		private:
 
 			PGC::PrismGraphicCore pgc;
-			Window* window;
+			prism::scene::WindowResource* window;
 		};
 	}
 }

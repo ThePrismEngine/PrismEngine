@@ -4,7 +4,7 @@
 #include <gtc/quaternion.hpp>
 
 
-void prism::render::Renderer::linkWindow(Window* window)
+void prism::render::Renderer::linkWindow(prism::scene::WindowResource* window)
 {
 	this->window = window;
 }
@@ -23,7 +23,7 @@ void prism::render::Renderer::init()
 
 bool prism::render::Renderer::isRenderingActive()
 {
-	if (!pgc.isWindowReadyForRendering(this->window->sdlWindow)) {
+	if (!pgc.isWindowReadyForRendering(this->window->getSDLWindow())) {
 		if (pgc.context.wasRenderingActive) {
 			awaitRenderingCompletion();
 			pgc.context.wasRenderingActive = false;
@@ -311,9 +311,9 @@ void prism::render::Renderer::destroy()
 
 void prism::render::Renderer::setDefaultSettings()
 {
-	settings.app.applicationName = SDL_GetWindowTitle(window->sdlWindow);
+	settings.app.applicationName = SDL_GetWindowTitle(window->getSDLWindow());
 	settings.app.applicationVersion = { 1, 0, 0 };
-	settings.window = window->sdlWindow;
+	settings.window = window->getSDLWindow();
 
 	VkPipelineColorBlendAttachmentState colorBlendAttachment{};
 	colorBlendAttachment.colorWriteMask = VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;

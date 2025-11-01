@@ -1,5 +1,6 @@
 #include "inputSystem.h"
 #include "inputResource.h"
+#include "windowResource.h"
 
 void prism::scene::InputSystem::start()
 {
@@ -11,18 +12,18 @@ void prism::scene::InputSystem::start()
 void prism::scene::InputSystem::update()
 {
     if (scene->hasResource<InputResource>()) {
-        // Сначала обновляем состояния
         scene->getResource<InputResource>()->updateKeyStates();
-
-        // Затем проверяем "залипшие" клавиши
         scene->getResource<InputResource>()->resetStuckKeys();
     }
 
     SDL_Event event;
-    std::vector<SDL_Event> temp_buffer;
 
     while (SDL_PollEvent(&event)) {
         switch (event.type) {
+        case SDL_QUIT:
+        case SDL_WINDOWEVENT:
+            processWindowEvent(event);
+            break;
         case SDL_KEYDOWN:
         case SDL_KEYUP:
             processKeyboardEvent(event);
@@ -34,13 +35,8 @@ void prism::scene::InputSystem::update()
             processMouseEvent(event);
             break;
         default:
-            temp_buffer.push_back(event);
             break;
         }
-    }
-
-    for (const auto& e : temp_buffer) {
-        SDL_PushEvent(const_cast<SDL_Event*>(&e));
     }
 }
 
@@ -93,5 +89,23 @@ void prism::scene::InputSystem::processMouseEvent(SDL_Event event)
         input->mouseScrollX = static_cast<double>(event.wheel.x);
         input->mouseScrollY = static_cast<double>(event.wheel.y);
         break;
+    }
+}
+
+void prism::scene::InputSystem::processWindowEvent(SDL_Event event) {
+    WindowResource* window = scene->getResource<WindowResource>();
+
+    if (event.type == SDL_QUIT) {
+        window->close();
+    }
+
+    if (event.window.event == SDL_WINDOWEVENT_RESIZED) {
+        window->windowResized = true;
+    }
+    else if (event.window.event == SDL_WINDOWEVENT_MINIMIZED) {
+        window->windowMinimized = true;
+    }
+    else if (event.window.event == SDL_WINDOWEVENT_RESTORED) {
+        window->windowMinimized = false;
     }
 }

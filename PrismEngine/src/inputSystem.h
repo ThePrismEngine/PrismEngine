@@ -7,7 +7,7 @@
 namespace prism {
     namespace scene {
         /// @brief Система обработки ввода пользователя
-        /// @details Обрабатывает события клавиатуры, мыши и обновляет состояние ввода.
+        /// @details Обрабатывает события клавиатуры, мыши, обновляет состояние ввода и окна.
         /// Наследуется от ISystem и интегрируется в главный цикл обновления сцены.
         class InputSystem : public ISystem {
         public:
@@ -36,6 +36,8 @@ namespace prism {
             /// @details Обрабатывает движение мыши, нажатия кнопок и прокрутку,
             /// обновляя состояние мыши в InputResource
             void processMouseEvent(SDL_Event event);
+
+            void processWindowEvent(SDL_Event event);
 
             prism::scene::Scene* scene; /// Указатель на родительскую сцену
         };
