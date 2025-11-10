@@ -99,13 +99,10 @@ namespace prism {
 				bool wasRenderingActive = true;
 
 				VkDescriptorPool descriptorPool;
-				VkDescriptorPool textureDescriptorPool;
 
-			    // Текстуры и управление ими
-				std::vector<PGC::Texture> textures;
-				std::vector<uint32_t> freeTextureIndices;
 				VkDescriptorSet textureDescriptorSet = VK_NULL_HANDLE;
 				VkDescriptorSetLayout textureDescriptorSetLayout = VK_NULL_HANDLE;
+				VkDescriptorPool textureDescriptorPool;
 
 				CameraData cameraData;
 

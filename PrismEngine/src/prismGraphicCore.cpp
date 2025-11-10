@@ -1,6 +1,5 @@
 #include "prismGraphicCore.h"
 #include "textureLoader.h"
-#include "textureManager.h"
 #include "meshManager.h"
 
 #define TINYOBJLOADER_IMPLEMENTATION
@@ -31,39 +30,9 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createDescriptorSets();
     createCommandBuffer();
     createSyncObjects();
+    createTextureStorage();
 }
 
-void prism::PGC::PrismGraphicCore::drawFrame()
-{
-    //if (isRenderingActive) {
-
-    //beginFrame
-
-    //updateCameraTransform
-    // for () {
-    // updateObjectTransform
-    // }
-
-    //beginRender
-    
-    //bindDefault
-
-    //for (uint32_t i = 0; i < objectCount; i++) {
-    //    bindTransform
-    //    pushTextureId
-    //    drawMesh
-    //}
-    
-    //endRender
-    //endFrame
-
-    //}
-}
-
-void prism::PGC::PrismGraphicCore::startRender()
-{
-
-}
 
 prism::PGC::utils::CameraData* prism::PGC::PrismGraphicCore::getCameraDataPtr()
 {
@@ -79,7 +48,6 @@ void prism::PGC::PrismGraphicCore::createBase()
 {
     base.init(&context, &settings);
 }
-
 
 bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering(SDL_Window* window)
 {
@@ -212,6 +180,11 @@ void prism::PGC::PrismGraphicCore::createTextureDescriptorSet() {
     }
 }
 
+void prism::PGC::PrismGraphicCore::createTextureStorage()
+{
+    textureStorage.init(&context, &settings);
+}
+
 void prism::PGC::PrismGraphicCore::createUniformBuffers()
 {
     PGC::BufferWrapper::createUniformBuffers(&context);
@@ -221,22 +194,22 @@ void prism::PGC::PrismGraphicCore::createDescriptorPool()
 {
     // Пул для uniform буферов
     {
-        std::array<VkDescriptorPoolSize, 2> poolSizes{};
-        poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-        poolSizes[0].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
-        poolSizes[1].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
-        poolSizes[1].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
+    std::array<VkDescriptorPoolSize, 2> poolSizes{};
+    poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+    poolSizes[0].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
+    poolSizes[1].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
+    poolSizes[1].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
 
-        VkDescriptorPoolCreateInfo poolInfo{};
-        poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
-        poolInfo.poolSizeCount = static_cast<uint32_t>(poolSizes.size());
-        poolInfo.pPoolSizes = poolSizes.data();
-        poolInfo.maxSets = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
+    VkDescriptorPoolCreateInfo poolInfo{};
+    poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
+    poolInfo.poolSizeCount = static_cast<uint32_t>(poolSizes.size());
+    poolInfo.pPoolSizes = poolSizes.data();
+    poolInfo.maxSets = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
 
-        if (vkCreateDescriptorPool(context.device, &poolInfo, nullptr, &context.descriptorPool) != VK_SUCCESS) {
-            throw std::runtime_error("failed to create descriptor pool!");
-        }
+    if (vkCreateDescriptorPool(context.device, &poolInfo, nullptr, &context.descriptorPool) != VK_SUCCESS) {
+        throw std::runtime_error("failed to create descriptor pool!");
     }
+}
 
     // Пул для bindless текстур
     {
@@ -272,94 +245,6 @@ void prism::PGC::PrismGraphicCore::createColorResources()
     prism::PGC::ResourcesCreater::createColorResources(&context, &settings);
 }
 
-
-void prism::PGC::PrismGraphicCore::generateMipmaps(VkImage image, VkFormat imageFormat, int32_t texWidth, int32_t texHeight, uint32_t mipLevels)
-{
-    VkFormatProperties formatProperties;
-    vkGetPhysicalDeviceFormatProperties(context.physicalDevice, imageFormat, &formatProperties);
-
-    if (!(formatProperties.optimalTilingFeatures & VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT)) {
-        throw std::runtime_error("texture image format does not support linear blitting!");
-    }
-
-    VkCommandBuffer commandBuffer = PGC::BufferWrapper::beginSingleTimeCommands(&context);
-
-    VkImageMemoryBarrier barrier{};
-    barrier.sType = VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER;
-    barrier.image = image;
-    barrier.srcQueueFamilyIndex = VK_QUEUE_FAMILY_IGNORED;
-    barrier.dstQueueFamilyIndex = VK_QUEUE_FAMILY_IGNORED;
-    barrier.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
-    barrier.subresourceRange.baseArrayLayer = 0;
-    barrier.subresourceRange.layerCount = 1;
-    barrier.subresourceRange.levelCount = 1;
-
-    int32_t mipWidth = texWidth;
-    int32_t mipHeight = texHeight;
-
-    for (uint32_t i = 1; i < mipLevels; i++) {
-        barrier.subresourceRange.baseMipLevel = i - 1;
-        barrier.oldLayout = VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;
-        barrier.newLayout = VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL;
-        barrier.srcAccessMask = VK_ACCESS_TRANSFER_WRITE_BIT;
-        barrier.dstAccessMask = VK_ACCESS_TRANSFER_READ_BIT;
-
-        vkCmdPipelineBarrier(commandBuffer,
-            VK_PIPELINE_STAGE_TRANSFER_BIT, VK_PIPELINE_STAGE_TRANSFER_BIT, 0,
-            0, nullptr,
-            0, nullptr,
-            1, &barrier);
-
-        VkImageBlit blit{};
-        blit.srcOffsets[0] = { 0, 0, 0 };
-        blit.srcOffsets[1] = { mipWidth, mipHeight, 1 };
-        blit.srcSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
-        blit.srcSubresource.mipLevel = i - 1;
-        blit.srcSubresource.baseArrayLayer = 0;
-        blit.srcSubresource.layerCount = 1;
-        blit.dstOffsets[0] = { 0, 0, 0 };
-        blit.dstOffsets[1] = { mipWidth > 1 ? mipWidth / 2 : 1, mipHeight > 1 ? mipHeight / 2 : 1, 1 };
-        blit.dstSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
-        blit.dstSubresource.mipLevel = i;
-        blit.dstSubresource.baseArrayLayer = 0;
-        blit.dstSubresource.layerCount = 1;
-
-        vkCmdBlitImage(commandBuffer,
-            image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL,
-            image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
-            1, &blit,
-            VK_FILTER_LINEAR);
-
-        barrier.oldLayout = VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL;
-        barrier.newLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-        barrier.srcAccessMask = VK_ACCESS_TRANSFER_READ_BIT;
-        barrier.dstAccessMask = VK_ACCESS_SHADER_READ_BIT;
-
-        vkCmdPipelineBarrier(commandBuffer,
-            VK_PIPELINE_STAGE_TRANSFER_BIT, VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT, 0,
-            0, nullptr,
-            0, nullptr,
-            1, &barrier);
-
-        if (mipWidth > 1) mipWidth /= 2;
-        if (mipHeight > 1) mipHeight /= 2;
-    }
-
-    barrier.subresourceRange.baseMipLevel = mipLevels - 1;
-    barrier.oldLayout = VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;
-    barrier.newLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-    barrier.srcAccessMask = VK_ACCESS_TRANSFER_WRITE_BIT;
-    barrier.dstAccessMask = VK_ACCESS_SHADER_READ_BIT;
-
-    vkCmdPipelineBarrier(commandBuffer,
-        VK_PIPELINE_STAGE_TRANSFER_BIT, VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT, 0,
-        0, nullptr,
-        0, nullptr,
-        1, &barrier);
-
-    PGC::BufferWrapper::endSingleTimeCommands(&context, commandBuffer);
-}
-
 VkSampleCountFlagBits prism::PGC::PrismGraphicCore::getMaxUsableSampleCount()
 {
     VkPhysicalDeviceProperties physicalDeviceProperties;
@@ -378,12 +263,7 @@ VkSampleCountFlagBits prism::PGC::PrismGraphicCore::getMaxUsableSampleCount()
 
 void prism::PGC::PrismGraphicCore::cleanup()
 {
-    TextureManager::cleanup(&context);
-
-    if (context.textureDescriptorSetLayout != VK_NULL_HANDLE) {
-        vkDestroyDescriptorSetLayout(context.device, context.textureDescriptorSetLayout, nullptr);
-        context.textureDescriptorSetLayout = VK_NULL_HANDLE;
-    }
+    textureStorage.cleanup();
 
     for (auto framebuffer : context.swapChainFramebuffers) {
         vkDestroyFramebuffer(context.device, framebuffer, nullptr);

@@ -1,15 +1,10 @@
 #pragma once
-#include "vulkan/vulkan.h"
-#include <string>
-
 
 namespace prism {
-	typedef uint32_t Texture;
-	const Texture INVALID_TEXTURE = 0;
-
+	typedef uint32_t TextureId;
+	const TextureId INVALID_TEXTURE_ID = 0;
 
 	namespace PGC {
-
 		struct Texture
 		{
 			std::string path;

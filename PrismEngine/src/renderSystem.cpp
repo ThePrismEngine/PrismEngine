@@ -30,7 +30,7 @@ void prism::scene::RenderSystem::update()
         for (auto entity : forRenderingEntites) {
             renderer->bindTransform(i++);
             if (scene->getComponent<TextureComponent>(entity) == nullptr) {
-                renderer->pushTextureId(INVALID_TEXTURE);
+                renderer->pushTextureId(INVALID_TEXTURE_ID);
             }
             else {
                 renderer->pushTextureId(scene->getComponent<TextureComponent>(entity)->texture);

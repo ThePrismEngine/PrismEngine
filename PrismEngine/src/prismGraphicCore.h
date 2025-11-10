@@ -32,6 +32,7 @@
 #include "bufferWrapper.h"
 #include "descriptorSet.h"
 #include "resourcesCreater.h"
+#include "textureStorage.h"
 
 namespace prism {
     namespace PGC {
@@ -40,8 +41,6 @@ namespace prism {
             // === Деструктор и контрруктор ===
             PrismGraphicCore();
             void init(utils::Settings settings);
-            void drawFrame();
-            void startRender();
             prism::PGC::utils::CameraData* getCameraDataPtr();
             PGC::SwapChain* getSwapChainPtr();
 
@@ -54,6 +53,9 @@ namespace prism {
 
             PGC::utils::Settings settings;
             PGC::utils::Context context;
+
+            PGC::TextureStorage textureStorage;
+
         private:
             void createBase();
             void createSwapChain();
@@ -71,6 +73,7 @@ namespace prism {
             void createDescriptorSets();
             void createDepthResources();
             void createColorResources();
+            void createTextureStorage();
 
             SDL_Window* window;
 
@@ -81,7 +84,6 @@ namespace prism {
             PGC::GraphicsPipeline graphicsPipeline;
             PGC::DescriptorSet descriptorSet;
 
-            void generateMipmaps(VkImage image, VkFormat imageFormat, int32_t texWidth, int32_t texHeight, uint32_t mipLevels);
 
             VkSampleCountFlagBits getMaxUsableSampleCount();
         };

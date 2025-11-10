@@ -1,6 +1,5 @@
 #include "renderer.h"
 #include "meshManager.h"
-#include "textureManager.h"
 #include <gtc/quaternion.hpp>
 
 
@@ -17,7 +16,6 @@ void prism::render::Renderer::init()
 {
 	pgc.windowResized = &window->windowResized;
 	pgc.windowMinimized = &window->windowMinimized;
-	pgc.context.textures.push_back(PGC::Texture{});
 	pgc.init(this->settings);
 }
 
@@ -275,12 +273,12 @@ void prism::render::Renderer::drawMesh(uint32_t meshId)
 
 prism::scene::TextureComponent prism::render::Renderer::addTexture(const std::string& texturePath)
 {
-	return { PGC::TextureManager::addTexture(&pgc.context, texturePath) };
+	return { pgc.textureStorage.load(texturePath) };
 }
 
 void prism::render::Renderer::removeTexture(scene::TextureComponent texture)
 {
-	PGC::TextureManager::removeTexture(&pgc.context, texture.texture);
+	pgc.textureStorage.remove(texture.texture);
 }
 
 prism::scene::MeshComponent prism::render::Renderer::addMesh(std::string texturePath)
