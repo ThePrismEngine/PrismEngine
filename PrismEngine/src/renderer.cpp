@@ -268,7 +268,7 @@ prism::TextureId prism::render::Renderer::addTexture(const std::string& textureP
 
 bool prism::render::Renderer::removeTexture(TextureId texture)
 {
-	pgc.textureStorage.remove(texture);
+	return pgc.textureStorage.remove(texture);
 }
 
 void prism::render::Renderer::remodeMaterial(scene::MaterialComponent material)

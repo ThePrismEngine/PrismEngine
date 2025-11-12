@@ -121,7 +121,6 @@ namespace prism {
 				};
 
 				size_t dynamicAlignment=0;      // Выровненный размер ObjectUBO
-				uint32_t MAX_OBJECTS=500;         // Максимальное количество объектов
 
 #ifdef _DEBUG
 				bool enableValidationLayers = true;
@@ -286,6 +285,7 @@ namespace prism {
 				TextureDescriptorSetLayoutSettings textureDescriptorSetLayout;
 
 				uint32_t MAX_TEXTURES = 350;
+				uint32_t MAX_OBJECTS = 3000;         // Максимальное количество объектов
 				
 				PipelineSettings pipeline;
 

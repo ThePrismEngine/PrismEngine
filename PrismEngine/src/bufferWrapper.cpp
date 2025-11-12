@@ -190,14 +190,14 @@ void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
     vkFreeMemory(context->device, stagingBufferMemory, nullptr);
 }
 
-void prism::PGC::BufferWrapper::createBufferObject(utils::Context* context)
+void prism::PGC::BufferWrapper::createBufferObject(utils::Context* context, utils::Settings* settings)
 {
     context->uniformBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
     context->storageBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
 
     VkDeviceSize cameraBufferSize = sizeof(CameraUBO);
     
-    size_t objectBufferSize = sizeof(ObjectSSBO) * context->MAX_OBJECTS;
+    size_t objectBufferSize = sizeof(ObjectSSBO) * settings->MAX_OBJECTS;
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
         PGC::BufferWrapper::createBuffer(context, cameraBufferSize,

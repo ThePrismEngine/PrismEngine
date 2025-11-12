@@ -187,7 +187,7 @@ void prism::PGC::PrismGraphicCore::createTextureStorage()
 
 void prism::PGC::PrismGraphicCore::createBufferObject()
 {
-    PGC::BufferWrapper::createBufferObject(&context);
+    PGC::BufferWrapper::createBufferObject(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createDescriptorPool()

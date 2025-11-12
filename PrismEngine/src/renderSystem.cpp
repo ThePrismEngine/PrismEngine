@@ -51,7 +51,7 @@ void prism::scene::RenderSystem::update()
         uint32_t instanceOffset = 0;
         for (auto instance : instances) {
             renderer->drawMesh(instance.first, instance.second.size(), instanceOffset);
-            instanceOffset++;
+            instanceOffset+=instance.second.size();
         }
 
         renderer->endRender();
