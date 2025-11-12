@@ -57,7 +57,7 @@ private:
  * Создает круг из кубов
  */
 void createNeonCubeCircle(Scene& scene, const MeshComponent& mesh,
-    const TextureComponent& texture, int count, float radius) {
+    const MaterialComponent& texture, int count, float radius) {
     for (int i = 0; i < count; ++i) {
         float angle = (float)i / count * 2.0f * M_PI;
         Position position = {
@@ -73,12 +73,12 @@ void createNeonCubeCircle(Scene& scene, const MeshComponent& mesh,
             {0.1f, .1f, .1f}
             });
         scene.addComponent<MeshComponent>(cube, mesh);
-        scene.addComponent<TextureComponent>(cube, texture);
+        scene.addComponent<MaterialComponent>(cube, texture);
         scene.addComponent(cube, NeonCybe{}); // Для идентификации
     }
 }
 
-void createBackground(Scene& scene, prism::render::Renderer& renderer, MeshComponent mesh, TextureComponent texture) {
+void createBackground(Scene& scene, prism::render::Renderer& renderer, MeshComponent mesh, MaterialComponent texture) {
     Entity back = scene.createEntity();
 
     scene.addComponent(back, mesh);
@@ -105,8 +105,8 @@ int dancingNeonCubesDemo() {
     MeshComponent cubeMesh = renderer.addMesh(EXAMPLE_NAME + "/models/neoncube.obj");
     MeshComponent planeMesh = renderer.addMesh(EXAMPLE_NAME + "/models/plane.obj");
     renderer.updateMeshes();
-    TextureComponent cubeTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/neoncube.png");
-    TextureComponent backTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/back.jpeg");
+    MaterialComponent cubeTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/neoncube.png");
+    MaterialComponent backTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/back.jpeg");
 
     // Добавляем ресурс времени
     scene.setResource<TimeResource>(TimeResource{});

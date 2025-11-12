@@ -5,10 +5,6 @@
 
 namespace prism {
 	namespace PGC {
-		struct PushConstants {
-			int textureIndex;
-		};
-
 		class GraphicsPipeline {
 		public:
 			GraphicsPipeline() : context(nullptr), settings(nullptr) {}

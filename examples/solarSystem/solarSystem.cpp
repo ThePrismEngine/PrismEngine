@@ -131,7 +131,7 @@ private:
     Scene* scene;
 };
 
-void createSkybox(Scene& scene, MeshComponent mesh, TextureComponent texture) {
+void createSkybox(Scene& scene, MeshComponent mesh, MaterialComponent texture) {
     Entity skybox = scene.createEntity();
 
     scene.addComponent(skybox, mesh);
@@ -174,7 +174,7 @@ int solarSystemDemo() {
 
     // Загрузка ресурсов
     MeshComponent skyboxMesh = renderer.addMesh(EXAMPLE_NAME + "/models/skybox2.obj");
-    TextureComponent skyboxTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/lambert1_emissive.jpeg");
+    MaterialComponent skyboxTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/lambert1_emissive.jpeg");
 
     Position center = {0, 0, 0};
 

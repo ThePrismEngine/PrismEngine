@@ -5,7 +5,7 @@
 #include "config.h"
 #include "SDL.h"
 #include <string>
-#include "./ubo.h"
+#include "bufferObjects.h"
 #include "vertex.h"
 #include "texture.h"
 #include "mesh.h"
@@ -89,6 +89,7 @@ namespace prism {
 				std::vector<VkCommandBuffer> commandBuffers;
 
 				std::vector<UniformBuffers> uniformBuffers;
+				std::vector<StorageBuffers> storageBuffers;
 
 				std::vector<VkSemaphore> imageAvailableSemaphores;
 				std::vector<VkSemaphore> renderFinishedSemaphores;

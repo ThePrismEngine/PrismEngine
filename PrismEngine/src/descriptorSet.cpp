@@ -38,11 +38,11 @@ void prism::PGC::DescriptorSet::create()
         cameraBufferInfo.offset = 0;
         cameraBufferInfo.range = sizeof(CameraUBO);
 
-        // ObjectUBO (динамический)
+        // ObjectSSBO
         VkDescriptorBufferInfo objectBufferInfo{};
-        objectBufferInfo.buffer = context->uniformBuffers[i].object;
-        objectBufferInfo.offset = 0; // Смещение будет устанавливаться при binding'е
-        objectBufferInfo.range = sizeof(ObjectUBO);
+        objectBufferInfo.buffer = context->storageBuffers[i].object;
+        objectBufferInfo.offset = 0;
+        objectBufferInfo.range = VK_WHOLE_SIZE;
 
 
         std::array<VkWriteDescriptorSet, 2> descriptorWrites{};
@@ -61,7 +61,7 @@ void prism::PGC::DescriptorSet::create()
         descriptorWrites[1].dstSet = context->descriptorSets[i];
         descriptorWrites[1].dstBinding = 1;
         descriptorWrites[1].dstArrayElement = 0;
-        descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
+        descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_STORAGE_BUFFER;
         descriptorWrites[1].descriptorCount = 1;
         descriptorWrites[1].pBufferInfo = &objectBufferInfo;
 

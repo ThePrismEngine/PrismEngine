@@ -6,6 +6,7 @@
 
 void prism::scene::RenderSystem::update()
 {
+
     if (renderer->isRenderingActive()) {
         renderer->beginFrame();
 
@@ -17,27 +18,41 @@ void prism::scene::RenderSystem::update()
                 renderer->updateCamera(transformComponent, cameraComponent);
             }
         }
-        uint32_t i = 0;
         auto forRenderingEntites = scene->getEntitiesWithAll<TransformComponent, MeshComponent>();
+        std::vector<prism::render::RenderData> renderData;
+        std::map<Mesh, std::vector<prism::render::RenderData>> instances;
+        MaterialComponent defaultTexture = { INVALID_TEXTURE_ID };
+
         for (auto entity : forRenderingEntites) {
-            renderer->updateObjectTransform(scene->getComponent<TransformComponent>(entity), i++);
+            MaterialComponent* texture;
+
+            if (scene->getComponent<MaterialComponent>(entity) != nullptr) {
+                texture = scene->getComponent<MaterialComponent>(entity);
+            }
+            else {
+                texture = &defaultTexture;
+            }
+            instances[scene->getComponent<MeshComponent>(entity)->mesh].push_back({ scene->getComponent<TransformComponent>(entity), texture });
         }
+
+        for (auto instance : instances) {
+            for (auto renData : instance.second) {
+                renderData.push_back(renData);
+            }
+
+        }
+        renderer->updateObjects(renderData);
 
         renderer->beginRender();
 
         renderer->bindDefault();
-        i = 0;
-        for (auto entity : forRenderingEntites) {
-            renderer->bindTransform(i++);
-            if (scene->getComponent<TextureComponent>(entity) == nullptr) {
-                renderer->pushTextureId(INVALID_TEXTURE_ID);
-            }
-            else {
-                renderer->pushTextureId(scene->getComponent<TextureComponent>(entity)->texture);
-            }
-            renderer->drawMesh(scene->getComponent<MeshComponent>(entity)->mesh);
-        }
+        renderer->bindObjectsData();
 
+        uint32_t instanceOffset = 0;
+        for (auto instance : instances) {
+            renderer->drawMesh(instance.first, instance.second.size(), instanceOffset);
+            instanceOffset++;
+        }
 
         renderer->endRender();
         renderer->endFrame();

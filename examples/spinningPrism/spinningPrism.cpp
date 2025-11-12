@@ -40,7 +40,7 @@ private:
  */
 Entity create3DObject(Scene& scene,
     const MeshComponent& mesh,
-    const TextureComponent& texture,
+    const MaterialComponent& texture,
     Position position = { 0, 0, 0 },
     Scale scale = { 1, 1, 1 }) {
     // Создаем новую сущность в сцене
@@ -57,7 +57,7 @@ Entity create3DObject(Scene& scene,
     scene.addComponent<MeshComponent>(entity, mesh);
 
     // Добавляем компонент текстуры (внешний вид)
-    scene.addComponent<TextureComponent>(entity, texture);
+    scene.addComponent<MaterialComponent>(entity, texture);
 
     return entity;
 }
@@ -101,7 +101,7 @@ int spinningPrismDemo() {
     MeshComponent prismMesh = renderer.addMesh(EXAMPLE_NAME + "/models/prism.obj");
 
     // Загружаем текстуру для призмы
-    TextureComponent prismTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/prismfasetexturex.png");
+    MaterialComponent prismTexture = renderer.addTexture(EXAMPLE_NAME + "/textures/prismfasetexturex.png");
 
     // Обновляем меши в рендерере (применяем загруженные ресурсы)
     renderer.updateMeshes();

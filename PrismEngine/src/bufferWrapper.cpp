@@ -190,22 +190,14 @@ void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
     vkFreeMemory(context->device, stagingBufferMemory, nullptr);
 }
 
-void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
+void prism::PGC::BufferWrapper::createBufferObject(utils::Context* context)
 {
     context->uniformBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
+    context->storageBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
 
     VkDeviceSize cameraBufferSize = sizeof(CameraUBO);
-
-    size_t minUboAlignment = DeviceWrapper::getDeviceProperties(context->physicalDevice).limits.minUniformBufferOffsetAlignment;
-
-    size_t objectUBOSize = sizeof(ObjectUBO);
-    context->dynamicAlignment = objectUBOSize;
-
-    if (minUboAlignment > 0) {
-        context->dynamicAlignment = (objectUBOSize + minUboAlignment - 1) & ~(minUboAlignment - 1);
-    }
-
-    VkDeviceSize objectBufferSize = context->dynamicAlignment * context->MAX_OBJECTS;
+    
+    size_t objectBufferSize = sizeof(ObjectSSBO) * context->MAX_OBJECTS;
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
         PGC::BufferWrapper::createBuffer(context, cameraBufferSize,
@@ -218,17 +210,19 @@ void prism::PGC::BufferWrapper::createUniformBuffers(utils::Context* context)
             cameraBufferSize, 0, &context->uniformBuffers[i].cameraMapped);
 
         PGC::BufferWrapper::createBuffer(context, objectBufferSize,
-            VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
+            VK_BUFFER_USAGE_STORAGE_BUFFER_BIT,
             VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
-            context->uniformBuffers[i].object,
-            context->uniformBuffers[i].objectMemory);
+            context->storageBuffers[i].object,
+            context->storageBuffers[i].objectMemory);
 
-        vkMapMemory(context->device, context->uniformBuffers[i].objectMemory, 0,
-            objectBufferSize, 0, &context->uniformBuffers[i].objectMapped);
+        vkMapMemory(context->device, context->storageBuffers[i].objectMemory, 0,
+            objectBufferSize, 0, &context->storageBuffers[i].objectMapped);
+
+        context->storageBuffers[i].objectBufferSize = objectBufferSize;
     }
 
-    // Инициализируем нулями динамический буфер
+    // Инициализируем нулями SSBO
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
-        memset(context->uniformBuffers[i].objectMapped, 0, objectBufferSize);
+        memset(context->storageBuffers[i].objectMapped, 0, objectBufferSize);
     }
 }

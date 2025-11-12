@@ -24,7 +24,7 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createColorResources();
     createDepthResources();
     createFramebuffers();
-    createUniformBuffers();
+    createBufferObject();
     createDescriptorPool();
     createTextureDescriptorSet();
     createDescriptorSets();
@@ -185,19 +185,19 @@ void prism::PGC::PrismGraphicCore::createTextureStorage()
     textureStorage.init(&context, &settings);
 }
 
-void prism::PGC::PrismGraphicCore::createUniformBuffers()
+void prism::PGC::PrismGraphicCore::createBufferObject()
 {
-    PGC::BufferWrapper::createUniformBuffers(&context);
+    PGC::BufferWrapper::createBufferObject(&context);
 }
 
 void prism::PGC::PrismGraphicCore::createDescriptorPool()
 {
-    // Пул для uniform буферов
+    // Пул для буферов
     {
     std::array<VkDescriptorPoolSize, 2> poolSizes{};
     poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
     poolSizes[0].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
-    poolSizes[1].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC;
+    poolSizes[1].type = VK_DESCRIPTOR_TYPE_STORAGE_BUFFER;
     poolSizes[1].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
 
     VkDescriptorPoolCreateInfo poolInfo{};
@@ -290,11 +290,11 @@ void prism::PGC::PrismGraphicCore::cleanup()
             context.uniformBuffers[i].cameraMemory = VK_NULL_HANDLE;
         }
 
-        if (context.uniformBuffers[i].objectMemory != VK_NULL_HANDLE) {
-            vkUnmapMemory(context.device, context.uniformBuffers[i].objectMemory);
-            vkDestroyBuffer(context.device, context.uniformBuffers[i].object, nullptr);
-            vkFreeMemory(context.device, context.uniformBuffers[i].objectMemory, nullptr);
-            context.uniformBuffers[i].objectMemory = VK_NULL_HANDLE;
+        if (context.storageBuffers[i].objectMemory != VK_NULL_HANDLE) {
+            vkUnmapMemory(context.device, context.storageBuffers[i].objectMemory);
+            vkDestroyBuffer(context.device, context.storageBuffers[i].object, nullptr);
+            vkFreeMemory(context.device, context.storageBuffers[i].objectMemory, nullptr);
+            context.storageBuffers[i].objectMemory = VK_NULL_HANDLE;
         }
     }
 

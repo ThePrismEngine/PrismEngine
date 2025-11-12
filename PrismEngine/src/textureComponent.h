@@ -3,9 +3,9 @@
 
 namespace prism {
 	namespace scene {
-		struct TextureComponent
+		struct MaterialComponent
 		{
-			prism::TextureId texture;
+			prism::TextureId texture = INVALID_TEXTURE_ID;
 		};
 	}
 }

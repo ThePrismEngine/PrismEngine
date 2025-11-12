@@ -189,20 +189,25 @@ void prism::render::Renderer::updateCamera(prism::scene::TransformComponent* tra
 	memcpy(pgc.context.uniformBuffers[pgc.context.currentFrame].cameraMapped, &cameraUbo, sizeof(cameraUbo));
 }
 
-void prism::render::Renderer::updateObjectTransform(prism::scene::TransformComponent* transform, uint32_t transformId)
+void prism::render::Renderer::updateObjects(std::vector<RenderData> renderData)
 {
-	prism::PGC::ObjectUBO objectUbo{};
-	objectUbo.model = glm::mat4(1.0f);
+	std::vector<prism::PGC::ObjectSSBO> allObjectsData;
+	for (auto& obj : renderData) {
+		prism::PGC::ObjectSSBO data;
+		data.model = glm::mat4(1.0f);
+		data.model = glm::translate(data.model, glm::vec3(obj.transform->pos.x, obj.transform->pos.y, obj.transform->pos.z));
+		data.model = data.model * glm::mat4_cast(glm::quat(glm::radians(glm::vec3{ obj.transform->rot.x, obj.transform->rot.y, obj.transform->rot.z })));
+		data.model = glm::scale(data.model, glm::vec3(obj.transform->scale.x, obj.transform->scale.y, obj.transform->scale.z));
 
-	// Порядок: сначала масштаб, потом вращение, потом перенос
-	objectUbo.model = glm::translate(objectUbo.model, glm::vec3(transform->pos.x, transform->pos.y, transform->pos.z));	
-	objectUbo.model = objectUbo.model * glm::mat4_cast(glm::quat(glm::radians(glm::vec3{transform->rot.x, transform->rot.y, transform->rot.z})));
-	objectUbo.model = glm::scale(objectUbo.model, glm::vec3(transform->scale.x, transform->scale.y, transform->scale.z));
+		data.normals = glm::transpose(glm::inverse(data.model));
 
-	objectUbo.normals = glm::transpose(glm::inverse(objectUbo.model));
+		data.texture = obj.texture->texture;
+		allObjectsData.push_back(data);
+	}
 
-	size_t offset = transformId * pgc.context.dynamicAlignment;
-	memcpy((char*)pgc.context.uniformBuffers[pgc.context.currentFrame].objectMapped + offset, &objectUbo, sizeof(objectUbo));
+	memcpy((char*)pgc.context.storageBuffers[pgc.context.currentFrame].objectMapped,
+		allObjectsData.data(),
+		allObjectsData.size() * sizeof(prism::PGC::ObjectSSBO));
 }
 
 void prism::render::Renderer::bindDefault()
@@ -238,47 +243,45 @@ void prism::render::Renderer::bindDefault()
 		nullptr);
 }
 
-void prism::render::Renderer::bindTransform(uint32_t transformId)
+void prism::render::Renderer::bindObjectsData()
 {
-	uint32_t dynamicOffset = transformId * static_cast<uint32_t>(pgc.context.dynamicAlignment);
-
 	vkCmdBindDescriptorSets(pgc.context.commandBuffers[pgc.context.currentFrame],
 		VK_PIPELINE_BIND_POINT_GRAPHICS,
 		pgc.context.pipelineLayout,
-		0, // set = 0 для ubo
+		0,
 		1,
 		&pgc.context.descriptorSets[pgc.context.currentFrame],
-		1, &dynamicOffset);
+		0, nullptr);
 }
 
-void prism::render::Renderer::pushTextureId(uint32_t textureId)
-{
-	prism::PGC::PushConstants pushConstants{};
-	pushConstants.textureIndex = static_cast<int>(textureId);
-	vkCmdPushConstants(
-		pgc.context.commandBuffers[pgc.context.currentFrame],
-		pgc.context.pipelineLayout,
-		VK_SHADER_STAGE_FRAGMENT_BIT, // Указываем, что push-константы используются во фрагментном шейдере
-		0,
-		sizeof(prism::PGC::PushConstants),
-		&pushConstants
-	);
-}
-
-void prism::render::Renderer::drawMesh(uint32_t meshId)
+void prism::render::Renderer::drawMesh(uint32_t meshId, uint32_t instanceCount, uint32_t firstIndex)
 {
 	const PGC::Mesh& info = prism::PGC::MeshManager::getMeshInfo(&pgc.context, meshId);
-	vkCmdDrawIndexed(pgc.context.commandBuffers[pgc.context.currentFrame], info.indexCount, 1, info.indexOffset, info.vertexOffset, 0);
+	vkCmdDrawIndexed(pgc.context.commandBuffers[pgc.context.currentFrame], info.indexCount, instanceCount, info.indexOffset, info.vertexOffset, firstIndex);
+
 }
 
-prism::scene::TextureComponent prism::render::Renderer::addTexture(const std::string& texturePath)
+prism::TextureId prism::render::Renderer::addTexture(const std::string& texturePath)
 {
-	return { pgc.textureStorage.load(texturePath) };
+	return pgc.textureStorage.load(texturePath);
 }
 
-void prism::render::Renderer::removeTexture(scene::TextureComponent texture)
+bool prism::render::Renderer::removeTexture(TextureId texture)
 {
-	pgc.textureStorage.remove(texture.texture);
+	pgc.textureStorage.remove(texture);
+}
+
+void prism::render::Renderer::remodeMaterial(scene::MaterialComponent material)
+{
+	if (!material.texture)
+	{
+		pgc.textureStorage.remove(material.texture);
+	}
+}
+
+void prism::render::Renderer::clearTextures()
+{
+	pgc.textureStorage.cleanup();
 }
 
 prism::scene::MeshComponent prism::render::Renderer::addMesh(std::string texturePath)
@@ -326,11 +329,12 @@ void prism::render::Renderer::setDefaultSettings()
 
 	settings.descriptorSetLayout = {
 	{
-			// Camera UBO (binding = 0, vertex stage)
+			// Camera UBO
 			{0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 1, VK_SHADER_STAGE_VERTEX_BIT},
 
-			// Object UBO (binding = 1, vertex stage)
-			{1, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC, 1, VK_SHADER_STAGE_VERTEX_BIT}
+			// Objects SSBO
+			{1, VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 1, VK_SHADER_STAGE_VERTEX_BIT }
+			
 		},
 		0
 	};

@@ -68,7 +68,7 @@ namespace prism {
             void createDescriptorSetLayout();
             void createTextureDescriptorSetLayout();
             void createTextureDescriptorSet();
-            void createUniformBuffers();
+            void createBufferObject();
             void createDescriptorPool();
             void createDescriptorSets();
             void createDepthResources();
