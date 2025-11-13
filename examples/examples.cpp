@@ -8,13 +8,16 @@ int main(int argc, char* argv[]) {
     if (argc > 1) {
         std::string demoName = argv[1];
         if (demoName == "spinningPrismDemo") {
-            return spinningPrismDemo();
+            return spinningPrism::spinningPrismDemo();
         }
         else if (demoName == "dancingNeonCubesDemo") {
-            return dancingNeonCubesDemo();
+            return dancingNeonCubes::dancingNeonCubesDemo();
         }
         else if (demoName == "solarSystemDemo") {
-            return solarSystemDemo();
+            return solarSystem::solarSystemDemo();
+        }
+        else if (demoName == "materialsDemo") {
+            return materials::materialsDemo();
         }
         else {
             std::cout << "Unknown demo: " << demoName << std::endl;
@@ -23,17 +26,19 @@ int main(int argc, char* argv[]) {
     }
     
     // Иначе спросим пользователя
-    std::cout << "Select demo (1 or 2, 3): ";
+    std::cout << "Select demo (1 or 2, 3, 4): ";
     int choice;
     std::cin >> choice;
 
     switch (choice) {
     case 1:
-        return spinningPrismDemo();
+        return spinningPrism::spinningPrismDemo();
     case 2:
-        return dancingNeonCubesDemo();
+        return dancingNeonCubes::dancingNeonCubesDemo();
     case 3:
-        return solarSystemDemo();
+        return solarSystem::solarSystemDemo();
+    case 4:
+        return materials::materialsDemo();
     default:
         std::cout << "Invalid choice." << std::endl;
         return 1;

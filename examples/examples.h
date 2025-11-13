@@ -1,6 +1,14 @@
 #pragma once
 
-
-int dancingNeonCubesDemo();
-int spinningPrismDemo();
-int solarSystemDemo();
+namespace dancingNeonCubes {
+	int dancingNeonCubesDemo();
+};
+namespace spinningPrism {
+	int spinningPrismDemo();
+};
+namespace solarSystem {
+	int solarSystemDemo();
+};
+namespace materials {
+	int materialsDemo();
+};

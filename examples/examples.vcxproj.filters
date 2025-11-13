@@ -10,6 +10,9 @@
     <Filter Include="solarSystem">
       <UniqueIdentifier>{a4dea194-48dd-43a5-9f98-01cb32374078}</UniqueIdentifier>
     </Filter>
+    <Filter Include="materials">
+      <UniqueIdentifier>{f7aba159-8d50-4e6c-9ef8-aaec8cc96308}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="examples.cpp" />
@@ -21,6 +24,9 @@
     </ClCompile>
     <ClCompile Include="solarSystem\solarSystem.cpp">
       <Filter>solarSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="materials\materials.cpp">
+      <Filter>materials</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
