@@ -12,9 +12,9 @@ VkVertexInputBindingDescription prism::PGC::Vertex::getBindingDescription()
 	return bindingDescription;
 }
 
-std::array<VkVertexInputAttributeDescription, 3> prism::PGC::Vertex::getAttributeDescriptions()
+std::array<VkVertexInputAttributeDescription, 4> prism::PGC::Vertex::getAttributeDescriptions()
 {
-	std::array<VkVertexInputAttributeDescription, 3> attributeDescriptions{};
+	std::array<VkVertexInputAttributeDescription, 4> attributeDescriptions{};
 
 	attributeDescriptions[0].binding = 0;
 	attributeDescriptions[0].location = 0;
@@ -31,10 +31,10 @@ std::array<VkVertexInputAttributeDescription, 3> prism::PGC::Vertex::getAttribut
 	attributeDescriptions[2].format = VK_FORMAT_R32G32_SFLOAT;
 	attributeDescriptions[2].offset = offsetof(Vertex, texCoord);
 
-	attributeDescriptions[2].binding = 0;
-	attributeDescriptions[2].location = 3;
-	attributeDescriptions[2].format = VK_FORMAT_R32G32B32_SFLOAT;
-	attributeDescriptions[2].offset = offsetof(Vertex, normal);
+	attributeDescriptions[3].binding = 0;
+	attributeDescriptions[3].location = 3;
+	attributeDescriptions[3].format = VK_FORMAT_R32G32B32_SFLOAT;
+	attributeDescriptions[3].offset = offsetof(Vertex, normal);
 
 	return attributeDescriptions;
 }
@@ -59,6 +59,9 @@ size_t prism::PGC::VertexHasher::operator()(const Vertex& v) const noexcept {
 	hash_combine(v.color.b);
 	hash_combine(v.texCoord.x);
 	hash_combine(v.texCoord.y);
+	hash_combine(v.normal.x);
+	hash_combine(v.normal.y);
+	hash_combine(v.normal.z);
 
 	return seed;
 }
