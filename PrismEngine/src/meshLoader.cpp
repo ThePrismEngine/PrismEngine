@@ -26,16 +26,32 @@ prism::PGC::MeshData prism::PGC::MeshLoader::load(std::string texturePath)
                 attrib.vertices[3 * index.vertex_index + 2]
             };
 
-            if (index.texcoord_index != -1) {
+            if (index.texcoord_index >= 0) {
                 vertex.texCoord = {
                     attrib.texcoords[2 * index.texcoord_index + 0],
                     1.0f - attrib.texcoords[2 * index.texcoord_index + 1]
                 };
+            } else {
+                vertex.texCoord = { 0.f, 0.f };
             }
 
-            vertex.color = { attrib.colors[3 * index.vertex_index + 0],
-                             attrib.colors[3 * index.vertex_index + 1],
-                             attrib.colors[3 * index.vertex_index + 2]};
+            if (!attrib.colors.empty()) {
+                vertex.color = { attrib.colors[3 * index.vertex_index + 0],
+                            attrib.colors[3 * index.vertex_index + 1],
+                            attrib.colors[3 * index.vertex_index + 2] };
+            } else {
+                vertex.color = { 1.f, 1.f, 1.f };
+            }
+
+            if (index.normal_index >= 0 && !attrib.normals.empty()) {
+                vertex.normal = { attrib.normals[3 * index.normal_index + 0],
+                                  attrib.normals[3 * index.normal_index + 1],
+                                  attrib.normals[3 * index.normal_index + 2] };
+            } else {
+                // TODO: вычисление нормалей
+                vertex.normal = { 0.0f, 1.0f, 0.0f };
+            }
+
 
             if (uniqueVertices.count(vertex) == 0) {
                 uniqueVertices[vertex] = static_cast<uint32_t>(meshData.vertices.size());
