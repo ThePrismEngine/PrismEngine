@@ -185,11 +185,13 @@ void prism::render::Renderer::updateCamera(prism::scene::TransformComponent* tra
 	cameraUbo.proj[1][1] *= -1;
 	cameraUbo.viewProj = cameraUbo.proj * cameraUbo.view;
 	cameraUbo.cameraPos = cameraPos;
+	cameraUbo.ambientColor = camera->ambientColor;
+	cameraUbo.ambientIntensity = camera->ambientIntensity;
 
 	memcpy(pgc.context.uniformBuffers[pgc.context.currentFrame].cameraMapped, &cameraUbo, sizeof(cameraUbo));
 }
 
-void prism::render::Renderer::updateObjects(std::vector<RenderData> renderData)
+void prism::render::Renderer::updateInstances(std::vector<InstanceData> renderData)
 {
 	std::vector<prism::PGC::ObjectSSBO> allObjectsData;
 	for (auto& obj : renderData) {
@@ -208,6 +210,25 @@ void prism::render::Renderer::updateObjects(std::vector<RenderData> renderData)
 	memcpy((char*)pgc.context.storageBuffers[pgc.context.currentFrame].objectMapped,
 		allObjectsData.data(),
 		allObjectsData.size() * sizeof(prism::PGC::ObjectSSBO));
+}
+
+void prism::render::Renderer::updateLights(LightData* lightData)
+{
+	prism::PGC::CameraUBO* cameraUBO = static_cast<prism::PGC::CameraUBO*>(pgc.context.uniformBuffers[pgc.context.currentFrame].cameraMapped);
+	cameraUBO->pointLightCount = static_cast<uint32_t>(lightData->pointLights.size());
+	cameraUBO->directionalLightCount = static_cast<uint32_t>(lightData->directionalLights.size());
+
+	if (!lightData->pointLights.empty()) {
+		memcpy(pgc.context.storageBuffers[pgc.context.currentFrame].pointLightsMapped,
+			lightData->pointLights.data(),
+			lightData->pointLights.size() * sizeof(prism::PGC::PointLight));
+	}
+
+	if (!lightData->directionalLights.empty()) {
+		memcpy(pgc.context.storageBuffers[pgc.context.currentFrame].directionalLightsMapped,
+			lightData->directionalLights.data(),
+			lightData->directionalLights.size() * sizeof(prism::PGC::DirectionalLight));
+	}
 }
 
 void prism::render::Renderer::bindDefault()
@@ -330,10 +351,14 @@ void prism::render::Renderer::setDefaultSettings()
 	settings.descriptorSetLayout = {
 	{
 			// Camera UBO
-			{0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 1, VK_SHADER_STAGE_VERTEX_BIT},
+			{0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 1, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT},
 
 			// Objects SSBO
-			{1, VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 1, VK_SHADER_STAGE_VERTEX_BIT }
+			{1, VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 1, VK_SHADER_STAGE_VERTEX_BIT },
+			// PointLightsSSBO
+			{2, VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 1, VK_SHADER_STAGE_FRAGMENT_BIT},
+			// DirectionalLightsSSBO
+			{3, VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 1, VK_SHADER_STAGE_FRAGMENT_BIT},
 			
 		},
 		0

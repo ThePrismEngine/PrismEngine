@@ -187,18 +187,19 @@ void prism::PGC::PrismGraphicCore::createTextureStorage()
 
 void prism::PGC::PrismGraphicCore::createBufferObject()
 {
-    PGC::BufferWrapper::createBufferObject(&context, &settings);
+    PGC::BufferWrapper::createBufferObjects(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createDescriptorPool()
 {
+
     // Пул для буферов
     {
     std::array<VkDescriptorPoolSize, 2> poolSizes{};
     poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
     poolSizes[0].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
     poolSizes[1].type = VK_DESCRIPTOR_TYPE_STORAGE_BUFFER;
-    poolSizes[1].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT);
+    poolSizes[1].descriptorCount = static_cast<uint32_t>(context.MAX_FRAMES_IN_FLIGHT * 3);
 
     VkDescriptorPoolCreateInfo poolInfo{};
     poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
@@ -282,7 +283,6 @@ void prism::PGC::PrismGraphicCore::cleanup()
     descriptorSetLayout.cleanup();
 
     for (size_t i = 0; i < context.MAX_FRAMES_IN_FLIGHT; i++) {
-        // Проверка, была ли память отображена
         if (context.uniformBuffers[i].cameraMemory != VK_NULL_HANDLE) {
             vkUnmapMemory(context.device, context.uniformBuffers[i].cameraMemory);
             vkDestroyBuffer(context.device, context.uniformBuffers[i].camera, nullptr);
@@ -295,6 +295,18 @@ void prism::PGC::PrismGraphicCore::cleanup()
             vkDestroyBuffer(context.device, context.storageBuffers[i].object, nullptr);
             vkFreeMemory(context.device, context.storageBuffers[i].objectMemory, nullptr);
             context.storageBuffers[i].objectMemory = VK_NULL_HANDLE;
+        }
+
+        if (context.storageBuffers[i].pointLightsMemory != VK_NULL_HANDLE) {
+            vkUnmapMemory(context.device, context.storageBuffers[i].pointLightsMemory);
+            vkDestroyBuffer(context.device, context.storageBuffers[i].pointLights, nullptr);
+            vkFreeMemory(context.device, context.storageBuffers[i].pointLightsMemory, nullptr);
+        }
+
+        if (context.storageBuffers[i].directionalLightsMemory != VK_NULL_HANDLE) {
+            vkUnmapMemory(context.device, context.storageBuffers[i].directionalLightsMemory);
+            vkDestroyBuffer(context.device, context.storageBuffers[i].directionalLights, nullptr);
+            vkFreeMemory(context.device, context.storageBuffers[i].directionalLightsMemory, nullptr);
         }
     }
 

@@ -5,13 +5,19 @@
 #include "meshComponent.h"
 #include "windowResource.h"
 #include "transformComponent.h"
+#include "bufferObjects.h"
 
 namespace prism {
 	namespace render {
-		struct RenderData
+		struct InstanceData
 		{
 			prism::scene::TransformComponent* transform;
 			prism::scene::MaterialComponent* texture;
+		};
+
+		struct LightData {
+			std::vector<PGC::PointLight> pointLights;
+			std::vector<PGC::DirectionalLight> directionalLights;
 		};
 
 	   class Renderer
@@ -29,7 +35,8 @@ namespace prism {
 			void endRender();
 			void endFrame();
 			void updateCamera(prism::scene::TransformComponent* transform, prism::scene::CameraComponent* camera);
-			void updateObjects(std::vector<RenderData> renderData);
+			void updateInstances(std::vector<InstanceData> instanceData);
+			void updateLights(LightData* lightData);
 			void bindDefault();
 			void bindObjectsData();
 			void drawMesh(uint32_t meshId, uint32_t instanceCount, uint32_t firstIndex);

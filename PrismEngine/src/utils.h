@@ -285,7 +285,9 @@ namespace prism {
 				TextureDescriptorSetLayoutSettings textureDescriptorSetLayout;
 
 				uint32_t MAX_TEXTURES = 350;
-				uint32_t MAX_OBJECTS = 3000;         // Максимальное количество объектов
+				uint32_t MAX_OBJECTS = 3000;
+				uint32_t MAX_POINT_LIGHTS = 50;
+				uint32_t MAX_DIR_LIGHTS = 10;
 				
 				PipelineSettings pipeline;
 

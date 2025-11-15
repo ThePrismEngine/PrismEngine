@@ -17,7 +17,8 @@ namespace prism {
 			static void copyBufferToImage(utils::Context* context, VkBuffer buffer, VkImage image, uint32_t width, uint32_t height);
 			static void createVertexBuffer(utils::Context* context);
 			static void createIndexBuffer(utils::Context* context);
-			static void createBufferObject(utils::Context* context, utils::Settings* settings);
+			static void createBO(utils::Context* context, VkBuffer& buffer, size_t bufferSize, VkDeviceMemory& buferMemory, void*& bufferMapped, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties);
+			static void createBufferObjects(utils::Context* context, utils::Settings* settings);
 		private:
 
 

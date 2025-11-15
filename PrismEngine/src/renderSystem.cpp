@@ -19,8 +19,8 @@ void prism::scene::RenderSystem::update()
             }
         }
         auto forRenderingEntites = scene->getEntitiesWithAll<TransformComponent, MeshComponent>();
-        std::vector<prism::render::RenderData> renderData;
-        std::map<Mesh, std::vector<prism::render::RenderData>> instances;
+        std::vector<prism::render::InstanceData> renderData;
+        std::map<Mesh, std::vector<prism::render::InstanceData>> instances;
         MaterialComponent defaultTexture = { INVALID_TEXTURE_ID };
 
         for (auto entity : forRenderingEntites) {
@@ -41,8 +41,13 @@ void prism::scene::RenderSystem::update()
             }
 
         }
-        renderer->updateObjects(renderData);
 
+        prism::render::LightData lightData;
+        lightData.pointLights = { {{0, 0, 0}, {1, 0, 1}, 1, 30} };
+        lightData.directionalLights = {  };
+
+        renderer->updateInstances(renderData);
+        renderer->updateLights(&lightData);
         renderer->beginRender();
 
         renderer->bindDefault();

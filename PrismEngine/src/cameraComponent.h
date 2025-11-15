@@ -44,6 +44,9 @@ namespace prism {
 
             // Настройки автоматического расчета соотношения сторон
             bool useCurrentWindowAspect = true; /// Автоматически использовать соотношение сторон окна. Если true, параметр aspect игнорируется и берется соотношение сторон текущего окна/viewport'а
+
+            glm::vec3 ambientColor = {0.3, 0.3, 0.2};
+            float ambientIntensity = 0.54;
         };
     }
 }

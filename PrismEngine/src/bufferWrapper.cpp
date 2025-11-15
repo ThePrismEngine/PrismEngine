@@ -190,7 +190,18 @@ void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
     vkFreeMemory(context->device, stagingBufferMemory, nullptr);
 }
 
-void prism::PGC::BufferWrapper::createBufferObject(utils::Context* context, utils::Settings* settings)
+void prism::PGC::BufferWrapper::createBO(utils::Context* context, VkBuffer& buffer, size_t bufferSize, VkDeviceMemory& buferMemory, void*& bufferMapped, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties) {
+    PGC::BufferWrapper::createBuffer(context, bufferSize,
+        usage,
+        properties,
+        buffer,
+        buferMemory);
+
+    vkMapMemory(context->device, buferMemory, 0,
+        bufferSize, 0, &bufferMapped);
+};
+
+void prism::PGC::BufferWrapper::createBufferObjects(utils::Context* context, utils::Settings* settings)
 {
     context->uniformBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
     context->storageBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
@@ -198,31 +209,47 @@ void prism::PGC::BufferWrapper::createBufferObject(utils::Context* context, util
     VkDeviceSize cameraBufferSize = sizeof(CameraUBO);
     
     size_t objectBufferSize = sizeof(ObjectSSBO) * settings->MAX_OBJECTS;
+    size_t pointLightsBufferSize = sizeof(PointLight) * settings->MAX_POINT_LIGHTS;
+    size_t directionalLightsBufferSize = sizeof(PointLight) * settings->MAX_DIR_LIGHTS;
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
-        PGC::BufferWrapper::createBuffer(context, cameraBufferSize,
+        createBO(context, context->uniformBuffers[i].camera,
+            cameraBufferSize,
+            context->uniformBuffers[i].cameraMemory,
+            context->uniformBuffers[i].cameraMapped,
             VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
-            VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
-            context->uniformBuffers[i].camera,
-            context->uniformBuffers[i].cameraMemory);
+            VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT);
 
-        vkMapMemory(context->device, context->uniformBuffers[i].cameraMemory, 0,
-            cameraBufferSize, 0, &context->uniformBuffers[i].cameraMapped);
-
-        PGC::BufferWrapper::createBuffer(context, objectBufferSize,
+        createBO(context, context->storageBuffers[i].object,
+            objectBufferSize,
+            context->storageBuffers[i].objectMemory,
+            context->storageBuffers[i].objectMapped,
             VK_BUFFER_USAGE_STORAGE_BUFFER_BIT,
-            VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
-            context->storageBuffers[i].object,
-            context->storageBuffers[i].objectMemory);
+            VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT);
 
-        vkMapMemory(context->device, context->storageBuffers[i].objectMemory, 0,
-            objectBufferSize, 0, &context->storageBuffers[i].objectMapped);
+        createBO(context, context->storageBuffers[i].pointLights,
+            pointLightsBufferSize,
+            context->storageBuffers[i].pointLightsMemory,
+            context->storageBuffers[i].pointLightsMapped,
+            VK_BUFFER_USAGE_STORAGE_BUFFER_BIT,
+            VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT);
+
+        createBO(context, context->storageBuffers[i].directionalLights,
+            directionalLightsBufferSize,
+            context->storageBuffers[i].directionalLightsMemory,
+            context->storageBuffers[i].directionalLightsMapped,
+            VK_BUFFER_USAGE_STORAGE_BUFFER_BIT,
+            VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT);
 
         context->storageBuffers[i].objectBufferSize = objectBufferSize;
+        context->storageBuffers[i].pointLightsBufferSize = pointLightsBufferSize;
+        context->storageBuffers[i].directionalLightsBufferSize = directionalLightsBufferSize;
     }
 
     // Инициализируем нулями SSBO
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
         memset(context->storageBuffers[i].objectMapped, 0, objectBufferSize);
+        memset(context->storageBuffers[i].pointLightsMapped, 0, pointLightsBufferSize);
+        memset(context->storageBuffers[i].directionalLightsMapped, 0, directionalLightsBufferSize);
     }
 }
