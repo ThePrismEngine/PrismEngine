@@ -26,6 +26,7 @@ layout(location = 1) in vec3 inColor;
 layout(location = 2) in vec2 inTexCoord;
 layout(location = 3) in vec3 inNormal;
 
+// Объявляем ВСЕ выходные переменные, которые ожидает фрагментный шейдер
 layout(location = 0) out vec3 fragColor;
 layout(location = 1) out vec2 fragTexCoord;
 layout(location = 2) out flat uint fragTextureIndex;
@@ -36,11 +37,12 @@ void main() {
     ObjectData object = ssbo.objects[gl_InstanceIndex];
 
     vec4 worldPos = object.model * vec4(inPosition, 1.0);
-    gl_Position = camera.proj * camera.view * object.model * vec4(inPosition, 1.0);
+    gl_Position = camera.viewProj * worldPos;
 
-	fragColor = inColor;
-  fragTexCoord = inTexCoord;
-  fragTextureIndex = object.textureIndex;
-	fragNormal = mat3(object.normals) * inNormal;
-  fragPos = worldPos.xyz;
+    // Передаем все необходимые данные
+    fragColor = inColor;
+    fragTexCoord = inTexCoord;
+    fragTextureIndex = object.textureIndex;
+    fragNormal = mat3(object.normals) * inNormal; // Упрощаем для отладки
+    fragPos = worldPos.xyz;
 }

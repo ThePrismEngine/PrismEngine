@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="spinningPrism">
-      <UniqueIdentifier>{0ccb9894-585b-47e5-b0de-fda565c8c397}</UniqueIdentifier>
-    </Filter>
     <Filter Include="dancingNeonCubes">
       <UniqueIdentifier>{316f924a-0692-4b25-99e1-0695522650fb}</UniqueIdentifier>
     </Filter>
@@ -12,6 +9,9 @@
     </Filter>
     <Filter Include="materials">
       <UniqueIdentifier>{f7aba159-8d50-4e6c-9ef8-aaec8cc96308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spinningPrism">
+      <UniqueIdentifier>{0ccb9894-585b-47e5-b0de-fda565c8c397}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

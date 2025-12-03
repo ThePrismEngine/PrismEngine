@@ -42,7 +42,7 @@ namespace spinningPrism {
      */
     Entity create3DObject(Scene& scene,
         const MeshComponent& mesh,
-        const MaterialComponent& texture,
+        const MaterialComponent& material,
         Position position = { 0, 0, 0 },
         Scale scale = { 1, 1, 1 }) {
         // Создаем новую сущность в сцене
@@ -59,7 +59,7 @@ namespace spinningPrism {
         scene.addComponent<MeshComponent>(entity, mesh);
 
         // Добавляем компонент текстуры (внешний вид)
-        scene.addComponent<MaterialComponent>(entity, texture);
+        scene.addComponent<MaterialComponent>(entity, material);
 
         return entity;
     }

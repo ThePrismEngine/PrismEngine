@@ -36,11 +36,12 @@ void main() {
     ObjectData object = ssbo.objects[gl_InstanceIndex];
 
     vec4 worldPos = object.model * vec4(inPosition, 1.0);
-    gl_Position = camera.proj * camera.view * object.model * vec4(inPosition, 1.0);
+    gl_Position = camera.viewProj * worldPos;
 
-	fragColor = inColor;
-  fragTexCoord = inTexCoord;
-  fragTextureIndex = object.textureIndex;
-	fragNormal = mat3(object.normals) * inNormal;
-  fragPos = worldPos.xyz;
+    // Передаем все необходимые данные
+    fragColor = inColor;
+    fragTexCoord = inTexCoord;
+    fragTextureIndex = object.textureIndex;
+    fragNormal = mat3(object.normals) * inNormal;
+    fragPos = worldPos.xyz;
 }

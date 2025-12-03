@@ -98,6 +98,31 @@ namespace materials {
         scene.addComponent<CameraComponent>(camera, cameraConfig);
     }
 
+    Entity create3DObject(Scene& scene,
+        const MeshComponent& mesh,
+        const MaterialComponent& material,
+        Position position = { 0, 0, 0 },
+        Scale scale = { 1, 1, 1 }) {
+        // Создаем новую сущность в сцене
+        Entity entity = scene.createEntity();
+
+        // Добавляем компонент трансформации (позиция, вращение, масштаб)
+        scene.addComponent<TransformComponent>(entity, {
+            position,           // Позиция в мире
+            {0, 0, 0},          // Начальное вращение (в градусах)
+            scale               // Масштаб
+            });
+
+        // Добавляем компонент меша (геометрия объекта)
+        scene.addComponent<MeshComponent>(entity, mesh);
+
+        // Добавляем компонент текстуры (внешний вид)
+        scene.addComponent<MaterialComponent>(entity, material);
+
+        scene.addComponent<DirectionalLightComponents>(entity, DirectionalLightComponents{ {0.05f, 0.9f, 0.05f}, {0.f, 0.f, 250.f}, 30 });
+
+        return entity;
+    }
 
     int materialsDemo() {
         prism::init();
@@ -143,6 +168,16 @@ namespace materials {
 
         // Создаем скайбокс
         createSkybox(scene, skyboxMesh, skyboxTexture);
+
+        MeshComponent cubeMesh = renderer.addMesh(EXAMPLE_NAME + "/models/neoncube.obj");
+
+        // Загружаем материал для призмы
+        MaterialComponent cubeMaterial = { renderer.addTexture(EXAMPLE_NAME + "/textures/neoncube.png") };
+
+        // Обновляем меши в рендерере (применяем загруженные ресурсы)
+        renderer.updateMeshes();
+
+        create3DObject(scene, cubeMesh, cubeMaterial, { 10, 0, 0 }, { 10, 10, 10 });
 
         while (!scene.getResource<WindowResource>()->isClose()) {
             scene.update();
