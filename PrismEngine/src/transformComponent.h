@@ -13,6 +13,18 @@ namespace prism {
             float x = 0;    /// Координата по оси X
             float y = 0;    /// Координата по оси Y  
             float z = 0;    /// Координата по оси Z
+
+            Position& operator+=(const Position& other);
+            Position& operator-=(const Position& other);
+            Position operator-();
+            Position operator+(const Position& other) const;
+            Position operator-(const Position& other) const;
+            Position& operator*=(float scalar);
+            Position& operator/=(float scalar);
+            Position operator*(float scalar) const;
+            Position operator/(float scalar) const;
+            bool operator==(const Position& other) const;
+            bool operator!=(const Position& other) const;
         };
 
         /// @brief Компонент вращения в 3D-пространстве
@@ -28,12 +40,23 @@ namespace prism {
 
         /// @brief Компонент масштабирования в 3D-пространстве
         /// @details Хранит коэффициенты масштабирования по осям X, Y, Z
-        /// @note По умолчанию инициализируется единичными значениями (1, 1,  1)
+        /// @note По умолчанию инициализируется единичными значениями (1, 1, 1)
         /// @warning Отрицательные значения масштаба могут вызывать инверсию объекта
         struct Scale {
             float x = 1;    /// Коэффициент масштабирования по оси X
             float y = 1;    /// Коэффициент масштабирования по оси Y
             float z = 1;    /// Коэффициент масштабирования по оси Z
+
+            Scale& operator*=(const Scale& other);
+            Scale& operator/=(const Scale& other);
+            Scale& operator*=(float scalar);
+            Scale& operator/=(float scalar);
+            Scale operator*(const Scale& other) const;
+            Scale operator/(const Scale& other) const;
+            Scale operator*(float scalar) const;
+            Scale operator/(float scalar) const;
+            bool operator==(const Scale& other) const;
+            bool operator!=(const Scale& other) const;
         };
 
         /// @brief Компонент трансформации объекта в 3D-пространстве

@@ -1,7 +1,7 @@
 #pragma once
 #include "prismGraphicCore.h"
 #include "cameraComponent.h"
-#include "textureComponent.h"
+#include "materialComponent.h"
 #include "meshComponent.h"
 #include "windowResource.h"
 #include "transformComponent.h"
@@ -16,8 +16,8 @@ namespace prism {
 		};
 
 		struct LightData {
-			std::vector<PGC::PointLight> pointLights;
-			std::vector<PGC::DirectionalLight> directionalLights;
+			std::vector<scene::PointLightComponent> pointLights;
+			std::vector<scene::DirectionalLightComponents> directionalLights;
 		};
 
 	   class Renderer

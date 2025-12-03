@@ -221,13 +221,13 @@ void prism::render::Renderer::updateLights(LightData* lightData)
 	if (!lightData->pointLights.empty()) {
 		memcpy(pgc.context.storageBuffers[pgc.context.currentFrame].pointLightsMapped,
 			lightData->pointLights.data(),
-			lightData->pointLights.size() * sizeof(prism::PGC::PointLight));
+			lightData->pointLights.size() * sizeof(prism::scene::PointLightComponent));
 	}
 
 	if (!lightData->directionalLights.empty()) {
 		memcpy(pgc.context.storageBuffers[pgc.context.currentFrame].directionalLightsMapped,
 			lightData->directionalLights.data(),
-			lightData->directionalLights.size() * sizeof(prism::PGC::DirectionalLight));
+			lightData->directionalLights.size() * sizeof(prism::scene::DirectionalLightComponents));
 	}
 }
 

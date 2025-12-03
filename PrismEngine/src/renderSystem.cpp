@@ -2,7 +2,8 @@
 #include "cameraComponent.h"
 #include "transformComponent.h"
 #include "meshComponent.h"
-#include "textureComponent.h"
+#include "materialComponent.h"
+#include "lightsComponent.h"
 
 void prism::scene::RenderSystem::update()
 {
@@ -43,8 +44,19 @@ void prism::scene::RenderSystem::update()
         }
 
         prism::render::LightData lightData;
-        lightData.pointLights = { {{0, 0, 0}, {1, 0, 1}, 1, 30} };
-        lightData.directionalLights = {  };
+        auto pointsLightEntitys =  scene->getEntitiesWith<PointLightComponent>();
+        for (auto pointLightEntity : pointsLightEntitys) {
+            PointLightComponent pointsLight = *scene->getComponent<PointLightComponent>(pointLightEntity);
+            
+            if (auto transform = scene->getComponent<TransformComponent>(pointLightEntity)) { pointsLight.pos += transform->pos; }
+            lightData.pointLights.push_back(pointsLight);
+        }
+
+        auto directionalLightEntitys = scene->getEntitiesWith<DirectionalLightComponents>();
+        for (auto directionalLightEntity : directionalLightEntitys) {
+            DirectionalLightComponents dirLight = *scene->getComponent<DirectionalLightComponents>(directionalLightEntity);
+            lightData.directionalLights.push_back(dirLight);
+        }
 
         renderer->updateInstances(renderData);
         renderer->updateLights(&lightData);

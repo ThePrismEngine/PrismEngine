@@ -39,13 +39,22 @@ void prism::PGC::DescriptorSet::create()
         cameraBufferInfo.range = sizeof(CameraUBO);
 
         // ObjectSSBO
-        VkDescriptorBufferInfo objectBufferInfo{};
-        objectBufferInfo.buffer = context->storageBuffers[i].object;
-        objectBufferInfo.offset = 0;
-        objectBufferInfo.range = VK_WHOLE_SIZE;
+        VkDescriptorBufferInfo objectsBufferInfo{};
+        objectsBufferInfo.buffer = context->storageBuffers[i].object;
+        objectsBufferInfo.offset = 0;
+        objectsBufferInfo.range = VK_WHOLE_SIZE;
 
+        VkDescriptorBufferInfo pointLightsBufferInfo{};
+        pointLightsBufferInfo.buffer = context->storageBuffers[i].pointLights;
+        pointLightsBufferInfo.offset = 0;
+        pointLightsBufferInfo.range = VK_WHOLE_SIZE;
 
-        std::array<VkWriteDescriptorSet, 2> descriptorWrites{};
+        VkDescriptorBufferInfo dirLightsBufferInfo{};
+        dirLightsBufferInfo.buffer = context->storageBuffers[i].directionalLights;
+        dirLightsBufferInfo.offset = 0;
+        dirLightsBufferInfo.range = VK_WHOLE_SIZE;
+
+        std::array<VkWriteDescriptorSet, 4> descriptorWrites{};
 
         // Camera UBO (binding 0) - статический
         descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
@@ -56,14 +65,32 @@ void prism::PGC::DescriptorSet::create()
         descriptorWrites[0].descriptorCount = 1;
         descriptorWrites[0].pBufferInfo = &cameraBufferInfo;
 
-        // Object UBO (binding 1) - динамический (изменили binding с 2 на 1)
+        // Object SSBO (binding 1)
         descriptorWrites[1].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
         descriptorWrites[1].dstSet = context->descriptorSets[i];
         descriptorWrites[1].dstBinding = 1;
         descriptorWrites[1].dstArrayElement = 0;
         descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_STORAGE_BUFFER;
         descriptorWrites[1].descriptorCount = 1;
-        descriptorWrites[1].pBufferInfo = &objectBufferInfo;
+        descriptorWrites[1].pBufferInfo = &objectsBufferInfo;
+
+        // PointLights SSBO (binding 2)
+        descriptorWrites[2].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        descriptorWrites[2].dstSet = context->descriptorSets[i];
+        descriptorWrites[2].dstBinding = 2;
+        descriptorWrites[2].dstArrayElement = 0;
+        descriptorWrites[2].descriptorType = VK_DESCRIPTOR_TYPE_STORAGE_BUFFER;
+        descriptorWrites[2].descriptorCount = 1;
+        descriptorWrites[2].pBufferInfo = &pointLightsBufferInfo;
+
+        // DirectionLights SSBO (binding 3)
+        descriptorWrites[3].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        descriptorWrites[3].dstSet = context->descriptorSets[i];
+        descriptorWrites[3].dstBinding = 3;
+        descriptorWrites[3].dstArrayElement = 0;
+        descriptorWrites[3].descriptorType = VK_DESCRIPTOR_TYPE_STORAGE_BUFFER;
+        descriptorWrites[3].descriptorCount = 1;
+        descriptorWrites[3].pBufferInfo = &dirLightsBufferInfo;
 
         vkUpdateDescriptorSets(context->device, static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
     }

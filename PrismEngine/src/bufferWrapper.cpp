@@ -190,15 +190,25 @@ void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
     vkFreeMemory(context->device, stagingBufferMemory, nullptr);
 }
 
-void prism::PGC::BufferWrapper::createBO(utils::Context* context, VkBuffer& buffer, size_t bufferSize, VkDeviceMemory& buferMemory, void*& bufferMapped, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties) {
+void prism::PGC::BufferWrapper::createBO(utils::Context* context, VkBuffer& buffer, size_t bufferSize, VkDeviceMemory& bufferMemory, void*& bufferMapped, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties) {
     PGC::BufferWrapper::createBuffer(context, bufferSize,
         usage,
         properties,
         buffer,
-        buferMemory);
+        bufferMemory);
 
-    vkMapMemory(context->device, buferMemory, 0,
-        bufferSize, 0, &bufferMapped);
+    if (buffer == VK_NULL_HANDLE) {
+        throw std::runtime_error("Failed to create buffer!");
+    }
+
+    if (bufferMemory == VK_NULL_HANDLE) {
+        throw std::runtime_error("Failed to allocate buffer memory!");
+    }
+
+    VkResult result = vkMapMemory(context->device, bufferMemory, 0, bufferSize, 0, &bufferMapped);
+    if (result != VK_SUCCESS) {
+        throw std::runtime_error("Failed to map buffer memory!");
+    }
 };
 
 void prism::PGC::BufferWrapper::createBufferObjects(utils::Context* context, utils::Settings* settings)
@@ -209,8 +219,8 @@ void prism::PGC::BufferWrapper::createBufferObjects(utils::Context* context, uti
     VkDeviceSize cameraBufferSize = sizeof(CameraUBO);
     
     size_t objectBufferSize = sizeof(ObjectSSBO) * settings->MAX_OBJECTS;
-    size_t pointLightsBufferSize = sizeof(PointLight) * settings->MAX_POINT_LIGHTS;
-    size_t directionalLightsBufferSize = sizeof(PointLight) * settings->MAX_DIR_LIGHTS;
+    size_t pointLightsBufferSize = sizeof(scene::PointLightComponent) * settings->MAX_POINT_LIGHTS;
+    size_t directionalLightsBufferSize = sizeof(scene::DirectionalLightComponents) * settings->MAX_DIR_LIGHTS;
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
         createBO(context, context->uniformBuffers[i].camera,

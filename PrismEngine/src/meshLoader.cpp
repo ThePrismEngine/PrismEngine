@@ -1,6 +1,7 @@
 #include "meshLoader.h"
 #include <unordered_map>
 #include <tiny_obj_loader.h>
+#include <iostream>
 
 prism::PGC::MeshData prism::PGC::MeshLoader::load(std::string texturePath)
 {
@@ -48,10 +49,9 @@ prism::PGC::MeshData prism::PGC::MeshLoader::load(std::string texturePath)
                                   attrib.normals[3 * index.normal_index + 1],
                                   attrib.normals[3 * index.normal_index + 2] };
             } else {
-                // TODO: вычисление нормалей
+                // TODO: РІС‹С‡РёСЃР»РµРЅРёРµ РЅРѕСЂРјР°Р»РµР№
                 vertex.normal = { 0.0f, 1.0f, 0.0f };
             }
-
 
             if (uniqueVertices.count(vertex) == 0) {
                 uniqueVertices[vertex] = static_cast<uint32_t>(meshData.vertices.size());

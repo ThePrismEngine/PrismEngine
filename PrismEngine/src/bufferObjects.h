@@ -1,24 +1,12 @@
 #pragma once
 #include "glm.hpp"
 #include <vulkan/vulkan_core.h>
-#include "textureComponent.h"
+#include "materialComponent.h"
+#include "lightsComponent.h"
 
 
 namespace prism {
 	namespace PGC {
-		struct PointLight {
-			alignas(16) glm::vec3 position;
-			alignas(16) glm::vec3 color;
-			alignas(4) float intensity;
-			alignas(4) float radius;
-		};
-
-		struct DirectionalLight {
-			alignas(16) glm::vec3 direction;
-			alignas(16) glm::vec3 color;
-			alignas(4) float intensity;
-		};
-
 		struct ObjectSSBO {
 			alignas(16) glm::mat4 model;
 			alignas(16) glm::mat4 normals;
@@ -37,11 +25,11 @@ namespace prism {
 		};
 		
 		struct PointLightsSSBO {
-			PointLight lights[];
+			prism::scene::PointLightComponent lights[];
 		};
 
-		struct DirectionalLightsSSBO {
-			DirectionalLight lights[];
+		struct DirectionalLightsSSBO {	
+			prism::scene::DirectionalLightComponents lights[];
 		};
 
 		struct StorageBuffers {
