@@ -6,10 +6,10 @@
 #include <array>
 
 
-std::array<VkPipelineShaderStageCreateInfo, 2> prism::PGC::ShaderStagesLoader::load(PGC::utils::Context* context, PGC::utils::Settings* settings)
+std::array<VkPipelineShaderStageCreateInfo, 2> prism::PGC::ShaderStagesLoader::load(PGC::utils::Context* context, utils::PipelineSettings pipelineSettings)
 {
-    auto vertShaderCode = readShaderFile(settings->pipeline.shaders.shadersDirectory + settings->pipeline.shaders.vertexShaderFilename);
-    auto fragShaderCode = readShaderFile(settings->pipeline.shaders.shadersDirectory + settings->pipeline.shaders.fragmentShaderFilename);
+    auto vertShaderCode = readShaderFile(pipelineSettings.shaders.shadersDirectory + pipelineSettings.shaders.vertexShaderFilename);
+    auto fragShaderCode = readShaderFile(pipelineSettings.shaders.shadersDirectory + pipelineSettings.shaders.fragmentShaderFilename);
     
     VkShaderModule vertShaderModule = createShaderModule(context->device, vertShaderCode);
     VkShaderModule fragShaderModule = createShaderModule(context->device, fragShaderCode);

@@ -9,6 +9,7 @@
 #include "vertex.h"
 #include "texture.h"
 #include "mesh.h"
+#include "pipelineSettings.h"
 
 namespace prism {
 	namespace PGC {
@@ -188,37 +189,7 @@ namespace prism {
 				VkDescriptorSetLayoutCreateFlags flags = 0;
 			};
 
-			struct ShadersSettings
-			{
-				std::string vertexShaderFilename;
-				std::string fragmentShaderFilename;
-				std::string shadersDirectory;
-			};
-
-			struct RasterizationSettings {
-				VkPolygonMode polygonMode = VK_POLYGON_MODE_FILL;
-				float lineWidth = 1.0f;
-				VkCullModeFlags cullMode = VK_CULL_MODE_BACK_BIT;
-				VkFrontFace frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;
-				VkBool32 depthClampEnable = VK_FALSE;
-				VkBool32 rasterizerDiscardEnable = VK_FALSE;
-				VkBool32 depthBiasEnable = VK_FALSE;
-			};
-
-			enum MultisampleSelectionStrategy {
-				MINIMAL,  // Минимальный уровень после 1x(обычно 2x)
-				MIDDLE,   // Среднее значение из доступных
-				MAXIMAL,  // Максимальное значение
-				CUSTOM,   // Значение из цели или максимально приближенное
-				//ADAPTIVE, // Оценка по баллам устройства
-			};
-
-			struct MultisampleSettings {
-				VkBool32 sampleShadingEnable = VK_FALSE;
-				VkSampleCountFlagBits rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
-				MultisampleSelectionStrategy strategy = MultisampleSelectionStrategy::MAXIMAL;
-			};
-
+			
 			struct ColorBlendAttachmentSettings {
 				VkBool32 blendEnable = VK_FALSE;
 				VkColorComponentFlags colorWriteMask =
@@ -226,53 +197,6 @@ namespace prism {
 					VK_COLOR_COMPONENT_G_BIT |
 					VK_COLOR_COMPONENT_B_BIT |
 					VK_COLOR_COMPONENT_A_BIT;
-			};
-
-			struct ColorBlendSettings {
-				std::vector<VkPipelineColorBlendAttachmentState> attachments;
-				VkBool32 logicOpEnable = VK_FALSE;
-				VkLogicOp logicOp = VK_LOGIC_OP_COPY;
-				float blendConstants[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
-			};
-
-			struct DynamicStateSettings {
-				std::vector<VkDynamicState> dynamicStates = {
-					VK_DYNAMIC_STATE_VIEWPORT,
-					VK_DYNAMIC_STATE_SCISSOR
-				};
-			};
-
-			struct DepthStencilSettings {
-				VkBool32 depthTestEnable = VK_TRUE;
-				VkBool32 depthWriteEnable = VK_TRUE;
-				VkCompareOp depthCompareOp = VK_COMPARE_OP_LESS;
-				VkBool32 depthBoundsTestEnable = VK_FALSE;
-				float minDepthBounds = 0.0f;
-				float maxDepthBounds = 1.0f;
-				VkBool32 stencilTestEnable = VK_FALSE;
-				VkStencilOpState front = {};
-				VkStencilOpState back = {};
-			};
-
-			struct InputAssemblySettings {
-				VkPrimitiveTopology topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
-				VkBool32 primitiveRestartEnable = VK_FALSE;
-			};
-
-			struct ViewportStateSettings {
-				uint32_t viewportCount = 1;
-				uint32_t scissorCount = 1;
-			};
-
-			struct PipelineSettings {
-				ShadersSettings shaders = { "vert.spv", "frag.spv", "shaders/" };;
-				InputAssemblySettings inputAssembly;
-				RasterizationSettings rasterization;
-				DepthStencilSettings depthStencil;
-				MultisampleSettings multisample;
-				ColorBlendSettings colorBlend;
-				DynamicStateSettings dynamicState;
-				ViewportStateSettings viewportState;
 			};
 
 			struct Settings
@@ -289,7 +213,7 @@ namespace prism {
 				uint32_t MAX_POINT_LIGHTS = 50;
 				uint32_t MAX_DIR_LIGHTS = 10;
 				
-				PipelineSettings pipeline;
+				PipelineSettings defaultPipeline;
 
 				SDL_Window* window;
 			};

@@ -19,7 +19,7 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createTextureDescriptorSetLayout();
     createRenderPass();
     createDescriptorSetLayout();
-    createGraphicsPipeline();
+    createPipelineStorage();
     createCommandPool();
     createColorResources();
     createDepthResources();
@@ -68,9 +68,9 @@ void prism::PGC::PrismGraphicCore::createSwapChain()
     swapChain.init(&context, &settings);
 }
 
-void prism::PGC::PrismGraphicCore::createGraphicsPipeline()
+void prism::PGC::PrismGraphicCore::createPipelineStorage()
 {
-    graphicsPipeline.init(&context, &settings);
+    pipelineStorage.init(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createRenderPass()
@@ -273,7 +273,7 @@ void prism::PGC::PrismGraphicCore::cleanup()
 
     context.swapChainFramebuffers.clear();
 
-    graphicsPipeline.cleanup();
+    pipelineStorage.cleanup();
 
     renderPass.cleanup();
 

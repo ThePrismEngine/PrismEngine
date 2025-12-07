@@ -188,7 +188,7 @@ void prism::PGC::base::Base::pickPhysicalDevice()
     // Check if the best candidate is suitable at all
     if (candidates.rbegin()->first > 0) {
         context->physicalDevice = candidates.rbegin()->second;
-        if (settings->pipeline.multisample.rasterizationSamples)
+        if (settings->defaultPipeline.multisample.rasterizationSamples)
         context->msaaSamples = getMsaaSamples();
     }
     else {
@@ -228,7 +228,7 @@ VkSampleCountFlagBits prism::PGC::base::Base::getMsaaSamples() {
         return VK_SAMPLE_COUNT_1_BIT;
     }
 
-    switch (settings->pipeline.multisample.strategy) {
+    switch (settings->defaultPipeline.multisample.strategy) {
     case utils::MultisampleSelectionStrategy::MINIMAL:
         if (possibleCounts.size() >= 2) {
             for (size_t i = 1; i < possibleCounts.size(); ++i) {
@@ -250,16 +250,16 @@ VkSampleCountFlagBits prism::PGC::base::Base::getMsaaSamples() {
 
     case utils::MultisampleSelectionStrategy::CUSTOM:
         for (VkSampleCountFlagBits possibleCount : possibleCounts) {
-            if (possibleCount == settings->pipeline.multisample.rasterizationSamples) {
+            if (possibleCount == settings->defaultPipeline.multisample.rasterizationSamples) {
                 return possibleCount;
             }
         }
 
         VkSampleCountFlagBits closest = possibleCounts[0];
-        int minDiff = std::abs(static_cast<int>(closest) - static_cast<int>(settings->pipeline.multisample.rasterizationSamples));
+        int minDiff = std::abs(static_cast<int>(closest) - static_cast<int>(settings->defaultPipeline.multisample.rasterizationSamples));
 
         for (size_t i = 1; i < possibleCounts.size(); ++i) {
-            int diff = std::abs(static_cast<int>(possibleCounts[i]) - static_cast<int>(settings->pipeline.multisample.rasterizationSamples));
+            int diff = std::abs(static_cast<int>(possibleCounts[i]) - static_cast<int>(settings->defaultPipeline.multisample.rasterizationSamples));
             if (diff < minDiff) {
                 minDiff = diff;
                 closest = possibleCounts[i];

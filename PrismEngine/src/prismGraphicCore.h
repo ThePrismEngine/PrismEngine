@@ -28,7 +28,7 @@
 #include "utils.h"
 #include "renderPass.h"
 #include "descriptorSetLayout.h"
-#include "graphicsPipeline.h"
+#include "pipelineStorage.h"
 #include "bufferWrapper.h"
 #include "descriptorSet.h"
 #include "resourcesCreater.h"
@@ -59,7 +59,7 @@ namespace prism {
         private:
             void createBase();
             void createSwapChain();
-            void createGraphicsPipeline();
+            void createPipelineStorage();
             void createRenderPass();
             void createFramebuffers();
             void createCommandPool();
@@ -81,7 +81,7 @@ namespace prism {
             PGC::SwapChain swapChain;
             PGC::RenderPass renderPass;
             PGC::DescriptorSetLayout descriptorSetLayout;
-            PGC::GraphicsPipeline graphicsPipeline;
+            PGC::PipelineStorage pipelineStorage;
             PGC::DescriptorSet descriptorSet;
 
 
