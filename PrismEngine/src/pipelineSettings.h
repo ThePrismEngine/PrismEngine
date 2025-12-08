@@ -101,9 +101,9 @@ namespace prism {
 				static bool dynamicStatesEqual(const std::vector<VkDynamicState>& a, const std::vector<VkDynamicState>& b);
 				size_t getHash() const;
 
-				static PipelineSettings OpaquePBR();
-				static PipelineSettings Skybox();
-				static PipelineSettings WireframeDebug();
+				void withOpaquePBR();
+				void withSkybox(bool cullFront = false);
+				void withWireframeDebug();
 			};
 			VkPipelineColorBlendAttachmentState createColorBlendAttachment(bool blendEnable);
 		}

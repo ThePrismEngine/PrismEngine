@@ -1,14 +1,13 @@
 #include "pipelineSettings.h"
 
-prism::PGC::utils::PipelineSettings prism::PGC::utils::PipelineSettings::OpaquePBR()
+void prism::PGC::utils::PipelineSettings::withOpaquePBR()
 {
-	PipelineSettings settings;
 
 	// settings.shaders = { "pbr-vert.spv", "pbr-frag.spv", "shaders/" };
-	settings.shaders = { "vert.spv", "frag.spv", "shaders/" };
-	settings.inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+	shaders = { "vert.spv", "frag.spv", "shaders/" };
+	inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
 
-	settings.colorBlend.attachments = {
+	colorBlend.attachments = {
 		VkPipelineColorBlendAttachmentState{
 			VK_FALSE,                                  // blendEnable
 			VK_BLEND_FACTOR_ONE,                       // srcColorBlendFactor
@@ -21,25 +20,22 @@ prism::PGC::utils::PipelineSettings prism::PGC::utils::PipelineSettings::OpaqueP
 			VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT
 		}
 	};
-	settings.colorBlend.logicOpEnable = VK_FALSE;
-
-	return settings;
+	colorBlend.logicOpEnable = VK_FALSE;
 }
 
-prism::PGC::utils::PipelineSettings prism::PGC::utils::PipelineSettings::Skybox()
+void prism::PGC::utils::PipelineSettings::withSkybox(bool cullFront)
 {
-	PipelineSettings settings;
-	settings.shaders = { "albedo-vert.spv", "albedo-frag.spv", "shaders/" };
+	shaders = { "albedo-vert.spv", "albedo-frag.spv", "shaders/" };
 
-	settings.rasterization.cullMode = VK_CULL_MODE_FRONT_BIT;
+	rasterization.cullMode = cullFront ? VK_CULL_MODE_FRONT_BIT : VK_CULL_MODE_BACK_BIT;
 
-	settings.depthStencil.depthWriteEnable = VK_FALSE;
-	settings.depthStencil.depthCompareOp = VK_COMPARE_OP_LESS_OR_EQUAL;
+	depthStencil.depthWriteEnable = VK_FALSE;
+	depthStencil.depthCompareOp = VK_COMPARE_OP_LESS_OR_EQUAL;
 
-	settings.multisample.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
+	multisample.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
 
-	settings.colorBlend.attachments = {
-			VkPipelineColorBlendAttachmentState{
+	colorBlend.attachments = {
+		VkPipelineColorBlendAttachmentState{
 				VK_FALSE,                                  // blendEnable
 				VK_BLEND_FACTOR_ONE,                       // srcColorBlendFactor
 				VK_BLEND_FACTOR_ZERO,                      // dstColorBlendFactor
@@ -49,28 +45,25 @@ prism::PGC::utils::PipelineSettings prism::PGC::utils::PipelineSettings::Skybox(
 				VK_BLEND_OP_ADD,                           // alphaBlendOp
 				VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT |
 				VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT
-			}
+		}
 	};
 
-	settings.colorBlend.logicOpEnable = VK_FALSE;
-
-	return settings;
+	colorBlend.logicOpEnable = VK_FALSE;
 }
 
-prism::PGC::utils::PipelineSettings prism::PGC::utils::PipelineSettings::WireframeDebug()
+void prism::PGC::utils::PipelineSettings::withWireframeDebug()
 {
-	PipelineSettings settings;
-	settings.shaders = { "albedo-vert.spv", "albedo-frag.spv", "shaders/" };
+	shaders = { "albedo-vert.spv", "albedo-frag.spv", "shaders/" };
 
-	settings.rasterization.polygonMode = VK_POLYGON_MODE_LINE;
-	settings.rasterization.lineWidth = 1.5f;
-	settings.rasterization.cullMode = VK_CULL_MODE_NONE;
+	rasterization.polygonMode = VK_POLYGON_MODE_LINE;
+	rasterization.lineWidth = 1.5f;
+	rasterization.cullMode = VK_CULL_MODE_NONE;
 
-	settings.multisample.sampleShadingEnable = VK_FALSE;
-	settings.multisample.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
+	multisample.sampleShadingEnable = VK_FALSE;
+	multisample.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
 
-	settings.colorBlend.attachments = {
-			VkPipelineColorBlendAttachmentState{
+	colorBlend.attachments = {
+		VkPipelineColorBlendAttachmentState{
 				VK_FALSE,                                  // blendEnable
 				VK_BLEND_FACTOR_ONE,                       // srcColorBlendFactor
 				VK_BLEND_FACTOR_ZERO,                      // dstColorBlendFactor
@@ -80,16 +73,14 @@ prism::PGC::utils::PipelineSettings prism::PGC::utils::PipelineSettings::Wirefra
 				VK_BLEND_OP_ADD,                           // alphaBlendOp
 				VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT |
 				VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT
-			}
+		}
 	};
 
-	settings.colorBlend.logicOpEnable = VK_FALSE;
+	colorBlend.logicOpEnable = VK_FALSE;
 
-	settings.dynamicState.dynamicStates = {
+	dynamicState.dynamicStates = {
 		VK_DYNAMIC_STATE_VIEWPORT,
 		VK_DYNAMIC_STATE_SCISSOR,
 		VK_DYNAMIC_STATE_LINE_WIDTH
 	};
-
-	return settings;
 }
