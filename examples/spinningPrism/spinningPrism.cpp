@@ -90,7 +90,7 @@ namespace spinningPrism {
         renderer.setDefaultSettings();
 
         // ”казываем пути к шейдерам (программы дл€ видеокарты)
-        renderer.settings.pipeline.shaders = {
+        renderer.settings.defaultPipeline.shaders = {
             "vert.spv",
             "frag.spv",
             EXAMPLE_NAME + "/shaders/"

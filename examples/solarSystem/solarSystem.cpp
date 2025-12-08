@@ -158,7 +158,7 @@ namespace solarSystem {
         // Настройка рендерера
         renderer.linkWindow(scene.getResource<WindowResource>());
         renderer.setDefaultSettings();
-        renderer.settings.pipeline.shaders = { "albedo-vert.spv", "albedo-frag.spv", EXAMPLE_NAME + "/shaders/" };
+        renderer.settings.defaultPipeline.shaders = { "albedo-vert.spv", "albedo-frag.spv", EXAMPLE_NAME + "/shaders/" };
         renderer.init();
 
         // Загрузка ресурсов
@@ -167,7 +167,7 @@ namespace solarSystem {
 
         Position center = { 0, 0, 0 };
 
-        createPlanet(scene, renderer, "Sun", 0.0f, 0.0f, 0.0f, center);
+        Entity sun = createPlanet(scene, renderer, "Sun", 0.0f, 0.0f, 0.0f, center);
         createPlanet(scene, renderer, "Mercury", 100.0f, 15.0f, 8.0f, center);
         createPlanet(scene, renderer, "Venus", 150.0f, 12.0f, 6.0f, center);
         Entity earth = createPlanet(scene, renderer, "Earth", 200.0f, 10.0f, 10.0f, center);
@@ -180,7 +180,7 @@ namespace solarSystem {
         createPlanet(scene, renderer, "UranusRing", 0.0f, 0.0f, 6.0f, scene.getComponent<TransformComponent>(uranus)->pos);
 
         renderer.updateMeshes();
-
+        
         // ресурсы
         scene.setResource<TimeResource>(TimeResource{});
         scene.setResource<InputResource>(InputResource{});

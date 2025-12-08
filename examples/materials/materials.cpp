@@ -134,7 +134,7 @@ namespace materials {
         // Настройка рендерера
         renderer.linkWindow(scene.getResource<WindowResource>());
         renderer.setDefaultSettings();
-        renderer.settings.pipeline.shaders = { "vert.spv", "frag.spv", EXAMPLE_NAME + "/shaders/" };
+        renderer.settings.defaultPipeline.shaders = { "vert.spv", "frag.spv", EXAMPLE_NAME + "/shaders/" };
         renderer.init();
 
         // Загрузка ресурсов
