@@ -43,7 +43,7 @@ prism::PGC::utils::CameraData* prism::PGC::PrismGraphicCore::getCameraDataPtr()
     return &context.cameraData;
 }
 
-prism::PGC::SwapChain* prism::PGC::PrismGraphicCore::getSwapChainPtr()
+prism::PGC::L1::SwapChain* prism::PGC::PrismGraphicCore::getSwapChainPtr()
 {
     return &swapChain;
 }

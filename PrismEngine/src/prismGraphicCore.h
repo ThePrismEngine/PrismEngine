@@ -27,10 +27,10 @@
 #include "surface.h"
 #include "physicalDevice.h"
 #include "logicalDevice.h"
+#include "swapChain.h"
 ///
 #include "deviceWrapper.h"
 #include "deviceChecker.h"
-#include "swapChain.h"
 #include "utils.h"
 #include "renderPass.h"
 #include "descriptorSetLayout.h"
@@ -48,7 +48,7 @@ namespace prism {
             PrismGraphicCore();
             void init(utils::Settings settings);
             prism::PGC::utils::CameraData* getCameraDataPtr();
-            PGC::SwapChain* getSwapChainPtr();
+            PGC::L1::SwapChain* getSwapChainPtr();
 
             void cleanup();
             void awaitRenderingCompletion();
@@ -68,7 +68,6 @@ namespace prism {
             void createSurface();
             void createPhysicalDevice();
             void createLogicalDevice();
-
             void createSwapChain();
             void createPipelineStorage();
             void createRenderPass();
@@ -95,7 +94,7 @@ namespace prism {
             PGC::L1::PhysicalDevice physicalDevice;
             PGC::L1::LogicalDevice logicalDevice;
 
-            PGC::SwapChain swapChain;
+            PGC::L1::SwapChain swapChain;
             PGC::RenderPass renderPass;
             PGC::DescriptorSetLayout descriptorSetLayout;
             PGC::PipelineStorage pipelineStorage;

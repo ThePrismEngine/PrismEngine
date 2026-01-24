@@ -1,29 +1,22 @@
 #pragma once
 #include "utils.h"
+#include "layersMacroses.h"
+#include "pgcLayersObjsTemplate.h"
 
-namespace prism {
-	namespace PGC {
-		class SwapChain
-		{
-		public:
-			SwapChain() : context(nullptr), settings(nullptr) {}
-			void init(PGC::utils::Context* context, PGC::utils::Settings* settings);
-			~SwapChain();
-			void cleanup();
-			void awaitRenderingCompletion();
-			void recreate();
+DECLARE_PGC_LAYER_INSTANCE(L1)
+class SwapChain : public L1_Object<SwapChain> {
+public:
+	void createImpl();
+	void cleanupImpl();
+	void awaitRenderingCompletion();
+	void recreate();
 
-		private:
-			void create();
-			void createImageViews();
+private:
+	void createImageViews();
 
-			VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats);
-			VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes);
-			VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
-			uint32_t getImageCount(PGC::utils::SwapChainSupportDetails swapChainSupport);
-
-			utils::Context* context;
-			utils::Settings* settings;
-		};
-	}
-}
+	VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats);
+	VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes);
+	VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
+	uint32_t getImageCount(PGC::utils::SwapChainSupportDetails swapChainSupport);
+};
+END_NAMESPACE_DECLARATION

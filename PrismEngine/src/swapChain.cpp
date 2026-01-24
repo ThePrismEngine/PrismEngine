@@ -6,19 +6,8 @@
 #include "deviceWrapper.h"
 #include "resourcesCreater.h"
 
-void prism::PGC::SwapChain::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
-{
-    this->context = context;
-    this->settings = settings;
-    create();
-    createImageViews();
-}
 
-prism::PGC::SwapChain::~SwapChain()
-{
-}
-
-void prism::PGC::SwapChain::cleanup()
+void prism::PGC::L1::SwapChain::cleanupImpl()
 {
     vkDestroyImageView(context->device, context->depthImageView, nullptr);
     vkDestroyImage(context->device, context->depthImage, nullptr);
@@ -39,28 +28,7 @@ void prism::PGC::SwapChain::cleanup()
     vkDestroySwapchainKHR(context->device, context->vkSwapChain, nullptr);
 }
 
-void prism::PGC::SwapChain::awaitRenderingCompletion()
-{
-    vkDeviceWaitIdle(context->device);
-}
-
-void prism::PGC::SwapChain::recreate()
-{
-    awaitRenderingCompletion();
-
-    cleanup();
-
-    create();
-    createImageViews();
-
-    PGC::ResourcesCreater::createColorResources(context, settings);
-    PGC::ResourcesCreater::createDepthResources(context, settings);
-    PGC::ResourcesCreater::createFramebuffers(context, settings);
-
-    awaitRenderingCompletion();
-}
-
-void prism::PGC::SwapChain::create()
+void prism::PGC::L1::SwapChain::createImpl()
 {
     PGC::utils::SwapChainSupportDetails swapChainSupport = PGC::L3::DeviceWrapper::querySwapChainSupport(context->physicalDevice, context->surface);
 
@@ -101,7 +69,7 @@ void prism::PGC::SwapChain::create()
     createInfo.oldSwapchain = VK_NULL_HANDLE;
 
     if (vkCreateSwapchainKHR(context->device, &createInfo, nullptr, &context->vkSwapChain) != VK_SUCCESS) {
-        logger::logError(logger::Error::VULKAN_SWAP_CHAIN_FAILED, "prism::PGC::SwapChain class");
+        logger::logError(logger::Error::VULKAN_SWAP_CHAIN_FAILED, __FUNCTION__);
     }
 
     vkGetSwapchainImagesKHR(context->device, context->vkSwapChain, &imageCount, nullptr);
@@ -122,7 +90,28 @@ void prism::PGC::SwapChain::create()
     logger::info("Swapchain Image Count: " + std::to_string(swapChainSupport.capabilities.minImageCount + 1));
 }
 
-void prism::PGC::SwapChain::createImageViews()
+void prism::PGC::L1::SwapChain::awaitRenderingCompletion()
+{
+    vkDeviceWaitIdle(context->device);
+}
+
+void prism::PGC::L1::SwapChain::recreate()
+{
+    awaitRenderingCompletion();
+
+    cleanup();
+
+    createImpl();
+    createImageViews();
+
+    PGC::ResourcesCreater::createColorResources(context, settings);
+    PGC::ResourcesCreater::createDepthResources(context, settings);
+    PGC::ResourcesCreater::createFramebuffers(context, settings);
+
+    awaitRenderingCompletion();
+}
+
+void prism::PGC::L1::SwapChain::createImageViews()
 {
     context->swapChainImageViews.resize(context->swapChainImages.size());
 
@@ -132,7 +121,7 @@ void prism::PGC::SwapChain::createImageViews()
 }
 
 
-VkSurfaceFormatKHR prism::PGC::SwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats)
+VkSurfaceFormatKHR prism::PGC::L1::SwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats)
 {
     for (const auto& availableFormat : availableFormats) {
         if (availableFormat.format == VK_FORMAT_B8G8R8A8_SRGB && availableFormat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
@@ -143,7 +132,7 @@ VkSurfaceFormatKHR prism::PGC::SwapChain::chooseSwapSurfaceFormat(const std::vec
     return availableFormats[0];
 }
 
-VkPresentModeKHR prism::PGC::SwapChain::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes)
+VkPresentModeKHR prism::PGC::L1::SwapChain::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes)
 {
     if (settings->swapChain.enableTripleBuffering) {
         for (const auto& availablePresentMode : availablePresentModes) {
@@ -155,7 +144,7 @@ VkPresentModeKHR prism::PGC::SwapChain::chooseSwapPresentMode(const std::vector<
     return settings->swapChain.enableVSync ? VK_PRESENT_MODE_FIFO_KHR : VK_PRESENT_MODE_IMMEDIATE_KHR;
 }
 
-VkExtent2D prism::PGC::SwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities)
+VkExtent2D prism::PGC::L1::SwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities)
 {
     if (capabilities.currentExtent.width != std::numeric_limits<uint32_t>::max()) {
         return capabilities.currentExtent;
@@ -176,7 +165,7 @@ VkExtent2D prism::PGC::SwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKH
     }
 }
 
-uint32_t prism::PGC::SwapChain::getImageCount(PGC::utils::SwapChainSupportDetails swapChainSupport)
+uint32_t prism::PGC::L1::SwapChain::getImageCount(PGC::utils::SwapChainSupportDetails swapChainSupport)
 {
     uint32_t imageCount = swapChainSupport.capabilities.minImageCount + 1;
 
