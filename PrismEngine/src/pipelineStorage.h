@@ -2,26 +2,20 @@
 #include <memory>
 #include <map>
 #include "utils.h"
+#include "pgcLayersObjsTemplate.h"
+#include "layersMacroses.h"
 
-namespace prism {
-	namespace PGC {
-		class PipelineStorage {
-		public:
-			PipelineStorage() : context(nullptr), settings(nullptr) {};
-			void init(PGC::utils::Context* context, PGC::utils::Settings* settings);
+DECLARE_PGC_LAYER_INSTANCE(L1)
+class PipelineStorage : public L1_Object<PipelineStorage> {
+public:
+	void createImpl();
+	void cleanupImpl();
+	VkPipeline add(utils::PipelineSettings pipelineSettings);
+	void remove(VkPipeline pipeline);
 
-			VkPipeline add(utils::PipelineSettings pipelineSettings);
-
-			void remove(VkPipeline pipeline);
-			void cleanup(); 
-
-		private:
-			void createPipeline(VkPipeline* graphicsPipeline, utils::PipelineSettings pipelineSettings);
-			
-			std::map<size_t, VkPipeline> pipelines;
-
-			utils::Context* context;
-			utils::Settings* settings;
-		};
-	}
-}
+private:
+	void createPipeline(VkPipeline* graphicsPipeline, utils::PipelineSettings pipelineSettings);
+		
+	std::map<size_t, VkPipeline> pipelines;
+};
+END_NAMESPACE_DECLARATION

@@ -1,16 +1,11 @@
 #include "pipelineStorage.h"
 #include "shaderStagesLoader.h"
 
-void prism::PGC::PipelineStorage::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
-{
-    this->context = context;
-    this->settings = settings;
-
+void prism::PGC::L1::PipelineStorage::createImpl() {
     createPipeline(&context->graphicsPipeline, settings->defaultPipeline);
 }
 
-VkPipeline prism::PGC::PipelineStorage::add(utils::PipelineSettings pipelineSettings)
-{
+VkPipeline prism::PGC::L1::PipelineStorage::add(utils::PipelineSettings pipelineSettings) {
     size_t pipelineSettingsHash = pipelineSettings.getHash();
     if (pipelines.count(pipelineSettingsHash)) { return pipelines[pipelineSettingsHash]; }
     pipelines[pipelineSettingsHash] = VkPipeline{};
@@ -19,7 +14,7 @@ VkPipeline prism::PGC::PipelineStorage::add(utils::PipelineSettings pipelineSett
     return pipelines[pipelineSettingsHash];
 }
 
-void prism::PGC::PipelineStorage::remove(VkPipeline pipeline)
+void prism::PGC::L1::PipelineStorage::remove(VkPipeline pipeline)
 {
     size_t delKey = -1;
     for (const auto& pair : pipelines) {
@@ -32,10 +27,9 @@ void prism::PGC::PipelineStorage::remove(VkPipeline pipeline)
         vkDestroyPipeline(context->device, pipeline, nullptr);
         pipelines.erase(delKey);
     }
-    
 }
 
-void prism::PGC::PipelineStorage::cleanup()
+void prism::PGC::L1::PipelineStorage::cleanupImpl()
 {
     for (const auto& pair : pipelines)
     {
@@ -46,7 +40,7 @@ void prism::PGC::PipelineStorage::cleanup()
     pipelines.clear();
 }
 
-void prism::PGC::PipelineStorage::createPipeline(VkPipeline* graphicsPipeline, utils::PipelineSettings pipelineSettings)
+void prism::PGC::L1::PipelineStorage::createPipeline(VkPipeline* graphicsPipeline, utils::PipelineSettings pipelineSettings)
 {
     std::array<VkPipelineShaderStageCreateInfo, 2> stageArray = ShaderStagesLoader::load(context, pipelineSettings);
     VkPipelineShaderStageCreateInfo shaderStages[] = { stageArray[0], stageArray[1] };

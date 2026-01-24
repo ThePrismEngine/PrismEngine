@@ -87,17 +87,16 @@ namespace prism {
 
             SDL_Window* window;
 
-            //PGC::Base base;
             PGC::L1::Instance instance;
             PGC::L1::Debug debug;
             PGC::L1::Surface surface;
             PGC::L1::PhysicalDevice physicalDevice;
             PGC::L1::LogicalDevice logicalDevice;
-
             PGC::L1::SwapChain swapChain;
+            PGC::L1::PipelineStorage pipelineStorage;
+            
             PGC::RenderPass renderPass;
             PGC::DescriptorSetLayout descriptorSetLayout;
-            PGC::PipelineStorage pipelineStorage;
             PGC::DescriptorSet descriptorSet;
 
 
