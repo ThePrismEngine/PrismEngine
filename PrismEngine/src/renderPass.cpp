@@ -1,22 +1,7 @@
 #include "renderPass.h"
+#include "deviceWrapper.h"
 
-void prism::PGC::RenderPass::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
-{
-	this->context = context;
-	this->settings = settings;
-	create();
-}
-
-prism::PGC::RenderPass::~RenderPass()
-{
-}
-
-void prism::PGC::RenderPass::cleanup()
-{
-    vkDestroyRenderPass(context->device, context->renderPass, nullptr);
-}
-
-void prism::PGC::RenderPass::create()
+void prism::PGC::L1::RenderPass::createImpl()
 {
     VkAttachmentDescription depthAttachment{};
     depthAttachment.format = L3::DeviceWrapper::findDepthFormat(context->physicalDevice);
@@ -88,4 +73,9 @@ void prism::PGC::RenderPass::create()
     if (vkCreateRenderPass(context->device, &renderPassInfo, nullptr, &context->renderPass) != VK_SUCCESS) {
         throw std::runtime_error("failed to create render pass!");
     }
+}
+
+void prism::PGC::L1::RenderPass::cleanupImpl()
+{
+    vkDestroyRenderPass(context->device, context->renderPass, nullptr);
 }
