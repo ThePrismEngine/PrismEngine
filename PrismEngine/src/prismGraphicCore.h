@@ -77,7 +77,7 @@ namespace prism {
 
             SDL_Window* window;
 
-            PGC::base::Base base;
+            PGC::Base base;
             PGC::SwapChain swapChain;
             PGC::RenderPass renderPass;
             PGC::DescriptorSetLayout descriptorSetLayout;

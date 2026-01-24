@@ -34,40 +34,36 @@ namespace prism {
 			}
 		}
 
-		namespace base 
-		{
-			class Base
-			{
-			public:
-				Base() : context(nullptr), settings(nullptr) {}
-				void init(PGC::utils::Context* context, PGC::utils::Settings* settings);
-				~Base();
-				void cleanup();
-			private:
-				void create();
 
-				void createInstance();
-				void setupDebugMessenger();
-				void pickPhysicalDevice();
-				void createSurface();
-				void createLogicalDevice();
+		class Base {
+		public:
+			Base() : context(nullptr), settings(nullptr) {}
+			void init(PGC::utils::Context* context, PGC::utils::Settings* settings);
+			~Base();
+			void cleanup();
+		private:
+			void create();
 
-				PGC::utils::Context* context;
-				PGC::utils::Settings* settings;
+			void createInstance();
+			void setupDebugMessenger();
+			void pickPhysicalDevice();
+			void createSurface();
+			void createLogicalDevice();
 
-				//help
-				bool checkValidationLayerSupport();
-				std::vector<const char*> getRequiredExtensions();
-				void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
-				static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData);
+			PGC::utils::Context* context;
+			PGC::utils::Settings* settings;
 
-				VkSampleCountFlagBits getMaxUsableSampleCount();
+			//help
+			bool checkValidationLayerSupport();
+			std::vector<const char*> getRequiredExtensions();
+			void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
+			static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData);
 
-				std::vector<VkSampleCountFlagBits> getPossibleCounts(VkSampleCountFlagBits maxCount);
-				VkSampleCountFlagBits getMsaaSamples();
+			VkSampleCountFlagBits getMaxUsableSampleCount();
 
-				VkDebugUtilsMessengerEXT debugMessenger;
-			};
-		}
+			std::vector<VkSampleCountFlagBits> getPossibleCounts(VkSampleCountFlagBits maxCount);
+			VkSampleCountFlagBits getMsaaSamples();
+			VkDebugUtilsMessengerEXT debugMessenger;
+		};
 	}
 }

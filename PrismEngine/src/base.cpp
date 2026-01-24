@@ -1,6 +1,6 @@
 #include "base.h"
 
-void prism::PGC::base::Base::create()
+void prism::PGC::Base::create()
 {
     createInstance();
     setupDebugMessenger();
@@ -9,21 +9,21 @@ void prism::PGC::base::Base::create()
     createLogicalDevice();
 }
 
-void prism::PGC::base::Base::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
+void prism::PGC::Base::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
 {
     this->context = context;
     this->settings = settings;
     create();
 }
 
-prism::PGC::base::Base::~Base()
+prism::PGC::Base::~Base()
 {
     if (!context || !settings) {
         logger::logError(logger::Error::NOT_CALL_CLEANUP_IN_PGC_CORE);
     }
 }
 
-void prism::PGC::base::Base::cleanup()
+void prism::PGC::Base::cleanup()
 {
     if (context->device != VK_NULL_HANDLE) {
         vkDeviceWaitIdle(context->device);  // Ensure all operations are completed
@@ -48,7 +48,7 @@ void prism::PGC::base::Base::cleanup()
     settings = nullptr;
 }
 
-bool prism::PGC::base::Base::checkValidationLayerSupport()
+bool prism::PGC::Base::checkValidationLayerSupport()
 {
     uint32_t layerCount;
     vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
@@ -74,7 +74,7 @@ bool prism::PGC::base::Base::checkValidationLayerSupport()
     return true;
 }
 
-std::vector<const char*> prism::PGC::base::Base::getRequiredExtensions()
+std::vector<const char*> prism::PGC::Base::getRequiredExtensions()
 {
     std::vector<const char*> extensions;
 
@@ -97,7 +97,7 @@ std::vector<const char*> prism::PGC::base::Base::getRequiredExtensions()
     return extensions;
 }
 
-void prism::PGC::base::Base::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo)
+void prism::PGC::Base::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo)
 {
     createInfo = {};
     createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
@@ -106,14 +106,14 @@ void prism::PGC::base::Base::populateDebugMessengerCreateInfo(VkDebugUtilsMessen
     createInfo.pfnUserCallback = debugCallback;
 }
 
-VKAPI_ATTR VkBool32 VKAPI_CALL prism::PGC::base::Base::debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData)
+VKAPI_ATTR VkBool32 VKAPI_CALL prism::PGC::Base::debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData)
 {
     std::cerr << "validation layer: " << pCallbackData->pMessage << std::endl;
 
     return VK_FALSE;
 }
 
-void prism::PGC::base::Base::createInstance()
+void prism::PGC::Base::createInstance()
 {
     if (context->enableValidationLayers && !checkValidationLayerSupport()) {
         logger::logError(logger::Error::VULKAN_VALIDATION_LAYERS_UNAVAILABLE, "prism::PGC::core::Core::createInstance()");
@@ -154,7 +154,7 @@ void prism::PGC::base::Base::createInstance()
     }
 }
 
-void prism::PGC::base::Base::setupDebugMessenger()
+void prism::PGC::Base::setupDebugMessenger()
 {
     if (!context->enableValidationLayers) return;
 
@@ -166,7 +166,7 @@ void prism::PGC::base::Base::setupDebugMessenger()
     }
 }
 
-void prism::PGC::base::Base::pickPhysicalDevice()
+void prism::PGC::Base::pickPhysicalDevice()
 {
     uint32_t deviceCount = 0;
     vkEnumeratePhysicalDevices(context->instance, &deviceCount, nullptr);
@@ -219,7 +219,7 @@ void prism::PGC::base::Base::pickPhysicalDevice()
     logger::info("  - Score: " + std::to_string(candidates.rbegin()->first) + "\n");
 }
 
-VkSampleCountFlagBits prism::PGC::base::Base::getMsaaSamples() {
+VkSampleCountFlagBits prism::PGC::Base::getMsaaSamples() {
     VkSampleCountFlagBits maxCount = getMaxUsableSampleCount();
     std::vector<VkSampleCountFlagBits> possibleCounts = getPossibleCounts(maxCount);
 
@@ -271,14 +271,14 @@ VkSampleCountFlagBits prism::PGC::base::Base::getMsaaSamples() {
     }
 }
 
-void prism::PGC::base::Base::createSurface()
+void prism::PGC::Base::createSurface()
 {
     if (!SDL_Vulkan_CreateSurface(settings->window, context->instance, &context->surface)) {
         logger::logError(logger::Error::FAILED_TO_CREATE_WINDOW_SURFACE, "WindowVkManager::createSurface");
     }
 }
 
-void prism::PGC::base::Base::createLogicalDevice()
+void prism::PGC::Base::createLogicalDevice()
 {
     PGC::utils::QueueFamilyIndices indices = DeviceWrapper::findQueueFamilies(context->physicalDevice, context->surface);
 
@@ -345,7 +345,7 @@ void prism::PGC::base::Base::createLogicalDevice()
 }
 
 
-VkSampleCountFlagBits prism::PGC::base::Base::getMaxUsableSampleCount()
+VkSampleCountFlagBits prism::PGC::Base::getMaxUsableSampleCount()
 {
     VkPhysicalDeviceProperties physicalDeviceProperties;
     vkGetPhysicalDeviceProperties(context->physicalDevice, &physicalDeviceProperties);
@@ -361,7 +361,7 @@ VkSampleCountFlagBits prism::PGC::base::Base::getMaxUsableSampleCount()
     return VK_SAMPLE_COUNT_1_BIT;
 }
 
-std::vector<VkSampleCountFlagBits> prism::PGC::base::Base::getPossibleCounts(VkSampleCountFlagBits maxCount) {
+std::vector<VkSampleCountFlagBits> prism::PGC::Base::getPossibleCounts(VkSampleCountFlagBits maxCount) {
 
     std::vector<VkSampleCountFlagBits> counts = {
           VK_SAMPLE_COUNT_1_BIT,
