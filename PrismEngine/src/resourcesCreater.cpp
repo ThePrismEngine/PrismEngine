@@ -28,7 +28,7 @@ void prism::PGC::ResourcesCreater::createImage(utils::Context* context, uint32_t
     VkMemoryAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
     allocInfo.allocationSize = memRequirements.size;
-    allocInfo.memoryTypeIndex = DeviceWrapper::findMemoryType(context->physicalDevice, memRequirements.memoryTypeBits, properties);
+    allocInfo.memoryTypeIndex = L3::DeviceWrapper::findMemoryType(context->physicalDevice, memRequirements.memoryTypeBits, properties);
 
     if (vkAllocateMemory(context->device, &allocInfo, nullptr, &imageMemory) != VK_SUCCESS) {
         throw std::runtime_error("failed to allocate image memory!");
@@ -97,7 +97,7 @@ void prism::PGC::ResourcesCreater::createColorResources(utils::Context* context,
 
 void prism::PGC::ResourcesCreater::createDepthResources(utils::Context* context, utils::Settings* settings)
 {
-    VkFormat depthFormat = PGC::DeviceWrapper::findDepthFormat(context->physicalDevice);
+    VkFormat depthFormat = PGC::L3::DeviceWrapper::findDepthFormat(context->physicalDevice);
     PGC::ResourcesCreater::createImage(context, context->swapChainExtent.width, context->swapChainExtent.height, 1, context->msaaSamples, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->depthImage, context->depthImageMemory);
     context->depthImageView = PGC::ResourcesCreater::createImageView(context->device, context->depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
 

@@ -21,7 +21,13 @@
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
-#include "base.h"
+///
+#include "instance.h"
+#include "debug.h"
+#include "surface.h"
+#include "physicalDevice.h"
+#include "logicalDevice.h"
+///
 #include "deviceWrapper.h"
 #include "deviceChecker.h"
 #include "swapChain.h"
@@ -57,7 +63,12 @@ namespace prism {
             PGC::TextureStorage textureStorage;
 
         private:
-            void createBase();
+            void createInstance();
+            void createDebug();
+            void createSurface();
+            void createPhysicalDevice();
+            void createLogicalDevice();
+
             void createSwapChain();
             void createPipelineStorage();
             void createRenderPass();
@@ -77,7 +88,13 @@ namespace prism {
 
             SDL_Window* window;
 
-            PGC::Base base;
+            //PGC::Base base;
+            PGC::L1::Instance instance;
+            PGC::L1::Debug debug;
+            PGC::L1::Surface surface;
+            PGC::L1::PhysicalDevice physicalDevice;
+            PGC::L1::LogicalDevice logicalDevice;
+
             PGC::SwapChain swapChain;
             PGC::RenderPass renderPass;
             PGC::DescriptorSetLayout descriptorSetLayout;

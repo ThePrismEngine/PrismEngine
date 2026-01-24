@@ -3,10 +3,11 @@
 #include <vulkan/vulkan.h>
 #include <SDL_vulkan.h>
 #include <iostream>
+#include "validationLayersWrapper.h"
 
 void prism::PGC::L1::Instance::createImpl()
 {
-    if (context->enableValidationLayers && !checkValidationLayerSupport()) {
+    if (context->enableValidationLayers && !L3::ValidationLayersWrapper::checkValidationLayerSupport(context)) {
         logger::logError(logger::Error::VULKAN_VALIDATION_LAYERS_UNAVAILABLE, __FUNCTION__);
     }
 
@@ -31,7 +32,7 @@ void prism::PGC::L1::Instance::createImpl()
         createInfo.ppEnabledLayerNames = context->validationLayers.data();
 
         VkDebugUtilsMessengerCreateInfoEXT debugCreateInfo{};
-        populateDebugMessengerCreateInfo(debugCreateInfo);
+        L3::ValidationLayersWrapper::populateDebugMessengerCreateInfo(settings, debugCreateInfo);
         createInfo.pNext = (VkDebugUtilsMessengerCreateInfoEXT*)&debugCreateInfo;
     }
     else {
@@ -47,33 +48,10 @@ void prism::PGC::L1::Instance::createImpl()
 
 void prism::PGC::L1::Instance::cleanupImpl()
 {
-
-}
-
-bool prism::PGC::L1::Instance::checkValidationLayerSupport()
-{
-    uint32_t layerCount;
-    vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
-
-    std::vector<VkLayerProperties> availableLayers(layerCount);
-    vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
-
-    for (const char* layerName : context->validationLayers) {
-        bool layerFound = false;
-
-        for (const auto& layerProperties : availableLayers) {
-            if (strcmp(layerName, layerProperties.layerName) == 0) {
-                layerFound = true;
-                break;
-            }
-        }
-
-        if (!layerFound) {
-            return false;
-        }
+    if (context->instance != VK_NULL_HANDLE) {
+        vkDestroyInstance(context->instance, nullptr);
+        context->instance = VK_NULL_HANDLE;
     }
-
-    return true;
 }
 
 std::vector<const char*> prism::PGC::L1::Instance::getRequiredExtensions()
@@ -97,20 +75,4 @@ std::vector<const char*> prism::PGC::L1::Instance::getRequiredExtensions()
     }
 
     return extensions;
-}
-
-void prism::PGC::L1::Instance::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo)
-{
-    createInfo = {};
-    createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
-    createInfo.messageSeverity = settings->debug.VulkanMessageSeverity;
-    createInfo.messageType = settings->debug.VulkanMessageType;
-    createInfo.pfnUserCallback = debugCallback;
-}
-
-VKAPI_ATTR VkBool32 VKAPI_CALL prism::PGC::L1::Instance::debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData)
-{
-    std::cerr << "validation layer: " << pCallbackData->pMessage << std::endl;
-
-    return VK_FALSE;
 }

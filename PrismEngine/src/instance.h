@@ -11,10 +11,7 @@ public:
 	void cleanupImpl();
 	
 private:
-	bool checkValidationLayerSupport();
-	std::vector<const char*> getRequiredExtensions();
-	void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
-	static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData);
+	std::vector<const char*> getRequiredExtensions();	
 };
 
 END_NAMESPACE_DECLARATION

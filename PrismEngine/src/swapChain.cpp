@@ -62,7 +62,7 @@ void prism::PGC::SwapChain::recreate()
 
 void prism::PGC::SwapChain::create()
 {
-    PGC::utils::SwapChainSupportDetails swapChainSupport = PGC::DeviceWrapper::querySwapChainSupport(context->physicalDevice, context->surface);
+    PGC::utils::SwapChainSupportDetails swapChainSupport = PGC::L3::DeviceWrapper::querySwapChainSupport(context->physicalDevice, context->surface);
 
     VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
     VkPresentModeKHR presentMode = chooseSwapPresentMode(swapChainSupport.presentModes);
@@ -80,7 +80,7 @@ void prism::PGC::SwapChain::create()
     createInfo.imageArrayLayers = 1;
     createInfo.imageUsage = VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
 
-    PGC::utils::QueueFamilyIndices indices = PGC::DeviceWrapper::findQueueFamilies(context->physicalDevice, context->surface);
+    PGC::utils::QueueFamilyIndices indices = PGC::L3::DeviceWrapper::findQueueFamilies(context->physicalDevice, context->surface);
     uint32_t queueFamilyIndices[] = { indices.graphicsFamily.value(), indices.presentFamily.value() };
 
     if (indices.graphicsFamily != indices.presentFamily) {

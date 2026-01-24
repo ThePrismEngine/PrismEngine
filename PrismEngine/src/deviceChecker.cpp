@@ -1,18 +1,20 @@
 #include "deviceChecker.h"
-#include "deviceWrapper.h"
 #include "utils.h"
 #include <set>
 #include <string>
+#include "deviceWrapper.h"
+#include "deviceWrapper.h"
+
 
 bool prism::PGC::DeviceChecker::check(VkPhysicalDevice device, utils::Context* context, utils::Settings* settings)
 {
-    prism::PGC::utils::QueueFamilyIndices indices = DeviceWrapper::findQueueFamilies(device, context->surface);
+    prism::PGC::utils::QueueFamilyIndices indices = L3::DeviceWrapper::findQueueFamilies(device, context->surface);
 
     bool extensionsSupported = checkDeviceExtensionSupport(device, context->deviceExtensions);
 
     bool swapChainAdequate = false;
     if (extensionsSupported) {
-        prism::PGC::utils::SwapChainSupportDetails swapChainSupport = DeviceWrapper::querySwapChainSupport(device, context->surface);
+        prism::PGC::utils::SwapChainSupportDetails swapChainSupport = L3::DeviceWrapper::querySwapChainSupport(device, context->surface);
         swapChainAdequate = !swapChainSupport.formats.empty() && !swapChainSupport.presentModes.empty();
     }
 

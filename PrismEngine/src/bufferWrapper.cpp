@@ -18,7 +18,7 @@ void prism::PGC::BufferWrapper::createBuffer(utils::Context* context, VkDeviceSi
     VkMemoryAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
     allocInfo.allocationSize = memRequirements.size;
-    allocInfo.memoryTypeIndex = PGC::DeviceWrapper::findMemoryType(context->physicalDevice, memRequirements.memoryTypeBits, properties);
+    allocInfo.memoryTypeIndex = PGC::L3::DeviceWrapper::findMemoryType(context->physicalDevice, memRequirements.memoryTypeBits, properties);
 
     if (vkAllocateMemory(context->device, &allocInfo, nullptr, &bufferMemory) != VK_SUCCESS) {
         throw std::runtime_error("failed to allocate buffer memory!");

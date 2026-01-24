@@ -14,7 +14,11 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
 {
     this->settings = settings;
     this->window = settings.window;
-	createBase();
+    createInstance();
+    createDebug();
+    createSurface();
+    createPhysicalDevice();
+    createLogicalDevice();
     createSwapChain();
     createTextureDescriptorSetLayout();
     createRenderPass();
@@ -44,11 +48,6 @@ prism::PGC::SwapChain* prism::PGC::PrismGraphicCore::getSwapChainPtr()
     return &swapChain;
 }
 
-void prism::PGC::PrismGraphicCore::createBase()
-{
-    base.init(&context, &settings);
-}
-
 bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering(SDL_Window* window)
 {
     Uint32 flags = SDL_GetWindowFlags(window);
@@ -62,6 +61,31 @@ bool prism::PGC::PrismGraphicCore::isWindowReadyForRendering(SDL_Window* window)
     return (width > 0 && height > 0);
 }
 
+
+void prism::PGC::PrismGraphicCore::createInstance()
+{
+    instance.init(&context, &settings);
+}
+
+void prism::PGC::PrismGraphicCore::createDebug()
+{
+    debug.init(&context, &settings);
+}
+
+void prism::PGC::PrismGraphicCore::createSurface()
+{
+    surface.init(&context, &settings);
+}
+
+void prism::PGC::PrismGraphicCore::createPhysicalDevice()
+{
+    physicalDevice.init(&context, &settings);
+}
+
+void prism::PGC::PrismGraphicCore::createLogicalDevice()
+{
+    logicalDevice.init(&context, &settings);
+}
 
 void prism::PGC::PrismGraphicCore::createSwapChain()
 {
@@ -85,7 +109,7 @@ void prism::PGC::PrismGraphicCore::createFramebuffers()
 
 void prism::PGC::PrismGraphicCore::createCommandPool()
 {
-    PGC::utils::QueueFamilyIndices queueFamilyIndices = PGC::DeviceWrapper::findQueueFamilies(context.physicalDevice, context.surface);
+    PGC::utils::QueueFamilyIndices queueFamilyIndices = PGC::L3::DeviceWrapper::findQueueFamilies(context.physicalDevice, context.surface);
 
     VkCommandPoolCreateInfo poolInfo{};
     poolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
@@ -339,7 +363,10 @@ void prism::PGC::PrismGraphicCore::cleanup()
 
     swapChain.cleanup();
 
-    base.cleanup(); 
+    logicalDevice.cleanup();
+    debug.cleanup();
+    surface.cleanup();
+    instance.cleanup();
 }
 
 void prism::PGC::PrismGraphicCore::awaitRenderingCompletion()

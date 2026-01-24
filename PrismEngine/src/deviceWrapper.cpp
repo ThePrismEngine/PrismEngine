@@ -1,13 +1,13 @@
 #include "deviceWrapper.h"
 
-VkPhysicalDeviceProperties prism::PGC::DeviceWrapper::getDeviceProperties(VkPhysicalDevice device)
+VkPhysicalDeviceProperties prism::PGC::L3::DeviceWrapper::getDeviceProperties(VkPhysicalDevice device)
 {
    VkPhysicalDeviceProperties props;
    vkGetPhysicalDeviceProperties(device, &props);
    return props;
 }
 
-void prism::PGC::DeviceWrapper::getDeviceExtensionProperties(VkPhysicalDevice device, std::vector<VkExtensionProperties>* extensions)
+void prism::PGC::L3::DeviceWrapper::getDeviceExtensionProperties(VkPhysicalDevice device, std::vector<VkExtensionProperties>* extensions)
 {
     uint32_t extensionCount = 0;
     vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, nullptr);
@@ -15,14 +15,14 @@ void prism::PGC::DeviceWrapper::getDeviceExtensionProperties(VkPhysicalDevice de
     vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, extensions->data());
 }
 
-VkPhysicalDeviceMemoryProperties prism::PGC::DeviceWrapper::getDeviceMemoryProperties(VkPhysicalDevice device)
+VkPhysicalDeviceMemoryProperties prism::PGC::L3::DeviceWrapper::getDeviceMemoryProperties(VkPhysicalDevice device)
 {
     VkPhysicalDeviceMemoryProperties memProps;
     vkGetPhysicalDeviceMemoryProperties(device, &memProps);
     return memProps;
 }
 
-prism::PGC::utils::QueueFamilyIndices prism::PGC::DeviceWrapper::findQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surface)
+prism::PGC::utils::QueueFamilyIndices prism::PGC::L3::DeviceWrapper::findQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surface)
 {
     prism::PGC::utils::QueueFamilyIndices indices;
 
@@ -55,7 +55,7 @@ prism::PGC::utils::QueueFamilyIndices prism::PGC::DeviceWrapper::findQueueFamili
     return indices;
 }
 
-prism::PGC::utils::SwapChainSupportDetails prism::PGC::DeviceWrapper::querySwapChainSupport(VkPhysicalDevice device, VkSurfaceKHR surface)
+prism::PGC::utils::SwapChainSupportDetails prism::PGC::L3::DeviceWrapper::querySwapChainSupport(VkPhysicalDevice device, VkSurfaceKHR surface)
 {
     PGC::utils::SwapChainSupportDetails details;
     vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &details.capabilities);
@@ -79,14 +79,14 @@ prism::PGC::utils::SwapChainSupportDetails prism::PGC::DeviceWrapper::querySwapC
     return details;
 }
 
-VkFormatProperties prism::PGC::DeviceWrapper::getDeviceFormatProperties(VkPhysicalDevice device, VkFormat format)
+VkFormatProperties prism::PGC::L3::DeviceWrapper::getDeviceFormatProperties(VkPhysicalDevice device, VkFormat format)
 {
     VkFormatProperties props;
     vkGetPhysicalDeviceFormatProperties(device, format, &props);
     return props;
 }
 
-VkFormat prism::PGC::DeviceWrapper::findDepthFormat(VkPhysicalDevice physicalDevice)
+VkFormat prism::PGC::L3::DeviceWrapper::findDepthFormat(VkPhysicalDevice physicalDevice)
 {
     return findSupportedFormat(physicalDevice,
         { VK_FORMAT_D32_SFLOAT, VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_UNORM_S8_UINT },
@@ -95,7 +95,7 @@ VkFormat prism::PGC::DeviceWrapper::findDepthFormat(VkPhysicalDevice physicalDev
     );
 }
 
-uint32_t prism::PGC::DeviceWrapper::findMemoryType(VkPhysicalDevice device, uint32_t typeFilter, VkMemoryPropertyFlags properties)
+uint32_t prism::PGC::L3::DeviceWrapper::findMemoryType(VkPhysicalDevice device, uint32_t typeFilter, VkMemoryPropertyFlags properties)
 {
     VkPhysicalDeviceMemoryProperties memProperties;
     vkGetPhysicalDeviceMemoryProperties(device, &memProperties);
@@ -109,7 +109,7 @@ uint32_t prism::PGC::DeviceWrapper::findMemoryType(VkPhysicalDevice device, uint
     throw std::runtime_error("failed to find suitable memory type!");
 }
 
-VkFormat prism::PGC::DeviceWrapper::findSupportedFormat(VkPhysicalDevice physicalDevice, const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
+VkFormat prism::PGC::L3::DeviceWrapper::findSupportedFormat(VkPhysicalDevice physicalDevice, const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
 {
     for (VkFormat format : candidates) {
         VkFormatProperties props = getDeviceFormatProperties(physicalDevice, format);

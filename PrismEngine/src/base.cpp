@@ -179,7 +179,7 @@ void prism::PGC::Base::pickPhysicalDevice()
     vkEnumeratePhysicalDevices(context->instance, &deviceCount, devices.data());
 
     std::multimap<int, VkPhysicalDevice> candidates;
-    DeviceRater deviceRater;
+    L2::DeviceRater deviceRater;
     for (const auto& device : devices) {
         int score = deviceRater.rate(device, context, settings);
         candidates.insert(std::make_pair(score, device));

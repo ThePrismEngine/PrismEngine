@@ -5,7 +5,7 @@
 #include "deviceWrapper.h"
 #include "deviceChecker.h"
 
-int prism::PGC::DeviceRater::rate(VkPhysicalDevice device, PGC::utils::Context* context, utils::Settings* settings)
+int prism::PGC::L2::DeviceRater::rate(VkPhysicalDevice device)
 {
     debugDeviceSelection = settings->debug.debugDeviceSelection;
     // Базовые проверки
@@ -25,9 +25,9 @@ int prism::PGC::DeviceRater::rate(VkPhysicalDevice device, PGC::utils::Context* 
     return ScoreWrapper::getTotal(deviceScore);
 }
 
-int prism::PGC::DeviceRater::getDeviceTypeScore(VkPhysicalDevice device)
+int prism::PGC::L2::DeviceRater::getDeviceTypeScore(VkPhysicalDevice device)
 {
-    switch (prism::PGC::DeviceWrapper::getDeviceProperties(device).deviceType) {
+    switch (prism::PGC::L3::DeviceWrapper::getDeviceProperties(device).deviceType) {
     case VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU:   return 100;
     case VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU: return 70;
     case VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU:    return 40;
@@ -36,12 +36,12 @@ int prism::PGC::DeviceRater::getDeviceTypeScore(VkPhysicalDevice device)
     }
 }
 
-int prism::PGC::DeviceRater::getDeviceFeatureScore(VkPhysicalDevice device)
+int prism::PGC::L2::DeviceRater::getDeviceFeatureScore(VkPhysicalDevice device)
 {
     FeatureScores features = calculateFeatureScore(device);
 
     // Учитываем вендора для RT и Upscaling
-    VkPhysicalDeviceProperties props = DeviceWrapper::getDeviceProperties(device);;
+    VkPhysicalDeviceProperties props = L3::DeviceWrapper::getDeviceProperties(device);;
 
     if (props.vendorID == 0x10DE) { // NVIDIA
         features.raytracing *= 1.5f;
@@ -55,11 +55,11 @@ int prism::PGC::DeviceRater::getDeviceFeatureScore(VkPhysicalDevice device)
     return static_cast<int>(ScoreWrapper::getTotal(features));
 }
 
-int prism::PGC::DeviceRater::getDeviceHardwareScore(VkPhysicalDevice device)
+int prism::PGC::L2::DeviceRater::getDeviceHardwareScore(VkPhysicalDevice device)
 {
     HardwareScore score;
-    VkPhysicalDeviceProperties props = DeviceWrapper::getDeviceProperties(device);
-    VkPhysicalDeviceMemoryProperties memProps = DeviceWrapper::getDeviceMemoryProperties(device);
+    VkPhysicalDeviceProperties props = L3::DeviceWrapper::getDeviceProperties(device);
+    VkPhysicalDeviceMemoryProperties memProps = L3::DeviceWrapper::getDeviceMemoryProperties(device);
 
     // Константы для преобразования единиц
     constexpr float BYTES_TO_GB = 1.0f / (1024 * 1024 * 1024);
@@ -92,7 +92,7 @@ int prism::PGC::DeviceRater::getDeviceHardwareScore(VkPhysicalDevice device)
     return ScoreWrapper::getTotal(score);
 }
 
-int prism::PGC::DeviceRater::getDeviceApiScore(VkPhysicalDevice device)
+int prism::PGC::L2::DeviceRater::getDeviceApiScore(VkPhysicalDevice device)
 {
     const int BASE_SCORE_V1 = 30;
     const int V1_1_BONUS = 5;
@@ -100,7 +100,7 @@ int prism::PGC::DeviceRater::getDeviceApiScore(VkPhysicalDevice device)
     const int V1_3_BONUS = 25;
     const int FEATURE_BONUS = 5;
 
-    VkPhysicalDeviceProperties props = DeviceWrapper::getDeviceProperties(device);
+    VkPhysicalDeviceProperties props = L3::DeviceWrapper::getDeviceProperties(device);
 
     int score = 0;
 
@@ -142,12 +142,12 @@ int prism::PGC::DeviceRater::getDeviceApiScore(VkPhysicalDevice device)
     return score;
 }
 
-prism::PGC::FeatureScores prism::PGC::DeviceRater::calculateFeatureScore(VkPhysicalDevice device)
+prism::PGC::L2::FeatureScores prism::PGC::L2::DeviceRater::calculateFeatureScore(VkPhysicalDevice device)
 {
     FeatureScores scores;
 
     std::vector<VkExtensionProperties> extensions;
-    DeviceWrapper::getDeviceExtensionProperties(device, &extensions);
+    L3::DeviceWrapper::getDeviceExtensionProperties(device, &extensions);
 
     std::unordered_set<std::string> availableExtensions;
     for (const auto& ext : extensions) {
@@ -183,7 +183,7 @@ prism::PGC::FeatureScores prism::PGC::DeviceRater::calculateFeatureScore(VkPhysi
             break;
         }
 
-    if (DeviceWrapper::getDeviceProperties(device).apiVersion >= VK_MAKE_VERSION(1, 2, 0)) {
+    if (L3::DeviceWrapper::getDeviceProperties(device).apiVersion >= VK_MAKE_VERSION(1, 2, 0)) {
        scores.advancedFeatures += 5.0f;
     }
 }
@@ -202,7 +202,7 @@ prism::PGC::FeatureScores prism::PGC::DeviceRater::calculateFeatureScore(VkPhysi
     return scores;
 }
 
-void prism::PGC::ScoreWrapper::print(DeviceScore score)
+void prism::PGC::L2::ScoreWrapper::print(DeviceScore score)
 {
     logger::info("----------------Score----------------");
     logger::info("Type: " + std::to_string(score.typeScore));
@@ -212,7 +212,7 @@ void prism::PGC::ScoreWrapper::print(DeviceScore score)
     logger::info("TOTAL: " + std::to_string(getTotal(score)));
 }
 
-void prism::PGC::ScoreWrapper::print(FeatureScores score)
+void prism::PGC::L2::ScoreWrapper::print(FeatureScores score)
 {
     logger::info("----------------FeatureScore----------------");
     logger::info("Swapchain: " + std::to_string(score.swapchain));
@@ -222,7 +222,7 @@ void prism::PGC::ScoreWrapper::print(FeatureScores score)
     logger::info("Total Features: " + std::to_string(getTotal(score)));
 }
 
-void prism::PGC::ScoreWrapper::print(HardwareScore score)
+void prism::PGC::L2::ScoreWrapper::print(HardwareScore score)
 {
     logger::info("----------------HardwareScore----------------");
     logger::info("VRAM (GB): " + std::to_string(score.vramGB));
@@ -232,17 +232,17 @@ void prism::PGC::ScoreWrapper::print(HardwareScore score)
     logger::info("Normalized Score: " + std::to_string(getTotal(score)));
 }
 
-int prism::PGC::ScoreWrapper::getTotal(DeviceScore score)
+int prism::PGC::L2::ScoreWrapper::getTotal(DeviceScore score)
 {
     return score.typeScore + score.featureScore + score.hardwareScore + score.apiScore;
 }
 
-int prism::PGC::ScoreWrapper::getTotal(FeatureScores score)
+int prism::PGC::L2::ScoreWrapper::getTotal(FeatureScores score)
 {
     return score.swapchain + score.raytracing + score.upscaling + score.advancedFeatures;
 }
 
-int prism::PGC::ScoreWrapper::getTotal(HardwareScore score)
+int prism::PGC::L2::ScoreWrapper::getTotal(HardwareScore score)
 {
   
     float normalizedVram = std::min(score.vramGB / score.REFERENCE_VRAM_GB, 1.0f);

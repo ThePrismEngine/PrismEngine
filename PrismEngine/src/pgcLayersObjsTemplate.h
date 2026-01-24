@@ -43,4 +43,3 @@ private:
 };
 
 END_NAMESPACE_DECLARATION
-

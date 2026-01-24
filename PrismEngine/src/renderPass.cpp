@@ -19,7 +19,7 @@ void prism::PGC::RenderPass::cleanup()
 void prism::PGC::RenderPass::create()
 {
     VkAttachmentDescription depthAttachment{};
-    depthAttachment.format = DeviceWrapper::findDepthFormat(context->physicalDevice);
+    depthAttachment.format = L3::DeviceWrapper::findDepthFormat(context->physicalDevice);
     depthAttachment.samples = context->msaaSamples;
     depthAttachment.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
     depthAttachment.storeOp = VK_ATTACHMENT_STORE_OP_DONT_CARE;
