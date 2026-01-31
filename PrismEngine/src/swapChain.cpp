@@ -88,6 +88,9 @@ void prism::PGC::L1::SwapChain::createImpl()
     }
     logger::info("Swapchain Present Mode: " + std::to_string(*presentModeStr));
     logger::info("Swapchain Image Count: " + std::to_string(swapChainSupport.capabilities.minImageCount + 1));
+
+
+    createImageViews();
 }
 
 void prism::PGC::L1::SwapChain::awaitRenderingCompletion()
