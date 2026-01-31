@@ -47,7 +47,7 @@ void prism::PGC::TextureLoader::createTextureImage(utils::Context* context, PGC:
 
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
-    PGC::BufferWrapper::createBuffer(context, imageSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
+    PGC::L3::BufferWrapper::createBuffer(context, imageSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
 
     void* data;
     vkMapMemory(context->device, stagingBufferMemory, 0, imageSize, 0, &data);
@@ -59,8 +59,8 @@ void prism::PGC::TextureLoader::createTextureImage(utils::Context* context, PGC:
     PGC::L3::ResourcesCreater::createImage(context, texWidth, texHeight, texture->mipLevels, VK_SAMPLE_COUNT_1_BIT, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, texture->image, texture->imageMemory);
 
 
-    PGC::BufferWrapper::transitionImageLayout(context, texture->image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, texture->mipLevels);
-    PGC::BufferWrapper::copyBufferToImage(context, stagingBuffer, texture->image, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight));
+    PGC::L3::BufferWrapper::transitionImageLayout(context, texture->image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, texture->mipLevels);
+    PGC::L3::BufferWrapper::copyBufferToImage(context, stagingBuffer, texture->image, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight));
 
     vkDestroyBuffer(context->device, stagingBuffer, nullptr);
     vkFreeMemory(context->device, stagingBufferMemory, nullptr);
@@ -87,7 +87,7 @@ void prism::PGC::TextureLoader::generateMipmaps(utils::Context* context, VkImage
         throw std::runtime_error("texture image format does not support linear blitting!");
     }
 
-    VkCommandBuffer commandBuffer = PGC::BufferWrapper::beginSingleTimeCommands(context);
+    VkCommandBuffer commandBuffer = PGC::L3::BufferWrapper::beginSingleTimeCommands(context);
 
     VkImageMemoryBarrier barrier{};
     barrier.sType = VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER;
@@ -162,5 +162,5 @@ void prism::PGC::TextureLoader::generateMipmaps(utils::Context* context, VkImage
         0, nullptr,
         1, &barrier);
 
-    PGC::BufferWrapper::endSingleTimeCommands(context, commandBuffer);
+    PGC::L3::BufferWrapper::endSingleTimeCommands(context, commandBuffer);
 }

@@ -1,6 +1,6 @@
 #include "bufferWrapper.h"
 
-void prism::PGC::BufferWrapper::createBuffer(utils::Context* context, VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory)
+void prism::PGC::L3::BufferWrapper::createBuffer(utils::Context* context, VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory)
 {
     VkBufferCreateInfo bufferInfo{};
     bufferInfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
@@ -27,7 +27,7 @@ void prism::PGC::BufferWrapper::createBuffer(utils::Context* context, VkDeviceSi
     vkBindBufferMemory(context->device, buffer, bufferMemory, 0);
 }
 
-void prism::PGC::BufferWrapper::copyBuffer(utils::Context* context, VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size)
+void prism::PGC::L3::BufferWrapper::copyBuffer(utils::Context* context, VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size)
 {
     VkCommandBuffer commandBuffer = beginSingleTimeCommands(context);
 
@@ -38,7 +38,7 @@ void prism::PGC::BufferWrapper::copyBuffer(utils::Context* context, VkBuffer src
     endSingleTimeCommands(context, commandBuffer);
 }
 
-void prism::PGC::BufferWrapper::endSingleTimeCommands(utils::Context* context, VkCommandBuffer commandBuffer)
+void prism::PGC::L3::BufferWrapper::endSingleTimeCommands(utils::Context* context, VkCommandBuffer commandBuffer)
 {
     vkEndCommandBuffer(commandBuffer);
 
@@ -53,7 +53,7 @@ void prism::PGC::BufferWrapper::endSingleTimeCommands(utils::Context* context, V
     vkFreeCommandBuffers(context->device, context->commandPool, 1, &commandBuffer);
 }
 
-VkCommandBuffer prism::PGC::BufferWrapper::beginSingleTimeCommands(utils::Context* context)
+VkCommandBuffer prism::PGC::L3::BufferWrapper::beginSingleTimeCommands(utils::Context* context)
 {
     VkCommandBufferAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
@@ -73,7 +73,7 @@ VkCommandBuffer prism::PGC::BufferWrapper::beginSingleTimeCommands(utils::Contex
     return commandBuffer;
 }
 
-void prism::PGC::BufferWrapper::transitionImageLayout(utils::Context* context, VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout, uint32_t mipLevels)
+void prism::PGC::L3::BufferWrapper::transitionImageLayout(utils::Context* context, VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout, uint32_t mipLevels)
 {
     VkCommandBuffer commandBuffer = beginSingleTimeCommands(context);
 
@@ -124,7 +124,7 @@ void prism::PGC::BufferWrapper::transitionImageLayout(utils::Context* context, V
     endSingleTimeCommands(context, commandBuffer);
 }
 
-void prism::PGC::BufferWrapper::copyBufferToImage(utils::Context* context, VkBuffer buffer, VkImage image, uint32_t width, uint32_t height)
+void prism::PGC::L3::BufferWrapper::copyBufferToImage(utils::Context* context, VkBuffer buffer, VkImage image, uint32_t width, uint32_t height)
 {
     VkCommandBuffer commandBuffer = beginSingleTimeCommands(context);
 
@@ -148,20 +148,20 @@ void prism::PGC::BufferWrapper::copyBufferToImage(utils::Context* context, VkBuf
     endSingleTimeCommands(context, commandBuffer);
 }
 
-void prism::PGC::BufferWrapper::createVertexBuffer(utils::Context* context)
+void prism::PGC::L3::BufferWrapper::createVertexBuffer(utils::Context* context)
 {
     VkDeviceSize bufferSize = sizeof(context->allVertices[0]) * context->allVertices.size();
 
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
-    PGC::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
+    PGC::L3::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
 
     void* data;
     vkMapMemory(context->device, stagingBufferMemory, 0, bufferSize, 0, &data);
     memcpy(data, context->allVertices.data(), (size_t)bufferSize);
     vkUnmapMemory(context->device, stagingBufferMemory);
 
-    PGC::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->vertexBuffer, context->vertexBufferMemory);
+    PGC::L3::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->vertexBuffer, context->vertexBufferMemory);
 
     copyBuffer(context, stagingBuffer, context->vertexBuffer, bufferSize);
 
@@ -169,20 +169,20 @@ void prism::PGC::BufferWrapper::createVertexBuffer(utils::Context* context)
     vkFreeMemory(context->device, stagingBufferMemory, nullptr);
 }
 
-void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
+void prism::PGC::L3::BufferWrapper::createIndexBuffer(utils::Context* context)
 {
     VkDeviceSize bufferSize = sizeof(context->allIndices[0]) * context->allIndices.size();
 
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
-    PGC::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
+    PGC::L3::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
 
     void* data;
     vkMapMemory(context->device, stagingBufferMemory, 0, bufferSize, 0, &data);
     memcpy(data, context->allIndices.data(), (size_t)bufferSize);
     vkUnmapMemory(context->device, stagingBufferMemory);
 
-    PGC::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->indexBuffer, context->indexBufferMemory);
+    PGC::L3::BufferWrapper::createBuffer(context, bufferSize, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->indexBuffer, context->indexBufferMemory);
 
     copyBuffer(context, stagingBuffer, context->indexBuffer, bufferSize);
 
@@ -190,8 +190,8 @@ void prism::PGC::BufferWrapper::createIndexBuffer(utils::Context* context)
     vkFreeMemory(context->device, stagingBufferMemory, nullptr);
 }
 
-void prism::PGC::BufferWrapper::createBO(utils::Context* context, VkBuffer& buffer, size_t bufferSize, VkDeviceMemory& bufferMemory, void*& bufferMapped, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties) {
-    PGC::BufferWrapper::createBuffer(context, bufferSize,
+void prism::PGC::L3::BufferWrapper::createBO(utils::Context* context, VkBuffer& buffer, size_t bufferSize, VkDeviceMemory& bufferMemory, void*& bufferMapped, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties) {
+    PGC::L3::BufferWrapper::createBuffer(context, bufferSize,
         usage,
         properties,
         buffer,
@@ -211,7 +211,7 @@ void prism::PGC::BufferWrapper::createBO(utils::Context* context, VkBuffer& buff
     }
 };
 
-void prism::PGC::BufferWrapper::createBufferObjects(utils::Context* context, utils::Settings* settings)
+void prism::PGC::L3::BufferWrapper::createBufferObjects(utils::Context* context, utils::Settings* settings)
 {
     context->uniformBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);
     context->storageBuffers.resize(context->MAX_FRAMES_IN_FLIGHT);

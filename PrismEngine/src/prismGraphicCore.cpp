@@ -2,6 +2,10 @@
 #include "textureLoader.h"
 #include "meshManager.h"
 #include "descriptorSetLayoutWrapper.h"
+#include "bufferWrapper.h"
+#include "resourcesCreater.h"
+#include "deviceWrapper.h"
+#include "deviceChecker.h"
 
 #define TINYOBJLOADER_IMPLEMENTATION
 #include "tiny_obj_loader.h"
@@ -105,12 +109,12 @@ void prism::PGC::PrismGraphicCore::createRenderPass()
 
 void prism::PGC::PrismGraphicCore::createFramebuffers()
 {
-    PGC::ResourcesCreater::createFramebuffers(&context, &settings);
+    PGC::L3::ResourcesCreater::createFramebuffers(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createCommandPool()
 {
-    PGC::ResourcesCreater::createCommandPool(&context);
+    PGC::L3::ResourcesCreater::createCommandPool(&context);
 }
 
 void prism::PGC::PrismGraphicCore::createCommandBuffer()
@@ -171,7 +175,7 @@ void prism::PGC::PrismGraphicCore::createTextureStorage()
 
 void prism::PGC::PrismGraphicCore::createBufferObject()
 {
-    PGC::BufferWrapper::createBufferObjects(&context, &settings);
+    PGC::L3::BufferWrapper::createBufferObjects(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createDescriptorPool()
@@ -186,12 +190,12 @@ void prism::PGC::PrismGraphicCore::createDescriptorSets()
 
 void prism::PGC::PrismGraphicCore::createDepthResources()
 {
-    PGC::ResourcesCreater::createDepthResources(&context, &settings);
+    PGC::L3::ResourcesCreater::createDepthResources(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createColorResources()
 {
-    prism::PGC::ResourcesCreater::createColorResources(&context, &settings);
+    prism::PGC::L3::ResourcesCreater::createColorResources(&context, &settings);
 }
 
 VkSampleCountFlagBits prism::PGC::PrismGraphicCore::getMaxUsableSampleCount()

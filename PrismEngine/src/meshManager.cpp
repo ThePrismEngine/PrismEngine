@@ -57,10 +57,10 @@ void prism::PGC::MeshManager::update(utils::Context* context)
     
     // Создаем новые буферы с актуальными данными
     if (!context->allVertices.empty()) {
-        BufferWrapper::createVertexBuffer(context);
+        PGC::L3::BufferWrapper::createVertexBuffer(context);
     }
     if (!context->allIndices.empty()) {
-        BufferWrapper::createIndexBuffer(context);
+        PGC::L3::BufferWrapper::createIndexBuffer(context);
     }
 
     context->meshBuffersDirty = false;
