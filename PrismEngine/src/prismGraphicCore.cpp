@@ -105,12 +105,12 @@ void prism::PGC::PrismGraphicCore::createRenderPass()
 
 void prism::PGC::PrismGraphicCore::createFramebuffers()
 {
-    PGC::L3::ResourcesCreater::createFramebuffers(&context, &settings);
+    PGC::ResourcesCreater::createFramebuffers(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createCommandPool()
 {
-    PGC::L3::ResourcesCreater::createCommandPool(&context);
+    PGC::ResourcesCreater::createCommandPool(&context);
 }
 
 void prism::PGC::PrismGraphicCore::createCommandBuffer()
@@ -186,12 +186,12 @@ void prism::PGC::PrismGraphicCore::createDescriptorSets()
 
 void prism::PGC::PrismGraphicCore::createDepthResources()
 {
-    PGC::L3::ResourcesCreater::createDepthResources(&context, &settings);
+    PGC::ResourcesCreater::createDepthResources(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createColorResources()
 {
-    prism::PGC::L3::ResourcesCreater::createColorResources(&context, &settings);
+    prism::PGC::ResourcesCreater::createColorResources(&context, &settings);
 }
 
 VkSampleCountFlagBits prism::PGC::PrismGraphicCore::getMaxUsableSampleCount()
