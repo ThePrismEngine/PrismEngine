@@ -1,0 +1,10 @@
+#pragma once
+
+#define DECLARE_PGC_LAYER_INSTANCE(layer_name) \
+namespace prism {\
+	namespace PGC {\
+		namespace layer_name {
+#define END_NAMESPACE_DECLARATION \
+		} \
+	} \
+}
