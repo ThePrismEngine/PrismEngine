@@ -6,7 +6,7 @@
 #include "deviceWrapper.h"
 
 
-bool prism::PGC::DeviceChecker::check(VkPhysicalDevice device, utils::Context* context, utils::Settings* settings)
+bool prism::PGC::L2::DeviceChecker::check(VkPhysicalDevice device)
 {
     prism::PGC::utils::QueueFamilyIndices indices = L3::DeviceWrapper::findQueueFamilies(device, context->surface);
 
@@ -24,7 +24,7 @@ bool prism::PGC::DeviceChecker::check(VkPhysicalDevice device, utils::Context* c
     return indices.isComplete() && extensionsSupported && swapChainAdequate && supportedFeatures.samplerAnisotropy;
 }
 
-bool prism::PGC::DeviceChecker::checkBindless(VkPhysicalDevice device)
+bool prism::PGC::L2::DeviceChecker::checkBindless(VkPhysicalDevice device)
 {
     VkPhysicalDeviceVulkan12Features vulkan12Features = {};
     vulkan12Features.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_2_FEATURES;
@@ -45,7 +45,7 @@ bool prism::PGC::DeviceChecker::checkBindless(VkPhysicalDevice device)
     return true;
 }
 
-bool prism::PGC::DeviceChecker::checkDeviceExtensionSupport(VkPhysicalDevice device, const std::vector<const char*> deviceExtensions)
+bool prism::PGC::L2::DeviceChecker::checkDeviceExtensionSupport(VkPhysicalDevice device, const std::vector<const char*> deviceExtensions)
 {
     uint32_t extensionCount;
     vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, nullptr);

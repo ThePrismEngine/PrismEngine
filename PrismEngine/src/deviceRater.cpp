@@ -9,7 +9,8 @@ int prism::PGC::L2::DeviceRater::rate(VkPhysicalDevice device)
 {
     debugDeviceSelection = settings->debug.debugDeviceSelection;
     // Базовые проверки
-    if (!DeviceChecker::check(device, context, settings)) return 0;
+    DeviceChecker deviceChecker(context, settings);
+    if (!deviceChecker.check(device)) return 0;
     
     DeviceScore deviceScore;
     deviceScore.typeScore     = getDeviceTypeScore(device)     * settings->deviceEvaluationWeights.wType;
