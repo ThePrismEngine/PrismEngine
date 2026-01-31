@@ -107,9 +107,9 @@ void prism::PGC::L1::SwapChain::recreate()
     createImpl();
     createImageViews();
 
-    PGC::ResourcesCreater::createColorResources(context, settings);
-    PGC::ResourcesCreater::createDepthResources(context, settings);
-    PGC::ResourcesCreater::createFramebuffers(context, settings);
+    PGC::L3::ResourcesCreater::createColorResources(context, settings);
+    PGC::L3::ResourcesCreater::createDepthResources(context, settings);
+    PGC::L3::ResourcesCreater::createFramebuffers(context, settings);
 
     awaitRenderingCompletion();
 }
@@ -119,7 +119,7 @@ void prism::PGC::L1::SwapChain::createImageViews()
     context->swapChainImageViews.resize(context->swapChainImages.size());
 
     for (uint32_t i = 0; i < context->swapChainImages.size(); i++) {
-        context->swapChainImageViews[i] = ResourcesCreater::createImageView(context->device, context->swapChainImages[i], context->swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
+        context->swapChainImageViews[i] = PGC::L3::ResourcesCreater::createImageView(context->device, context->swapChainImages[i], context->swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
     }
 }
 

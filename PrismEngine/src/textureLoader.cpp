@@ -56,7 +56,7 @@ void prism::PGC::TextureLoader::createTextureImage(utils::Context* context, PGC:
 
     stbi_image_free(pixels);
 
-    PGC::ResourcesCreater::createImage(context, texWidth, texHeight, texture->mipLevels, VK_SAMPLE_COUNT_1_BIT, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, texture->image, texture->imageMemory);
+    PGC::L3::ResourcesCreater::createImage(context, texWidth, texHeight, texture->mipLevels, VK_SAMPLE_COUNT_1_BIT, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, texture->image, texture->imageMemory);
 
 
     PGC::BufferWrapper::transitionImageLayout(context, texture->image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, texture->mipLevels);
@@ -70,12 +70,12 @@ void prism::PGC::TextureLoader::createTextureImage(utils::Context* context, PGC:
 
 void prism::PGC::TextureLoader::createTextureImageView(utils::Context* context, PGC::Texture* texture)
 {
-    texture->imageView = PGC::ResourcesCreater::createImageView(context->device, texture->image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT, texture->mipLevels);
+    texture->imageView = PGC::L3::ResourcesCreater::createImageView(context->device, texture->image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT, texture->mipLevels);
 }
 
 void prism::PGC::TextureLoader::createTextureSampler(utils::Context* context, PGC::Texture* texture)
 {
-    PGC::ResourcesCreater::createTextureSampler(context, &texture->sampler);
+    PGC::L3::ResourcesCreater::createTextureSampler(context, &texture->sampler);
 }
 
 void prism::PGC::TextureLoader::generateMipmaps(utils::Context* context, VkImage image, VkFormat imageFormat, int32_t texWidth, int32_t texHeight, uint32_t mipLevels)
