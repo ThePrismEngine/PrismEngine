@@ -110,16 +110,7 @@ void prism::PGC::PrismGraphicCore::createFramebuffers()
 
 void prism::PGC::PrismGraphicCore::createCommandPool()
 {
-    PGC::utils::QueueFamilyIndices queueFamilyIndices = PGC::L3::DeviceWrapper::findQueueFamilies(context.physicalDevice, context.surface);
-
-    VkCommandPoolCreateInfo poolInfo{};
-    poolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
-    poolInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
-    poolInfo.queueFamilyIndex = queueFamilyIndices.graphicsFamily.value();
-
-    if (vkCreateCommandPool(context.device, &poolInfo, nullptr, &context.commandPool) != VK_SUCCESS) {
-        throw std::runtime_error("failed to create command pool!");
-    }
+    PGC::ResourcesCreater::createCommandPool(&context);
 }
 
 void prism::PGC::PrismGraphicCore::createCommandBuffer()

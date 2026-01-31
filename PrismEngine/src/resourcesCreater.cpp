@@ -1,6 +1,7 @@
 #include "resourcesCreater.h"
+#include "deviceWrapper.h"
 
-void prism::PGC::ResourcesCreater::createImage(utils::Context* context, uint32_t width, uint32_t height, uint32_t mipLevels, VkSampleCountFlagBits numSamples, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory)
+void prism::PGC::L3::ResourcesCreater::createImage(utils::Context* context, uint32_t width, uint32_t height, uint32_t mipLevels, VkSampleCountFlagBits numSamples, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory)
 {
     VkImageCreateInfo imageInfo{};
     imageInfo.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;
@@ -37,7 +38,7 @@ void prism::PGC::ResourcesCreater::createImage(utils::Context* context, uint32_t
     vkBindImageMemory(context->device, image, imageMemory, 0);
 }
 
-VkImageView prism::PGC::ResourcesCreater::createImageView(VkDevice device, VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels)
+VkImageView prism::PGC::L3::ResourcesCreater::createImageView(VkDevice device, VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels)
 {
 
     VkImageViewCreateInfo viewInfo{};
@@ -60,7 +61,7 @@ VkImageView prism::PGC::ResourcesCreater::createImageView(VkDevice device, VkIma
     return imageView;
 }
 
-void prism::PGC::ResourcesCreater::createFramebuffers(utils::Context* context, utils::Settings* settings)
+void prism::PGC::L3::ResourcesCreater::createFramebuffers(utils::Context* context, utils::Settings* settings)
 {
     context->swapChainFramebuffers.resize(context->swapChainImageViews.size());
 
@@ -86,7 +87,7 @@ void prism::PGC::ResourcesCreater::createFramebuffers(utils::Context* context, u
     }
 }
 
-void prism::PGC::ResourcesCreater::createColorResources(utils::Context* context, utils::Settings* settings)
+void prism::PGC::L3::ResourcesCreater::createColorResources(utils::Context* context, utils::Settings* settings)
 {
     VkFormat colorFormat = context->swapChainImageFormat;
 
@@ -95,15 +96,15 @@ void prism::PGC::ResourcesCreater::createColorResources(utils::Context* context,
     context->colorImageView = createImageView(context->device ,context->colorImage, colorFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
 }
 
-void prism::PGC::ResourcesCreater::createDepthResources(utils::Context* context, utils::Settings* settings)
+void prism::PGC::L3::ResourcesCreater::createDepthResources(utils::Context* context, utils::Settings* settings)
 {
     VkFormat depthFormat = PGC::L3::DeviceWrapper::findDepthFormat(context->physicalDevice);
-    PGC::ResourcesCreater::createImage(context, context->swapChainExtent.width, context->swapChainExtent.height, 1, context->msaaSamples, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->depthImage, context->depthImageMemory);
-    context->depthImageView = PGC::ResourcesCreater::createImageView(context->device, context->depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
+    PGC::L3::ResourcesCreater::createImage(context, context->swapChainExtent.width, context->swapChainExtent.height, 1, context->msaaSamples, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, context->depthImage, context->depthImageMemory);
+    context->depthImageView = PGC::L3::ResourcesCreater::createImageView(context->device, context->depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
 
 }
 
-void prism::PGC::ResourcesCreater::createTextureSampler(utils::Context* context, VkSampler* textureSampler)
+void prism::PGC::L3::ResourcesCreater::createTextureSampler(utils::Context * context, VkSampler * textureSampler)
 {
     VkPhysicalDeviceProperties properties{};
     vkGetPhysicalDeviceProperties(context->physicalDevice, &properties);
@@ -128,5 +129,19 @@ void prism::PGC::ResourcesCreater::createTextureSampler(utils::Context* context,
 
     if (vkCreateSampler(context->device, &samplerInfo, nullptr, textureSampler) != VK_SUCCESS) {
         throw std::runtime_error("failed to create texture sampler!");
+    }
+}
+
+void prism::PGC::L3::ResourcesCreater::createCommandPool(utils::Context* context)
+{
+    PGC::utils::QueueFamilyIndices queueFamilyIndices = PGC::L3::DeviceWrapper::findQueueFamilies(context->physicalDevice, context->surface);
+
+    VkCommandPoolCreateInfo poolInfo{};
+    poolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
+    poolInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
+    poolInfo.queueFamilyIndex = queueFamilyIndices.graphicsFamily.value();
+
+    if (vkCreateCommandPool(context->device, &poolInfo, nullptr, &context->commandPool) != VK_SUCCESS) {
+        throw std::runtime_error("failed to create command pool!");
     }
 }
