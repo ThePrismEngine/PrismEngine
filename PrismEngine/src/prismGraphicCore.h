@@ -33,10 +33,8 @@
 #include "deviceChecker.h"
 #include "utils.h"
 #include "renderPass.h"
-#include "descriptorSetLayout.h"
 #include "pipelineStorage.h"
 #include "bufferWrapper.h"
-#include "descriptorSet.h"
 #include "resourcesCreater.h"
 #include "textureStorage.h"
 
@@ -95,10 +93,6 @@ namespace prism {
             PGC::L1::SwapChain swapChain;
             PGC::L1::PipelineStorage pipelineStorage;
             PGC::L1::RenderPass renderPass;
-
-            PGC::DescriptorSetLayout descriptorSetLayout;
-            PGC::DescriptorSet descriptorSet;
-
 
             VkSampleCountFlagBits getMaxUsableSampleCount();
         };
