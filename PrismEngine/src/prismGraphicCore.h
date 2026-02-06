@@ -54,7 +54,7 @@ namespace prism {
             PGC::utils::Settings settings;
             PGC::utils::Context context;
 
-            PGC::TextureStorage textureStorage;
+            PGC::L1::TextureStorage textureStorage;
 
         private:
             void createInstance();

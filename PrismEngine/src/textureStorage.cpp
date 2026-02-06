@@ -1,7 +1,8 @@
+#include "memory"
 #include "textureStorage.h"
 #include "textureLoader.h"
 
-void prism::PGC::TextureStorage::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
+void prism::PGC::L1::TextureStorage::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
 {
     this->context = context;
     this->settings = settings;
@@ -9,7 +10,7 @@ void prism::PGC::TextureStorage::init(PGC::utils::Context* context, PGC::utils::
     textureLoader = new PGC::L2::TextureLoader(context, settings);
 }
 
-prism::TextureId prism::PGC::TextureStorage::load(std::string texturePath)
+prism::TextureId prism::PGC::L1::TextureStorage::load(std::string texturePath)
 {
     Texture texture = textureLoader->load(texturePath);
 
@@ -32,12 +33,12 @@ prism::TextureId prism::PGC::TextureStorage::load(std::string texturePath)
     return index;
 }
 
-std::shared_ptr<prism::PGC::Texture> prism::PGC::TextureStorage::get(TextureId textureId)
+std::shared_ptr<prism::PGC::Texture> prism::PGC::L1::TextureStorage::get(TextureId textureId)
 {
     return std::make_shared<prism::PGC::Texture>(textures[textureId]);
 }
 
-bool prism::PGC::TextureStorage::remove(TextureId textureId)
+bool prism::PGC::L1::TextureStorage::remove(TextureId textureId)
 {
     if (textureId == INVALID_TEXTURE_ID || textureId >= textures.size()) {
         return false;
@@ -50,7 +51,7 @@ bool prism::PGC::TextureStorage::remove(TextureId textureId)
     updateDescriptors();
 }
 
-void prism::PGC::TextureStorage::cleanup()
+void prism::PGC::L1::TextureStorage::cleanup()
 {
     for (uint32_t i = INVALID_TEXTURE_ID + 1; i < textures.size(); i++) {
         auto& texture = textures[i];
@@ -68,7 +69,7 @@ void prism::PGC::TextureStorage::cleanup()
     }
 }
 
-void prism::PGC::TextureStorage::updateDescriptors()
+void prism::PGC::L1::TextureStorage::updateDescriptors()
 {
     if (context->textureDescriptorSet == VK_NULL_HANDLE) {
         return;
@@ -111,7 +112,7 @@ void prism::PGC::TextureStorage::updateDescriptors()
         descriptorWrites.data(), 0, nullptr);
 }
 
-uint32_t prism::PGC::TextureStorage::getNextAvailableIndex(utils::Context* context) {
+uint32_t prism::PGC::L1::TextureStorage::getNextAvailableIndex(utils::Context* context) {
     if (!freeTextureIndices.empty()) {
         uint32_t index = freeTextureIndices.back();
         freeTextureIndices.pop_back();
