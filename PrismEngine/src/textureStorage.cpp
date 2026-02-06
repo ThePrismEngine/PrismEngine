@@ -6,12 +6,12 @@ void prism::PGC::TextureStorage::init(PGC::utils::Context* context, PGC::utils::
     this->context = context;
     this->settings = settings;
     textures.push_back(PGC::Texture{});
-
+    textureLoader = new PGC::L2::TextureLoader(context, settings);
 }
 
 prism::TextureId prism::PGC::TextureStorage::load(std::string texturePath)
 {
-    Texture texture = TextureLoader::load(context, texturePath);
+    Texture texture = textureLoader->load(texturePath);
 
     if (texture.image == VK_NULL_HANDLE) {
         return INVALID_TEXTURE_ID;
@@ -43,7 +43,7 @@ bool prism::PGC::TextureStorage::remove(TextureId textureId)
         return false;
     }
 
-    TextureLoader::cleanup(context, &textures[textureId]);
+    textureLoader->cleanup(&textures[textureId]);
 
     freeTextureIndices.push_back(textureId);
 
@@ -55,7 +55,7 @@ void prism::PGC::TextureStorage::cleanup()
     for (uint32_t i = INVALID_TEXTURE_ID + 1; i < textures.size(); i++) {
         auto& texture = textures[i];
         if (texture.image != VK_NULL_HANDLE) {
-            TextureLoader::cleanup(context, &texture);
+            textureLoader->cleanup(&texture);
         }
     }
 
