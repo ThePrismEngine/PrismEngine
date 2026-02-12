@@ -1,0 +1,47 @@
+name: Performance benchmarks
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  benchmark:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup MSVC
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Configure CMake
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build benchmarks
+        run: cmake --build build --config Release --target benchmarks
+
+      - name: Run benchmarks
+        working-directory: build/bin
+        run: .\benchmarks.exe --benchmark_format=json --benchmark_out=benchmark_result.json
+        shell: cmd
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: build/bin/benchmark_result.json
+
+      - name: Store benchmark result
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: "ECS Benchmarks"
+          tool: "googlecpp"
+          output-file-path: build/bin/benchmark_result.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: ${{ github.ref == 'refs/heads/main' }}
+          comment-on-alert: true
+          fail-on-alert: false
+          alert-threshold: "200%"

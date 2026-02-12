@@ -51,3 +51,6 @@ message(STATUS "Vulkan SDK path: ${VULKAN_SDK_PATH}")
 # Поддиректории
 add_subdirectory(PrismEngine)
 add_subdirectory(examples)
+
+# Бенчмарки ECS
+add_subdirectory(benchmarks)

@@ -1,5 +1,5 @@
 ﻿#include <benchmark/benchmark.h>
-#include <PrismEngine.h>
+#include <PrismEngineECS.h>
 #include <memory>
 #include <vector>
 #include <random>
@@ -210,7 +210,5 @@ BENCHMARK_F(ECSBenchmark, GetResource)(benchmark::State& state) {
     }
 }
 
-// ============================================================================
-//  Точка входа Google Benchmark
-// ============================================================================
+
 BENCHMARK_MAIN();
