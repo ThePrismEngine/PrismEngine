@@ -2,6 +2,7 @@
 #include "vulkan/vulkan.h"
 #include "utils.h"
 #include "layersMacroses.h"
+#include "pgcLayersObjsTemplate.h"
 
 DECLARE_PGC_LAYER_INSTANCE(L2)
 
@@ -47,9 +48,9 @@ public:
 	static int getTotal(HardwareScore score);
 };
 
-class DeviceRater {
+class DeviceRater : public L2_Object<DeviceRater> {
 public:
-	DeviceRater(PGC::utils::Context* context, utils::Settings* settings) : context(context), settings(settings) {};
+	DeviceRater(PGC::utils::Context* context, PGC::utils::Settings* settings) : L2_Object(context, settings) {};
 	int rate(VkPhysicalDevice device);
 private:
 	bool debugDeviceSelection = false;
@@ -59,9 +60,6 @@ private:
 	int getDeviceApiScore(VkPhysicalDevice device);
 			
 	static FeatureScores calculateFeatureScore(VkPhysicalDevice device);
-
-	PGC::utils::Context* context;
-	utils::Settings* settings;
 };
 
 END_NAMESPACE_DECLARATION

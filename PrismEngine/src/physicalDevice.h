@@ -11,6 +11,7 @@ public:
 	void cleanupImpl();
 
 private:
+	
 	VkSampleCountFlagBits getMsaaSamples();
 	VkSampleCountFlagBits getMaxUsableSampleCount();
 	std::vector<VkSampleCountFlagBits> getPossibleCounts(VkSampleCountFlagBits maxCount);

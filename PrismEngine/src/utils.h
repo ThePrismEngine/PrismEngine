@@ -148,10 +148,10 @@ namespace prism {
 			};
 
 			struct DeviceEvaluationWeightsSettings {
-				float wType = 0.3;
-				float wFeatures = 0.25;
-				float wHardware = 0.35;
-				float wApi = 0.1;
+				float wType = 0.3f;
+				float wFeatures = 0.25f;
+				float wHardware = 0.35f;
+				float wApi = 0.1f;
 			};
 
 			struct SwapChainSettings

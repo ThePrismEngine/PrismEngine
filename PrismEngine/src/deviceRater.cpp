@@ -13,10 +13,10 @@ int prism::PGC::L2::DeviceRater::rate(VkPhysicalDevice device)
     if (!deviceChecker.check(device)) return 0;
     
     DeviceScore deviceScore;
-    deviceScore.typeScore     = getDeviceTypeScore(device)     * settings->deviceEvaluationWeights.wType;
-    deviceScore.featureScore  = getDeviceFeatureScore(device)  * settings->deviceEvaluationWeights.wFeatures;
-    deviceScore.hardwareScore = getDeviceHardwareScore(device) * settings->deviceEvaluationWeights.wHardware;
-    deviceScore.apiScore      = getDeviceApiScore(device)      * settings->deviceEvaluationWeights.wApi;
+    deviceScore.typeScore     = (int)(getDeviceTypeScore(device)     * settings->deviceEvaluationWeights.wType);
+    deviceScore.featureScore  = (int)(getDeviceFeatureScore(device)  * settings->deviceEvaluationWeights.wFeatures);
+    deviceScore.hardwareScore = (int)(getDeviceHardwareScore(device) * settings->deviceEvaluationWeights.wHardware);
+    deviceScore.apiScore      = (int)(getDeviceApiScore(device)      * settings->deviceEvaluationWeights.wApi);
 
     if (debugDeviceSelection) {
        ScoreWrapper::print(deviceScore);
