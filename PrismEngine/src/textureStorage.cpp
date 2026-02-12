@@ -2,16 +2,12 @@
 #include "textureStorage.h"
 #include "textureLoader.h"
 
-void prism::PGC::L1::TextureStorage::init(PGC::utils::Context* context, PGC::utils::Settings* settings)
-{
-    this->context = context;
-    this->settings = settings;
-    textures.push_back(PGC::Texture{});
+void prism::PGC::L1::TextureStorage::createImpl() {
     textureLoader = new PGC::L2::TextureLoader(context, settings);
+    textures.push_back(PGC::Texture{});
 }
 
-prism::TextureId prism::PGC::L1::TextureStorage::load(std::string texturePath)
-{
+prism::TextureId prism::PGC::L1::TextureStorage::load(std::string texturePath) {
     Texture texture = textureLoader->load(texturePath);
 
     if (texture.image == VK_NULL_HANDLE) {
@@ -51,7 +47,7 @@ bool prism::PGC::L1::TextureStorage::remove(TextureId textureId)
     updateDescriptors();
 }
 
-void prism::PGC::L1::TextureStorage::cleanup()
+void prism::PGC::L1::TextureStorage::cleanupImpl()
 {
     for (uint32_t i = INVALID_TEXTURE_ID + 1; i < textures.size(); i++) {
         auto& texture = textures[i];
@@ -67,6 +63,8 @@ void prism::PGC::L1::TextureStorage::cleanup()
         vkDestroyDescriptorSetLayout(context->device, context->textureDescriptorSetLayout, nullptr);
         context->textureDescriptorSetLayout = VK_NULL_HANDLE;
     }
+
+    delete textureLoader;
 }
 
 void prism::PGC::L1::TextureStorage::updateDescriptors()

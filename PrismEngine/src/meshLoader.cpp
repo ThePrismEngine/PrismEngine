@@ -3,9 +3,9 @@
 #include <tiny_obj_loader.h>
 #include <iostream>
 
-prism::PGC::MeshData prism::PGC::MeshLoader::load(std::string texturePath)
+prism::PGC::MeshData prism::PGC::L2::MeshLoader::load(std::string texturePath)
 {
-    MeshData meshData;
+    prism::PGC::MeshData meshData;
     tinyobj::attrib_t attrib;
     std::vector<tinyobj::shape_t> shapes;
     std::vector<tinyobj::material_t> materials;

@@ -6,8 +6,7 @@
 #include <array>
 
 
-std::array<VkPipelineShaderStageCreateInfo, 2> prism::PGC::ShaderStagesLoader::load(PGC::utils::Context* context, utils::PipelineSettings pipelineSettings)
-{
+std::array<VkPipelineShaderStageCreateInfo, 2> prism::PGC::L2::ShaderStagesLoader::load(utils::PipelineSettings pipelineSettings) {
     auto vertShaderCode = readShaderFile(pipelineSettings.shaders.shadersDirectory + pipelineSettings.shaders.vertexShaderFilename);
     auto fragShaderCode = readShaderFile(pipelineSettings.shaders.shadersDirectory + pipelineSettings.shaders.fragmentShaderFilename);
     
@@ -29,7 +28,7 @@ std::array<VkPipelineShaderStageCreateInfo, 2> prism::PGC::ShaderStagesLoader::l
     return { vertShaderStageInfo, fragShaderStageInfo };
 }
 
-std::vector<char> prism::PGC::ShaderStagesLoader::readShaderFile(const std::string& filename)
+std::vector<char> prism::PGC::L2::ShaderStagesLoader::readShaderFile(const std::string& filename)
 {
     // Открываем файл в режиме бинарного чтения с курсором в конце
     std::ifstream file(filename, std::ios::binary | std::ios::ate);
@@ -55,7 +54,7 @@ std::vector<char> prism::PGC::ShaderStagesLoader::readShaderFile(const std::stri
     return buffer;
 }
 
-VkShaderModule prism::PGC::ShaderStagesLoader::createShaderModule(VkDevice device, const std::vector<char>& code)
+VkShaderModule prism::PGC::L2::ShaderStagesLoader::createShaderModule(VkDevice device, const std::vector<char>& code)
 {
 	VkShaderModuleCreateInfo createInfo{};
 	createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;

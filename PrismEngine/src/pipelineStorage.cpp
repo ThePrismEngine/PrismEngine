@@ -2,6 +2,7 @@
 #include "shaderStagesLoader.h"
 
 void prism::PGC::L1::PipelineStorage::createImpl() {
+    shaderStagesLoader = new PGC::L2::ShaderStagesLoader(context, settings);
     createPipeline(&context->graphicsPipeline, settings->defaultPipeline);
 }
 
@@ -38,11 +39,12 @@ void prism::PGC::L1::PipelineStorage::cleanupImpl()
     vkDestroyPipelineLayout(context->device, context->pipelineLayout, nullptr);
 
     pipelines.clear();
+
+    delete shaderStagesLoader;
 }
 
-void prism::PGC::L1::PipelineStorage::createPipeline(VkPipeline* graphicsPipeline, utils::PipelineSettings pipelineSettings)
-{
-    std::array<VkPipelineShaderStageCreateInfo, 2> stageArray = ShaderStagesLoader::load(context, pipelineSettings);
+void prism::PGC::L1::PipelineStorage::createPipeline(VkPipeline* graphicsPipeline, utils::PipelineSettings pipelineSettings) {
+    std::array<VkPipelineShaderStageCreateInfo, 2> stageArray = shaderStagesLoader->load(pipelineSettings);
     VkPipelineShaderStageCreateInfo shaderStages[] = { stageArray[0], stageArray[1] };
 
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};

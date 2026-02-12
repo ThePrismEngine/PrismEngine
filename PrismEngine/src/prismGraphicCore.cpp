@@ -40,6 +40,7 @@ void prism::PGC::PrismGraphicCore::init(utils::Settings settings)
     createCommandBuffer();
     createSyncObjects();
     createTextureStorage();
+    createMeshManager();
 }
 
 
@@ -171,6 +172,11 @@ void prism::PGC::PrismGraphicCore::createTextureDescriptorSet() {
 void prism::PGC::PrismGraphicCore::createTextureStorage()
 {
     textureStorage.init(&context, &settings);
+}
+
+void prism::PGC::PrismGraphicCore::createMeshManager()
+{
+    meshManager.init(&context, &settings);
 }
 
 void prism::PGC::PrismGraphicCore::createBufferObject()

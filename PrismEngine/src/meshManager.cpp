@@ -2,9 +2,14 @@
 #include "meshLoader.h"
 #include "bufferWrapper.h"
 
-prism::Mesh prism::PGC::MeshManager::addMesh(utils::Context* context, std::string texturePath)
+void prism::PGC::L1::MeshManager::createImpl()
 {
-    prism::PGC::MeshData mesh = MeshLoader::load(texturePath);
+    meshLoader = new PGC::L2::MeshLoader(context, settings);
+}
+
+prism::Mesh prism::PGC::L1::MeshManager::addMesh(std::string texturePath)
+{
+    prism::PGC::MeshData mesh = meshLoader->load(texturePath);
 
   //if (vertices.empty() || indices.empty()) {
   //    return INVALID_MESH_ID;
@@ -19,7 +24,7 @@ prism::Mesh prism::PGC::MeshManager::addMesh(utils::Context* context, std::strin
     context->allVertices.insert(context->allVertices.end(), mesh.vertices.begin(), mesh.vertices.end());
     context->allIndices.insert(context->allIndices.end(), mesh.indices.begin(), mesh.indices.end());
 
-    prism::Mesh id = getNextAvailableIndex(context);
+    prism::Mesh id = getNextAvailableIndex();
     if (id >= context->meshes.size()) {
         context->meshes.push_back(info);
     }
@@ -31,7 +36,7 @@ prism::Mesh prism::PGC::MeshManager::addMesh(utils::Context* context, std::strin
     return id;
 }
 
-void prism::PGC::MeshManager::update(utils::Context* context)
+void prism::PGC::L1::MeshManager::update()
 {
     if (!context->meshBuffersDirty) return;
 
@@ -66,7 +71,7 @@ void prism::PGC::MeshManager::update(utils::Context* context)
     context->meshBuffersDirty = false;
 }
 
-void prism::PGC::MeshManager::clear(utils::Context* context)
+void prism::PGC::L1::MeshManager::clear()
 {
     context->meshes.clear();
     context->allVertices.clear();
@@ -76,7 +81,13 @@ void prism::PGC::MeshManager::clear(utils::Context* context)
     context->meshBuffersDirty = true;
 }
 
-prism::PGC::Mesh& prism::PGC::MeshManager::getMeshInfo(utils::Context* context, prism::Mesh id)
+void prism::PGC::L1::MeshManager::cleanupImpl()
+{
+    clear();
+    delete meshLoader;
+}
+
+prism::PGC::Mesh& prism::PGC::L1::MeshManager::getMeshInfo(prism::Mesh id)
 {
     static Mesh emptyInfo = { 0, 0, 0, 0 };
 
@@ -87,7 +98,7 @@ prism::PGC::Mesh& prism::PGC::MeshManager::getMeshInfo(utils::Context* context, 
     return emptyInfo;
 }
 
-uint32_t prism::PGC::MeshManager::getNextAvailableIndex(utils::Context* context)
+uint32_t prism::PGC::L1::MeshManager::getNextAvailableIndex()
 {
     if (!context->freeMeshIndices.empty()) {
         uint32_t index = context->freeMeshIndices.back();
@@ -97,3 +108,4 @@ uint32_t prism::PGC::MeshManager::getNextAvailableIndex(utils::Context* context)
 
     return static_cast<uint32_t>(context->meshes.size());
 }
+

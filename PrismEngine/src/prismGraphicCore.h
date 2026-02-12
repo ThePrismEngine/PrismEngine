@@ -33,6 +33,7 @@
 #include "renderPass.h"
 #include "pipelineStorage.h"
 #include "textureStorage.h"
+#include "meshManager.h"
 
 namespace prism {
     namespace PGC {
@@ -55,6 +56,7 @@ namespace prism {
             PGC::utils::Context context;
 
             PGC::L1::TextureStorage textureStorage;
+            PGC::L1::MeshManager meshManager;
 
         private:
             void createInstance();
@@ -78,6 +80,7 @@ namespace prism {
             void createDepthResources();
             void createColorResources();
             void createTextureStorage();
+            void createMeshManager();
 
             SDL_Window* window;
 

@@ -1,20 +1,18 @@
 #pragma once
 #include <vector>
+#include "layersMacroses.h"
+#include "utils.h"
 #include "vertex.h"
+#include "meshData.h"
 
-namespace prism {
-	namespace PGC {
-		struct MeshData {
-			std::vector<Vertex> vertices;
-			std::vector<uint32_t> indices;
-		};
 
-		class MeshLoader
-		{
-		public:
-			static MeshData load(std::string texturePath);
-		private:
-
-		};
-	}
-}
+DECLARE_PGC_LAYER_INSTANCE(L2)
+class MeshLoader {
+public:
+	MeshLoader(utils::Context* context, utils::Settings* settings) : context(context), settings(settings) {};
+	static MeshData load(std::string texturePath);
+private:
+	utils::Context* context;
+	utils::Settings* settings;
+};
+END_NAMESPACE_DECLARATION

@@ -277,7 +277,7 @@ void prism::render::Renderer::bindObjectsData()
 
 void prism::render::Renderer::drawMesh(uint32_t meshId, uint32_t instanceCount, uint32_t firstIndex)
 {
-	const PGC::Mesh& info = prism::PGC::MeshManager::getMeshInfo(&pgc.context, meshId);
+	const PGC::Mesh& info = pgc.meshManager.getMeshInfo(meshId);
 	vkCmdDrawIndexed(pgc.context.commandBuffers[pgc.context.currentFrame], info.indexCount, instanceCount, info.indexOffset, info.vertexOffset, firstIndex);
 
 }
@@ -307,17 +307,17 @@ void prism::render::Renderer::clearTextures()
 
 prism::scene::MeshComponent prism::render::Renderer::addMesh(std::string texturePath)
 {
-	return { PGC::MeshManager::addMesh(&pgc.context, texturePath)};
+	return { pgc.meshManager.addMesh(texturePath)};
 }
 
 void prism::render::Renderer::updateMeshes()
 {
-	PGC::MeshManager::update(&pgc.context);
+	pgc.meshManager.update();
 }
 
 void prism::render::Renderer::clearMeshes()
 {
-	PGC::MeshManager::clear(&pgc.context);
+	pgc.meshManager.clear();
 }
 
 void prism::render::Renderer::awaitRenderingCompletion()
