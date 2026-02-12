@@ -6,6 +6,13 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+  contents: write      # для обновления gh-pages
+  pull-requests: write # для комментариев в PR
+
+env:
+  BUILD_CONFIG: Release
+
 jobs:
   benchmark:
     runs-on: windows-latest
@@ -18,13 +25,13 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1
 
       - name: Configure CMake
-        run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+        run: cmake -B build -DCMAKE_BUILD_TYPE=${{ env.BUILD_CONFIG }}
 
       - name: Build benchmarks
-        run: cmake --build build --config Release --target benchmarks
+        run: cmake --build build --config ${{ env.BUILD_CONFIG }} --target benchmarks
 
       - name: Run benchmarks
-        working-directory: build/bin
+        working-directory: build/bin/${{ env.BUILD_CONFIG }}
         run: .\benchmarks.exe --benchmark_format=json --benchmark_out=benchmark_result.json
         shell: cmd
 
@@ -32,14 +39,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: benchmark-results
-          path: build/bin/benchmark_result.json
+          path: build/bin/build/bin/${{ env.BUILD_CONFIG }}/benchmark_result.json
 
       - name: Store benchmark result
         uses: benchmark-action/github-action-benchmark@v1
         with:
           name: "ECS Benchmarks"
           tool: "googlecpp"
-          output-file-path: build/bin/benchmark_result.json
+          output-file-path: build/${{ env.BUILD_CONFIG }}/bin/benchmark_result.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: ${{ github.ref == 'refs/heads/main' }}
           comment-on-alert: true
