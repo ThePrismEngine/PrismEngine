@@ -40,7 +40,19 @@ jobs:
         with:
           name: benchmark-results
           path: build/bin/build/bin/${{ env.BUILD_CONFIG }}/benchmark_result.json
-
+      
+      - name: Create gh-pages branch if not exists
+        run: |
+          git fetch origin gh-pages || (
+            git checkout --orphan gh-pages &&
+            git rm -rf . &&
+            git commit --allow-empty -m "Initial gh-pages branch" &&
+            git push origin gh-pages
+          )
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
       - name: Store benchmark result
         uses: benchmark-action/github-action-benchmark@v1
         with:
