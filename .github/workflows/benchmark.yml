@@ -46,7 +46,7 @@ jobs:
         with:
           name: "ECS Benchmarks"
           tool: "googlecpp"
-          output-file-path: build/${{ env.BUILD_CONFIG }}/bin/benchmark_result.json
+          output-file-path: build/bin/${{ env.BUILD_CONFIG }}/benchmark_result.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: ${{ github.ref == 'refs/heads/main' }}
           comment-on-alert: true
