@@ -14,6 +14,9 @@ namespace prism {
         /// @brief Базовый интерфейс для всех систем
         /// @details Системы должны наследоваться от этого интерфейса и реализовывать метод update
         class ISystem {
+            friend class SystemManager;
+            bool enabled = true;
+            bool started = false;
         public:
             virtual ~ISystem() = default;
 
@@ -25,13 +28,13 @@ namespace prism {
             /// @details Вызывается каждый кадр для обновления логики системы
             virtual void update() = 0;
 
-            /// @brief Флаг активности системы.
+            /// @brief Возвращает флаг активности системы.
             /// @details Если true - система обновляется, если false - пропускается
-            bool enabled = true;
+            bool isEnabled() const { return enabled; }
 
-            /// @brief Флаг был ли вызван старт системы.
+            /// @brief Возвращает флаг был ли вызван старт системы.
             /// @details Если true - система уже прошла первое обновление, если false - сначало будет вызван start() перед update()
-            bool started = false;
+            bool isStarted() const { return started; }
         };
     }
 }
