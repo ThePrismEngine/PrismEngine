@@ -85,16 +85,16 @@ namespace prism {
 
             /// @brief Получает все сущности, имеющие компонент указанного типа
             /// @tparam T Тип компонента
-            /// @return Ссылка на множество сущностей с компонентом
+            /// @return Ссылка на вектор сущностей с компонентом
             /// @see prism::scene::ComponentManager::getEntitiesWith
             template<typename T>
-            std::set<Entity>& getEntitiesWith() {
+            std::vector<Entity>& getEntitiesWith() {
                 return componentManager.getEntitiesWith<T>();
             };
 
             /// @brief Получает сущности, имеющие все указанные типы компонентов
             /// @tparam ComponentTypes Типы компонентов для поиска
-            /// @return Множество сущностей, содержащих все запрошенные компоненты
+            /// @return Вектор сущностей, содержащих все запрошенные компоненты
             /// @see prism::scene::ComponentManager::getEntitiesWithAll
             template<typename... ComponentTypes>
             std::set<Entity> getEntitiesWithAll() {

@@ -25,9 +25,8 @@ namespace prism {
             /// @details Создает копию компонента и связывает его с сущностью
             template<typename T>
             bool addComponent(Entity entityId, T component) {
-                auto& storage = getComponentStorage<T>();
-                storage.components[entityId] = std::make_shared<T>(component);
-                getEntitiesWith<T>().insert(entityId);
+                ComponentStorage<T>& storage = getComponentStorage<T>();
+				storage.addComponent(entityId, std::move(component));
                 return true;
             }
 
@@ -37,13 +36,15 @@ namespace prism {
             /// @return true если компонент существовал и был удален, false в противном случае
             template<typename T>
             bool removeComponent(Entity entityId) {
-                auto& storage = getComponentStorage<T>();
-                auto it = storage.components.find(entityId);
-                if (it == storage.components.end()) return false;
+                ComponentStorage<T>& storage = getComponentStorage<T>();
+				return storage.removeComponent(entityId);
+            }
 
-                storage.components.erase(it);
-                getEntitiesWith<T>().erase(entityId);
-                return true;
+            /// @brief Проверяет, есть ли у сущности компонент типа T
+            template<typename T>
+            bool hasComponent(Entity entityId) const {
+                const ComponentStorage<T>* storage = getComponentStorageConst<T>();
+                return storage ? storage->hasComponent(entityId) : false;
             }
 
             /// @brief Получает компонент сущности
@@ -52,36 +53,28 @@ namespace prism {
             /// @return Указатель на компонент или nullptr если компонент не найден
             template<typename T>
             T* getComponent(Entity entityId) {
-                auto& storage = getComponentStorage<T>();
-                auto it = storage.components.find(entityId);
-                if (it == storage.components.end()) return nullptr;
-                return it->second.get();
+                ComponentStorage<T>& storage = getComponentStorage<T>();
+				return storage.getComponent(entityId);
             }
 
             /// @brief Получает все сущности, имеющие компонент указанного типа
             /// @tparam T Тип компонента
             /// @return Константная ссылка на множество сущностей с компонентом
             template<typename T>
-            const std::set<Entity>& getEntitiesWith() const {
-                static const std::set<Entity> emptySet;
-                auto typeIndex = std::type_index(typeid(T));
-                auto it = entitiesWithComponentSets.find(typeIndex);
-                if (it == entitiesWithComponentSets.end()) return emptySet;
-                return *it->second;
+            const std::vector<Entity>& getEntitiesWithConst() const {
+                static const std::vector<Entity> emptySet;
+                const ComponentStorage<T>* storage = getComponentStorageConst<T>();
+                return storage ? storage->entities : emptySet;
             }
             
             template<typename T>
-            std::set<Entity>& getEntitiesWith() {
-                auto typeIndex = std::type_index(typeid(T));
-                if (entitiesWithComponentSets.find(typeIndex) == entitiesWithComponentSets.end()) {
-                    entitiesWithComponentSets[typeIndex] = std::make_unique<std::set<Entity>>();
-                }
-                return *entitiesWithComponentSets[typeIndex];
+            std::vector<Entity>& getEntitiesWith() {
+                return getComponentStorage<T>().entities;
             }
 
             /// @brief Получает все сущности, имеющие все указанные типы компонентов
             /// @tparam ComponentTypes Типы компонентов для поиска
-            /// @return Множество сущностей, содержащих все запрошенные компоненты
+            /// @return Вектор сущностей, содержащих все запрошенные компоненты
             /// @details Выполняет пересечение множеств сущностей для каждого типа компонента
             template<typename... ComponentTypes>
             std::set<Entity> getEntitiesWithAll() const {
@@ -89,31 +82,21 @@ namespace prism {
                     return std::set<Entity>();
                 }
                 else {
-                    // Получаем множества для каждого типа компонентов
-                    std::vector<const std::set<Entity>*> sets;
-                    (sets.push_back(&getEntitiesWith<ComponentTypes>()), ...);
+                    // Собираем векторы сущностей для каждого типа
+                    std::vector<const std::vector<Entity>*> entityVectors;
+                    (entityVectors.push_back(&this->getEntitiesWithConst<ComponentTypes>()), ...);
 
-                    // Находим наименьшее множество для оптимизации
-                    auto smallestIt = std::min_element(sets.begin(), sets.end(),
-                        [](const std::set<Entity>* a, const std::set<Entity>* b) {
-                            return a->size() < b->size();
-                        });
+                    // Выбираем самый маленький вектор для итерации
+                    auto smallestIt = std::min_element(entityVectors.begin(), entityVectors.end(),
+                        [](const auto* a, const auto* b) { return a->size() < b->size(); });
+                    const auto& smallestVec = **smallestIt;
 
-                    std::set<Entity> result = **smallestIt;
-
-                    // Пересекаем с остальными множествами
-                    for (const auto& entitySetPtr : sets) {
-                        if (entitySetPtr == *smallestIt) continue;
-
-                        std::set<Entity> temp;
-                        std::set_intersection(
-                            result.begin(), result.end(),
-                            entitySetPtr->begin(), entitySetPtr->end(),
-                            std::inserter(temp, temp.begin())
-                        );
-                        result = std::move(temp);
+                    std::set<Entity> result;
+                    for (Entity e : smallestVec) {
+                        if ((hasComponent<ComponentTypes>(e) && ...)) {
+                            result.insert(e);
+                        }
                     }
-                    
                     return result;
                 }
             }
@@ -136,31 +119,87 @@ namespace prism {
             /// @tparam T Тип компонента
             template<typename T>
             struct ComponentStorage : public IComponentStorage {
-                /// @brief Карта сущность -> компонент
-                std::unordered_map<Entity, std::shared_ptr<T>> components;
+                /// @brief Плотный массив компонентов
+                std::vector<T> components;
+
+                // @brief Сущности, соответствующие компонентам
+                std::vector<Entity> entities;
+
+                // @brief Позиция в массивах
+                std::unordered_map<Entity, size_t> entityToIndex;
+
+                void addComponent(Entity entity, T&& component) {
+                    auto it = entityToIndex.find(entity);
+                    if (it != entityToIndex.end()) {
+                        components[it->second] = std::move(component);
+                        return;
+                    }
+                    size_t index = components.size();
+                    components.push_back(std::move(component));
+                    entities.push_back(entity);
+                    entityToIndex[entity] = index;
+                }
+
+                bool removeComponent(Entity entity) {
+                    auto it = entityToIndex.find(entity);
+                    if (it == entityToIndex.end()) return false;
+
+                    size_t index = it->second;
+                    size_t lastIndex = components.size() - 1;
+
+                    if (index != lastIndex) {
+                        components[index] = std::move(components[lastIndex]);
+                        entities[index] = entities[lastIndex];
+                        entityToIndex[entities[index]] = index;
+                    }
+
+                    components.pop_back();
+                    entities.pop_back();
+                    entityToIndex.erase(it);
+                    return true;
+                }
+
+                T* getComponent(Entity entity) {
+                    auto it = entityToIndex.find(entity);
+                    if (it == entityToIndex.end()) return nullptr;
+                    return &components[it->second];
+                }
+
+                bool hasComponent(Entity entity) const {
+                    return entityToIndex.find(entity) != entityToIndex.end();
+                }
 
                 void removeEntity(Entity entityId) override {
-                    components.erase(entityId);
+                    removeComponent(entityId);
                 }
             };
 
-            /// @brief Получает хранилище для конкретного типа компонента
+            /// @brief Получает или создаёт хранилище для конкретного типа компонента
             /// @tparam T Тип компонента
             /// @return Ссылка на хранилище компонентов типа T
             template<typename T>
             ComponentStorage<T>& getComponentStorage() {
                 auto typeIndex = std::type_index(typeid(T));
-                if (componentStorages.find(typeIndex) == componentStorages.end()) {
-                    componentStorages[typeIndex] = std::make_unique<ComponentStorage<T>>();
+                auto it = componentStorages.find(typeIndex);
+                if (it == componentStorages.end()) {
+                    auto storage = std::make_unique<ComponentStorage<T>>();
+                    auto* ptr = storage.get();
+                    componentStorages[typeIndex] = std::move(storage);
+                    return *ptr;
                 }
-                return static_cast<ComponentStorage<T>&>(*componentStorages[typeIndex]);
+                return static_cast<ComponentStorage<T>&>(*it->second);
             }
 
-            /// @brief Карта хранилищ компонентов по типу
-            std::unordered_map<std::type_index, std::unique_ptr<IComponentStorage>> componentStorages;
+            template<typename T>
+            const ComponentStorage<T>* getComponentStorageConst() const {
+                auto typeIndex = std::type_index(typeid(T));
+                auto it = componentStorages.find(typeIndex);
+                if (it == componentStorages.end()) return nullptr;
+                return static_cast<const ComponentStorage<T>*>(it->second.get());
+            }
 
-            /// @brief Карта множеств сущностей по типу компонента
-            std::unordered_map<std::type_index, std::unique_ptr<std::set<Entity>>> entitiesWithComponentSets;
+            // Карта "тип -> хранилище"
+            std::unordered_map<std::type_index, std::unique_ptr<IComponentStorage>> componentStorages;
         };
     }
 }
