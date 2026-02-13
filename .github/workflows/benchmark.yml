@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 permissions:
-  contents: write      # для обновления gh-pages
-  pull-requests: write # для комментариев в PR
+  contents: write      # Г¤Г«Гї Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГї gh-pages
+  pull-requests: write # Г¤Г«Гї ГЄГ®Г¬Г¬ГҐГ­ГІГ Г°ГЁГҐГў Гў PR
 
 env:
   BUILD_CONFIG: Release
@@ -60,7 +60,7 @@ jobs:
           tool: "googlecpp"
           output-file-path: build/bin/${{ env.BUILD_CONFIG }}/benchmark_result.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          auto-push: ${{ github.ref == 'refs/heads/main' }}
+          auto-push: ${{ github.ref == 'refs/heads/master' }}
           comment-on-alert: true
           fail-on-alert: false
           alert-threshold: "200%"
