@@ -12,6 +12,9 @@ namespace prism {
     namespace scene {
         /// @brief Менеджер для управления компонентами сущностей
         /// @details Обеспечивает хранение, добавление, удаление и поиск компонентов
+        ///          Компоненты хранятся в плотных массивах (cache-friendly) с использованием
+        ///          техники "sparse set" для быстрого доступа. Это обеспечивает отличную
+        ///          локальность данных при массовой обработке.
         class ComponentManager
         {
         public:
@@ -20,9 +23,10 @@ namespace prism {
             /// @brief Добавляет компонент к сущности
             /// @tparam T Тип компонента
             /// @param entityId Идентификатор сущности
-            /// @param component Компонент для добавления
+            /// @param component Компонент для добавления (может быть lvalue или rvalue)
             /// @return true если компонент успешно добавлен, false в противном случае
-            /// @details Создает копию компонента и связывает его с сущностью
+            /// @details @details Если компонент у сущности уже существует, он будет заменён.
+            ///          Благодаря perfect forwarding избегаются лишние копирования.
             template<typename T>
             bool addComponent(Entity entityId, T&& component) {
                auto& storage = getComponentStorage<std::decay_t<T>>();
@@ -47,10 +51,10 @@ namespace prism {
                 return storage ? storage->hasComponent(entityId) : false;
             }
 
-            /// @brief Получает компонент сущности
+            /// @brief Получает указатель на компонент сущности
             /// @tparam T Тип компонента
             /// @param entityId Идентификатор сущности
-            /// @return Указатель на компонент или nullptr если компонент не найден
+            /// @return Указатель на компонент или nullptr, если компонент не найден
             template<typename T>
             T* getComponent(Entity entityId) {
                 ComponentStorage<T>& storage = getComponentStorage<T>();
@@ -59,7 +63,11 @@ namespace prism {
 
             /// @brief Получает все сущности, имеющие компонент указанного типа
             /// @tparam T Тип компонента
-            /// @return Константная ссылка на множество сущностей с компонентом
+            ///  @return Константная ссылка на * *вектор * *сущностей с компонентом.
+            ///         Вектор является частью внутреннего хранилища и обладает отличной
+            ///         локальностью данных. Время жизни ссылки ограничено временем жизни
+            ///         менеджера, но она остаётся валидной при добавлении/удалении других
+            ///         сущностей (кроме удаления последней сущности с компонентом T).
             template<typename T>
             const std::vector<Entity>& getEntitiesWith() const {
                 static const std::vector<Entity> empty;
@@ -67,12 +75,17 @@ namespace prism {
                 return storage ? storage->entities : empty;
             }
 
+            /// @brief Структура для прямого доступа к внутренним векторам компонентов и сущностей
+            /// @details Позволяет эффективно итерировать по компонентам без повторных поисков.
             template<typename T>
             struct StorageView {
-                const std::vector<T>& components;
-                const std::vector<Entity>& entities;
+                const std::vector<T>& components; ///< Плотный массив компонентов
+                const std::vector<Entity>& entities; ///< Соответствующие сущности
             };
 
+            /// @brief Возвращает view на хранилище компонентов типа T
+            /// @return StorageView, содержащий ссылки на внутренние векторы.
+            ///         Если хранилище не создано, возвращает view с пустыми векторами.
             template<typename T>
             StorageView<T> view() const {
                 const auto* storage = getComponentStorageConst<T>();
@@ -90,6 +103,8 @@ namespace prism {
             /// @tparam ComponentTypes Типы компонентов для поиска
             /// @return Вектор сущностей, содержащих все запрошенные компоненты
             /// @details Выполняет пересечение множеств сущностей для каждого типа компонента
+            ///          Порядок сущностей сохраняется из наименьшего вектора-кандидата.
+            ///          Вектор не содержит дубликатов.
             template<typename... ComponentTypes>
             std::vector<Entity> getEntitiesWithAll() const {
                 if constexpr (sizeof...(ComponentTypes) == 0) return {};

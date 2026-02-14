@@ -41,11 +41,11 @@ namespace prism {
 			};
 
 			enum MultisampleSelectionStrategy {
-				MINIMAL,  // Минимальный уровень после 1x(обычно 2x)
-				MIDDLE,   // Среднее значение из доступных
-				MAXIMAL,  // Максимальное значение
-				CUSTOM,   // Значение из цели или максимально приближенное
-				//ADAPTIVE, // Оценка по баллам устройства
+				MINIMAL,  // РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ РїРѕСЃР»Рµ 1x(РѕР±С‹С‡РЅРѕ 2x)
+				MIDDLE,   // РЎСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ РёР· РґРѕСЃС‚СѓРїРЅС‹С…
+				MAXIMAL,  // РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
+				CUSTOM,   // Р—РЅР°С‡РµРЅРёРµ РёР· С†РµР»Рё РёР»Рё РјР°РєСЃРёРјР°Р»СЊРЅРѕ РїСЂРёР±Р»РёР¶РµРЅРЅРѕРµ
+				//ADAPTIVE, // РћС†РµРЅРєР° РїРѕ Р±Р°Р»Р»Р°Рј СѓСЃС‚СЂРѕР№СЃС‚РІР°
 			};
 
 			struct MultisampleSettings {
@@ -141,12 +141,12 @@ namespace std {
 			hash_combine(hash, settings.colorBlend.logicOpEnable);
 			hash_combine(hash, static_cast<int>(settings.colorBlend.logicOp));
 
-			// Хешируем массив blendConstants
+			// РҐРµС€РёСЂСѓРµРј РјР°СЃСЃРёРІ blendConstants
 			for (int i = 0; i < 4; ++i) {
 				hash_combine(hash, settings.colorBlend.blendConstants[i]);
 			}
 
-			// Хешируем attachments
+			// РҐРµС€РёСЂСѓРµРј attachments
 			hash_combine(hash, settings.colorBlend.attachments.size());
 			for (const auto& attachment : settings.colorBlend.attachments) {
 				hash_combine(hash, attachment.blendEnable);
@@ -159,7 +159,7 @@ namespace std {
 				hash_combine(hash, attachment.colorWriteMask);
 			}
 
-			// Хешируем dynamicStates
+			// РҐРµС€РёСЂСѓРµРј dynamicStates
 			for (const auto& state : settings.dynamicState.dynamicStates) {
 				hash_combine(hash, static_cast<int>(state));
 			}

@@ -33,7 +33,7 @@ void prism::PGC::L1::PhysicalDevice::createImpl()
         logger::logError(logger::Error::VULKAN_NO_SUITABLE_GPU, __FUNCTION__);
     }
 
-    // Âûâîä èíôîðìàöèè î âûáðàííîì óñòðîéñòâå
+    // Ð’Ñ‹Ð²Ð¾Ð´ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸ Ð¾ Ð²Ñ‹Ð±Ñ€Ð°Ð½Ð½Ð¾Ð¼ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ðµ
     VkPhysicalDeviceProperties deviceProps = L3::DeviceWrapper::getDeviceProperties(context->physicalDevice);
     logger::info("\n");
     logger::info("Selected Vulkan device:");

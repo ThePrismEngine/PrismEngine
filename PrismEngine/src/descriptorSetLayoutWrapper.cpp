@@ -41,7 +41,7 @@ void prism::PGC::L3::DescriptorSetLayoutWrapper::createDescriptorSet(utils::Cont
     }
 
     for (size_t i = 0; i < context->MAX_FRAMES_IN_FLIGHT; i++) {
-        // CameraUBO (статический)
+        // CameraUBO (СЃС‚Р°С‚РёС‡РµСЃРєРёР№)
         VkDescriptorBufferInfo cameraBufferInfo{};
         cameraBufferInfo.buffer = context->uniformBuffers[i].camera;
         cameraBufferInfo.offset = 0;
@@ -65,7 +65,7 @@ void prism::PGC::L3::DescriptorSetLayoutWrapper::createDescriptorSet(utils::Cont
 
         std::array<VkWriteDescriptorSet, 4> descriptorWrites{};
 
-        // Camera UBO (binding 0) - статический
+        // Camera UBO (binding 0) - СЃС‚Р°С‚РёС‡РµСЃРєРёР№
         descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
         descriptorWrites[0].dstSet = context->descriptorSets[i];
         descriptorWrites[0].dstBinding = 0;
@@ -149,7 +149,7 @@ void prism::PGC::L3::DescriptorSetLayoutWrapper::createTextureDescriptorSet(util
 void prism::PGC::L3::DescriptorSetLayoutWrapper::createDescriptorPool(utils::Context* context, utils::Settings* settings)
 {
 
-    // Пул для буферов
+    // РџСѓР» РґР»СЏ Р±СѓС„РµСЂРѕРІ
     {
         std::array<VkDescriptorPoolSize, 2> poolSizes{};
         poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
@@ -168,7 +168,7 @@ void prism::PGC::L3::DescriptorSetLayoutWrapper::createDescriptorPool(utils::Con
         }
     }
 
-    // Пул для bindless текстур
+    // РџСѓР» РґР»СЏ bindless С‚РµРєСЃС‚СѓСЂ
     {
         VkDescriptorPoolSize poolSize{};
         poolSize.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;

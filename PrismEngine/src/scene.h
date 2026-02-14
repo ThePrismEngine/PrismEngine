@@ -88,7 +88,7 @@ namespace prism {
             /// @return Ссылка на вектор сущностей с компонентом
             /// @see prism::scene::ComponentManager::getEntitiesWith
             template<typename T>
-            const std::vector<Entity>& getEntitiesWith() {
+            const std::vector<Entity>& getEntitiesWith() const {
                 return componentManager.getEntitiesWith<T>();
             };
 
@@ -97,7 +97,7 @@ namespace prism {
             /// @return Вектор сущностей, содержащих все запрошенные компоненты
             /// @see prism::scene::ComponentManager::getEntitiesWithAll
             template<typename... ComponentTypes>
-            std::vector<Entity> getEntitiesWithAll() {
+            std::vector<Entity> getEntitiesWithAll() const {
                 return componentManager.getEntitiesWithAll<ComponentTypes...>();
             };
 

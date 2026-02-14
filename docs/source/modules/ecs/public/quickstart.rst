@@ -18,9 +18,9 @@
    auto player = scene.createEntity();
    
    // 3. Добавляем компоненты
-   scene.addComponent<Transform>(player, Transform{0, 0, 0});
-   scene.addComponent<Renderable>(player, Renderable{"player.obj"});
-   scene.addComponent<Health>(player, Health{100});
+   scene.addComponent(player, Transform{0, 0, 0});
+   scene.addComponent(player, Renderable{"player.obj"});
+   scene.addComponent(player, Health{100});
 
 Добавляем стандартный ресурс TimeResource и его систему TimeSystem
 ---------------
@@ -37,11 +37,12 @@
    class MovementSystem : public prism::scene::ISystem {
    public:
        void update() override {
-           auto entities = scene->getEntitiesWith<Transform, Velocity>();
-           for (auto entity : entities) {
-               auto* transform = scene->getComponent<Transform>(entity);
-               auto* velocity = scene->getComponent<Velocity>(entity);
-               transform->position.x += velocity->x * scene->getResource<TimeResource>()->deltaTime;
+			// getEntitiesWith возвращает ссылку на вектор (копирования нет)
+            auto entities = scene->getEntitiesWith<Transform, Velocity>();
+            for (auto entity : entities) {
+                auto* transform = scene->getComponent<Transform>(entity);
+                auto* velocity = scene->getComponent<Velocity>(entity);
+                transform->position.x += velocity->x * scene->getResource<TimeResource>()->deltaTime;
            }
        }
    };
