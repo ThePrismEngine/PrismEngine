@@ -17,6 +17,8 @@
 
   <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blue">
   <img alt="Vulkan" src="https://img.shields.io/badge/Vulkan-1.3-AC162C?logo=vulkan">
+  
+  <img src="https://img.shields.io/github/actions/workflow/status/ThePrismEngine/PrismEngine/benchmark.yml?label=benchmarks">
 </div>
 
 <br>
@@ -127,9 +129,9 @@ prism::scene::Scene scene;
 auto player = scene.createEntity();
 
 // 3. Добавляем компоненты
-scene.addComponent<Transform>(player, Transform{0, 0, 0});
-scene.addComponent<Velocity>(player, Velocity{0.2, 0.4, 0});
-scene.addComponent<Health>(player, Health{100});
+scene.addComponent(player, Transform{0, 0, 0});
+scene.addComponent(player, Velocity{0.2, 0.4, 0});
+scene.addComponent(player, Health{100});
 
 class MovementSystem : public prism::scene::ISystem {
 public:
@@ -282,7 +284,7 @@ int main() {
 
     // Камера
     Entity camera = scene.createEntity();
-    scene.addComponent<TransformComponent>(camera, {
+    scene.addComponent(camera, {
         {0.f, 0.f, 3.f},
         {0.f, 0.f, 0.f},
         {1.f, 1.f, 1.f}
@@ -294,20 +296,20 @@ int main() {
     camComponent.zNear = 0.1f;
     camComponent.zFar = 100.0f;
     camComponent.look = { 0.0f, 0.0f, 0.0f };
-    scene.addComponent<CameraComponent>(camera, camComponent);
+    scene.addComponent(camera, camComponent);
 
 
     // Создаем сетку объектов для лучшей ориентации
     for (int x = -2; x <= 2; x++) {
         for (int z = -2; z <= 2; z++) {
             Entity obj = scene.createEntity();
-            scene.addComponent<TransformComponent>(obj, {
+            scene.addComponent(obj, {
                 {(float)x * 4.f, 0.f, (float)z * 4.f},
                 {-90.f, 0.f, 0.f},
                 {0.3f, 0.3f, 0.3f}
                 });
-            scene.addComponent<MeshComponent>(obj, mainMesh);
-            scene.addComponent<TextureComponent>(obj, mainTexture);
+            scene.addComponent(obj, mainMesh);
+            scene.addComponent(obj, mainTexture);
         }
     }
 
@@ -343,6 +345,9 @@ int main() {
 - [📚 Полная документация](https://prismengine.readthedocs.io/ru/latest)
 - [🎓 Примеры кода](/examples) **//TODO**
 - [📖 API Reference](https://prismengine.readthedocs.io/ru/latest/modules/ecs/public/api_reference.html) **//TODO**
+
+## Бенчмарки ⏱️
+- [ECS бенчмарки](https://theprismengine.github.io/PrismEngine/dev/bench/)
 
 ## Планы развития 🗺️
 - [ ] Физически корректный рендеринг
