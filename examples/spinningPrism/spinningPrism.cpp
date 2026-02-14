@@ -49,17 +49,17 @@ namespace spinningPrism {
         Entity entity = scene.createEntity();
 
         // Добавляем компонент трансформации (позиция, вращение, масштаб)
-        scene.addComponent<TransformComponent>(entity, {
+        scene.addComponent(entity, TransformComponent{
             position,           // Позиция в мире
             {0, 0, 0},          // Начальное вращение (в градусах)
             scale               // Масштаб
             });
 
         // Добавляем компонент меша (геометрия объекта)
-        scene.addComponent<MeshComponent>(entity, mesh);
+        scene.addComponent(entity, mesh);
 
         // Добавляем компонент текстуры (внешний вид)
-        scene.addComponent<MaterialComponent>(entity, material);
+        scene.addComponent(entity, material);
 
         return entity;
     }
@@ -131,7 +131,7 @@ namespace spinningPrism {
         Entity camera = scene.createEntity();
 
         // Позиционируем камеру так, чтобы хорошо видеть сцену
-        scene.addComponent<TransformComponent>(camera, {
+        scene.addComponent(camera, TransformComponent{
             {0, 2, 10},     // Камера смотрит на сцену сверху и сзади
             {0, 0, 0},
             {1, 1, 1}
@@ -145,7 +145,7 @@ namespace spinningPrism {
         cameraConfig.zFar = 100.0f;      // Дальняя плоскость отсечения
         cameraConfig.look = { -90.f, -15.f, 0.0f };
 
-        scene.addComponent<CameraComponent>(camera, cameraConfig);
+        scene.addComponent(camera, cameraConfig);
 
         // ========== ШАГ 5: СОЗДАНИЕ ОБЪЕКТОВ СЦЕНЫ ==========
 

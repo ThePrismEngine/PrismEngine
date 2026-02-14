@@ -142,7 +142,8 @@ BENCHMARK_DEFINE_F(ECSBenchmark, GetEntitiesWith_SingleComponent)
 
     for (auto _ : state) {
         auto& entities = scene->getEntitiesWith<Position_>();
-        benchmark::DoNotOptimize(entities);
+        benchmark::DoNotOptimize(entities.data());
+        benchmark::DoNotOptimize(entities.size());
     }
 }
 BENCHMARK_REGISTER_F(ECSBenchmark, GetEntitiesWith_SingleComponent)

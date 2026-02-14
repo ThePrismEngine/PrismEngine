@@ -94,8 +94,8 @@ namespace materials {
 
     void createCamera(Scene& scene, TransformComponent transform, CameraComponent cameraConfig) {
         Entity camera = scene.createEntity();
-        scene.addComponent<TransformComponent>(camera, transform);
-        scene.addComponent<CameraComponent>(camera, cameraConfig);
+        scene.addComponent(camera, transform);
+        scene.addComponent(camera, cameraConfig);
     }
 
     Entity create3DObject(Scene& scene,
@@ -107,19 +107,19 @@ namespace materials {
         Entity entity = scene.createEntity();
 
         // Добавляем компонент трансформации (позиция, вращение, масштаб)
-        scene.addComponent<TransformComponent>(entity, {
+        scene.addComponent(entity, TransformComponent{
             position,           // Позиция в мире
             {0, 0, 0},          // Начальное вращение (в градусах)
             scale               // Масштаб
             });
 
         // Добавляем компонент меша (геометрия объекта)
-        scene.addComponent<MeshComponent>(entity, mesh);
+        scene.addComponent(entity, mesh);
 
         // Добавляем компонент текстуры (внешний вид)
-        scene.addComponent<MaterialComponent>(entity, material);
+        scene.addComponent(entity, material);
 
-        scene.addComponent<DirectionalLightComponents>(entity, DirectionalLightComponents{ {0.05f, 0.9f, 0.05f}, {0.f, 0.f, 250.f}, 30 });
+        scene.addComponent(entity, DirectionalLightComponents{ {0.05f, 0.9f, 0.05f}, {0.f, 0.f, 250.f}, 30 });
 
         return entity;
     }

@@ -59,8 +59,8 @@ namespace prism {
             /// @return true если компонент успешно добавлен
             /// @see prism::scene::ComponentManager::addComponent
             template<typename T>
-            bool addComponent(Entity entityId, T component) {
-                return componentManager.addComponent(entityId, component);
+            bool addComponent(Entity entityId, T&& component) {
+                return componentManager.addComponent(entityId, std::forward<T>(component));
             };
 
             /// @brief Удаляет компонент у сущности на сцене
@@ -88,7 +88,7 @@ namespace prism {
             /// @return Ссылка на вектор сущностей с компонентом
             /// @see prism::scene::ComponentManager::getEntitiesWith
             template<typename T>
-            std::vector<Entity>& getEntitiesWith() {
+            const std::vector<Entity>& getEntitiesWith() {
                 return componentManager.getEntitiesWith<T>();
             };
 
@@ -97,7 +97,7 @@ namespace prism {
             /// @return Вектор сущностей, содержащих все запрошенные компоненты
             /// @see prism::scene::ComponentManager::getEntitiesWithAll
             template<typename... ComponentTypes>
-            std::set<Entity> getEntitiesWithAll() {
+            std::vector<Entity> getEntitiesWithAll() {
                 return componentManager.getEntitiesWithAll<ComponentTypes...>();
             };
 

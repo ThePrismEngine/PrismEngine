@@ -24,9 +24,9 @@ namespace prism {
             /// @return true если компонент успешно добавлен, false в противном случае
             /// @details Создает копию компонента и связывает его с сущностью
             template<typename T>
-            bool addComponent(Entity entityId, T component) {
-                ComponentStorage<T>& storage = getComponentStorage<T>();
-				storage.addComponent(entityId, std::move(component));
+            bool addComponent(Entity entityId, T&& component) {
+               auto& storage = getComponentStorage<std::decay_t<T>>();
+				storage.addComponent(entityId, std::forward<T>(component));
                 return true;
             }
 
@@ -61,15 +61,29 @@ namespace prism {
             /// @tparam T Тип компонента
             /// @return Константная ссылка на множество сущностей с компонентом
             template<typename T>
-            const std::vector<Entity>& getEntitiesWithConst() const {
-                static const std::vector<Entity> emptySet;
+            const std::vector<Entity>& getEntitiesWith() const {
+                static const std::vector<Entity> empty;
                 const ComponentStorage<T>* storage = getComponentStorageConst<T>();
-                return storage ? storage->entities : emptySet;
+                return storage ? storage->entities : empty;
             }
-            
+
             template<typename T>
-            std::vector<Entity>& getEntitiesWith() {
-                return getComponentStorage<T>().entities;
+            struct StorageView {
+                const std::vector<T>& components;
+                const std::vector<Entity>& entities;
+            };
+
+            template<typename T>
+            StorageView<T> view() const {
+                const auto* storage = getComponentStorageConst<T>();
+                if (storage) {
+                    return { storage->components, storage->entities };
+                }
+                else {
+                    static const std::vector<T> emptyComp;
+                    static const std::vector<Entity> emptyEnt;
+                    return { emptyComp, emptyEnt };
+                }
             }
 
             /// @brief Получает все сущности, имеющие все указанные типы компонентов
@@ -77,24 +91,23 @@ namespace prism {
             /// @return Вектор сущностей, содержащих все запрошенные компоненты
             /// @details Выполняет пересечение множеств сущностей для каждого типа компонента
             template<typename... ComponentTypes>
-            std::set<Entity> getEntitiesWithAll() const {
-                if constexpr (sizeof...(ComponentTypes) == 0) {
-                    return std::set<Entity>();
-                }
+            std::vector<Entity> getEntitiesWithAll() const {
+                if constexpr (sizeof...(ComponentTypes) == 0) return {};
                 else {
                     // Собираем векторы сущностей для каждого типа
                     std::vector<const std::vector<Entity>*> entityVectors;
-                    (entityVectors.push_back(&this->getEntitiesWithConst<ComponentTypes>()), ...);
+                    (entityVectors.push_back(&getEntitiesWith<ComponentTypes>()), ...);
 
                     // Выбираем самый маленький вектор для итерации
                     auto smallestIt = std::min_element(entityVectors.begin(), entityVectors.end(),
                         [](const auto* a, const auto* b) { return a->size() < b->size(); });
                     const auto& smallestVec = **smallestIt;
 
-                    std::set<Entity> result;
+                    std::vector<Entity> result;
+                    result.reserve(smallestVec.size());
                     for (Entity e : smallestVec) {
                         if ((hasComponent<ComponentTypes>(e) && ...)) {
-                            result.insert(e);
+                            result.push_back(e);
                         }
                     }
                     return result;
@@ -128,14 +141,15 @@ namespace prism {
                 // @brief Позиция в массивах
                 std::unordered_map<Entity, size_t> entityToIndex;
 
-                void addComponent(Entity entity, T&& component) {
+                template<typename U>
+                void addComponent(Entity entity, U&& component) {
                     auto it = entityToIndex.find(entity);
                     if (it != entityToIndex.end()) {
-                        components[it->second] = std::move(component);
+                        components[it->second] = std::forward<U>(component);
                         return;
                     }
                     size_t index = components.size();
-                    components.push_back(std::move(component));
+                    components.push_back(std::forward<U>(component));
                     entities.push_back(entity);
                     entityToIndex[entity] = index;
                 }

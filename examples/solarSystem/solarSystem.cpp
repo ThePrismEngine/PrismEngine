@@ -130,8 +130,8 @@ namespace solarSystem {
 
     void createCamera(Scene& scene, TransformComponent transform, CameraComponent cameraConfig) {
         Entity camera = scene.createEntity();
-        scene.addComponent<TransformComponent>(camera, transform);
-        scene.addComponent<CameraComponent>(camera, cameraConfig);
+        scene.addComponent(camera, transform);
+        scene.addComponent(camera, cameraConfig);
     }
 
     Entity createPlanet(Scene& scene, prism::render::Renderer& renderer, std::string name,

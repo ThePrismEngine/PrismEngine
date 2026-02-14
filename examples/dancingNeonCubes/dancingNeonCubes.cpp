@@ -69,13 +69,13 @@ namespace dancingNeonCubes {
             };
 
             Entity cube = scene.createEntity();
-            scene.addComponent<TransformComponent>(cube, {
+            scene.addComponent(cube, TransformComponent{
                 position,
                 {0, 0, 0},
                 {0.1f, .1f, .1f}
                 });
-            scene.addComponent<MeshComponent>(cube, mesh);
-            scene.addComponent<MaterialComponent>(cube, material);
+            scene.addComponent(cube, mesh);
+            scene.addComponent(cube, material);
             scene.addComponent(cube, NeonCybe{}); // Для идентификации
         }
     }
@@ -123,7 +123,7 @@ namespace dancingNeonCubes {
 
         // Камера
         Entity camera = scene.createEntity();
-        scene.addComponent<TransformComponent>(camera, { {0, 50, 5} });
+        scene.addComponent(camera, TransformComponent{ {0, 50, 5} });
 
         CameraComponent cameraConfig{};
         cameraConfig.isActive = true;
@@ -131,7 +131,7 @@ namespace dancingNeonCubes {
         cameraConfig.zNear = 0.1f;
         cameraConfig.zFar = 300.0f;
         cameraConfig.look.y = -90;
-        scene.addComponent<CameraComponent>(camera, cameraConfig);
+        scene.addComponent(camera, cameraConfig);
 
         // Создаем 12 кубов по кругу
         createNeonCubeCircle(scene, cubeMesh, cubeMaterial, 12, 4.0f);
